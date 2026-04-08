@@ -7,7 +7,7 @@
   "scripts": {
     "build": "shopify hydrogen build --codegen",
     "build:cf": "npm run build && node -e \"fs.copyFileSync('dist/server/index.js', 'dist/client/_worker.js')\"",
-    "deploy:cf": "npm run build:cf && npx wrangler pages deploy dist/client",
+    "deploy:cf": "npm run build:cf && npx wrangler pages deploy dist/client --project-name=hydrogen-store-2026",
     "dev": "shopify hydrogen dev --codegen",
     "preview": "shopify hydrogen preview --build",
     "lint": "eslint --no-error-on-unmatched-pattern .",

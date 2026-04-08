@@ -1,0 +1,8 @@
+name = "hydrogen-store-2026"
+pages_build_output_dir = "dist/client"
+compatibility_date = "2026-04-08"
+compatibility_flags = ["nodejs_compat"]
+
+# Optional: useful for Hydrogen/Remix on Pages
+[vars]
+NODE_ENV = "production"
