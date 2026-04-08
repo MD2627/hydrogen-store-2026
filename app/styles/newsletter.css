@@ -1,0 +1,139 @@
+/* Newsletter Signup */
+.newsletter-text {
+  max-width: 320px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.footer-newsletter {
+  text-align: center;
+}
+
+.newsletter-heading {
+  margin: 0 0 20px 0;
+  text-transform: uppercase;
+}
+
+.newsletter-form .email-signup__input-group {
+  display: flex;
+  gap: 0;
+  max-width: 100%;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 0;
+  overflow: hidden;
+  width: 100%;
+  border: 1px solid #e0e0e0;
+}
+
+.newsletter-input {
+  flex: 1;
+  padding: 0 0 0 10px;
+  border: none;
+  background: #ffffff;
+  border-radius: 0;
+  outline: none;
+  height: 40px;
+  margin: 0;
+  max-width: 70%;
+  width: 100%;
+}
+
+.newsletter-input::placeholder {
+  color: #999999;
+}
+
+.newsletter-input:focus {
+  outline: none;
+}
+
+.newsletter-button {
+  padding: 11px 20px;
+  background: var(--button_color_2);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 0;
+  white-space: nowrap;
+  color: #878787;
+  max-width: 30%;
+  width: 100%;
+}
+
+/* Newsletter Messages */
+.email-signup-wrapper {
+  width: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.email-signup__message {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.email-signup__message svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.email-signup__message--error {
+  background: rgba(220, 38, 38, 0.1);
+  border: 1px solid rgba(220, 38, 38, 0.3);
+  color: #fca5a5;
+}
+
+.email-signup__message--error svg {
+  color: #ef4444;
+}
+
+.email-signup__message--success {
+  color: #86efac;
+}
+
+.email-signup__message--success svg {
+  color: #22c55e;
+}
+
+.email-signup__message-text {
+  margin: 0;
+  color: inherit;
+}
+
+.newsletter-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 767px) {
+  .newsletter-form {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 425px) {
+  .newsletter-button {
+    padding: 11px;
+  }
+
+  .newsletter-text {
+    padding: 0;
+  }
+}

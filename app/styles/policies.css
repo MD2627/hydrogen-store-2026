@@ -1,0 +1,158 @@
+.policies,
+.policy {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    color: var(--black_color);
+}
+
+.policies h1,
+.policy h1 {
+    text-align: center;
+    margin-bottom: 14px;
+    font-family: var(--font_family_n);
+    font-size: 26px;
+    line-height: 32px;
+    font-weight: 400;
+}
+
+.policy p.policy-date {
+    text-align: center;
+    margin-bottom: 50px;
+    padding-bottom: 14px;
+    position: relative;
+}
+
+.policy p.policy-date::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110px;
+    height: 2px;
+    background-color: var(--black_color);
+}
+
+.policies>div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.policies fieldset {
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    text-align: center;
+    border-radius: 0;
+    transition: border-color 0.3s ease;
+    margin: 0;
+}
+
+.policies fieldset:hover {
+    border-color: var(--black_color);
+}
+
+.policies fieldset a {
+    text-decoration: none;
+    color: var(--black_color);
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: var(--font_family_n);
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.policy a {
+    color: var(--black_color);
+    position: relative;
+    border-bottom: 1.5px solid #e0ebe4;
+}
+
+.policy a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 1.5px;
+    background: var(--dark_green_color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.policy a:hover::after {
+    transform: scaleX(1);
+}
+
+.policy h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 32.5px;
+    font-family: var(--font_family_a);
+    line-height: 36px;
+    color: var(--green_color);
+    letter-spacing: 0.5px;
+    font-weight: 400;
+}
+
+.policy p {
+    margin-bottom: 15px;
+}
+
+.policy p,
+.policy li {
+    font-family: var(--font_family_c);
+    font-size: 13px;
+    line-height: 15.6px;
+    font-weight: 300;
+}
+
+.policy ul,
+.policy ol {
+    margin-bottom: 20px;
+    padding-left: 20px;
+    list-style: disc;
+}
+
+.policy li {
+    margin-bottom: 8px;
+}
+
+.policy strong {
+    font-weight: 600;
+}
+
+/* Back link styling */
+.policy .policy-back-link {
+    display: inline-block;
+    margin-bottom: 30px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #666;
+    transition: color 0.3s;
+    font-family: var(--font_family_n);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.policy .policy-back-link:hover {
+    color: var(--black_color);
+}
+
+@media screen and (max-width: 767px) {
+    .policy h2 {
+        font-size: 26.35px;
+        line-height: 29px;
+        text-align: center;
+    }
+
+    .policy p,
+    .policy li {
+        font-size: 15.5px;
+        line-height: 18.6px;
+    }
+}

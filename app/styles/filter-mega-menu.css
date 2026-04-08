@@ -1,0 +1,113 @@
+
+/* 
+* --------------------------------------------------
+* Filter Mega Menu Styles
+* --------------------------------------------------
+*/
+.filter-option-wrapper {
+  position: relative;
+}
+
+.filter-mega-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--body_color);
+  border: 1px solid #00000012;
+  border-radius: 4px;
+  padding: 20px;
+  box-shadow: 0 9px 9px #00000026;
+  z-index: 100;
+  min-width: 400px;
+  animation: fadeInDown 0.3s ease;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.filter-mega-menu-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.filter-mega-menu .mega-menu-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-mega-menu .mega-menu-column-title {
+  font-family: var(--font_family_n);
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  color: var(--black_color);
+  opacity: 0.8;
+}
+
+.filter-mega-menu .mega-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.filter-mega-menu .mega-menu-link-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--black_color);
+  padding: 10px 4px;
+  font-size: 14px;
+  font-weight: 300;
+  transition: all 0.2s ease-in-out;
+  font-family: var(--font_family_c);
+  border-radius: 4px;
+}
+
+.filter-mega-menu .mega-menu-link-item:hover {
+  background: #f4efe9;
+  text-decoration: none;
+}
+
+.filter-mega-menu .icon-small {
+  width: 19px;
+  height: 22px;
+  object-fit: contain;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .filter-mega-menu {
+    min-width: 300px;
+    left: 0;
+    transform: translateX(0);
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .filter-mega-menu-inner {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

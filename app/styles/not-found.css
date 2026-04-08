@@ -1,0 +1,104 @@
+.not-found-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 20px !important;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.not-found-content {
+    flex: 1;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.not-found-title {
+    font-family: var(--font_family_n, serif);
+    font-size: 2.8rem;
+    font-weight: 400;
+    color: var(--black_color, #232323);
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.not-found-subtitle,
+.not-found-text {
+    font-family: var(--font_family_c, sans-serif);
+    font-size: 14px;
+    color: var(--black_color, #232323);
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.not-found-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.not-found-icon {
+    width: 18px;
+    height: 18px;
+    margin: 0 6px;
+    vertical-align: middle;
+}
+
+.not-found-btn {
+    display: block;
+    background-color: var(--green_color, #1e5a38);
+    color: var(--white_color, #fff);
+    padding: 18px 25px;
+    font-family: var(--font_family_c, sans-serif);
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    width: 100%;
+    max-width: 400px;
+    transition: opacity 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.not-found-btn:hover {
+    opacity: 0.9;
+    text-decoration: none;
+    color: var(--white_color, #fff);
+}
+
+.not-found-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.not-found-image img {
+    max-width: 100%;
+    height: auto;
+    width: 450px;
+}
+
+@media screen and (max-width: 768px) {
+    .not-found-container {
+        flex-direction: column-reverse;
+        padding: 60px 20px;
+        gap: 30px;
+    }
+
+    .not-found-title {
+        font-size: 2.2rem;
+    }
+
+    .not-found-image img {
+        width: 300px;
+    }
+}

@@ -1,0 +1,170 @@
+/* ------------------- AFFILIATE PAGE ------------------- */
+.affiliate-page {
+    margin: 0 auto;
+}
+
+/* ------------------- AFFILIATE BANNER ------------------- */
+.affiliate-banner.story-craft-banner {
+    height: 60vh;
+}
+
+.affiliate-banner.story-craft-banner .story-craft-overlay {
+    background: linear-gradient(#0000, #0000005c 33%, #00000073, #0000005c 67%, #0000);
+}
+
+.affiliate-banner.story-craft-banner .story-craft-content {
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+    padding: 0;
+}
+
+.affiliate-banner.story-craft-banner .story-craft-content h2 {
+    font-size: 45.5px;
+    line-height: 50.5px;
+    text-shadow: none;
+}
+
+.affiliate-banner.story-craft-banner .story-craft-content p {
+    font-family: var(--font_family_c);
+    font-size: 14.95px;
+    line-height: 17.94px;
+}
+
+@media screen and (max-width: 767px) {
+    .affiliate-banner.story-craft-banner .story-craft-content h2 {
+        font-size: 38.75px;
+        line-height: 42px;
+    }
+}
+
+/* ------------------- AFFILIATE CONTENT ------------------- */
+
+.affiliate-content-section {
+    padding: 75px 5px 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.affiliate-intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.affiliate-intro p {
+    font-size: 32px;
+    line-height: 35.75px;
+}
+
+.affiliate-detail-block {
+    margin: 0 0 40px;
+}
+
+.affiliate-detail-block h3 {
+    margin: 0 0 13px;
+    text-transform: none;
+}
+
+.affiliate-page ul {
+    padding: 0 0 0 15px;
+    list-style-type: disc;
+}
+
+.affiliate-detail-block ul li {
+    line-height: 15.6px;
+    margin: 0;
+}
+
+.affiliate-cta {
+    text-align: center;
+    margin: 50px 0 65px;
+}
+
+.apply-btn {
+    display: inline-block;
+    background-color: var(--green_color);
+    color: #fff;
+    padding: 12px 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: background-color 0.3s;
+}
+
+.apply-btn:hover {
+    background-color: var(--dark_green_color);
+}
+
+.affiliate-contact {
+    text-align: center;
+    line-height: 15.6px;
+}
+
+.affiliate-contact h4 {
+    margin-bottom: 13px;
+}
+
+.affiliate-contact p a {
+    text-decoration: underline;
+    color: var(--black_color);
+}
+
+@media screen and (max-width: 767px) {
+    .affiliate-intro p {
+        font-size: 26.35px;
+        line-height: 29px;
+    }
+
+    .affiliate-detail-block ul li {
+        line-height: 19px;
+    }
+
+    .apply-btn {
+        font-size: 11px;
+    }
+}
+
+/* ------------------- AFFILIATE FAQ ------------------- */
+.affiliate-faq-section .faq-body {
+    background-color: var(--white_color);
+}
+
+.affiliate-faq-section .faq-container {
+    max-width: 800px;
+}
+
+.affiliate-page .faq-header {
+    padding: 20px 0;
+}
+
+.affiliate-page .faq-header h2 {
+    font-size: 32px;
+    font-weight: 300;
+}
+
+.affiliate-page .faq-header p {
+    font-family: var(--font_family_a);
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.affiliate-page .faq-answer-inner {
+    line-height: 15.6px;
+}
+
+.affiliate-page .faq-answer-inner li {
+    margin: 0;
+}
+
+@media screen and (max-width: 767px) {
+    .affiliate-page .faq-question {
+        font-size: 11px;
+    }
+
+    .affiliate-page .faq-answer-inner {
+        font-size: 15.5px;
+        line-height: 18px;
+    }
+}

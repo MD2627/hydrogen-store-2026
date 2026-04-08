@@ -1,0 +1,50 @@
+.order-stauts-page .contact-radio-group.centre-stone-type {
+    display: none;
+}
+
+.order-status .our-jewellers-title {
+    font-size: 45px;
+    line-height: 50px;
+    font-family: var(--font_family_a);
+    font-weight: 300;
+    color: var(--black_color);
+    margin-bottom: 20px;
+}
+
+.order-status .our-jewellers-subtitle {
+    font-family: var(--font_family_c);
+    font-size: 13px;
+    line-height: 15px;
+    font-weight: 300;
+    color: var(--black_color);
+    margin-bottom: 33px;
+}
+
+.order-status .contact-form-title--ring {
+    max-width: 650px;
+    margin: 63px auto 0;
+}
+
+.order-status .contact-form {
+    max-width: 750px;
+    margin-bottom: 40px;
+}
+
+.order-status .contact-form label,
+.order-status .contact-form input,
+.order-status .contact-form input::placeholder,
+.order-status .contact-form textarea,
+.order-status .contact-form textarea::placeholder {
+    font-size: 11px;
+    margin: 3px 0 0;
+    line-height: 12px;
+}
+
+.order-status .contact-recaptcha {
+    font-size: 10px;
+}
+
+.order-stauts-page label.subscribe-check,
+.order-stauts-page .contact-stone {
+    display: none !important;
+}

@@ -1,0 +1,433 @@
+/* ----------------------------------- Graduation Jewellery Page -------------------------------- */
+.graduation-jewellery-page .page-width {
+    max-width: 1300px;
+    padding: 0 20px;
+}
+
+/* ----------------------------------- Hero Section -------------------------------- */
+.graduation-hero {
+    padding: 60px 0 25px;
+}
+
+.graduation-hero h1 {
+    font-size: 45.5px;
+    line-height: 50.5px;
+    margin-bottom: 45px;
+}
+
+.graduation-hero .hero-text-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.graduation-hero p {
+    line-height: 18px;
+    margin-bottom: 0px;
+    letter-spacing: 0.5px;
+}
+
+.graduation-hero .hero-image-container {
+    margin-top: 40px;
+}
+
+.graduation-hero img {
+    display: block;
+    object-fit: cover;
+    object-position: 0 20%;
+    height: 430px;
+    width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+    .graduation-hero h1 {
+        font-size: 38px;
+        line-height: 42px;
+    }
+
+    .graduation-hero p {
+        font-size: 19px;
+        line-height: 22px;
+    }
+
+    .graduation-hero img {
+        height: 308px;
+    }
+}
+
+/* ----------------------------------- Jewellery Styles Section -------------------------------- */
+.jewellery-styles-section {
+    padding: 20px 0;
+}
+
+.jewellery-styles-section h2 {
+    margin-bottom: 14px;
+    font-size: 32px;
+    line-height: 36px;
+}
+
+.jewellery-styles-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 33px;
+}
+
+.jewellery-style-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.jewellery-style-card img {
+    display: block;
+    object-fit: cover;
+    object-position: 0 50%;
+    height: 100%;
+    max-height: 403px;
+    width: 100%;
+}
+
+.jewellery-style-card h3 {
+    line-height: 20px;
+    margin: 0px;
+    letter-spacing: 0.5px;
+}
+
+@media screen and (max-width: 767px) {
+    .jewellery-styles-grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 14px;
+    }
+
+    .jewellery-styles-section h2 {
+        font-size: 26px;
+        line-height: 29px;
+    }
+
+    .jewellery-style-card h3 {
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+
+/* ----------------------------------- Jewellery Metal Section -------------------------------- */
+.jewellery-metal-section {
+    padding: 25px 0;
+}
+
+.jewellery-metal-section h2 {
+    margin-bottom: 14px;
+    font-size: 32px;
+    line-height: 36px;
+}
+
+.jewellery-metal-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 33px;
+    margin-top: 30px;
+}
+
+.jewellery-metal-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.jewellery-metal-card img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    max-width: 72.3%;
+    margin: 0 auto;
+}
+
+.jewellery-metal-card h3 {
+    line-height: 20px;
+    margin: 0px;
+    letter-spacing: 0.5px;
+}
+
+@media screen and (max-width: 767px) {
+    .jewellery-metal-grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 14px;
+    }
+
+    .jewellery-metal-section h2 {
+        font-size: 26px;
+        line-height: 29px;
+    }
+
+    .jewellery-metal-section p {
+        font-size: 19px;
+        line-height: 22px;
+    }
+
+    .jewellery-metal-card h3 {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .jewellery-metal-card img {
+        max-width: 52%;
+    }
+}
+
+/* ----------------------------------- Jewellery Design Section -------------------------------- */
+.jewellery-design-section {
+    padding: 25px 0;
+}
+
+.jewellery-design-section h2 {
+    margin-bottom: 14px;
+    font-size: 32px;
+    line-height: 36px;
+}
+
+.jewellery-design-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 33px;
+    margin-top: 30px;
+}
+
+.jewellery-design-wrapper p {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.jewellery-design-card img {
+    display: block;
+    width: 100%;
+    max-height: 403px;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 767px) {
+    .jewellery-design-grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 14px;
+    }
+
+    .jewellery-design-section h2 {
+        font-size: 26px;
+        line-height: 29px;
+    }
+
+    .jewellery-design-section p {
+        font-size: 19px;
+        line-height: 22px;
+    }
+}
+
+/* ----------------------------------- Graduation Contact Section -------------------------------- */
+.graduation-contact-section {
+    padding: 20px 0;
+}
+
+.graduation-contact-section .page-width {
+    max-width: 800px;
+}
+
+.graduation-contact-section .contact-head h2 {
+    font-size: 32px;
+    line-height: 36px;
+    margin-bottom: 14px;
+}
+
+.graduation-contact-section .contact-intro-text p {
+    line-height: 18px;
+    margin-bottom: 14px;
+}
+
+.graduation-contact-section .graduation-contact-form {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.graduation-contact-section .form-row {
+    display: flex;
+    gap: 33px;
+    margin-bottom: 24px;
+}
+
+.graduation-contact-section .form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.graduation-contact-section .form-group.full-width {
+    width: 100%;
+}
+
+.graduation-contact-section .form-group label {
+    margin-bottom: 3px;
+    text-transform: uppercase;
+    color: #4d4d4d;
+}
+
+.graduation-contact-section .form-group input,
+.graduation-contact-section .form-group textarea {
+    padding: 10px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+    width: 100%;
+    margin: 0;
+}
+
+.graduation-contact-section .form-group textarea {
+    height: 96px;
+}
+
+.graduation-contact-section .form-group input::placeholder,
+.graduation-contact-section .form-group textarea::placeholder {
+    color: #9b9b9b;
+}
+
+.graduation-contact-section .form-group input:focus,
+.form-group textarea:focus {
+    border-color: #c0c0c0;
+}
+
+.graduation-contact-form-wrapper .country-flag-select,
+.graduation-contact-form-wrapper .phone-prefix {
+    display: none;
+}
+
+.graduation-contact-section .product-quantities-grid {
+    display: flex;
+    gap: 40px;
+    margin: 24px 0;
+}
+
+.graduation-contact-section .quantity-column {
+    flex: 1;
+}
+
+.graduation-contact-section .quantity-column h3 {
+    margin: 0 0 26px;
+    line-height: 15.6px;
+}
+
+.graduation-contact-section .metal-quantity-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 10px 4px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+.graduation-contact-section .metal-label {
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #4d4d4d;
+}
+
+.graduation-contact-section .quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.graduation-contact-section .quantity-controls button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    padding: 0;
+}
+
+.graduation-contact-section .quantity-value {
+    width: 20px;
+    text-align: center;
+}
+
+.graduation-contact-section .form-submit-container {
+    margin-top: 24px;
+}
+
+.graduation-contact-section .submit-btn {
+    letter-spacing: 0.9px;
+    margin-bottom: 14px;
+    font-size: 11.2px;
+}
+
+.graduation-contact-section .recaptcha-text a {
+    color: var(--black_color);
+    position: relative;
+    border-bottom: 1.5px solid #e0ebe4;
+}
+
+.graduation-contact-section .recaptcha-text a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 1.5px;
+    background: #253e2b;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.graduation-contact-section .recaptcha-text a:hover:after {
+    transform: scaleX(1);
+}
+
+.graduation-contact-section .form-submit-container .recaptcha-text {
+    font-size: 11px;
+}
+
+@media screen and (max-width: 767px) {
+    .graduation-contact-section .form-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .graduation-contact-section .contact-head h2 {
+        font-size: 26.35px;
+        line-height: 29px;
+    }
+
+    .graduation-contact-section .contact-intro-text p {
+        font-size: 19px;
+        line-height: 22px;
+    }
+
+    .graduation-contact-form-wrapper {
+        padding: 0 20px 20px;
+    }
+
+    .graduation-contact-section .product-quantities-grid {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .graduation-contact-section .form-group label,
+    .graduation-contact-section .form-group input,
+    .graduation-contact-section .form-group textarea,
+    .graduation-contact-section .metal-label {
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .graduation-contact-section .form-group input,
+    .graduation-contact-section .form-group textarea {
+        padding: 10px;
+    }
+
+    .graduation-contact-section .form-group:has(label[for="lastName"]) {
+        padding: 0;
+    }
+
+    .graduation-contact-section .form-submit-container .recaptcha-text {
+        font-size: 12.4px;
+    }
+}

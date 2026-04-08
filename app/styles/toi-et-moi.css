@@ -1,0 +1,357 @@
+/* ----------------------------------- Toi et Moi Banner -------------------------------- */
+
+.toi-et-moi-banner.story-craft-banner {
+    height: 60vh;
+}
+
+.toi-et-moi-banner.story-craft-banner .story-craft-overlay {
+    background: linear-gradient(#0000, #0000005c 33%, #00000073, #0000005c 67%, #0000);
+}
+
+.toi-et-moi-banner.story-craft-banner .story-craft-content {
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+    padding: 0;
+}
+
+.toi-et-moi-banner.story-craft-banner .story-craft-content h2 {
+    font-size: 45.5px;
+    line-height: 50.5px;
+    text-shadow: none;
+}
+
+@media screen and (max-width: 767px) {
+    .toi-et-moi-banner.story-craft-banner {
+        height: 50vh;
+    }
+
+    .toi-et-moi-banner.story-craft-banner .story-craft-content h2 {
+        font-size: 38.75px;
+        line-height: 42px;
+    }
+}
+
+/* ----------------------------------- Toi et Moi Content -------------------------------- */
+.toi-et-moi-content-section {
+    padding: 50px 20px 60px;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.toi-et-moi-intro h2 {
+    margin-bottom: 25px;
+    line-height: 38px;
+}
+
+.toi-et-moi-intro p:first-of-type,
+.toi-et-moi-details p:first-of-type,
+.steps-intro p:first-of-type {
+    margin-bottom: 13px;
+}
+
+.toi-et-moi-intro p {
+    line-height: 18px;
+}
+
+.toi-et-moi-details p {
+    line-height: 18px;
+}
+
+.toi-et-moi-details p:last-child {
+    margin-bottom: 0;
+}
+
+.toi-et-moi-image-block img,
+.step-image-col img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    max-height: 407px;
+    object-fit: cover;
+}
+
+.toi-et-moi-image-block .caption,
+.toi-et-moi-details p,
+.steps-intro p {
+    line-height: 18px;
+}
+
+.toi-et-moi-content-section p a,
+.step-image-col p a {
+    color: var(--black_color);
+    position: relative;
+    border-bottom: 1.5px solid #e0ebe4;
+    font-weight: 600;
+}
+
+.toi-et-moi-content-section p a::after,
+.step-image-col p a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 1.5px;
+    background: #253e2b;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.toi-et-moi-content-section p a:hover:after,
+.step-image-col p a:hover:after {
+    transform: scaleX(1);
+}
+
+.toi-et-moi-image-block .caption,
+.step-caption {
+    margin-top: 8px;
+}
+
+@media screen and (max-width: 767px) {
+
+    .toi-et-moi-intro p,
+    .steps-intro p {
+        font-size: 19.37px;
+        line-height: 21px;
+    }
+}
+
+
+/* ----------------------------------- Steps Section -------------------------------- */
+.steps-section {
+    padding: 30px 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.steps-intro {
+    max-width: 760px;
+    margin: 0 auto 40px;
+}
+
+.steps-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    /* max-width: 900px;
+    margin: 0 auto; */
+}
+
+.step-item {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+
+/* .step-item:nth-child(even) {
+    flex-direction: row-reverse;
+} */
+
+.step-text-col,
+.step-image-col {
+    flex: 1;
+    max-width: 50%;
+}
+
+.step-text-col h3 {
+    margin: 0 0 13px;
+}
+
+.step-text-col p {
+    line-height: 15.6px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .step-item {
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    .step-image-col,
+    .step-text-col {
+        max-width: 100%;
+    }
+
+    .step-text-col h3 {
+        font-size: 26.35px;
+        line-height: 29px;
+        text-align: center;
+    }
+
+    .step-text-col p {
+        line-height: 19px;
+    }
+}
+
+/* ----------------------------------- Previous Designs Gallery -------------------------------- */
+.previous-designs-section {
+    padding: 25px 0px 90px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.previous-designs-section h2 {
+    margin-bottom: 13px;
+    font-size: 32px;
+    line-height: 35px;
+}
+
+.gallery-container {
+    margin: 0 auto 90px;
+    position: relative;
+}
+
+.main-gallery-swiper {
+    position: relative;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    overflow: hidden;
+}
+
+.previous-designs-section .main-gallery-swiper {
+    padding: 10px 0 15px;
+}
+
+.main-gallery-swiper .swiper-pagination {
+    bottom: 0px !important;
+}
+
+.main-gallery-swiper .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    margin: 0 2px !important;
+    background: var(--black_color) !important;
+}
+
+.main-gallery-swiper .swiper-pagination-bullet-active {
+    background: var(--black_color) !important;
+}
+
+.main-gallery-swiper .swiper-pagination-bullet-active-next,
+.main-gallery-swiper .swiper-pagination-bullet-active-prev {
+    opacity: 0.64;
+}
+
+.main-gallery-swiper .swiper-pagination-bullet-active-prev-prev,
+.main-gallery-swiper .swiper-pagination-bullet-active-next-next {
+    opacity: 0.36;
+    transform: scale(0.56) !important;
+}
+
+.main-gallery-swiper .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 400px;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-gallery-swiper .swiper-slide-active {
+    z-index: 10;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+.main-gallery-swiper .slide-content-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.main-gallery-swiper .slide-content-wrapper img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    height: 316px;
+}
+
+/* Thumbs */
+.previous-designs-section .thumbs-container {
+    margin-top: 20px;
+    max-width: 78%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.thumbs-gallery-swiper {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.thumbs-gallery-swiper .swiper-slide {
+    width: 25%;
+    height: auto;
+    opacity: 1;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.thumbs-gallery-swiper .thumb-wrapper {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border: 1px solid transparent;
+    transition: border-color 0.3s ease;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+.thumbs-gallery-swiper .thumb-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 2px;
+}
+
+.thumbs-gallery-swiper .swiper-slide-thumb-active .thumb-wrapper {
+    border-color: var(--green_color);
+}
+
+/* Buttons */
+.browse-button-container {
+    /* margin-top: 40px; */
+}
+
+.browse-btn {
+    display: inline-block;
+    letter-spacing: 0.9px;
+    font-size: 11.2px;
+}
+
+@media screen and (max-width: 767px) {
+    .previous-designs-section .thumbs-container {
+        display: none;
+    }
+
+    .main-gallery-swiper {
+        height: auto;
+        padding-bottom: 40px;
+    }
+
+    .previous-designs-section h2 {
+        font-size: 26px;
+        line-height: 29px;
+    }
+
+
+    .main-gallery-swiper .swiper-slide {
+        width: 340px;
+    }
+
+    .main-gallery-swiper .slide-content-wrapper img {
+        height: 270px;
+    }
+}

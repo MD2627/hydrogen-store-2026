@@ -1,0 +1,54 @@
+{
+    "austin": {
+        "banner": {
+            "title": "Austin, We're On Our Way",
+            "imageSrc": "https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Coming-soon-banner_2000x2000.png?v=1761613167",
+            "extraClass": "story-craft-banner--our-story"
+        },
+        "map": {
+            "title": "Austin, Texas USA",
+            "subtitle": "Our Austin showroom is set to open soon. Get access to 1:1 in person appointments to try on rings and receive personalised guidance.",
+            "address": "Austin, Texas USA",
+            "embedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110204.74637223035!2d-97.85957755!3d30.3077609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644b599a028397f%3A0x198c4bae428c111f!2sAustin%2C%20TX%2C%20USA!5e0!3m2!1sen!2sin!4v1707743000000!5m2!1sen!2sin"
+        }
+    },
+    "houston": {
+        "banner": {
+            "title": "Houston, We're On Our Way",
+            "imageSrc": "https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Coming-soon-banner_2000x2000.png?v=1761613167",
+            "extraClass": "story-craft-banner--our-story"
+        },
+        "map": {
+            "title": "Houston, Texas USA",
+            "subtitle": "Our Houston showroom is set to open soon. Get access to 1:1 in person appointments to try on rings and receive personalised guidance.",
+            "address": "Houston, Texas USA",
+            "embedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d443089.0375630654!2d-95.730596!3d29.816001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640b8b4488d8501%3A0xca0d02def365053b!2sHouston%2C%20TX%2C%20USA!5e0!3m2!1sen!2sin!4v1707743000000!5m2!1sen!2sin"
+        }
+    },
+    "los-angeles": {
+        "banner": {
+            "title": "Los Angeles, We're On Our Way",
+            "imageSrc": "https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Coming-soon-banner_2000x2000.png?v=1761613167",
+            "extraClass": "story-craft-banner--our-story"
+        },
+        "map": {
+            "title": "Los Angeles, California USA",
+            "subtitle": "Our Los Angeles showroom is set to open soon. Get access to 1:1 in person appointments to try on rings and receive personalised guidance.",
+            "address": "Los Angeles, CA, USA",
+            "embedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d211568.23671759683!2d-118.60897535!3d34.02072895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75dd41cf03b%3A0x2587e68665c850f!2sLos%20Angeles%2C%20CA%2C%20USA!5e0!3m2!1sen!2sin!4v1707743000000!5m2!1sen!2sin"
+        }
+    },
+    "san-diego": {
+        "banner": {
+            "title": "San Diego, We're On Our Way",
+            "imageSrc": "https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Coming-soon-banner_2000x2000.png?v=1761613167",
+            "extraClass": "story-craft-banner--our-story"
+        },
+        "map": {
+            "title": "San Diego, California USA",
+            "subtitle": "Our San Diego showroom is set to open soon. Get access to 1:1 in person appointments to try on rings and receive personalised guidance.",
+            "address": "San Diego, CA, USA",
+            "embedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d107316.51860226456!2d-117.21852445!3d32.715738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d95066e1bc0723%3A0x7426685458034a74!2sSan%20Diego%2C%20CA%2C%20USA!5e0!3m2!1sen!2sin!4v1707743000000!5m2!1sen!2sin"
+        }
+    }
+}

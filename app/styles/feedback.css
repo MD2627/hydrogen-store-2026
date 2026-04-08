@@ -1,0 +1,145 @@
+.feedback-form-wrapper .feedback-form input,
+.feedback-form-wrapper .feedback-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    margin-bottom: 0;
+    display: block;
+    font-family: var(--font_family_n);
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 600;
+    color: #4d4d4d;
+    margin-top: 0.25rem;
+}
+
+.feedback-form-wrapper .feedback-form label.checkbox-label input:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: translate(-50%, -60%) rotate(45deg);
+}
+
+.feedback-form-wrapper .feedback-form label.checkbox-label {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    font-size: 12px;
+    font-family: var(--font_family_c);
+    font-weight: 300;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.feedback-form-wrapper .feedback-form p.recaptcha-text {
+    font-size: 12px;
+    line-height: normal;
+    color: var(--black_color);
+    font-weight: 300;
+    text-align: center;
+    font-family: var(--font_family_c);
+}
+
+.feedback-form-wrapper .feedback-form input[type="checkbox"]:checked {
+    background-color: var(--primary_color);
+    border-color: var(--primary_color);
+}
+
+.feedback-form-wrapper {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.feedback-form-wrapper p.feedback-intro {
+    font-family: 'ABC Arizona Mix';
+    font-size: 16.25px;
+    line-height: 17.875px;
+    color: #232323;
+    text-align: center;
+    margin: 0 0 26px;
+}
+
+.feedback-form-wrapper .feedback-form .status-message.success {
+    margin: auto;
+}
+
+.feedback-form-wrapper .feedback-form .submit-button.common-button {
+    max-width: max-content;
+    margin: auto;
+}
+
+.feedback-form-wrapper h2 {
+    font-size: 45.5px;
+    line-height: 50.05px;
+    font-family: var(--font_family_a);
+    text-align: center;
+    margin: 0 0 13px;
+    font-weight: 300;
+    color: var(--black_color);
+}
+
+.feedback-form-wrapper .feedback-form .recaptcha-text.contact-recaptcha {
+    text-align: center;
+}
+
+.feedback-form-wrapper .feedback-form input[type="checkbox"] {
+    display: inline-flex !important;
+    width: 18px;
+    height: 18px;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    border-radius: 3px;
+    border: 2px solid var(--dark_green_color);
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.feedback-form-wrapper .feedback-form {
+    max-width: 790px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.feedback-form-wrapper .feedback-form label {
+    display: block;
+    font-family: var(--font_family_n);
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 600;
+    color: #4d4d4d;
+}
+
+form.feedback-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0 20px 20px;
+}
+
+.feedback-form-wrapper .feedback-form select#interactionType {
+    display: block;
+    font-family: var(--font_family_n);
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 600;
+    color: #4d4d4d;
+    width: 100%;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+.feedback-form-wrapper .feedback-form select#interactionType:focus {
+    outline: none;
+}

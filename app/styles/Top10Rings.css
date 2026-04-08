@@ -1,0 +1,112 @@
+.top-page-rich-text p {
+    line-height: 17.875px;
+}
+
+.top-page-rich-text {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px 20px 40px;
+    font-family: var(--font_family_a);
+    font-size: 16.25px;
+    font-weight: 300;
+    color: #232323;
+}
+
+.top-page-rich-text__para {
+    margin: 0 0 13px 0;
+}
+
+
+/* Top 10 Rings Image with text section */
+.top-image-with-text {
+    display: flex;
+    flex-direction: row;
+    max-width: 1300px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
+    align-items: center;
+}
+
+.top-image-with-text__image img {
+    display: block;
+    max-width: 100%;
+}
+
+.top-image-with-text__image {
+    max-width: 613px;
+    width: 100%;
+}
+
+.top-image-with-text__image,
+.top-image-with-text__content {
+    flex: 1;
+}
+
+.top-image-with-text__image img {
+    max-height: 430px;
+    object-fit: cover;
+    width: 100%;
+    display: block;
+}
+
+h3.top-image-with-text__subtitle {
+    font-style: italic;
+    margin: 13px 0;
+}
+
+.top-image-with-text__content * {
+    color: #232323;
+}
+
+h2.top-image-with-text__title {
+    line-height: 35.75px;
+}
+
+p.top-image-with-text__description {
+    line-height: 15.6px;
+    margin: 0 0 26px 0;
+}
+
+a.banner-btn.top-image-with-text__button {
+    width: 100%;
+    color: #FFF;
+    text-align: center;
+}
+
+.top-image-with-text__content {
+    padding: 0 0 0 33px;
+}
+
+.top-image-with-text-container {
+    padding: 20px 0;
+}
+
+.top-image-with-text.top-image-with-text--second {
+    flex-direction: row-reverse;
+}
+
+.top-image-with-text.top-image-with-text--second .top-image-with-text__content {
+    padding: 0 33px 0 0;
+}
+
+@media screen and (max-width: 767px) {
+    .top-image-with-text {
+        flex-direction: column !important;
+    }
+
+    .top-image-with-text__content {
+        padding: 0 !important;
+    }
+
+    h2.top-image-with-text__title {
+        text-align: center;
+        font-size: 26.35px;
+        margin-top: 33px;
+        line-height: 28.985px;
+    }
+
+    p.top-image-with-text__description {
+        line-height: 18.6px;
+    }
+}

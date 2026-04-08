@@ -1,0 +1,58 @@
+.terms-and-conditions .main-heading {
+    text-align: center;
+    font-size: 26px;
+    letter-spacing: 0;
+    font-family: 'Cullen Ginto Nord';
+    padding: 99px 13px 13px 13px;
+    max-width: 360px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.terms-and-conditions .main-heading:before {
+    content: '';
+    position: absolute;
+    left: 124px;
+    bottom: -17px;
+    background: #000;
+    width: 110px;
+    height: 2px;
+}
+.terms-and-conditions-details {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 47px 20px 20px 20px;
+}
+.terms-and-conditions-details h3 {
+    margin: 0;
+    font-size: 32.5px;
+    padding: 33px 0 13px;
+}
+.terms-and-conditions-details p {
+    font-size: 13px;
+    line-height: 1.2;
+}
+.terms-and-conditions-details ul {
+    padding: 0 0 0 40px;
+    margin: 13px 0;
+}
+.terms-and-conditions-details li {
+    margin-top: 14.4px;
+    list-style: disc;   
+}
+.terms-and-conditions-details li:last-child {
+    margin-bottom: 0;
+}
+@media screen and (max-width: 767px){
+    .terms-and-conditions .main-heading{
+        font-size: 31px;
+    }
+    .terms-and-conditions-details h3{
+        font-size: 26.35px;
+        text-align: center;
+    }
+    .terms-and-conditions-details p{
+        font-size: 15.5px;
+    }
+}

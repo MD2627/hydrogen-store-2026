@@ -1,0 +1,660 @@
+.cullen-curated-page .faq-geral-wrpper {
+    background: #fefaf5;
+}
+
+.cullen-curated .faq-body {
+    background: #fefaf5;
+}
+
+.story-craft-banner.cullen-curated-banner {
+    height: 60vh;
+}
+
+.cullen-curated-banner .story-craft-content h2 {
+    font-size: 45px;
+    color: #232323;
+    text-shadow: none;
+    margin-bottom: 20px;
+}
+
+.cullen-curated-banner .story-craft-overlay {
+    display: none;
+}
+
+.cullen-curated-banner .story-craft-content {
+    inset: 0;
+    text-align: center;
+    display: grid;
+    place-content: center;
+}
+
+.cullen-curated-banner .story-craft-content p {
+    font-size: 15px;
+    font-family: var(--font_family_c);
+    color: #232323;
+    font-weight: 300;
+}
+
+
+@media (max-width: 767px) {
+    .story-craft-banner.cullen-curated-banner {
+        height: 50vh;
+    }
+
+    .cullen-curated-banner .story-craft-content h2 {
+        font-size: 38px;
+    }
+
+    .cullen-curated-banner .story-craft-content p {
+        font-size: 17px;
+    }
+
+    .story-craft-banner.cullen-curated-banner .story-craft-image {
+        object-position: left;
+    }
+}
+
+
+/* cullen-curated rich text */
+.cullen-curated-rich-text {
+    padding: 60px 20px;
+    background: rgba(0, 0, 0, .045);
+    text-align: center;
+}
+
+.cullen-curated-rich-text-container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.cullen-curated-title-rich-text {
+    font-size: 32px;
+    line-height: 37.5px;
+    color: #232323;
+    font-family: var(--font_family_a);
+    font-weight: 300;
+    margin: 5px 0 40px;
+}
+
+.cullen-curated-content-rich-text {
+    font-size: 16.5px;
+    line-height: 17.875px;
+    color: #232323;
+    font-family: var(--font_family_a);
+}
+
+@media (max-width: 767px) {
+    .cullen-curated-title-rich-text {
+        font-size: 26.35px;
+        line-height: 28px;
+    }
+
+    p.our-gemstones-subtitle {
+        padding: 0 20px;
+    }
+
+    .cullen-curated-content-rich-text {
+        font-size: 19.37px;
+        line-height: 21.3125px;
+    }
+}
+
+
+
+/* curation-process-row */
+.curation-process-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    max-width: 1260px;
+    margin: auto;
+}
+
+.curation-process-card {
+    margin: 0 0 0 33px;
+    text-align: left;
+    border-radius: 10px;
+    padding: 30px;
+    background: rgba(0, 0, 0, .045);
+    flex: 1;
+}
+
+.curation-process-card:first-child {
+    margin: 0;
+}
+
+.curation-process-image {
+    height: 250px;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.curation-process-wrapper {
+    padding: 100px 20px 20px;
+}
+
+h2.curation-process-title {
+    font-size: 39px;
+    line-height: 42px;
+    color: #232323;
+    text-align: center;
+    font-family: var(--font_family_a);
+    font-weight: 300;
+    margin: 5px 0 13px;
+}
+
+h3.curation-process-card-title {
+    margin: 20px 0 7px;
+    color: #232323;
+    font-family: var(--font_family_n);
+    letter-spacing: 1.04px;
+    line-height: 15.6px;
+}
+
+p.curation-process-card-text {
+    color: #232323;
+    font-family: var(--font_family_c);
+}
+
+@media (max-width: 767px) {
+    .curation-process-row {
+        flex-direction: column;
+    }
+
+    .curation-process-card {
+        margin: 20px 0 0;
+    }
+
+    .curation-process-wrapper {
+        padding: 100px 40px 20px;
+    }
+
+    p.curation-process-card-text {
+        line-height: 18.6px;
+    }
+
+    .curation-process-card:first-child {
+        margin-top: 20px;
+    }
+
+    h2.curation-process-title {
+        font-size: 26px;
+        line-height: 28px;
+    }
+}
+
+
+
+.our-gemstones-image {
+    height: 30vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+.our-gemstones-content {
+    margin: auto;
+    max-width: 760px;
+    padding: 40px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+p.our-gemstones-text {
+    color: #232323;
+    line-height: 15.6px;
+}
+
+.our-gemstones-wrapper {
+    padding: 80px 0 0;
+}
+
+.our-gemstones-subtitle {
+    text-align: center;
+    margin: 0 0 20px;
+}
+
+hr.our-gemstones-title-line {
+    max-width: 200px;
+    height: 1px;
+    background-color: #8787875c;
+    margin: 6px auto;
+    border: none;
+}
+
+img.our-gemstones-image.mobile-image {
+    display: none;
+}
+
+
+@media (max-width: 767px) {
+    img.our-gemstones-image.mobile-image {
+        display: block;
+    }
+
+    img.our-gemstones-image.desktop-image {
+        display: none;
+    }
+
+    .our-gemstones-content {
+        padding: 40px;
+        gap: 25px;
+    }
+
+    p.our-gemstones-text {
+        font-size: 15.5px;
+        line-height: 18.6px;
+    }
+}
+
+
+
+.our-gemstones-wrapper hr.our-gemstones-title-line {
+    background: #8787875c;
+}
+
+/* .only-image-banner--small {
+    margin-top: 30px;
+} */
+
+.cullen-curated-page .free-resizing-content-inner .section ul {
+    padding-left: 20px;
+}
+
+.cullen-curated-page .free-resizing-content-inner {
+    max-width: 1180px;
+}
+
+.cullen-curated-page .free-resizing-content-inner .section {
+    padding: 0 0 20px 0;
+}
+
+
+.cullen-curated-page .free-resizing-content-inner .section h3 {
+    font-size: 13px;
+    color: #232323;
+    font-family: var(--font_family_n);
+    margin-top: 0;
+}
+
+.cullen-curated-page .free-resizing-content-inner p {
+    margin: 0;
+}
+
+.moissanite-properties,
+.moissanite-growing-process {
+    max-width: 1260px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 20px 40px 0;
+}
+
+.moissanite-video {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 0 0 33px;
+}
+
+.moissanite-growing-process {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 40px 40px 0;
+}
+
+.moissanite-growing-text {
+    flex: 1;
+}
+
+.moissanite-growing-text h3 {
+    margin: 0 0 7px;
+}
+
+.moissanite-properties-grid {
+    display: flex;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    margin-top: 20px;
+    align-items: end;
+}
+
+.moissanite-section h2.our-gemstones-title {
+    font-size: 32px;
+    line-height: 35px;
+    margin-bottom: 20px;
+}
+
+.moissanite-section {
+    background: rgba(0, 0, 0, .045);
+    padding: 100px 20px 0;
+}
+
+.moissanite-properties-table {
+    padding: 10px 0 10px 10px;
+    min-width: 60%;
+}
+
+.moissanite-properties-image {
+    padding: 10px 10px 10px 0;
+}
+
+.moissanite-properties-image {
+    flex: 1;
+    margin: 0 0 0 33px;
+}
+
+.moissanite-properties-table td,
+.moissanite-properties-table th {
+    border: .5px solid gray;
+    border-collapse: collapse;
+    padding: 10px 10px 10px 20px;
+    font-size: 13px;
+    font-family: 'Cullen Ginto Normal';
+    font-weight: 300;
+    color: #232323;
+}
+
+.moissanite-properties-table table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+.moissanite-properties-grid img {
+    max-height: 310px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.btn-section-background a.banner-btn {
+    vertical-align: middle;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: max-content;
+    margin: auto;
+    padding: 10px 74px;
+}
+
+@media screen and (max-width: 991px) {
+    .moissanite-video {
+        margin: 0 0 0 33px;
+        max-width: 300px;
+    }
+
+    .moissanite-properties,
+    .moissanite-growing-process {
+        padding: 20px 0 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .moissanite-growing-process {
+        flex-direction: column;
+        gap: 13px;
+    }
+
+    p.our-gemstones-subtitle:last-child {
+        margin: 15px 0 0;
+    }
+
+    .moissanite-properties-image {
+        flex: 1;
+        margin: 0;
+        padding: 0 0 10px 0;
+    }
+
+    .moissanite-video {
+        margin: 0;
+    }
+
+    .moissanite-properties-grid {
+        flex-direction: column-reverse;
+        padding: 30px 40px;
+    }
+
+    .moissanite-properties-table {
+        padding: 10px 0 0 0;
+        min-width: 60%;
+    }
+
+    .moissanite-properties,
+    .moissanite-growing-process {
+        padding: 20px 20px 0;
+    }
+
+    .moissanite-properties-grid img {
+        max-height: 100%;
+    }
+
+    .moissanite-properties-table td,
+    .moissanite-properties-table th {
+        font-size: 15px;
+    }
+
+    .moissanite-growing-text h3 {
+        margin: 0 0 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.certification-section {
+    background-image: url(https://cdn.shopify.com/s/files/1/0644/3067/0060/files/DigitalCard_background_web.png?v=1739935673);
+    background-size: auto;
+    background-position: right;
+    background-repeat: no-repeat;
+    margin-top: 20px;
+    padding: 100px 20px 80px;
+}
+
+.inner-green-radiant {
+    background-image: radial-gradient(circle at top center, #00BB33, var(--primary_color));
+    padding: 15px;
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+}
+
+.certification-stage {
+    perspective: 1400px;
+    display: flex;
+    justify-content: center;
+}
+
+/* OUTER CARD = HOVER TILT */
+.certification-card {
+    width: 300px;
+    height: 500px;
+    transform-style: preserve-3d;
+    transition: transform 0.15s ease-out;
+    cursor: pointer;
+}
+
+/* INNER = CLICK FLIP */
+.certification-flip {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.7s cubic-bezier(.4, .2, .2, 1);
+}
+
+.certification-flip.is-flipped {
+    transform: rotateY(180deg);
+}
+
+/* FRONT / BACK */
+.certification-face {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    border-radius: 6px;
+    background: #fff;
+    padding: 20px;
+}
+
+.certification-face.back {
+    background-image: radial-gradient(circle at top center, #00BB33, var(--primary_color));
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* TITLE ANIMATION */
+.certification-stone-title {
+    transition: transform 0.6s ease, opacity 0.4s ease;
+}
+
+.certification-flip.is-flipped .certification-stone-title {
+    transform: translateY(-10px);
+    opacity: 0;
+}
+
+/* BACK LOGO */
+.certification-back-logo svg {
+    height: 100%;
+    width: 100%;
+}
+
+.certification-back-logo {
+    height: 50px;
+    width: 50px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.top-title-card {
+    position: absolute;
+    top: 7px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+img.certification-stone {
+    max-width: 200px;
+    margin: auto;
+    width: 100%;
+    display: block;
+}
+
+h3.certification-brand {
+    font-size: 20px;
+    font-weight: 300;
+    margin: 0;
+    font-family: var(--font_family_a);
+}
+
+span.certification-label {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 300;
+    display: block;
+    font-family: var(--font_family_c);
+    text-align: center;
+}
+
+h4.certification-stone-title {
+    font-size: 12px;
+    text-align: center;
+    margin-top: -20px;
+    font-family: var(--font_family_c);
+    font-weight: 300;
+    color: #232323;
+}
+
+p.disclaimer-text {
+    font-family: var(--font_family_c);
+    font-weight: 300;
+    color: #808080;
+    font-size: 5px;
+}
+
+p.disclaimer-title {
+    font-size: 10px;
+    font-family: var(--font_family_c);
+    color: #808080;
+    font-weight: 300;
+}
+
+.certification-row span {
+    font-size: 10px;
+    color: #808080;
+    font-weight: 400;
+    font-family: var(--font_family_c);
+    text-wrap-mode: nowrap;
+}
+
+.certification-row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 1.5rem;
+    justify-items: start;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid grey;
+}
+
+.certification-details {
+    margin: 20px 0 0;
+}
+
+.disclaimer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.certification-face.front {
+    display: flex;
+    flex-direction: column;
+}
+
+h2.certification-title {
+    color: white;
+}
+
+.certification-section hr.our-gemstones-title-line {
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+.certification-cta {
+    text-align: center;
+    border: .5px solid white;
+    width: 300px;
+    padding: 20px;
+    font-size: 13px;
+    font-weight: 300;
+    color: #fff;
+    margin: 25px auto 0;
+    font-family: var(--font_family_c);
+}
+
+@media screen and (max-width: 768px) {
+    .certification-cta {
+        width: 270px;
+    }
+}

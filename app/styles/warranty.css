@@ -1,0 +1,167 @@
+.warranty-content-inner {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 50px 20px 40px;
+}
+
+.warranty-content-inner h2 {
+    font-size: 32px;
+    line-height: 35px;
+    color: #232323;
+    margin: 33px 0 13px;
+    font-family: var(--font_family_a);
+    font-weight: 300;
+}
+
+.warranty-content-inner p {
+    font-size: 13px;
+    margin: 0 0 13px;
+    color: #232323;
+    font-family: var(--font_family_c);
+    line-height: 15.6px;
+    font-weight: 300;
+}
+
+.warranty-content-inner .section {
+    padding: 20px 0;
+}
+
+b.bold-text-title {
+    margin-bottom: 13px;
+    display: inline-block;
+}
+
+p.p-is-bold {
+    margin-top: 13px;
+}
+
+.warranty-content-inner .section p:last-child {
+    margin: 0;
+}
+
+.p-is-italic {
+    margin-top: 13px !important;
+    display: block;
+}
+
+.warranty-content-inner .section b {
+    font-weight: 600;
+}
+
+.warranty-content-inner .section li:not(:first-child) {
+    margin: 14px 0 0;
+}
+
+.warranty-content-inner .section li {
+    list-style: disc;
+    font-size: 13px;
+    font-family: 'Cullen Ginto Normal';
+    font-weight: 300;
+    color: #232323;
+    line-height: 15.5px;
+}
+
+.warranty-page .description-container-line {
+    margin: 25px auto 0;
+    width: 110px;
+    height: 2px;
+    background: #000;
+    align-self: center;
+}
+
+.warranty-content-inner .section a.fancy.bold {
+    font-weight: 600;
+}
+
+.warranty-content-inner .section ul {
+    padding-left: 40px;
+}
+
+.main-warranty-title p {
+    font-size: 26px;
+    font-weight: 300;
+    font-family: var(--font_family_n);
+    line-height: 30px;
+    color: #232323;
+    text-align: center;
+}
+
+.warranty-content-inner li ul li {
+    list-style: circle !important;
+}
+
+h2.main-warranty-title {
+    margin: 93px 0 0;
+}
+
+
+
+
+
+/* crafting-timeframes */
+.crafting-timeframes .description-container-line {
+    margin: 13px auto 0;
+}
+
+.crafting-timeframes .main-warranty-title .description {
+    font-size: 13px;
+    color: #232323;
+    text-align: center;
+    font-family: 'Cullen Ginto Normal';
+    margin: 10px 0 0 0;
+    font-weight: 300;
+}
+
+.crafting-timeframes p.p-is-bold {
+    text-transform: uppercase;
+    margin: 20px 0;
+    font-family: 'Cullen Ginto Nord';
+    letter-spacing: 1.04px;
+
+}
+
+.crafting-timeframes .warranty-content-inner h2 {
+    color: var(--primary_color);
+    margin: 40px 0 13px;
+}
+
+.crafting-timeframes .warranty-content-inner .section ul {
+    padding-left: 18px;
+}
+
+@media screen and (max-width: 767px) {
+    .warranty-content-inner h2 {
+        font-size: 26px;
+        line-height: 29px;
+        text-align: center;
+    }
+
+    .warranty-content-inner {
+        padding: 43px 20px 40px;
+    }
+
+    .warranty-content-inner p {
+        font-size: 15.5px;
+        line-height: 18.6px;
+    }
+
+    .warranty-content-inner .section li {
+        font-size: 15px;
+        line-height: 18.6px;
+    }
+
+    .crafting-timeframes p.p-is-bold {
+        font-size: 15.5px;
+        letter-spacing: 1.24px;
+    }
+
+    .main-warranty-title p {
+        font-size: 31px;
+        font-weight: 300;
+        font-family: var(--font_family_n);
+        line-height: 37.2px;
+        color: #232323;
+        text-align: center;
+        padding: 0 20px;
+    }
+}

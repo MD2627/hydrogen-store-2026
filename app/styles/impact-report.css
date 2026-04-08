@@ -1,0 +1,270 @@
+.impact-report-page {
+    background-color: var(--white_color);
+    overflow: hidden;
+}
+
+/* SUMMARY SECTION CSS START */
+
+.impact-report-summary-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 20px 70px;
+}
+
+.impact-report-summary-section .impact-report-downloads a svg {
+    height: 16px;
+    width: 16px;
+}
+
+.impact-report-summary-section .impact-report-downloads a svg path {
+    stroke: #FFF;
+}
+
+.impact-report-summary-section>h2 span {
+    color: var(--primary_color);
+}
+
+.impact-report-pillars {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding-left: 33px;
+}
+
+.impact-report-pillar-heading {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 13px;
+}
+
+.impact-report-pillar-number {
+    font-family: var(--font_family_a);
+    font-size: 32.5px;
+    line-height: 35.75px;
+    font-weight: 300;
+    color: var(--primary_color);
+    letter-spacing: normal;
+}
+
+.impact-report-pillar-title {
+    font-family: var(--font_family_a);
+    font-size: 32.5px;
+    line-height: 35.75px;
+    font-weight: 300;
+    margin: 0;
+    color: var(--black_color);
+}
+
+.impact-report-pillar-body p {
+    margin: 0 0 13px 0;
+    font-family: var(--font_family_c);
+    font-size: 13px;
+    line-height: 15px;
+    font-weight: 300;
+    color: var(--black_color);
+}
+
+.impact-report-pillar-highlight {
+    font-style: italic;
+}
+
+.impact-report-pillar-body p:last-of-type {
+    margin: 0;
+}
+
+.impact-report-downloads {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 65px;
+    text-align: center;
+}
+
+.impact-report-download-block h2 {
+    font-family: var(--font_family_a);
+    font-size: 32.5px;
+    line-height: 35.75px;
+    font-weight: 300;
+    margin: 0 0 13px 0;
+    color: var(--black_color);
+}
+
+.impact-report-download-block p {
+    margin: 0 auto 20px;
+    font-family: var(--font_family_c);
+    font-size: 13px;
+    line-height: 15px;
+    font-weight: 300;
+    color: var(--black_color);
+}
+
+.impact-report-summary-section .impact-report-downloads a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+    padding: 11px 18px;
+    background: var(--green_color);
+    color: var(--white_color);
+    text-decoration: none;
+    letter-spacing: 0.896px;
+    font-size: 11.2px;
+    line-height: 13.44px;
+    font-weight: 300;
+    font-family: var(--font_family_c);
+    transition: all .5s;
+}
+
+.impact-report-summary-section .impact-report-downloads a:hover {
+    background: var(--dark_green_color);
+}
+
+.impact-report-summary-section>h2 {
+    font-size: 32.5px;
+    font-family: var(--font_family_a);
+    letter-spacing: normal;
+    font-weight: 300;
+    line-height: 35.75px;
+    color: var(--black_color);
+    text-align: center;
+    margin-bottom: 110px;
+}
+
+
+@media screen and (max-width: 767px) {
+    .impact-report-summary-section {
+        padding: 75px 20px 70px;
+    }
+
+    .impact-report-downloads {
+        gap: 75px;
+        margin-top: 50px;
+    }
+
+    .impact-report-download-block p {
+        font-size: 15.5px;
+        line-height: 18.6px;
+    }
+
+    .impact-report-pillar-title,
+    .impact-report-pillar-number {
+        font-size: 26.35px;
+        line-height: 28.985px;
+    }
+
+    .impact-report-pillar-body p {
+        font-size: 15.5px;
+        line-height: 18.6px;
+    }
+
+    .impact-report-download-block h2 {
+        font-size: 26.35px;
+        line-height: 28.985px;
+    }
+
+    .impact-report-pillar-heading {
+        justify-content: center;
+    }
+
+    .impact-report-pillars {
+        gap: 58px;
+        padding-left: 0;
+    }
+
+    .impact-report-summary-section>h2 {
+        font-size: 26.35px;
+        line-height: 28.985px;
+    }
+}
+
+/* SUMMARY SECTION CSS END */
+
+/* FAQ SECTION CSS START */
+
+.impact-report-faq-section .faq-container {
+    max-width: 800px;
+    padding-top: 20px;
+}
+
+.impact-report-faq-section .faq-body {
+    background: var(--white_color);
+}
+
+.impact-report-faq-section .faq-question {
+    font-size: 9.75px;
+    letter-spacing: 0.78px;
+    line-height: 11.7px;
+    margin-top: 0;
+    padding-bottom: 16px;
+}
+
+.impact-report-faq-section .faq-header {
+    padding: 20px;
+    background-color: var(--green_color);
+}
+
+.impact-report-faq-section .faq-header p {
+    font-family: var(--font_family_a);
+    font-size: 14.95px;
+    line-height: 17.94px;
+    opacity: 1;
+}
+
+.impact-report-faq-section .faq-header h2 {
+    font-size: 32.5px;
+    line-height: 35.75px;
+}
+
+.impact-report-faq-section .faq-header p {
+    font-family: var(--font_family_a);
+    font-size: 14.95px;
+    line-height: 17.94px;
+    opacity: 1;
+}
+
+.impact-report-faq-section .faq-answer-inner.w-300 {
+    padding: 0 0px 16px 30px;
+    margin: 0;
+}
+
+.impact-report-faq-section .faq-answer-inner,
+.impact-report-faq-section .faq-answer-inner a {
+    font-family: var(--font_family_c);
+    color: var(--black_color);
+    font-size: 13px;
+    line-height: 15.16px;
+}
+
+.impact-report-faq-section .faq-item {
+    padding: 10px;
+    margin-bottom: 13px;
+}
+
+@media screen and (max-width: 767px) {
+
+    .impact-report-faq-section .faq-answer-inner,
+    .impact-report-faq-section .faq-answer-inner a {
+        font-size: 15.5px;
+        line-height: 18.6px;
+    }
+
+    .impact-report-faq-section .faq-question {
+        font-size: 10.85px;
+        line-height: 13.02px;
+        padding-bottom: 16px;
+    }
+
+    .impact-report-faq-section .faq-header h2 {
+        font-size: 26.35px;
+        line-height: 29px;
+    }
+
+    .impact-report-faq-section .faq-header p {
+        font-size: 19.37px;
+        line-height: 21px;
+    }
+}
+
+/* FAQ SECTION CSS END */

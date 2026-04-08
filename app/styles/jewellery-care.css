@@ -1,0 +1,532 @@
+/* ------------------- JEWELLERY CARE PAGE ------------------- */
+.jewellery-care-page {
+    margin: 0 auto;
+}
+
+/* ------------------- BANNER ------------------- */
+.jewellery-care-page .story-craft-banner {
+    height: 60vh;
+}
+
+.jewellery-care-page .story-craft-overlay {
+    background: transparent;
+}
+
+.jewellery-care-page .story-craft-banner .story-craft-content {
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+    padding: 0;
+}
+
+.jewellery-care-banner .story-craft-content h2 {
+    font-size: 45.5px;
+    line-height: 50.5px;
+    text-shadow: none;
+    margin-bottom: 20px;
+}
+
+.jewellery-maintenance-banner .story-craft-content h2,
+.jewellery-lifetime-banner .story-craft-content h2 {
+    font-size: 32.5px;
+    line-height: 35.75px;
+    text-shadow: none;
+    margin-bottom: 20px;
+}
+
+.jewellery-care-page .story-craft-banner .story-craft-content p {
+    font-family: var(--font_family_c);
+    font-size: 14.95px;
+    line-height: 17.94px;
+}
+
+@media screen and (max-width: 767px) {
+    .jewellery-care-page .jewellery-care-banner {
+        height: 50vh;
+    }
+
+    .jewellery-care-banner .story-craft-content h2 {
+        font-size: 38.75px;
+        line-height: 42px;
+    }
+
+    .jewellery-maintenance-banner .story-craft-content h2,
+    .jewellery-lifetime-banner .story-craft-content h2 {
+        font-size: 26.25px;
+        line-height: 29px;
+        max-width: 220px;
+        margin-inline: auto;
+    }
+
+    .jewellery-care-page .story-craft-banner .story-craft-content p {
+        font-size: 17px;
+        line-height: 22px;
+    }
+}
+
+/* ------------------- JEWELLERY CARE INTRO ------------------- */
+.jewellery-care-content {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #0000000b;
+}
+
+.jewellery-care-content h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.jewellery-care-content .intro-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.jewellery-care-content p {
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 20px;
+}
+
+.jewellery-care-content p:last-child {
+    margin-bottom: 0;
+}
+
+.jewellery-promise-intro.jewellery-care-content .intro-content {
+    max-width: 500px;
+}
+
+.jewellery-promise-intro.jewellery-care-content p {
+    font-family: var(--font_family_c);
+    font-size: 13px;
+    line-height: 15.6px;
+}
+
+.jewellery-promise-intro.jewellery-care-content {
+    padding-block: 80px;
+    background-color: transparent;
+}
+
+.jewellery-promise-intro.jewellery-care-content h2 {
+    margin-bottom: 14px;
+}
+
+@media screen and (max-width: 767px) {
+    .jewellery-care-content h2 {
+        font-size: 26px;
+    }
+
+    .jewellery-care-content p {
+        font-size: 19px;
+        line-height: 22px;
+    }
+
+    .jewellery-promise-intro.jewellery-care-content p {
+        font-size: 15.5px;
+        line-height: 18.6px;
+    }
+}
+
+/* ------------------- JEWELLERY EXPERT TIPS ------------------- */
+.jewellery-expert-tips {
+    padding: 80px 5px 100px;
+}
+
+.jewellery-expert-tips h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.expert-tips-card p {
+    font-size: 15px;
+    line-height: 22px;
+}
+
+.expert-tips-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.expert-tips-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 25px 20px;
+    background-color: #0000000b;
+}
+
+.expert-tips-card .icon-wrapper {
+    width: 100px;
+    height: 100px;
+}
+
+.expert-info-icon {
+    display: inline-flex;
+    height: 100%;
+    width: 100%;
+}
+
+.expert-info-icon path,
+.expert-info-icon .cls-2 {
+    fill: var(--green_color);
+}
+
+
+@media screen and (max-width: 991px) {
+    .expert-tips-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .expert-tips-card .icon-wrapper {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .expert-tips-grid {
+        gap: 15px;
+    }
+}
+
+/* ------------------- RING CARE FAQ ------------------- */
+.ring-care-faqs {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 100px 20px 40px;
+}
+
+.ring-care-faqs .faq-header {
+    background: transparent;
+    color: var(--black_color);
+    padding: 0 0 40px;
+}
+
+.ring-care-faqs .faq-header h2 {
+    font-size: 32.5px;
+    line-height: 36px;
+}
+
+.ring-care-faqs .faq-header p {
+    font-size: 13px;
+    line-height: 16px;
+    opacity: 1;
+    max-width: 500px;
+    margin: auto
+}
+
+.ring-care-faqs .faq-body {
+    background-color: transparent;
+    padding: 0 !important;
+}
+
+.ring-care-video-link {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.ring-care-video-link p {
+    line-height: 18px;
+}
+
+.ring-care-video-link p a,
+.jewellery-promise-intro p a {
+    color: var(--black_color);
+    position: relative;
+    border-bottom: 1.5px solid #e0ebe4;
+}
+
+.ring-care-video-link p a:after,
+.jewellery-promise-intro p a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 1.5px;
+    background: var(--dark_green_color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.ring-care-video-link p a:hover:after,
+.jewellery-promise-intro p a:hover::after {
+    transform: scaleX(1);
+}
+
+@media screen and (max-width: 767px) {
+    .ring-care-faqs .faq-header h2 {
+        font-size: 26.35px;
+        line-height: 29px;
+    }
+
+    .ring-care-faqs .faq-header p {
+        max-width: 300px;
+    }
+
+    .ring-care-faqs .faq-header p,
+    .ring-care-faqs .faq-answer-inner {
+        font-size: 15.5px;
+        line-height: 18.6px;
+    }
+
+    .ring-care-faqs .faq-question {
+        font-size: 12px;
+    }
+}
+
+/* ------------------- OUR JEWELLERS SECTION ------------------- */
+.care-video-section {
+    padding: 0 20px 132px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.jewellery-care-video {
+    position: relative;
+    padding-bottom: 56.2%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.jewellery-care-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+@media screen and (max-width: 767px) {
+    .our-jewellers-section {
+        padding: 60px 0;
+    }
+
+    .care-video-section {
+        padding: 0 20px 40px;
+    }
+
+    .our-jewellers-title {
+        font-size: 26.35px;
+        line-height: 28.985px;
+    }
+
+    .our-jewellers-subtitle {
+        font-size: 15.5px;
+        line-height: 18.6px;
+    }
+}
+
+/* ------------------- WHEN TO REMOVE SECTION ------------------- */
+.when-to-remove-section {
+    padding: 80px 20px;
+    background-color: #0000000b;
+}
+
+.when-to-remove-section .section-header {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 80px;
+}
+
+.when-to-remove-section .section-header h2 {
+    font-size: 32.5px;
+    line-height: 35.75px;
+    margin-bottom: 14px;
+}
+
+.when-to-remove-section .section-header p {
+    line-height: 15.5px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.remove-items-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.remove-item {
+    display: flex;
+    align-items: center;
+    gap: 96px;
+}
+
+.remove-item .icon-wrapper {
+    width: 120px;
+    height: 120px;
+}
+
+.remove-item .icon-wrapper svg {
+    width: 100%;
+    height: 100%;
+}
+
+.remove-item .text-col {
+    flex: 1;
+}
+
+.remove-item .text-col h3 {
+    line-height: 15px;
+    letter-spacing: 1.5px;
+    margin: 0 0 8px;
+    text-transform: uppercase;
+}
+
+.remove-item .text-col p {
+    line-height: 15.6px;
+    margin-bottom: 16px;
+}
+
+.remove-item .text-col p:last-child {
+    margin-bottom: 0;
+}
+
+.when-to-remove-section .section-footer {
+    text-align: center;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 52px;
+}
+
+.when-to-remove-section .pro-tip {
+    line-height: 15.6px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.when-to-remove-section .care-btn {
+    letter-spacing: 0.9px;
+    font-size: 11.2px;
+}
+
+@media screen and (max-width: 768px) {
+    .remove-item {
+        gap: 16px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .remove-item .icon-wrapper {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .when-to-remove-section .section-header h2 {
+        font-size: 26.35px;
+        line-height: 29px;
+    }
+
+    .when-to-remove-section .section-header p {
+        font-size: 15.5px;
+        line-height: 22px;
+        max-width: 300px;
+    }
+
+    .remove-item .text-col p {
+        font-size: 15.5px;
+        line-height: 22px;
+    }
+}
+
+/* -------------------------- shop by style -------------------------------- */
+.shop-by-style.shop--jewellery-care {
+    background-color: #0000000b;
+    padding-inline: 0;
+}
+
+.shop--jewellery-care .shop-by-style-header p {
+    max-width: 500px;
+    line-height: 15.6px;
+}
+
+.shop--jewellery-care .shop-by-style-header {
+    margin-bottom: 60px;
+}
+
+.shop--jewellery-care .style-name {
+    margin-top: 14px;
+    font-family: var(--font_family_n);
+}
+
+.shop--jewellery-care button.swiper-button-prev.custom-arrow,
+.shop--jewellery-care button.swiper-button-next.custom-arrow {
+    background: var(--white_color);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    color: var(--green_color);
+    backdrop-filter: unset;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    z-index: 11;
+}
+
+.shop--jewellery-care .swiper .swiper-wrapper {
+    padding: 0 20px;
+}
+
+.shop--jewellery-care .swiper-slide {
+    margin-right: 20px !important;
+    width: 300px !important;
+}
+
+.shop--jewellery-care .style-image-wrapper img {
+    max-height: 300px;
+    min-height: 300px;
+    width: 300px;
+    min-width: 300px;
+}
+
+
+@media screen and (max-width: 767px) {
+    .shop-by-style.shop--jewellery-care {
+        padding: 80px 0;
+    }
+
+    .shop--jewellery-care.shop-by-style .swiper {
+        padding: 0 0px !important;
+    }
+
+    .shop--jewellery-care .shop-by-style-header {
+        max-width: 335px;
+    }
+
+    .shop--jewellery-care .shop-by-style-header p {
+        line-height: 18.6px;
+    }
+}
+
+/* ------------------- FAQ SECTION ------------------- */
+
+.jewellery-care-faq-section .faq-body {
+    padding-bottom: 60px !important;
+}
+
+.jewellery-care-faq-section .faq-header p {
+    opacity: 1;
+}
+
+.jewellery-care-faq-section .faq-item:first-child .faq-question {
+    margin-top: 0;
+    padding-top: 40px;
+}
+
+@media screen and (max-width: 767px) {
+    .jewellery-care-faq-section .faq-answer-inner {
+        line-height: 22px;
+    }
+}

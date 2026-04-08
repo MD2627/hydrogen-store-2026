@@ -1,0 +1,22 @@
+.filter-section.stone-type.filter-full-width {
+    width: 100%;
+}
+
+.engagement-collection-filters .filter-section.stone-type.filter-full-width .filter-pills-container {
+    max-width: 530px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.engagement-collection-filters .filter-third-width {
+    width: 50%;
+}
+
+/* Ensure they stack correctly if flex/grid behavior needs adjustment */
+@media screen and (max-width: 750px) {
+
+    .engagement-collection-filters .setting-profile,
+    .engagement-collection-filters .filter-third-width {
+        width: 100% !important;
+    }
+}
