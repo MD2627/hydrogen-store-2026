@@ -1,0 +1,126 @@
+.modal-container {
+    background: #fff;
+    width: 100%;
+    max-width: 440px;
+    border-radius: 16px;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    font-family: var(--font_family_c);
+    text-align: left;
+}
+
+.modal-body {
+    padding: 32px;
+}
+
+.modal-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    font-family: var(--font_family_n);
+    color: var(--black_color);
+}
+
+.modal-subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 32px;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-label {
+    font-size: 13px;
+    font-weight: 600;
+    font-family: var(--font_family_n);
+    color: var(--black_color);
+}
+
+.form-input {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #e8e8e4;
+    font-size: 15px;
+    font-family: var(--font_family_c);
+    transition: border-color 0.2s;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--primary_color);
+}
+
+.form-submit {
+    padding: 14px;
+    background: var(--primary_color);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.2s ease;
+    font-family: var(--font_family_n);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.form-submit:hover {
+    opacity: 0.9;
+}
+
+.form-submit:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.modal-close-icon {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--black_color);
+    z-index: 10;
+}
+
+
+@media (max-width: 768px) {
+    .modal-container {
+        max-width: 92vw;
+        border-radius: 12px;
+    }
+
+    .modal-body {
+        padding: 24px;
+    }
+
+    .modal-title {
+        font-size: 20px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .modal-container {
+        max-width: 90vw;
+    }
+}

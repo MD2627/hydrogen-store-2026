@@ -414,3 +414,13 @@
     padding: 0;
   }
 } */
+
+.try-theme-btn {
+  width: 40px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 100;
+  box-shadow: 0px 0px 5px 0px #000;
+  cursor: pointer;
+}

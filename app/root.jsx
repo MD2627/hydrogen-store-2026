@@ -50,6 +50,7 @@ import visitStyles from './styles/visit.css?url';
 import notFoundStyles from './styles/not-found.css?url';
 import reviewMetaListStyles from './styles/review-meta-list.css?url';
 import documentation from './styles/documentation.css?url';
+import tryThemeModal from './styles/tryThemeModal.css?url';
 import { NotFound } from './components/NotFound';
 
 /**
@@ -238,6 +239,7 @@ export function Layout({ children }) {
         <link rel="stylesheet" href={notFoundStyles}></link>
         <link rel="stylesheet" href={reviewMetaListStyles}></link>
         <link rel="stylesheet" href={documentation}></link>
+        <link rel="stylesheet" href={tryThemeModal}></link>
 
         <Meta />
 

@@ -10,33 +10,37 @@ export function Announcement() {
             showImage: true
         },
         {
-            text: "Your story, set in stone",
-            link: "/products/arielle"
+            text: "Documents & Resources",
+            link: "/documentation"
         },
         {
-            text: "Certified & Ethical Lab-Grown Diamonds",
-            link: "/products/arielle"
+            text: "Theme Showcase",
+            link: "/theme-showcase"
         },
         {
-            text: "Book a Private Consultation",
-            link: "/products/savannah"
+            text: "Documents & Resources",
+            link: "/documentation"
         },
         {
-            text: "Complimentary Insured Worldwide Delivery",
-            link: "/products/arielle"
+            text: "Theme Showcase",
+            link: "/theme-showcase"
         },
         {
-            text: "Complimentary Engraving & Cleaning",
-            link: "/products/savannah"
+            text: "Documents & Resources",
+            link: "/documentation"
         },
         {
-            text: "FREE SHIPPING ON ORDERS OVER $50",
-            link: "/products/arielle"
+            text: "Theme Showcase",
+            link: "/theme-showcase"
         },
         {
-            text: "NEW COLLECTION AVAILABLE NOW",
-            link: "/products/savannah"
-        }
+            text: "Documents & Resources",
+            link: "/documentation"
+        },
+        {
+            text: "Theme Showcase",
+            link: "/theme-showcase"
+        },
     ];
 
 

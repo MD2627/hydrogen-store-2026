@@ -2,6 +2,7 @@ import { Suspense, useState, useEffect } from 'react';
 import { Await, Link, NavLink } from 'react-router';
 import '../styles/footer.css';
 import { useDynamicMenus } from '~/lib/hooks/useDynamicMenus';
+import { TryThemeModal } from "~/components/TryThemeModal";
 
 /**
  * @param {FooterProps}
@@ -14,6 +15,7 @@ export function Footer({ footer: footerPromise, header, publicStoreDomain }) {
     contactUs: false,
   });
   const [isClient, setIsClient] = useState(false);
+  const [showTryTheme, setShowTryTheme] = useState(false);
 
   useEffect(() => {
     setIsClient(true);
@@ -304,6 +306,18 @@ export function Footer({ footer: footerPromise, header, publicStoreDomain }) {
                     </div>
                   </div>
                   <div className="copyright f-10 f-m-10 ff-n white-color">© 2025 Stara</div>
+
+                  <button className='try-theme-btn' onClick={() => setShowTryTheme(true)}>
+                    <img src="https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Gemini_Generated_Image_12frs12frs12frs1.png?v=1775905453" alt="download-icon" />
+                  </button>
+                  
+                  {/* ── TRY THEME MODAL ── */}
+                  <TryThemeModal
+                    isOpen={showTryTheme}
+                    onClose={() => setShowTryTheme(false)}
+                    formId="theme-showcase-bottom-nav"
+                  />
+
                 </div>
               </div>
             </footer>

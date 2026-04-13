@@ -621,12 +621,12 @@ export default function Homepage() {
         const buttonText = getField('banner_button')?.value || 'Explore Bezels';
         const buttonUrl = getField('banner_button_url')?.value || '/pages/visit';
 
-        console.log('Video URL Conversion:', {
-          desktopVideoLong,
-          desktopVideoShort: desktopVideo,
-          mobileVideoLong,
-          mobileVideoShort: mobileVideo
-        });
+        // console.log('Video URL Conversion:', {
+        //   desktopVideoLong,
+        //   desktopVideoShort: desktopVideo,
+        //   mobileVideoLong,
+        //   mobileVideoShort: mobileVideo
+        // });
 
         return (
           <VideoBanner
