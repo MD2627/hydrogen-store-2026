@@ -4,12 +4,6 @@ import { Link } from 'react-router';
 export function Announcement() {
     const announcements = [
         {
-            text: "VISIT US - APPOINTMENT ONLY",
-            link: "/products/madeline",
-            image: "https://cdn.shopify.com/s/files/1/0801/7317/0906/files/svgviewer-output.svg?v=1767866337",
-            showImage: true
-        },
-        {
             text: "Documents & Resources",
             link: "/documentation"
         },
