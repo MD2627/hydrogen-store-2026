@@ -44,7 +44,7 @@ export const COLLECTION_BANNERS = {
     },
     'wedding': {
         type: 'image',
-        desktop: 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/wedding_banner_desktop.jpg',
+        desktop: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Gemini_Generated_Image_pyqvwbpyqvwbpyqv.png?v=1776057909',
         mobile: 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/wedding_banner_mobile.jpg',
         title: 'Wedding Rings',
         description: 'Timeless symbols of your eternal love.'
@@ -123,7 +123,7 @@ export const COLLECTION_BANNERS = {
         title: null,
         description: null
     },
-    'fine-jewellery': {
+    'fine-jewelry': {
         type: 'video',
         desktop: 'https://cdn.shopify.com/videos/c/o/v/aea546cde2434e3dab5d9b88c347d368.mp4',
         mobile: 'https://cdn.shopify.com/videos/c/o/v/aea546cde2434e3dab5d9b88c347d368.mp4',

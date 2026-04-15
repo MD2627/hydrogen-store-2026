@@ -65,9 +65,11 @@ export function CollectionBanner({ collection }) {
     // If no media available, render simple header
     if (!bannerImage && !bannerVideo) {
         return (
+            <div className='page-width'>
             <div className="collection-header-simple">
-                <h1 className='f-40 f-m-28 ff-c w-400 l-h-300'>{title}</h1>
+                <h1 className='f-16 f-m-28 ff-c w-400 l-h-300'>{title}</h1>
                 {description && <p className="collection-description ff-c f-16 f-m-12 w-400 l-h-300">{description}</p>}
+            </div>
             </div>
         );
     }
