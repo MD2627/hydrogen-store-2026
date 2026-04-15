@@ -59,7 +59,6 @@ const FILTER_CONFIG = [
             { value: 'emerald', label: 'Emerald' },
             { value: 'radiant', label: 'Radiant' },
             { value: 'pear', label: 'Pear' },
-            { value: 'cushion', label: 'Cushion' },
             { value: 'elongated-cushion', label: 'Elongated Cushion' },
             { value: 'elongated-hexagon', label: 'Elongated Hexagon' },
             { value: 'marquise', label: 'Marquise' },
@@ -84,6 +83,7 @@ const FILTER_CONFIG = [
         options: [
             { value: 'solitaire', label: 'Solitaire' },
             { value: 'halo', label: 'Halo' },
+            { value: 'hidden-halo', label: 'Hidden Halo' },
             { value: 'trilogy', label: 'Trilogy' },
             { value: 'toi-et-moi', label: 'Toi & Moi' },
             { value: 'bezel', label: 'Bezel' },
@@ -101,6 +101,17 @@ const FILTER_CONFIG = [
         ]
     }
 ];
+
+// Stone Type pill-toggle filter — exported so pages can pass it as additionalFilters
+export const STONE_TYPE_FILTER = {
+    key: 'stone',
+    label: 'Stone Type',
+    layoutClass: 'filter-full-width',
+    isPillToggle: true,
+    options: [
+        { value: 'certified-lab-grown-diamond', label: 'CERTIFIED LAB-GROWN DIAMOND' },
+    ]
+};
 
 const FILTER_INFO_CONTENT = {
     shape: {

@@ -330,57 +330,19 @@ export default function FrontpageCollection() {
         return 0; // recommended - keep original order
     });
 
-    // Extract active filters and find matching variant options for display & URL
-    let selectedVariantOptions = [];
-
-    const paramToLabelMap = {
-        'metal': 'Metal Type',
-        'style': 'Setting Style',
-        'band': 'Band Type',
-        'profile': 'Setting Profile',
-        'shape': 'Shape'
-    };
-
-    const activeParams = [
-        { key: 'metal', value: metalFilter },
-        { key: 'style', value: styleFilter },
-        { key: 'band', value: bandFilter },
-        { key: 'profile', value: profileFilter },
-        { key: 'shape', value: shapeFilter }
-    ];
-
-    activeParams.forEach(({ key, value }) => {
-        if (!value) return;
-
-        // Manual override for 'profile' -> maps to 'Setting' variant option
-        if (key === 'profile') {
-            const normalizedVal = value.toLowerCase();
-            let settingValue = value;
-            if (normalizedVal.includes('high')) settingValue = 'High Setting';
-            else if (normalizedVal.includes('low')) settingValue = 'Low Setting';
-
-            selectedVariantOptions.push({ name: 'Setting', value: settingValue });
-            return;
-        }
-
-        const targetLabel = paramToLabelMap[key];
-        const filterConfig = availableFilters.find(f => f.label === targetLabel);
-
-        if (filterConfig) {
-            // Find matching value (assuming URL format is kebab-case)
-            const match = filterConfig.values.find(v =>
-                v.label.toLowerCase().replace(/\s+/g, '-') === value
-            );
-
-            if (match) {
-                selectedVariantOptions.push({ name: targetLabel, value: match.label });
-            }
-        }
-    });
-
-    if (selectedVariantOptions.length === 0) {
-        selectedVariantOptions = null;
+    // Build selectedVariantOptions directly from URL filter values.
+    // Each ProductItem uses these criteria to find its own matching variant per-product.
+    let selectedVariantOptions = null;
+    if (metalFilter || styleFilter || profileFilter || bandFilter || shapeFilter) {
+        const opts = [];
+        if (metalFilter) opts.push({ name: 'Metal Type', value: metalFilter.replace(/-/g, ' ') });
+        if (styleFilter) opts.push({ name: 'Setting Style', value: styleFilter.replace(/-/g, ' ') });
+        if (profileFilter) opts.push({ name: 'Setting', value: profileFilter.replace(/-/g, ' ') });
+        if (bandFilter) opts.push({ name: 'Band Type', value: bandFilter.replace(/-/g, ' ') });
+        if (shapeFilter) opts.push({ name: 'Shape', value: shapeFilter.replace(/-/g, ' ') });
+        if (opts.length > 0) selectedVariantOptions = opts;
     }
+
 
     return (
         <div className="collection">

@@ -10,6 +10,7 @@ import { SplitBanner } from '~/components/SplitBanner';
 import { ProductFAQ } from '~/components/ProductFAQ';
 import { UvpIconFooter } from '~/components/UvpIconFooter';
 import { VideoBanner } from '~/components/VideoBanner';
+import { CustomCollectionFilters, STONE_TYPE_FILTER } from '~/components/CustomCollectionFilters';
 import engagementFiltersCss from '~/styles/engagement-filters.css?url';
 
 /**
@@ -23,391 +24,6 @@ export const links = () => {
     return [{ rel: 'stylesheet', href: engagementFiltersCss }];
 };
 
-// ============================================================================
-// FILTER CONFIGURATION & CsOMPONENT (All in one place)
-// ============================================================================
-
-export const FILTER_ICONS = {
-    // SHAPES
-    "Radiant": "https://cdn.shopify.com/s/files/1/0801/7317/0906/files/Radiant.svg?v=1768210925",
-    "Pear": "https://cdn.shopify.com/s/files/1/0801/7317/0906/files/Pear.svg?v=1768210925",
-    "Square Cushion": "https://cdn.shopify.com/s/files/1/0801/7317/0906/files/Cushion.svg?v=1768210925",
-    "Elongated Cushion": "https://cdn.shopify.com/s/files/1/0801/7317/0906/files/Elongated_Cushion.svg?v=1768210925",
-    "Elongated Hexagon": "https://cdn.shopify.com/s/files/1/0801/7317/0906/files/Elongated_Hexagon.svg?v=1768210925",
-    "Marquise": "https://cdn.shopify.com/s/files/1/0801/7317/0906/files/Marquise.svg?v=1768210925",
-    "Princess": "https://cdn.shopify.com/s/files/1/0801/7317/0906/files/Princess.svg?v=1768210925",
-    "Asscher": "https://cdn.shopify.com/s/files/1/0801/7317/0906/files/Asscher.svg?v=1768210925",
-    "Heart": "https://cdn.shopify.com/s/files/1/0801/7317/0906/files/Heart.svg?v=1768210924",
-    "Oval": "https://cdn.shopify.com/s/files/1/0801/7317/0906/files/Oval.svg?v=1768210925",
-    "Round": "https://cdn.shopify.com/s/files/1/0801/7317/0906/files/Round.svg?v=1768210925",
-    "Emerald": "https://cdn.shopify.com/s/files/1/0801/7317/0906/files/Emerald.svg?v=1768210925",
-
-    // METAL TYPE
-    "14k-yellow-gold": "https://cdn.shopify.com/s/files/1/0801/7317/0906/files/18k_Yellow_Gold.svg?v=1768212724",
-    "14k-white-gold": "https://cdn.shopify.com/s/files/1/0801/7317/0906/files/18k_White_Gold.svg?v=1768212724",
-    "14k-rose-gold": "https://cdn.shopify.com/s/files/1/0801/7317/0906/files/18k_Rose_Gold.svg?v=1768212724",
-
-    // SETTING S TYLE 
-    "Trilogy": "https://cdn.shopify.com/s/files/1/0801/7317/0906/files/Trilogy.svg?v=1768213901",
-    "Solitaire": "https://cdn.shopify.com/s/files/1/0801/7317/0906/files/Solitaire.svg?v=1768213901",
-    "Halo": "https://cdn.shopify.com/s/files/1/0801/7317/0906/files/Halo.svg?v=1768213899",
-    "Toi et Moi": "https://cdn.shopify.com/s/files/1/0801/7317/0906/files/Toi_et_Moi.svg?v=1768213901",
-    "Toi Et Moi": "https://cdn.shopify.com/s/files/1/0801/7317/0906/files/Toi_et_Moi.svg?v=1768213901",
-    "Bezel": "https://cdn.shopify.com/s/files/1/0801/7317/0906/files/Bezel.svg?v=1768213901",
-    "East West": "https://cdn.shopify.com/s/files/1/0801/7317/0906/files/East_West.svg?v=1768213901",
-
-    // BAND TYPE
-    "Plain": "https://cdn.shopify.com/s/files/1/0801/7317/0906/files/Plain.svg?v=1768214236",
-    "Pave": "https://cdn.shopify.com/s/files/1/0801/7317/0906/files/Pave.svg?v=1768214237",
-    "Accents": "https://cdn.shopify.com/s/files/1/0801/7317/0906/files/Accents.svg?v=1768214236"
-};
-
-const FILTER_CONFIG = [
-    {
-        key: 'shape',
-        label: 'Shape',
-        layoutClass: 'filter-half-width',
-        options: [
-            { value: 'round', label: 'Round' },
-            { value: 'oval', label: 'Oval' },
-            { value: 'elongated-cushion', label: 'Elongated Cushion' },
-            { value: 'square-cushion', label: 'Square Cushion' },
-            { value: 'marquise', label: 'Marquise' },
-            { value: 'pear', label: 'Pear' },
-            { value: 'emerald', label: 'Emerald' },
-            { value: 'radiant', label: 'Radiant' },
-            { value: 'asscher', label: 'Asscher' },
-            { value: 'princess', label: 'Princess' },
-            { value: 'heart', label: 'Heart' },
-        ]
-    },
-    {
-        key: 'metal',
-        label: 'Metal Type',
-        layoutClass: 'filter-half-width',
-        hasToggle: false,
-        options: [
-            { value: '14k-yellow-gold', label: '14K Yellow Gold', group: 'standard' },
-            { value: '14k-white-gold', label: '14K White Gold', group: 'standard' },
-            { value: '14k-rose-gold', label: '14K Rose Gold', group: 'standard' },
-        ]
-    },
-    {
-        key: 'style',
-        label: 'Setting Style',
-        layoutClass: 'filter-third-width',
-        options: [
-            { value: 'solitaire', label: 'Solitaire' },
-            { value: 'bezel', label: 'Bezel' },
-            { value: 'hidden-halo', label: 'Hidden Halo' },
-            { value: 'halo', label: 'Halo' },
-            { value: 'trilogy', label: 'Trilogy' },
-            { value: 'east-west', label: 'East West' },
-            { value: 'toi-et-moi', label: 'Toi Et Moi' },
-        ]
-    },
-    {
-        key: 'band',
-        label: 'Band Type',
-        layoutClass: 'filter-third-width',
-        options: [
-            { value: 'plain', label: 'Plain' },
-            { value: 'pave', label: 'Pave' },
-            { value: 'accents', label: 'Accents' },
-        ]
-    }
-];
-
-// Stone Type Filter - defined here for easy modification
-const STONE_TYPE_FILTER = {
-    key: 'stone',
-    label: 'Stone Type',
-    layoutClass: 'filter-full-width',
-    isPillToggle: true,
-    options: [
-        // { value: 'any', label: 'ANY' },
-        { value: 'certified-lab-grown-diamond', label: 'CERTIFIED LAB-GROWN DIAMOND' },
-    ]
-};
-
-// Helper Component for Scrollable Filter Section
-function FilterSection({ filter, searchParams, metalTypeMode, setMetalTypeMode, handleFilterChange, handleClearSection }) {
-    const scrollRef = useRef(null);
-    const [canScrollLeft, setCanScrollLeft] = useState(false);
-    const [canScrollRight, setCanScrollRight] = useState(false);
-
-    const checkScroll = () => {
-        if (scrollRef.current) {
-            const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
-            setCanScrollLeft(scrollLeft > 0);
-            // Allow a small tolerance of 1px for rounding errors
-            setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 1);
-        }
-    };
-
-    useEffect(() => {
-        if (!filter.isPillToggle) {
-            checkScroll();
-            window.addEventListener('resize', checkScroll);
-            return () => window.removeEventListener('resize', checkScroll);
-        }
-    }, [metalTypeMode, filter]); // Re-check when content changes
-
-    const scroll = (direction) => {
-        if (scrollRef.current) {
-            const scrollAmount = 250;
-            const newScrollLeft = direction === 'left'
-                ? scrollRef.current.scrollLeft - scrollAmount
-                : scrollRef.current.scrollLeft + scrollAmount;
-
-            scrollRef.current.scrollTo({
-                left: newScrollLeft,
-                behavior: 'smooth'
-            });
-
-            // Re-check buttons after scroll animation (approximate delay)
-            setTimeout(checkScroll, 350);
-        }
-    };
-
-    const layoutClass = filter.layoutClass || 'filter-full-width';
-    const isActive = searchParams.has(filter.key);
-    const currentValue = searchParams.get(filter.key);
-
-    // Filter options check logic
-    let displayOptions = filter.options;
-    if (filter.key === 'metal' && filter.hasToggle) {
-        displayOptions = filter.options.filter(opt =>
-            opt.group === metalTypeMode || !opt.group
-        );
-    }
-
-    if (filter.isPillToggle) {
-        return (
-            <div className={`filter-section ${filter.label.toLowerCase().replace(' ', '-')} ${layoutClass}`}>
-                <div style={{ textAlign: 'center', marginBottom: '10px' }}>
-                    <h3 className="filter-title f-10 f-m-10 w-300 ff-n l-h-1-2 black-color" style={{ justifyContent: 'center' }}>
-                        {filter.label}
-                        <span className="info-icon" title="More Info">
-                            <svg className="h-6 w-6" fill="currentColor" aria-hidden="true" viewBox="0 0 32 32">
-                                <path d="M16 8.84a1.4 1.4 0 0 1 1.4 1.4 1.4 1.4 0 1 1-2.8 0 1.4 1.4 0 0 1 1.4-1.4zm0 4.82a1.34 1.34 0 0 1 1.4 1.28v7a1.41 1.41 0 0 1-2.8 0v-7a1.34 1.34 0 0 1 1.4-1.28zM16 30a14 14 0 1 1 14-14 14 14 0 0 1-14 14zm0-25.8A11.8 11.8 0 1 0 27.8 16 11.81 11.81 0 0 0 16 4.2z"></path>
-                            </svg>
-                        </span>
-                    </h3>
-                </div>
-                <div className="filter-pills-container" style={{ display: 'flex', justifyContent: 'center', gap: '0' }}>
-                    {/* {displayOptions.map((option) => {
-                        const isAny = option.value === 'any';
-                        const isSelected = currentValue === option.value || (isAny && !currentValue);
-
-                        return (
-                            <button
-                                key={option.value}
-                                type="button"
-                                className={`filter-pill-btn f-10 f-m-10 w-300 ff-n l-h-1-2 black-color ${isSelected ? 'active' : ''}`}
-                                onClick={() => handleFilterChange(filter.key, isAny ? null : option.value)}
-                                style={{
-                                    background: isSelected ? '#1a5f3b' : '#fff',
-                                    color: isSelected ? '#fff' : '#1a1a1a',
-                                }}
-                            >
-                                {option.label}
-                            </button>
-                        );
-                    })} */}
-                    {displayOptions.map((option, index) => {
-                        const defaultValue = displayOptions[0]?.value;
-
-                        const isSelected =
-                            currentValue === option.value ||
-                            (!currentValue && option.value === defaultValue);
-
-                        return (
-                            <button
-                                key={option.value}
-                                type="button"
-                                className={`filter-pill-btn f-10 f-m-10 w-300 ff-n l-h-1-2 black-color ${isSelected ? 'active' : ''}`}
-                                onClick={() => handleFilterChange(filter.key, option.value)}
-                                style={{
-                                    background: isSelected ? '#1a5f3b' : '#fff',
-                                    color: isSelected ? '#fff' : '#1a1a1a',
-                                }}
-                            >
-                                {option.label}
-                            </button>
-                        );
-                    })}
-                </div>
-            </div>
-        );
-    }
-
-    return (
-        <div className={`filter-section ${filter.label.toLowerCase().replace(' ', '-')} ${layoutClass}`}>
-            <div className="filter-header-row">
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <h3 className="filter-title f-10 f-m-10 w-300 ff-n l-h-1-2 black-color">
-                        {filter.label}
-                        <span className="info-icon" title="More Info">
-                            <svg className="h-6 w-6" fill="currentColor" aria-hidden="true" viewBox="0 0 32 32">
-                                <path d="M16 8.84a1.4 1.4 0 0 1 1.4 1.4 1.4 1.4 0 1 1-2.8 0 1.4 1.4 0 0 1 1.4-1.4zm0 4.82a1.34 1.34 0 0 1 1.4 1.28v7a1.41 1.41 0 0 1-2.8 0v-7a1.34 1.34 0 0 1 1.4-1.28zM16 30a14 14 0 1 1 14-14 14 14 0 0 1-14 14zm0-25.8A11.8 11.8 0 1 0 27.8 16 11.81 11.81 0 0 0 16 4.2z"></path>
-                            </svg>
-                        </span>
-                    </h3>
-                    {isActive && (
-                        <button
-                            type="button"
-                            className="section-clear-btn f-10 f-m-10 w-300 ff-n l-h-1-2 black-color"
-                            onClick={() => handleClearSection(filter.key)}
-                        >
-                            Clear
-                        </button>
-                    )}
-                </div>
-
-                {filter.hasToggle && (
-                    <button
-                        type="button"
-                        className={`two-tone-toggle-btn f-10 f-m-10 w-300 ff-n l-h-1-2 black-color ${metalTypeMode === 'twotone' ? 'active' : ''}`}
-                        onClick={() => setMetalTypeMode(prev => prev === 'standard' ? 'twotone' : 'standard')}
-                    >
-                        TWO TONE
-                    </button>
-                )}
-            </div>
-
-            <div className="filter-scroll-wrapper">
-                {canScrollLeft && (
-                    <button
-                        type="button"
-                        className="filter-scroll-btn prev"
-                        onClick={() => scroll('left')}
-                        aria-label="Scroll left"
-                    >
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 18l-6-6 6-6" /></svg>
-                    </button>
-                )}
-
-                <div
-                    className="filter-options-content scroll-content"
-                    ref={scrollRef}
-                    onScroll={checkScroll}
-                >
-                    <div className="filter-options">
-                        {displayOptions.map((option) => {
-                            const isSelected = currentValue === option.value;
-                            const compositeKey = option.sublabel ? `${option.label} ${option.sublabel}` : option.label;
-                            // Try value (hyphenated), then composite keys, then fallback to label
-                            const iconUrl = FILTER_ICONS[option.value] ||
-                                FILTER_ICONS[compositeKey] ||
-                                FILTER_ICONS[compositeKey.replace('18K', '18k')] ||
-                                FILTER_ICONS[option.label] ||
-                                null;
-
-                            return (
-                                <label
-                                    key={option.value}
-                                    className={`filter-option ${isSelected ? 'selected' : ''} ${filter.label.toLowerCase().replace(' ', '-')}`}
-                                >
-                                    <input
-                                        type="checkbox"
-                                        name={`filter-${filter.key}`}
-                                        value={option.value}
-                                        checked={isSelected}
-                                        onChange={() => handleFilterChange(filter.key, option.value)}
-                                    />
-                                    {iconUrl ? (
-                                        <div className="filter-icon-container">
-                                            <img src={iconUrl} alt={option.label} />
-                                        </div>
-                                    ) : (
-                                        <div className="filter-icon-container" style={{ backgroundColor: '#f5f5f5' }}>
-                                            <span style={{ fontSize: '10px' }}>{option.label[0]}</span>
-                                        </div>
-                                    )}
-                                    <span className="label-text f-9 f-w-600 ff-n l-h-1">{option.label}</span>
-                                    {option.sublabel && <span className="sub-label f-9 f-w-600 ff-n l-h-1">{option.sublabel}</span>}
-                                </label>
-                            );
-                        })}
-                    </div>
-                </div>
-
-                {canScrollRight && (
-                    <button
-                        type="button"
-                        className="filter-scroll-btn next"
-                        onClick={() => scroll('right')}
-                        aria-label="Scroll right"
-                    >
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18l6-6-6-6" /></svg>
-                    </button>
-                )}
-            </div>
-        </div>
-    );
-}
-
-// Main Filter Component
-function EngagementRingFilters({ additionalFilters = [] }) {
-    const [searchParams] = useSearchParams();
-    const navigate = useNavigate();
-    const [metalTypeMode, setMetalTypeMode] = useState('standard'); // 'standard' | 'twotone'
-
-    const handleFilterChange = (filterKey, optionValue) => {
-        const newParams = new URLSearchParams(searchParams);
-
-        // Check if this value is already selected
-        const currentValue = newParams.get(filterKey);
-
-        if (optionValue === null || optionValue === 'any') {
-            // Remove the filter entirely
-            newParams.delete(filterKey);
-        } else if (currentValue === optionValue) {
-            // Toggle off - remove the filter
-            newParams.delete(filterKey);
-        } else {
-            // Set new value (single select)
-            newParams.set(filterKey, optionValue);
-        }
-
-        // Clear pagination
-        newParams.delete('cursor');
-        newParams.delete('page');
-
-        navigate({ search: newParams.toString() }, { replace: true, preventScrollReset: true });
-    };
-
-    const handleClearSection = (filterKey) => {
-        const newParams = new URLSearchParams(searchParams);
-        newParams.delete(filterKey);
-        newParams.delete('cursor');
-        newParams.delete('page');
-        navigate({ search: newParams.toString() }, { replace: true, preventScrollReset: true });
-    };
-
-    const filtersToRender = [...additionalFilters, ...FILTER_CONFIG];
-
-    return (
-        <div className="collection-filters">
-            {filtersToRender.map((filter) => (
-                <FilterSection
-                    key={filter.key}
-                    filter={filter}
-                    searchParams={searchParams}
-                    metalTypeMode={metalTypeMode}
-                    setMetalTypeMode={setMetalTypeMode}
-                    handleFilterChange={handleFilterChange}
-                    handleClearSection={handleClearSection}
-                />
-            ))}
-        </div>
-    );
-}
-
-// ============================================================================
-// END OF FILTER CONFIGURATION & COMPONENT
-// ============================================================================
 
 
 /**
@@ -595,6 +211,7 @@ export default function EngagementRingCollection() {
     const shapeFilter = searchParams.get('shape');
     const metalFilter = searchParams.get('metal');
     const styleFilter = searchParams.get('style');
+    const bandFilter = searchParams.get('band');
     const profileFilter = searchParams.get('profile') || searchParams.get('setting');
     const stoneFilter = searchParams.get('stone'); // Stone Type filter
 
@@ -650,86 +267,20 @@ export default function EngagementRingCollection() {
         }
     }, [showSortDropdown]);
 
-    // Extract active filters and find matching variant options for display & URL
-    let selectedVariantOptions = [];
-
-    // Helper to normalize filter values for comparison
-    const normalizeFilterValue = (str) => str?.toLowerCase().replace(/[^a-z0-9]/g, '');
-
-    // Map URL filter values to actual variant option values
-    if (metalFilter) {
-        // Metal filter mapping - convert kebab-case URL to proper variant option format
-        const metalMap = {
-            'platinum': 'Platinum',
-            '18k-yellow-gold': '18K Yellow Gold',
-            '18kyellowgold': '18K Yellow Gold',
-            'yellow-gold': '18K Yellow Gold',
-            'yellowgold': '18K Yellow Gold',
-            '18k-rose-gold': '18K Rose Gold',
-            '18krosegold': '18K Rose Gold',
-            'rose-gold': '18K Rose Gold',
-            'rosegold': '18K Rose Gold',
-            '18k-white-gold': '18K White Gold',
-            '18kwhitegold': '18K White Gold',
-            'white-gold': '18K White Gold',
-            'whitegold': '18K White Gold',
-            '18k-yellow-gold-platinum': '18k Yellow Gold / Platinum',
-            '18kyellowgoldplatinum': '18k Yellow Gold / Platinum',
-            '18k-rose-gold-platinum': '18k Rose Gold / Platinum',
-            '18krosegoldplatinum': '18k Rose Gold / Platinum',
-            '18k-yellow-gold-18k-white-gold': '18k Yellow Gold / 18k White Gold',
-            '18kyellowgold18kwhitegold': '18k Yellow Gold / 18k White Gold',
-            '18k-rose-gold-18k-white-gold': '18k Rose Gold / 18k White Gold',
-            '18krosegold18kwhitegold': '18k Rose Gold / 18k White Gold',
-        };
-
-        const normalizedMetal = normalizeFilterValue(metalFilter);
-        const metalValue = metalMap[normalizedMetal] || metalMap[metalFilter] ||
-            metalFilter.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
-
-        selectedVariantOptions.push({ name: 'Metal Type', value: metalValue });
+    // Build selectedVariantOptions directly from URL filter values.
+    // Each ProductItem uses these criteria to find its own matching variant per-product.
+    let selectedVariantOptions = null;
+    if (metalFilter || styleFilter || bandFilter || profileFilter || shapeFilter || stoneFilter) {
+        const opts = [];
+        if (metalFilter) opts.push({ name: 'Metal Type', value: metalFilter.replace(/-/g, ' ') });
+        if (styleFilter) opts.push({ name: 'Setting Style', value: styleFilter.replace(/-/g, ' ') });
+        if (bandFilter) opts.push({ name: 'Band Type', value: bandFilter.replace(/-/g, ' ') });
+        if (profileFilter) opts.push({ name: 'Setting', value: profileFilter.replace(/-/g, ' ') });
+        if (shapeFilter) opts.push({ name: 'Shape', value: shapeFilter.replace(/-/g, ' ') });
+        if (stoneFilter && stoneFilter !== 'any') opts.push({ name: 'Stone Type', value: stoneFilter.replace(/-/g, ' ') });
+        if (opts.length > 0) selectedVariantOptions = opts;
     }
 
-    if (styleFilter) {
-        // Style filter - capitalize first letter of each word
-        const styleValue = styleFilter.split('-').map(word =>
-            word.charAt(0).toUpperCase() + word.slice(1)
-        ).join(' ');
-        selectedVariantOptions.push({ name: 'Setting Style', value: styleValue });
-    }
-
-    if (profileFilter) {
-        const normalizedVal = profileFilter.toLowerCase();
-        let settingValue = profileFilter;
-        if (normalizedVal.includes('high')) settingValue = 'High Setting';
-        else if (normalizedVal.includes('low')) settingValue = 'Low Setting';
-        selectedVariantOptions.push({ name: 'Setting', value: settingValue });
-    }
-
-    if (shapeFilter) {
-        const shapeValue = shapeFilter.split('-').map(word =>
-            word.charAt(0).toUpperCase() + word.slice(1)
-        ).join(' ');
-        selectedVariantOptions.push({ name: 'Shape', value: shapeValue });
-    }
-
-    if (stoneFilter && stoneFilter !== 'any') {
-        // Stone Type filter mapping
-        const stoneMap = {
-            'lab-diamond': 'Lab Grown Diamond',
-            'labdiamond': 'Lab Grown Diamond',
-            'lab-grown-diamond': 'Lab Grown Diamond',
-            'labgrowndiamond': 'Lab Grown Diamond',
-            // 'moissanite': 'Moissanite',
-        };
-        const normalizedStone = normalizeFilterValue(stoneFilter);
-        const stoneValue = stoneMap[normalizedStone] || stoneMap[stoneFilter] || stoneFilter;
-        selectedVariantOptions.push({ name: 'Stone Type', value: stoneValue });
-    }
-
-    if (selectedVariantOptions.length === 0) {
-        selectedVariantOptions = null;
-    }
 
 
     return (
@@ -738,7 +289,7 @@ export default function EngagementRingCollection() {
             <div className="collection-content">
                 <div className='page-width'>
                     <aside className="collection-filters-sidebar engagement-collection-filters">
-                        <EngagementRingFilters additionalFilters={[STONE_TYPE_FILTER]} />
+                        <CustomCollectionFilters additionalFilters={[STONE_TYPE_FILTER]} />
                     </aside>
                 </div>
 
@@ -905,6 +456,19 @@ export default function EngagementRingCollection() {
                                         const hasStyle = productTags.some(tag => tag.includes(normalizedStyle)) ||
                                             productTitle.includes(normalizedStyle);
                                         if (!hasStyle) return false;
+                                    }
+
+                                    if (bandFilter) {
+                                        const normalizedBand = normalize(bandFilter);
+                                        const hasBand = productTags.some(tag => tag.includes(normalizedBand)) ||
+                                            productTitle.includes(normalizedBand) ||
+                                            product.variants?.nodes?.some(variant =>
+                                                variant.selectedOptions?.some(option =>
+                                                    option.name.toLowerCase().includes('band') &&
+                                                    normalize(option.value).includes(normalizedBand)
+                                                )
+                                            );
+                                        if (!hasBand) return false;
                                     }
 
                                     if (profileFilter) {

@@ -386,58 +386,17 @@ export default function Collection() {
     return 0; // recommended - keep original order
   });
 
-  // Extract active filters and find matching variant
+  // Build selectedVariantOptions directly from URL filter values.
+  // Each ProductItem uses these criteria to find its own matching variant per-product.
   let selectedVariantOptions = null;
-  if (metalFilter || styleFilter || profileFilter || bandFilter) {
-    // Find a product variant that matches ALL active filters
-    const sampleProduct = sortedProducts[0];
-    if (sampleProduct?.variants?.nodes) {
-      const matchingVariant = sampleProduct.variants.nodes.find(variant => {
-        const variantOptions = variant.selectedOptions || [];
-
-        // Check metal filter
-        if (metalFilter) {
-          const metalMatch = variantOptions.some(option =>
-            option.name.toLowerCase().includes('metal') &&
-            option.value.toLowerCase().replace(/[^a-z0-9]/g, '') === metalFilter.replace(/-/g, '')
-          );
-          if (!metalMatch) return false;
-        }
-
-        // Check style/setting filter
-        if (styleFilter) {
-          const styleMatch = variantOptions.some(option =>
-            option.name.toLowerCase().includes('setting') &&
-            option.value.toLowerCase().replace(/[^a-z0-9]/g, '') === styleFilter.replace(/-/g, '')
-          );
-          if (!styleMatch) return false;
-        }
-
-        // Check profile filter
-        if (profileFilter) {
-          const profileMatch = variantOptions.some(option =>
-            option.name.toLowerCase().includes('profile') &&
-            option.value.toLowerCase().replace(/[^a-z0-9]/g, '') === profileFilter.replace(/-/g, '')
-          );
-          if (!profileMatch) return false;
-        }
-
-        // Check band filter
-        if (bandFilter) {
-          const bandMatch = variantOptions.some(option =>
-            option.name.toLowerCase().includes('band') &&
-            option.value.toLowerCase().replace(/[^a-z0-9]/g, '') === bandFilter.replace(/-/g, '')
-          );
-          if (!bandMatch) return false;
-        }
-
-        return true;
-      });
-
-      if (matchingVariant) {
-        selectedVariantOptions = matchingVariant.selectedOptions;
-      }
-    }
+  if (metalFilter || styleFilter || profileFilter || bandFilter || shapeFilter) {
+    const opts = [];
+    if (metalFilter) opts.push({ name: 'Metal Type', value: metalFilter.replace(/-/g, ' ') });
+    if (styleFilter) opts.push({ name: 'Setting Style', value: styleFilter.replace(/-/g, ' ') });
+    if (profileFilter) opts.push({ name: 'Setting', value: profileFilter.replace(/-/g, ' ') });
+    if (bandFilter) opts.push({ name: 'Band Type', value: bandFilter.replace(/-/g, ' ') });
+    if (shapeFilter) opts.push({ name: 'Shape', value: shapeFilter.replace(/-/g, ' ') });
+    if (opts.length > 0) selectedVariantOptions = opts;
   }
   const bannerData = (() => {
     const metafield = collection?.metafield;

@@ -22,21 +22,36 @@ export function ProductItem({ product, loading, selectedVariantOptions, basePath
     let filteredImages = allImages;
 
     if (selectedVariantOptions && product.variants?.nodes) {
-      // Find the Metal Type and Stone Type option values
+      // Find the Metal Type, Stone Type, and Setting Style option values
       const metalTypeOption = selectedVariantOptions.find(opt =>
         opt.name.toLowerCase().includes('metal')
       );
       const stoneTypeOption = selectedVariantOptions.find(opt =>
         opt.name.toLowerCase().includes('stone')
       );
+      const settingStyleOption = selectedVariantOptions.find(opt =>
+        opt.name.toLowerCase().includes('setting') ||
+        opt.name.toLowerCase().includes('style')
+      );
 
       // Normalize function for comparison
       const normalize = (str) => str?.toLowerCase().replace(/[^a-z0-9]/g, '');
 
-      // Find the first variant matching BOTH metal type AND stone type (if provided)
+      // If this product has Setting Style as a variant option, apply that filter.
+      // If it's only a tag (not a variant option), skip setting check so metal/stone still work.
+      const hasSettingVariantOption = settingStyleOption
+        ? product.variants.nodes.some(v =>
+            v.selectedOptions?.some(o =>
+              o.name.toLowerCase().includes('setting') || o.name.toLowerCase().includes('style')
+            )
+          )
+        : false;
+
+      // Find the first variant matching metal type, stone type, AND setting style (if provided)
       const selectedVariant = product.variants.nodes.find(variant => {
         let metalMatches = true;
         let stoneMatches = true;
+        let settingMatches = true;
 
         if (metalTypeOption) {
           const normalizedTargetMetal = normalize(metalTypeOption.value);
@@ -58,7 +73,20 @@ export function ProductItem({ product, loading, selectedVariantOptions, basePath
           );
         }
 
-        return metalMatches && stoneMatches;
+        // Only match setting if this product actually has it as a variant option.
+        // Otherwise treat as matched (setting style is tag-based for this product).
+        if (settingStyleOption && hasSettingVariantOption) {
+          const normalizedTargetSetting = normalize(settingStyleOption.value);
+          settingMatches = variant.selectedOptions?.some(option =>
+            (option.name.toLowerCase().includes('setting') ||
+              option.name.toLowerCase().includes('style')) &&
+            (normalize(option.value) === normalizedTargetSetting ||
+              normalize(option.value).includes(normalizedTargetSetting) ||
+              normalizedTargetSetting.includes(normalize(option.value)))
+          );
+        }
+
+        return metalMatches && stoneMatches && settingMatches;
       });
 
       if (selectedVariant) {
