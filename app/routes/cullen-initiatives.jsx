@@ -453,9 +453,9 @@ const FAQ_DATA = [
     answer: `
       Awesome! Please send an email to 
       <a 
-        href="mailto:partnerships@cullenjewellery.com" 
+        href="mailto:demo@gmail.com" 
       >
-        partnerships@cullenjewellery.com
+        demo@gmail.com
       </a>; 
       we’d love to chat.
     `,

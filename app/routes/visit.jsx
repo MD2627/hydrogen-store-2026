@@ -48,7 +48,7 @@ async function loadCriticalData({ context }) {
                 city: fields.city || '',
                 address: fields.address || '',
                 phone: fields.phone || '',
-                email: fields.email || 'sales@cullenjewellery.com',
+                email: fields.email || 'demo@gmail.com',
                 mapEmbedUrl: fields.map_embed_url || '',
                 openingHours: fields.opening_hours ? fields.opening_hours.split('\n') : [],
                 image: fields.image_image || null

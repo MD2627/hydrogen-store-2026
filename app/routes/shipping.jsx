@@ -213,7 +213,7 @@ const SECURE_DISCREET_DATA = [
 ];
 
 const NOTES_DATA = [
-    <>For the most up-to-date information on customs delays, please contact DHL or email us at <a href="mailto:sales@cullenjewellery.com">sales@cullenjewellery.com</a>.</>,
+    <>For the most up-to-date information on customs delays, please contact DHL or email us at <a href="mailto:demo@gmail.com">demo@gmail.com</a>.</>,
     "The delivery times are estimates from our shipping partners. Peak periods and unforeseen events may affect these times.",
     "Most jewellery is made to order, typically completed within 50 business days.",
     "For specific products, check their individual pages for estimated completion dates.",

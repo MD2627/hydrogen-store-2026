@@ -85,8 +85,8 @@ export default function Warranty() {
                         <ul>
                             <li>
                                 By email:{' '}
-                                <a className="fancy" href="mailto:sales@cullenjewellery.com">
-                                    sales@cullenjewellery.com
+                                <a className="fancy" href="mailto:demo@gmail.com">
+                                    demo@gmail.com
                                 </a>
                             </li>
                         </ul>

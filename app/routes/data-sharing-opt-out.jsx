@@ -49,8 +49,8 @@ export default function DataSharingOptOut() {
 
                     <p>
                         To opt out, please submit your request using the form below or contact us at{' '}
-                        <a className="fancy" href="mailto:sales@cullenjewellery.com">
-                            sales@cullenjewellery.com
+                        <a className="fancy" href="mailto:demo@gmail.com">
+                            demo@gmail.com
                         </a>
                         .
                     </p>

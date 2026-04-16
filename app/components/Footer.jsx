@@ -132,7 +132,7 @@ export function Footer({ footer: footerPromise, header, publicStoreDomain }) {
                         </li>
                         <li className="contact-item">
                           <span className="contact-icon"><svg style={{ width: '20px' }} viewBox="0 0 16.933 16.933" xmlns="http://www.w3.org/2000/svg"><path style={{ width: '20px' }} d="M4.83 4.366 8.465 8l3.636-3.634Zm8.55.075L8.467 9.544 3.553 4.63v7.938h9.827z"></path></svg></span>
-                          <Link className="ff-c white-color f-11 f-m-11" to="mailto:sales@cullenjewellery.com">sales@cullenjewellery.com</Link>
+                          <Link className="ff-c white-color f-11 f-m-11" to="mailto:demo@gmail.com">demo@gmail.com</Link>
                         </li>
                         <li className="contact-item">
                           <span className="contact-icon"><svg style={{ width: '20px' }} viewBox="0 0 16.933 16.933" xmlns="http://www.w3.org/2000/svg"><path d="M13.412 4.112v8.69a.102.102 0 0 1-.102.102H3.623a.102.102 0 0 1-.102-.102v-8.69c0-.057.046-.103.102-.103h1.364c.08 0 .145-.065.145-.145v-.83c0-.056.046-.102.103-.102h.69c.056 0 .102.046.102.102v.83c0 .08.065.145.145.145h4.59c.08 0 .144-.065.144-.145v-.83c0-.056.046-.102.103-.102h.69c.056 0 .102.046.102.102v.83c0 .08.065.145.145.145h1.364c.056 0 .102.046.102.103zm-.769 7.933v-5.84a.147.147 0 0 0-.147-.147h-8.06a.147.147 0 0 0-.146.147v5.84c0 .08.066.147.147.147h8.06a.147.147 0 0 0 .146-.147z"></path><path d="m6.62 9.423 1.108 1.108 2.906-2.905"></path></svg></span>
@@ -310,7 +310,7 @@ export function Footer({ footer: footerPromise, header, publicStoreDomain }) {
                   <button className='try-theme-btn' onClick={() => setShowTryTheme(true)}>
                     <img src="https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Gemini_Generated_Image_12frs12frs12frs1.png?v=1775905453" alt="download-icon" />
                   </button>
-                  
+
                   {/* ── TRY THEME MODAL ── */}
                   <TryThemeModal
                     isOpen={showTryTheme}

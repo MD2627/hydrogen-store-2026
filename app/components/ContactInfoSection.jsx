@@ -47,10 +47,10 @@ export function ContactInfoSection() {
           <div className="contact-info-item">
             <EmailIcon className="contact-info-svg" />
             <a
-              href="mailto:sales@cullenjewellery.com"
+              href="mailto:demo@gmail.com"
               className="contact-info-link w-300"
             >
-              SALES@CULLENJEWELLERY.COM
+              DEMO@GMAIL.COM
             </a>
           </div>
         </div>
