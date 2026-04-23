@@ -87,7 +87,7 @@ export function CustomCartPage({ initialCart }) {
             <div className="cart-page-empty">
                 <h2>Your Cart is Empty</h2>
                 <p>Looks like you haven't added any elegant pieces yet.</p>
-                <Link to="/engagement-rings" className="continue-shopping-btn">
+                <Link to="/engagement-rings" className="btn btn">
                     Explore Engagement Rings
                 </Link>
             </div>
@@ -159,7 +159,7 @@ export function CustomCartPage({ initialCart }) {
                         <p className="shipping-note">Shipping & taxes calculated at checkout</p>
 
                         {cart?.checkoutUrl && (
-                            <a href={cart.checkoutUrl} className="checkout-btn">
+                            <a href={cart.checkoutUrl} className="btn btn">
                                 Proceed to Checkout
                             </a>
                         )}

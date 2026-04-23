@@ -195,7 +195,7 @@ export function ComingSoonForm({ cityName }) {
                         </div>
 
                         {status === 'success' && (
-                            <div className="status-message success ff-c f-14 w-500 green-color text-center">
+                            <div className="status-message success ff-c f-14 w-500 accent-color text-center">
                                 Thank you! We&apos;ll notify you when we open.
                             </div>
                         )}
@@ -208,7 +208,7 @@ export function ComingSoonForm({ cityName }) {
                         <div className="submit-btn-wrapper">
                             <button
                                 type="submit"
-                                className="submit-button contact-submit common-button"
+                                className="submit-button contact-submit btn"
                                 disabled={status === 'loading'}
                             >
                                 {status === 'loading' ? 'SENDING...' : 'SEND'}

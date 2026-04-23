@@ -96,7 +96,7 @@ export default function Product() {
       <div className="main-product">
         <div className='page-width'>
           <div className="back-navigation-wrapper">
-            <button onClick={() => navigate(-1)} className="browse-settings-btn f-11 f-m-11 w-400 ff-n black-color l-h-1-2">
+            <button onClick={() => navigate(-1)} className="btn f-11 f-m-11 w-400 ff-n black-color l-h-1-2">
               <span className="arrow-icon">
                 <svg viewBox="0 0 16.933 16.933" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -535,11 +535,11 @@ const STORY_SLIDES = [
     id: 1,
     title: 'Every Ring Tells A Story',
     text: `Crafting a piece is only one part of the journey. Before a ring is made, it's imagined. Every design begins as a thought - inspired by a passing trend, a timeless silhouette, or the wish of a client searching for something deeply personal. From there, sketches are drawn, refined, and reimagined until a story begins to take form.`,
-    bgColor: '#1f5f3b',
-    textColor: '#ffffff',
+    bgColor: 'var(--primary_color)',
+    textColor: 'var(--white_color)',
     link: '/collections/engagementrings',
     linkText: 'LEARN MORE',
-    linkColor: '#00BB3s3',
+    linkColor: 'var(--accent_color_light_gold)',
     image: {
       src: 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/shop_by_style_-_toi_et_moi_400x400.jpg?v=1741067284',
       alt: 'Crafting ring',
@@ -551,11 +551,11 @@ const STORY_SLIDES = [
     id: 2,
     title: 'Materials Matter',
     text: 'Personalise your ring with the diamond and precious metal that feels most like you - from 18k Yellow, Rose or White Gold to Platinum, all nickel-free and hypoallergenic. We work exclusively with lab-grown diamonds, identical in brilliance to mined gems but free from the environmental impact of mining. This allows every piece to balance timeless craftsmanship with innovation, sustainability, and individuality.',
-    bgColor: '#f6f3ee',
-    textColor: '#1a1a1a',
+    bgColor: 'var(--bg_light_secondary)',
+    textColor: 'var(--black_color)',
     link: '/collections/engagement-rings',
     linkText: 'LEARN MORE',
-    linkColor: '#00BB33',
+    linkColor: 'var(--accent_color_gold)',
     image: {
       src: 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/2023_11_14_Cullen_Website_4x5_07_400x400.jpg?v=1701322555',
       alt: 'Ring detail',
@@ -567,11 +567,11 @@ const STORY_SLIDES = [
     id: 3,
     title: 'The Highest Quality Control',
     text: 'Personalise your ring with the diamond and precious metal that feels most like you - from 18k Yellow, Rose or White Gold to Platinum, all nickel-free and hypoallergenic. We work exclusively with lab-grown diamonds, identical in brilliance to mined gems but free from the environmental impact of mining. This allows every piece to balance timeless craftsmanship with innovation, sustainability, and individuality.',
-    bgColor: '#1f5f3b',
-    textColor: '#ffffff',
+    bgColor: 'var(--primary_color)',
+    textColor: 'var(--white_color)',
     link: '/collections/engagement',
     linkText: 'LEARN MORE',
-    linkColor: '#00BB33',
+    linkColor: 'var(--accent_color_light_gold)',
     image: {
       src: 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Cullen_Website_4x5_2500px_02_1_400x400.jpg?v=1741064516',
       alt: 'Quality control',
@@ -583,11 +583,11 @@ const STORY_SLIDES = [
     id: 4,
     title: 'Perfect Pairing',
     text: `Every Cullen ring undergoes a meticulous multi-stage process - casting, polishing, cleaning, and 50x microscopic inspections by dedicated quality control specicialists - to ensure flawless crafstmanship and lasting brilliance. Any piece that falls show of our standards is immediately rectified by our in-house jewellers.`,
-    bgColor: '#f6f3ee',
-    textColor: '#1a1a1a',
+    bgColor: 'var(--bg_light_secondary)',
+    textColor: 'var(--black_color)',
     link: '/collections/rings',
     linkText: 'LEARN MORE',
-    linkColor: '#00BB33',
+    linkColor: 'var(--accent_color_gold)',
     image: {
       src: 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Shop_by_style_-_Bezel_400x400.jpg?v=1741067285',
       alt: 'Ring pairing',

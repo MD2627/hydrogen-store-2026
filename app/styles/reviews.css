@@ -26,7 +26,7 @@
   width: 50px;
   height: 50px;
   border: 4px solid #f3f3f3;
-  border-top: 4px solid #1a1a1a;
+  border-top: 4px solid var(--near_black);
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
@@ -96,7 +96,7 @@
   gap: 6px;
   font-size: 13px;
   font-weight: 600;
-  color: #1a1a1a;
+  color: var(--near_black);
 }
 
 .badge-item {
@@ -110,7 +110,7 @@
 }
 
 .badge-item.trustpilot {
-  color: #00b67a;
+  color: #00D1FF;
 }
 
 .rating-info {
@@ -122,7 +122,7 @@
 .rating-number {
   font-size: 32px;
   font-weight: 700;
-  color: #1a1a1a;
+  color: var(--near_black);
   line-height: 1;
 }
 
@@ -133,23 +133,13 @@
 
 .rating-count {
   font-size: 12px;
-  color: #666;
+  color: var(--dark_gray_color);
   margin: 0;
 }
 
 /* Write Review Button */
 .write-review-btn {
-  padding: 11px 20px;
-  background: var(--green_color);
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
   display: inline-block;
-  transition: background 0.3s ease;
-}
-
-.write-review-btn:hover {
-  background: var(--primary_color);
 }
 
 /* Stars */
@@ -164,7 +154,7 @@
 }
 
 .star-icon.filled {
-  color: #fbbf24;
+  color: var(--warning_yellow);
 }
 
 .star-icon.empty {
@@ -174,7 +164,7 @@
 /* Reviews Notice Banner */
 .reviews-notice {
   background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-  border: 2px solid #0ea5e9;
+  border: 2px solid var(--accent_blue);
   border-radius: 8px;
   padding: 20px 30px;
   margin-bottom: 30px;
@@ -193,23 +183,13 @@
 }
 
 .view-all-reviews-btn {
-  padding: 12px 24px;
-  background: #0ea5e9;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-weight: 600;
-  font-size: 14px;
-  text-decoration: none;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  transition: all 0.3s ease;
   white-space: nowrap;
 }
 
 .view-all-reviews-btn:hover {
-  background: #0284c7;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
 }
@@ -219,8 +199,8 @@
   margin-top: 15px;
   padding: 10px 20px;
   background: #f0f9ff;
-  color: #0ea5e9;
-  border: 2px solid #0ea5e9;
+  color: var(--accent_blue);
+  border: 2px solid var(--accent_blue);
   border-radius: 6px;
   font-weight: 600;
   font-size: 14px;
@@ -229,7 +209,7 @@
 }
 
 .view-all-reviews-link:hover {
-  background: #0ea5e9;
+  background: var(--accent_blue);
   color: white;
   transform: translateY(-2px);
 }
@@ -292,7 +272,7 @@
 .reviewer-name {
   font-size: 15px;
   font-weight: 700;
-  color: #1a1a1a;
+  color: var(--near_black);
   margin: 0 0 3px 0;
 }
 
@@ -305,7 +285,7 @@
 
 .review-date {
   font-size: 12px;
-  color: #999;
+  color: var(--silver_gray_color);
   margin: 0;
 }
 
@@ -320,7 +300,7 @@
   align-items: center;
   gap: 6px;
   font-size: 12px;
-  color: #00b67a;
+  color: #00D1FF;
   font-weight: 500;
   padding-left: 0px;
 }
@@ -338,7 +318,7 @@
 .review-text {
   font-size: 14px;
   line-height: 1.7;
-  color: #333;
+  color: var(--charcoal_color);
   margin: 0;
 }
 
@@ -368,7 +348,7 @@
 
 .loading-more p {
   font-size: 14px;
-  color: #666;
+  color: var(--dark_gray_color);
   margin: 0;
 }
 
@@ -385,7 +365,7 @@
 
 .all-reviews-loaded p {
   font-size: 15px;
-  color: #666;
+  color: var(--dark_gray_color);
   font-weight: 500;
   margin: 0;
 }
@@ -438,7 +418,7 @@
 
 .reviews-section {
   padding: 80px 0;
-  background: #ffffff;
+  background: var(--white_color);
 }
 
 /* Setup Notice */
@@ -467,7 +447,7 @@
 }
 
 .notice-card code {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(var(--white_rgb), 0.2);
   padding: 2px 8px;
   border-radius: 4px;
   font-family: 'Courier New', monospace;
@@ -475,7 +455,7 @@
 }
 
 .notice-card pre {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(var(--pure_black_rgb), 0.3);
   padding: 20px;
   border-radius: 8px;
   overflow-x: auto;
@@ -485,7 +465,7 @@
 .notice-card pre code {
   background: none;
   padding: 0;
-  color: #fbbf24;
+  color: var(--warning_yellow);
   font-size: 13px;
   display: block;
   white-space: pre;
@@ -493,7 +473,7 @@
 
 .setup-instructions {
   margin-top: 30px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(var(--white_rgb), 0.1);
   padding: 25px;
   border-radius: 12px;
   backdrop-filter: blur(10px);
@@ -532,7 +512,7 @@
 }
 
 .setup-instructions a {
-  color: #fbbf24;
+  color: var(--warning_yellow);
   text-decoration: underline;
   transition: opacity 0.3s ease;
 }

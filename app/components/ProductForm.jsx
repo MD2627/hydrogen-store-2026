@@ -726,7 +726,7 @@ export function ProductForm({ productOptions, selectedVariant, productTags = [],
           <div className="product-form-custom-header">
             <h2 className="f-22 f-m-22 w-300 black-color l-h-1-2">Choose Your Ring</h2>
           </div>
-          {/* <div className="carbon-neutral-badge f-12 f-m-12 w-500 light-green-color l-h-1-2 ff-c">
+          {/* <div className="carbon-neutral-badge f-12 f-m-12 w-500 light-accent-color l-h-1-2 ff-c">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -769,7 +769,7 @@ export function ProductForm({ productOptions, selectedVariant, productTags = [],
                       className={`ring-size-item help-me-later ${helpMeLater ? 'selected' : ''}`}
                       onClick={() => setShowSizeModal(true)}
                     >
-                      <span className="help-me-later-text f-13 f-m-13 w-400 light-green-color l-h-1-2 ff-c">Help me to select later</span>
+                      <span className="help-me-later-text f-13 f-m-13 w-400 light-accent-color l-h-1-2 ff-c">Help me to select later</span>
                     </div>
 
                     {RING_SIZES_CONFIG.map((size) => (
@@ -1118,7 +1118,7 @@ export function ProductForm({ productOptions, selectedVariant, productTags = [],
       <div className="add-to-cart-wrapper f-12 f-m-12 w-300 ff-n l-h-1-2 white-color" style={{ marginTop: '20px' }}>
         {/* Ring Size Warning */}
         {isRingSizeRequired && (
-          <div className="ring-size-warning f-12 f-m-12 w-400 l-h-1-2 ff-c light-green-color">
+          <div className="ring-size-warning f-12 f-m-12 w-400 l-h-1-2 ff-c light-accent-color">
             Please select a ring size to continue
           </div>
         )}

@@ -93,7 +93,7 @@ export default function CullenInitiatives() {
                             insights and our key initiatives in detail.
                         </p>
                         <a
-                            className="impact-report-download-btn"
+                            className="btn"
                             href={REPORT_DOWNLOADS.current.href}
                             rel="noreferrer"
                         >
@@ -112,7 +112,7 @@ export default function CullenInitiatives() {
                             made.
                         </p>
                         <a
-                            className="impact-report-download-btn"
+                            className="btn"
                             href={REPORT_DOWNLOADS.past.href}
                             rel="noreferrer"
                         >

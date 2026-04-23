@@ -300,6 +300,7 @@ function NewAddressForm() {
       {({stateForMethod}) => (
         <div>
           <button
+            className="btn"
             disabled={stateForMethod('POST') !== 'idle'}
             formMethod="POST"
             type="submit"
@@ -330,6 +331,7 @@ function ExistingAddresses({addresses, defaultAddress}) {
               {({stateForMethod}) => (
                 <div className="address-actions">
                   <button
+                    className="btn btn--secondary"
                     disabled={stateForMethod('PUT') !== 'idle'}
                     formMethod="PUT"
                     type="submit"
@@ -337,6 +339,7 @@ function ExistingAddresses({addresses, defaultAddress}) {
                     {stateForMethod('PUT') !== 'idle' ? 'Saving' : 'Save'}
                   </button>
                   <button
+                    className="btn btn--outline"
                     disabled={stateForMethod('DELETE') !== 'idle'}
                     formMethod="DELETE"
                     type="submit"

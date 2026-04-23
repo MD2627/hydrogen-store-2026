@@ -21,7 +21,7 @@
     height: auto;
 }
 
-.ring-size-guidance-page .split-banner .banner-btn {
+.ring-size-guidance-page .split-banner .btn {
     display: none;
 }
 
@@ -56,7 +56,7 @@
 .guidance-hero-section .border-line {
     width: 150px;
     height: 1px;
-    background-color: #000;
+    background-color: var(--pure_black_color);
     margin: 0px auto 10px;
     opacity: 0.15;
 }
@@ -77,7 +77,7 @@
 }
 
 .guidance-resizing-section .split-banner .split-banner-media.split-banner-left {
-    background-color: var(--green_color);
+    background-color: var(--accent_color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -250,7 +250,7 @@
 }
 
 .converter-tab.active {
-    color: var(--green_color);
+    color: var(--accent_color);
     font-weight: 500;
 }
 
@@ -271,7 +271,7 @@
 .converter-header .border-line {
     width: 150px;
     height: 1px;
-    background: #e5e5e5;
+    background: var(--border_color);
     margin: 0 auto 20px;
 }
 
@@ -320,14 +320,14 @@
     appearance: none;
     -webkit-appearance: none;
     border-radius: 4px;
-    box-shadow: 1px 1px 7px #00000026;
+    box-shadow: 1px 1px 7px rgba(var(--pure_black_rgb), 0.15);
     text-align: center;
 }
 
 .ring-size-converter-section .select-wrapper select:focus {
     outline: none;
     border-bottom: 1px solid var(--black_color);
-    background-color: #e4f1e8;
+    background-color: #E8F6FA;
 }
 
 /* Custom Arrow */
@@ -366,12 +366,12 @@
 }
 
 .size-btn:hover {
-    background: #cce0d8;
+    background: #D1EDF6;
 }
 
 .size-btn.active {
-    background: var(--green_color);
-    color: #fff;
+    background: var(--accent_color);
+    color: var(--white_color);
 }
 
 /* Result Display */
@@ -385,7 +385,7 @@
 .result-ring-circle {
     width: 90px;
     height: 90px;
-    border: 6px solid var(--green_color);
+    border: 6px solid var(--accent_color);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -488,15 +488,15 @@
     font-size: 12px;
     line-height: 14px;
     font-weight: 600;
-    color: #4d4d4d;
+    color: var(--deep_gray_color);
 }
 
 .request-sizer-content input {
     padding: 15px;
     border: none;
     font-size: 11.7px;
-    box-shadow: 4px 4px 5px #cdcdcd;
-    background-color: #fff;
+    box-shadow: 4px 4px 5px var(--gray_300);
+    background-color: var(--white_color);
     color: gray;
     width: 100%;
     font-family: var(--font_family_n);
@@ -519,14 +519,14 @@
 }
 
 .request-sizer-content .new-contact-container {
-    background-color: #eee;
+    background-color: var(--light_gray_color);
     padding: 40px 10px 20px;
     width: 100%;
 }
 
 .request-sizer-content .country-flag-select {
     cursor: pointer;
-    background-color: #fff;
+    background-color: var(--white_color);
     width: 75px;
     text-align: center;
     height: 42px;
@@ -536,8 +536,8 @@
     justify-content: center;
     font-size: 11px;
     font-family: 'Cullen Ginto Nord';
-    color: #4d4d4d;
-    box-shadow: 4px 4px 5px #cdcdcd;
+    color: var(--deep_gray_color);
+    box-shadow: 4px 4px 5px var(--gray_300);
     border-radius: 4px;
 }
 
@@ -563,7 +563,7 @@
     font-size: 12px;
     line-height: 14px;
     font-weight: 600;
-    color: #232323;
+    color: var(--black_color);
 }
 
 .request-sizer-content .form-row.four-col {
@@ -591,8 +591,8 @@
     padding: 15px;
     border: none;
     font-size: 11.7px;
-    box-shadow: 4px 4px 5px #cdcdcd;
-    background-color: #fff;
+    box-shadow: 4px 4px 5px var(--gray_300);
+    background-color: var(--white_color);
     color: gray;
     width: 100%;
     border-radius: 4px;
@@ -609,7 +609,7 @@
 }
 
 .request-sizer-content .country-dropdown-item:hover {
-    background-color: #dddddd;
+    background-color: var(--gray_medium_color);
 }
 
 .request-sizer-content .form-group.checkbox-group-wrapper {
@@ -646,7 +646,7 @@
     margin-bottom: 13px;
     font-family: var(--font_family_c);
     font-weight: 300;
-    color: #232323;
+    color: var(--black_color);
 }
 
 .request-sizer-content .form-footer {
@@ -658,7 +658,7 @@
 }
 
 .request-sizer-content label.checkbox-group-label {
-    color: #232323;
+    color: var(--black_color);
 }
 
 .request-sizer-content .status-message.success {

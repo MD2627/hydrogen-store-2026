@@ -225,7 +225,7 @@ export default function VisitShowroom() {
                                             <h3 className="ff-a">{loc.title || loc.city}</h3>
                                             <p className="description-text ff-c">{loc.description}</p>
                                             <span className="duration ff-a">{loc.duration}</span>
-                                            <button className="select-btn ff-a" onClick={() => { setBookingData({ ...bookingData, location: loc }); nextStep(); }}>SELECT</button>
+                                            <button className="btn ff-a" onClick={() => { setBookingData({ ...bookingData, location: loc }); nextStep(); }}>SELECT</button>
                                         </div>
                                     </div>
                                 ))}
@@ -235,7 +235,7 @@ export default function VisitShowroom() {
                         {/* STEP 2: SERVICE */}
                         {bookingStep === 2 && (
                             <div className="service-selection">
-                                <button className="back-btn ff-a" onClick={prevStep}>← BACK</button>
+                                <button className="btn btn--text back-btn ff-a" onClick={prevStep}>← BACK</button>
                                 <h2 className="step-subtitle ff-a f-24 w-600">Select Service</h2>
                                 <div className="service-grid">
                                     {SERVICE_OPTIONS.map((service) => (
@@ -255,7 +255,7 @@ export default function VisitShowroom() {
                         {/* STEP 3: DATE & TIME */}
                         {bookingStep === 3 && (
                             <div className="datetime-selection">
-                                <button className="back-btn ff-a" onClick={prevStep}>← BACK</button>
+                                <button className="btn btn--text back-btn ff-a" onClick={prevStep}>← BACK</button>
                                 <h2 className="step-subtitle ff-a f-24 w-600">Choose Date & Time</h2>
 
                                 <div className="calendar-container">
@@ -304,7 +304,7 @@ export default function VisitShowroom() {
                         {/* STEP 4: YOUR DETAILS */}
                         {bookingStep === 4 && (
                             <div className="details-form-view">
-                                <button className="back-btn ff-a" onClick={prevStep}>← BACK</button>
+                                <button className="btn btn--text back-btn ff-a" onClick={prevStep}>← BACK</button>
                                 <h2 className="step-subtitle ff-a f-24 w-600">Your Details</h2>
                                 <div className="booking-summary ff-c f-14">
                                     <p>Booking: <strong>{bookingData.service?.title}</strong></p>
@@ -336,7 +336,7 @@ export default function VisitShowroom() {
                                         <label className="ff-c f-11 w-600 uppercase">Additional Notes</label>
                                         <textarea rows="4" value={bookingData.userDetails.message} onChange={(e) => updateUserDetails('message', e.target.value)} placeholder="Anything else you'd like us to know?"></textarea>
                                     </div>
-                                    <button type="submit" className="submit-booking-btn ff-a f-16 w-600 uppercase">Confirm Appointment</button>
+                                    <button type="submit" className="btn ff-a f-16 w-600 uppercase">Confirm Appointment</button>
                                 </form>
                             </div>
                         )}

@@ -29,8 +29,8 @@
 }
 
 .add-to-cart-wrapper button[disabled] {
-    background-color: #d3e6d9;
-    color: #878787;
+    background-color: #D1EDF6;
+    color: var(--gray_700);
     pointer-events: none;
 }
 
@@ -87,7 +87,7 @@
 }
 
 .product-thumbnail.active {
-    border: 1px solid var(--light_green_color);
+    border: 1px solid var(--cyan_color);
 }
 
 .product-thumbnail img {
@@ -100,7 +100,7 @@
 .product-description {
     margin: 0 0 20px;
     padding: 0 0 20px;
-    border-bottom: 1px solid #00000026;
+    border-bottom: 1px solid rgba(var(--pure_black_rgb), 0.15);
 }
 
 .product-form-custom-header h2 {
@@ -142,7 +142,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(var(--white_rgb), 0.5);
     border: none;
     border-radius: 50%;
     width: 40px;
@@ -152,13 +152,13 @@
     justify-content: center;
     cursor: pointer;
     z-index: 2;
-    color: #333;
+    color: var(--charcoal_color);
     transition: all 0.3s ease-in-out;
 }
 
 .slider-arrow:hover {
-    background: rgba(255, 255, 255, 0.9);
-    color: #000;
+    background: rgba(var(--white_rgb), 0.9);
+    color: var(--pure_black_color);
 }
 
 .slider-arrow.prev {
@@ -264,7 +264,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(var(--pure_black_rgb), 0.1);
     transition: transform 0.2s;
 }
 
@@ -283,13 +283,13 @@
 .title-main {
     display: block;
     font-weight: 600;
-    color: #1a1a1a;
+    color: var(--near_black);
 }
 
 .title-sub {
     display: block;
     font-size: 1.25rem;
-    color: #666;
+    color: var(--dark_gray_color);
     margin-top: 4px;
     font-weight: 300;
 }
@@ -297,7 +297,7 @@
 .modal-btn svg {
     width: 20px;
     height: 20px;
-    stroke: #333;
+    stroke: var(--charcoal_color);
 }
 
 @media (max-width: 900px) {
@@ -422,7 +422,7 @@
 }
 
 .add-to-cart-wrapper button:hover {
-    background-color: var(--dark_green_color);
+    background-color: var(--dark_accent_color);
 }
 
 .option-row:last-child {
@@ -444,7 +444,7 @@
 }
 
 .option-trigger:hover {
-    background-color: rgba(0, 0, 0, 0.01);
+    background-color: rgba(var(--pure_black_rgb), 0.01);
 }
 
 .option-label {
@@ -500,7 +500,7 @@
     margin-left: -6px;
     border-width: 6px;
     border-style: solid;
-    border-color: transparent transparent var(--RelativePopup-background, #ffffff) transparent;
+    border-color: transparent transparent var(--RelativePopup-background, var(--white_color)) transparent;
 }
 
 .option-label:hover .tooltip-box {
@@ -525,7 +525,7 @@
     justify-content: end;
     gap: 8px;
     font-size: 0.95rem;
-    color: #333;
+    color: var(--charcoal_color);
     font-weight: 400;
 }
 
@@ -535,8 +535,8 @@
     right: 0;
     background: var(--body_color);
     z-index: 100;
-    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
-    border: 1px solid rgba(0, 0, 0, .2);
+    box-shadow: 0 4px 25px rgba(var(--pure_black_rgb), 0.15);
+    border: 1px solid rgba(var(--pure_black_rgb), .2);
     border-radius: 4px;
     padding: 8px;
     max-height: min(320px, 100vh - 120px);
@@ -552,7 +552,7 @@
 }
 
 .option-dropdown::-webkit-scrollbar-thumb {
-    background-color: #ddd;
+    background-color: var(--gray_medium_color);
     border-radius: 3px;
 }
 
@@ -584,7 +584,7 @@
     width: 60px;
     height: 60px;
     object-fit: cover;
-    background-color: #f5f5f5;
+    background-color: var(--off_white_color);
 }
 
 .option-swatch-info {
@@ -618,13 +618,13 @@ span.option-name {
 
 .size-help-text {
     font-size: 0.9rem;
-    color: #333;
+    color: var(--charcoal_color);
     margin-top: 12px;
     padding-bottom: 0.5rem;
 }
 
 .size-help-text a {
-    color: #00bb33;
+    color: var(--cyan_color);
     text-decoration: underline;
 }
 
@@ -643,7 +643,7 @@ span.option-name {
 }
 
 .section-header-desc a {
-    color: var(--light_green_color);
+    color: var(--cyan_color);
 }
 
 .ring-size-item.help-me-later.selected {
@@ -652,7 +652,7 @@ span.option-name {
 }
 
 .help-me-later-text {
-    color: var(--light_green_color);
+    color: var(--cyan_color);
 }
 
 
@@ -670,7 +670,7 @@ span.option-name {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(var(--pure_black_rgb), 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -685,7 +685,7 @@ span.option-name {
     max-width: 480px;
     width: 100%;
     text-align: center;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 20px 60px rgba(var(--pure_black_rgb), 0.2);
     animation: modalFadeIn 0.3s ease-out;
 }
 
@@ -703,7 +703,7 @@ span.option-name {
 
 .ring-size-modal-text {
     margin: 0 0 24px;
-    color: #333;
+    color: var(--charcoal_color);
 }
 
 .ring-size-modal-text strong {
@@ -722,7 +722,7 @@ span.option-name {
 }
 
 .ring-size-modal-btn:hover {
-    background-color: var(--dark_green_color);
+    background-color: var(--dark_accent_color);
 }
 
 .ring-size-warning {
@@ -751,7 +751,7 @@ span.option-name {
 }
 
 .engraving-char-count {
-    color: #666;
+    color: var(--dark_gray_color);
 }
 
 .engraving-char-count .char-over {
@@ -759,13 +759,13 @@ span.option-name {
 }
 
 .engraving-price {
-    color: var(--light_green_color);
+    color: var(--cyan_color);
 }
 
 .engraving-input {
     width: 100%;
     padding: 10px 20px;
-    border: 1px solid rgba(0, 0, 0, .2);
+    border: 1px solid rgba(var(--pure_black_rgb), .2);
     background: transparent;
     text-align: center;
     transition: all 0.2s ease;
@@ -777,14 +777,14 @@ span.option-name {
 }
 
 .engraving-input::placeholder {
-    color: #999;
+    color: var(--silver_gray_color);
     font-style: italic;
 }
 
 .font-selector {
     margin-top: 16px;
     padding-top: 16px;
-    border-top: 1px solid rgba(0, 0, 0, .2);
+    border-top: 1px solid rgba(var(--pure_black_rgb), .2);
 }
 
 .font-options {
@@ -796,7 +796,7 @@ span.option-name {
 
 .font-option {
     padding: 8px 16px;
-    border: 1px solid rgba(0, 0, 0, .2);
+    border: 1px solid rgba(var(--pure_black_rgb), .2);
     background: transparent;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -815,12 +815,12 @@ span.option-name {
     width: 100%;
     border-radius: 8px;
     overflow: hidden;
-    background-color: #fff;
+    background-color: var(--white_color);
     display: flex;
     align-items: center;
     margin-bottom: 20px;
     justify-content: center;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(var(--pure_black_rgb), 0.05);
 }
 
 /* .engraving-preview-image {
@@ -864,7 +864,7 @@ span.option-name {
    TIMELINE SECTION STYLES
    ===================================================== */
 .timeline-cost {
-    color: var(--light_green_color);
+    color: var(--cyan_color);
     margin-left: 4px;
 }
 
@@ -885,7 +885,7 @@ span.option-name {
 
 .delivery-estimate-text {
     margin: 0;
-    color: #555;
+    color: var(--medium_dark_gray);
 }
 
 /* =====================================================
@@ -908,7 +908,7 @@ span.option-name {
 }
 
 .gemstone-row {
-    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    border-bottom: 1px solid rgba(var(--pure_black_rgb), .2);
 }
 
 .gemstone-trigger {
@@ -937,7 +937,7 @@ span.option-name {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(var(--pure_black_rgb), 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1029,7 +1029,7 @@ button.close-button-text:hover {
     left: 14px;
     right: 14px;
     height: 4px;
-    background: #e5e5e5;
+    background: var(--border_color);
     border-radius: 2px;
     transform: translateY(-50%);
 }
@@ -1054,7 +1054,7 @@ button.close-button-text:hover {
     transform: translate(-50%, -25%);
     width: 8px;
     height: 8px;
-    background: #ccc;
+    background: var(--gray_400);
     border-radius: 50%;
     transition: all 0.2s ease;
 }
@@ -1065,8 +1065,8 @@ button.close-button-text:hover {
     left: 50%;
     transform: translateX(-50%);
     white-space: nowrap;
-    color: #666;
-    font-size: 11px;
+    color: var(--dark_gray_color);
+    font-size: var(--min_font_size);
 }
 
 .gemstone-tick.selected .gemstone-tick-label {
@@ -1090,9 +1090,9 @@ button.close-button-text:hover {
     width: 16px;
     height: 16px;
     background: var(--button_color_1);
-    border: 2px solid #fff;
+    border: 2px solid var(--white_color);
     border-radius: 50%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px rgba(var(--pure_black_rgb), 0.2);
     cursor: grab;
     z-index: 10;
     transition: left 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
@@ -1101,7 +1101,7 @@ button.close-button-text:hover {
 .gemstone-handle.active {
     cursor: grabbing;
     transform: translateY(0%) scale(1.2);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 0 0 4px rgba(46, 125, 50, 0.2);
+    box-shadow: 0 4px 12px rgba(var(--pure_black_rgb), 0.3), 0 0 0 4px rgba(46, 125, 50, 0.2);
     transition: left 0s, transform 0.1s ease, box-shadow 0.1s ease;
 }
 
@@ -1127,7 +1127,7 @@ button.close-button-text:hover {
     display: inline-block;
     padding: 4px 12px;
     background: var(--button_color_1);
-    color: #fff;
+    color: var(--white_color);
     border-radius: 4px;
 }
 
@@ -1226,7 +1226,7 @@ button.close-button-text:hover {
     display: inline-block;
     padding: 4px 10px;
     background: var(--button_color_1);
-    color: #fff;
+    color: var(--white_color);
     border-radius: 4px;
 }
 
@@ -1243,7 +1243,7 @@ button.close-button-text:hover {
     left: 14px;
     right: 14px;
     height: 4px;
-    background: #e5e5e5;
+    background: var(--border_color);
     border-radius: 2px;
 }
 
@@ -1254,7 +1254,7 @@ button.close-button-text:hover {
 .carat-tick-label {
     position: absolute;
     bottom: -20px;
-    color: #666;
+    color: var(--dark_gray_color);
     white-space: nowrap;
 }
 
@@ -1286,9 +1286,9 @@ button.close-button-text:hover {
     width: 16px;
     height: 16px;
     background: var(--button_color_1);
-    border: 2px solid #fff;
+    border: 2px solid var(--white_color);
     border-radius: 50%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px rgba(var(--pure_black_rgb), 0.2);
     cursor: grab;
     z-index: 10;
     transition: left 0.1s ease, transform 0.15s ease, box-shadow 0.15s ease;
@@ -1297,7 +1297,7 @@ button.close-button-text:hover {
 .carat-handle.active {
     cursor: grabbing;
     transform: scale(1.2);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 0 0 4px rgba(46, 125, 50, 0.2);
+    box-shadow: 0 4px 12px rgba(var(--pure_black_rgb), 0.3), 0 0 0 4px rgba(46, 125, 50, 0.2);
     transition: left 0s, transform 0.1s ease, box-shadow 0.1s ease;
 }
 
@@ -1353,7 +1353,7 @@ button.close-button-text:hover {
 .carat-hand-caption {
     text-align: center;
     margin: 0 0 24px;
-    color: #555;
+    color: var(--medium_dark_gray);
 }
 
 /* Skin Tone Slider */
@@ -1369,7 +1369,7 @@ button.close-button-text:hover {
     left: 14px;
     right: 14px;
     height: 8px;
-    background: linear-gradient(to right, #f5e6d3, #000000);
+    background: linear-gradient(to right, #f5e6d3, var(--pure_black_color));
     border-radius: 4px;
 }
 
@@ -1395,7 +1395,7 @@ button.close-button-text:hover {
 .skin-tone-tick-label {
     position: absolute;
     bottom: -20px;
-    color: #666;
+    color: var(--dark_gray_color);
     white-space: nowrap;
 }
 
@@ -1413,9 +1413,9 @@ button.close-button-text:hover {
     width: 16px;
     height: 16px;
     background: var(--button_color_1);
-    border: 2px solid #fff;
+    border: 2px solid var(--white_color);
     border-radius: 50%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px rgba(var(--pure_black_rgb), 0.2);
     cursor: grab;
     z-index: 10;
     transition: left 0.1s ease, transform 0.15s ease, box-shadow 0.15s ease;
@@ -1424,7 +1424,7 @@ button.close-button-text:hover {
 .skin-tone-handle.active {
     cursor: grabbing;
     transform: scale(1.2);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 0 0 4px rgba(46, 125, 50, 0.2);
+    box-shadow: 0 4px 12px rgba(var(--pure_black_rgb), 0.3), 0 0 0 4px rgba(46, 125, 50, 0.2);
     transition: left 0s, transform 0.1s ease, box-shadow 0.1s ease;
 }
 
@@ -1487,7 +1487,7 @@ button.close-button-text:hover {
     display: inline-block;
     padding: 4px 10px;
     background: var(--button_color_1);
-    color: #fff;
+    color: var(--white_color);
     border-radius: 4px;
 }
 
@@ -1524,9 +1524,9 @@ button.close-button-text:hover {
     width: 16px;
     height: 16px;
     background: var(--button_color_1);
-    border: 2px solid #fff;
+    border: 2px solid var(--white_color);
     border-radius: 50%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px rgba(var(--pure_black_rgb), 0.2);
     cursor: grab;
     z-index: 10;
     transition: left 0.1s ease, transform 0.15s ease, box-shadow 0.15s ease;
@@ -1535,7 +1535,7 @@ button.close-button-text:hover {
 .colour-handle.active {
     cursor: grabbing;
     transform: scale(1.2);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 0 0 4px rgba(46, 125, 50, 0.2);
+    box-shadow: 0 4px 12px rgba(var(--pure_black_rgb), 0.3), 0 0 0 4px rgba(46, 125, 50, 0.2);
     transition: left 0s, transform 0.1s ease, box-shadow 0.1s ease;
 }
 
@@ -1620,7 +1620,7 @@ button.close-button-text:hover {
 }
 
 .trust-badge-item:hover {
-    color: var(--light_green_color);
+    color: var(--cyan_color);
 }
 
 .trust-badge-icon {
@@ -1660,11 +1660,11 @@ button.close-button-text:hover {
    ===================================================== */
 .product-accordion {
     margin-top: 20px;
-    border-top: 1px solid rgba(0, 0, 0, .2);
+    border-top: 1px solid rgba(var(--pure_black_rgb), .2);
 }
 
 .accordion-item {
-    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    border-bottom: 1px solid rgba(var(--pure_black_rgb), .2);
 }
 
 .accordion-trigger {
@@ -1735,12 +1735,12 @@ button.close-button-text:hover {
 .accordion-data-table td {
     padding: 5px 13px;
     text-align: left;
-    border-bottom: 1px solid rgba(0, 0, 0, .15);
+    border-bottom: 1px solid rgba(var(--pure_black_rgb), .15);
 }
 
 .accordion-data-table td {
     background-color: #00000014;
-    border-left: 1px solid rgba(0, 0, 0, .15);
+    border-left: 1px solid rgba(var(--pure_black_rgb), .15);
 }
 
 .accordion-data-table th {
@@ -1802,12 +1802,12 @@ span.accordion-title {
 }
 
 .status-dot.available {
-    background-color: var(--light_green_color);
-    box-shadow: 0 0 0 2px color-mix(in srgb, var(--light_green_color) 20%, transparent);
+    background-color: var(--cyan_color);
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--cyan_color) 20%, transparent);
 }
 
 .status-dot.unavailable {
-    background-color: #ddd;
+    background-color: var(--gray_medium_color);
 }
 
 .no-break {
@@ -1826,8 +1826,8 @@ span.accordion-title {
     align-items: center;
     gap: 8px;
     padding: 10px 20px;
-    background-color: #0000;
-    border: 1px solid #0000;
+    background-color: var(--transparent);
+    border: 1px solid var(--transparent);
     border-radius: 4px;
     text-transform: uppercase;
     letter-spacing: 0.05em;

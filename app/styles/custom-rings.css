@@ -111,7 +111,7 @@
 
 .our-approach-section {
     text-align: center;
-    background-color: #0000000b;
+    background-color: rgba(var(--pure_black_rgb), 0.04);
     padding: 60px 0;
     margin-top: -40px;
 }
@@ -199,7 +199,7 @@
     font-size: 16px;
     line-height: 20px;
     font-weight: 400;
-    color: #333;
+    color: var(--charcoal_color);
     text-transform: uppercase;
     letter-spacing: 1.28px;
     margin: 15px 0 7px 0;
@@ -218,7 +218,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #0000000b;
+    background-color: rgba(var(--pure_black_rgb), 0.04);
     padding: 20px;
     border-radius: 4px;
     text-align: center;
@@ -227,11 +227,11 @@
 }
 
 .custom-design-journey .journey-tabs .journey-tab.active {
-    background-color: #b1c9b9;
+    background-color: var(--tab_active_bg);
 }
 
 .custom-design-journey .journey-tabs .journey-tab:hover {
-    background-color: #d1e5d8;
+    background-color: var(--tab_hover_bg);
 }
 
 .custom-design-journey h2.section-title {
@@ -256,14 +256,14 @@
     right: 5px;
     transform: translateY(-50%);
     z-index: 1;
-    background-color: #fff;
+    background-color: var(--white_color);
     border-radius: 50%;
     width: 30px;
     height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 1px 3px #0000001a;
+    box-shadow: 0 1px 3px rgba(var(--pure_black_rgb), 0.1);
     border: 1px solid #001b10;
     pointer-events: none;
 }
@@ -368,7 +368,7 @@
 
 .custom-rings-faq-section .faq-header {
     padding: 40px 20px;
-    /* background-color: var(--green_color); */
+    /* background-color: var(--accent_color); */
 }
 
 .custom-rings-faq-section .faq-header p {
@@ -443,7 +443,7 @@
 }
 
 .our-jewellers-section .border-line {
-    background: #e5e5e5;
+    background: var(--border_color);
     height: 1px;
     width: 100%;
     max-width: 150px;
@@ -526,7 +526,7 @@
 
 .custom-prev-arrow,
 .custom-next-arrow {
-    background: #fff;
+    background: var(--white_color);
     border: none;
     border-radius: 50%;
     width: 40px;
@@ -536,10 +536,10 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: var(--btn_transition);
     padding: 0;
     flex-shrink: 0;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 6px rgba(var(--pure_black_rgb), 0.15);
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -556,7 +556,7 @@
 
 .custom-prev-arrow:hover,
 .custom-next-arrow:hover {
-    background: #f0f0f0;
+    background: var(--off_white_color);
     transform: translateY(-50%) scale(1.1);
 }
 
@@ -630,7 +630,7 @@
     flex-direction: column;
     gap: 20px;
     padding: 26px;
-    background-color: #0000000b;
+    background-color: rgba(var(--pure_black_rgb), 0.04);
     border-radius: 4px;
     height: 100%;
 }
@@ -692,7 +692,7 @@
 /* Custom ring form section */
 
 .border-line {
-    background: #e5e5e5;
+    background: var(--border_color);
     height: 1px;
     width: 100%;
     max-width: 150px;
@@ -726,7 +726,7 @@
 
 .custom-rings-page .contact-form .contact-grid label {
     font-size: 11.7px !important;
-    color: #4d4d4d;
+    color: var(--deep_gray_color);
 }
 
 .custom-rings-page .contact-form .contact-grid input {
@@ -787,7 +787,7 @@ input.contact-other-input {
     width: 18px !important;
     height: 18px;
     padding: 0;
-    border: 1.5px solid #999;
+    border: 1.5px solid var(--silver_gray_color);
     border-radius: 50%;
     display: inline-grid;
     place-content: center;
@@ -799,13 +799,13 @@ input.contact-other-input {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #253e2b;
+    background-color: var(--deep_navy);
     transform: scale(0);
     transition: transform 0.25s ease;
 }
 
 .contact-radio-group.centre-stone-type input[type="radio"]:checked {
-    border-color: #253e2b
+    border-color: var(--deep_navy)
 }
 
 .contact-radio-group.centre-stone-type input[type="radio"]:checked::before {
@@ -813,7 +813,7 @@ input.contact-other-input {
 }
 
 .contact-radio-group.centre-stone-type input[type="radio"]:focus-visible {
-    outline: 2px solid #253e2b;
+    outline: 2px solid var(--deep_navy);
     outline-offset: 2px;
 }
 

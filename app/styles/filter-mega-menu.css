@@ -14,10 +14,10 @@
   left: 50%;
   transform: translateX(-50%);
   background: var(--body_color);
-  border: 1px solid #00000012;
+  border: 1px solid rgba(var(--pure_black_rgb), 0.07);
   border-radius: 4px;
   padding: 20px;
-  box-shadow: 0 9px 9px #00000026;
+  box-shadow: 0 9px 9px rgba(var(--pure_black_rgb), 0.15);
   z-index: 100;
   min-width: 400px;
   animation: fadeInDown 0.3s ease;

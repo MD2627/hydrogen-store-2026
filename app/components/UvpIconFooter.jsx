@@ -8,7 +8,7 @@ export function UvpIconFooter({ data = [] }) {
         <>
 
             <section className='uvp-icon-section'>
-                <div className="icons-container">
+                <div className="icons-container page-width">
                     {data.map((item, index) => {
                         if (!item.link || !item.svg || !item.label) return null;
 

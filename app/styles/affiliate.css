@@ -9,7 +9,7 @@
 }
 
 .affiliate-banner.story-craft-banner .story-craft-overlay {
-    background: linear-gradient(#0000, #0000005c 33%, #00000073, #0000005c 67%, #0000);
+    background: linear-gradient(var(--transparent), rgba(var(--pure_black_rgb), 0.36) 33%, rgba(var(--pure_black_rgb), 0.45), rgba(var(--pure_black_rgb), 0.36) 67%, var(--transparent));
 }
 
 .affiliate-banner.story-craft-banner .story-craft-content {
@@ -83,8 +83,8 @@
 
 .apply-btn {
     display: inline-block;
-    background-color: var(--green_color);
-    color: #fff;
+    background-color: var(--accent_color);
+    color: var(--white_color);
     padding: 12px 20px;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -94,7 +94,7 @@
 }
 
 .apply-btn:hover {
-    background-color: var(--dark_green_color);
+    background-color: var(--dark_accent_color);
 }
 
 .affiliate-contact {

@@ -1,87 +1,98 @@
-import { useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router';
-import { RichText } from './RichText';
 
-/**
- * @typedef {Object} BannerContent
- * @property {string} [image]
- * @property {string} [video]
- * @property {string} [title]
- * @property {string} [description]
- * @property {string} [linkText]
- * @property {string} [linkTo]
- */
-
-/**
- * @param {{
- *   left: BannerContent;
- *   right: BannerContent;
- *   middleBanner?: React.ReactNode;
- * }}
- */
 export function SplitBanner({
-  left,
-  right,
-  middleBanner
+  left = {},
+  right = {},
+  stats = [
+    { value: '100%', label: 'Authentic' },
+    { value: 'Expert', label: 'Crafted' },
+    { value: 'Lifetime', label: 'Guarantee' }
+  ]
 }) {
+  const [isHovered, setIsHovered] = useState(false);
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const videoRef = useRef(null);
 
+  // Robustly pick the best video and image sources available from either prop
+  const videoSrc = left.video || right.video || null;
+  const imageSrc = left.image || right.image || null;
+
+  // Identify which prop object contains the textual content
+  const content = (right.title || right.description) ? right : left;
+
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.play().catch((error) => {
-        console.error("Autoplay failed:", error);
+    if (videoRef.current && videoSrc) {
+      videoRef.current.play().catch(err => {
+        console.warn("Video autoplay failed:", err);
       });
     }
-  }, [right?.video]); // Re-run if video changes
+  }, [videoSrc]);
 
   return (
-    <div className={`split-banner ${!middleBanner ? 'engagement-split-banner' : ''}`}>
-      <div className="split-banner-media split-banner-left">
-        {left?.image && <img src={left.image} alt={left.title} className="split-banner-img" />}
-        {left?.video && (
-          <video
-            src={left.video}
-            loop
-            muted
-            playsInline
-            autoPlay
-            className="split-banner-vid"
-          />
-        )}
-        <div className="split-banner-content">
-          <h2>{left?.title}</h2>
-          {left.afterTitle}
-          <RichText tag="p" html={left?.description} />
-          <Link to={left?.linkTo} className="banner-btn">{left?.linkText}</Link>
+    <section className="sb">
+      <div className="page-width">
+        <div className="sb-grid">
+          {/* Left Section - Media */}
+          <div className="sb-left">
+            <div className="sb-media-wrapper">
+              {videoSrc ? (
+                <video
+                  ref={videoRef}
+                  key={videoSrc}
+                  src={videoSrc}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="sb-video"
+                  poster={imageSrc}
+                />
+              ) : imageSrc ? (
+                <img
+                  src={imageSrc}
+                  alt={content.title || "Banner"}
+                  className="sb-img"
+                />
+              ) : null}
+              <div className="sb-glow"></div>
+            </div>
+          </div>
+
+          {/* Right Section - Content */}
+          <div className="sb-right">
+            <div className="sb-content">
+              <h1 className="section-title">{content.title || 'Handcrafted Excellence'}</h1>
+
+              <p className="sb-description">
+                {content.description || 'Designed with purpose and consciously crafted for every moment.'}
+              </p>
+
+              <div className="sb-actions">
+                <Link
+                  to={content.linkTo || content.link || '/collections/all'}
+                  className={`sb-button ${isHovered ? 'hovered' : ''}`}
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
+                >
+                  {content.linkText || 'EXPLORE THE COLLECTION'}
+                </Link>
+              </div>
+
+              <div className="sb-stats">
+                <div className="sb-stats-grid">
+                  {stats.map((stat, i) => (
+                    <div key={i} className="sb-stat-item">
+                      <p className="sb-stat-value">{stat.value}</p>
+                      <p className="sb-stat-label">{stat.label}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-      {middleBanner}
-
-      <div className="split-banner-media split-banner-right">
-        {right?.image && <img src={right.image} alt={right.title} className="split-banner-img" />}
-        {right?.video && (
-          <video
-            ref={videoRef}
-            src={right.video}
-            loop
-            muted
-            playsInline
-            autoPlay
-            className="split-banner-vid"
-          />
-        )}
-        {(right?.title || right?.description) && (
-          <div className="split-banner-content">
-            <h2>{right.title}</h2>
-            {right.afterTitle}
-            <RichText tag="p" html={right?.description} />
-            {right.linkTo && right.linkText && (
-              <Link to={right.linkTo} className="banner-btn">{right.linkText}</Link>
-            )}
-          </div>
-        )}
-      </div>
-    </div>
+    </section>
   );
 }

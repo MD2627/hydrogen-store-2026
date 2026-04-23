@@ -101,7 +101,7 @@ export function RingSizeConverter() {
                 <div className="mobile-tabs-container">
                     <div className="select-wrapper">
                         <select
-                            className="ff-c f-13 w-400 green-color"
+                            className="ff-c f-13 w-400 accent-color"
                             value={activeTab}
                             onChange={(e) => setActiveTab(e.target.value)}
                         >
@@ -125,7 +125,7 @@ export function RingSizeConverter() {
                                     <label className="region-label ff-c f-13 w-300 black-color">YOUR SIZE</label>
                                     <div className="select-wrapper">
                                         <select
-                                            className='ff-c f-13 w-400 green-color'
+                                            className='ff-c f-13 w-400 accent-color'
                                             value={fromRegion}
                                             onChange={(e) => setFromRegion(e.target.value)}
                                         >
@@ -151,7 +151,7 @@ export function RingSizeConverter() {
                                 <div className="to-column">
                                     <label className="region-label ff-c f-13 w-300 black-color">CONVERT SIZE TO</label>
                                     <div className="select-wrapper">
-                                        <select className='ff-c f-13 w-400 green-color'
+                                        <select className='ff-c f-13 w-400 accent-color'
                                             value={toRegion}
                                             onChange={(e) => setToRegion(e.target.value)}
                                         >

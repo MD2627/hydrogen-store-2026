@@ -6,8 +6,10 @@ export function CraftsmanshipBanner({
 }) {
   return (
     <div className="craftsmanship-banner">
-      <h3>{heading}</h3>
-      <RichText tag="p" html={description} />
+      <div className="page-width">
+        <h3>{heading}</h3>
+        <RichText tag="p" html={description} />
+      </div>
     </div>
   );
 }

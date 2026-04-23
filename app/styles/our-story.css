@@ -19,7 +19,7 @@
   font-family: var(--font_family_a);
   font-size: 45px;
   font-weight: 300;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 4px rgba(var(--pure_black_rgb), 0.3);
   margin: 0;
   line-height: 50px;
 }
@@ -43,7 +43,7 @@
   font-family: var(--font_family_c);
   font-weight: 300;
   line-height: 1.2;
-  color: #232323;
+  color: var(--black_color);
   margin-bottom: 13px;
   text-align: center;
 }
@@ -68,7 +68,7 @@ p.top-content-high-light {
   font-size: 16px;
   margin: 50px 0;
   font-family: var(--font_family_a);
-  color: #232323;
+  color: var(--black_color);
   line-height: 1.1;
 }
 
@@ -79,7 +79,7 @@ p.top-content-high-light {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  background: rgba(0, 0, 0, .045);
+  background: rgba(var(--pure_black_rgb), .045);
 }
 
 
@@ -93,7 +93,7 @@ p.top-content-high-light {
 
 .my-detail p {
   font-family: var(--font_family_a);
-  color: #232323;
+  color: var(--black_color);
   line-height: 1.1;
   font-size: 16px;
   text-align: left;
@@ -105,7 +105,7 @@ p.my-name-is {
   font-family: var(--font_family_c);
   font-weight: 300;
   line-height: 1.2;
-  color: #232323;
+  color: var(--black_color);
   margin-bottom: 13px;
   text-align: left;
 }
@@ -115,7 +115,7 @@ p.my-name-is {
 .recycling-page .email-signup-wrapper .email-signup__message--success {
   background: transparent;
   border: none;
-  color: #00bb33;
+  color: var(--cyan_color);
 }
 
 .careers-page .email-signup-wrapper,
@@ -262,8 +262,8 @@ p.my-name-is {
 
 button.swiper-button-prev.custom-arrow,
 button.swiper-button-next.custom-arrow {
-  color: #fff;
-  background: #0000001a;
+  color: var(--white_color);
+  background: rgba(var(--pure_black_rgb), 0.1);
   width: 27px;
   height: 50px;
   border-radius: 0;
@@ -330,7 +330,7 @@ section.need-help-banner {
   display: flex;
   flex-direction: column;
   text-align: center;
-  color: #fff;
+  color: var(--white_color);
   margin: 100px auto 60px;
   max-width: 1260px;
 }
@@ -352,7 +352,7 @@ section.need-help-banner {
 }
 
 .need-help-banner .banner-btn {
-  padding: 10.5px 20px;
+  padding: var(--btn_padding);
 }
 
 .small-hide {
@@ -365,7 +365,7 @@ section.need-help-banner {
 
 .need-help-banner .background:after {
   position: absolute;
-  background-color: #000;
+  background-color: var(--pure_black_color);
   width: 100%;
   height: 100%;
   left: 0;

@@ -11,7 +11,7 @@ export function RingBanner({ image, mobileImage, title, subtitle, buttonText, bu
                 <div className="banner-content">
                     <h2>{title}</h2>
                     <p>{subtitle}</p>
-                    <Link to={buttonLink} className="ring-banner-button">
+                    <Link to={buttonLink} className="btn btn">
                         {buttonText}
                     </Link>
                 </div>

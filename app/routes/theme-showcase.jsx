@@ -117,12 +117,12 @@ function StickyNav({ activeTab, setActiveTab, onTryTheme, stuck }) {
                     ))}
                 </div>
                 {/* <div style={{ display: "flex", gap: 12 }}>
-                    <a href="/" className="btn-outline">View demo</a>
-                    <button onClick={onTryTheme} className="btn-solid">Try theme</button>
+                    <a href="/" className="btn btn--outline">View demo</a>
+                    <button onClick={onTryTheme} className="btn">Try theme</button>
                 </div> */}
                 <div style={{ display: "flex", gap: 12 }}>
-                    <a href="/" className="btn-outline sticky-nav-view-demo">View demo</a>
-                    <button onClick={onTryTheme} className="btn-solid">Try theme</button>
+                    <a href="/" className="btn btn--outline sticky-nav-view-demo">View demo</a>
+                    <button onClick={onTryTheme} className="btn">Try theme</button>
                 </div>
             </div>
         </div>
@@ -156,12 +156,12 @@ export default function ThemeShowcase() {
                             </p>
                         </div>
                         {/* <div style={{ display: "flex", gap: 12, marginTop: 4 }}>
-                            <button onClick={() => setShowTryTheme(true)} className="btn-solid">Try theme</button>
-                            <a href="/" className="btn-outline">View demo</a>
+                            <button onClick={() => setShowTryTheme(true)} className="btn">Try theme</button>
+                            <a href="/" className="btn btn--outline">View demo</a>
                         </div> */}
                         <div style={{ display: "flex", gap: 12, marginTop: 4 }} className="hero-cta-row">
-                            <button onClick={() => setShowTryTheme(true)} className="btn-solid">Try theme</button>
-                            <a href="/" className="btn-outline">View demo</a>
+                            <button onClick={() => setShowTryTheme(true)} className="btn">Try theme</button>
+                            <a href="/" className="btn btn--outline">View demo</a>
                         </div>
                     </div>
                     <div className="feature-grid">

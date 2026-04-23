@@ -67,7 +67,7 @@ export default function RecyclingBrilliance() {
 
             <OurRecyclingProcess />
 
-            <ProductFAQ data={CYCLE_FAQ_DATA} title="FAQ" subtitle="Common queries and their answers to help you find the information you need." />
+            <ProductFAQ data={CYCLE_FAQ_DATA} title="Recycling" subtitle="Common queries and their answers about our circular economy initiatives." />
 
             <div className="newsletter-touch">
 

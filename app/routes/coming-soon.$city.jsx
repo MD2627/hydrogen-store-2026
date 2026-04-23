@@ -260,13 +260,13 @@ export default function ComingSoonCity() {
 
                     <div className="cancle-save-btn">
                         <button
-                            className="cancel-btn common-btn-cookie"
+                            className="cancel-btn btn"
                             onClick={() => setShowPopup(false)}
                         >
                             Cancel
                         </button>
                         <button
-                            className="save-btn common-btn-cookie"
+                            className="save-btn btn"
                             onClick={() => {
                                 localStorage.setItem("videoConsent", "accepted");
                                 setShowVideo(true);
@@ -322,7 +322,7 @@ export default function ComingSoonCity() {
 
                     <div className="need-help-actions">
                         {NEED_HELP_BANNER_DATA.content.buttons.map((btn, i) => (
-                            <Link key={i} to={btn.link} className="banner-btn">
+                            <Link key={i} to={btn.link} className="btn">
                                 {btn.label}
                             </Link>
                         ))}
@@ -349,7 +349,7 @@ export function ErrorBoundary() {
                 <p className="ff-n f-18">
                     Sorry, we don&apos;t have an opening planned for {params.city || 'this location'} yet.
                 </p>
-                <Link to="/" className="common-button mt-20">Back to Home</Link>
+                <Link to="/" className="btn mt-20">Back to Home</Link>
             </div>
         );
     }
@@ -360,7 +360,7 @@ export function ErrorBoundary() {
             <p className="ff-n f-18">
                 {error?.message || 'Something went wrong while loading this page.'}
             </p>
-            <Link to="/" className="common-button mt-20">Back to Home</Link>
+            <Link to="/" className="btn mt-20">Back to Home</Link>
         </div>
     );
 }

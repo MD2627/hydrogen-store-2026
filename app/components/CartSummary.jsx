@@ -67,7 +67,7 @@ function CartCheckoutActions({ checkoutUrl }) {
 
   return (
     <div className="checkout-actions">
-      <a href={checkoutUrl} target="_self" className="checkout-btn">
+      <a href={checkoutUrl} target="_self" className="btn btn">
         Checkout
       </a>
     </div>

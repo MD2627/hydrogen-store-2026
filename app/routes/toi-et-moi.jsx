@@ -163,7 +163,7 @@ export default function ToiEtMoiPage() {
                 </div>
 
                 <div className="browse-button-container txt-center">
-                    <Link to="/engagement?metal=platinum&style=toi-et-moi" className="browse-btn common-button ff-b w-300 white-color">
+                    <Link to="/engagement?metal=platinum&style=toi-et-moi" className="btn btn ff-b w-300 white-color">
                         BROWSE TOI ET MOI ENGAGEMENT RINGS
                     </Link>
                 </div>

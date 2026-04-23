@@ -22,7 +22,12 @@ function getStableVH() {
 
 function isDark(color) {
   if (!color) return false
+  // Handle CSS Variables
+  if (color === 'var(--primary_color)') return true
+  if (color === 'var(--bg_light_secondary)') return false
+
   const hex = color.replace('#', '')
+  if (hex.length < 6) return false
   const r = parseInt(hex.slice(0, 2), 16)
   const g = parseInt(hex.slice(2, 4), 16)
   const b = parseInt(hex.slice(4, 6), 16)
@@ -31,10 +36,6 @@ function isDark(color) {
 
 function normalizeBgColor(bg) {
   if (!bg) return bg
-
-  if (bg === 'rgb(31, 95, 59)') return BRAND_GREEN
-  if (bg.toLowerCase() === '#1f5f3b') return BRAND_GREEN
-
   return bg
 }
 

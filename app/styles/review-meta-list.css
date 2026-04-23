@@ -2,7 +2,7 @@
 
 .review-meta-list-section {
     padding: 60px 0;
-    background-color: #fff;
+    background-color: var(--white_color);
 }
 
 span.star {
@@ -49,7 +49,7 @@ span.star {
 .rml-summary-stars {
     display: flex;
     gap: 2px;
-    color: #fbbf24;
+    color: var(--warning_yellow);
 }
 
 .rml-summary-stars .star {
@@ -61,7 +61,7 @@ span.star {
 }
 
 .rml-write-review-btn {
-    background-color: var(--green_color);
+    background-color: var(--accent_color);
     padding: 14px 28px;
     border: none;
     cursor: pointer;
@@ -78,8 +78,8 @@ span.star {
     position: absolute;
     top: 100%;
     right: 0;
-    background: #fff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background: var(--white_color);
+    box-shadow: 0 4px 12px rgba(var(--pure_black_rgb), 0.1);
     padding: 10px;
     z-index: 10;
     border-radius: 4px;
@@ -147,7 +147,7 @@ span.star {
 }
 
 .rml-review-time {
-    color: #666;
+    color: var(--dark_gray_color);
 }
 
 .rml-review-body {
@@ -170,7 +170,7 @@ span.star {
     padding: 0;
     cursor: pointer;
     text-align: left;
-    color: #666;
+    color: var(--dark_gray_color);
     margin-top: 5px;
 }
 
@@ -194,7 +194,7 @@ span.star {
 }
 
 .rml-trustpilot-fallback .star {
-    color: #00b67a;
+    color: #00D1FF;
     font-size: 14px;
 }
 

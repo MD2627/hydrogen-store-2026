@@ -38,7 +38,7 @@ h3.blog-title {
     font-size: 23px;
     text-align: center;
     line-height: 25px;
-    color: #232323;
+    color: var(--black_color);
     font-family: var(--font_family_a);
     font-weight: 300;
 }
@@ -48,7 +48,7 @@ h3.blog-title {
     font-family: var(--font_family_c);
     text-align: center;
     margin: 7px 0 0;
-    color: #232323;
+    color: var(--black_color);
 }
 
 .blogs-outer-title {
@@ -61,7 +61,7 @@ h3.blog-title {
     font-weight: 300;
     font-family: var(--font_family_n);
     line-height: 30px;
-    color: #232323;
+    color: var(--black_color);
 }
 
 .breadcrumbs h3:hover {
@@ -81,7 +81,7 @@ h3.blog-title {
     width: 110px;
     height: 2px;
     margin: 46px auto 0;
-    background: #000;
+    background: var(--pure_black_color);
     align-self: center;
     text-align: center;
 }
@@ -131,7 +131,7 @@ h3.blog-title {
     line-height: 18.6px;
     font-weight: 300;
     font-family: var(--font_family_a);
-    color: #232323;
+    color: var(--black_color);
     max-width: 27vw;
     margin: 0 auto 26px;
     text-align: left;
@@ -147,7 +147,7 @@ h3.blog-title {
     font-weight: 300;
     font-family: var(--font_family_n);
     line-height: 30px;
-    color: #232323;
+    color: var(--black_color);
 }
 
 .article {
@@ -204,7 +204,7 @@ section.basic-column {
 .part-title-lining {
     font-size: 19px;
     font-family: var(--font_family_n);
-    color: #232323;
+    color: var(--black_color);
     line-height: 1;
     margin: 53px 0 25px;
 }
@@ -246,7 +246,7 @@ article.blog-article:after {
     display: block;
     max-width: 760px;
     width: 100%;
-    background: #878787;
+    background: var(--gray_700);
     margin: 0 auto;
 }
 
@@ -255,10 +255,10 @@ article.blog-article.limit-width {
 }
 
 a.fancy {
-    color: #232323;
+    color: var(--black_color);
     position: relative;
     text-decoration: none;
-    border-bottom: 1.5px solid #e0ebe4;
+    border-bottom: 1.5px solid var(--soft_blue_bg);
 }
 
 a.fancy:after {
@@ -268,7 +268,7 @@ a.fancy:after {
     bottom: -1px;
     width: 100%;
     height: 1.5px;
-    background: #253e2b;
+    background: var(--deep_navy);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.3s ease;
@@ -394,7 +394,7 @@ a.you-may-also-like__card:hover img {
 }
 
 h3.you-may-also-like__card-title {
-    color: #232323;
+    color: var(--black_color);
     margin: 13px 0 0;
     font-size: 13px;
     font-family: var(--font_family_n);
@@ -472,7 +472,7 @@ body:has(.article-wrapper) .scroll-progress {
         top: 50%;
         transform: translateY(-50%);
         z-index: 10;
-        color: #FFF;
+        color: var(--white_color);
     }
 
     .you-may-also-like.is-slider-mode .custom-prev-arrow {

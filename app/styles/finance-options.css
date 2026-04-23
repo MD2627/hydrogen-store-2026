@@ -60,9 +60,9 @@
 }
 
 .finance-card {
-    background-color: #fefaf5;
+    background-color: var(--beige_light);
     padding: 32px;
-    border: solid 1px #e5e5e5;
+    border: solid 1px var(--border_color);
     max-width: 400px;
     width: 100%;
 }

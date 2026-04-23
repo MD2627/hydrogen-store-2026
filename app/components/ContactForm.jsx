@@ -352,7 +352,7 @@ export function ContactForm({ mode = 'contact' }) {
 
                 <button
                     type="submit"
-                    className="contact-submit common-button"
+                    className="contact-submit btn"
                     disabled={status === 'loading'}
                 >
                     {status === 'loading' ? 'SENDING...' : 'SUBMIT'}

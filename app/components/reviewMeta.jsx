@@ -1,192 +1,93 @@
-import { useState, useEffect, useMemo } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation, Pagination } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router';
 
-function ReviewCard({ review }) {
-    const [isExpanded, setIsExpanded] = useState(false);
-
-    // Memoize initials and avatar color to avoid recalculation
-    const avatarColor = useMemo(() => getAvatarColor(review.initial), [review.initial]);
-
-    return (
-        <div className="review-card">
-            <div className="review-header">
-                <div
-                    className="review-avatar f-18 ff-c w-300"
-                    style={{ backgroundColor: avatarColor }}
-                >
-                    {review.initial}
-                </div>
-                <div className="author-info">
-                    <span className="author-name ff-c f-12 w-500">{review.author}</span>
-                    <div className="review-stars-row">
-                        <div className="stars">
-                            {"★".repeat(review.rating).split("").map((star, i) => (
-                                <span key={i} className="star">{star}</span>
-                            ))}
-                        </div>
-                        <span className="review-time f-9 ff-c w-300">{review.time}</span>
-                    </div>
-                </div>
-            </div>
-            <div className="review-body">
-                <div
-                    className={`comment ff-c f-12 w-300 ${isExpanded ? 'expanded' : ''}`}
-                    style={{
-                        maxHeight: isExpanded ? '1000px' : '67px',
-                        overflow: 'hidden',
-                        transition: 'max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
-                    }}
-                >
-                    <p className="review-text">
-                        {review.text}
-                    </p>
-                </div>
-                {review.text.length > 50 && (
-                    <button
-                        className="read-more-link f-11 ff-c w-600"
-                        onClick={() => setIsExpanded(!isExpanded)}
-                        type="button"
-                    >
-                        {isExpanded ? 'Hide' : 'Read more'}
-                    </button>
-                )}
-            </div>
-            <div className="review-footer">
-                {review.sourceLogo ? (
-                    <img src={review.sourceLogo} alt={review.source || "Source"} className="google-source-logo" loading="lazy" />
-                ) : (
-                    review.source === 'Google' && (
-                        <img src="https://cdn.shopify.com/s/files/1/0644/3067/0060/files/google_x100.png?v=1663569230" alt="Google" className="google-source-logo" loading="lazy" />
-                    )
-                )}
-            </div>
-        </div>
-    );
-}
-
 export default function ReviewMeta({ reviews = [] }) {
-    const [showWriteReviewPopup, setShowWriteReviewPopup] = useState(false);
     const [isMounted, setIsMounted] = useState(false);
 
-    // Swiper should only initialize on the client to avoid hydration issues
     useEffect(() => {
         setIsMounted(true);
     }, []);
 
-    const toggleWriteReviewPopup = () => {
-        setShowWriteReviewPopup(!showWriteReviewPopup);
+    // Summary data
+    const summary = {
+        rating: "5.0",
+        count: "17,816",
+        stars: 5,
+        source: "Google Reviews"
     };
 
-    const googleReviewLink = "https://www.google.com/search?hl=en-AU&gl=au&q=Cullen+Jewellery,+4/232+High+St,+Kew+VIC+3101&ludocid=342683720915465707&lsig=AB86z5VliycXADEjnDB-lH_UkbBU";
-
-    // If no reviews are provided, don't render the section
     if (!reviews || reviews.length === 0) return null;
 
+    // Take top 6 reviews for a complete bento grid
+    const displayReviews = reviews.slice(0, 6);
+
     return (
-        <div className="review-meta-section">
+        <section className="rev-v2">
             <div className="page-width">
-                {isMounted ? (
-                    <Swiper
-                        key={reviews.length} // Force re-init if data changes
-                        modules={[Autoplay, Navigation, Pagination]}
-                        spaceBetween={10}
-                        slidesPerView={1.8}
-                        centeredSlides={true}
-                        navigation
-                        autoplay={{
-                            delay: 2500,
-                            disableOnInteraction: false,
-                        }}
-                        loop={reviews.length > 5}
-                        observer={true}
-                        observeParents={true}
-                        watchSlidesProgress={true}
-                        breakpoints={{
-                            640: {
-                                slidesPerView: 2.2,
-                            },
-                            1024: {
-                                slidesPerView: 4.2,
-                            },
-                            1440: {
-                                loop: false,
-                                slidesPerView: 5.4,
-                                centeredSlides: false,
-                            }
-                        }}
-                        className="reviews-swiper"
-                    >
-                        {/* Header/Summary Slide */}
-                        <SwiperSlide className="review-slide-summary">
-                            <div className="summary-card">
-                                <div className="summary-logos">
-                                    <img src="https://cdn.shopify.com/s/files/1/0644/3067/0060/files/google_x100.png?v=1663569230" alt="Google" className="google-logo-summary" />
-                                </div>
-                                <div className="summary-rating">
-                                    <span className="rating-number ff-c f-13 w-500">5.0</span>
-                                    <div className="stars">
-                                        {[...Array(5)].map((_, i) => (
-                                            <span key={i} className="star">★</span>
-                                        ))}
-                                    </div>
-                                    <span className="reviews-count ff-c f-9 w-500">17,816 reviews</span>
-                                </div>
-                                <div className="summary-buttons">
-                                    <Link
-                                        to="/reviews"
-                                        rel="noreferrer"
-                                        className="banner-btn summary-btn read-reviews-btn"
-                                    >
-                                        READ OUR REVIEWS
-                                    </Link>
-                                    <div className="write-review-container">
-                                        <button
-                                            className="banner-btn summary-btn write-review-btn"
-                                            onClick={toggleWriteReviewPopup}
-                                            type="button"
-                                        >
-                                            WRITE A REVIEW
-                                        </button>
-                                        {showWriteReviewPopup && (
-                                            <div className="write-review-popup">
-                                                <a
-                                                    href={googleReviewLink}
-                                                    target="_blank"
-                                                    rel="noreferrer"
-                                                    className="popup-option google-option"
-                                                >
-                                                    <img src="https://cdn.shopify.com/s/files/1/0644/3067/0060/files/google_x100.png?v=1663569230" alt="Google" />
-                                                </a>
-                                            </div>
-                                        )}
-                                    </div>
+                <div className="rev-v2-grid">
+                    {/* Header Card (Bento Style) - Index is effectively -1 */}
+                    <div className="rev-v2-card rev-v2-summary">
+                        <div className="rev-v2-summary-inner">
+                            <span className="section-subtitle">Our Reputation</span>
+                            <h2 className="section-title">Handcrafted Excellence</h2>
+                            <div className="rev-v2-rating-big">
+                                <span className="rev-v2-number">{summary.rating}</span>
+                                <div className="rev-v2-stars">
+                                    {[...Array(5)].map((_, i) => (
+                                        <span key={i} className="rev-v2-star">★</span>
+                                    ))}
                                 </div>
                             </div>
-                        </SwiperSlide>
+                            <p className="rev-v2-count">Trusted by over {summary.count} couples worldwide.</p>
+                            <div className="rev-v2-actions">
+                                <Link to="/reviews" className="rev-v2-btn-primary sb-button">View All Stories</Link>
+                                <a
+                                    href="https://www.google.com/search?q=Cullen+Jewellery"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="rev-v2-btn-secondary"
+                                >
+                                    Write a Review
+                                </a>
+                            </div>
+                        </div>
+                    </div>
 
-                        {/* Review Slides */}
-                        {reviews.map((review) => (
-                            <SwiperSlide key={review.id} className="review-slide-item">
-                                <ReviewCard review={review} />
-                            </SwiperSlide>
-                        ))}
-                    </Swiper>
-                ) : (
-                    <div className="reviews-swiper-skeleton" style={{ height: '240px' }}></div>
-                )}
+                    {/* Review Cards */}
+                    {displayReviews.map((review, index) => (
+                        <div key={review.id} className={`rev-v2-card rev-v2-item rev-v2-item-${index}`}>
+                            <div className="rev-v2-item-header">
+                                <div className="rev-v2-avatar" style={{ backgroundColor: getAvatarColor(review.initial) }}>
+                                    {review.initial}
+                                </div>
+                                <div className="rev-v2-author-meta">
+                                    <span className="rev-v2-author-name">{review.author}</span>
+                                    <span className="rev-v2-item-time">{review.time || 'Verified Purchase'}</span>
+                                </div>
+                                <div className="rev-v2-item-stars">
+                                    {"★".repeat(review.rating)}
+                                </div>
+                            </div>
+                            <div className="rev-v2-item-content">
+                                <p>"{review.text}"</p>
+                            </div>
+                            <div className="rev-v2-item-footer">
+                                <img
+                                    src="https://cdn.shopify.com/s/files/1/0644/3067/0060/files/google_x100.png?v=1663569230"
+                                    alt="Google"
+                                    className="rev-v2-source-icon"
+                                />
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
-        </div>
+        </section>
     );
 }
 
-
 function getAvatarColor(initial) {
-    const colors = ['#1a4d2e', '#2c3e50', '#a29bfe', '#fab1a0', '#00cec9', '#d63031', '#1e90ff', '#ff9f43'];
+    const colors = ['#001b10', '#1a4d2e', '#2c3e50', '#7f8c8d'];
     const index = initial ? initial.charCodeAt(0) % colors.length : 0;
     return colors[index];
 }

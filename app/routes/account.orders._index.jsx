@@ -179,13 +179,14 @@ function OrderSearchForm({currentFilters}) {
         </div>
 
         <div className="order-search-buttons">
-          <button type="submit" disabled={isSearching}>
+          <button type="submit" disabled={isSearching} className="btn">
             {isSearching ? 'Searching' : 'Search'}
           </button>
           {hasFilters && (
             <button
               type="button"
               disabled={isSearching}
+              className="btn btn--outline"
               onClick={() => {
                 setSearchParams(new URLSearchParams());
                 formRef.current?.reset();

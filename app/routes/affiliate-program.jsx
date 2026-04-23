@@ -49,7 +49,7 @@ export default function AffiliatePage() {
                     </div>
 
                     <div className="affiliate-cta">
-                        <a href={CONTENT_DATA.ctaLink} className="banner-btn ff-n f-11 w-600">{CONTENT_DATA.ctaText}</a>
+                        <a href={CONTENT_DATA.ctaLink} className="btn ff-n f-11 w-600">{CONTENT_DATA.ctaText}</a>
                     </div>
 
                     <div className="affiliate-contact">

@@ -45,14 +45,14 @@ export default function Faqs() {
 
           <div className="banner-faq-content">
             <button
-              className="banner-btn"
+              className="btn"
               onClick={() => scrollToSection('faq-two')}
             >
               Lab Grown Diamond FAQs
             </button>
 
             <button
-              className="banner-btn"
+              className="btn"
               onClick={() => scrollToSection('faq-three')}
             >
               Moissanite FAQs
@@ -61,31 +61,19 @@ export default function Faqs() {
           </div>
         </section>
         <div id="faq-one" className="faq-section">
-          <header className="shop-by-style-header">
-            <h2>Client Care FAQs</h2>
-          </header>
-          <ProductFAQ data={PAGE_FAQ_ONE} />
+          <ProductFAQ data={PAGE_FAQ_ONE} title="Client Care" />
         </div>
 
         <div id="faq-two" className="faq-section">
-          <header className="shop-by-style-header">
-            <h2>Lab Grown Diamond FAQs</h2>
-          </header>
-          <ProductFAQ data={PAGE_FAQ_TWO} />
+          <ProductFAQ data={PAGE_FAQ_TWO} title="Lab Diamonds" />
         </div>
 
         <div id="faq-three" className="faq-section">
-          <header className="shop-by-style-header">
-            <h2>Moissanite FAQs</h2>
-          </header>
-          <ProductFAQ data={PAGE_FAQ_THREE} />
+          <ProductFAQ data={PAGE_FAQ_THREE} title="Moissanite" />
         </div>
 
         <div id="faq-four" className="faq-section">
-          <header className="shop-by-style-header">
-            <h2>Sapphire FAQs</h2>
-          </header>
-          <ProductFAQ data={PAGE_FAQ_FOUR} />
+          <ProductFAQ data={PAGE_FAQ_FOUR} title="Sapphires" />
         </div>
 
       </div>

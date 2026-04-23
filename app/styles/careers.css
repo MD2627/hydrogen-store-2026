@@ -9,7 +9,7 @@
 .title-border {
   margin: 5px 0 6px;
   padding-bottom: 19px;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid var(--border_color);
 }
 
 /* Sticky Navigation */
@@ -37,9 +37,9 @@
 }
 
 .sticky-nav-container {
-  background: #fff;
+  background: var(--white_color);
   border-radius: 50px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 20px rgba(var(--pure_black_rgb), 0.15);
   display: flex;
   gap: 0;
   padding: 4px;
@@ -62,12 +62,12 @@
 }
 
 .sticky-nav-btn:hover {
-  background: #f5f5f5;
+  background: var(--off_white_color);
 }
 
 .sticky-nav-btn.active {
   background: var(--primary_color);
-  color: #fff;
+  color: var(--white_color);
 }
 
 @media screen and (max-width: 767px) {
@@ -115,7 +115,7 @@ main.careers .collection-header-content:after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(var(--pure_black_rgb), 0.4);
   z-index: 2;
 }
 
@@ -126,7 +126,7 @@ main.careers .collection-header-content:after {
   margin: 0 auto;
   padding: 0 20px;
   text-align: center;
-  color: #fff;
+  color: var(--white_color);
 }
 
 .career-hero-subtitle {
@@ -154,13 +154,13 @@ main.careers .collection-header-content:after {
 /* Mission Section */
 .career-mission {
   padding: 64px 0px 60px;
-  background: rgba(0, 0, 0, .045);
+  background: rgba(var(--pure_black_rgb), .045);
 }
 
 .career-mission-title {
   text-align: center;
   margin-bottom: 64px;
-  color: #1a1a1a;
+  color: var(--near_black);
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -188,7 +188,7 @@ main.careers .collection-header-content:after {
 }
 
 .career-mission-tagline {
-  color: #1a1a1a;
+  color: var(--near_black);
   text-transform: uppercase;
   letter-spacing: normal;
   line-height: 18.7px;
@@ -196,21 +196,7 @@ main.careers .collection-header-content:after {
 }
 
 .career-mission-btn {
-  display: inline-block;
-  padding: 11px 20px;
-  background: var(--primary_color);
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
-  text-align: center;
   width: fit-content;
-  font-size: 11px;
-}
-
-.career-mission-btn:hover {
-  background: #234a31;
 }
 
 .career-mission-right {
@@ -276,7 +262,6 @@ main.careers .collection-header-content:after {
     width: 100%;
     max-width: 157px;
     margin: 40px auto 0;
-    padding: 10.5px 10px;
   }
 
   .career-mission-right {
@@ -331,7 +316,7 @@ main.careers .collection-header-content:after {
 .career-section-image img {
   width: 100%;
   height: 100%;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 8px 32px rgba(var(--pure_black_rgb), 0.07);
   object-fit: cover;
 }
 
@@ -409,7 +394,7 @@ main.careers .collection-header-content:after {
   font-size: 1rem;
   max-width: 700px;
   margin: 0 auto 33px;
-  color: #555;
+  color: var(--medium_dark_gray);
   line-height: 1.6;
 }
 
@@ -463,7 +448,7 @@ main.careers .collection-header-content:after {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 12px rgba(var(--pure_black_rgb), 0.05);
   min-height: 280px;
   position: relative;
 }
@@ -475,7 +460,7 @@ main.careers .collection-header-content:after {
 }
 
 .carousel-arrow {
-  background: rgba(0, 0, 0, .045);
+  background: rgba(var(--pure_black_rgb), .045);
   border: none;
   border-radius: 50px;
   width: 50px;
@@ -492,7 +477,7 @@ main.careers .collection-header-content:after {
   transform: translateY(-50%);
   /* z-index: 10; */
   font-size: 200%;
-  color: #000;
+  color: var(--pure_black_color);
 }
 
 .careers-carousel-prev {
@@ -505,7 +490,7 @@ main.careers .collection-header-content:after {
 
 .carousel-arrow svg path {
   fill: none;
-  stroke: #fff;
+  stroke: var(--white_color);
   stroke-width: 1.05831;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -646,7 +631,7 @@ main.careers .collection-header-content:after {
 .careers-team-subtitle {
   font-size: 1rem;
   /* font-family: 'Inter', sans-serif; */
-  color: #555;
+  color: var(--medium_dark_gray);
   margin: 0;
 }
 
@@ -682,7 +667,7 @@ main.careers .collection-header-content:after {
 }
 
 .careers-team-card {
-  background: #fff;
+  background: var(--white_color);
   padding: 40px;
   border-radius: 4px;
   width: 100%;
@@ -690,7 +675,7 @@ main.careers .collection-header-content:after {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(var(--pure_black_rgb), 0.1);
 }
 
 .careers-team-name {
@@ -764,7 +749,7 @@ main.careers .collection-header-content:after {
   height: 50px;
   top: 50%;
   transform: translateY(-50%);
-  background: #0000001a;
+  background: rgba(var(--pure_black_rgb), 0.1);
   transition: opacity .2s, transform .2s;
   border: none;
   vertical-align: middle;
@@ -865,7 +850,7 @@ main.careers .collection-header-content:after {
 }
 
 .benefits-item {
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid var(--gray_200);
 }
 
 .benefits-header {
@@ -888,7 +873,7 @@ main.careers .collection-header-content:after {
 }
 
 .benefits-icon svg path {
-  color: #232323;
+  color: var(--black_color);
   fill: none;
   stroke-width: 1.05831;
   stroke-linecap: round;
@@ -973,7 +958,7 @@ main.careers .collection-header-content:after {
 .careers-jobs-section {
   padding: 80px 0;
   background: var(--primary_color);
-  color: #fff;
+  color: var(--white_color);
 }
 
 .careers-jobs-section .careers-job-card a svg {
@@ -1005,18 +990,18 @@ main.careers .collection-header-content:after {
 .filter-group select {
   padding: 8px;
   border-radius: unset;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(var(--white_rgb), 0.2);
   background: var(--body_color);
   width: 100%;
   outline: none;
   margin: 0;
-  color: #000;
+  color: var(--pure_black_color);
   font-weight: 400;
 }
 
 #filter-location:has(option:checked:not([value=""])),
 #filter-department:has(option:checked:not([value=""])) {
-  color: #000;
+  color: var(--pure_black_color);
 }
 
 .filter-group select#filter-location,
@@ -1120,7 +1105,7 @@ main.careers .collection-header-content:after {
   bottom: -1px;
   width: 100%;
   height: 1.5px;
-  background: #253e2b;
+  background: var(--deep_navy);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
@@ -1132,7 +1117,7 @@ main.careers .collection-header-content:after {
 
 .careers-jobs-section .careers-job-card a {
   position: relative;
-  border-bottom: 1.5px solid #e0ebe4;
+  border-bottom: 1.5px solid var(--soft_blue_bg);
   text-decoration: none;
   width: fit-content;
 }
@@ -1141,13 +1126,13 @@ main.careers .collection-header-content:after {
   width: 100%;
   text-align: center;
   padding: 40px;
-  color: #fff;
+  color: var(--white_color);
   font-size: 1.1rem;
 }
 
 .jobs-carousel-arrow,
 .team-carousel-arrow {
-  background: #fff;
+  background: var(--white_color);
   border: none;
   border-radius: 50%;
   width: 40px;
@@ -1160,7 +1145,7 @@ main.careers .collection-header-content:after {
   transition: all 0.3s ease;
   padding: 0;
   flex-shrink: 0;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 6px rgba(var(--pure_black_rgb), 0.15);
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -1246,7 +1231,7 @@ main.careers .collection-header-content:after {
 }
 
 .careers-difference-section .careers-title-line {
-  background: #e5e5e5;
+  background: var(--border_color);
   width: 100%;
   max-width: 150px;
   height: 1px;
@@ -1334,7 +1319,7 @@ main.careers .collection-header-content:after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(var(--pure_black_rgb), 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1342,19 +1327,19 @@ main.careers .collection-header-content:after {
 }
 
 .careers-explore-card:hover .explore-card-overlay {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(var(--pure_black_rgb), 0.6);
 }
 
 .explore-card-title {
   font-family: 'Inter', sans-serif;
   font-size: 1.4rem;
   font-weight: 600;
-  color: #fff;
+  color: var(--white_color);
   text-transform: uppercase;
   letter-spacing: 2px;
   text-align: center;
   margin: 0;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 4px rgba(var(--pure_black_rgb), 0.3);
 }
 
 @media (max-width: 767px) {

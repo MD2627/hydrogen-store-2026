@@ -9,7 +9,7 @@ import { TryThemeModal } from "~/components/TryThemeModal";
  */
 export function Footer({ footer: footerPromise, header, publicStoreDomain }) {
   const [openAccordions, setOpenAccordions] = useState({
-    quickLinks: false,
+    quickLinks: true,
     aboutUs: false,
     clientCare: false,
     contactUs: false,
@@ -43,12 +43,75 @@ export function Footer({ footer: footerPromise, header, publicStoreDomain }) {
             <footer className="footer">
               <div className="footer-top page-width">
                 <div className="footer-top-content">
+                  <div className="footer-column footer-logo-column">
+                    <div className="footer-logo-wrapper">
+                      <Link to="/">
+                        <img
+                          src="https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Add_a_heading-removebg-preview.png?v=1776678536"   // 👉 change this
+                          alt="logo"
+                          className="footer-logo"
+                        />
+                      </Link>
+                    </div>
+
+                    <div className="footer-social">
+                      {footer?.socialLinks?.items && footer.socialLinks.items.length > 0 ? (
+                        <ul className="social-links">
+                          {footer.socialLinks.items.map((item) => {
+                            if (!item.url) return null;
+                            return (
+                              <li key={item.id}>
+                                <Link to={item.url} target="_blank" rel="noopener noreferrer" aria-label={item.title}>
+                                  {getSocialIcon(item.title)}
+                                </Link>
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      ) : (
+                        <ul className="social-links">
+                          <li>
+                            <Link to="https://instagram.com/yourhandle" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                              {getSocialIcon('Instagram')}
+                            </Link>
+                          </li>
+                          <li>
+                            <Link to="https://tiktok.com/yourchannel" target="_blank" rel="noopener noreferrer" aria-label="Tiktok">
+                              {getSocialIcon('Tiktok')}
+                            </Link>
+                          </li>
+                          <li>
+                            <Link to="https://facebook.com/yourpage" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                              {getSocialIcon('Facebook')}
+                            </Link>
+                          </li>
+                          <li>
+                            <Link to="https://youtube.com/yourchannel" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                              {getSocialIcon('YouTube')}
+                            </Link>
+                          </li>
+                          <li>
+                            <Link to="https://pinterest.com/yourhandle" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
+                              {getSocialIcon('Pinterest')}
+                            </Link>
+                          </li>
+                          <li>
+                            <Link to="https://linkedin.com/yourchannel" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                              {getSocialIcon('LinkedIn')}
+                            </Link>
+                          </li>
+                        </ul>
+                      )}
+                    </div>
+
+                  </div>
                   <div className="footer-column">
                     <h3
-                      className="footer-heading f-11 f-m-11 ff-n white-color"
+                      className={`footer-heading f-11 f-m-11 ff-n site-text-color${openAccordions.quickLinks ? ' open' : ''}`}
                       onClick={() => toggleAccordion('quickLinks')}
                     >
                       QUICK LINKS
+                      <svg className="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9" /></svg>
                     </h3>
                     <div className={`footer-content ${openAccordions.quickLinks ? 'active' : ''}`}>
                       {menusLoading ? (
@@ -70,10 +133,11 @@ export function Footer({ footer: footerPromise, header, publicStoreDomain }) {
                   </div>
                   <div className="footer-column">
                     <h3
-                      className="footer-heading f-11 f-m-11 ff-n white-color"
+                      className={`footer-heading f-11 f-m-11 ff-n site-text-color${openAccordions.aboutUs ? ' open' : ''}`}
                       onClick={() => toggleAccordion('aboutUs')}
                     >
                       ABOUT US
+                      <svg className="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9" /></svg>
                     </h3>
                     <div className={`footer-content ${openAccordions.aboutUs ? 'active' : ''}`}>
                       {menusLoading ? (
@@ -96,10 +160,11 @@ export function Footer({ footer: footerPromise, header, publicStoreDomain }) {
 
                   <div className="footer-column">
                     <h3
-                      className="footer-heading f-11 f-m-11 ff-n white-color"
+                      className={`footer-heading f-11 f-m-11 ff-n site-text-color${openAccordions.clientCare ? ' open' : ''}`}
                       onClick={() => toggleAccordion('clientCare')}
                     >
                       CLIENT CARE
+                      <svg className="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9" /></svg>
                     </h3>
                     <div className={`footer-content ${openAccordions.clientCare ? 'active' : ''}`}>
                       {menusLoading ? (
@@ -121,31 +186,32 @@ export function Footer({ footer: footerPromise, header, publicStoreDomain }) {
                   </div>
 
                   <div className="footer-column">
-                    <h3 className="footer-heading f-11 f-m-11 ff-n white-color" onClick={() => toggleAccordion('contactUs')}>
+                    <h3 className={`footer-heading f-11 f-m-11 ff-n site-text-color${openAccordions.contactUs ? ' open' : ''}`} onClick={() => toggleAccordion('contactUs')}>
                       CONTACT US
+                      <svg className="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9" /></svg>
                     </h3>
                     <div className={`footer-content ${isClient && openAccordions.contactUs ? 'active' : ''}`}>
                       <ul className="footer-contact">
                         <li className="contact-item">
-                          <span className="contact-icon"><svg style={{ width: '16px' }} viewBox="0 0 16.933 16.933" xmlns="http://www.w3.org/2000/svg"><path d="M11.66 1.063c3.855-.964 5.096 2.25 4.4 5.038-.643 2.57-5.145 8.426-9.117 9.731-3.333 1.095-6.38-.534-6.04-3.725l3.758-1.661c1.308.163 2.114 1.933 2.114 1.933 2.416-1.43 4.252-3.173 5.118-5.478-.938-.415-1.874-1.028-2.162-1.982Z" style={{ fill: 'rgb(255, 255, 255)', width: '16px', fillOpacity: 1, stroke: 'none', strokeWidth: '0.321282px', strokeLinecap: 'butt', strokeLinejoin: 'miter', strokeOpacity: 1 }}></path></svg></span>
-                          <Link className="ff-c white-color f-11 f-m-11" to="tel:+611300977619">+61 1300 977 619</Link>
+                          <span className="contact-icon"><svg style={{ width: '16px' }} viewBox="0 0 16.933 16.933" xmlns="http://www.w3.org/2000/svg"><path d="M11.66 1.063c3.855-.964 5.096 2.25 4.4 5.038-.643 2.57-5.145 8.426-9.117 9.731-3.333 1.095-6.38-.534-6.04-3.725l3.758-1.661c1.308.163 2.114 1.933 2.114 1.933 2.416-1.43 4.252-3.173 5.118-5.478-.938-.415-1.874-1.028-2.162-1.982Z" style={{ width: '16px', fillOpacity: 1, stroke: 'none', strokeWidth: '0.321282px', strokeLinecap: 'butt', strokeLinejoin: 'miter', strokeOpacity: 1 }}></path></svg></span>
+                          <Link className="ff-c site-text-color f-11 f-m-11" to="tel:+611300977619">+61 1300 977 619</Link>
                         </li>
                         <li className="contact-item">
                           <span className="contact-icon"><svg style={{ width: '20px' }} viewBox="0 0 16.933 16.933" xmlns="http://www.w3.org/2000/svg"><path style={{ width: '20px' }} d="M4.83 4.366 8.465 8l3.636-3.634Zm8.55.075L8.467 9.544 3.553 4.63v7.938h9.827z"></path></svg></span>
-                          <Link className="ff-c white-color f-11 f-m-11" to="mailto:demo@gmail.com">demo@gmail.com</Link>
+                          <Link className="ff-c site-text-color f-11 f-m-11" to="mailto:demo@gmail.com">demo@gmail.com</Link>
                         </li>
                         <li className="contact-item">
                           <span className="contact-icon"><svg style={{ width: '20px' }} viewBox="0 0 16.933 16.933" xmlns="http://www.w3.org/2000/svg"><path d="M13.412 4.112v8.69a.102.102 0 0 1-.102.102H3.623a.102.102 0 0 1-.102-.102v-8.69c0-.057.046-.103.102-.103h1.364c.08 0 .145-.065.145-.145v-.83c0-.056.046-.102.103-.102h.69c.056 0 .102.046.102.102v.83c0 .08.065.145.145.145h4.59c.08 0 .144-.065.144-.145v-.83c0-.056.046-.102.103-.102h.69c.056 0 .102.046.102.102v.83c0 .08.065.145.145.145h1.364c.056 0 .102.046.102.103zm-.769 7.933v-5.84a.147.147 0 0 0-.147-.147h-8.06a.147.147 0 0 0-.146.147v5.84c0 .08.066.147.147.147h8.06a.147.147 0 0 0 .146-.147z"></path><path d="m6.62 9.423 1.108 1.108 2.906-2.905"></path></svg></span>
-                          <Link to={'/visit'} className="ff-c white-color f-11 f-m-11">Appointment Only</Link>
+                          <Link to={'/visit'} className="ff-c site-text-color f-11 f-m-11">Appointment Only</Link>
                         </li>
-                        <li className="contact-hours ff-c white-color f-11 f-m-11">
+                        <li className="contact-hours ff-c site-text-color f-11 f-m-11">
                           <strong>CONTACT HOURS</strong>
                           <div>MON-WED:9:30 AM - 11:00 AM</div>
                           <div>THU-FRI:9:30 AM - 5:30 PM</div>
                           <div>SAT:10:00 AM - 4:00 PM</div>
                         </li>
-                        <li className="ff-c white-color f-11 f-m-11"><NavLink to="/contact">Get in Touch</NavLink></li>
-                        <li className="ff-c white-color f-11 f-m-11"><NavLink to="/feedback">Feedback</NavLink></li>
+                        <li className="ff-c site-text-color f-11 f-m-11"><NavLink to="/contact">Get in Touch</NavLink></li>
+                        <li className="ff-c site-text-color f-11 f-m-11"><NavLink to="/feedback">Feedback</NavLink></li>
                       </ul>
                     </div>
                   </div>
@@ -154,144 +220,82 @@ export function Footer({ footer: footerPromise, header, publicStoreDomain }) {
 
               <div className="footer-middle page-width">
                 <div className="footer-middle-content">
-                  <div className="footer-certification">
-                    {/* Keep This empty */}
-                  </div>
 
                   <div className="footer-newsletter">
-                    <div className="footer-promo">
-                      <Link to="/pages/competition" className="promo-button f-11 f-m-11 ff-n white-color">
-                        WIN $10,000 OF FINE JEWELLERY
-                      </Link>
-                    </div>
                     <div className="newsletter-text">
-                      <h3 className="newsletter-heading f-12 f-m-12 ff-n white-color">RING ADVICE, STRAIGHT TO YOUR INBOX</h3>
+                      <h3 className="newsletter-heading f-12 f-m-12 ff-n site-text-color">RING ADVICE, STRAIGHT TO YOUR INBOX</h3>
                       <NewsletterForm />
                     </div>
                   </div>
 
-                  <div className="footer-certification">
-                    <div className="certification-text">
-                      <p className='ff-n white-color f-8'>Proudly endorsed by</p>
-                      <div className="certification-brand"><img src="https://cdn.shopify.com/s/files/1/0801/7317/0906/files/dia_logo_small_19a09d11-690b-4497-b3cb-51f6b02857cc.webp?v=1767936117" alt="dia-logo" /></div>
-                    </div>
-                    <div className="certification-logo">
-                      {/* <img s rc="https://cdn.shopify.com/s/files/1/0801/7317/0906/files/IGI_Logo_220x_564ccc38-8583-4e30-8c7d-aa667c191a61.avif?v=1767935790" alt="IGI" /> */}
-                      <img src="https://cdn.shopify.com/s/files/1/0801/7317/0906/files/Frame_3.png?v=1772543718" alt="IGI" />
-                    </div>
-                  </div>
                 </div>
               </div>
 
               <div className="footer-bottom page-width">
                 <div className="footer-bottom-content">
-                  <div className="footer-social">
-                    {footer?.socialLinks?.items && footer.socialLinks.items.length > 0 ? (
-                      <ul className="social-links">
-                        {footer.socialLinks.items.map((item) => {
-                          if (!item.url) return null;
-                          return (
-                            <li key={item.id}>
-                              <Link to={item.url} target="_blank" rel="noopener noreferrer" aria-label={item.title}>
-                                {getSocialIcon(item.title)}
-                              </Link>
-                            </li>
-                          );
-                        })}
-                      </ul>
-                    ) : (
-                      <ul className="social-links">
-                        <li>
-                          <Link to="https://instagram.com/yourhandle" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                            {getSocialIcon('Instagram')}
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="https://tiktok.com/yourchannel" target="_blank" rel="noopener noreferrer" aria-label="Tiktok">
-                            {getSocialIcon('Tiktok')}
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="https://facebook.com/yourpage" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                            {getSocialIcon('Facebook')}
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="https://youtube.com/yourchannel" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                            {getSocialIcon('YouTube')}
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="https://pinterest.com/yourhandle" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
-                            {getSocialIcon('Pinterest')}
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="https://linkedin.com/yourchannel" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                            {getSocialIcon('LinkedIn')}
-                          </Link>
-                        </li>
-                      </ul>
-                    )}
+
+                  <div className='footer-bottom-left'>
+                    <div className="footer-legal">
+                      {footer?.legalLinks?.items && footer.legalLinks.items.length > 0 ? (
+                        <ul className="legal-links">
+                          {footer.legalLinks.items.map((item, index) => {
+                            if (!item.url) return null;
+                            const url =
+                              item.url.includes('myshopify.com') ||
+                                item.url.includes(publicStoreDomain) ||
+                                item.url.includes(header.shop.primaryDomain.url)
+                                ? new URL(item.url).pathname
+                                : item.url;
+                            const isExternal = !url.startsWith('/');
+                            return (
+                              <li key={item.id}>
+                                {isExternal ? (
+                                  <Link to={url} rel="noopener noreferrer" target="_blank" className='f-10 f-m-10 ff-n site-text-color'>
+                                    {item.title}
+                                  </Link>
+                                ) : (
+                                  <NavLink to={url} className='f-10 f-m-10 ff-n site-text-color'>{item.title}</NavLink>
+                                )}
+                                {index < footer.legalLinks.items.length - 1 && <span className="separator">|</span>}
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      ) : (
+                        <ul className="legal-links">
+                          <li>
+                            <NavLink to="/policies/terms-of-service" className='f-10 f-m-10 ff-n site-text-color'>Terms and Conditions</NavLink>
+                            <span className="separator">|</span>
+                          </li>
+                          <li>
+                            <NavLink to="#" className='f-10 f-m-10 ff-n site-text-color'>Terms of Sale</NavLink>
+                            <span className="separator">|</span>
+                          </li>
+                          <li>
+                            <NavLink to="/policies/privacy-policy" className='f-10 f-m-10 ff-n site-text-color'>Privacy</NavLink>
+                            <span className="separator">|</span>
+                          </li>
+                          <li>
+                            <NavLink to="/policies/refund-policy" className='f-10 f-m-10 ff-n site-text-color'>Returns</NavLink>
+                            <span className="separator">|</span>
+                          </li>
+                          <li>
+                            <NavLink to="/site-map" className='f-10 f-m-10 ff-n site-text-color'>Site Map</NavLink>
+                            <span className="separator">|</span>
+                          </li>
+                          <li>
+                            <NavLink to="/engagement-rings" className='f-10 f-m-10 ff-n site-text-color'>Engagement Rings</NavLink>
+                          </li>
+                        </ul>
+                      )}
+                    </div>
+                    <div className="payment-text f-10 f-m-10 ff-n site-text-color">All payments are 256-bit SSL secure and encrypted</div>
+
                   </div>
 
-                  <div className="footer-legal">
-                    {footer?.legalLinks?.items && footer.legalLinks.items.length > 0 ? (
-                      <ul className="legal-links">
-                        {footer.legalLinks.items.map((item, index) => {
-                          if (!item.url) return null;
-                          const url =
-                            item.url.includes('myshopify.com') ||
-                              item.url.includes(publicStoreDomain) ||
-                              item.url.includes(header.shop.primaryDomain.url)
-                              ? new URL(item.url).pathname
-                              : item.url;
-                          const isExternal = !url.startsWith('/');
-                          return (
-                            <li key={item.id}>
-                              {isExternal ? (
-                                <Link to={url} rel="noopener noreferrer" target="_blank" className='f-10 f-m-10 ff-n white-color'>
-                                  {item.title}
-                                </Link>
-                              ) : (
-                                <NavLink to={url} className='f-10 f-m-10 ff-n white-color'>{item.title}</NavLink>
-                              )}
-                              {index < footer.legalLinks.items.length - 1 && <span className="separator">|</span>}
-                            </li>
-                          );
-                        })}
-                      </ul>
-                    ) : (
-                      <ul className="legal-links">
-                        <li>
-                          <NavLink to="/policies/terms-of-service" className='f-10 f-m-10 ff-n white-color'>Terms and Conditions</NavLink>
-                          <span className="separator">|</span>
-                        </li>
-                        <li>
-                          <NavLink to="#" className='f-10 f-m-10 ff-n white-color'>Terms of Sale</NavLink>
-                          <span className="separator">|</span>
-                        </li>
-                        <li>
-                          <NavLink to="/policies/privacy-policy" className='f-10 f-m-10 ff-n white-color'>Privacy</NavLink>
-                          <span className="separator">|</span>
-                        </li>
-                        <li>
-                          <NavLink to="/policies/refund-policy" className='f-10 f-m-10 ff-n white-color'>Returns</NavLink>
-                          <span className="separator">|</span>
-                        </li>
-                        <li>
-                          <NavLink to="/site-map" className='f-10 f-m-10 ff-n white-color'>Site Map</NavLink>
-                          <span className="separator">|</span>
-                        </li>
-                        <li>
-                          <NavLink to="/engagement-rings" className='f-10 f-m-10 ff-n white-color'>Engagement Rings</NavLink>
-                        </li>
-                      </ul>
-                    )}
-                  </div>
+                  <div className="footer-bottom-center copyright f-10 f-m-10 ff-n site-text-color">© 2025 Stara</div>
 
-                  <div className="footer-payment">
-                    <div className="payment-text f-10 f-m-10 ff-n white-color">All payments are 256-bit SSL secure and encrypted</div>
+                  <div className="footer-bottom-right footer-payment">
                     <div className="payment-icons">
                       <svg viewBox="0 0 38 24" aria-labelledby="pi-american_express" xmlns="http://www.w3.org/2000/svg"><path d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3Z" opacity=".07"></path><path fill="#006fcf" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><path fill="#fff" d="m8.971 10.268.774 1.876H8.203Zm16.075.078h-2.977v.827h2.929v1.239h-2.923v.922h2.977v.739l2.077-2.245-2.077-2.34zm-14.063-2.34h3.995l.887 1.935L16.687 8h10.37l1.078 1.19L29.25 8h4.763l-3.519 3.852 3.483 3.828h-4.834l-1.078-1.19-1.125 1.19H10.03l-.494-1.19h-1.13l-.495 1.19H4L7.286 8h3.43zm8.663 1.078h-2.239l-1.5 3.536-1.625-3.536H12.06v4.81L10 9.084H8.007l-2.382 5.512H7.18l.494-1.19h2.596l.494 1.19h2.72v-3.935l1.751 3.941h1.19l1.74-3.929v3.93h1.458l.024-5.52zm9.34 2.768 2.531-2.768h-1.822l-1.601 1.726-1.548-1.726h-5.894v5.518h5.81l1.614-1.738 1.548 1.738h1.875l-2.512-2.75z"></path></svg>
                       <svg viewBox="0 0 38 24" aria-labelledby="pi-master" xmlns="http://www.w3.org/2000/svg"><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><path d="M10.11 8.102c.318-.398.533-.932.476-1.477-.465.023-1.032.307-1.361.705-.295.34-.556.896-.489 1.419.523.045 1.045-.261 1.374-.647M10.58 8.851c-.758-.045-1.403.43-1.765.43-.362 0-.917-.407-1.517-.396a2.236 2.236 0 0 0-1.901 1.155c-.815 1.404-.215 3.488.577 4.632.385.566.849 1.189 1.46 1.166.578-.022.804-.373 1.505-.373.702 0 .906.373 1.517.362.634-.011 1.03-.566 1.415-1.133.442-.645.622-1.268.633-1.302-.01-.011-1.222-.476-1.233-1.869-.011-1.166.95-1.721.996-1.755-.543-.804-1.392-.894-1.687-.917M18.142 7.273c1.649 0 2.797 1.136 2.797 2.79 0 1.66-1.172 2.803-2.838 2.803h-1.825v2.902h-1.319V7.273Zm-1.866 4.486h1.513c1.148 0 1.801-.618 1.801-1.69 0-1.071-.653-1.684-1.795-1.684h-1.52zM21.266 14.008c0-1.09.83-1.713 2.36-1.808l1.643-.1v-.47c0-.69-.453-1.066-1.26-1.066-.665 0-1.148.341-1.248.865h-1.19c.036-1.1 1.072-1.901 2.473-1.901 1.508 0 2.49.788 2.49 2.013v4.227h-1.218v-1.019h-.03c-.347.666-1.112 1.084-1.942 1.084-1.225 0-2.078-.73-2.078-1.825zm4.003-.548v-.477l-1.466.095c-.824.053-1.254.359-1.254.894 0 .518.448.854 1.148.854.895 0 1.572-.571 1.572-1.366zM27.655 18.04v-1.018c.083.012.283.023.389.023.582 0 .912-.246 1.112-.883l.118-.376-2.231-6.182h1.377l1.555 5.016h.03l1.553-5.016h1.343l-2.314 6.494c-.53 1.49-1.136 1.978-2.42 1.978-.1 0-.424-.012-.512-.036z"></path></svg>
@@ -305,7 +309,7 @@ export function Footer({ footer: footerPromise, header, publicStoreDomain }) {
                       <svg viewBox="0 0 74 46" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 4.667A3.667 3.667 0 0 1 4.667 1h64.666A3.667 3.667 0 0 1 73 4.667v36.666A3.667 3.667 0 0 1 69.333 45H4.667A3.667 3.667 0 0 1 1 41.333V4.667Z" fill="#FFFFFA"></path><path d="m27.466 16.689 1.877 15.27h18.354L45.82 16.69H27.466Z" fill="#AA8FFF"></path><path d="M32.702 10.862c1.17 1.1 1.331 2.83.359 3.866-.973 1.034-2.71.981-3.88-.12-1.171-1.1-1.332-2.83-.36-3.866.973-1.034 2.71-.98 3.881.12Z" fill="#1A0826"></path><path fillRule="evenodd" clipRule="evenodd" d="M66.932 22.188c-.422-3.435-3.12-5.511-6.784-5.499H47.944l1.878 15.271h5.492l-.374-3.054h5.812c4.569 0 6.663-2.85 6.18-6.718Zm-6.778 2.438-5.746.006-.452-3.664 5.776.006c1.358.019 2.052.78 2.166 1.83.073.67-.235 1.822-1.744 1.822Z" fill="#1A0826"></path><path d="m8.352 27.693.525 4.267h18.336l-.604-4.883h-8.546l-.078-.61 7.876-5.498-.525-4.28H7l.598 4.89h8.564l.078.609-7.888 5.505Z" fill="#1A0826"></path><path d="M4.667 2h64.666V0H4.667v2ZM72 4.667v36.666h2V4.667h-2ZM69.333 44H4.667v2h64.666v-2ZM2 41.333V4.667H0v36.666h2ZM4.667 44A2.667 2.667 0 0 1 2 41.333H0A4.667 4.667 0 0 0 4.667 46v-2ZM72 41.333A2.667 2.667 0 0 1 69.333 44v2A4.667 4.667 0 0 0 74 41.333h-2ZM69.333 2A2.667 2.667 0 0 1 72 4.667h2A4.667 4.667 0 0 0 69.333 0v2ZM4.667 0A4.667 4.667 0 0 0 0 4.667h2A2.667 2.667 0 0 1 4.667 2V0Z" fill="#1A0826"></path></svg>
                     </div>
                   </div>
-                  <div className="copyright f-10 f-m-10 ff-n white-color">© 2025 Stara</div>
+
 
                   <button className='try-theme-btn' onClick={() => setShowTryTheme(true)}>
                     <img src="https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Gemini_Generated_Image_12frs12frs12frs1.png?v=1775905453" alt="download-icon" />
@@ -481,7 +485,7 @@ function FooterMenu({ menu, primaryDomainUrl, publicStoreDomain }) {
                 to={url}
                 rel="noopener noreferrer"
                 target="_blank"
-                className="ff-c white-color f-11 f-m-11"
+                className="ff-c site-text-color f-11 f-m-11"
               >
                 {item.title}
               </Link>
@@ -489,7 +493,7 @@ function FooterMenu({ menu, primaryDomainUrl, publicStoreDomain }) {
               <NavLink
                 to={url}
                 className={({ isActive }) =>
-                  `ff-c white-color f-11 f-m-11 ${isActive ? 'active' : ''}`
+                  `ff-c site-text-color f-11 f-m-11 ${isActive ? 'active' : ''}`
                 }
               >
                 {item.title}
@@ -570,7 +574,7 @@ function NewsletterForm() {
           />
           <button
             type="submit"
-            className="newsletter-button f-m-12 f-12 ff-n"
+            className="btn btn f-m-12 f-12 ff-n"
             disabled={status === 'submitting' || !email}
           >
             {status === 'submitting' ? 'SUBMITTING...' : 'SUBMIT'}

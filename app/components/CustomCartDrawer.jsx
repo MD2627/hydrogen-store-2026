@@ -151,7 +151,7 @@ export function CustomCartDrawer({ initialCart }) {
           <Link
             to="/collections"
             onClick={close}
-            className="continue-shopping-btn"
+            className="btn btn"
           >
             Continue Shopping
           </Link>
@@ -238,7 +238,7 @@ export function CustomCartDrawer({ initialCart }) {
             )}
 
             {cart?.checkoutUrl && (
-              <a href={cart.checkoutUrl} className="checkout-btn">
+              <a href={cart.checkoutUrl} className="btn btn">
                 Proceed to Checkout
               </a>
             )}

@@ -21,7 +21,7 @@
     font-family: var(--font_family_n, serif);
     font-size: 2.8rem;
     font-weight: 400;
-    color: var(--black_color, #232323);
+    color: var(--black_color, var(--black_color));
     margin-bottom: 25px;
     line-height: 1.2;
 }
@@ -30,7 +30,7 @@
 .not-found-text {
     font-family: var(--font_family_c, sans-serif);
     font-size: 14px;
-    color: var(--black_color, #232323);
+    color: var(--black_color, var(--black_color));
     margin-bottom: 20px;
     line-height: 1.5;
 }
@@ -51,8 +51,8 @@
 
 .not-found-btn {
     display: block;
-    background-color: var(--green_color, #1e5a38);
-    color: var(--white_color, #fff);
+    background-color: var(--green_color, #003B4D);
+    color: var(--white_color, var(--white_color));
     padding: 18px 25px;
     font-family: var(--font_family_c, sans-serif);
     font-size: 13px;
@@ -71,7 +71,7 @@
 .not-found-btn:hover {
     opacity: 0.9;
     text-decoration: none;
-    color: var(--white_color, #fff);
+    color: var(--white_color, var(--white_color));
 }
 
 .not-found-image {

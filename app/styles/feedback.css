@@ -2,14 +2,14 @@
 .feedback-form-wrapper .feedback-form textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--gray_medium_color);
     margin-bottom: 0;
     display: block;
     font-family: var(--font_family_n);
     font-size: 12px;
     line-height: 14px;
     font-weight: 600;
-    color: #4d4d4d;
+    color: var(--deep_gray_color);
     margin-top: 0.25rem;
 }
 
@@ -61,7 +61,7 @@
     font-family: 'ABC Arizona Mix';
     font-size: 16.25px;
     line-height: 17.875px;
-    color: #232323;
+    color: var(--black_color);
     text-align: center;
     margin: 0 0 26px;
 }
@@ -97,7 +97,7 @@
     padding: 0;
     margin: 0;
     border-radius: 3px;
-    border: 2px solid var(--dark_green_color);
+    border: 2px solid var(--dark_accent_color);
     appearance: none;
     -webkit-appearance: none;
     cursor: pointer;
@@ -116,7 +116,7 @@
     font-size: 12px;
     line-height: 14px;
     font-weight: 600;
-    color: #4d4d4d;
+    color: var(--deep_gray_color);
 }
 
 form.feedback-form {
@@ -133,7 +133,7 @@ form.feedback-form {
     font-size: 10px;
     line-height: 14px;
     font-weight: 600;
-    color: #4d4d4d;
+    color: var(--deep_gray_color);
     width: 100%;
     text-align: center;
     border: none;

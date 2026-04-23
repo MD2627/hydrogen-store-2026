@@ -37,7 +37,7 @@
 /* Lead Generation Section */
 .coming-soon-form-section {
     padding: 80px 0;
-    background: #f5efea;
+    background: var(--gray_color);
 }
 
 .coming-soon-form-header.text-center h2 {
@@ -53,9 +53,9 @@
     max-width: 600px;
     margin: 0 auto;
     padding: 40px;
-    border: 1px solid #eee;
-    background: #fff;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--light_gray_color);
+    background: var(--white_color);
+    box-shadow: 0 10px 30px rgba(var(--pure_black_rgb), 0.05);
 }
 
 .coming-soon-form-section .form-header {
@@ -69,7 +69,7 @@
 }
 
 .coming-soon-form-section .form-header p {
-    color: #666;
+    color: var(--dark_gray_color);
 }
 
 .coming-soon-form-section .contact-form input,
@@ -98,7 +98,7 @@
 
 .coming-soon-form-section .country-flag-select {
     width: 90px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--gray_medium_color);
     display: flex;
     gap: 10px;
     padding: 10px;
@@ -139,7 +139,7 @@
     font-size: 12px;
     line-height: 14px;
     font-weight: 600;
-    color: #232323;
+    color: var(--black_color);
 }
 
 .coming-soon-form-section .form-group label {
@@ -180,12 +180,12 @@
 span.label-text {
     font-size: 9px;
     font-family: var(--font_family_c);
-    color: #4d4d4d;
+    color: var(--deep_gray_color);
     font-weight: 400;
 }
 
 p.recaptcha-text-coming {
-    color: #232323;
+    color: var(--black_color);
     font-weight: 300;
 }
 
@@ -290,7 +290,7 @@ p.recaptcha-text-coming {
 }
 
 .perk-item p {
-    color: #666;
+    color: var(--dark_gray_color);
     font-size: 14px;
 }
 
@@ -335,7 +335,7 @@ section.city-map-section {
 }
 
 .city-map-title {
-    color: #232323;
+    color: var(--black_color);
     text-align: center;
     margin: 5px 0 20px;
     line-height: 35.75px;
@@ -346,7 +346,7 @@ section.city-map-section {
 }
 
 .city-map-subtitle {
-    color: #232323;
+    color: var(--black_color);
     text-align: center;
     line-height: 15.59px;
 }
@@ -413,7 +413,7 @@ section.city-map-section {
 
 .coming-soon-city .shop-by-style {
     padding: 50px 20px 50px 20px;
-    background-color: #f5efea;
+    background-color: var(--gray_color);
 }
 
 header.shop-by-style-header div {
@@ -421,7 +421,7 @@ header.shop-by-style-header div {
     font-weight: 300;
     font-family: var(--font_family_c);
     line-height: 15.6px;
-    color: #232323;
+    color: var(--black_color);
 }
 
 @media screen and (max-width: 991px) and (min-width: 767px) {
@@ -499,9 +499,9 @@ header.shop-by-style-header div {
     font-weight: 300;
     line-height: 1.4;
     padding: 10px 16px;
-    border-color: rgb(0, 0, 0);
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
+    border-color: var(--pure_black_color);
+    background-color: var(--pure_black_color);
+    color: var(--white_color);
     cursor: pointer;
     font-family: var(--font_family_c);
 }
@@ -522,10 +522,10 @@ header.shop-by-style-header div {
     transform: translate(-50%, 100%);
     width: calc(100% - 48px);
     max-width: 845px;
-    background: #fff;
+    background: var(--white_color);
     border-radius: 12px;
     padding: 0 30px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 20px 60px rgba(var(--pure_black_rgb), 0.2);
     transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
     z-index: 9999;
     height: min-content;
@@ -606,7 +606,7 @@ header.shop-by-style-header div {
 }
 
 .save-btn.common-btn-cookie {
-    color: #fff;
+    color: var(--white_color);
     background: #1863dc;
     border: 1px solid #1863dc;
 }

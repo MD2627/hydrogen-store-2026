@@ -239,7 +239,7 @@ Necklaces:
 
             <div className="form-submit-container txt-center">
                 {status === 'success' && (
-                    <div className="status-message success ff-c f-14 w-500 green-color" style={{ marginBottom: '10px' }}>
+                    <div className="status-message success ff-c f-14 w-500 accent-color" style={{ marginBottom: '10px' }}>
                         Thank you! Your message has been sent successfully.
                     </div>
                 )}
@@ -249,7 +249,7 @@ Necklaces:
                     </div>
                 )}
 
-                <button type="submit" className="submit-btn common-button f-11 w-400 white-color" disabled={status === 'loading'}>
+                <button type="submit" className="submit-btn btn f-11 w-400 white-color" disabled={status === 'loading'}>
                     {status === 'loading' ? 'SUBMITTING...' : 'SUBMIT'}
                 </button>
                 <p className="recaptcha-text ff-c w-300 f-11 black-color">

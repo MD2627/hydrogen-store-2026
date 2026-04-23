@@ -55,7 +55,7 @@ export function Newsletter() {
             />
             <button
               type="submit"
-              className="newsletter-button f-m-12 f-12 ff-n"
+              className="btn btn f-m-12 f-12 ff-n"
               disabled={isSubmitting || !email}
             >
               {isSubmitting ? (

@@ -18,23 +18,23 @@
     font-size: 16px;
     margin: 50px 0;
     font-family: var(--font_family_a);
-    color: #232323;
+    color: var(--black_color);
     line-height: 1.1;
 }
 
 :root {
-    --bg: var(--body_color, #FAF9F6);
-    --white: var(--white_color, #FFFFFF);
-    --black: var(--primary_color, #053827);
-    --text: var(--black_color, #232323);
+    --bg: var(--body_color, var(--body_color));
+    --white: var(--white_color, var(--white_color));
+    --black: var(--primary_color, var(--deep_sapphire));
+    --text: var(--black_color, var(--black_color));
     --text-mid: #4A4A4A;
     --text-muted: #8C8C8C;
     --border: #DBCDBA;
-    --border-light: var(--gray_color, #f5efea);
-    --tag-bg: var(--gray_color, #f5efea);
-    --notice-bg: var(--white_color, #FFFFFF);
+    --border-light: var(--gray_color, var(--gray_color));
+    --tag-bg: var(--gray_color, var(--gray_color));
+    --notice-bg: var(--white_color, var(--white_color));
     --notice-border: #DBCDBA;
-    --gold-line: var(--primary_color, #053827);
+    --gold-line: var(--primary_color, var(--deep_sapphire));
 }
 
 * {
@@ -58,7 +58,7 @@ body {
 /* ── Top bar ── */
 .hcg-topbar {
     background: var(--black);
-    color: #fff;
+    color: var(--white_color);
     text-align: center;
     font-size: 10px;
     letter-spacing: 0.22em;
@@ -257,7 +257,7 @@ body {
 
 .hcg-section-card:hover {
     border-color: #C0BDB6;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 2px 12px rgba(var(--pure_black_rgb), 0.04);
 }
 
 .hcg-card-header {

@@ -8,6 +8,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    color: var(--site_text_color);
+    font-size: var(--min_font_size);
 }
 
 main.products-ring-emma {
@@ -39,6 +41,7 @@ h2 {
     font-size: inherit;
     font-weight: 700;
     margin: 0;
+    color: var(--site_text_color);
 }
 
 h4 {
@@ -55,7 +58,7 @@ p {
 }
 
 a {
-    color: #000;
+    color: var(--site_text_color);
     text-decoration: none;
 }
 
@@ -66,7 +69,7 @@ a:hover {
 
 hr {
     border-bottom: none;
-    border-top: 1px solid #000;
+    border-top: 1px solid var(--pure_black_color);
     margin: 0;
 }
 
@@ -79,7 +82,7 @@ section {
     padding: 1rem 0;
 
     @media (min-width: 768px) {
-        padding: 2rem 0;
+        padding: 4rem 0;
     }
 }
 
@@ -96,7 +99,7 @@ form {
 
 input {
     border-radius: 4px;
-    border: 1px solid #000;
+    border: 1px solid var(--pure_black_color);
     font-size: 1rem;
     margin-bottom: 0.5rem;
     margin-top: 0.25rem;
@@ -123,7 +126,7 @@ dl {
 }
 
 code {
-    background: #ddd;
+    background: var(--gray_medium_color);
     border-radius: 4px;
     font-family: monospace;
     padding: 0.25rem;
@@ -131,7 +134,7 @@ code {
 
 @font-face {
     font-family: 'Cullen Ginto Normal';
-    src: url('https://cdn.shopify.com/s/files/1/0801/7317/0906/files/CullenGintoNormal-Light.woff2?v=1767867609') format('woff2');
+    src: url('https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Montserrat-Light.woff2?v=1776933543') format('woff2');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -139,7 +142,7 @@ code {
 
 @font-face {
     font-family: 'Cullen Ginto Normal';
-    src: url('https://cdn.shopify.com/s/files/1/0801/7317/0906/files/CullenGintoNormal-Regular.woff2?v=1767867609') format('woff2');
+    src: url('https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Montserrat-Regular.woff2?v=1776933183') format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -147,7 +150,7 @@ code {
 
 @font-face {
     font-family: 'Cullen Ginto Nord';
-    src: url('https://cdn.shopify.com/s/files/1/0801/7317/0906/files/CullenGinto-NordRegular.woff2?v=1767867608') format('woff2');
+    src: url('https://cdn.shopify.com/s/files/1/0610/2194/5934/files/TenorSans.woff2?v=1776932694') format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -155,7 +158,7 @@ code {
 
 @font-face {
     font-family: 'ABC Arizona Mix';
-    src: url('https://cdn.shopify.com/s/files/1/0801/7317/0906/files/ABCArizonaMix-Light.woff2?v=1767867608') format('woff2');
+    src: url('https://cdn.shopify.com/s/files/1/0610/2194/5934/files/PlayfairDisplay-Regular.woff2?v=1776932570') format('woff2');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -163,25 +166,97 @@ code {
 
 :root {
     --white_color: #fff;
-    --black_color: #232323;
-    --body_color: #FAF9F6;
-    --primary_color: #053827;
+    --white_rgb: 255, 255, 255;
+    --black_color: #2C2F3A;
+    --black_rgb: 44, 47, 58;
+    --pure_black_color: #1A1C23;
+    --pure_black_rgb: 26, 28, 35;
+    --body_color: #F5F5F7;
+    --primary_color: #F5F5F7;
+    --primary_rgb: 245, 245, 247;
     --light_white_color: #FFFFFFBF;
-    /* --dark_green_color: #253e2b; */
-    --dark_green_color: var(--primary_color);
-    --green_color: var(--primary_color);
-    /* --green_color: #236339; */
-    --light_green_color: #00bb33;
+    --dark_accent_color: #2C2F3A;
+    --accent_color: #7A7F8A;
+    --cyan_color: #8C7B65;
     --bg_blue_color: #111827;
-    /* --button_color_1: #236339; */
-    --button_color_1: var(--primary_color);
-    --button_color_2: #d3e6d9;
-    /* --header-link-color: #236339; */
+    --button_color_1: #7A7F8A;
+    --button_color_2: #A7B8A2;
     --header-link-color: var(--primary_color);
-    --gray_color: #f5efea;
+    --gray_color: #EDE7DE;
+    --gray_rgb: 245, 239, 234;
+
+    /* New Gray Scale & Borders */
+    --near_black: #1a1a1a;
+    --charcoal_color: #333;
+    --deep_gray_color: #4d4d4d;
+    --medium_dark_gray: #555;
+    --dark_gray_color: #666;
+    --medium_gray_color: #888;
+    --silver_gray_color: #999;
+    --gray_700: #878787;
+    --gray_400: #ccc;
+    --gray_300: #cdcdcd;
+    --gray_200: #e0e0e0;
+    --gray_medium_color: #ddd;
+    --light_gray_color: #eee;
+    --off_white_color: #f5f5f5;
+    --white_smoke: #f9f9f9;
+    --border_color: #D1C3B0;
+    --divider_color: #eee;
+
+    /* Functional Colors */
+    --error_red: #d32f2f;
+    --accent_blue: #0ea5e9;
+    --soft_blue_bg: #E8F6FA;
+    --success_color: #00D1FF;
+    --warning_yellow: #fbbf24;
+    --transparent: transparent;
+
+    /* Theme-specific Colors */
+    --deep_navy: #003B4D;
+    --deep_sapphire: #002B36;
+    --beige_light: #fefaf5;
+    --tab_active_bg: #B8E2EF;
+    --tab_hover_bg: #D1EDF6;
+
+    /* Button Tokens — edit these to re-style ALL buttons at once */
+    --btn_padding: 11px 20px;
+    --btn_radius: 0px;
+    --btn_font_size: 13px;
+    --btn_font_weight: 500;
+    --btn_letter_spacing: 0.12em;
+    --btn_transition: all 0.4s cubic-bezier(0.2, 0, 0.2, 1);
+    --btn_font: var(--font_family_n);
+    --btn_border_width: 1px;
+
+    /* Button Color Tokens */
+    --btn_primary_bg: #e6d5b8;
+    --btn_primary_color: #2c2f3a;
+    --btn_primary_hover_bg: #dcc49f;
+    --btn_primary_hover_color: #2c2f3a;
+
+    --btn_secondary_bg: #A7B8A2;
+    --btn_secondary_color: #ffffff;
+    --btn_secondary_hover_bg: #7A7F8A;
+    --btn_secondary_hover_color: #ffffff;
+
+    --btn_outline_border: #7A7F8A;
+    --btn_outline_color: #7A7F8A;
+    --btn_outline_hover_bg: #7A7F8A;
+    --btn_outline_hover_color: #ffffff;
+
+    --btn_promo_from: #7A7F8A;
+    --btn_promo_to: #2C2F3A;
+
+    --accent_color_gold: #7A7F8A;
+    --accent_color_light_gold: #A7B8A2;
+    --bg_light_secondary: #FFFFFF;
+
     --font_family_c: 'Cullen Ginto Normal';
     --font_family_n: 'Cullen Ginto Nord';
     --font_family_a: 'ABC Arizona Mix';
+    --site_master_color: var(--black_color);
+    --site_text_color: var(--site_master_color);
 }
 
 .ff-c {
@@ -194,6 +269,51 @@ code {
 
 .ff-a {
     font-family: var(--font_family_a);
+}
+
+/* Section Typography */
+.section-title {
+    font-family: var(--font_family_a);
+    font-size: 48px;
+    font-weight: 300;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin: 0 0 24px;
+    color: var(--site_text_color);
+}
+
+.sbss-v2 .section-title,
+.ins-v2 .section-title {
+    margin-bottom: 0;
+}
+
+.section-subtitle {
+    font-family: var(--font_family_n);
+    font-size: 13px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    display: block;
+    color: var(--site_text_color);
+}
+
+@media screen and (max-width: 1024px) {
+    .section-title {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .section-title {
+        font-size: 32px;
+        margin-bottom: 16px;
+    }
+
+    .section-subtitle {
+        font-size: 11px;
+        letter-spacing: 0.2em;
+        margin-bottom: 10px;
+    }
 }
 
 body:not(body:has(.our-story)):not(body:has(.faqs)) {
@@ -209,7 +329,7 @@ body .page-width.header-layout {
 }
 
 body .page-width {
-    max-width: 1330px;
+    max-width: 1430px;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -219,7 +339,11 @@ body .text-uppercase {
 }
 
 body .white-color {
-    color: var(--white_color);
+    color: var(--white_color) !important;
+}
+
+body .site-text-color {
+    color: var(--site_text_color) !important;
 }
 
 body .txt-center {
@@ -247,46 +371,124 @@ body .light-white-color {
 }
 
 body .bg-light-white-color {
-    background-color: var(--dark_green_color);
+    background-color: var(--dark_accent_color);
 }
 
-body .green-color {
-    color: var(--green_color);
+body .accent-color {
+    color: var(--accent_color);
 }
 
-body .green-color-80 {
-    color: var(--green_color_80);
+body .accent-color-80 {
+    color: var(--accent_color_80);
 }
 
-body .light-green-color {
-    color: var(--light_green_color);
+body .cyan-color {
+    color: var(--cyan_color);
 }
 
-body .bg-light-green-color {
-    background-color: var(--light_green_color);
+body .bg-cyan-color {
+    background-color: var(--cyan_color);
 }
 
 body .bg-blue-color {
     background-color: var(--bg_blue_color);
 }
 
-body .common-button {
+/* ==============================================
+   GLOBAL BUTTON SYSTEM
+   Edit --btn_* tokens in :root to update all buttons at once.
+   ============================================== */
+
+body .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    background-color: var(--green_color);
-    position: relative;
-    padding: 11px 20px;
-    color: var(--white_color);
-    overflow: hidden;
+    padding: var(--btn_padding);
+    font-family: var(--btn_font);
+    font-size: var(--btn_font_size);
+    font-weight: var(--btn_font_weight);
+    letter-spacing: var(--btn_letter_spacing);
+    transition: var(--btn_transition);
+    text-transform: uppercase;
+    border: var(--btn_border_width) solid transparent;
+    border-radius: var(--btn_radius);
     cursor: pointer;
     text-decoration: none;
-    transition: all .5s ease-in-out;
-    border: none;
-    font-family: Cullen Ginto Nord;
-    text-transform: uppercase;
 }
 
-body .common-button:hover {
-    background-color: var(--dark_green_color);
+/* Primary (default) */
+body .btn,
+body .btn--primary {
+    background-color: var(--btn_primary_bg);
+    color: var(--btn_primary_color);
+    border-color: var(--btn_primary_bg);
+}
+
+body .btn:hover,
+body .btn--primary:hover {
+    background-color: var(--btn_primary_hover_bg);
+    color: var(--btn_primary_hover_color);
+    border-color: var(--btn_primary_hover_bg);
+    box-shadow: 0 4px 15px rgba(var(--black_rgb), 0.15);
+}
+
+/* Text / Link style */
+.btn--text {
+    background: none;
+    border: none;
+    padding: 0;
+    color: inherit;
+    width: auto;
+    min-width: unset;
+    text-decoration: underline;
+}
+
+.btn--text:hover {
+    background: none;
+    opacity: 0.8;
+}
+
+/* Secondary */
+body .btn--secondary {
+    background-color: var(--btn_secondary_bg);
+    color: var(--btn_secondary_color);
+    border-color: var(--btn_secondary_bg);
+}
+
+body .btn--secondary:hover {
+    background-color: var(--btn_secondary_hover_bg);
+    color: var(--btn_secondary_hover_color);
+    border-color: var(--btn_secondary_hover_bg);
+}
+
+/* Outline */
+body .btn--outline {
+    background-color: transparent;
+    border: var(--btn_border_width) solid var(--btn_outline_border);
+    color: var(--btn_outline_color);
+}
+
+body .btn--outline:hover {
+    background-color: var(--btn_outline_hover_bg);
+    color: var(--btn_outline_hover_color);
+    border-color: var(--btn_outline_hover_bg);
+}
+
+/* Promo gradient */
+body .btn--promo {
+    background-image: linear-gradient(90deg, var(--btn_promo_from) 0%, var(--btn_promo_to) 100%);
+    background-size: 200% auto;
+    background-position: left center;
+    color: var(--btn_primary_color);
+    border: none;
+    transition: var(--btn_transition);
+}
+
+body .btn--promo:hover {
+    background-position: right center;
+    opacity: 0.95;
+    box-shadow: 0 4px 15px rgba(var(--black_rgb), 0.15);
 }
 
 body .m-0 {
@@ -423,27 +625,27 @@ body .w-700 {
     }
 
     body .f-13 {
-        font-size: 13px;
+        font-size: var(--min_font_size);
     }
 
     body .f-12 {
-        font-size: 12px;
+        font-size: var(--min_font_size);
     }
 
     body .f-11 {
-        font-size: 11px;
+        font-size: var(--min_font_size);
     }
 
     body .f-10 {
-        font-size: 10px;
+        font-size: var(--min_font_size);
     }
 
     body .f-9 {
-        font-size: 9px;
+        font-size: var(--min_font_size);
     }
 
     body .f-8 {
-        font-size: 8px;
+        font-size: var(--min_font_size);
     }
 }
 
@@ -525,23 +727,23 @@ body .w-700 {
     }
 
     body .f-13 {
-        font-size: 13px;
+        font-size: var(--min_font_size);
     }
 
     body .f-12 {
-        font-size: 13px;
+        font-size: var(--min_font_size);
     }
 
     body .f-10 {
-        font-size: 10px;
+        font-size: var(--min_font_size);
     }
 
     body .f-9 {
-        font-size: 9px;
+        font-size: var(--min_font_size);
     }
 
     body .f-8 {
-        font-size: 8px;
+        font-size: var(--min_font_size);
     }
 }
 
@@ -607,27 +809,27 @@ body .w-700 {
     }
 
     body .f-m-13 {
-        font-size: 13px;
+        font-size: var(--min_font_size);
     }
 
     body .f-m-12 {
-        font-size: 12px;
+        font-size: var(--min_font_size);
     }
 
     body .f-m-11 {
-        font-size: 11px;
+        font-size: var(--min_font_size);
     }
 
     body .f-m-10 {
-        font-size: 10px;
+        font-size: var(--min_font_size);
     }
 
     body .f-9 {
-        font-size: 9px;
+        font-size: var(--min_font_size);
     }
 
     body .f-8 {
-        font-size: 8px;
+        font-size: var(--min_font_size);
     }
 }
 
@@ -637,8 +839,10 @@ body .w-700 {
     --cart-aside-summary-height: 250px;
     --grid-item-width: 355px;
     --header-height: 64px;
-    --color-dark: #000;
-    --color-light: #fff;
+    --color-dark: var(--pure_black_color);
+    --color-light: var(--white_color);
+    /* Global font floor — change this single value to update the minimum font size site-wide */
+    --min_font_size: 14px;
 }
 
 img,

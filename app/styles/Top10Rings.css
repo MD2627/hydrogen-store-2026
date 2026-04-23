@@ -9,7 +9,7 @@
     font-family: var(--font_family_a);
     font-size: 16.25px;
     font-weight: 300;
-    color: #232323;
+    color: var(--black_color);
 }
 
 .top-page-rich-text__para {
@@ -56,7 +56,7 @@ h3.top-image-with-text__subtitle {
 }
 
 .top-image-with-text__content * {
-    color: #232323;
+    color: var(--black_color);
 }
 
 h2.top-image-with-text__title {
@@ -68,10 +68,8 @@ p.top-image-with-text__description {
     margin: 0 0 26px 0;
 }
 
-a.banner-btn.top-image-with-text__button {
+a.top-image-with-text__button {
     width: 100%;
-    color: #FFF;
-    text-align: center;
 }
 
 .top-image-with-text__content {

@@ -1,7 +1,7 @@
 h3.main-heading-parent {
     font-size: 32px;
     font-family: var(--font_family_a);
-    color: #232323;
+    color: var(--black_color);
     font-weight: 300;
     margin: 0 0 13px;
 }
@@ -18,7 +18,7 @@ h3.main-heading-parent {
 }
 
 .site-map-group ul li a {
-    color: #232323;
+    color: var(--black_color);
     font-family: var(--font_family_c);
 }
 
@@ -31,7 +31,7 @@ h3.main-heading-parent {
 h2.page-heading-wrapper {
     font-size: 45px;
     line-height: 50.05px;
-    color: #232323;
+    color: var(--black_color);
     font-weight: 300;
     font-family: 'ABC Arizona Mix';
     text-align: center;

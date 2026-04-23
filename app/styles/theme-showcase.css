@@ -14,7 +14,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(var(--pure_black_rgb), 0.05);
     font-family: var(--font_family_c);
     text-align: center;
 }
@@ -37,7 +37,7 @@
 .hero-sub {
     font-size: 18px;
     font-weight: 600;
-    color: #666;
+    color: var(--dark_gray_color);
     margin: 24px 0 0;
     line-height: 1.4;
 }
@@ -54,44 +54,7 @@
 
 /* ── Buttons ─────────────────────────────────────────────────── */
 
-.btn-solid {
-    background: var(--primary_color);
-    color: #fff;
-    padding: 12px 28px;
-    border-radius: 4px;
-    font-weight: 600;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    font-family: var(--font_family_n);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    transition: opacity 0.2s ease;
-}
 
-.btn-solid:hover {
-    opacity: 0.9;
-}
-
-.btn-outline {
-    border: 1px solid var(--primary_color);
-    color: var(--primary_color);
-    padding: 12px 28px;
-    border-radius: 4px;
-    font-weight: 600;
-    text-decoration: none;
-    font-family: var(--font_family_n);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.2s ease;
-}
-
-.btn-outline:hover {
-    background: var(--primary_color);
-    color: #fff;
-}
 
 /* ── Sticky Nav ──────────────────────────────────────────────── */
 
@@ -101,9 +64,9 @@
     left: 0;
     right: 0;
     z-index: 100;
-    background: #fff;
+    background: var(--white_color);
     border-top: 1px solid #e8e8e4;
-    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 -4px 12px rgba(var(--pure_black_rgb), 0.05);
     transition: transform 0.3s ease-in-out;
 }
 
@@ -141,13 +104,13 @@
 
 .tab-btn:hover {
     color: var(--black_color);
-    background: rgba(0, 0, 0, 0.05);
+    background: rgba(var(--pure_black_rgb), 0.05);
 }
 
 .tab-btn.active {
-    color: #fff;
+    color: var(--white_color);
     font-weight: 700;
-    background: #1a4a2e;
+    background: var(--deep_navy);
     letter-spacing: 0.08em;
 }
 
@@ -155,7 +118,7 @@
 
 .showcase-section {
     padding: 100px 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(var(--pure_black_rgb), 0.05);
     font-family: var(--font_family_c);
 }
 
@@ -250,12 +213,12 @@
 ── Modal ─────────────────────────────────────────────────────
 
 /* .modal-container {
-    background: #fff;
+    background: var(--white_color);
     width: 100%;
     max-width: 440px;
     border-radius: 16px;
     position: relative;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 20px 40px rgba(var(--pure_black_rgb), 0.15);
     overflow: hidden;
     font-family: var(--font_family_c);
 }
@@ -274,7 +237,7 @@
 
 .modal-subtitle {
     font-size: 14px;
-    color: #666;
+    color: var(--dark_gray_color);
     margin-bottom: 32px;
 }
 
@@ -314,7 +277,7 @@
 .form-submit {
     padding: 14px;
     background: var(--primary_color);
-    color: #fff;
+    color: var(--white_color);
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -339,7 +302,7 @@
     position: absolute;
     top: 16px;
     right: 16px;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(var(--white_rgb), 0.8);
     border: none;
     width: 32px;
     height: 32px;
@@ -376,9 +339,9 @@
     max-width: 100%;
     max-height: stretch;
     border-radius: 4px;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 30px 60px rgba(var(--pure_black_rgb), 0.5);
     object-fit: cover;
-    background: #fff;
+    background: var(--white_color);
     padding: 8px;
 }
 
@@ -386,9 +349,9 @@
     position: absolute;
     top: 10px;
     right: 10px;
-    background: #053827;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: #fff;
+    background: var(--deep_sapphire);
+    border: 1px solid rgba(var(--white_rgb), 0.2);
+    color: var(--white_color);
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -402,8 +365,8 @@
 }
 
 .lightbox-close:hover {
-    background: #fff;
-    color: #000;
+    background: var(--white_color);
+    color: var(--pure_black_color);
     transform: rotate(90deg);
 }
 

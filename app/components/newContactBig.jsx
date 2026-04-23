@@ -330,7 +330,7 @@ export function NewContactBig() {
 
                         <button
                             type="submit"
-                            className="submit-button contact-submit common-button"
+                            className="submit-button contact-submit btn"
                             disabled={status === 'loading'}
                         >
                             {status === 'loading' ? 'SUBMITTING...' : 'SUBMIT'}

@@ -78,10 +78,10 @@ function HeaderMenuMobileToggle() {
   const { open } = useAside();
   return (
     <button
-      className="header-menu-mobile-toggle white-color reset"
+      className="header-menu-mobile-toggle site-text-color reset"
       onClick={() => open('mobile')}
     >
-      <svg className='white-color' viewBox="0 0 16.933 16.933" xmlns="http://www.w3.org/2000/svg"><path d="M1.058 3.175h14.816v1.058H1.058zM1.058 7.937h12.7v1.058h-12.7zM1.058 12.7h14.816v1.058H1.058z"></path></svg>
+      <svg className='site-text-color' viewBox="0 0 16.933 16.933" xmlns="http://www.w3.org/2000/svg"><path d="M1.058 3.175h14.816v1.058H1.058zM1.058 7.937h12.7v1.058h-12.7zM1.058 12.7h14.816v1.058H1.058z"></path></svg>
     </button>
   );
 }
@@ -150,7 +150,7 @@ export function Header({ header, isLoggedIn, cart, publicStoreDomain }) {
 
         <NavLink className="header-logo" prefetch="intent" to="/" end>
           <strong>
-            <img src="https://cdn.shopify.com/s/files/1/0801/7317/0906/files/sitara_Logo.png?v=1768293519" alt="Logo" />
+            <img src="https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Add_a_heading-removebg-preview.png?v=1776678536" alt="Logo" />
           </strong>
         </NavLink>
         <div className="header-right">
@@ -240,11 +240,11 @@ export function HeaderMenu({
             />
 
             <div className="mobile-education-overlay">
-              <h3 className="f-18 f-m-18 ff-a w-300 white-color">
+              <h3 className="f-18 f-m-18 ff-a w-300 site-text-color">
                 {EDUCATION_BANNER_DATA.title}
               </h3>
 
-              <p className="f-8 f-m-8 ff-a w-300 white-color">
+              <p className="f-8 f-m-8 ff-a w-300 site-text-color">
                 {EDUCATION_BANNER_DATA.subtitle}
               </p>
             </div>
@@ -295,14 +295,14 @@ export function HeaderMenu({
             <div className='featured-image'>
               <img src={cardImg} alt={item.title} />
             </div>
-            <span className='f-13 f-m-13 ff-c w-300 white-color'>{item.title}</span>
+            <span className='f-13 f-m-13 ff-c w-300 site-text-color'>{item.title}</span>
           </NavLink>
         )
       }
 
       return (
         <NavLink
-          className={`mobile-menu-item f-13 f-m-13 ff-n w-300 white-color ${item.title.toLowerCase().replace(/\s+/g, '-')}`}
+          className={`mobile-menu-item f-13 f-m-13 ff-n w-300 site-text-color ${item.title.toLowerCase().replace(/\s+/g, '-')}`}
           end
           key={item.id}
           onClick={close}
@@ -320,7 +320,7 @@ export function HeaderMenu({
               }
             ></span>
           )}
-          <span className='f-13 f-m-13 ff-c w-300 white-color'>{item.title}</span>
+          <span className='f-13 f-m-13 ff-c w-300 site-text-color'>{item.title}</span>
         </NavLink>
       );
     }
@@ -359,14 +359,14 @@ export function HeaderMenu({
         {item.url ? (
           <NavLink
             to={url}
-            className="mobile-menu-item f-13 f-m-13 ff-n w-500 white-color"
+            className="mobile-menu-item f-13 f-m-13 ff-n w-500 site-text-color"
             style={{ paddingLeft: '0', textTransform: 'uppercase' }}
             onClick={close}
           >
             {item.title}
           </NavLink>
         ) : (
-          <span className="mobile-menu-item f-13 f-m-13 ff-n w-500 white-color" style={{ paddingLeft: '0', textTransform: 'uppercase' }}>
+          <span className="mobile-menu-item f-13 f-m-13 ff-n w-500 site-text-color" style={{ paddingLeft: '0', textTransform: 'uppercase' }}>
             {item.title}
           </span>
         )}
@@ -399,11 +399,11 @@ export function HeaderMenu({
           </div>
           {(menu || FALLBACK_HEADER_MENU).items.map((item, index) => renderMobileUserMenu(item))}
 
-          <a href="/pages/visit" className="mobile-menu-item f-14 f-m-14 ff-n w-500 white-color">
+          <a href="/pages/visit" className="mobile-menu-item f-14 f-m-14 ff-n w-500 site-text-color">
             BOOK APPOINTMENT
           </a>
 
-          <div className="mobile-menu-item f-14 f-m-14 ff-n w-500 white-color">
+          <div className="mobile-menu-item f-14 f-m-14 ff-n w-500 site-text-color">
             US (USD $) ⌄
           </div>
         </div>
@@ -468,7 +468,7 @@ export function HeaderMenu({
                   // Don't mark as active if there are query parameters in the URL
                   const hasQueryParams = location.search.length > 0;
                   const shouldBeActive = isActive && !hasQueryParams;
-                  return `ff-n header-menu-item text-uppercase white-color w-300 f-m-12 f-12 l-h-1 ${shouldBeActive ? 'active' : ''}`;
+                  return `ff-n header-menu-item text-uppercase site-text-color w-300 f-m-12 f-12 l-h-1 ${shouldBeActive ? 'active' : ''}`;
                 }}
                 end
                 onClick={close}
@@ -495,7 +495,7 @@ export function HeaderMenu({
                             <div className="mega-menu-column" key={column.id}>
                               {column?.title && column?.url && (
                                 <NavLink
-                                  className="ff-c mega-menu-column-title text-uppercase ff-n white-color w-400 f-m-13 f-13 l-h-1"
+                                  className="ff-c mega-menu-column-title text-uppercase ff-n site-text-color w-400 f-m-13 f-13 l-h-1"
                                   end
                                   onClick={close}
                                   prefetch="intent"
@@ -638,7 +638,7 @@ export function HeaderMenu({
 
         return (
           <NavLink
-            className="ff-n header-menu-item text-uppercase w-300 white-color f-m-12 f-12 l-h-1"
+            className="ff-n header-menu-item text-uppercase w-300 site-text-color f-m-12 f-12 l-h-1"
             end
             key={item.id}
             onClick={close}
@@ -665,7 +665,7 @@ function HeaderCtas({ isLoggedIn, cart }) {
             <NavLink
               prefetch="intent"
               to={loggedIn ? '/account' : '/account/login'}
-              className="desktop-only-icon text-uppercase white-color w-300 ff-n f-m-12 f-12 l-h-1"
+              className="desktop-only-icon text-uppercase site-text-color w-300 ff-n f-m-12 f-12 l-h-1"
             >
               {loggedIn ? 'Account' : 'Sign in'}
             </NavLink>

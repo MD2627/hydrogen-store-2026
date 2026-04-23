@@ -1,9 +1,9 @@
 .cullen-curated-page .faq-geral-wrpper {
-    background: #fefaf5;
+    background: var(--beige_light);
 }
 
 .cullen-curated .faq-body {
-    background: #fefaf5;
+    background: var(--beige_light);
 }
 
 .story-craft-banner.cullen-curated-banner {
@@ -12,7 +12,7 @@
 
 .cullen-curated-banner .story-craft-content h2 {
     font-size: 45px;
-    color: #232323;
+    color: var(--black_color);
     text-shadow: none;
     margin-bottom: 20px;
 }
@@ -31,7 +31,7 @@
 .cullen-curated-banner .story-craft-content p {
     font-size: 15px;
     font-family: var(--font_family_c);
-    color: #232323;
+    color: var(--black_color);
     font-weight: 300;
 }
 
@@ -58,7 +58,7 @@
 /* cullen-curated rich text */
 .cullen-curated-rich-text {
     padding: 60px 20px;
-    background: rgba(0, 0, 0, .045);
+    background: rgba(var(--pure_black_rgb), .045);
     text-align: center;
 }
 
@@ -70,7 +70,7 @@
 .cullen-curated-title-rich-text {
     font-size: 32px;
     line-height: 37.5px;
-    color: #232323;
+    color: var(--black_color);
     font-family: var(--font_family_a);
     font-weight: 300;
     margin: 5px 0 40px;
@@ -79,7 +79,7 @@
 .cullen-curated-content-rich-text {
     font-size: 16.5px;
     line-height: 17.875px;
-    color: #232323;
+    color: var(--black_color);
     font-family: var(--font_family_a);
 }
 
@@ -116,7 +116,7 @@
     text-align: left;
     border-radius: 10px;
     padding: 30px;
-    background: rgba(0, 0, 0, .045);
+    background: rgba(var(--pure_black_rgb), .045);
     flex: 1;
 }
 
@@ -138,7 +138,7 @@
 h2.curation-process-title {
     font-size: 39px;
     line-height: 42px;
-    color: #232323;
+    color: var(--black_color);
     text-align: center;
     font-family: var(--font_family_a);
     font-weight: 300;
@@ -147,14 +147,14 @@ h2.curation-process-title {
 
 h3.curation-process-card-title {
     margin: 20px 0 7px;
-    color: #232323;
+    color: var(--black_color);
     font-family: var(--font_family_n);
     letter-spacing: 1.04px;
     line-height: 15.6px;
 }
 
 p.curation-process-card-text {
-    color: #232323;
+    color: var(--black_color);
     font-family: var(--font_family_c);
 }
 
@@ -204,7 +204,7 @@ p.curation-process-card-text {
 }
 
 p.our-gemstones-text {
-    color: #232323;
+    color: var(--black_color);
     line-height: 15.6px;
 }
 
@@ -275,7 +275,7 @@ img.our-gemstones-image.mobile-image {
 
 .cullen-curated-page .free-resizing-content-inner .section h3 {
     font-size: 13px;
-    color: #232323;
+    color: var(--black_color);
     font-family: var(--font_family_n);
     margin-top: 0;
 }
@@ -331,7 +331,7 @@ img.our-gemstones-image.mobile-image {
 }
 
 .moissanite-section {
-    background: rgba(0, 0, 0, .045);
+    background: rgba(var(--pure_black_rgb), .045);
     padding: 100px 20px 0;
 }
 
@@ -357,7 +357,7 @@ img.our-gemstones-image.mobile-image {
     font-size: 13px;
     font-family: 'Cullen Ginto Normal';
     font-weight: 300;
-    color: #232323;
+    color: var(--black_color);
 }
 
 .moissanite-properties-table table {
@@ -468,7 +468,7 @@ img.our-gemstones-image.mobile-image {
 }
 
 .inner-green-radiant {
-    background-image: radial-gradient(circle at top center, #00BB33, var(--primary_color));
+    background-image: radial-gradient(circle at top center, var(--cyan_color), var(--primary_color));
     padding: 15px;
     height: 100%;
     width: 100%;
@@ -509,12 +509,12 @@ img.our-gemstones-image.mobile-image {
     inset: 0;
     backface-visibility: hidden;
     border-radius: 6px;
-    background: #fff;
+    background: var(--white_color);
     padding: 20px;
 }
 
 .certification-face.back {
-    background-image: radial-gradient(circle at top center, #00BB33, var(--primary_color));
+    background-image: radial-gradient(circle at top center, var(--cyan_color), var(--primary_color));
     transform: rotateY(180deg);
     display: flex;
     align-items: center;
@@ -540,7 +540,7 @@ img.our-gemstones-image.mobile-image {
 .certification-back-logo {
     height: 50px;
     width: 50px;
-    color: #fff;
+    color: var(--white_color);
     font-weight: 600;
 }
 
@@ -580,7 +580,7 @@ h4.certification-stone-title {
     margin-top: -20px;
     font-family: var(--font_family_c);
     font-weight: 300;
-    color: #232323;
+    color: var(--black_color);
 }
 
 p.disclaimer-text {
@@ -648,7 +648,7 @@ h2.certification-title {
     padding: 20px;
     font-size: 13px;
     font-weight: 300;
-    color: #fff;
+    color: var(--white_color);
     margin: 25px auto 0;
     font-family: var(--font_family_c);
 }

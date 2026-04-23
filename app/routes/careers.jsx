@@ -258,7 +258,7 @@ export default function Careers() {
               <p className="career-mission-tagline f-15 f-m-18 ff-c w-300 black-color">
                 {data.missionData.tagline}
               </p>
-              <a href="#jobs" className="career-mission-btn desktop f-11 f-m-11 ff-n">
+              <a href="#jobs" className="btn desktop f-11 f-m-11 ff-n">
                 OPEN POSITIONS
               </a>
             </div>
@@ -271,7 +271,7 @@ export default function Careers() {
                 {data.missionData.description2}
               </p>
 
-              <a href="#jobs" className="career-mission-btn mobile f-11 f-m-11 ff-n">
+              <a href="#jobs" className="btn mobile f-11 f-m-11 ff-n">
                 OPEN POSITIONS
               </a>
             </div>
@@ -371,7 +371,7 @@ export default function Careers() {
                 {values.map((value, index) => (
                   <SwiperSlide key={value.title} className="careers-value-slide">
                     <div className="careers-values-card">
-                      <span className="careers-values-card-text green-color f-80 f-m-24 l-h-1-2 ff-a w-300"><em>{value.title}</em></span>
+                      <span className="careers-values-card-text accent-color f-80 f-m-24 l-h-1-2 ff-a w-300"><em>{value.title}</em></span>
                     </div>
                     <div className="careers-values-description black-color f-13 l-h-1-2 ff-c w-300">
                       {value.description.map((desc, i) => (
@@ -582,7 +582,7 @@ export default function Careers() {
                       <p className="job-department black-color f-10 l-h-1-2 ff-n w-400">{job.department}</p>
                       <p className="job-location black-color f-13 l-h-1-2 ff-c w-300">{job.location}</p>
                     </div>
-                    <Link to={job.link} className="job-link green-color f-13 l-h-1-2 ff-c w-300">
+                    <Link to={job.link} className="job-link accent-color f-13 l-h-1-2 ff-c w-300">
                       Read More
                       <svg
                         viewBox="0 0 16.933 16.933"

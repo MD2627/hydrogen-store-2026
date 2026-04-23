@@ -7,7 +7,7 @@
 .warranty-content-inner h2 {
     font-size: 32px;
     line-height: 35px;
-    color: #232323;
+    color: var(--black_color);
     margin: 33px 0 13px;
     font-family: var(--font_family_a);
     font-weight: 300;
@@ -16,7 +16,7 @@
 .warranty-content-inner p {
     font-size: 13px;
     margin: 0 0 13px;
-    color: #232323;
+    color: var(--black_color);
     font-family: var(--font_family_c);
     line-height: 15.6px;
     font-weight: 300;
@@ -57,7 +57,7 @@ p.p-is-bold {
     font-size: 13px;
     font-family: 'Cullen Ginto Normal';
     font-weight: 300;
-    color: #232323;
+    color: var(--black_color);
     line-height: 15.5px;
 }
 
@@ -65,7 +65,7 @@ p.p-is-bold {
     margin: 25px auto 0;
     width: 110px;
     height: 2px;
-    background: #000;
+    background: var(--pure_black_color);
     align-self: center;
 }
 
@@ -82,7 +82,7 @@ p.p-is-bold {
     font-weight: 300;
     font-family: var(--font_family_n);
     line-height: 30px;
-    color: #232323;
+    color: var(--black_color);
     text-align: center;
 }
 
@@ -105,7 +105,7 @@ h2.main-warranty-title {
 
 .crafting-timeframes .main-warranty-title .description {
     font-size: 13px;
-    color: #232323;
+    color: var(--black_color);
     text-align: center;
     font-family: 'Cullen Ginto Normal';
     margin: 10px 0 0 0;
@@ -160,7 +160,7 @@ h2.main-warranty-title {
         font-weight: 300;
         font-family: var(--font_family_n);
         line-height: 37.2px;
-        color: #232323;
+        color: var(--black_color);
         text-align: center;
         padding: 0 20px;
     }

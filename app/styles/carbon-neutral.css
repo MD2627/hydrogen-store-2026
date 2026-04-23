@@ -102,7 +102,7 @@ body:has(main.carbon-neutral) {
     font-family: var(--font_family_a);
     font-size: 32.5px;
     margin: 5px 0 13px;
-    color: #232323;
+    color: var(--black_color);
     max-width: 400px;
 }
 
@@ -110,24 +110,11 @@ body:has(main.carbon-neutral) {
     font-family: var(--font_family_c);
     font-size: 13px;
     margin: 0 0 19.5px;
-    color: #232323;
+    color: var(--black_color);
 }
 
 .discovery-banner-btn {
     display: inline-block;
-    background-color: var(--primary_color);
-    color: #FFFFFF;
-    padding: 11px 20px;
-    text-decoration: none;
-    font-size: 11.2px;
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    transition: background-color 0.3s ease;
-}
-
-.discovery-banner-btn:hover {
-    background-color: #1a4a2a;
 }
 
 @media (max-width: 767px) {
@@ -233,7 +220,7 @@ body:has(main.carbon-neutral) {
     font-weight: 300;
     margin: 0 0 13px 0;
     line-height: 35px;
-    color: #FFF;
+    color: var(--white_color);
     font-family: var(--font_family_a);
 }
 
@@ -272,14 +259,14 @@ body:has(main.carbon-neutral) {
 }
 
 .vertical-story .slide[data-index="3"] .slide-content h2 {
-    color: #232323;
+    color: var(--black_color);
     margin: 0;
 }
 
 .vertical-story .slide[data-index="3"] .text-content-animation p {
     font-size: 32px;
     line-height: 35.75px;
-    color: #236238;
+    color: #01172C;
     font-family: var(--font_family_a);
 }
 
@@ -349,7 +336,7 @@ body:has(main.carbon-neutral) {
     top: 0;
     bottom: 0;
     width: 2px;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(var(--white_rgb), 0.3);
     border-radius: 2px;
 }
 

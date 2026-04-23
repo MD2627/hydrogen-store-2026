@@ -1,10 +1,10 @@
 .modal-container {
-    background: #fff;
+    background: var(--white_color);
     width: 100%;
     max-width: 440px;
     border-radius: 16px;
     position: relative;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 20px 40px rgba(var(--pure_black_rgb), 0.15);
     overflow: hidden;
     font-family: var(--font_family_c);
     text-align: left;
@@ -24,7 +24,7 @@
 
 .modal-subtitle {
     font-size: 14px;
-    color: #666;
+    color: var(--dark_gray_color);
     margin-bottom: 32px;
 }
 
@@ -64,7 +64,7 @@
 .form-submit {
     padding: 14px;
     background: var(--primary_color);
-    color: #fff;
+    color: var(--white_color);
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -89,7 +89,7 @@
     position: absolute;
     top: 16px;
     right: 16px;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(var(--white_rgb), 0.8);
     border: none;
     width: 32px;
     height: 32px;

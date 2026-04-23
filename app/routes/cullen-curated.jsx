@@ -232,7 +232,7 @@ export default function CullenCurated() {
                     <div className="btn-section-background" style={{ paddingBottom: "40px", paddingTop: "40px" }}>
                         <Link
                             to="/engagement-rings/sapphire"
-                            className="banner-btn"
+                            className="btn"
                             style={{ minHeight: "50px" }}>
                             EXPLORE SAPPHIRE
                         </Link>
@@ -335,7 +335,7 @@ export default function CullenCurated() {
                     <div className="btn-section-background" style={{ paddingBottom: "40px", paddingTop: "40px" }}>
                         <Link
                             to="/engagement-rings/moissanite"
-                            className="banner-btn"
+                            className="btn"
                             style={{ minHeight: "50px" }}>
                             EXPLORE MOISSANITE
                         </Link>
@@ -419,7 +419,7 @@ export default function CullenCurated() {
 
 
 
-                <ProductFAQ data={FAQ_DATA} title="FAQ" subtitle="Your questions, answered." />
+                <ProductFAQ data={FAQ_DATA} title="Curation" subtitle="Your questions about our signature gemstone range, answered." />
 
                 <UvpIconFooter data={CULLEN_CURATED_UVPS} />
             </div>

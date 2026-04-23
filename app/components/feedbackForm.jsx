@@ -143,7 +143,7 @@ export function FeedBackForm() {
 
                 {/* Status Messages */}
                 {status === 'success' && (
-                    <div className="status-message success ff-c f-14 w-500 green-color" suppressHydrationWarning>
+                    <div className="status-message success ff-c f-14 w-500 accent-color" suppressHydrationWarning>
                         Thank you! Your feedback has been submitted.
                     </div>
                 )}
@@ -157,7 +157,7 @@ export function FeedBackForm() {
                 {/* Submit */}
                 <button
                     type="submit"
-                    className="submit-button common-button"
+                    className="submit-button btn"
                     disabled={status === 'loading'}
                 >
                     {status === 'loading' ? 'SUBMITTING...' : 'SUBMIT'}

@@ -129,7 +129,7 @@ export default function AccountProfile() {
           null
         )}
         <div>
-          <button type="submit" disabled={state !== 'idle'} className="account-form-button">
+          <button type="submit" disabled={state !== 'idle'} className="btn">
             {state !== 'idle' ? 'Updating...' : 'Update Profile'}
           </button>
         </div>

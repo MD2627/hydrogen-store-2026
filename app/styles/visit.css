@@ -31,7 +31,7 @@ h2.our-locations-section-title {
 
 .our-locations-section .locations-container {
     display: flex;
-    background: #fff;
+    background: var(--white_color);
     min-height: 70vh;
     max-height: 80vh;
     border-radius: 4px;
@@ -43,7 +43,7 @@ h2.our-locations-section-title {
 /* Sidebar Styling */
 .our-locations-section .locations-sidebar {
     width: 320px;
-    background: #fff;
+    background: var(--white_color);
     overflow-y: auto;
     border-right: 1px solid var(--primary_color);
     display: flex;
@@ -53,12 +53,12 @@ h2.our-locations-section-title {
 .our-locations-section .sidebar-title {
     position: sticky;
     top: 0;
-    background: #FFF;
+    background: var(--white_color);
     z-index: 1;
     padding: 20px 30px;
     margin: 0;
-    border-bottom: 1px solid #eee;
-    color: #232323;
+    border-bottom: 1px solid var(--light_gray_color);
+    color: var(--black_color);
     text-transform: capitalize;
 }
 
@@ -68,19 +68,19 @@ h2.our-locations-section-title {
 
 .our-locations-section .location-card {
     padding: 20px 30px 20px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--light_gray_color);
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .our-locations-section .location-card:hover {
-    background: #e4f1e8;
+    background: var(--soft_blue_bg);
 }
 
 .our-locations-section .location-card.active {
     background: var(--primary_color);
     /* Dark green from screenshot */
-    color: #fff;
+    color: var(--white_color);
 }
 
 .our-locations-section .location-city {
@@ -101,7 +101,7 @@ h2.our-locations-section-title {
 }
 
 .our-locations-section .location-card.active h3.location-city {
-    color: #fff;
+    color: var(--white_color);
 }
 
 .our-locations-section .location-card.active .location-details {
@@ -110,7 +110,7 @@ h2.our-locations-section-title {
 
 .our-locations-section .location-card:not(.active) .location-details p,
 .our-locations-section .location-card:not(.active) .location-details a {
-    color: #232323;
+    color: var(--black_color);
 }
 
 .our-locations-section .contact-link {
@@ -125,14 +125,14 @@ h2.our-locations-section-title {
 .our-locations-section .locations-map-area {
     flex: 1;
     position: relative;
-    background: #eee;
+    background: var(--light_gray_color);
 }
 
 .our-locations-section .opening-hours-card {
     position: absolute;
     top: 0;
     right: 0;
-    background: #fff;
+    background: var(--white_color);
     padding: 20px 25px;
     border: 1px solid var(--primary_color);
     z-index: 1;
@@ -147,14 +147,14 @@ h2.our-locations-section-title {
     font-size: 14px;
     margin: 0 0 12px 0;
     letter-spacing: 1px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--light_gray_color);
     padding-bottom: 5px;
 }
 
 .our-locations-section .opening-hours-card p {
     font-size: 11px;
     margin: 4px 0;
-    color: #232323;
+    color: var(--black_color);
     font-weight: 600;
     line-height: 1.4;
 }
@@ -165,16 +165,16 @@ h2.our-locations-section-title {
 }
 
 .locations-sidebar::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: var(--off_white_color);
 }
 
 .locations-sidebar::-webkit-scrollbar-thumb {
-    background: #888;
+    background: var(--medium_gray_color);
     border-radius: 10px;
 }
 
 .locations-sidebar::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: var(--medium_dark_gray);
 }
 
 .our-locations-section .location-details a {
@@ -215,9 +215,9 @@ h2.our-locations-section-title {
 .our-locations-section .location-mobile-expand {
     background: var(--primary_color);
     /* Match active card background */
-    color: #fff;
+    color: var(--white_color);
     padding: 0 25px 25px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(var(--white_rgb), 0.1);
 }
 
 .our-locations-section .mobile-hours {
@@ -229,7 +229,7 @@ h2.our-locations-section-title {
     font-size: 14px;
     margin-bottom: 15px;
     letter-spacing: 1.5px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(var(--white_rgb), 0.2);
     display: inline-block;
     padding-bottom: 5px;
 }
@@ -280,7 +280,7 @@ h2.our-locations-section-title {
     }
 
     .our-locations-section .location-card.active span.mobile-only.icon-marker svg {
-        fill: #fff;
+        fill: var(--white_color);
     }
 
     .our-locations-section .mobile-only.icon-marker {
@@ -329,7 +329,7 @@ h2.our-locations-section-title {
 
     .our-locations-section .location-item-wrapper:after {
         content: "";
-        background: #00BB33;
+        background: var(--cyan_color);
         height: 1px;
         position: absolute;
         top: 100%;
@@ -366,8 +366,8 @@ h2.our-locations-section-title {
 /* Booking Wizard Section */
 .booking-wizard-section {
     padding: 60px 20px 50px;
-    background-color: #fff;
-    border-bottom: 1px solid #eee;
+    background-color: var(--white_color);
+    border-bottom: 1px solid var(--light_gray_color);
 }
 
 .booking-header {
@@ -392,10 +392,10 @@ h2.our-locations-section-title {
     justify-content: space-between;
     max-width: 1300px;
     margin: 0 auto 40px;
-    background: #fff;
+    background: var(--white_color);
     padding: 0;
-    border: 1px solid #eee;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--light_gray_color);
+    box-shadow: 0 4px 12px rgba(var(--pure_black_rgb), 0.05);
 }
 
 .progress-step {
@@ -404,8 +404,8 @@ h2.our-locations-section-title {
     padding: 15px 10px;
     cursor: pointer;
     transition: all 0.3s ease;
-    border-right: 1px solid #eee;
-    color: #888;
+    border-right: 1px solid var(--light_gray_color);
+    color: var(--medium_gray_color);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -417,7 +417,7 @@ h2.our-locations-section-title {
 
 .progress-step.active {
     background: var(--primary_color);
-    color: #fff;
+    color: var(--white_color);
 }
 
 .progress-step.completed {
@@ -432,13 +432,13 @@ h2.our-locations-section-title {
 
 .progress-step .step-subtitle {
     font-size: 11px;
-    color: #888;
+    color: var(--medium_gray_color);
     display: block;
     margin-top: 4px;
 }
 
 .progress-step.active .step-subtitle {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(var(--white_rgb), 0.8);
 }
 
 /* Location Grid */
@@ -452,8 +452,8 @@ h2.our-locations-section-title {
 }
 
 .location-item-card {
-    background: #fff;
-    border: 1px solid #eee;
+    background: var(--white_color);
+    border: 1px solid var(--light_gray_color);
     border-radius: 4px;
     overflow: hidden;
     transition: box-shadow 0.3s ease;
@@ -464,7 +464,7 @@ h2.our-locations-section-title {
 }
 
 .location-item-card:hover {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 5px 15px rgba(var(--pure_black_rgb), 0.08);
 }
 
 .location-item-card .card-image img {
@@ -482,14 +482,14 @@ h2.our-locations-section-title {
 
 .location-item-card h3 {
     margin-bottom: 12px;
-    color: #232323;
+    color: var(--black_color);
     font-size: 24px;
     line-height: 1.1;
 }
 
 .location-item-card p {
     font-size: 11px;
-    color: #232323;
+    color: var(--black_color);
     margin-bottom: 8px;
     line-height: 1.3;
     display: flex;
@@ -505,7 +505,7 @@ h2.our-locations-section-title {
 
 .location-item-card .description-text {
     font-size: 11px;
-    color: #666;
+    color: var(--dark_gray_color);
     margin-bottom: 15px;
     min-height: 100px;
 }
@@ -513,20 +513,13 @@ h2.our-locations-section-title {
 .location-item-card .duration {
     display: block;
     font-size: 10px;
-    color: #888;
+    color: var(--medium_gray_color);
     margin-top: auto;
 }
 
 .location-item-card .select-btn {
     width: 100%;
     margin-top: 15px;
-    padding: 10px;
-    background: var(--primary_color);
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    font-weight: 500;
-    font-size: 13px;
     letter-spacing: 1.5px;
 }
 
@@ -548,15 +541,15 @@ h2.our-locations-section-title {
     justify-content: space-between;
     align-items: center;
     padding: 25px;
-    background: #fff;
-    border: 1px solid #eee;
+    background: var(--white_color);
+    border: 1px solid var(--light_gray_color);
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .service-item-card:hover {
-    background: #f0f7f2;
+    background: var(--soft_blue_bg);
     border-color: var(--primary_color);
 }
 
@@ -567,7 +560,7 @@ h2.our-locations-section-title {
 
 .service-info p {
     font-size: 14px;
-    color: #666;
+    color: var(--dark_gray_color);
     margin-bottom: 8px;
 }
 
@@ -583,7 +576,7 @@ h2.our-locations-section-title {
 }
 
 .appointments-hint {
-    color: #666;
+    color: var(--dark_gray_color);
     font-style: italic;
     margin-bottom: 15px;
 }
@@ -627,18 +620,18 @@ h2.our-locations-section-title {
 }
 
 .calendar-day:not(.disabled):hover {
-    background: #f0f7f2;
+    background: var(--soft_blue_bg);
     color: var(--primary_color);
 }
 
 .calendar-day.selected {
     background: var(--primary_color);
-    color: #fff;
+    color: var(--white_color);
     font-weight: 600;
 }
 
 .calendar-day.disabled {
-    color: #ccc;
+    color: var(--gray_400);
     cursor: not-allowed;
 }
 
@@ -672,7 +665,7 @@ h2.our-locations-section-title {
 
 .time-slot-btn.active {
     background: var(--primary_color);
-    color: #fff;
+    color: var(--white_color);
 }
 
 .timezone-info,
@@ -686,7 +679,7 @@ h2.our-locations-section-title {
     background: none;
     border: none;
     cursor: pointer;
-    color: #232323;
+    color: var(--black_color);
     font-size: 14px;
 }
 
@@ -697,7 +690,7 @@ h2.our-locations-section-title {
 }
 
 .booking-summary {
-    background: #f9f9f9;
+    background: var(--white_smoke);
     padding: 15px;
     border-radius: 4px;
     margin: 20px 0 30px;
@@ -718,13 +711,13 @@ h2.our-locations-section-title {
 
 .booking-form label {
     margin-bottom: 8px;
-    color: #333;
+    color: var(--charcoal_color);
 }
 
 .booking-form input,
 .booking-form textarea {
     padding: 12px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--gray_medium_color);
     border-radius: 4px;
     font-family: inherit;
 }
@@ -733,7 +726,7 @@ h2.our-locations-section-title {
     width: 100%;
     padding: 18px;
     background: var(--primary_color);
-    color: #fff;
+    color: var(--white_color);
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -742,12 +735,7 @@ h2.our-locations-section-title {
 }
 
 .back-btn {
-    background: none;
-    border: none;
-    color: #666;
-    cursor: pointer;
     margin-bottom: 20px;
-    padding: 0;
     font-weight: 600;
 }
 
@@ -768,7 +756,7 @@ h2.our-locations-section-title {
 
     .progress-step {
         border-right: none;
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid var(--light_gray_color);
     }
 
     .booking-form .form-row {
@@ -811,7 +799,7 @@ h2.our-locations-section-title {
 .review-text {
     font-size: 12px;
     line-height: 14.04px;
-    color: #232323;
+    color: var(--black_color);
     margin: 0;
     font-weight: 500;
 }
@@ -834,7 +822,7 @@ h2.our-locations-section-title {
 }
 
 .author-name {
-    color: #232323;
+    color: var(--black_color);
 }
 
 .review-stars-row {
@@ -849,7 +837,7 @@ h2.our-locations-section-title {
     width: 33px;
     display: grid;
     place-content: center;
-    color: #fff;
+    color: var(--white_color);
     border-radius: 100%;
 }
 
@@ -908,7 +896,7 @@ span.star {
     height: 50px !important;
     top: 50%;
     transform: translateY(0);
-    background: #0000001a;
+    background: rgba(var(--pure_black_rgb), 0.1);
     transition: opacity .2s, transform .2s;
     border: none;
     vertical-align: middle;

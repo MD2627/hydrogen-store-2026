@@ -37,7 +37,7 @@ export default function FreeRingSizingKit() {
             </div>
 
 
-            <ProductFAQ data={FAQ_DATA} title="FAQ" subtitle="Your questions, answered." />
+            <ProductFAQ data={FAQ_DATA} title="Sizing Kit" subtitle="Everything you need to know about our sizing service." />
             <UvpIconFooter data={FreeRingSizingKitUvps} />
         </div>
     );

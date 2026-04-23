@@ -322,7 +322,7 @@ export default function OurStory() {
 
           <div className="need-help-actions">
             {NEED_HELP_BANNER_DATA.content.buttons.map((btn, i) => (
-              <Link key={i} to={btn.link} className="banner-btn">
+              <Link key={i} to={btn.link} className="btn">
                 {btn.label}
               </Link>
             ))}

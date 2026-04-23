@@ -39,13 +39,13 @@ export default function CarbonNeutral() {
                 <div className="discovery-banner-content">
                     <h2 className="ff-a w-300">Discover Our Range of Engagement Rings</h2>
                     <p className="ff-c w-300">With Carbon Neutral Gemstones</p>
-                    <Link to="/engagement-rings/lab-grown-diamond" className="discovery-banner-btn ff-n">
+                    <Link to="/engagement-rings/lab-grown-diamond" className="btn discovery-banner-btn ff-n">
                         SHOP NOW
                     </Link>
                 </div>
             </div>
 
-            <ProductFAQ data={FAQ_DATA} title="FAQ" subtitle="Your questions, answered." />
+            <ProductFAQ data={FAQ_DATA} title="Neutrality" subtitle="Detailed answers about our carbon-neutral processes." />
 
             <UvpIconFooter data={OUR_STORY_UVPS} />
         </div >

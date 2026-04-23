@@ -27,7 +27,7 @@
     right: 0;
     top: 0;
     bottom: 0;
-    background: linear-gradient(#0000, #0000005c 33%, #00000073, #0000005c 67%, #0000);
+    background: linear-gradient(var(--transparent), rgba(var(--pure_black_rgb), 0.36) 33%, rgba(var(--pure_black_rgb), 0.45), rgba(var(--pure_black_rgb), 0.36) 67%, var(--transparent));
 }
 
 @media (max-width: 767px) {
@@ -50,7 +50,7 @@
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
-    background-color: #fff;
+    background-color: var(--white_color);
 }
 
 .rich-text-section h2 {
@@ -130,7 +130,7 @@
     max-width: 740px;
     margin: 0 auto;
     text-align: center;
-    background-color: #fff;
+    background-color: var(--white_color);
 }
 
 .circular-economy-section img {
@@ -169,8 +169,8 @@
     text-align: center;
     position: relative;
     padding: 11px 20px;
-    background-color: var(--green_color);
-    color: #FFF;
+    background-color: var(--accent_color);
+    color: var(--white_color);
     cursor: pointer;
     border: none;
     line-height: 1.2;
@@ -240,7 +240,7 @@
     padding: 80px 0;
     position: relative;
     z-index: 1;
-    background-color: #fff;
+    background-color: var(--white_color);
     overflow: hidden;
 }
 
@@ -298,7 +298,7 @@
     object-fit: cover;
     border-radius: 100px;
     transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s ease;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 30px rgba(var(--pure_black_rgb), 0.05);
 }
 
 
@@ -316,13 +316,13 @@
 .process-content h3 {
     margin: 0 0 13px 0;
     font-size: 32px;
-    color: #232323;
+    color: var(--black_color);
 }
 
 .process-description p {
     margin-bottom: 13px;
     line-height: 1.1;
-    color: #232323;
+    color: var(--black_color);
 }
 
 @media (max-width: 1024px) {

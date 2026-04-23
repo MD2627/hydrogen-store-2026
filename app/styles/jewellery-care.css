@@ -69,7 +69,7 @@
 .jewellery-care-content {
     padding: 60px 20px;
     text-align: center;
-    background-color: #0000000b;
+    background-color: rgba(var(--pure_black_rgb), 0.04);
 }
 
 .jewellery-care-content h2 {
@@ -154,7 +154,7 @@
     align-items: center;
     gap: 20px;
     padding: 25px 20px;
-    background-color: #0000000b;
+    background-color: rgba(var(--pure_black_rgb), 0.04);
 }
 
 .expert-tips-card .icon-wrapper {
@@ -170,7 +170,7 @@
 
 .expert-info-icon path,
 .expert-info-icon .cls-2 {
-    fill: var(--green_color);
+    fill: var(--accent_color);
 }
 
 
@@ -237,7 +237,7 @@
 .jewellery-promise-intro p a {
     color: var(--black_color);
     position: relative;
-    border-bottom: 1.5px solid #e0ebe4;
+    border-bottom: 1.5px solid var(--soft_blue_bg);
 }
 
 .ring-care-video-link p a:after,
@@ -248,7 +248,7 @@
     bottom: -1px;
     width: 100%;
     height: 1.5px;
-    background: var(--dark_green_color);
+    background: var(--dark_accent_color);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.3s ease;
@@ -327,7 +327,7 @@
 /* ------------------- WHEN TO REMOVE SECTION ------------------- */
 .when-to-remove-section {
     padding: 80px 20px;
-    background-color: #0000000b;
+    background-color: rgba(var(--pure_black_rgb), 0.04);
 }
 
 .when-to-remove-section .section-header {
@@ -445,7 +445,7 @@
 
 /* -------------------------- shop by style -------------------------------- */
 .shop-by-style.shop--jewellery-care {
-    background-color: #0000000b;
+    background-color: rgba(var(--pure_black_rgb), 0.04);
     padding-inline: 0;
 }
 
@@ -469,9 +469,9 @@
     border-radius: 50%;
     width: 30px;
     height: 30px;
-    color: var(--green_color);
+    color: var(--accent_color);
     backdrop-filter: unset;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 6px rgba(var(--pure_black_rgb), 0.15);
     z-index: 11;
 }
 

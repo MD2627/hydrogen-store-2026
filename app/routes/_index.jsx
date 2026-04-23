@@ -649,6 +649,32 @@ export default function Homepage() {
         items={shopLabSlider.items}
       />
 
+      {
+        (() => {
+          const ringData = parseRingCollection(data.ringCollectionsMeta, {
+            title: "Ring Collections",
+            defaultImage: ringCollectionsData.defaultImage,
+            categories: ringCollectionsData.categories
+          });
+
+          return (
+            <RingCollections
+              title={ringData.title}
+              defaultImage={ringData.defaultImage}
+              categories={ringData.categories}
+              className='rings'
+            />
+          );
+        })()
+      }
+
+      <ShopByStyle
+        variant="home"
+        title={bestSellingSlider.title}
+        description={bestSellingSlider.subtitle}
+        items={bestSellingSlider.items}
+      />
+
       {(() => {
         const splitBanners = parseSplitBanners(data.splitBannerMeta);
 
@@ -710,32 +736,6 @@ export default function Homepage() {
         })()
       }
 
-      <ShopByStyle
-        variant="home"
-        title={bestSellingSlider.title}
-        description={bestSellingSlider.subtitle}
-        items={bestSellingSlider.items}
-      />
-
-      {
-        (() => {
-          const ringData = parseRingCollection(data.ringCollectionsMeta, {
-            title: "Ring Collections",
-            defaultImage: ringCollectionsData.defaultImage,
-            categories: ringCollectionsData.categories
-          });
-
-          return (
-            <RingCollections
-              title={ringData.title}
-              defaultImage={ringData.defaultImage}
-              categories={ringData.categories}
-              className='rings'
-            />
-          );
-        })()
-      }
-
       <ShopByStyleScroll
         variant="shop-by-category"
         title={shopByCategorySlider?.title}
@@ -772,6 +772,7 @@ export default function Homepage() {
 
       <ShopByStyleScroll
         variant="section-services"
+        archLayout={true}
         title={servicesSlider?.title}
         description={
           <RichText html={servicesSlider?.subtitle} />
@@ -796,16 +797,8 @@ export default function Homepage() {
       />
 
 
-      {/* Review Section */}
-      <div className="reviews-section-meta reviews-section-meta--home">
-        <div className="shop-by-style-header">
-          <h2>What Our Clients Say</h2>
-          <div>
-            <p>Here's what our clients have to say about their Cullen experience.</p>
-          </div>
-        </div>
-        <ReviewMeta reviews={data.reviews} />
-      </div>
+      {/* Review Section (Bento Redesign) */}
+      <ReviewMeta reviews={data.reviews} />
 
       <InstagramSection data={instagramSectionData} />
 

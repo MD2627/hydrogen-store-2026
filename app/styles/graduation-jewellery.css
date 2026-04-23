@@ -265,13 +265,13 @@
 .graduation-contact-section .form-group label {
     margin-bottom: 3px;
     text-transform: uppercase;
-    color: #4d4d4d;
+    color: var(--deep_gray_color);
 }
 
 .graduation-contact-section .form-group input,
 .graduation-contact-section .form-group textarea {
     padding: 10px 15px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid var(--gray_200);
     border-radius: 4px;
     outline: none;
     transition: border-color 0.3s;
@@ -318,7 +318,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 6px 10px 4px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid var(--gray_200);
     border-radius: 4px;
     margin-bottom: 12px;
 }
@@ -326,7 +326,7 @@
 .graduation-contact-section .metal-label {
     font-size: 11px;
     letter-spacing: 1px;
-    color: #4d4d4d;
+    color: var(--deep_gray_color);
 }
 
 .graduation-contact-section .quantity-controls {
@@ -339,7 +339,7 @@
     background: none;
     border: none;
     cursor: pointer;
-    color: #333;
+    color: var(--charcoal_color);
     padding: 0;
 }
 
@@ -361,7 +361,7 @@
 .graduation-contact-section .recaptcha-text a {
     color: var(--black_color);
     position: relative;
-    border-bottom: 1.5px solid #e0ebe4;
+    border-bottom: 1.5px solid var(--soft_blue_bg);
 }
 
 .graduation-contact-section .recaptcha-text a::after {
@@ -371,7 +371,7 @@
     bottom: -1px;
     width: 100%;
     height: 1.5px;
-    background: #253e2b;
+    background: var(--deep_navy);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.3s ease;

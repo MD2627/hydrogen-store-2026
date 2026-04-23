@@ -51,7 +51,7 @@
   .purpose-section {
       padding: 20px;
       text-align: center;
-      background: #0000000b;
+      background: rgba(var(--pure_black_rgb), 0.04);
   }
 
   .cullen-initiatives-page .page-width {
@@ -70,7 +70,7 @@
 
   .purpose-item svg {
       max-width: 150px;
-      color: var(--green_color);
+      color: var(--accent_color);
       display: flex;
       height: 100%;
       width: 100%;
@@ -103,7 +103,7 @@
   }
 
   .purpose-text span {
-      color: var(--green_color);
+      color: var(--accent_color);
   }
 
   /* ------------------------------ people section css ------------------------------*/
@@ -121,7 +121,7 @@
   }
 
   .initiatives-people-title span {
-      color: var(--green_color);
+      color: var(--accent_color);
   }
 
   .initiatives-people-right {
@@ -149,12 +149,12 @@
   }
 
   .initiatives-planet-section .initiatives-people-right {
-      border-color: var(--green_color);
+      border-color: var(--accent_color);
   }
 
   .purpose-item svg path,
   .purpose-item svg ellipse {
-      stroke: var(--green_color) !important;
+      stroke: var(--accent_color) !important;
   }
 
   /* ------------------------------ initiatives-image-section css ------------------------------*/
@@ -166,7 +166,7 @@
   /* ------------------------------ partners-section css ------------------------------*/
   .initiatives-partners-section {
       padding: 20px 0;
-      background: #0000000b;
+      background: rgba(var(--pure_black_rgb), 0.04);
   }
 
   .initiatives-list {
@@ -217,7 +217,7 @@
   }
 
   .initiatives-partners-section.planet-wrapper {
-      background: #fff;
+      background: var(--white_color);
   }
 
   .initiatives-partners-section.planet-wrapper .partners-logos-grid {
@@ -265,10 +265,6 @@
 
   .cta-banner-button {
       display: inline-block;
-      font-size: 12.2px;
-      line-height: 13.44px;
-      font-weight: 300;
-      letter-spacing: 0.8px;
   }
 
   /* ------------------------------- FAQ section ----------------------------------- */
@@ -279,7 +275,7 @@
 
   .initiatives-faq-section .faq-header {
       padding: 20px;
-      background-color: var(--green_color);
+      background-color: var(--accent_color);
   }
 
   .initiatives-faq-section .faq-answer-inner.w-300 {
@@ -325,7 +321,7 @@
   }
 
   .faq-partner-logos a {
-      border: 1px solid var(--green_color);
+      border: 1px solid var(--accent_color);
       border-radius: 3px;
       padding: 10px;
       display: flex;
@@ -428,7 +424,7 @@
       }
 
       .initiatives-planet-section .initiatives-people-title {
-          border-color: var(--green_color);
+          border-color: var(--accent_color);
       }
 
       .initiatives-list li {
@@ -487,8 +483,8 @@
    */
 
   .trees-animation {
-      background-color: var(--green_color);
-      color: #ffffff;
+      background-color: var(--accent_color);
+      color: var(--white_color);
       text-align: center;
       height: 360px;
       display: flex;
