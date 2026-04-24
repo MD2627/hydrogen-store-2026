@@ -47,7 +47,7 @@ export function Footer({ footer: footerPromise, header, publicStoreDomain }) {
                     <div className="footer-logo-wrapper">
                       <Link to="/">
                         <img
-                          src="https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Add_a_heading-removebg-preview.png?v=1776678536"   // 👉 change this
+                          src="https://cdn.shopify.com/s/files/1/0610/2194/5934/files/new_logo.png?v=1777027920"   // 👉 change this
                           alt="logo"
                           className="footer-logo"
                         />

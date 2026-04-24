@@ -20,7 +20,7 @@ export function StoryCraftBanner({
   }, []);
 
   return (
-    <div className={`story-craft-banner ${extraClass}`}>
+    <section className={`story-craft-banner ${extraClass}`}>
       <div className="page-width">
         <div className='scb'>
           {/* VIDEO OR IMAGE */}
@@ -67,6 +67,6 @@ export function StoryCraftBanner({
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

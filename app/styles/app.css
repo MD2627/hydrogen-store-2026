@@ -105,7 +105,7 @@ aside li {
   transition: opacity 400ms ease-in-out;
   transition: opacity 400ms;
   visibility: hidden;
-  z-index: 11;
+  z-index: 1000;
 }
 
 .overlay .close-outside {
@@ -320,7 +320,7 @@ main.contact .contact-radio-group.centre-stone-type {
 * --------------------------------------------------
 */
 .announcement-bar {
-  background-color: var(--body_color);
+  background-color: var(--gray_color);
   overflow: hidden;
   z-index: 1;
 }
@@ -451,10 +451,30 @@ aside main {
 
 a.reset.cart-toggle {
   display: flex;
+  position: relative;
 }
 
 a.reset.cart-toggle svg {
   color: var(--site_text_color);
+}
+
+.cart-count-badge {
+  position: absolute;
+  top: -4px;
+  right: -8px;
+  background-color: #ff5757;
+  color: white;
+  font-size: 9px;
+  font-weight: bold;
+  height: 15px;
+  min-width: 15px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+  line-height: 1;
+  font-family: var(--font_family_n);
 }
 
 .header-menu-desktop {
@@ -499,7 +519,7 @@ button.reset.search-toggle svg {
 }
 
 a.header-logo {
-  padding: 0 70px;
+  padding: 0;
   align-items: center;
   display: flex;
 }
@@ -513,7 +533,7 @@ a.header-logo strong svg {
 }
 
 a.header-logo strong img {
-  max-width: 100px;
+  max-height: 100px;
 }
 
 
@@ -719,7 +739,7 @@ a.mega-menu-link-item.active {
   color: var(--site_text_color);
   padding: 10px 4px;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   transition: all 0.2s ease-in-out;
   font-family: var(--font_family_c);
 }
@@ -848,19 +868,14 @@ a.mega-menu-link-item.active {
     display: none;
   }
 
-  .header-desktop-left {
+  .header-left {
     display: flex;
     justify-content: flex-start;
   }
 
-  .header-logo {
+  .header-desktop-center {
     display: flex;
     justify-content: center;
-  }
-
-
-  .header-desktop-right-menu {
-    display: block;
   }
 
   .desktop-only-icon {
@@ -1280,4 +1295,9 @@ main.blogs-moissanite-guidance-engagement-ring-care-guide article.blog-article:a
   z-index: 1000;
   backdrop-filter: blur(8px);
   animation: fadeIn 0.3s ease;
+}
+
+/* Apply filter to all svg images */
+img[src*=".svg"] {
+  filter: invert(1) sepia(1) saturate(5) hue-rotate(200deg);
 }

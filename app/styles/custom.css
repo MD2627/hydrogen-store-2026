@@ -509,7 +509,7 @@ span.single-star svg {
 .vb-revealed-content {
   display: flex;
   flex-direction: column;
-  padding: 40px 20px;
+  padding: 0;
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
@@ -640,7 +640,6 @@ span.single-star svg {
 
 .shop-by-style--split>.page-width {
   display: flex;
-  align-items: flex-start;
   gap: 80px;
   text-align: left;
 }
@@ -731,6 +730,7 @@ span.single-star svg {
 .shop-by-style .swiper-scrollbar-drag {
   background: var(--accent_color_gold) !important;
   height: 100% !important;
+  cursor: pointer;
 }
 
 
@@ -797,15 +797,13 @@ span.single-star svg {
 
 /* Story Craft Banner Styles */
 .story-craft-banner {
-  /* Same height as other banners */
-  /* Center vertically */
-  /* Center horizontally */
+  padding: 0;
 }
 
 .story-craft-banner .scb {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 75vh;
   overflow: hidden;
 }
 
@@ -1506,6 +1504,7 @@ button.filter-pill-btn:last-child {
 ================================================= */
 .ins-v2 {
   background-color: var(--white_color);
+  padding-bottom: 0;
 }
 
 .ins-v2-grid {
@@ -1963,6 +1962,7 @@ button.filter-pill-btn:last-child {
   width: 100%;
   background-color: var(--white_color);
   overflow: hidden;
+  padding-top: 0;
 }
 
 .rc-v2-desktop {
@@ -2499,7 +2499,7 @@ button.filter-pill-btn:last-child {
 .sbss-v2-header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   margin-bottom: 60px;
   gap: 40px;
 }
@@ -2644,7 +2644,7 @@ button.filter-pill-btn:last-child {
 }
 
 .sbss-v2-card:hover .sbss-v2-overlay {
-  background: linear-gradient(to top, rgba(var(--primary_color_rgb), 0.8) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.1) 100%);
+  /* background: linear-gradient(to top, rgba(var(--primary_color_rgb), 0.8) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.1) 100%); */
 }
 
 .sbss-v2-card-content {
@@ -2764,99 +2764,170 @@ button.filter-pill-btn:last-child {
     pointer-events: none;
     z-index: 5;
   }
-}/* =================================================
-   SERVICES SECTION (Unique Variant of sbss-v2)
-================================================= */
-.sbss-v2--arch {
-  background-color: var(--gray_color);
-  padding: 100px 0;
 }
 
-/* Center and align the header for the services section */
+/* =================================================
+   SERVICES SECTION (Bento Style Layout - Formerly Arch)
+================================================= */
+.sbss-v2--arch {
+  background-color: var(--body_color);
+  /* padding: 120px 0; */
+}
+
+/* Header style untouched globally as requested */
 .sbss-v2--arch .sbss-v2-header {
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 16px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
   margin-bottom: 50px;
 }
 
-.sbss-v2--arch .sbss-v2-desc {
-  max-width: 600px;
+@media (max-width: 767px) {
+  .sbss-v2--arch .sbss-v2-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
-/* Arch-shaped cards */
-.sbss-v2--arch .sbss-v2-card {
-  aspect-ratio: auto;
-  min-height: 440px;
-  background-color: var(--white_color);
-  border-radius: 200px 200px 10px 10px;
-  box-shadow: 0 10px 30px rgba(var(--black_rgb), 0.05);
-  border: 1px solid rgba(var(--black_rgb), 0.05);
+/* Bento Grid System */
+.sbss-v2-bento-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
 }
 
-/* Image takes up everything except bottom 90px */
-.sbss-v2--arch .sbss-v2-media img {
-  height: calc(100% - 90px);
-  border-radius: 200px 200px 0 0;
+@media (min-width: 900px) {
+  .sbss-v2-bento-grid {
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: minmax(320px, 1fr) minmax(320px, 1fr);
+  }
+
+  .sbss-v2-bento-grid .sbss-v2-bento-card:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1 / 3;
+  }
 }
 
-/* Override the gradient overlay to be a solid white block at the bottom */
-.sbss-v2--arch .sbss-v2-overlay {
-  top: auto;
-  bottom: 0;
-  height: 90px;
-  background: var(--white_color);
-  padding: 0 16px;
+/* Card Styling */
+.sbss-v2-bento-card {
+  position: relative;
+  display: block;
+  border-radius: 4px;
+  overflow: hidden;
+  min-height: 400px;
+  background-color: var(--black_color);
+  text-decoration: none;
+  transition: transform 0.4s ease;
+}
+
+@media (min-width: 900px) {
+  .sbss-v2-bento-card:nth-child(1) {
+    min-height: 640px;
+  }
+}
+
+/* Media Background */
+.sbss-v2-bento-media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.sbss-v2-bento-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+.sbss-v2-bento-card:hover .sbss-v2-bento-media img {
+  transform: scale(1.05);
+}
+
+/* Gradient Mask overlay to ensure text readability */
+.sbss-v2-bento-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 0) 25%,
+      rgba(0, 0, 0, 0) 40%,
+      rgba(0, 0, 0, 0.85) 100%);
+}
+
+/* Content Container */
+.sbss-v2-bento-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+  z-index: 2;
+}
+
+/* Top Section (Number/Tag) */
+.sbss-v2-bento-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.bento-index {
+  opacity: 0.9;
+}
+
+/* Bottom Section (Texts/CTA) */
+.sbss-v2-bento-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.bento-title {
+  margin-bottom: 24px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.bento-desc {
+  margin-bottom: 30px;
+  opacity: 0.95;
+}
+
+.bento-cta-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.bento-cta-circle {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.4s ease;
+  color: var(--white_color);
 }
 
-/* Keep white on hover */
-.sbss-v2--arch .sbss-v2-card:hover .sbss-v2-overlay {
-  background: var(--white_color);
-}
-
-.sbss-v2--arch .sbss-v2-card-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-  text-align: center;
-}
-
-.sbss-v2--arch .sbss-v2-card-name {
+.sbss-v2-bento-card:hover .bento-cta-circle {
+  background-color: var(--white_color);
   color: var(--black_color);
-  font-family: var(--font_family_n);
-  font-weight: 500;
-  font-size: 16px;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  transform: none;
-}
-
-.sbss-v2--arch .sbss-v2-card:hover .sbss-v2-card-name {
-  transform: none;
-}
-
-.sbss-v2--arch .sbss-v2-card-cta {
-  color: var(--charcoal_color);
-  font-size: var(--min_font_size);
-  opacity: 0.8;
-  transform: none;
-}
-
-/* Unique hover interaction */
-.sbss-v2--arch .sbss-v2-card:hover .sbss-v2-card-cta {
-  color: var(--black_color);
-  transform: none;
-  text-decoration: underline;
-  text-underline-offset: 4px;
+  border-color: var(--white_color);
 }
 
 @media (max-width: 767px) {
   .sbss-v2--arch {
     padding: 60px 0;
+  }
+
+  .sbss-v2-bento-content {
+    padding: 24px;
   }
 }

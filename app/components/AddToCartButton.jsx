@@ -104,6 +104,7 @@ function AddToCartButtonContent({ fetcher, onClick, className, disabled, childre
         if (redirectToCart) {
           navigate('/cart');
         } else {
+          open('cart');
           window.dispatchEvent(new CustomEvent('cart-item-added', {
             detail: fetcher.data?.cart
           }));

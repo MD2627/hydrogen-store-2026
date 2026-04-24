@@ -70,7 +70,7 @@ export function ShopByStyle({
               centeredSlides: false,
             },
             1024: {
-              slidesPerView: isSplit ? 2.8 : slidesPerViewDesktop,
+              slidesPerView: 3,
               spaceBetween: 30,
               centeredSlides: false,
             },

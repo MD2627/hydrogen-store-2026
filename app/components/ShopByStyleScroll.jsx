@@ -52,7 +52,13 @@ export function ShopByStyleScroll({
                 </div>
 
                 <div className="sbss-v2-slider-container">
-                    {items.length > 3 ? (
+                    {archLayout ? (
+                        <div className="sbss-v2-bento-grid">
+                            {items.slice(0, 3).map((item, index) => (
+                                <ShopByStyleBentoCard key={index} item={item} index={index + 1} />
+                            ))}
+                        </div>
+                    ) : items.length > 3 ? (
                         <Swiper
                             modules={[Scrollbar, FreeMode]}
                             scrollbar={{ draggable: true, hide: false }}
@@ -144,6 +150,64 @@ function ArrowIcon() {
     return (
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+    );
+}
+
+function ShopByStyleBentoCard({ item, index }) {
+    const isLink = !!item.link;
+    const Tag = isLink ? Link : 'div';
+    const tagProps = isLink ? { to: item.link, className: 'sbss-v2-bento-card', "aria-label": item.name } : { className: 'sbss-v2-bento-card is-static' };
+
+    const paddedIndex = `— 0${index}`;
+
+    let desc = '';
+    let ctaLabel = 'EXPLORE';
+
+    if (item.name?.toLowerCase().includes('showroom')) {
+        desc = "Step into intimate spaces curated for considered moments. Discover our collections under the guidance of a personal advisor.";
+        ctaLabel = "FIND A SHOWROOM";
+    } else if (item.name?.toLowerCase().includes('appointment')) {
+        ctaLabel = "BOOK A SESSION";
+    } else if (item.name?.toLowerCase().includes('bespoke') || item.name?.toLowerCase().includes('atelier')) {
+        ctaLabel = "BEGIN A CREATION";
+    }
+
+    return (
+        <Tag {...tagProps}>
+            <div className="sbss-v2-bento-media">
+                {item.image && (
+                    <img src={item.image} alt={item.name || ''} loading="lazy" />
+                )}
+                <div className="sbss-v2-bento-gradient"></div>
+            </div>
+
+            <div className="sbss-v2-bento-content">
+                <div className="sbss-v2-bento-top">
+                    <span className="bento-index f-18 w-600 white-color letter-spacing-1">{paddedIndex}</span>
+                </div>
+
+                <div className="sbss-v2-bento-bottom">
+                    <h3 className="bento-title f-36 w-400 white-color ff-c mb-3">{item.name}</h3>
+                    {desc && <p className="bento-desc f-13 w-400 white-color l-h-1-5 ff-c mb-4" style={{ maxWidth: '350px' }}>{desc}</p>}
+
+                    <div className="bento-cta-row">
+                        <span className="bento-cta-text f-10 w-700 white-color letter-spacing-2">{ctaLabel}</span>
+                        <div className="bento-cta-circle">
+                            <CircleArrowIcon />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </Tag>
+    );
+}
+
+function CircleArrowIcon() {
+    return (
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="11.5" stroke="currentColor" strokeOpacity="1" strokeWidth="1" />
+            <path d="M10 14L14 10M14 10H10.5M14 10V13.5" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
     );
 }

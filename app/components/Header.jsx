@@ -88,6 +88,15 @@ function HeaderMenuMobileToggle() {
 
 export function Header({ header, isLoggedIn, cart, publicStoreDomain }) {
   const { shop, menu, leftMenu, rightMenu } = header;
+
+  const combinedMenu = {
+    ...(menu || {}),
+    items: [
+      ...(leftMenu?.items || []),
+      ...(rightMenu?.items || [])
+    ]
+  };
+
   const location = useLocation();
   const isTransparentPage = location.pathname === '/' || location.pathname === '/carbon-neutral';
   const [isScrolled, setIsScrolled] = useState(false);
@@ -139,29 +148,24 @@ export function Header({ header, isLoggedIn, cart, publicStoreDomain }) {
           <HeaderMenuMobileToggle />
         </div>
 
-        <div className="header-desktop-left">
+        <div className="header-left">
+          <NavLink className="header-logo" prefetch="intent" to="/" end>
+            <strong>
+              <img src="https://cdn.shopify.com/s/files/1/0610/2194/5934/files/new_logo.png?v=1777027920" alt="Logo" />
+            </strong>
+          </NavLink>
+        </div>
+
+        <div className="header-desktop-center">
           <HeaderMenu
-            menu={leftMenu}
+            menu={combinedMenu}
             viewport="desktop"
             primaryDomainUrl={header.shop.primaryDomain.url}
             publicStoreDomain={publicStoreDomain}
           />
         </div>
 
-        <NavLink className="header-logo" prefetch="intent" to="/" end>
-          <strong>
-            <img src="https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Add_a_heading-removebg-preview.png?v=1776678536" alt="Logo" />
-          </strong>
-        </NavLink>
         <div className="header-right">
-          <div className="header-desktop-right-menu">
-            <HeaderMenu
-              menu={rightMenu}
-              viewport="desktop"
-              primaryDomainUrl={header.shop.primaryDomain.url}
-              publicStoreDomain={publicStoreDomain}
-            />
-          </div>
           <HeaderCtas isLoggedIn={isLoggedIn} cart={cart} />
         </div>
       </div>
@@ -657,17 +661,25 @@ export function HeaderMenu({
  * @param {Pick<HeaderProps, 'isLoggedIn' | 'cart'>}
  */
 function HeaderCtas({ isLoggedIn, cart }) {
+  const AccountIcon = () => (
+    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ marginTop: '4px' }}>
+      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+      <circle cx="12" cy="7" r="4"></circle>
+    </svg>
+  );
+
   return (
     <nav className="header-ctas" role="navigation">
-      <Suspense fallback={<NavLink prefetch="intent" to="/account/login" className="desktop-only-icon">Sign in</NavLink>}>
+      <Suspense fallback={<NavLink prefetch="intent" to="/account/login" className="desktop-only-icon reset site-text-color" aria-label="Sign in"><AccountIcon /></NavLink>}>
         <Await resolve={isLoggedIn}>
           {(loggedIn) => (
             <NavLink
               prefetch="intent"
               to={loggedIn ? '/account' : '/account/login'}
-              className="desktop-only-icon text-uppercase site-text-color w-300 ff-n f-m-12 f-12 l-h-1"
+              className="desktop-only-icon reset site-text-color"
+              aria-label={loggedIn ? 'Account' : 'Sign in'}
             >
-              {loggedIn ? 'Account' : 'Sign in'}
+              <AccountIcon />
             </NavLink>
           )}
         </Await>
@@ -733,9 +745,11 @@ function CartBadge({ count }) {
   const { publish, shop, cart, prevCart } = useAnalytics();
 
   return (
-    <Link
-      to="/cart"
-      onClick={() => {
+    <a
+      href="/cart"
+      onClick={(e) => {
+        e.preventDefault();
+        open('cart');
         publish('cart_viewed', {
           cart,
           prevCart,
@@ -759,19 +773,13 @@ function CartBadge({ count }) {
             stopColor: 'rgb(0, 0, 0)',
           }}
         />
-
-        {count > 0 && (
-          <circle
-            cx="13.229"
-            cy="13.229"
-            r="2.646"
-            style={{
-              fill: '#ff5757',
-            }}
-          />
-        )}
       </svg>
-    </Link>
+      {count !== null && count > 0 && (
+        <span className="cart-count-badge">
+          {count}
+        </span>
+      )}
+    </a>
   );
 }
 

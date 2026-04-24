@@ -6,7 +6,7 @@ import { Money } from '@shopify/hydrogen';
 
 // Configuration: Set to true to redirect to /cart page after adding to cart.
 // Set to false to open the Cart Drawer (default behavior).
-const ADD_TO_CART_REDIRECTS_TO_CART = true;
+const ADD_TO_CART_REDIRECTS_TO_CART = false;
 
 
 /**

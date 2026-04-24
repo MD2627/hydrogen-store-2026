@@ -14,6 +14,8 @@ export function ProductRingCollections({ title = 'Initiatives', items = [], data
 
     const finalItems = items && items.length > 0 ? items : data;
 
+    const totalHeight = `calc(${finalItems.length} * min(100vh, 875px))`;
+
     useEffect(() => {
         const handleScroll = () => {
             if (!containerRef.current || !swiperRef.current) return;
@@ -21,7 +23,7 @@ export function ProductRingCollections({ title = 'Initiatives', items = [], data
             const rect = containerRef.current.getBoundingClientRect();
             const sectionTop = rect.top;
             const sectionHeight = rect.height;
-            const viewportHeight = window.innerHeight;
+            const viewportHeight = Math.min(window.innerHeight, 875);
 
             // When the section is sticky (top hit 0)
             if (sectionTop <= 0 && -sectionTop <= sectionHeight - viewportHeight) {
@@ -46,7 +48,6 @@ export function ProductRingCollections({ title = 'Initiatives', items = [], data
 
     if (!finalItems || finalItems.length === 0) return null;
 
-    const totalHeight = `${finalItems.length * 100}vh`;
 
     return (
         <section

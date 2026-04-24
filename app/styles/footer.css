@@ -6,7 +6,7 @@
 .footer {
   background: var(--primary_color);
   margin-top: auto;
-  padding: 60px 0 40px;
+  padding: 4rem 0;
   color: var(--site_text_color);
 }
 
@@ -207,33 +207,16 @@
 /* Footer Middle Section - Newsletter & Promo */
 
 .footer-middle-content {
-  display: grid;
-  grid-template-columns: 300px 1fr 300px;
-  gap: 60px;
-  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
-@media (max-width: 1024px) {
-  .footer-middle-content {
-    grid-template-columns: 1fr;
-    gap: 30px;
-    text-align: center;
-  }
+.footer-certification {
+  margin: auto;
+  max-width: 266px;
+  width: 100%;
 }
 
-@media (max-width: 767px) {
-  .footer-middle-content {
-    margin-top: 30px;
-    text-align: left;
-  }
-
-  .footer-certification {
-    margin: auto;
-    max-width: 266px;
-    width: 100%;
-  }
-
-}
 
 /* Certification Badge */
 .footer-certification {
@@ -269,7 +252,6 @@
 /* Footer Bottom Section */
 
 .footer-bottom-content {
-  text-align: center;
   margin-top: 33px;
   display: flex;
   justify-content: space-between;

@@ -138,7 +138,7 @@ function SearchAside() {
   const queriesDatalistId = useId();
   const { close } = useAside();
   return (
-    <Aside type="search" heading="SEARCH">
+    <Aside type="search" heading="SEARCH" data-test>
       <div className="search-overlay-container">
         {/* Search Icon Left */}
         <div className="search-icon-wrapper">
@@ -197,7 +197,7 @@ function SearchAside() {
       </div>
 
       {/* Predictive Results Container - Below the top bar */}
-      <div className="predictive-results-container" style={{ maxHeight: 'calc(100vh - 100px)', overflowY: 'auto' }}>
+      <div className="predictive-results-container" style={{ maxHeight: '50vh', overflowY: 'auto' }}>
         <SearchResultsPredictive>
           {({ items, total, term, state, closeSearch }) => {
             const { articles, collections, pages, products, queries } = items;
