@@ -216,8 +216,10 @@
 .custom-cart-drawer .remove-btn:disabled {
     cursor: wait;
     opacity: 0.7;
-    pointer-events: none; /* Prevents clicks but we handle visual state */
-    color: var(--black_color); /* Ensure text stays visible */
+    pointer-events: none;
+    /* Prevents clicks but we handle visual state */
+    color: var(--black_color);
+    /* Ensure text stays visible */
 }
 
 .custom-cart-drawer .remove-btn:hover {
@@ -259,6 +261,10 @@
 
 .custom-cart-drawer .toggle-note:hover {
     color: var(--accent_color);
+}
+
+.custom-cart-drawer .cart-summary .checkout-btn {
+    display: block;
 }
 
 /* Forms (Discount & Note) */

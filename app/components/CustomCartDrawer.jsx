@@ -238,7 +238,7 @@ export function CustomCartDrawer({ initialCart }) {
             )}
 
             {cart?.checkoutUrl && (
-              <a href={cart.checkoutUrl} className="btn btn">
+              <a href={cart.checkoutUrl} className="btn btn checkout-btn">
                 Proceed to Checkout
               </a>
             )}

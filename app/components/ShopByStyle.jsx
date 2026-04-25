@@ -35,6 +35,7 @@ export function ShopByStyle({
 
   const content = (
     <>
+      {/* <div className="page-width"> */}
       <header className="shop-by-style-header">
         <h2 className="section-title">{title}</h2>
         {description && (
@@ -43,6 +44,7 @@ export function ShopByStyle({
             : description
         )}
       </header>
+      {/* </div> */}
 
       <div className="shop-by-style-slider-container">
         {/* ===== SWIPER ===== */}
@@ -62,7 +64,7 @@ export function ShopByStyle({
             0: {
               slidesPerView: 1.2,
               spaceBetween: 16,
-              centeredSlides: false,
+              centeredSlides: true,
             },
             768: {
               slidesPerView: 2.2,
@@ -165,7 +167,7 @@ export function ShopByStyle({
 
   return (
     <section className={`shop-by-style shop--${variant} ${isSplit ? 'shop-by-style--split' : ''}`}>
-      {isSplit ? <div className="page-width">{content}</div> : content}
+      {isSplit ? <div className="shop-by-style-split-inner">{content}</div> : content}
     </section>
   );
 }

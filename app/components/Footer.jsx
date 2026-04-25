@@ -75,26 +75,26 @@ export function Footer({ footer: footerPromise, header, publicStoreDomain }) {
                               {getSocialIcon('Instagram')}
                             </Link>
                           </li>
-                          <li>
+                          {/* <li>
                             <Link to="https://tiktok.com/yourchannel" target="_blank" rel="noopener noreferrer" aria-label="Tiktok">
                               {getSocialIcon('Tiktok')}
                             </Link>
-                          </li>
+                          </li> */}
                           <li>
                             <Link to="https://facebook.com/yourpage" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                               {getSocialIcon('Facebook')}
                             </Link>
                           </li>
-                          <li>
+                          {/* <li>
                             <Link to="https://youtube.com/yourchannel" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
                               {getSocialIcon('YouTube')}
                             </Link>
-                          </li>
-                          <li>
+                          </li> */}
+                          {/* <li>
                             <Link to="https://pinterest.com/yourhandle" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
                               {getSocialIcon('Pinterest')}
                             </Link>
-                          </li>
+                          </li> */}
                           <li>
                             <Link to="https://linkedin.com/yourchannel" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                               {getSocialIcon('LinkedIn')}
@@ -194,11 +194,11 @@ export function Footer({ footer: footerPromise, header, publicStoreDomain }) {
                       <ul className="footer-contact">
                         <li className="contact-item">
                           <span className="contact-icon"><svg style={{ width: '16px' }} viewBox="0 0 16.933 16.933" xmlns="http://www.w3.org/2000/svg"><path d="M11.66 1.063c3.855-.964 5.096 2.25 4.4 5.038-.643 2.57-5.145 8.426-9.117 9.731-3.333 1.095-6.38-.534-6.04-3.725l3.758-1.661c1.308.163 2.114 1.933 2.114 1.933 2.416-1.43 4.252-3.173 5.118-5.478-.938-.415-1.874-1.028-2.162-1.982Z" style={{ width: '16px', fillOpacity: 1, stroke: 'none', strokeWidth: '0.321282px', strokeLinecap: 'butt', strokeLinejoin: 'miter', strokeOpacity: 1 }}></path></svg></span>
-                          <Link className="ff-c site-text-color f-11 f-m-11" to="tel:+611300977619">+61 1300 977 619</Link>
+                          <Link className="ff-c site-text-color f-11 f-m-11" to="tel:+611300977619">+91 948 483 6844</Link>
                         </li>
                         <li className="contact-item">
                           <span className="contact-icon"><svg style={{ width: '20px' }} viewBox="0 0 16.933 16.933" xmlns="http://www.w3.org/2000/svg"><path style={{ width: '20px' }} d="M4.83 4.366 8.465 8l3.636-3.634Zm8.55.075L8.467 9.544 3.553 4.63v7.938h9.827z"></path></svg></span>
-                          <Link className="ff-c site-text-color f-11 f-m-11" to="mailto:demo@gmail.com">demo@gmail.com</Link>
+                          <Link className="ff-c site-text-color f-11 f-m-11" to="mailto:contact@hopiant.com">contact@hopiant.com</Link>
                         </li>
                         <li className="contact-item">
                           <span className="contact-icon"><svg style={{ width: '20px' }} viewBox="0 0 16.933 16.933" xmlns="http://www.w3.org/2000/svg"><path d="M13.412 4.112v8.69a.102.102 0 0 1-.102.102H3.623a.102.102 0 0 1-.102-.102v-8.69c0-.057.046-.103.102-.103h1.364c.08 0 .145-.065.145-.145v-.83c0-.056.046-.102.103-.102h.69c.056 0 .102.046.102.102v.83c0 .08.065.145.145.145h4.59c.08 0 .144-.065.144-.145v-.83c0-.056.046-.102.103-.102h.69c.056 0 .102.046.102.102v.83c0 .08.065.145.145.145h1.364c.056 0 .102.046.102.103zm-.769 7.933v-5.84a.147.147 0 0 0-.147-.147h-8.06a.147.147 0 0 0-.146.147v5.84c0 .08.066.147.147.147h8.06a.147.147 0 0 0 .146-.147z"></path><path d="m6.62 9.423 1.108 1.108 2.906-2.905"></path></svg></span>
@@ -293,7 +293,7 @@ export function Footer({ footer: footerPromise, header, publicStoreDomain }) {
 
                   </div>
 
-                  <div className="footer-bottom-center copyright f-10 f-m-10 ff-n site-text-color">© 2025 Stara</div>
+                  <div className="footer-bottom-center copyright f-10 f-m-10 ff-n site-text-color">© 2025 Daimond</div>
 
                   <div className="footer-bottom-right footer-payment">
                     <div className="payment-icons">

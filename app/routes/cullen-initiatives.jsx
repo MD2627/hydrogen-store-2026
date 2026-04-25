@@ -453,9 +453,9 @@ const FAQ_DATA = [
     answer: `
       Awesome! Please send an email to 
       <a 
-        href="mailto:demo@gmail.com" 
+        href="mailto:contact@hopiant.com" 
       >
-        demo@gmail.com
+        contact@hopiant.com
       </a>; 
       we’d love to chat.
     `,

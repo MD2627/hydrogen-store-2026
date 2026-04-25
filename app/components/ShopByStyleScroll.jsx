@@ -65,13 +65,18 @@ export function ShopByStyleScroll({
                             freeMode={true}
                             grabCursor={true}
                             watchOverflow={true}
-                            slidesPerView={'auto'}
+                            slidesPerView={1.25}
+                            centeredSlides={false}
                             spaceBetween={16}
                             breakpoints={{
                                 768: {
+                                    slidesPerView: 'auto',
+                                    centeredSlides: false,
                                     spaceBetween: 24,
                                 },
                                 1024: {
+                                    slidesPerView: 'auto',
+                                    centeredSlides: false,
                                     spaceBetween: 32,
                                 }
                             }}
@@ -205,9 +210,16 @@ function ShopByStyleBentoCard({ item, index }) {
 
 function CircleArrowIcon() {
     return (
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="12" r="11.5" stroke="currentColor" strokeOpacity="1" strokeWidth="1" />
-            <path d="M10 14L14 10M14 10H10.5M14 10V13.5" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
+        <svg viewBox="0 0 16.933 16.933" width="14" height="14">
+            <path
+                d="M15.875 8.466H1.058M5.292 4.233 1.058 8.466 5.292 12.7"
+                transform="rotate(180 8.466 8.466)"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.05"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
         </svg>
     );
 }

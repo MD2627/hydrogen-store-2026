@@ -100,7 +100,7 @@ const CONTENT_DATA = {
     ctaLink: "https://cullenjewellery.com/affiliate-application",
     contactTitle: "Have questions about the program?",
     contactText: "Send an email to:",
-    email: "demo@gmail.com"
+    email: "contact@hopiant.com"
 };
 
 const FAQ_DATA = [
@@ -122,7 +122,7 @@ const FAQ_DATA = [
     },
     {
         question: "Who can I contact if I have questions about the affiliate program?",
-        answer: "If you have any questions or need assistance regarding the Cullen Affiliate Program, you can reach out via email at <a href='mailto:demo@gmail.com'>demo@gmail.com</a>"
+        answer: "If you have any questions or need assistance regarding the Cullen Affiliate Program, you can reach out via email at <a href='mailto:contact@hopiant.com'>contact@hopiant.com</a>"
     }
 ];
 

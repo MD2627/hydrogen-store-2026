@@ -79,7 +79,7 @@ pre {
 
 
 section {
-    padding: 1rem 0;
+    padding: 3rem 0;
 
     @media (min-width: 768px) {
         padding: 4rem 0;
@@ -251,12 +251,23 @@ code {
     --accent_color_gold: #7A7F8A;
     --accent_color_light_gold: #A7B8A2;
     --bg_light_secondary: #FFFFFF;
+    --uvp_color: #75706e;
 
     --font_family_c: 'Cullen Ginto Normal';
     --font_family_n: 'Cullen Ginto Nord';
     --font_family_a: 'ABC Arizona Mix';
     --site_master_color: var(--black_color);
     --site_text_color: var(--site_master_color);
+
+    --announcement-height: 48px;
+    --header-height: 110px; /* Base header height */
+}
+
+@media screen and (max-width: 767px) {
+    :root {
+        --announcement-height: 44px;
+        --header-height: 80px;
+    }
 }
 
 .ff-c {

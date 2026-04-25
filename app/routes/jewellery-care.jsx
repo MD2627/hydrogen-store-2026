@@ -299,7 +299,7 @@ const FAQ_DATA = [
     },
     {
         question: "What to do if my jewellery is damaged?",
-        answer: "Bring it to a professional jeweller for repair to avoid further damage. For all Cullen Jewellery products, please kindly return your ring back to our Melbourne workshop. You can contact <a href='mailto:demo@gmail.com'>demo@gmail.com</a> for further information."
+        answer: "Bring it to a professional jeweller for repair to avoid further damage. For all Cullen Jewellery products, please kindly return your ring back to our Melbourne workshop. You can contact <a href='mailto:contact@hopiant.com'>contact@hopiant.com</a> for further information."
     }
 ];
 

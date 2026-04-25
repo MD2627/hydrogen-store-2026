@@ -4,7 +4,7 @@
         "city": "Houston",
         "address": "2800 Kirby Drive, Suite A210B, Houston, TX 77098, US",
         "phone": "+1 (832) 924-0980",
-        "email": "demo@gmail.com",
+        "email": "contact@hopiant.com",
         "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3464.123!2d-95.418!3d29.742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjnCsDQ0JzMxLjIiTiA5NcKwMjUnMDQuOCJX!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus",
         "openingHours": [
             "Tuesday - Friday: 9am - 5pm",
@@ -17,7 +17,7 @@
         "city": "San Francisco",
         "address": "Suite 255/2001 Union Street, San Francisco, CA 94123, US",
         "phone": "+1 (628) 277-8040",
-        "email": "demo@gmail.com",
+        "email": "contact@hopiant.com",
         "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.482!2d-122.434!3d37.797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808580c10c1f1c1f%3A0x1c1c1c1c1c1c1c1c!2zMjAwMSBVbmlvbiBTdCwgU2FuIEZyYW5jaXNjbywgQ0EgOTQxMjMsIFVTQQ!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus",
         "openingHours": [
             "Tuesday - Wednesday: 9am - 5pm",
@@ -32,7 +32,7 @@
         "city": "London",
         "address": "Second Floor/89 Great Eastern Street, Hackney, London EC2A 3HX, GB",
         "phone": "+44 7883 306554",
-        "email": "demo@gmail.com",
+        "email": "contact@hopiant.com",
         "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.432!2d-0.082!3d51.526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761cb7e4e1e4e1%3A0xe1e1e1e1e1e1e1e1!2zODkgR3JlYXQgRWFzdGVybiBTdCwgTG9uZG9uIEVDMkEgM0hYLCBVSw!5e0!3m2!1sen!2suk!4v1700000000000!5m2!1sen!2suk",
         "openingHours": [
             "Tuesday - Friday: 9am - 5pm",
@@ -45,7 +45,7 @@
         "city": "Adelaide",
         "address": "Office 1, Level 2/104 Frome St, Adelaide, SA 5000, AU",
         "phone": "+61 870 087 117",
-        "email": "demo@gmail.com",
+        "email": "contact@hopiant.com",
         "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.2!2d138.606!3d-34.923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ab0ced1e1e1e1e1%3A0xe1e1e1e1e1e1e1e1!2zMTA0IEZyb21lIFN0LCBBZGVsYWlkZSBTQSA1MDAwLCBBVQ!5e0!3m2!1sen!2sau!4v1700000000000!5m2!1sen!2sau",
         "openingHours": [
             "Monday - Friday: 9am - 5pm",
@@ -58,7 +58,7 @@
         "city": "Brisbane",
         "address": "L10, T2/141 Queen St, Brisbane City, QLD 4000, AU",
         "phone": "+61 730 500 682",
-        "email": "demo@gmail.com",
+        "email": "contact@hopiant.com",
         "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3540.1!2d153.023!3d-27.469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b915a010c1c1c1c%3A0x1c1c1c1c1c1c1c1c!2zMTQxIFF1ZWVuIFN0LCBCcmlzYmFuZSBDaXR5IFFMRCA0MDAwLCBBVQ!5e0!3m2!1sen!2sau!4v1700000000000!5m2!1sen!2sau",
         "openingHours": [
             "Monday - Tuesday: 9am - 5pm",
@@ -73,7 +73,7 @@
         "city": "Melbourne",
         "address": "401/232 High St, Kew, VIC 3101, AU",
         "phone": "+61 1300 977 619",
-        "email": "demo@gmail.com",
+        "email": "contact@hopiant.com",
         "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8!2d145.03!3d-37.808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642e1e1e1e1e1%3A0xe1e1e1e1e1e1e1e1!2zMjMyIEhpZ2ggU3QsIEtldyBWSUMgMzEwMSwgQVU!5e0!3m2!1sen!2sau!4v1700000000000!5m2!1sen!2sau",
         "openingHours": [
             "Monday - Tuesday: 9am - 5pm",
@@ -88,7 +88,7 @@
         "city": "Perth",
         "address": "Unit 5/94 Rokeby Rd, Subiaco, WA 6008, AU",
         "phone": "+61 876 658 686",
-        "email": "demo@gmail.com",
+        "email": "contact@hopiant.com",
         "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3385.1!2d115.823!3d-31.948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2a32a5e1e1e1e1e1%3A0xe1e1e1e1e1e1e1e1!2zOTQgUm9rZWJ5IFJkLCBTdWJpYWNvIFdBIDYwMDgsIEtV!5e0!3m2!1sen!2sau!4v1700000000000!5m2!1sen!2sau",
         "openingHours": [
             "Monday - Tuesday: 9am - 5pm",
@@ -103,7 +103,7 @@
         "city": "Sydney",
         "address": "7/114 Castlereagh St, Sydney, NSW 2000, AU",
         "phone": "+61 256 024 202",
-        "email": "demo@gmail.com",
+        "email": "contact@hopiant.com",
         "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.8!2d151.209!3d-33.871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae1e1e1e1e1e1%3A0xe1e1e1e1e1e1e1e1!2zMTE0IENhc3RsZXJlYWdoIFN0LCBTeWRuZXkgTlNXIDIwMDAsIEtV!5e0!3m2!1sen!2sau!4v1700000000000!5m2!1sen!2sau",
         "openingHours": [
             "Monday - Friday: 9am - 5pm",
@@ -116,7 +116,7 @@
         "city": "Auckland",
         "address": "Level 5/9 High St, Auckland CBD, Auckland 1010, NZ",
         "phone": "+64 9873 3896",
-        "email": "demo@gmail.com",
+        "email": "contact@hopiant.com",
         "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3192.3!2d174.767!3d-36.848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d47e1e1e1e1e1%3A0xe1e1e1e1e1e1e1e1!2zOSBIaWdoIFN0LCBBdWNrbGFuZCBDQkQsIEF1Y2tsYW5kIDEwMTAsIE5a!5e0!3m2!1sen!2snz!4v1700000000000!5m2!1sen!2snz",
         "openingHours": [
             "Monday - Wednesday: 9am - 5pm",
@@ -131,7 +131,7 @@
         "city": "Toronto",
         "address": "Suite 408-130 Spadina Ave, Toronto, Ontario M5V 2L4, CA",
         "phone": "+16 4737 21198",
-        "email": "demo@gmail.com",
+        "email": "contact@hopiant.com",
         "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.1!2d-79.397!3d43.646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34d1e1e1e1e1%3A0xe1e1e1e1e1e1e1e1!2zMTMwIFNwYWRpbmEgQXZlLCBUb3JvbnRvLCBPTiBNNVYgMkw0LCBDYW5hZGE!5e0!3m2!1sen!2sca!4v1700000000000!5m2!1sen!2sca",
         "openingHours": [
             "Tuesday - Friday: 9am - 5pm",

@@ -63,7 +63,7 @@ export const shouldRevalidate = ({ formMethod, currentUrl, nextUrl }) => {
   if (currentUrl.toString() === nextUrl.toString()) return true;
   return true;
 };
-const DEFAULT_FAVICON = 'https://cdn.shopify.com/s/files/1/0801/7317/0906/files/stara_fav_icon_93c6a13b-3df9-434e-8c17-e78f46499e22.png?v=1768294077';
+const DEFAULT_FAVICON = 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/new_logo.png?v=1777027920';
 export function links() {
   return [
     {

@@ -343,6 +343,11 @@ export function HeaderMenu({
 
           <summary className="mobile-menu-summary f-14 f-m-14 ff-n w-400">
             {item.title}
+            <span className="mobile-menu-arrow">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </span>
           </summary>
 
           {/* Children rendered inside the details */}
@@ -388,7 +393,7 @@ export function HeaderMenu({
         <div className="mobile-menu-items">
           <div className="mobile-menu-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingBottom: '10px', borderBottom: '1px solid #eee', marginBottom: '20px' }}>
             <NavLink prefetch="intent" to="/" end onClick={close}>
-              <img src="https://cdn.shopify.com/s/files/1/0801/7317/0906/files/stara_fav_icon_93c6a13b-3df9-434e-8c17-e78f46499e22.png?v=1768294077" alt="Logo" style={{ height: '28px', width: 'auto' }} />
+              <img src="https://cdn.shopify.com/s/files/1/0610/2194/5934/files/new_logo.png?v=1777027920" alt="Logo" style={{ height: '45px', width: 'auto' }} />
             </NavLink>
 
             <div style={{ display: 'flex', gap: '15px', alignItems: 'center', color: 'var(--black_color)' }}>
@@ -419,17 +424,17 @@ export function HeaderMenu({
                 {getSocialIcon('Instagram')}
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="https://tiktok.com/yourchannel" target="_blank" rel="noopener noreferrer" aria-label="Tiktok">
                 {getSocialIcon('Tiktok')}
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link to="https://facebook.com/yourpage" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 {getSocialIcon('Facebook')}
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="https://youtube.com/yourchannel" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
                 {getSocialIcon('YouTube')}
               </Link>
@@ -438,7 +443,7 @@ export function HeaderMenu({
               <Link to="https://pinterest.com/yourhandle" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
                 {getSocialIcon('Pinterest')}
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link to="https://linkedin.com/yourchannel" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 {getSocialIcon('LinkedIn')}

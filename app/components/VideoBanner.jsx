@@ -137,9 +137,16 @@ export function VideoBanner({
     };
   }, [scrollProgress, mediaFullyExpanded, touchStartY]);
 
-  const mediaWidth = 300 + scrollProgress * (isMobile ? 650 : 1250);
-  const mediaHeight = 400 + scrollProgress * (isMobile ? 200 : 400);
-  const textTranslateX = scrollProgress * (isMobile ? 180 : 150);
+  // Responsive sizing logic
+  const minWidth = isMobile ? 80 : 35; // vw
+  const maxWidth = isMobile ? 95 : 90; // vw
+  const minHeight = isMobile ? 50 : 60; // vh
+  const maxHeight = isMobile ? 70 : 85; // vh
+
+  const mediaWidthVal = minWidth + scrollProgress * (maxWidth - minWidth);
+  const mediaHeightVal = minHeight + scrollProgress * (maxHeight - minHeight);
+  
+  const textTranslateX = scrollProgress * (isMobile ? 100 : 80); // vw
 
   const firstWord = h ? h.split(' ')[0] : '';
   const restOfTitle = h ? h.split(' ').slice(1).join(' ') : '';
@@ -175,8 +182,8 @@ export function VideoBanner({
               <div
                 className="vb-media-box"
                 style={{
-                  width: `${mediaWidth}px`,
-                  height: `${mediaHeight}px`,
+                  width: `${mediaWidthVal}vw`,
+                  height: `${mediaHeightVal}vh`,
                   transform: 'translate(-50%, -50%)',
                 }}
               >
@@ -236,7 +243,7 @@ export function VideoBanner({
 
             {/* Content Revealed After Expand */}
             <motion.section
-              className="vb-revealed-content"
+              className="vb-revealed-content page-width"
               initial={{ opacity: 0 }}
               animate={{ opacity: showContent ? 1 : 0 }}
               transition={{ duration: 0.7 }}
