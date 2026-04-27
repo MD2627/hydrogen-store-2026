@@ -291,8 +291,8 @@ export default function EngagementRingProduct() {
       </div>
       <ShopByStyle
         variant="section-gallery"
-        title="Gallery"
-        description="A timeless symbol of elegance, this diamond ring captures light beautifully with every movement. Perfect for celebrating life’s most meaningful moments"
+        title="Style Gallery"
+        description="Discover timeless designs crafted to capture elegance and brilliance in every detail"
         items={shopByStyleItems} />
 
       <StickySwiper

@@ -206,9 +206,7 @@ export function Footer({ footer: footerPromise, header, publicStoreDomain }) {
                         </li>
                         <li className="contact-hours ff-c site-text-color f-11 f-m-11">
                           <strong>CONTACT HOURS</strong>
-                          <div>MON-WED:9:30 AM - 11:00 AM</div>
-                          <div>THU-FRI:9:30 AM - 5:30 PM</div>
-                          <div>SAT:10:00 AM - 4:00 PM</div>
+                          <div>MON-FRI:10:00 AM - 7:00 PM</div>
                         </li>
                         <li className="ff-c site-text-color f-11 f-m-11"><NavLink to="/contact">Get in Touch</NavLink></li>
                         <li className="ff-c site-text-color f-11 f-m-11"><NavLink to="/feedback">Feedback</NavLink></li>
@@ -289,7 +287,7 @@ export function Footer({ footer: footerPromise, header, publicStoreDomain }) {
                         </ul>
                       )}
                     </div>
-                    <div className="payment-text f-10 f-m-10 ff-n site-text-color">All payments are 256-bit SSL secure and encrypted</div>
+                    {/* <div className="payment-text f-10 f-m-10 ff-n site-text-color">All payments are 256-bit SSL secure and encrypted</div> */}
 
                   </div>
 

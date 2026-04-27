@@ -800,8 +800,6 @@ export default function Homepage() {
       {/* Review Section (Bento Redesign) */}
       <ReviewMeta reviews={data.reviews} />
 
-      <InstagramSection data={instagramSectionData} />
-
       {/* Dynamic FAQ from Metaobject */}
       {
         (() => {
@@ -904,6 +902,8 @@ export default function Homepage() {
           return <ProductFAQ data={faqDataToRender} title={faqTitle} subtitle={faqSubtitle} />;
         })()
       }
+
+      <InstagramSection data={instagramSectionData} />
       <UvpIconFooter data={PRODUCT_UVPS} />
     </div >
   );

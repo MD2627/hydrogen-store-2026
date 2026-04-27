@@ -1540,7 +1540,7 @@ button.filter-pill-btn:last-child {
 ================================================= */
 .ins-v2 {
   background-color: var(--white_color);
-  padding-bottom: 0;
+  padding-top: 0;
 }
 
 .ins-v2-grid {
@@ -2010,6 +2010,10 @@ button.filter-pill-btn:last-child {
   background-color: var(--white_color);
   overflow: hidden;
   padding: 0;
+}
+
+section.rc-v2.gemstones {
+  display: none;
 }
 
 .rc-v2-desktop {
@@ -2493,11 +2497,14 @@ button.filter-pill-btn:last-child {
   .rev-v2-summary {
     grid-column: span 2;
     grid-row: auto;
-    padding: 60px;
+    padding: 60px 40px;
+    text-align: center;
   }
 
-  .rev-v2-item-3 {
-    grid-column: span 1;
+  .rev-v2-item:nth-child(even),
+  .rev-v2-item:nth-child(odd):not(.rev-v2-summary) {
+    grid-column: auto !important;
+    grid-row: auto !important;
   }
 }
 
@@ -2511,8 +2518,12 @@ button.filter-pill-btn:last-child {
   .rev-v2-summary {
     grid-column: 1;
     grid-row: auto;
-    padding: 36px 24px;
+    padding: 40px 24px;
     border-radius: 12px;
+  }
+
+  .rev-v2-summary-inner {
+    width: 100%;
   }
 
   .rev-v2-item {
@@ -2530,18 +2541,17 @@ button.filter-pill-btn:last-child {
   }
 
   .rev-v2-actions {
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 12px;
   }
 
   .rev-v2-btn-primary {
-    flex: 1;
+    width: 100%;
     text-align: center;
   }
 
-  .rev-v2 {
-    /* padding: 60px 0; */
+  .rev-v2-btn-secondary {
+    text-align: center;
   }
 }
 

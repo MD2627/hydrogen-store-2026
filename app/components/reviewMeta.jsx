@@ -2,11 +2,6 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router';
 
 export default function ReviewMeta({ reviews = [] }) {
-    const [isMounted, setIsMounted] = useState(false);
-
-    useEffect(() => {
-        setIsMounted(true);
-    }, []);
 
     // Summary data
     const summary = {
@@ -87,7 +82,7 @@ export default function ReviewMeta({ reviews = [] }) {
 }
 
 function getAvatarColor(initial) {
-    const colors = ['#001b10', '#1a4d2e', '#2c3e50', '#7f8c8d'];
+    const colors = ['#003B4D', '#00D1FF', '#2C2F3A', '#7f8c8d'];
     const index = initial ? initial.charCodeAt(0) % colors.length : 0;
     return colors[index];
 }

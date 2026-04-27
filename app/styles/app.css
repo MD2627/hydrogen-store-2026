@@ -734,7 +734,7 @@ a.mega-menu-link-item.active {
 
 .mega-menu.mega-menu-wedding .mega-menu-inner .mega-menu-column:first-child .mega-menu-list a.mega-menu-link-item:first-child,
 .mega-menu.mega-menu-wedding .mega-menu-inner .mega-menu-column:nth-child(3) .mega-menu-list a.mega-menu-link-item:first-child {
-  font-weight: 600;
+  /* font-weight: 600; */
 }
 
 .mega-menu.mega-menu-fine-jewelry .mega-menu-inner .mega-menu-column:first-child {

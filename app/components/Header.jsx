@@ -510,15 +510,20 @@ export function HeaderMenu({
                           <React.Fragment key={column.id}>
                             <div className="mega-menu-column" key={column.id}>
                               {column?.title && column?.url && (
-                                <NavLink
-                                  className="ff-c mega-menu-column-title text-uppercase ff-n site-text-color w-400 f-m-13 f-13 l-h-1"
-                                  end
-                                  onClick={close}
-                                  prefetch="intent"
-                                  to={column.url}
-                                >
-                                  {column.title}
-                                </NavLink>
+                                (() => {
+                                  const colUrl = column.url && (column.url.includes('myshopify.com') || column.url.includes(publicStoreDomain) || column.url.includes(primaryDomainUrl)) ? (() => { const u = new URL(column.url); return u.pathname + u.search + u.hash; })() : column.url;
+                                  return (
+                                    <NavLink
+                                      className="ff-c mega-menu-column-title text-uppercase ff-n site-text-color w-400 f-m-13 f-13 l-h-1"
+                                      end
+                                      onClick={close}
+                                      prefetch="intent"
+                                      to={colUrl}
+                                    >
+                                      {column.title}
+                                    </NavLink>
+                                  )
+                                })()
                               )}
                               <div className="mega-menu-list">
                                 {column.items.map((grandchild, index) => {
