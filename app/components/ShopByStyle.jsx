@@ -36,18 +36,12 @@ export function ShopByStyle({
   const content = (
     <>
       {/* <div className="page-width"> */}
-      <header className={isSplit ? "sbss-v2-header" : "shop-by-style-header"}>
-        <div className={isSplit ? "sbss-v2-header-text" : ""}>
-          {isSplit && <span className="section-subtitle">Collections</span>}
-          <h2 className="section-title">{title}</h2>
-        </div>
+      <header className="shop-by-style-header">
+        <h2 className="section-title">{title}</h2>
         {description && (
-          <div className={isSplit ? "sbss-v2-desc" : ""}>
-            {typeof description === "string"
-              ? <RichText html={description} />
-              : description
-            }
-          </div>
+          typeof description === "string"
+            ? <RichText html={description} />
+            : description
         )}
       </header>
       {/* </div> */}
