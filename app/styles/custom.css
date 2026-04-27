@@ -1607,6 +1607,10 @@ button.filter-pill-btn:last-child {
     /* padding: 40px 0; */
   }
 
+  .ins-v2 .page-width {
+    padding: 0;
+  }
+
   .ins-v2-container {
     padding-right: 0;
     /* Let scroller hit the edge */
@@ -1629,6 +1633,14 @@ button.filter-pill-btn:last-child {
     flex: 0 0 280px;
     height: 350px;
     scroll-snap-align: center;
+  }
+
+  .ins-v2-card:nth-child(1) {
+    margin-left: 15px;
+  }
+
+  .ins-v2-card:last-child {
+    margin-right: 15px;
   }
 
   .ins-v2-header-card {
@@ -2035,7 +2047,7 @@ button.filter-pill-btn:last-child {
 
 @media (max-width: 767px) {
   .rc-v2 {
-    padding-top: 3rem;
+    padding: 0;
   }
 }
 
@@ -2767,6 +2779,10 @@ button.filter-pill-btn:last-child {
     margin-bottom: 24px;
   }
 
+  .ins-v2 .sbss-v2-header {
+    padding: 0 15px;
+  }
+
   .sbss-v2-item {
     flex: 0 0 240px;
   }
@@ -2959,7 +2975,7 @@ button.filter-pill-btn:last-child {
 
 @media (max-width: 767px) {
   .sbss-v2--arch {
-    padding-bottom: 0;
+    /* padding-bottom: 0; */
   }
 
   .sbss-v2-bento-content {
