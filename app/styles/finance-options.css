@@ -41,7 +41,7 @@
     font-size: 16px;
     text-decoration: none;
     transition: color .2s ease;
-    font-family: 'Cullen Ginto Normal';
+    font-family: 'Diamond Ginto Normal';
     padding-top: 2px;
 }
 
@@ -74,7 +74,7 @@
 .finance-card-wrapper li {
     margin-bottom: 2.2px;
     list-style: disc;
-    font-family: "Cullen Ginto Normal";
+    font-family: "Diamond Ginto Normal";
     text-transform: none;
     letter-spacing: 0;
     font-size: 13px;

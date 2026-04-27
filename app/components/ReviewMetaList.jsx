@@ -83,7 +83,7 @@ export default function ReviewMetaList({ reviews = [] }) {
         setShowWriteReviewPopup(!showWriteReviewPopup);
     };
 
-    const googleReviewLink = "https://www.google.com/search?hl=en-AU&gl=au&q=Cullen+Jewellery,+4/232+High+St,+Kew+VIC+3101&ludocid=342683720915465707&lsig=AB86z5VliycXADEjnDB-lH_UkbBU";
+    const googleReviewLink = "https://hydrogen-store-2026.pages.dev/";
 
     // Only render if reviews exist
     if (!reviews || reviews.length === 0) return null;

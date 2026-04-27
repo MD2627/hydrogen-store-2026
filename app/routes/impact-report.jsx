@@ -6,7 +6,7 @@ import { ProductFAQ } from '~/components/ProductFAQ';
 import { CollectionBanner } from '~/components/CollectionBanner';
 
 export const meta = () => {
-    return [{ title: 'Impact Report | Cullen Jewellery' }];
+    return [{ title: 'Impact Report | Diamond Jewellery' }];
 };
 
 export async function loader(args) {
@@ -15,7 +15,7 @@ export async function loader(args) {
     };
 }
 
-export default function CullenInitiatives() {
+export default function DiamondInitiatives() {
     const data = useLoaderData();
 
     useEffect(() => {
@@ -147,7 +147,7 @@ const IMPACT_PILLARS = [
         number: '01',
         title: 'People',
         description:
-            'At Cullen, people matter — our clients, team, and communities. We already make accessible, responsible jewellery using lab-grown diamonds, treat staff fairly, and support good causes like child sponsorships and tree planting. We’ve improved training, career paths, and created a workplace where people feel they belong.',
+            'At Diamond, people matter — our clients, team, and communities. We already make accessible, responsible jewellery using lab-grown diamonds, treat staff fairly, and support good causes like child sponsorships and tree planting. We’ve improved training, career paths, and created a workplace where people feel they belong.',
         highlight:
             'In 2025, we plan to do even more: improve safety, grow our volunteer leave program, give clearer job paths, and boost leadership training. We’ll also track progress better using objectives and key results (OKRs) and surveys. Everything we do aims to create a fairer, kinder workplace and help others while making beautiful, meaningful jewellery.',
     },
@@ -155,15 +155,15 @@ const IMPACT_PILLARS = [
         number: '02',
         title: 'Product',
         description:
-            'Cullen exclusively uses lab-grown diamonds, sapphires and moissanite across our jewellery. We recycle precious metals. Most of our work happens online, helping us save energy and reduce waste. Our suppliers are chosen carefully—we want fair pay, no child labour, and low harm to the planet.',
+            'Diamond exclusively uses lab-grown diamonds, sapphires and moissanite across our jewellery. We recycle precious metals. Most of our work happens online, helping us save energy and reduce waste. Our suppliers are chosen carefully—we want fair pay, no child labour, and low harm to the planet.',
         highlight:
-            'In 2025, we plan to use more eco-friendly materials, cut down waste even more, and choose only suppliers who meet strict standards. We’ll also create clearer plans for how we make jewellery, so every piece is crafted the Cullen way.',
+            'In 2025, we plan to use more eco-friendly materials, cut down waste even more, and choose only suppliers who meet strict standards. We’ll also create clearer plans for how we make jewellery, so every piece is crafted the Diamond way.',
     },
     {
         number: '03',
         title: 'Planet',
         description:
-            'Cullen has reduced its impact on the planet by using lab grown, carbon-neutral diamonds and made-to-order products. We recycle gold, use less paper, and plant one tree for every order. Our clients trust us to provide beautiful jewellery without harming the Earth. We’ve already helped plant 100,000+ trees.',
+            'Diamond has reduced its impact on the planet by using lab grown, carbon-neutral diamonds and made-to-order products. We recycle gold, use less paper, and plant one tree for every order. Our clients trust us to provide beautiful jewellery without harming the Earth. We’ve already helped plant 100,000+ trees.',
         highlight:
             'In 2025, we’ll continue cutting carbon, plant more trees, and teach our team more about sustainability. We want to keep doing business in a way that helps people, and the planet thrive.',
     },
@@ -182,22 +182,22 @@ const REPORT_DOWNLOADS = {
 
 const FAQ_DATA = [
     {
-        question: "How does Cullen ensure its diamonds are responsible?",
-        answer: "All Cullen Jewellery diamonds are lab-grown and carbon neutral. These diamonds are produced in facilities using advanced processes like HPHT and CVD. Carbon emissions from production are offset via verified environmental projects such as renewable energy and reforestation. Additionally, Cullen Jewellery plants one tree for every order, helping restore ecosystems impacted by traditional diamond mining.",
+        question: "How does Diamond ensure its diamonds are responsible?",
+        answer: "All Diamond Jewellery diamonds are lab-grown and carbon neutral. These diamonds are produced in facilities using advanced processes like HPHT and CVD. Carbon emissions from production are offset via verified environmental projects such as renewable energy and reforestation. Additionally, Diamond Jewellery plants one tree for every order, helping restore ecosystems impacted by traditional diamond mining.",
     },
     {
-        question: "What makes Cullen's approach to employee culture unique?",
-        answer: "Cullen Jewellery practices a people-first philosophy rooted in their brand promise of “unreasonable care.” Employees receive above-award wages, structured career paths, and professional development opportunities. The company also supports volunteerism by offering an additional week of paid leave for volunteering, and sponsors a child through Baptist World Aid for every full-time hire. The company is also implementing a FAIR (Fairness, Access, Inclusion, Resources) model to embed diversity and inclusion into its workplace.",
+        question: "What makes Diamond's approach to employee culture unique?",
+        answer: "Diamond Jewellery practices a people-first philosophy rooted in their brand promise of “unreasonable care.” Employees receive above-award wages, structured career paths, and professional development opportunities. The company also supports volunteerism by offering an additional week of paid leave for volunteering, and sponsors a child through Baptist World Aid for every full-time hire. The company is also implementing a FAIR (Fairness, Access, Inclusion, Resources) model to embed diversity and inclusion into its workplace.",
     },
     {
-        question: "What is Cullen’s strategy for responsible material sourcing and waste reduction?",
+        question: "What is Diamond’s strategy for responsible material sourcing and waste reduction?",
         answer:
-            "Cullen Jewellery has expanded the use of recycled metals, and in 2024 alone, recovered over 516 grams of precious metals including gold, silver, and platinum. They maintain a Precious Metal Recycling Initiative, work with suppliers certified by the Responsible Jewellery Council, and are working toward a fully circular production system. For 2025, their goals include expanding sustainable sourcing, reducing packaging waste, and enhancing supplier accountability with a new Supplier Code of Conduct",
+            "Diamond Jewellery has expanded the use of recycled metals, and in 2024 alone, recovered over 516 grams of precious metals including gold, silver, and platinum. They maintain a Precious Metal Recycling Initiative, work with suppliers certified by the Responsible Jewellery Council, and are working toward a fully circular production system. For 2025, their goals include expanding sustainable sourcing, reducing packaging waste, and enhancing supplier accountability with a new Supplier Code of Conduct",
     },
     {
-        question: "How does Cullen support global and local communities?",
+        question: "How does Diamond support global and local communities?",
         answer:
-            "Beyond environmental sustainability, Cullen contributes to global and local causes. The company donates to Trees For The Future, Street Peace, Baptist World Aid, and more. Community engagement extends through volunteer work and sponsorships for local charities, sports clubs, and research institutes like Peter MacCallum Cancer Centre. Their social impact includes both philanthropy and direct community engagement.",
+            "Beyond environmental sustainability, Diamond contributes to global and local causes. The company donates to Trees For The Future, Street Peace, Baptist World Aid, and more. Community engagement extends through volunteer work and sponsorships for local charities, sports clubs, and research institutes like Peter MacCallum Cancer Centre. Their social impact includes both philanthropy and direct community engagement.",
     },
 ];
 

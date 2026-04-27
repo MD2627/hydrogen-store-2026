@@ -292,7 +292,7 @@ export default function EngagementRingProduct() {
       <ShopByStyle
         variant="section-gallery"
         title="Gallery"
-        description=""
+        description="A timeless symbol of elegance, this diamond ring captures light beautifully with every movement. Perfect for celebrating life’s most meaningful moments"
         items={shopByStyleItems} />
 
       <StickySwiper
@@ -451,11 +451,11 @@ const PRODUCT_FAQ = [
     question: 'What type of warranty do I receive?',
     answer: `
       <p>
-        Cullen Jewellery offers a <strong>Lifetime Manufacturing Warranty</strong> on all our rings,
+        Diamond Jewellery offers a <strong>Lifetime Manufacturing Warranty</strong> on all our rings,
         including engagement, wedding and fashion rings, giving you confidence and peace of mind with every purchase.
         For all other fine jewellery pieces, such as earrings, chains, pendants, bracelets and more,
         we provide a <strong>2-Year Manufacturer Warranty</strong>.
-        <a href="/warranty" class="fancy" title="Cullen Jewellery Lifetime Warranty">
+        <a href="/warranty" class="fancy" title="Diamond Jewellery Lifetime Warranty">
           View our full warranty details.
         </a>
       </p>
@@ -465,7 +465,7 @@ const PRODUCT_FAQ = [
     question: 'Do you ship worldwide?',
     answer: `
       <p>
-        Yes! At Cullen Jewellery, we offer free international shipping on all orders,
+        Yes! At Diamond Jewellery, we offer free international shipping on all orders,
         including those for the perfect diamond engagement ring.
         Shop online and add your chosen piece to your shopping bag with ease.
       </p>
@@ -473,7 +473,7 @@ const PRODUCT_FAQ = [
       <p>
         Most of our orders are sent as DDP (Delivery Duty Paid – import duties & taxes are covered).
         However, there may be cases where you may have to pay local import taxes and duties,
-        which Cullen Jewellery does not cover.
+        which Diamond Jewellery does not cover.
         For more details, please check our
         <a href="/shipping" class="fancy">Shipping</a> page
         or contact your local customs agency.
@@ -494,7 +494,7 @@ const PRODUCT_FAQ = [
     question: 'How do I find out my ring size?',
     answer: `
       <p>
-        At Cullen Jewellery, we offer free ring sizers for our entire range.
+        At Diamond Jewellery, we offer free ring sizers for our entire range.
         <a href="/ring-size-guidance" class="fancy" title="Free Ring Sizer">
           Measure your ring size
         </a>
@@ -519,7 +519,7 @@ const PRODUCT_FAQ = [
     question: 'What payment methods do you accept?',
     answer: `
       <p>
-        At Cullen Jewellery, we accept payments via direct debit, cash (Melbourne only), or card.
+        At Diamond Jewellery, we accept payments via direct debit, cash (Melbourne only), or card.
         If you are looking for an extended payment plan,
         we also offer interest-free finance via Humm.
       </p>
@@ -529,7 +529,7 @@ const PRODUCT_FAQ = [
     question: 'Can I return a product?',
     answer: `
       <p>
-        At Cullen Jewellery, we value the craftsmanship involved in making each unique piece.
+        At Diamond Jewellery, we value the craftsmanship involved in making each unique piece.
         Therefore, we do not offer refunds, returns or exchanges unless the item is faulty or damaged.
         Please see our <a href="/returns" class="fancy">Returns Policy</a> for more information.
       </p>
@@ -578,7 +578,7 @@ const shopByStyleItems = [
   },
   {
     name: '',
-    image: 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/2023_11_14_Cullen_Website_1x1_02_400x400.jpg?v=1700787282',
+    image: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/2023_11_14_Diamond_Website_1x1_02_400x400_297ae0cf-ccc1-448d-b0f9-18561a3f1d62.webp?v=1777280161',
     video: '',
     poster: '',
     link: '',
@@ -594,7 +594,7 @@ const STORY_SLIDES = [
     textColor: 'var(--white_color)',
     link: '/collections/engagementrings',
     linkText: 'LEARN MORE',
-    linkColor: 'var(--accent_color_light_gold)',
+    linkColor: 'var(--black_color)',
     image: {
       src: 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/shop_by_style_-_toi_et_moi_400x400.jpg?v=1741067284',
       alt: 'Crafting ring',
@@ -612,7 +612,7 @@ const STORY_SLIDES = [
     linkText: 'LEARN MORE',
     linkColor: 'var(--accent_color_gold)',
     image: {
-      src: 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/2023_11_14_Cullen_Website_4x5_07_400x400.jpg?v=1701322555',
+      src: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/ring.webp?v=1777280107',
       alt: 'Ring detail',
       width: 1600,
       height: 900,
@@ -628,7 +628,7 @@ const STORY_SLIDES = [
     linkText: 'LEARN MORE',
     linkColor: 'var(--accent_color_light_gold)',
     image: {
-      src: 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Cullen_Website_4x5_2500px_02_1_400x400.jpg?v=1741064516',
+      src: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Diamond_Website_4x5_2500px_02_1_400x400_2154e8ba-a764-46e0-b07a-22b3bcd0ecf0.webp?v=1777280328',
       alt: 'Quality control',
       width: 1600,
       height: 900,
@@ -637,7 +637,7 @@ const STORY_SLIDES = [
   {
     id: 4,
     title: 'Perfect Pairing',
-    text: `Every Cullen ring undergoes a meticulous multi-stage process - casting, polishing, cleaning, and 50x microscopic inspections by dedicated quality control specicialists - to ensure flawless crafstmanship and lasting brilliance. Any piece that falls show of our standards is immediately rectified by our in-house jewellers.`,
+    text: `Every Diamond ring undergoes a meticulous multi-stage process - casting, polishing, cleaning, and 50x microscopic inspections by dedicated quality control specicialists - to ensure flawless crafstmanship and lasting brilliance. Any piece that falls show of our standards is immediately rectified by our in-house jewellers.`,
     bgColor: 'var(--bg_light_secondary)',
     textColor: 'var(--black_color)',
     link: '/collections/rings',

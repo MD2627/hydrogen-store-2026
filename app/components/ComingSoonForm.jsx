@@ -186,7 +186,7 @@ export function ComingSoonForm({ cityName }) {
                                     onChange={handleChange}
                                 />
                                 <span className="custom-checkbox"></span>
-                                <span className="label-text">Send me Cullen Jewellery updates and emails.</span>
+                                <span className="label-text">Send me Diamond Jewellery updates and emails.</span>
                             </label>
 
                             <p className="recaptcha-text-coming">

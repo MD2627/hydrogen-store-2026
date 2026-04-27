@@ -31,7 +31,7 @@ export default function RingSizeGuidance() {
                     right={{
                         title: "Find the Perfect Size",
                         afterTitle: <div className="border-line"></div>,
-                        description: "Here at Cullen, we endeavour to ensure your ring is a perfect fit.",
+                        description: "Here at Diamond, we endeavour to ensure your ring is a perfect fit.",
                     }}
                 />
             </section>
@@ -41,7 +41,7 @@ export default function RingSizeGuidance() {
                     left={{
                         title: "Free Ring Resizing",
                         afterTitle: <div className="border-line"></div>,
-                        description: "At Cullen, we offer One Free Resize for engagement and wedding rings to use within the first 12 months of your ring’s completion (subject to eligibility based on design style and metal type).",
+                        description: "At Diamond, we offer One Free Resize for engagement and wedding rings to use within the first 12 months of your ring’s completion (subject to eligibility based on design style and metal type).",
                     }}
                     right={{
                         image: "https://cdn.shopify.com/s/files/1/0801/7317/0906/files/ring-size-guide-resizing_2400x2400_fa3ad846-f0a0-44bf-980e-06fef29a9266.webp?v=1769767867",
@@ -110,7 +110,7 @@ const FAQ_DATA = [
     },
     {
         question: "Does resizing weaken the ring?",
-        answer: "The ring resizing process involves adding or removing small pieces of precious metal to the original ring to attain the new size. The ring can become weaker if the ring is resized up or down too much, which is why we have a maximum amount of sizes our rings can be sized up or down. You can <a href='/free-resizing'>see our resizing threshold here</a>.<br/><br/>At Cullen Jewellery, our in-house jewellers adhere to strict quality control standards to reduce the risk of breakage and ensure resized rings fit perfectly, as well as using laser welders for a seamless finish. After resizing, we always clean and polish the ring before returning it to you.",
+        answer: "The ring resizing process involves adding or removing small pieces of precious metal to the original ring to attain the new size. The ring can become weaker if the ring is resized up or down too much, which is why we have a maximum amount of sizes our rings can be sized up or down. You can <a href='/free-resizing'>see our resizing threshold here</a>.<br/><br/>At Diamond Jewellery, our in-house jewellers adhere to strict quality control standards to reduce the risk of breakage and ensure resized rings fit perfectly, as well as using laser welders for a seamless finish. After resizing, we always clean and polish the ring before returning it to you.",
     },
     {
         question: "What is the most common engagement ring size?",

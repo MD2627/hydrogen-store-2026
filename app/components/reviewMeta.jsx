@@ -42,7 +42,7 @@ export default function ReviewMeta({ reviews = [] }) {
                             <div className="rev-v2-actions">
                                 <Link to="/reviews" className="rev-v2-btn-primary sb-button">View All Stories</Link>
                                 <a
-                                    href="https://www.google.com/search?q=Cullen+Jewellery"
+                                    href="https://www.google.com/search?q=diamond+Jewellery"
                                     target="_blank"
                                     rel="noreferrer"
                                     className="rev-v2-btn-secondary"

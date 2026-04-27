@@ -133,7 +133,7 @@ code {
 }
 
 @font-face {
-    font-family: 'Cullen Ginto Normal';
+    font-family: 'Diamond Ginto Normal';
     src: url('https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Montserrat-Light.woff2?v=1776933543') format('woff2');
     font-weight: 300;
     font-style: normal;
@@ -141,7 +141,7 @@ code {
 }
 
 @font-face {
-    font-family: 'Cullen Ginto Normal';
+    font-family: 'Diamond Ginto Normal';
     src: url('https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Montserrat-Regular.woff2?v=1776933183') format('woff2');
     font-weight: 400;
     font-style: normal;
@@ -149,7 +149,7 @@ code {
 }
 
 @font-face {
-    font-family: 'Cullen Ginto Nord';
+    font-family: 'Diamond Ginto Nord';
     src: url('https://cdn.shopify.com/s/files/1/0610/2194/5934/files/TenorSans.woff2?v=1776932694') format('woff2');
     font-weight: 400;
     font-style: normal;
@@ -253,14 +253,15 @@ code {
     --bg_light_secondary: #FFFFFF;
     --uvp_color: #75706e;
 
-    --font_family_c: 'Cullen Ginto Normal';
-    --font_family_n: 'Cullen Ginto Nord';
+    --font_family_c: 'Diamond Ginto Normal';
+    --font_family_n: 'Diamond Ginto Nord';
     --font_family_a: 'ABC Arizona Mix';
     --site_master_color: var(--black_color);
     --site_text_color: var(--site_master_color);
 
     --announcement-height: 48px;
-    --header-height: 110px; /* Base header height */
+    --header-height: 110px;
+    /* Base header height */
 }
 
 @media screen and (max-width: 767px) {
@@ -300,7 +301,7 @@ code {
 
 .section-subtitle {
     font-family: var(--font_family_n);
-    font-size: 13px;
+    font-size: 14px;
     letter-spacing: 0.25em;
     text-transform: uppercase;
     margin-bottom: 15px;
@@ -321,7 +322,6 @@ code {
     }
 
     .section-subtitle {
-        font-size: 11px;
         letter-spacing: 0.2em;
         margin-bottom: 10px;
     }

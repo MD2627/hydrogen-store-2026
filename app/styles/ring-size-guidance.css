@@ -535,7 +535,7 @@
     align-items: center;
     justify-content: center;
     font-size: 11px;
-    font-family: 'Cullen Ginto Nord';
+    font-family: 'Diamond Ginto Nord';
     color: var(--deep_gray_color);
     box-shadow: 4px 4px 5px var(--gray_300);
     border-radius: 4px;
@@ -662,7 +662,7 @@
 }
 
 .request-sizer-content .status-message.success {
-    font-family: 'Cullen Ginto Normal';
+    font-family: 'Diamond Ginto Normal';
     color: var(--primary_color);
     font-size: 15px;
     margin: 10px 0;

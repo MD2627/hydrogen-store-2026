@@ -795,7 +795,7 @@ const COLLECTION_CONTENT_SECTION = {
         {
             heading: "WEDDING RINGS & BANDS — EXQUISITELY CRAFTED, FOR HER",
             paragraphs: [
-                `Choosing a wedding ring is a moment filled with emotion. It is a decision that marks one of life’s most meaningful milestones. More than just jewelry, a wedding ring is a symbol of love, unity, and lifelong commitment, worn every day as a reminder of the bond you share. At Cullen, we understand the significance of this choice. That’s why we offer a collection of made-to-order women’s wedding rings, giving you the flexibility to find a ring that perfectly suits your timeline, style, and lifestyle.`,
+                `Choosing a wedding ring is a moment filled with emotion. It is a decision that marks one of life’s most meaningful milestones. More than just jewelry, a wedding ring is a symbol of love, unity, and lifelong commitment, worn every day as a reminder of the bond you share. At Diamond, we understand the significance of this choice. That’s why we offer a collection of made-to-order women’s wedding rings, giving you the flexibility to find a ring that perfectly suits your timeline, style, and lifestyle.`,
                 `For those who wish to create something truly personal, our made-to-order designs provide the opportunity to customize every detail. From minimalist elegance to diamond-studded brilliance, every wedding ring is crafted with meticulous attention to detail by our expert in-house jewelers using premium metals and lab grown gemstones, taking a conscious approach to craftsmanship that minimizes waste.`,
                 `Explore our collection of women’s wedding rings in the US. Start your journey online, or <a href="/visit" class="fancy">book a personalized consultation</a> with our friendly team.`
             ],
@@ -803,12 +803,12 @@ const COLLECTION_CONTENT_SECTION = {
         {
             heading: "SYMBOLICALLY RICH, EXQUISITELY CRAFTED",
             paragraphs: [
-                `Cullen specializes in custom-made women’s wedding rings designed to honour your commitment and celebrate your wedding day. We combine the knowledge of experienced in-house jewelers and an exceptional client service team that can help guide you through every step of choosing your wedding ring, from band thickness to personalized details like engravings.`,
+                `Diamond specializes in custom-made women’s wedding rings designed to honour your commitment and celebrate your wedding day. We combine the knowledge of experienced in-house jewelers and an exceptional client service team that can help guide you through every step of choosing your wedding ring, from band thickness to personalized details like engravings.`,
                 `Need help choosing your dream wedding ring in the US? <a href="/visit" class="fancy">Book a virtual or in-person appointment</a> to talk to one of our friendly wedding ring specialists.`
             ],
         },
         {
-            heading: "WHY CULLEN",
+            heading: "WHY Diamond",
             paragraphs: [
                 `<strong>Global Insured Delivery</strong> No matter where you are in the world, your dream ring will go the distance. We proudly ship our wedding and engagement rings across the United States and internationally, ensuring your ready-to-ship engagement ring arrives safely and swiftly.`,
                 `<strong>Perfect Fit Guarantee</strong> We offer <a href="/free-resizing" class="fancy">free resizing</a> on all engagement rings to ensure the perfect fit, whether you've chosen one of our ready-to-ship engagement rings or something uniquely your own.`,
@@ -853,7 +853,7 @@ const PRODUCT_UVPS = [
 const FAQ_DATA = [
     {
         question: "WHAT IS THE DIFFERENCE BETWEEN A WEDDING RING AND A WEDDING BAND?",
-        answer: `There’s no major difference; the terms are often used interchangeably. Traditionally, “band” refers to a simpler, unadorned style, while “ring” can describe designs with diamonds, moissanite, or intricate detailing. At Cullen, we offer both classic bands and more decorative women’s wedding rings to suit every style.`
+        answer: `There’s no major difference; the terms are often used interchangeably. Traditionally, “band” refers to a simpler, unadorned style, while “ring” can describe designs with diamonds, moissanite, or intricate detailing. At Diamond, we offer both classic bands and more decorative women’s wedding rings to suit every style.`
     },
     {
         question: "CAN I CUSTOMIZE MY WEDDING RING?",
@@ -885,7 +885,7 @@ const FAQ_DATA = [
     },
     {
         question: "DOES MY WEDDING RING COME WITH A WARRANTY?",
-        answer: `Yes. Every Cullen wedding ring is backed by a comprehensive <a href="/warranty">lifetime warranty</a>, which covers manufacturing faults. We also offer lifetime aftercare services, such as professional cleaning and inspection.`
+        answer: `Yes. Every Diamond wedding ring is backed by a comprehensive <a href="/warranty">lifetime warranty</a>, which covers manufacturing faults. We also offer lifetime aftercare services, such as professional cleaning and inspection.`
     },
     {
         question: "HOW MUCH DO WOMEN’S WEDDING RINGS COST?",

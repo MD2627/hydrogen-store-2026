@@ -17,7 +17,7 @@ import appStyles from '~/styles/app.css?url';
 import ourStory from '~/styles/our-story.css?url';
 import faqs from '~/styles/faqs.css?url';
 import feedback from '~/styles/feedback.css?url';
-import ourInitiatives from '~/styles/cullen-initiatives.css?url';
+import ourInitiatives from '~/styles/diamond-initiatives.css?url';
 import impactReport from '~/styles/impact-report.css?url';
 import customRings from '~/styles/custom-rings.css?url';
 import commonStyles from './styles/common.css?url';
@@ -38,7 +38,7 @@ import freeResizingStyles from './styles/free-resizing.css?url';
 import carbonNeutralStyles from './styles/carbon-neutral.css?url';
 import orderStatusStyles from './styles/order-status.css?url';
 import warrantyStyles from './styles/warranty.css?url';
-import cullenCuratedStyles from './styles/cullen-curated.css?url';
+import diamondCuratedStyles from './styles/diamond-curated.css?url';
 import top10RingsStyles from './styles/Top10Rings.css?url';
 import comingSoonStyles from './styles/ComingSoon.css?url';
 import christmasCutoffStyles from './styles/christmas-cut-off.css?url';
@@ -227,7 +227,7 @@ export function Layout({ children }) {
         <link rel="stylesheet" href={carbonNeutralStyles}></link>
         <link rel="stylesheet" href={orderStatusStyles}></link>
         <link rel="stylesheet" href={warrantyStyles}></link>
-        <link rel="stylesheet" href={cullenCuratedStyles}></link>
+        <link rel="stylesheet" href={diamondCuratedStyles}></link>
         <link rel="stylesheet" href={top10RingsStyles}></link>
         <link rel="stylesheet" href={comingSoonStyles}></link>
         <link rel="stylesheet" href={christmasCutoffStyles}></link>

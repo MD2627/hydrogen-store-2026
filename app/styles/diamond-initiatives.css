@@ -1,4 +1,4 @@
-  .cullen-initiatives-page {
+  .diamond-initiatives-page {
       background-color: var(--white_color);
   }
 
@@ -54,7 +54,7 @@
       background: rgba(var(--pure_black_rgb), 0.04);
   }
 
-  .cullen-initiatives-page .page-width {
+  .diamond-initiatives-page .page-width {
       padding: 0 20px;
   }
 
@@ -62,7 +62,7 @@
       display: inline-flex;
   }
 
-  .cullen-initiatives-logo {
+  .diamond-initiatives-logo {
       max-width: 40px;
       height: 100%;
       width: 100%;

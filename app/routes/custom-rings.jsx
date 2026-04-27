@@ -16,7 +16,7 @@ import { RingBanner } from '~/components/RingBanner';
 import { ExpertGuidance } from '~/components/ExpertGuidance';
 
 export const meta = () => {
-    return [{ title: 'Custom Rings | Cullen Jewellery' }];
+    return [{ title: 'Custom Rings | Diamond Jewellery' }];
 };
 
 export async function loader(args) {
@@ -26,7 +26,7 @@ export async function loader(args) {
     };
 }
 
-export default function CullenInitiatives() {
+export default function DiamondInitiatives() {
     const data = useLoaderData();
     const [isMobile, setIsMobile] = useState(false);
     const [isTablet, setIsTablet] = useState(false);
@@ -259,7 +259,7 @@ const COLLECTION_LINKS = [
 const FAQ_DATA = [
     {
         question: "How much do custom engagement rings cost?",
-        answer: "At Cullen we don't charge any customization fees. Price is based on the amount of metal and the size and amount of gemstones used. The price of custom engagement rings at Cullen varies based on factors such as chosen gemstone, carat weight, and setting design. We offer a range of designs to suit different budgets, and our team can help you find or create a ring that meets your preferences and price point.​",
+        answer: "At Diamond we don't charge any customization fees. Price is based on the amount of metal and the size and amount of gemstones used. The price of custom engagement rings at Diamond varies based on factors such as chosen gemstone, carat weight, and setting design. We offer a range of designs to suit different budgets, and our team can help you find or create a ring that meets your preferences and price point.​",
     },
     {
         question: "How long do custom engagement rings take?",
@@ -271,7 +271,7 @@ const FAQ_DATA = [
     },
     {
         question: "Do custom rings come with a warranty?",
-        answer: "All custom Cullen engagement rings in gold and platinum come with a <a href='/warranty'>lifetime manufacturing warranty.</a>  This warranty covers any defects in materials or workmanship, giving you peace of mind that your ring is crafted to the highest standards.​",
+        answer: "All custom Diamond engagement rings in gold and platinum come with a <a href='/warranty'>lifetime manufacturing warranty.</a>  This warranty covers any defects in materials or workmanship, giving you peace of mind that your ring is crafted to the highest standards.​",
     },
     {
         question: "Can I design a custom ring online?",
@@ -283,11 +283,11 @@ const FAQ_DATA = [
     },
     {
         question: "Can you resize custom engagement rings?",
-        answer: "Most custom engagement rings from Cullen can be resized, and we offer a free resize within the first 12 months of your ring's completion. However, we will need to assess certain custom rings to determine if a resize is possible to ensure the structural integrity of the ring is maintained and how many sizes up or down it can go. For more information about our resizing policy, please visit our <a href='/free-resizing'>free resizing page</a>.",
+        answer: "Most custom engagement rings from Diamond can be resized, and we offer a free resize within the first 12 months of your ring's completion. However, we will need to assess certain custom rings to determine if a resize is possible to ensure the structural integrity of the ring is maintained and how many sizes up or down it can go. For more information about our resizing policy, please visit our <a href='/free-resizing'>free resizing page</a>.",
     },
     {
         question: "Can you ship custom engagement rings to the US?",
-        answer: "At Cullen we can ship worldwide, including the US. We provide free express and insured international shipping on all orders over $500, including custom engagement rings. For full details, <a href='/shipping'>visit our shipping page.</a>",
+        answer: "At Diamond we can ship worldwide, including the US. We provide free express and insured international shipping on all orders over $500, including custom engagement rings. For full details, <a href='/shipping'>visit our shipping page.</a>",
     }
 ];
 

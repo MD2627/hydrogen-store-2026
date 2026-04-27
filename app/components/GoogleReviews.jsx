@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 
 /**
- * GoogleReviews Component - Cullen Style
+ * GoogleReviews Component - Diamond Style
  * Displays Google reviews in a clean list format with infinite scroll
  * 
  * Props:

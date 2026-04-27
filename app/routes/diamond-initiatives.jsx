@@ -3,7 +3,7 @@ import { UvpIconFooter } from '~/components/UvpIconFooter';
 import { ProductFAQ } from '~/components/ProductFAQ';
 
 export const meta = () => {
-  return [{ title: 'Our Initiatives | Cullen Jewellery' }];
+  return [{ title: 'Our Initiatives | Diamond Jewellery' }];
 };
 
 /**
@@ -13,9 +13,9 @@ export async function loader() {
   return {};
 }
 
-export default function CullenInitiatives() {
+export default function DiamondInitiatives() {
   return (
-    <div className="cullen-initiatives-page">
+    <div className="diamond-initiatives-page">
       <StoryCraftBanner
         imageSrc={INITIATIVES_HERO.image}
         title={INITIATIVES_HERO.title}
@@ -270,7 +270,7 @@ const INITIATIVES_PURPOSE = {
     <svg
       viewBox="0 0 512 512"
       xmlns="http://www.w3.org/2000/svg"
-      class="cullen-initiatives-logo"
+      class="diamond-initiatives-logo"
       aria-hidden="true"
     >
       <path
@@ -289,7 +289,7 @@ const INITIATIVES_PURPOSE = {
     </svg>
   `,
   heading:
-    'At Cullen Jewellery, we’re focused on doing two things to make the world better:',
+    'At Diamond Jewellery, we’re focused on doing two things to make the world better:',
   items: [
     {
       label: 'Empowering <span>People</span>',
@@ -407,7 +407,7 @@ const PLANET_PARTNERS_SECTION_DATA = {
 
 const CTA_BANNER_DATA = {
   image:
-    "https://cdn.shopify.com/s/files/1/0644/3067/0060/files/etC_Stand_pBand_hh_cush_Cullen-Jewellery_solitaire_yellow_RingOnly_hs_web_Engage_mB__2022-06-21_1300x1300.jpg?v=1701039664",
+    "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/d2ac1da4243ac4f42d18691c8e65b2ba.jpg?v=1776157935",
   title: "ENGAGEMENT RINGS YOU CAN FEEL GOOD ABOUT.",
   button: {
     label: "BUILD YOUR ENGAGEMENT RING",

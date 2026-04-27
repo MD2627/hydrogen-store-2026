@@ -51,7 +51,7 @@
   }
 
   .footer {
-    padding: 40px 0 30px;
+    padding: 3rem 0 3rem;
   }
 
   .footer .footer-contact {
@@ -426,6 +426,7 @@
   .footer-bottom-center,
   .footer-bottom-right {
     justify-content: center;
+    align-items: center;
   }
 
 }

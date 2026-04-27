@@ -4,7 +4,7 @@ import { GraduationContactForm } from '~/components/GraduationContactForm';
 import { Link } from 'react-router';
 
 export const meta = () => {
-    return [{ title: 'Graduation Jewellery | Cullen Jewellery' }];
+    return [{ title: 'Graduation Jewellery | Diamond Jewellery' }];
 };
 
 export function links() {
@@ -150,7 +150,7 @@ const GRADUATION_METAL_DATA = {
 };
 const GRADUATION_DESIGN_DATA = {
     title: "Design Examples",
-    description: "Cullen Jewellery will work with you to create a custom design featuring your school or institutions crest or emblem. We will also be able to include any other notable features like date.",
+    description: "Diamond Jewellery will work with you to create a custom design featuring your school or institutions crest or emblem. We will also be able to include any other notable features like date.",
     list: [
         {
             image: 'https://cdn.shopify.com/s/files/1/0801/7317/0906/files/R6__8304_540x_ba3ed8cf-cf16-4d22-8982-e270f0301533.webp?v=1771235967',

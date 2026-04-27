@@ -6,30 +6,30 @@ import { StoryCraftBanner } from '~/components/StoryCraftBanner';
 import { YouMayAlsoLikeBlog } from '~/components/YouMayAlsoLikeBlog';
 import { ThreeDEffectCard } from '~/components/ThreeDEffectCard';
 
-export default function CullenCurated() {
+export default function DiamondCurated() {
 
     const { blog } = useLoaderData() || {};
 
     return (
         <>
-            <div className="cullen-curated-page">
+            <div className="diamond-curated-page">
 
                 <StoryCraftBanner
                     imageSrc="https://cdn.shopify.com/s/files/1/0644/3067/0060/files/ImageHeader_web_1400x1400.png?v=1739848715"
                     mobileImageSrc="https://cdn.shopify.com/s/files/1/0644/3067/0060/files/ImageHeader_mob_900x900.png?v=1740437813" // ✅ mobile image
-                    title="Cullen Curated"
-                    subtitle="A signature range of lab grown gemstones by Cullen Jewellery"
-                    extraClass="cullen-curated-banner"
+                    title="Diamond Curated"
+                    subtitle="A signature range of lab grown gemstones by Diamond Jewellery"
+                    extraClass="diamond-curated-banner"
                 />
 
 
-                <div className="cullen-curated-rich-text">
-                    <div className="cullen-curated-rich-text-container">
-                        <h2 className="cullen-curated-title-rich-text">
+                <div className="diamond-curated-rich-text">
+                    <div className="diamond-curated-rich-text-container">
+                        <h2 className="diamond-curated-title-rich-text">
                             Expertly Curated By Hand
                         </h2>
-                        <p className="cullen-curated-content-rich-text">
-                            Cullen Curated by Cullen Jewellery, is a signature range of lab grown gemstones that are hand-selected for their unmatched colour, clarity and superior cut. Our gemstones are grown in controlled environments using advanced technology and strict quality control. This results in high-quality, responsible, lab grown gemstones free from the ethical concerns of mining.
+                        <p className="diamond-curated-content-rich-text">
+                            Diamond Curated by Diamond Jewellery, is a signature range of lab grown gemstones that are hand-selected for their unmatched colour, clarity and superior cut. Our gemstones are grown in controlled environments using advanced technology and strict quality control. This results in high-quality, responsible, lab grown gemstones free from the ethical concerns of mining.
                         </p>
                     </div>
                 </div>
@@ -93,7 +93,7 @@ export default function CullenCurated() {
 
                             <p className="curation-process-card-text f-13 f-m-15 w-300 l-h-1-4">
                                 We stand behind our curation process by offering a Lifetime
-                                Manufacturing Warranty on all Cullen Curated gemstones.
+                                Manufacturing Warranty on all Diamond Curated gemstones.
                             </p>
                         </div>
                     </div>
@@ -103,7 +103,7 @@ export default function CullenCurated() {
                 <div className="our-gemstones-wrapper">
                     <h2 className="our-gemstones-title curation-process-title f-38 f-m-34 w-300 l-h-1-1">Our Gemstones</h2>
                     <hr className="our-gemstones-title-line"></hr>
-                    <p className='our-gemstones-subtitle f-13 f-m-15 w-300 l-h-1-4 ff-c'>The Cullen Jewellery Gem Vault</p>
+                    <p className='our-gemstones-subtitle f-13 f-m-15 w-300 l-h-1-4 ff-c'>The Diamond Jewellery Gem Vault</p>
                     <img
                         className="our-gemstones-image desktop-image"
                         src="https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Original_OurGemstones_2800x2800.jpg?v=1739858316"
@@ -118,14 +118,14 @@ export default function CullenCurated() {
                     <div className="our-gemstones-content">
                         <p className="our-gemstones-text f-13 f-m-15 w-300 l-h-1-4 ff-c">
                             It takes an eye for detail to select the perfect gemstones for
-                            engagement rings and fine jewellery. Cullen Curated gemstones are
+                            engagement rings and fine jewellery. Diamond Curated gemstones are
                             carefully chosen by our experienced jewellers, who together bring a
                             combined 100 years of gemology expertise to the stringent selection
                             process.
                         </p>
 
                         <p className="our-gemstones-text f-13 f-m-15 w-300 l-h-1-4 ff-c" >
-                            All Cullen Curated gemstones are grown in controlled laboratory
+                            All Diamond Curated gemstones are grown in controlled laboratory
                             environments. The result is an unparalleled collection of heirloom
                             lab grown diamonds and gemstones that are kind to our world.
                         </p>
@@ -151,7 +151,7 @@ export default function CullenCurated() {
                     </h2>
                     <hr class="our-gemstones-title-line" />
                     <p class="our-gemstones-subtitle f-13 f-m-15 w-300 l-h-1-4 ff-c">
-                        Cullen Curated Lab-grown sapphires are primarily composed of the mineral corundum (aluminium oxide) and are prized for their remarkable hardness (9 on the Mohs scale) and vivid colouration.
+                        Diamond Curated Lab-grown sapphires are primarily composed of the mineral corundum (aluminium oxide) and are prized for their remarkable hardness (9 on the Mohs scale) and vivid colouration.
                         <p class="our-gemstones-subtitle f-13 f-m-15 w-300 l-h-1-4 ff-c">
                             They are Identical in chemical composition, crystal structure, and physical properties to mined sapphires.
                         </p>
@@ -161,7 +161,7 @@ export default function CullenCurated() {
                         <div className="moissanite-growing-text">
                             <h3 className='f-13 f-m-15 w-300 l-h-1-4 ff-n'>Growing Process</h3>
                             <p className=' f-13 f-m-15 w-300 l-h-1-4 ff-c'>
-                                Cullen Curated sapphires are grown using the Czochralski Process. In this process, aluminium oxide is melted using radio waves, and a rod with a seed crystal is inserted into the mixture. As the rod is slowly rotated and pulled out, a column of sapphire forms. This method is more expensive than others but it allows for precise control over the crystal's growth, resulting in high-quality sapphires.
+                                Diamond Curated sapphires are grown using the Czochralski Process. In this process, aluminium oxide is melted using radio waves, and a rod with a seed crystal is inserted into the mixture. As the rod is slowly rotated and pulled out, a column of sapphire forms. This method is more expensive than others but it allows for precise control over the crystal's growth, resulting in high-quality sapphires.
                             </p>
                         </div>
 
@@ -257,14 +257,14 @@ export default function CullenCurated() {
                     </h2>
                     <hr class="our-gemstones-title-line" />
                     <p class="our-gemstones-subtitle f-13 f-m-15 w-300 l-h-1-4 ff-c">
-                        Cullen Curated Lab-grown mosssanite is composed of silicon carbide and is prized for their remarkable hardness (9.25 on the Mohs scale) and exceptional fire and brilliance.
+                        Diamond Curated Lab-grown mosssanite is composed of silicon carbide and is prized for their remarkable hardness (9.25 on the Mohs scale) and exceptional fire and brilliance.
                     </p>
 
                     <div className="moissanite-growing-process">
                         <div className="moissanite-growing-text">
                             <h3 className='f-13 f-m-15 w-300 l-h-1-4 ff-n'>Growing Process</h3>
                             <p className=' f-13 f-m-15 w-300 l-h-1-4 ff-c'>
-                                Cullen Curated moissanite is grown using the Physical Vapour Transport (PVT) process. This intricate method involves sublimating silicon carbide in a vacuum, transforming it into a vapour that delicately deposits onto a seed crystal. The process starts by heating silicon carbide powder in a graphite crucible at high temperatures, causing it to sublime in a vacuum. The silicon carbide vapour then moves to a cooler part of the crucible, where it settles onto a seed crystal, forming a brilliant moissanite gem.
+                                Diamond Curated moissanite is grown using the Physical Vapour Transport (PVT) process. This intricate method involves sublimating silicon carbide in a vacuum, transforming it into a vapour that delicately deposits onto a seed crystal. The process starts by heating silicon carbide powder in a graphite crucible at high temperatures, causing it to sublime in a vacuum. The silicon carbide vapour then moves to a cooler part of the crucible, where it settles onto a seed crystal, forming a brilliant moissanite gem.
                             </p>
                         </div>
 
@@ -352,7 +352,7 @@ export default function CullenCurated() {
                         <div className="section">
                             <h2>Lifetime Manufacturing Warranty</h2>
                             <p>
-                                All Cullen Curated lab grown gemstones are guaranteed to be of the highest
+                                All Diamond Curated lab grown gemstones are guaranteed to be of the highest
                                 quality through a Lifetime Manufacturing Warranty.
                             </p>
                         </div>
@@ -364,7 +364,7 @@ export default function CullenCurated() {
                                     The brilliance and fire inherent in your lab grown gemstone(s).
                                 </li>
                                 <li>
-                                    The coverage for your Cullen Curated gemstone(s) is subject to the
+                                    The coverage for your Diamond Curated gemstone(s) is subject to the
                                     terms outlined below and set forth on your Lifetime Manufacturing
                                     Warranty Certificate.
                                 </li>
@@ -388,11 +388,11 @@ export default function CullenCurated() {
                                     result of abuse, misuse, loss, or theft of your gemstone(s).
                                 </li>
                                 <li>
-                                    Cullen Jewellery does not endorse or approve any third-party
-                                    alterations or treatments to any Cullen Curated gemstones. Such
+                                    Diamond Jewellery does not endorse or approve any third-party
+                                    alterations or treatments to any Diamond Curated gemstones. Such
                                     processes may be temporary and could lessen the durability and value
                                     of the gemstone(s). Accordingly, any third-party alterations or
-                                    treatments will void the Cullen Curated Lifetime Manufacturing
+                                    treatments will void the Diamond Curated Lifetime Manufacturing
                                     Warranty.
                                 </li>
                                 <li>
@@ -404,7 +404,7 @@ export default function CullenCurated() {
 
                         <div className="section">
                             <p>
-                                Cullen Jewellery is dedicated to delivering exceptional and socially
+                                Diamond Jewellery is dedicated to delivering exceptional and socially
                                 responsible gemstones that last a lifetime.
                             </p>
                         </div>
@@ -421,7 +421,7 @@ export default function CullenCurated() {
 
                 <ProductFAQ data={FAQ_DATA} title="Curation" subtitle="Your questions about our signature gemstone range, answered." />
 
-                <UvpIconFooter data={CULLEN_CURATED_UVPS} />
+                <UvpIconFooter data={DIAMOND_CURATED_UVPS} />
             </div>
         </>
     );
@@ -475,10 +475,10 @@ const FAQ_DATA = [
     },
 
     {
-        question: 'Why should you choose a Cullen Curated lab grown gemstone?',
+        question: 'Why should you choose a Diamond Curated lab grown gemstone?',
         answer: (
             <p>
-                Cullen Curated lab grown gemstones are hand-selected for exceptional
+                Diamond Curated lab grown gemstones are hand-selected for exceptional
                 colour, clarity, and cut. They are grown using advanced technology
                 and strict quality control. By being grown in a controlled lab
                 environment, they are free from the ethical concerns of mining.
@@ -491,7 +491,7 @@ const FAQ_DATA = [
         answer: (
             <p>
                 In the rare instance that you need to claim your Lifetime Manufacturing
-                Warranty on your Cullen Curated lab grown gemstone, please{' '}
+                Warranty on your Diamond Curated lab grown gemstone, please{' '}
                 <a className="fancy" href="/contact">
                     contact us here.
                 </a>
@@ -529,7 +529,7 @@ const FAQ_DATA = [
 ];
 
 
-const CULLEN_CURATED_UVPS = [
+const DIAMOND_CURATED_UVPS = [
     {
         link: '/shipping',
         label: 'Worldwide<br>Express Shipping',

@@ -55,7 +55,7 @@ p.p-is-bold {
 .warranty-content-inner .section li {
     list-style: disc;
     font-size: 13px;
-    font-family: 'Cullen Ginto Normal';
+    font-family: 'Diamond Ginto Normal';
     font-weight: 300;
     color: var(--black_color);
     line-height: 15.5px;
@@ -107,7 +107,7 @@ h2.main-warranty-title {
     font-size: 13px;
     color: var(--black_color);
     text-align: center;
-    font-family: 'Cullen Ginto Normal';
+    font-family: 'Diamond Ginto Normal';
     margin: 10px 0 0 0;
     font-weight: 300;
 }
@@ -115,7 +115,7 @@ h2.main-warranty-title {
 .crafting-timeframes p.p-is-bold {
     text-transform: uppercase;
     margin: 20px 0;
-    font-family: 'Cullen Ginto Nord';
+    font-family: 'Diamond Ginto Nord';
     letter-spacing: 1.04px;
 
 }

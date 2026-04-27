@@ -4,7 +4,7 @@ import { ContactInfoSection } from '~/components/ContactInfoSection';
 import { UvpIconFooter } from '~/components/UvpIconFooter';
 
 export const meta = () => {
-  return [{ title: 'Contact Us | Cullen Jewellery' }];
+  return [{ title: 'Contact Us | Diamond Jewellery' }];
 };
 
 export async function loader() {

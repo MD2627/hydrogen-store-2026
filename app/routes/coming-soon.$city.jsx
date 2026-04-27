@@ -78,17 +78,17 @@ const UntilWeMeet = {
     items: [
         {
             name: 'Solitaire',
-            image: 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/2023_11_14_Cullen_Website_4x5_07_700x700.jpg?v=1701322555',
+            image: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/ring.webp?v=1777280107',
             link: '/engagement-rings/solitaire',
         },
         {
             name: 'Trilogy',
-            image: 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/2023_11_14_Cullen_Website_1x1_01_700x700.jpg?v=1700787282',
+            image: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/2023_11_14_Diamond_Website_1x1_01_700x700_682f132c-e756-40d7-96f6-540273f3374e.webp?v=1777280779',
             link: '/engagement-rings/trilogy',
         },
         {
             name: 'Halo',
-            image: 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/2023_11_14_Cullen_Website_1x1_02_700x700.jpg?v=1700787282F  ',
+            image: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/2023_11_14_Diamond_Website_1x1_02_400x400_297ae0cf-ccc1-448d-b0f9-18561a3f1d62.webp?v=1777280161  ',
             link: '/engagement-rings/halo',
         }
     ]
@@ -103,7 +103,7 @@ const DiscoverWeddingBands = {
     items: [
         {
             name: "Women's Wedding Bands",
-            image: 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Front_aBand_Cullen-Jewellery_yellow_RingOnly_web_Wed_mB__2023-08-29_60b87063-c880-4c47-a4a5-f86818a6b140_700x700.jpg?v=1704675425',
+            image: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Front_aBand_Diamond-Jewellery_yellow_RingOnly_web_Wed_mB__2023-08-29_700x700_6e462f38-85b3-4f00-b43f-ea51dd90cc19.webp?v=1777280974',
             link: '/wedding-rings/women',
         },
         {

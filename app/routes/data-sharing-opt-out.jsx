@@ -13,7 +13,7 @@ export const links = () => [
  * @type {Route.MetaFunction}
  */
 export const meta = () => {
-    return [{ title: 'Your Privacy Choices | Cullen Jewellery' }];
+    return [{ title: 'Your Privacy Choices | Diamond Jewellery' }];
 };
 
 /**
@@ -27,7 +27,7 @@ export default function DataSharingOptOut() {
     return (
         <div className="data-sharing-opt-out-page">
             <StoryCraftBanner
-                imageSrc="https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Cullen_Sydney_showroom_1300x1300.jpg?v=1740089318"
+                imageSrc="https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Diamond_Sydney_showroom_1300x1300_46489608-60e2-4ef8-b22c-412661a327d0.webp?v=1777281122"
                 title="Your Privacy Choices"
                 subtitle="Manage your personal data and privacy settings."
                 extraClass="story-craft-banner--privacy"
@@ -36,7 +36,7 @@ export default function DataSharingOptOut() {
             <div className="policy">
                 <div className="section">
                     <p>
-                        At Cullen Jewellery, we respect your privacy and your right to control how your personal data is used.
+                        At Diamond Jewellery, we respect your privacy and your right to control how your personal data is used.
                         This page allows you to opt out of certain data sharing practices.
                     </p>
 

@@ -42,7 +42,7 @@ export default function Shipping() {
             <StoryCraftBanner
                 title="Say Yes To Express"
                 subtitle="Enjoy fast and insured shipping on us."
-                imageSrc="https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Cullen_Jewellery_London_153_1a_retouched_high_res_2000x2000.jpg?v=1759284667"
+                imageSrc="https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Diamond_Jewellery_London_153_1a_retouched_high_res_2000x2000_955a3419-44fe-4982-a8b6-5ca4c5c7dd18.webp?v=1777283263"
                 extraClass="shipping-banner"
             />
 
@@ -290,9 +290,9 @@ const PRODUCT_UVPS = [
 ];
 
 const IMPORT_DUTIES_INFO = [
-    <>Most of our shipments go out as DDP (Delivery Duty Paid - import customs duties & taxes covered). However, there are some countries that require you, the purchaser/local resident to pay local or personal tax responsibly in your country, which Cullen Jewellery does not cover. This is because the customs department in your country may not allow for the charges imposed to be billed outside of your country. For more information, we recommend checking with your local customs department prior to ordering. Alternatively, you can contact us via our <Link to="/contact">contact form</Link>.</>,
-    <><strong className='w-600'>Covered Countries</strong> If your country isn&apos;t listed in the search, you may have to pay local import taxes and duties, which Cullen Jewellery does not cover. For more details please check with your local customs agency.</>,
-    <><i>USA Specific</i><br />Additionally, some states in the USA impose a &quot;Use Tax&quot;. If the state you reside in is not listed, Cullen Jewellery does not pay this tax in your state&apos;s jurisdiction, making your order subject to this tax of which your state government may request at any time.</>,
+    <>Most of our shipments go out as DDP (Delivery Duty Paid - import customs duties & taxes covered). However, there are some countries that require you, the purchaser/local resident to pay local or personal tax responsibly in your country, which Diamond Jewellery does not cover. This is because the customs department in your country may not allow for the charges imposed to be billed outside of your country. For more information, we recommend checking with your local customs department prior to ordering. Alternatively, you can contact us via our <Link to="/contact">contact form</Link>.</>,
+    <><strong className='w-600'>Covered Countries</strong> If your country isn&apos;t listed in the search, you may have to pay local import taxes and duties, which Diamond Jewellery does not cover. For more details please check with your local customs agency.</>,
+    <><i>USA Specific</i><br />Additionally, some states in the USA impose a &quot;Use Tax&quot;. If the state you reside in is not listed, Diamond Jewellery does not pay this tax in your state&apos;s jurisdiction, making your order subject to this tax of which your state government may request at any time.</>,
     <>For further information regarding &quot;Use Tax&quot;, we recommend the following resources:<br />
         <a href="https://tax.thomsonreuters.com/blog/sales-tax-vs-use-tax-the-differences/" target="_blank" rel="noopener noreferrer">Thomson Reuters - Sales tax vs. use tax</a><br />
         <a href="https://www.salestaxinstitute.com/sales_tax_faqs/sales-tax-vs-use-tax-guide" target="_blank" rel="noopener noreferrer">Sales Tax Institute - What is the difference between sales tax and use tax?</a></>

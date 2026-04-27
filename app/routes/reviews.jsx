@@ -93,10 +93,10 @@ export async function loader({ context }) {
 
 export const meta = () => {
   return [
-    { title: 'Customer Reviews | Cullen Jewellery' },
+    { title: 'Customer Reviews | Diamond Jewellery' },
     {
       name: 'description',
-      content: 'Read what our customers say about their experience with Cullen Jewellery. Discover authentic reviews from couples who trusted us with their special moments.'
+      content: 'Read what our customers say about their experience with Diamond Jewellery. Discover authentic reviews from couples who trusted us with their special moments.'
     },
   ];
 };
@@ -108,7 +108,7 @@ export default function Reviews() {
   const bannerCollection = {
     handle: 'reviews',
     title: 'What Our Clients Say',
-    description: 'Here\'s what our clients have to say about their Cullen experience.',
+    description: 'Here\'s what our clients have to say about their Diamond experience.',
     image: {
       url: 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/IMG_9993_800x800.jpg?v=1736201597'
     }

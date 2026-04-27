@@ -1619,7 +1619,6 @@ button.filter-pill-btn:last-child {
   .ins-v2-grid {
     display: flex;
     overflow-x: auto;
-    padding-bottom: 20px;
     scroll-snap-type: x mandatory;
     gap: 12px;
     -webkit-overflow-scrolling: touch;
@@ -2010,7 +2009,7 @@ button.filter-pill-btn:last-child {
   width: 100%;
   background-color: var(--white_color);
   overflow: hidden;
-  padding-top: 0;
+  padding: 0;
 }
 
 .rc-v2-desktop {
@@ -2047,7 +2046,11 @@ button.filter-pill-btn:last-child {
 
 @media (max-width: 767px) {
   .rc-v2 {
-    padding: 0;
+    padding: 3rem 0;
+  }
+
+  .rc-v2.gemstones {
+    padding-top: 0;
   }
 }
 
@@ -2622,6 +2625,7 @@ button.filter-pill-btn:last-child {
   /* Allow simple scroll if overflowing on small screens */
   scrollbar-width: none;
   -ms-overflow-style: none;
+  flex-wrap: wrap;
 }
 
 .sbss-v2-static-grid::-webkit-scrollbar {
@@ -2651,7 +2655,7 @@ button.filter-pill-btn:last-child {
 
   .sbss-v2-static-grid {
     gap: 16px;
-    display: grid;
+    /* display: grid; */
   }
 }
 

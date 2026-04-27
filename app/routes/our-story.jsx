@@ -24,31 +24,31 @@ const OUR_STORY_PAGE_DATA = {
   },
 
   story: {
-    title: 'The Cullen Jewellery Story',
+    title: 'The Diamond Jewellery Story',
     introQuote:
-      `"In 2018, as I hunted for the perfect engagement ring, I could not have imagined where that search would lead. Seven years on, I have the privilege of running a rare kind of thriving business – one with a purpose beyond increasing profits. Cullen Jewellery is committed to creating a better world – by delivering exceptional experiences, empowering people, and protecting the planet. I am proud that we can be part of our clients' joyous moments, while also being a force for positive change." - Jordan Cullen, Founder.`,
+      `"In 2018, as I hunted for the perfect engagement ring, I could not have imagined where that search would lead. Seven years on, I have the privilege of running a rare kind of thriving business – one with a purpose beyond increasing profits. Diamond Jewellery is committed to creating a better world – by delivering exceptional experiences, empowering people, and protecting the planet. I am proud that we can be part of our clients' joyous moments, while also being a force for positive change." - Jordan Diamond, Founder.`,
 
     topParagraphs: [
-      "Cullen Jewellery grew from a real-life love story. Searching for an engagement ring for his now-wife, Jordan Cullen was surprised to discover the exorbitant prices and questionable origins of mined diamonds.",
+      "Diamond Jewellery grew from a real-life love story. Searching for an engagement ring for his now-wife, Jordan Diamond was surprised to discover the exorbitant prices and questionable origins of mined diamonds.",
       "After failing to find a suitable alternative in Melbourne's jewellery stores, he turned to the internet. Stumbling across moissanite and laboratory-grown diamonds, Jordan purchased his first moissanite gemstone from an overseas retailer and, together with a local jeweller, set the gemstone into a custom-designed setting.",
-      "Equipped with his first custom ring and a very happy fiancee, he soon realised that many other couples would benefit from this same process…and so, Cullen Jewellery was born.",
+      "Equipped with his first custom ring and a very happy fiancee, he soon realised that many other couples would benefit from this same process…and so, Diamond Jewellery was born.",
     ],
 
     founder: {
       image: {
         src:
           'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Jordan_Money_Magazine0356-Enhanced-NR_900x900.png?v=1751008208',
-        alt: 'Jordan Cullen',
+        alt: 'Jordan Diamond',
       },
       quote:
-        `"Cullen Jewellery was founded with the goal of bringing accessible and transparent information to the jewellery industry, allowing people to better understand all the options available when purchasing engagement rings and wedding bands."`,
-      name: '– Jordan Cullen',
+        `"Diamond Jewellery was founded with the goal of bringing accessible and transparent information to the jewellery industry, allowing people to better understand all the options available when purchasing engagement rings and wedding bands."`,
+      name: '– Jordan Diamond',
     },
 
     bottomParagraphs: [
-      "Today, Cullen Jewellery is one of the world's leading engagement ring retailers specialising in lab grown diamonds, lab grown sapphires, and moissanite set in designs made for a lifetime.",
-      "Over 10,000 couples from all over the world have trusted Cullen Jewellery with the creation of their engagement rings, wedding bands, and fine jewellery - all expertly and responsibly crafted.",
-      "With showrooms in major cities and personalised virtual appointments available anywhere with an internet connection, Cullen Jewellery is where love grows.",
+      "Today, Diamond Jewellery is one of the world's leading engagement ring retailers specialising in lab grown diamonds, lab grown sapphires, and moissanite set in designs made for a lifetime.",
+      "Over 10,000 couples from all over the world have trusted Diamond Jewellery with the creation of their engagement rings, wedding bands, and fine jewellery - all expertly and responsibly crafted.",
+      "With showrooms in major cities and personalised virtual appointments available anywhere with an internet connection, Diamond Jewellery is where love grows.",
     ],
   },
 
@@ -56,12 +56,12 @@ const OUR_STORY_PAGE_DATA = {
     purpose: {
       title: 'Our Purpose',
       text:
-        'Cullen Jewellery is committed to bringing high-quality, responsible fine jewellery to our clients, wherever they are in the world. Our online shopping experience, virtual consultations, and conveniently located showrooms, both in Australia and internationally, set the benchmark for jewellers in the digital age.',
+        'Diamond Jewellery is committed to bringing high-quality, responsible fine jewellery to our clients, wherever they are in the world. Our online shopping experience, virtual consultations, and conveniently located showrooms, both in Australia and internationally, set the benchmark for jewellers in the digital age.',
     },
     mission: {
       title: 'Our Mission',
       paragraphs: [
-        "At Cullen Jewellery, we're driven to leave a lasting, positive legacy.",
+        "At Diamond Jewellery, we're driven to leave a lasting, positive legacy.",
         'We aim to equip, empower and amaze our clients by delivering accessible, responsible and beautiful fine jewellery through a personalised experience. We care deeply about our clients and the love their jewellery represents.',
       ],
       image: {
@@ -78,21 +78,21 @@ const OUR_STORY_PAGE_DATA = {
         'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Cataleya_Top_Down_Focus_1_400x400.jpg?v=1736142591',
       title: 'Enduring Style',
       text:
-        'Using the best materials and practices, Cullen rings are defined by clean, flowing lines and durable settings that sit comfortably flush on the hand. Known for our signature pointed, eagle-tipped claws, each setting beautifully embodies the refined and enduring aesthetic of a Cullen piece.',
+        'Using the best materials and practices, Diamond rings are defined by clean, flowing lines and durable settings that sit comfortably flush on the hand. Known for our signature pointed, eagle-tipped claws, each setting beautifully embodies the refined and enduring aesthetic of a Diamond piece.',
     },
     {
       image:
-        'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Cullen_WebsiteSection_Web_04_400x400.jpg?v=1736142588',
+        'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Diamond_WebsiteSection_Web_04_400x400_45da0837-7447-48d4-bb91-4a463d11e71f.webp?v=1777283124',
       title: 'Environmental Conscience',
       text:
-        'As part of our commitment to responsibility, Cullen fine jewellery is brought to life using lab-created gemstones which are free from the ethical concerns associated with mining. Through recycling of waste metals and planting trees for every ring sold, Cullen Jewellery’s crafting process keeps the future in mind.',
+        'As part of our commitment to responsibility, Diamond fine jewellery is brought to life using lab-created gemstones which are free from the ethical concerns associated with mining. Through recycling of waste metals and planting trees for every ring sold, Diamond Jewellery’s crafting process keeps the future in mind.',
     },
     {
       image:
         'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/RAJ_Content_Re-Shoot0532_400x400.png?v=1736142590',
       title: 'Social Responsibility',
       text:
-        'There is no reason to compromise on quality or conscience. Cullen exclusively offers responsibly sourced lab created gemstones and carbon neutral lab grown diamonds in all of our engagement rings.',
+        'There is no reason to compromise on quality or conscience. Diamond exclusively offers responsibly sourced lab created gemstones and carbon neutral lab grown diamonds in all of our engagement rings.',
     },
     {
       image:
@@ -103,7 +103,7 @@ const OUR_STORY_PAGE_DATA = {
     },
     {
       image:
-        'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Cullen_ForSelf_Shai_Still_3000px_05_400x400.png?v=1736142591',
+        'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Diamond_ForSelf_Shai_Still_3000px_05_400x400_a4a2dbdb-209e-4674-aab8-4c62141a7266.webp?v=1777283205',
       title: 'Made to Last',
       text:
         'We know that your fine jewellery purchase is an investment and we believe it should stand the test of time. For this reason, we are committed to providing a lifetime manufacturing warranty on all of our rings.',

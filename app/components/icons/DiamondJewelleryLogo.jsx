@@ -1,6 +1,6 @@
-// app/components/icons/CullenJewelleryLogo.jsx
+// app/components/icons/DiamondJewelleryLogo.jsx
 
-const CullenJewelleryLogo = ({
+const DiamondJewelleryLogo = ({
     width = 32,
     height = 32,
     fill = "#ffffff",
@@ -21,4 +21,4 @@ const CullenJewelleryLogo = ({
     </svg>
 );
 
-export default CullenJewelleryLogo;
+export default DiamondJewelleryLogo;

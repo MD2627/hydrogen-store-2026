@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import ringBox from '~/assets/cullen_ring_box.png';
+import ringBox from '~/assets/diamond_ring_box.png';
 import { UvpIconFooter } from '~/components/UvpIconFooter';
 
 const PRODUCT_UVPS = [
@@ -51,7 +51,7 @@ export function NotFound() {
                     </Link>
                 </div>
                 <div className="not-found-image">
-                    <img src={ringBox} alt="Cullen Ring Box" />
+                    <img src={ringBox} alt="Diamond Ring Box" />
                 </div>
             </div>
             <UvpIconFooter data={PRODUCT_UVPS} />

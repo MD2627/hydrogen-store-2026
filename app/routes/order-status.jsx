@@ -16,7 +16,7 @@ export const links = () => [
  * @type {Route.MetaFunction}
  */
 export const meta = () => {
-    return [{ title: 'Order Status | Cullen Jewellery' }];
+    return [{ title: 'Order Status | Diamond Jewellery' }];
 };
 
 /**
@@ -43,7 +43,7 @@ export default function OrderStatus() {
                             Request Your Order Status
                         </h2>
                         <p className="our-jewellers-subtitle">
-                            Please enter your details below to receive the latest update on your Cullen Jewellery order. You will receive an email within 24 hours updating you on the progress of your order.
+                            Please enter your details below to receive the latest update on your Diamond Jewellery order. You will receive an email within 24 hours updating you on the progress of your order.
                         </p>
                     </div>
                     <ContactForm mode="order-status" />

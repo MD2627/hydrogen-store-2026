@@ -310,7 +310,7 @@ export function NewContactBig() {
                     {/* Disclaimer & Submit */}
                     <div className="form-footer">
                         <p className="disclaimer-text-big">
-                            By entering your details and submitting this form, you consent to receive marketing email and text messages (such as promotion codes and cart reminders) from Cullen Jewellery to the email and phone number provided. Consent is not a condition of any purchase. Message and data rates may apply. Message frequency varies. You can unsubscribe at any time.
+                            By entering your details and submitting this form, you consent to receive marketing email and text messages (such as promotion codes and cart reminders) from Diamond Jewellery to the email and phone number provided. Consent is not a condition of any purchase. Message and data rates may apply. Message frequency varies. You can unsubscribe at any time.
                         </p>
                         <p className="disclaimer-links">
                             View our <Link to="/privacy-policy" className="fancy">Privacy Policy</Link>

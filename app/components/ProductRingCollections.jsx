@@ -46,7 +46,7 @@ function normalizeBgColor(bg) {
    Component
 ---------------------------------------- */
 
-export function ProductRingCollections({ title = 'Initiatives', items = [], data = [], variant = 'default' }) {
+export function ProductRingCollections({ title = 'Our Craft Initiatives', items = [], data = [], variant = 'default' }) {
   const sectionRef = useRef(null)
   const swiperRef = useRef(null)
   const progressRef = useRef(null)
@@ -192,7 +192,7 @@ export function ProductRingCollections({ title = 'Initiatives', items = [], data
                     <div className="inner-ssw-right">
                       <div
                         className="section-subtitle prc-subtitle-sticky"
-                        style={{ color: windowWidth > 767 ? indicatorColor : undefined }}
+                        style={{ color: 'var(--black_color)' }}
                       >
                         {title}
                       </div>
@@ -206,10 +206,10 @@ export function ProductRingCollections({ title = 'Initiatives', items = [], data
                         <Link
                           to={item.link}
                           className="ssw-link"
-                          style={{ color: item.linkColor || textColor }}
+                          style={{ color: 'var(--black_color)' }}
                         >
                           {item.linkText || 'Learn More'}
-                          <ArrowIcon color={item.linkColor || textColor} />
+                          <ArrowIcon color='var(--black_color)' />
                         </Link>
                       )}
                     </div>
@@ -222,7 +222,7 @@ export function ProductRingCollections({ title = 'Initiatives', items = [], data
 
         <div
           className="ssw-indicator"
-          style={{ color: indicatorColor, '--track': trackColor }}
+          style={{ color: '#000', '--track': trackColor }}
         >
           <div className="ssw-count">
             <span>{String(activeIndex + 1).padStart(2, '0')}</span>

@@ -24,7 +24,7 @@ export default function FreeResizing() {
                         <div class="section">
                             <h2>Engagement and Wedding</h2>
                             <p>
-                                At Cullen Jewellery, we offer One Free Resize for engagement and wedding rings
+                                At Diamond Jewellery, we offer One Free Resize for engagement and wedding rings
                                 to use within the first 12 months of your ring's completion (subject to eligible
                                 design style/metal type). You can find the resize range for each ring on its specific
                                 product page.
@@ -110,7 +110,7 @@ export default function FreeResizing() {
                             <h2>Free Resizing Terms and Conditions</h2>
                             <ul>
                                 <li>
-                                    Cullen Jewellery offers one-time complimentary postage, both ways, for your
+                                    Diamond Jewellery offers one-time complimentary postage, both ways, for your
                                     one-time free resize within 12 months from your ring's completion date.
                                 </li>
                                 <li>

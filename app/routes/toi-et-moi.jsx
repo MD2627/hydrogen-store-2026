@@ -14,7 +14,7 @@ import 'swiper/css/free-mode';
 import { useEffect } from 'react';
 
 export const meta = () => {
-    return [{ title: 'Toi et Moi | Cullen Jewellery' }];
+    return [{ title: 'Toi et Moi | Diamond Jewellery' }];
 };
 
 export function links() {
@@ -31,7 +31,7 @@ export default function ToiEtMoiPage() {
 
     if (!mounted) return (
         <div className="toi-et-moi-page" style={{ opacity: 0 }}>
-             <StoryCraftBanner
+            <StoryCraftBanner
                 imageSrc={BANNER_DATA.imageSrc}
                 title={BANNER_DATA.title}
                 subtitle={BANNER_DATA.subtitle}
@@ -199,7 +199,7 @@ const TOI_ET_MOI_CONTENT = {
 
 const STEPS_DATA = {
     introTitle: "Seen a Toi et Moi ring that you like? If so, you’ve come to the right place!",
-    introText: "At Cullen Jewellery, we create custom Toi et Moi engagement rings righ here in Melbourne Australia that are based on our clients’ exact requirements. We can craft you dream Toi et Moi in 3 easy steps.",
+    introText: "At Diamond Jewellery, we create custom Toi et Moi engagement rings righ here in Melbourne Australia that are based on our clients’ exact requirements. We can craft you dream Toi et Moi in 3 easy steps.",
     steps: [
         {
             title: "Step 1. Concept",

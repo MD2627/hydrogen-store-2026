@@ -71,7 +71,7 @@ export function ThreeDEffectCard({ stones = [] }) {
                             <div className="certification-face front">
                                 <div className="top-title-card">
                                     <h3 className="certification-brand">
-                                        Cullen Curated
+                                        Diamond Curated
                                     </h3>
                                     <span className="certification-label">
                                         CERTIFICATION
@@ -105,7 +105,7 @@ export function ThreeDEffectCard({ stones = [] }) {
                                 <div className="disclaimer">
                                     <p className="disclaimer-title">Lifetime Manufacturing Warranty:</p>
                                     <p className="disclaimer-text">
-                                        THE SOLE AND EXCLUSIVE REMEDY FOR ANY DEFECT COVERED BY THE LIFETIME MANUFACTURING WARRANTY IS THAT, DURING YOUR LIFETIME, CULLEN JEWELLERY WILL, AT ITS OPTION, REPAIR THE ITEM(S), OR REPLACE WITH ITEM(S) OF EQUAL OR GREATER VALUE, WITHOUT CHARGE TO YOU. ALL IMPLIED
+                                        THE SOLE AND EXCLUSIVE REMEDY FOR ANY DEFECT COVERED BY THE LIFETIME MANUFACTURING WARRANTY IS THAT, DURING YOUR LIFETIME, DIAMOND JEWELLERY WILL, AT ITS OPTION, REPAIR THE ITEM(S), OR REPLACE WITH ITEM(S) OF EQUAL OR GREATER VALUE, WITHOUT CHARGE TO YOU. ALL IMPLIED
                                         WARRANTIES, INCLUDING ANY IMPLIED WARRANTY OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE, ARE HEREBY DISCLAIMED.
                                     </p>
                                 </div>

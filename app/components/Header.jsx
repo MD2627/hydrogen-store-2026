@@ -485,6 +485,13 @@ export function HeaderMenu({
                 to={url}
               >
                 {item.title}
+                {hasDropdown && (
+                  <span className="header-menu-dropdown-arrow">
+                    <svg width="8" height="8" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </span>
+                )}
               </NavLink>
               {hasDropdown && (
                 <div className={`mega-menu mega-menu-${item.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}>
@@ -655,6 +662,13 @@ export function HeaderMenu({
             to={url}
           >
             {item.title}
+            {hasDropdown && (
+              <span className="header-menu-dropdown-arrow">
+                <svg width="8" height="8" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </span>
+            )}
           </NavLink>
         );
       })}

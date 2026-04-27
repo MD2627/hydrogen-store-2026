@@ -731,14 +731,14 @@ const COLLECTION_CONTENT_SECTION = {
             heading: "Ready to Ship Engagement Rings — Forever Starts Now",
             paragraphs: [
                 `Short on time or simply can’t wait to propose? Why wait? Enjoy your moment of love now with our wide collection of ready-to-ship engagement rings. Available in a curated selection of timeless designs, including solitaires, halos and vintage-inspired styles, our ready-to-ship range allows you to find a piece that is both beautiful and meaningful — without the wait.`,
-                `Using premium materials and lab grown gemstones, every Cullen ready-to-ship engagement ring is designed and handcrafted by our expert jewelers. Crafted to perfection, each piece is brought to life with the same care and intention as each made-to-order ring.`,
+                `Using premium materials and lab grown gemstones, every Diamond ready-to-ship engagement ring is designed and handcrafted by our expert jewelers. Crafted to perfection, each piece is brought to life with the same care and intention as each made-to-order ring.`,
                 `Explore our ready-to-ship collection in the US online or begin your journey in one of our showrooms with a <a href="/visit" class="fancy">personalized design consultation</a> — <strong>whatever the process, we're here to help you start your forever with the ring of your dreams.</strong>`
             ],
         },
         {
             heading: "Your Perfect Engagement Ring is Ready-to-Ship",
             paragraphs: [
-                `Cullen specializes in handcrafted engagement rings, made to mark one of life’s most meaningful moments in a style unique to your love.`,
+                `Diamond specializes in handcrafted engagement rings, made to mark one of life’s most meaningful moments in a style unique to your love.`,
                 `Our extensive collection of ready-to-ship engagement rings means you can explore, purchase, and receive a beautiful and meaningful ring within a matter of days. Skip the queue and focus on the proposal now that you have the engagement ring of your dreams, ready and waiting to be worn by the love of your life.`,
                 `Whether you’re after a sleek <a href="/engagement?style=solitaire&metal=18k-yellow-gold" class="fancy">solitaire</a> or a vintage-inspired <a href="/engagement?style=halo&metal=18k-yellow-gold" class="fancy">halo</a> of diamonds, our experienced and warm, knowledgeable client service team can help guide you through every step of the journey — from your first consultation to the final polish.`,
                 `Every ready-to-ship engagement ring is crafted using conflict-free and <a href="/carbon-neutral" class="fancy">carbon neutral</a> lab grown diamonds, moissanite, or sapphires, so you can feel confident that your ring is as responsible as it is exquisite to look at.`,
@@ -746,7 +746,7 @@ const COLLECTION_CONTENT_SECTION = {
             ],
         },
         {
-            heading: "Why Cullen",
+            heading: "Why Diamond",
             paragraphs: [
                 `<strong>Worldwide Express Shipping</strong> No matter where you are in the world, your dream ring will go the distance. We proudly ship our ready to ship engagement rings across the <a href="/shipping" class="fancy">US and internationally</a>, ensuring your handcrafted piece arrives safely and swiftly.`,
                 `<strong>Free Resizing</strong> We offer <a href="/free-resizing" class="fancy">free resizing</a> on all engagement rings to ensure the perfect fit, whether you've chosen one of our ready-to-ship diamond engagement rings or something uniquely your own.`,
@@ -754,44 +754,44 @@ const COLLECTION_CONTENT_SECTION = {
                 `<strong>Tailored Ring Customization</strong> If ready to ship isn’t what you are looking for, we also offer an extensive <a href="/custom-rings" class="fancy">customization</a> service so you can craft a ring that’s truly one of a kind.`,
                 `<strong>Thoughtfully Designed in Melbourne, Australia</strong> Every ring — including our ready to ship engagement rings, is crafted by our expert jewellers with exceptional attention to detail.`,
                 `<strong>Conflict-Free, Consciously Crafted</strong> We offer a variety of unique options, from moissanite radiant cut engagement rings to colored <a href="/engagement-rings/sapphire" class="fancy">sapphire</a> engagement rings, all ready to ship and thoughtfully curated for your forever ring.`,
-                `<strong>Carbon Neutral Gemstones & Trees For The Future</strong> We offset the carbon footprint of all of our gemstones and plant a <a href="/cullen-initiatives" class="fancy">tree</a> for each ring sold, supporting global reforestation.`,
+                `<strong>Carbon Neutral Gemstones & Trees For The Future</strong> We offset the carbon footprint of all of our gemstones and plant a <a href="/diamond-initiatives" class="fancy">tree</a> for each ring sold, supporting global reforestation.`,
                 `<strong>Custom Design Specialists</strong> Whether you're dreaming of <a href="/engagement-rings/ring-thea" class="fancy">solitaire radiant cut diamond engagement rings</a> or an elaborate halo of diamonds, our team specializes in creating jewelry that reflects your personal style.`
             ],
         },
     ],
 };
 const PRODUCT_UVPS = [
-  {
-    link: '/shipping',
-    label: 'Global Insured<br>Delivery',
-    svg: `
+    {
+        link: '/shipping',
+        label: 'Global Insured<br>Delivery',
+        svg: `
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
         <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
         <path d="m3.3 7 8.7 5 8.7-5" />
         <path d="M12 22V12" />
       </svg>
     `,
-  },
-  {
-    link: '/free-resizing',
-    label: 'Perfect Fit<br>Guarantee',
-    svg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="12" r="6" /><circle cx="15" cy="12" r="5" /></svg>`,
-  },
-  {
-    link: '/warranty',
-    label: 'Lifetime<br>Craftsmanship',
-    svg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l9 4.5v9l-9 4.5-9-4.5v-9z" /><path d="M12 9l.3 1.2 1.2.3-1.2.3-.3 1.2-.3-1.2-1.2-.3 1.2-.3z" fill="currentColor" stroke="none"/></svg>`,
-  },
-  {
-    link: '/engagement-rings?metal=yellow_gold',
-    label: 'Bespoke Design<br>Service',
-    svg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="7" /><path d="M21 21l-6-6" /><circle cx="10" cy="10" r="2" stroke-width="1"/></svg>`,
-  },
+    },
+    {
+        link: '/free-resizing',
+        label: 'Perfect Fit<br>Guarantee',
+        svg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="12" r="6" /><circle cx="15" cy="12" r="5" /></svg>`,
+    },
+    {
+        link: '/warranty',
+        label: 'Lifetime<br>Craftsmanship',
+        svg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l9 4.5v9l-9 4.5-9-4.5v-9z" /><path d="M12 9l.3 1.2 1.2.3-1.2.3-.3 1.2-.3-1.2-1.2-.3 1.2-.3z" fill="currentColor" stroke="none"/></svg>`,
+    },
+    {
+        link: '/engagement-rings?metal=yellow_gold',
+        label: 'Bespoke Design<br>Service',
+        svg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="7" /><path d="M21 21l-6-6" /><circle cx="10" cy="10" r="2" stroke-width="1"/></svg>`,
+    },
 ];
 const FAQ_DATA = [
     {
-        question: "ARE ENGAGEMENT RINGS CUSTOMIZABLE AT CULLEN?",
-        answer: `Absolutely. Cullen specializes in custom-designed engagement rings. Choose from a range of center stones, side stones, and precious metals, as well as various settings from three-stone, to halo, and more. Our experienced engagement ring specialists will guide you through the design process to create the perfect engagement ring that reflects your unique personal style.`
+        question: "ARE ENGAGEMENT RINGS CUSTOMIZABLE AT Diamond?",
+        answer: `Absolutely. Diamond specializes in custom-designed engagement rings. Choose from a range of center stones, side stones, and precious metals, as well as various settings from three-stone, to halo, and more. Our experienced engagement ring specialists will guide you through the design process to create the perfect engagement ring that reflects your unique personal style.`
     },
     {
         question: "DO MEN WEAR ENGAGEMENT RINGS?",
@@ -811,7 +811,7 @@ const FAQ_DATA = [
     },
     {
         question: "HOW MUCH DO ENGAGEMENT RINGS COST?",
-        answer: `The price of engagement rings at Cullen varies based on factors such as the chosen gemstone, carat weight, and setting design. We offer a range of designs to suit different budgets, and our team can help you find or create a ring that meets your preferences and price point.`
+        answer: `The price of engagement rings at Diamond varies based on factors such as the chosen gemstone, carat weight, and setting design. We offer a range of designs to suit different budgets, and our team can help you find or create a ring that meets your preferences and price point.`
     },
     {
         question: "HOW DO I CARE FOR MY DIAMOND ENGAGEMENT RING?",
@@ -823,7 +823,7 @@ const FAQ_DATA = [
     },
     {
         question: "WHAT METAL OPTIONS ARE AVAILABLE FOR MY WEDDING AND ENGAGEMENT RINGS?",
-        answer: `Cullen offers a variety of precious metal options for your wedding and engagement rings, including yellow gold, white gold, and platinum. Our team can help you choose the best metal to complement your chosen center stone and desired design.`
+        answer: `Diamond offers a variety of precious metal options for your wedding and engagement rings, including yellow gold, white gold, and platinum. Our team can help you choose the best metal to complement your chosen center stone and desired design.`
     },
     {
         question: "WHAT IS THE LEAD TIME FOR A CUSTOM DIAMOND ENGAGEMENT RING?",
@@ -839,6 +839,6 @@ const FAQ_DATA = [
     },
     {
         question: "DO ENGAGEMENT RINGS COME WITH A WARRANTY?",
-        answer: `All gold and platinum jewelry from Cullen comes with a <a href="/warranty">lifetime manufacturing warranty</a>. This warranty covers any defects in materials or workmanship, giving you peace of mind that your ring is crafted to the highest standards.`
+        answer: `All gold and platinum jewelry from Diamond comes with a <a href="/warranty">lifetime manufacturing warranty</a>. This warranty covers any defects in materials or workmanship, giving you peace of mind that your ring is crafted to the highest standards.`
     }
 ];

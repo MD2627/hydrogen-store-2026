@@ -1,5 +1,5 @@
 /* ======================================================
-   GOOGLE REVIEWS COMPONENT STYLES - CULLEN STYLE
+   GOOGLE REVIEWS COMPONENT STYLES - DIAMOND STYLE
 ====================================================== */
 .reviews .collection-header-banner {
   margin: 0;
@@ -61,7 +61,7 @@
   opacity: 0.8;
 }
 
-/* Header Section - Cullen Style */
+/* Header Section - Diamond Style */
 .google-reviews-header {
   display: flex;
   justify-content: space-between;
@@ -221,7 +221,7 @@
   gap: 16px;
 }
 
-/* Review Card - Cullen Style */
+/* Review Card - Diamond Style */
 .review-card {
   background: #f8f9fa;
   border-radius: 4px;

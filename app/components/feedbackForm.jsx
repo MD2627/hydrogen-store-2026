@@ -64,7 +64,7 @@ export function FeedBackForm() {
         <div className="feedback-form-wrapper">
             <h2 className='ff-n'>Feedback</h2>
             <p className="feedback-intro">
-                At Cullen Jewellery, we're passionate about offering an unparalleled experience
+                At Diamond Jewellery, we're passionate about offering an unparalleled experience
                 in our jewellery and service. We'd be grateful if you'd share your thoughts with us.
                 Your feedback will help us shine brighter!
             </p>

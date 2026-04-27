@@ -360,7 +360,7 @@ export default function VisitShowroom() {
                     />
                 ) : (
                     <img
-                        src="https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Cullen_Sydney_showroom_1300x1300.jpg?v=https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Cullen_Sydney_showroom_1300x1300.jpg?v=1740089318"
+                        src="https://cdn.shopify.com/s/files/1/0610/2194/5934/files/edit-387d08.webp?v=1776071466"
                         alt="Visit Our Showrooms"
                         className="limit-width-banner-image"
                     />
@@ -439,8 +439,8 @@ export default function VisitShowroom() {
                 <div className="page-width">
                     <div className="locations-video-wrapper">
                         <iframe
-                            src="https://www.youtube.com/embed/NwgeU2JD9NA"
-                            title="Visit Cullen Jewellery Showrooms"
+                            src="https://www.youtube.com/"
+                            title="Visit Diamond Jewellery Showrooms"
                             frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowFullScreen

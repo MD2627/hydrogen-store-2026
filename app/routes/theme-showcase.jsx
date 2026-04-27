@@ -50,7 +50,7 @@ const PRESETS = [
     },
     {
         label: "Product Page",
-        img: "https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Cullen_Website_4x5_2500px_03_2_400x400.jpg?v=1741064516",
+        img: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Diamond_Website_4x5_2500px_03_2_400x400_5a43ad52-8e8f-4aec-9e31-03bf487c2d8a.webp?v=1777280234",
         url: "/products/sophia-engagement-ring-round-lab-diamond-platinum"
     },
     {

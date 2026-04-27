@@ -71,6 +71,7 @@
     max-width: 700px;
     padding: 0 4rem;
     width: 100%;
+    color: var(--black_color);
 }
 
 .ssw-content {
@@ -82,15 +83,14 @@
     transition: background-color 0.6s ease, color 0.6s ease;
 }
 
-.ssw-content h2 {
-    font-family: var(--font_family_a);
+/* .ssw-content .section-title {
     font-size: 32.5px;
-    font-weight: 300;
-    line-height: 1.1;
     margin: 0 0 14px;
-}
+} */
 
-.ssw-content p {
+.ssw-content p,
+.ssw-content .prc-item-description p,
+.ssw-content .prc-item-description {
     font-family: var(--font_family_c);
     font-size: var(--min_font_size);
     font-weight: 300;
@@ -128,7 +128,7 @@ a.ssw-link:hover svg {
 
 .ssw-indicator {
     position: absolute;
-    bottom: 40px;
+    bottom: 3rem;
     right: 40px;
     z-index: 40;
 }
@@ -190,9 +190,9 @@ a.ssw-link:hover svg {
     }
 
     .ssw-indicator {
-        top: 20px;
+        /* top: 20px;
         right: 20px;
-        bottom: auto;
+        bottom: auto; */
     }
 
     .ssw-count {

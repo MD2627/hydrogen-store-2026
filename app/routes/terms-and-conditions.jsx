@@ -16,7 +16,7 @@ export const links = () => [
  * @type {Route.MetaFunction}
  */
 export const meta = () => {
-  return [{ title: 'Terms and Conditions | Cullen Jewellery' }];
+  return [{ title: 'Terms and Conditions | Diamond Jewellery' }];
 };
 
 /**
@@ -34,7 +34,7 @@ export default function TermsAndConditions() {
   return (
     <div className="terms-and-conditions">
       <StoryCraftBanner
-        imageSrc="https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Cullen_Sydney_showroom_1300x1300.jpg?v=1740089318"
+        imageSrc="https://cdn.shopify.com/s/files/1/0610/2194/5934/files/edit-387d08.webp?v=1776071466"
         title="Terms and Conditions"
         subtitle="Please read our terms and conditions carefully."
         extraClass="story-craft-banner--terms"
@@ -101,13 +101,13 @@ const ABOUT_THE_WEBSITE = {
   heading: 'About the Website',
   content: `
      <p>
-      These Terms and Conditions apply to the Cullen Jewellery website located at www.cullenjewellery.com, and all associated websites linked to www.cullenjewellery.com by Cullen Investment Group Pty Ltd ('the Site'). 
+      These Terms and Conditions apply to the Diamond Jewellery website located at https://hydrogen-store-2026.pages.dev/, and all associated websites linked to https://hydrogen-store-2026.pages.dev/ by Diamond Investment Group Pty Ltd ('the Site'). 
       Please read these Terms and Conditions (the 'Terms and Conditions') carefully.
     </p>
     <ul>
       <li>By using the Site, you agree to be bound by these Terms and Conditions.</li>
-      <li>These Terms and Conditions govern your use of, and any purchase from, the Site, and constitute an agreement between you and Cullen Jewellery.</li>
-      <li>Cullen Jewellery reserves the right to change any of these Terms and Conditions or any policy of the Site at any time. Any change will be effective immediately from their date of publication.</li>
+      <li>These Terms and Conditions govern your use of, and any purchase from, the Site, and constitute an agreement between you and Diamond Jewellery.</li>
+      <li>Diamond Jewellery reserves the right to change any of these Terms and Conditions or any policy of the Site at any time. Any change will be effective immediately from their date of publication.</li>
       <li>You accept these Terms and Conditions by remaining on the Site.</li>
       <li>If you do not agree to these Terms and Conditions, you must stop using the Site.</li>
     </ul>
@@ -162,7 +162,7 @@ const INFORMATION_ON_SITE = {
   heading: 'Information On Our Site',
   content: `
     <p>
-      At Cullen Jewellery, we make every attempt to ensure that our online catalogue is as accurate and complete as possible. In order to give you the opportunity to view our products in great detail, some products may appear larger or smaller than their actual size in our photographs, and since every computer monitor is set differently, colour and size may vary slightly.
+      At Diamond Jewellery, we make every attempt to ensure that our online catalogue is as accurate and complete as possible. In order to give you the opportunity to view our products in great detail, some products may appear larger or smaller than their actual size in our photographs, and since every computer monitor is set differently, colour and size may vary slightly.
     </p>
     <ul>
       <li>Moissanite stones are sold and described in millimetres (mm). All carat weights are quoted as approximate diamond equivalent carat weights.</li>
@@ -174,7 +174,7 @@ const PRIVACY_POLICY = {
   heading: 'Privacy Policy',
   content: `
     <p>
-      Please refer to our Privacy Policy for information on how Cullen Jewellery collects, uses, and discloses personally identifiable information from its clients.
+      Please refer to our Privacy Policy for information on how Diamond Jewellery collects, uses, and discloses personally identifiable information from its clients.
     </p>
   `
 };
@@ -183,13 +183,13 @@ const COPYRIGHT = {
   heading: 'Copyright and Intellectual Property',
   content: `
     <p>
-      The Site and all content, including, but not limited to, the Cullen Jewellery logo, and all designs, text, graphics, logos, button icons, videos, sound files and software pictures, (the 'Content') used on or incorporated into the Site and in-store, and the selection, arrangement and/or integration of all such Content are either registered trademarks, trade names, service marks, copyrights or otherwise protected property of Cullen Jewellery, or used under license and all rights thereto are specifically reserved.
+      The Site and all content, including, but not limited to, the Diamond Jewellery logo, and all designs, text, graphics, logos, button icons, videos, sound files and software pictures, (the 'Content') used on or incorporated into the Site and in-store, and the selection, arrangement and/or integration of all such Content are either registered trademarks, trade names, service marks, copyrights or otherwise protected property of Diamond Jewellery, or used under license and all rights thereto are specifically reserved.
     </p>
     <ul>
-      <li>The Cullen Jewellery Site, purchase services, jewellery designs and all Cullen Jewellery related products are subject to copyright. The Site’s material is protected by Australian copyright laws and international treaties.</li>
-      <li>Unless otherwise indicated, all Site content is owned and controlled by Cullen Jewellery and may not be copied, imitated or used, in whole or in part, without the prior written permission of Cullen Jewellery or the applicable trademark holder.</li>
-      <li>You may not copy, use, download, modify, frame, publish, transmit, transfer or sell, license, reproduce, create derivative works from, distribute or display the Content or third party content for any purpose without the prior written permission of Cullen Jewellery.</li>
-      <li>All other trademarks, registered trademarks, product names and Cullen Jewellery names or logos mentioned in our Site are the property of their respective owners.</li>
+      <li>The Diamond Jewellery Site, purchase services, jewellery designs and all Diamond Jewellery related products are subject to copyright. The Site’s material is protected by Australian copyright laws and international treaties.</li>
+      <li>Unless otherwise indicated, all Site content is owned and controlled by Diamond Jewellery and may not be copied, imitated or used, in whole or in part, without the prior written permission of Diamond Jewellery or the applicable trademark holder.</li>
+      <li>You may not copy, use, download, modify, frame, publish, transmit, transfer or sell, license, reproduce, create derivative works from, distribute or display the Content or third party content for any purpose without the prior written permission of Diamond Jewellery.</li>
+      <li>All other trademarks, registered trademarks, product names and Diamond Jewellery names or logos mentioned in our Site are the property of their respective owners.</li>
     </ul>
   `
 };
@@ -198,7 +198,7 @@ const INDEMNIFICATION = {
   heading: 'Indemnification',
   content: `
     <p>
-      You agree to indemnify Cullen Jewellery, its affiliates, employees, independent contractors, service providers and consultants, from and against:
+      You agree to indemnify Diamond Jewellery, its affiliates, employees, independent contractors, service providers and consultants, from and against:
     </p>
     <ul>
       <li>any claims, damages, costs, liabilities, and expenses (including, but not limited to, reasonable attorneys' fees) arising out of or related to any Content you post, store or otherwise transmit on or through our Site or your use of or inability to use our Site;</li>
@@ -212,11 +212,11 @@ const SUBMISSIONS = {
   heading: 'Submissions',
   content: `
     <p>
-      You acknowledge and agree that any materials, including but not limited to questions, comments, suggestions, ideas, plans, notes, drawings, original or creative materials or other information, regarding this site, Cullen Jewellery, or our products or services that are provided by you to Cullen Jewellery are non-confidential and shall become the sole property of Cullen Jewellery.
+      You acknowledge and agree that any materials, including but not limited to questions, comments, suggestions, ideas, plans, notes, drawings, original or creative materials or other information, regarding this site, Diamond Jewellery, or our products or services that are provided by you to Diamond Jewellery are non-confidential and shall become the sole property of Diamond Jewellery.
     </p>
     <ul>
-      <li>Cullen Jewellery will own exclusive rights, including all intellectual property rights, and will be entitled to the unrestricted use and dissemination of these materials for any purpose, commercial or otherwise, without acknowledgement or compensation to you.</li>
-      <li>You grant Cullen Jewellery and its affiliates and sublicensees the right to use the name that you submit in connection with such content, if they choose.</li>
+      <li>Diamond Jewellery will own exclusive rights, including all intellectual property rights, and will be entitled to the unrestricted use and dissemination of these materials for any purpose, commercial or otherwise, without acknowledgement or compensation to you.</li>
+      <li>You grant Diamond Jewellery and its affiliates and sublicensees the right to use the name that you submit in connection with such content, if they choose.</li>
       <li>You represent and warrant that: (a) you own and control all of the rights to the content that you submit, or that you otherwise have the right to submit such content to this site; (b) the content is accurate and not misleading; and (c) use and posting of the content you supply will not violate any rights or cause injury to any person or entity.</li>
     </ul>
   `
@@ -227,7 +227,7 @@ const CUSTOM_JEWELLERY = {
   content: `
     <ul>
       <li>Please choose carefully when purchasing a custom designed piece of fine jewellery. Since all custom jewellery is made to order, they cannot be returned or refunded.</li>
-      <li>All custom-made jewellery designs, images and videos created by Cullen Jewellery are the intellectual property of Cullen Jewellery and may be reproduced at our discretion.</li>
+      <li>All custom-made jewellery designs, images and videos created by Diamond Jewellery are the intellectual property of Diamond Jewellery and may be reproduced at our discretion.</li>
     </ul>
   `
 };

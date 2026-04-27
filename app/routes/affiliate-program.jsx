@@ -4,7 +4,7 @@ import { ProductFAQ } from '~/components/ProductFAQ';
 import { UvpIconFooter } from '~/components/UvpIconFooter';
 
 export const meta = () => {
-    return [{ title: 'Join The Cullen Affiliate Program' }];
+    return [{ title: 'Join The Diamond Affiliate Program' }];
 };
 
 export async function loader() {
@@ -69,13 +69,13 @@ export default function AffiliatePage() {
 
 const BANNER_DATA = {
     imageSrc: "https://cdn.shopify.com/s/files/1/0801/7317/0906/files/Bella_Side_1_2000x2000_4c03ff88-bfeb-4388-97d8-8a90228590b2.webp?v=1769843716",
-    title: "Join The Cullen Affiliate Program",
+    title: "Join The Diamond Affiliate Program",
     subtitle: "We believe in great partnerships.",
     extraClass: 'affiliate-banner',
 };
 
 const CONTENT_DATA = {
-    intro: "At Cullen, collaboration is part of everything we do. Now, we’re inviting you to be part of it. If you’re a premium lifestyle, fashion publisher or creator, our affiliate program offers a simple way to earn commission when your audience purchases from Cullen.",
+    intro: "At Diamond, collaboration is part of everything we do. Now, we’re inviting you to be part of it. If you’re a premium lifestyle, fashion publisher or creator, our affiliate program offers a simple way to earn commission when your audience purchases from Diamond.",
     sections: [
         {
             title: "What’s in it for you?",
@@ -88,7 +88,7 @@ const CONTENT_DATA = {
             ]
         },
         {
-            title: "How do you get started as a Cullen affiliate?",
+            title: "How do you get started as a Diamond affiliate?",
             text: "All you have to do is help us out by placing our ads, banners, and links on your site and social media accounts and promoting us in accordance with our Terms and Conditions."
         },
         {
@@ -97,7 +97,7 @@ const CONTENT_DATA = {
         }
     ],
     ctaText: "APPLY NOW",
-    ctaLink: "https://cullenjewellery.com/affiliate-application",
+    ctaLink: "/",
     contactTitle: "Have questions about the program?",
     contactText: "Send an email to:",
     email: "contact@hopiant.com"
@@ -105,24 +105,24 @@ const CONTENT_DATA = {
 
 const FAQ_DATA = [
     {
-        question: "What is the Cullen Affiliate Program?",
-        answer: "The Cullen Affiliate Program is designed for premium lifestyle, fashion publishers, and creators who want to earn commission by promoting Cullen Jewellery. Affiliates earn a competitive commission on net sales generated through their unique links, and can access exclusive banners, assets, and collaborative opportunities."
+        question: "What is the Diamond Affiliate Program?",
+        answer: "The Diamond Affiliate Program is designed for premium lifestyle, fashion publishers, and creators who want to earn commission by promoting Diamond Jewellery. Affiliates earn a competitive commission on net sales generated through their unique links, and can access exclusive banners, assets, and collaborative opportunities."
     },
     {
-        question: "How much commission can I earn as a Cullen affiliate?",
+        question: "How much commission can I earn as a Diamond affiliate?",
         answer: "Affiliates receive a competitive commission of 6% on net sales (excluding shipping, taxes, and returns). Commissions are eligible on sales made within 30 days of a visitor clicking your unique link."
     },
     {
         question: "What promotional materials and support will I get as an affiliate?",
-        answer: "As a Cullen affiliate, you’ll receive:<br/><ul><li>Ready-to-use banners and assets for capsule and product launches.</li><li>Access to real-time sales tracking and reporting.</li><li>Opportunities for additional collaborations, including giveaways, events, and offline activities.</li></ul>"
+        answer: "As a Diamond affiliate, you’ll receive:<br/><ul><li>Ready-to-use banners and assets for capsule and product launches.</li><li>Access to real-time sales tracking and reporting.</li><li>Opportunities for additional collaborations, including giveaways, events, and offline activities.</li></ul>"
     },
     {
-        question: "How do I join the Cullen Affiliate Program?",
+        question: "How do I join the Diamond Affiliate Program?",
         answer: "Joining is easy:<br/><ul><li>Click APPLY NOW and fill out the application.</li><li>We will review your application to see if it’s the right fit for both of us.</li><li>We’ll email you to let you know the outcome.</li></ul>"
     },
     {
         question: "Who can I contact if I have questions about the affiliate program?",
-        answer: "If you have any questions or need assistance regarding the Cullen Affiliate Program, you can reach out via email at <a href='mailto:contact@hopiant.com'>contact@hopiant.com</a>"
+        answer: "If you have any questions or need assistance regarding the Diamond Affiliate Program, you can reach out via email at <a href='mailto:contact@hopiant.com'>contact@hopiant.com</a>"
     }
 ];
 

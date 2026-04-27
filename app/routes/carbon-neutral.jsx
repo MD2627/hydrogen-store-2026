@@ -141,7 +141,7 @@ const FAQ_DATA = [
         question: 'How much does it cost to make my gemstone carbon-neutral?',
         answer: (
             <p>
-                You don’t pay anything extra. Cullen covers the entire cost of making
+                You don’t pay anything extra. Diamond covers the entire cost of making
                 your gemstone carbon-neutral.
             </p>
         ),
@@ -171,8 +171,8 @@ const FAQ_DATA = [
                     <li>Raw materials</li>
                     <li>Transport of those materials</li>
                     <li>Growth, cutting, and polishing</li>
-                    <li>Shipping the gemstone to Cullen</li>
-                    <li>Cullen operations</li>
+                    <li>Shipping the gemstone to Diamond</li>
+                    <li>Diamond operations</li>
                     <li>A margin of safety to cover uncertainty</li>
                 </ul>
 
@@ -189,7 +189,7 @@ const FAQ_DATA = [
         answer: (
             <p>
                 We are proud to say yes! Every lab grown diamond, moissanite, and
-                sapphire sold by Cullen is carbon-neutral, A1-A3 cradle-to-gate.
+                sapphire sold by Diamond is carbon-neutral, A1-A3 cradle-to-gate.
             </p>
         ),
     },
@@ -270,7 +270,7 @@ const FAQ_DATA = [
                 </p>
 
                 <p>
-                    At Cullen, we go a step further by ensuring the entire cradle-to-gate
+                    At Diamond, we go a step further by ensuring the entire cradle-to-gate
                     (A1-A3) carbon footprint of our lab grown diamonds is measured and
                     fully offset. That means the CO₂ impact of the materials, energy,
                     cutting, and transport used to create the stone is balanced out,

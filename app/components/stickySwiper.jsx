@@ -177,14 +177,14 @@ export function StickySwiper({ data = [] }) {
                     }}
                   >
                     <div className="inner-ssw-right">
-                      <h2>{slide.title}</h2>
+                      <h2 className="section-title">{slide.title}</h2>
                       <p>{slide.text}</p>
 
                       {slide.link && slide.linkText && (
                         <Link
                           to={slide.link}
                           className="ssw-link"
-                          style={{ color: slide.linkColor || slide.textColor }}
+                          style={{ color: 'var(--black_color)' || slide.textColor }}
                         >
                           {slide.linkText}
                           <svg
@@ -214,7 +214,7 @@ export function StickySwiper({ data = [] }) {
 
         <div
           className="ssw-indicator"
-          style={{ color: indicatorColor, '--track': trackColor }}
+          style={{ color: '#000', '--track': trackColor }}
         >
           <div className="ssw-count">
             <span>{String(activeIndex + 1).padStart(2, '0')}</span>

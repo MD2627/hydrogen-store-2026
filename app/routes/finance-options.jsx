@@ -69,7 +69,7 @@ export default function FinanceOptions() {
 ================================ */
 const MAIN_HEADING = {
   heading: 'Finance Options',
-  description: `At Cullen, we offer a range of flexible finance options to make owning your dream fine jewellery piece stress-free and straightforward. You can choose from our trusted “buy now, pay later” partners below to make your dream piece a reality. These services allow you to spread your payments over time, and we can start crafting your order once your payment or finance approval is confirmed.`
+  description: `At Diamond, we offer a range of flexible finance options to make owning your dream fine jewellery piece stress-free and straightforward. You can choose from our trusted “buy now, pay later” partners below to make your dream piece a reality. These services allow you to spread your payments over time, and we can start crafting your order once your payment or finance approval is confirmed.`
 };
 const FINANCE_DATA = {
   AU: [

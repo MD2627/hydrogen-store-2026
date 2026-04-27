@@ -6,7 +6,7 @@ import { ShopByStyle } from '~/components/ShopByStyle';
 import { Link } from 'react-router';
 
 export const meta = () => {
-    return [{ title: 'Jewellery Care | Cullen Jewellery' }];
+    return [{ title: 'Jewellery Care | Diamond Jewellery' }];
 };
 
 export function links() {
@@ -180,7 +180,7 @@ const RING_FAQS_DATA = [
     },
     {
         question: "COMPLIMENTARY ULTRASONIC CLEANING",
-        answer: `<p>At Cullen Jewellery, we love aftercare. That’s why we offer lifetime complimentary ultrasonic cleaning for any ring purchased from us. This service is available via a quick 15-minute drop-off appointment and is done on the spot, so you can have your beautiful ring back looking nice and sparkly without having to wait weeks.</p>
+        answer: `<p>At Diamond Jewellery, we love aftercare. That’s why we offer lifetime complimentary ultrasonic cleaning for any ring purchased from us. This service is available via a quick 15-minute drop-off appointment and is done on the spot, so you can have your beautiful ring back looking nice and sparkly without having to wait weeks.</p>
         <p>Ultrasonic cleaning is a process that uses high-frequency sonic waves to gently lift and remove dirt, grime, and contaminants from your precious jewellery and is usually more effective than just scrubbing. It can be done as frequently as necessary, but your sales consultant will always check to make sure no stones are loose before proceeding!</p>
         <p>Tip: If you don’t have time to arrange a full polish before your wedding or engagement party, this is a great way to give your engagement ring a quick refresher and get it clean again!</p>`
     }
@@ -210,7 +210,7 @@ const WHEN_TO_REMOVE_DATA = {
             svg: `<svg id="Layer_4" data-name="Layer 4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 426.24 379.2" class="care-svg-icon"><defs><style>.cls-1{fill:none;stroke:#1f7560;stroke-miterlimit:10;stroke-width:3px}</style></defs><path class="cls-1" d="M327.04 329.16c-81.38-7.32-144.42-66.07-144.42-137.81S245.65 60.47 327.04 53.16c-24.59-15.09-53.53-23.79-84.49-23.79-89.35 0-161.79 72.44-161.79 161.79s72.44 161.79 161.79 161.79c30.97 0 59.9-8.7 84.49-23.79ZM75.29 10.92l4.73 22.31a6.014 6.014 0 0 0 4.16 4.51l14.54 4.34c.33.1.34.56.02.68L83.77 48.1a5.785 5.785 0 0 0-3.7 4.19L75.3 73.82c-.04.16-.26.16-.3 0l-4.77-21.88a5.364 5.364 0 0 0-3.49-3.93L51.5 42.73c-.3-.1-.29-.53.02-.62l15-4.37a5.468 5.468 0 0 0 3.83-4.15l4.67-22.66c.03-.14.23-.14.26 0ZM45.03 77.93l3.28 15.47a6.014 6.014 0 0 0 4.16 4.51l9.62 2.87c.33.1.34.56.02.68l-10.05 3.59a5.785 5.785 0 0 0-3.7 4.19l-3.32 14.98c-.04.16-.26.16-.3 0l-3.33-15.29a5.364 5.364 0 0 0-3.49-3.93l-10.31-3.57c-.3-.1-.29-.53.02-.62l10.05-2.93a5.468 5.468 0 0 0 3.83-4.15l3.26-15.8c.03-.14.23-.14.26 0ZM375.57 279.53l6.09 27.22a6.018 6.018 0 0 0 4.23 4.47l19.22 5.43c.34.1.35.57.02.68l-19.64 6.63a5.794 5.794 0 0 0-3.78 4.16l-6.13 26.23c-.04.16-.26.16-.3 0l-6.12-26.62a5.343 5.343 0 0 0-3.56-3.9l-19.92-6.53c-.31-.1-.3-.54.01-.63l19.72-5.44a5.46 5.46 0 0 0 3.89-4.11l6.01-27.59c.03-.14.23-.14.26 0Z"></path></svg>`
         }
     ],
-    proTip: "Pro Tip: Always make sure to keep your ring in a safe place when you're not wearing it. We recommend storing it in your Cullen Jewellery pouch or ring box and leaving it somewhere that is easy to remember!",
+    proTip: "Pro Tip: Always make sure to keep your ring in a safe place when you're not wearing it. We recommend storing it in your Diamond Jewellery pouch or ring box and leaving it somewhere that is easy to remember!",
     button: {
         label: "LEARN MORE ABOUT RING CARE",
         link: "/education/ring-care"
@@ -226,7 +226,7 @@ const LIFETIME_BANNER_DATA = {
 const CARE_PROMISE_DATA = {
     title: "Our Promise To You",
     paragraphs: [
-        "We know your ring is precious to you. At Cullen Jewellery, our commitment is to craft high-quality rings that last a lifetime.",
+        "We know your ring is precious to you. At Diamond Jewellery, our commitment is to craft high-quality rings that last a lifetime.",
         "That's why we offer a complimentary <a href='/warranty'>Limited Lifetime Manufacturing Warranty</a> from the date of purchase against all manufacturing defects on all gold and platinum jewellery.",
         "We will repair or replace any faults deemed to be manufacturing defects at no charge, including covering the cost of return shipping and postage."
     ]
@@ -234,21 +234,21 @@ const CARE_PROMISE_DATA = {
 
 const READY_FOR_NEXT_STEP_DATA = {
     title: "Ready For The Next Step?",
-    description: "Did you know that at Cullen Jewellery, we customise all our wedding bands to ensure they fit perfectly with your Cullen Engagement Ring? No matter if your ring is high or low-set, we'll have a wedding band to match.",
+    description: "Did you know that at Diamond Jewellery, we customise all our wedding bands to ensure they fit perfectly with your Diamond Engagement Ring? No matter if your ring is high or low-set, we'll have a wedding band to match.",
     items: [
         {
             name: "YUKI",
-            image: "https://cdn.shopify.com/s/files/1/0801/7317/0906/files/05_Cullen_ForSelf_Yuki_Still_3000px_01_600x600_48c01964-0bf4-4e46-b963-06936627dde2.webp?v=1770037040",
+            image: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/05_Diamond_ForSelf_Yuki_Still_3000px_01_600x600_48c01964-0bf4-4e46-b963-06936627dde2.webp?v=1777282859",
             link: "/products/ring-yuki"
         },
         {
             name: "PETER",
-            image: "https://cdn.shopify.com/s/files/1/0801/7317/0906/files/Cullen_Peter_4x5_02_600x600_9bfad6f1-6164-4592-9ee3-31c50144112a.webp?v=1770037041",
+            image: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Diamond_Peter_4x5_02_600x600_9bfad6f1-6164-4592-9ee3-31c50144112a.webp?v=1777282936",
             link: "/products/ring-peter"
         },
         {
             name: "FRANCA",
-            image: "https://cdn.shopify.com/s/files/1/0801/7317/0906/files/05_Cullen_ForSelf_Franca_Still_3000px_01_300x300_4b6c2c07-6773-4d33-9a07-2a94dfd542ca.avif?v=1770037040",
+            image: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/05_Diamond_ForSelf_Franca_Still_3000px_01_300x300_4b6c2c07-6773-4d33-9a07-2a94dfd542ca.avif?v=1777283019",
             link: "/products/ring-franca"
         },
         {
@@ -258,7 +258,7 @@ const READY_FOR_NEXT_STEP_DATA = {
         },
         {
             name: "CALVIN",
-            image: "https://cdn.shopify.com/s/files/1/0801/7317/0906/files/Cullen_Calvin_4x5_01_300x300_9fa06c04-3ce5-473b-b5f0-b061bc137e96.avif?v=1770037040",
+            image: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/DiamondCalvin_4x5_01_300x300_9fa06c04-3ce5-473b-b5f0-b061bc137e96.avif?v=1777283074",
             link: "/products/ring-calvin"
         }
     ]
@@ -299,7 +299,7 @@ const FAQ_DATA = [
     },
     {
         question: "What to do if my jewellery is damaged?",
-        answer: "Bring it to a professional jeweller for repair to avoid further damage. For all Cullen Jewellery products, please kindly return your ring back to our Melbourne workshop. You can contact <a href='mailto:contact@hopiant.com'>contact@hopiant.com</a> for further information."
+        answer: "Bring it to a professional jeweller for repair to avoid further damage. For all Diamond Jewellery products, please kindly return your ring back to our Melbourne workshop. You can contact <a href='mailto:contact@hopiant.com'>contact@hopiant.com</a> for further information."
     }
 ];
 

@@ -123,12 +123,12 @@ const PAGE_FAQ_ONE = [
     question: 'What type of warranty do I receive?',
     answer: (
       <p>
-        Cullen Jewellery offers a Lifetime Manufacturing Warranty on all our
+        Diamond Jewellery offers a Lifetime Manufacturing Warranty on all our
         rings, including engagement, wedding and fashion rings, giving you
         confidence and peace of mind with every purchase. For all other fine
         jewellery pieces, such as earrings, chains, pendants, bracelets and more,
         we provide a 2-Year Manufacturer Warranty. View our full warranty details{' '}
-        <Link className="fancy" to="/warranty" title="Cullen Jewellery Lifetime Warranty">
+        <Link className="fancy" to="/warranty" title="Diamond Jewellery Lifetime Warranty">
           here
         </Link>
         .
@@ -141,7 +141,7 @@ const PAGE_FAQ_ONE = [
     answer: (
       <>
         <p>
-          Yes! At Cullen Jewellery, we offer free international shipping on all
+          Yes! At Diamond Jewellery, we offer free international shipping on all
           orders, including those for the perfect diamond engagement ring. Shop
           online and add your chosen piece to your shopping bag with ease.
         </p>
@@ -153,7 +153,7 @@ const PAGE_FAQ_ONE = [
         <p>
           Most of our orders are sent as DDP (Delivery Duty Paid – this means
           import duties &amp; taxes are covered). However, there may be cases
-          where you may have to pay local import taxes and duties, which Cullen
+          where you may have to pay local import taxes and duties, which Diamond
           Jewellery does not cover, as some countries do not allow us to pay them
           as the sender. For more details, please check our{' '}
           <Link className="fancy" to="/shipping">
@@ -184,7 +184,7 @@ const PAGE_FAQ_ONE = [
     question: 'How do I find out my ring size?',
     answer: (
       <p>
-        At Cullen Jewellery, we offer free ring sizers for our entire range.{' '}
+        At Diamond Jewellery, we offer free ring sizers for our entire range.{' '}
         <Link className="fancy" to="/ring-size-guidance" title="Free Ring Sizer">
           Measure your ring size
         </Link>{' '}
@@ -216,7 +216,7 @@ const PAGE_FAQ_ONE = [
     question: 'What payment methods do you accept?',
     answer: (
       <p>
-        At Cullen Jewellery, we accept payments via direct debit or card.
+        At Diamond Jewellery, we accept payments via direct debit or card.
         Additionally, depending on your location, you can pay via PayPal and
         local “buy now, pay later” (BNPL) services such as Humm, Zip, Afterpay, or
         Klarna. All online and showroom orders require payment to begin
@@ -229,7 +229,7 @@ const PAGE_FAQ_ONE = [
     question: 'Can I return a product?',
     answer: (
       <p>
-        At Cullen Jewellery, we value the craftsmanship and dedication involved
+        At Diamond Jewellery, we value the craftsmanship and dedication involved
         in making each unique piece of special occasion jewellery. Therefore, we
         do not offer refunds, returns or exchanges unless the item is faulty or
         damaged. Please see our{' '}
@@ -246,7 +246,7 @@ const PAGE_FAQ_ONE = [
     answer: (
       <>
         <p>
-          Absolutely! At Cullen Jewellery, we offer{' '}
+          Absolutely! At Diamond Jewellery, we offer{' '}
           <b>One Free Resize</b> for engagement and wedding rings to use within
           the first 12 months of your ring&apos;s completion (subject to eligible
           design style/metal type).
@@ -316,7 +316,7 @@ const PAGE_FAQ_TWO = [
 
   {
     question:
-      'How does Cullen Jewellery ensure a seamless purchase experience?',
+      'How does Diamond Jewellery ensure a seamless purchase experience?',
     answer: (
       <p>
         We specialise in lab grown diamond engagement rings. Our collection,
@@ -450,7 +450,7 @@ const PAGE_FAQ_TWO = [
     question: 'Do you also sell mined diamonds?',
     answer: (
       <p>
-        No, we do not sell mined diamonds. At Cullen Jewellery, we are
+        No, we do not sell mined diamonds. At Diamond Jewellery, we are
         committed to offering 100% conflict-free diamonds. Lab created
         diamonds are fully traceable, allowing us to deliver ethical and
         environmentally-friendly jewellery every time.
@@ -460,7 +460,7 @@ const PAGE_FAQ_TWO = [
 
   {
     question:
-      'Why should I purchase a lab grown diamond ring from Cullen Jewellery?',
+      'Why should I purchase a lab grown diamond ring from Diamond Jewellery?',
     answer: (
       <>
         <p>
@@ -474,7 +474,7 @@ const PAGE_FAQ_TWO = [
         <p>
           Our certified lab grown diamonds are conflict-free, eco-friendly,
           and available in a wide range of shapes and settings. When you
-          purchase a Cullen Jewellery diamond engagement ring or wedding band,
+          purchase a Diamond Jewellery diamond engagement ring or wedding band,
           you can be confident you are receiving a truly special piece,
           complete with gem certification identifying it as legitimate.
         </p>
@@ -596,18 +596,18 @@ const PAGE_FAQ_THREE = [
 
   {
     question:
-      'How can I find the perfect moissanite engagement ring at Cullen Jewellery?',
+      'How can I find the perfect moissanite engagement ring at Diamond Jewellery?',
     answer: (
       <p>
         We make it easy to find your ideal moissanite engagement ring. Request a
         free ring sizer to determine your correct ring size, and browse our wide
         selection of moissanite engagement rings on our website. To create a
         custom ring design, schedule an appointment with our expert team. Our
-        specialists will assist you through the entire design process. Cullen
+        specialists will assist you through the entire design process. Diamond
         Jewellery offers exceptional value{' '}
         <Link
           className="fancy"
-          to="/education/why-cullen/found-a-better-price"
+          to="/education/why-diamond/found-a-better-price"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -721,11 +721,11 @@ const PAGE_FAQ_THREE = [
 
   {
     question:
-      'Why should I purchase a moissanite engagement ring from Cullen Jewellery?',
+      'Why should I purchase a moissanite engagement ring from Diamond Jewellery?',
     answer: (
       <>
         <p>
-          Cullen Jewellery offers a wide selection of moissanite engagement
+          Diamond Jewellery offers a wide selection of moissanite engagement
           rings crafted for durability, sparkle and timeless beauty. Our expert
           jewellers combine stunning stones with beautiful settings to bring
           your vision to life.
@@ -775,7 +775,7 @@ const PAGE_FAQ_FOUR = [
     question: 'What colours of lab grown sapphires are available?',
     answer: (
       <p>
-        At Cullen Jewellery, we offer an exquisite palette of lab grown sapphires
+        At Diamond Jewellery, we offer an exquisite palette of lab grown sapphires
         in blue, pink, purple, and red. Trace elements like iron, titanium, and
         chromium influence the vibrant hues of each sapphire.
       </p>
@@ -838,7 +838,7 @@ const PAGE_FAQ_FOUR = [
       'Can I incorporate lab grown sapphires into existing jewellery designs?',
     answer: (
       <p>
-        Absolutely! Cullen Jewellery offers a stunning range of lab grown
+        Absolutely! Diamond Jewellery offers a stunning range of lab grown
         sapphires that can be seamlessly incorporated into your existing
         jewellery designs. Whether you need loose stones or completed pieces,
         we&apos;ve got you covered.
@@ -859,10 +859,10 @@ const PAGE_FAQ_FOUR = [
   },
 
   {
-    question: 'What makes Cullen Jewellery’s lab grown sapphires unique?',
+    question: 'What makes Diamond Jewellery’s lab grown sapphires unique?',
     answer: (
       <p>
-        Cullen Jewellery’s lab grown sapphires are meticulously eye-clean,
+        Diamond Jewellery’s lab grown sapphires are meticulously eye-clean,
         meaning they have no visible inclusions. Available in a variety of
         vibrant colours, each sapphire is carefully checked by our in-house
         experts to ensure it meets our highest standards of quality and

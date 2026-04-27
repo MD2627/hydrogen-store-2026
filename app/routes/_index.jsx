@@ -463,7 +463,7 @@ export default function Homepage() {
   const shopByStyleItems = [
     {
       name: 'SOLITAIREXXXXXX',
-      image: 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/2023_11_14_Cullen_Website_4x5_07_400x400.jpg?v=1701322555',
+      image: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/ring.webp?v=1777280107',
       link: '/engagement?style=solitaire',
     },
     {
@@ -483,7 +483,7 @@ export default function Homepage() {
     },
     {
       name: 'HALO',
-      image: 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/2023_11_14_Cullen_Website_1x1_02_400x400.jpg?v=1700787282',
+      image: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/2023_11_14_Diamond_Website_1x1_02_400x400_297ae0cf-ccc1-448d-b0f9-18561a3f1d62.webp?v=1777280161',
       link: '/engagement?style=halo',
     },
   ];
@@ -496,27 +496,27 @@ export default function Homepage() {
     },
     {
       name: 'Bella',
-      image: 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Cullen_Website_4x5_2500px_03_2_400x400.jpg?v=1741064516',
+      image: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Diamond_Website_4x5_2500px_03_2_400x400_5a43ad52-8e8f-4aec-9e31-03bf487c2d8a.webp?v=1777280234',
       link: '/products/bella',
     },
     {
       name: 'Francesca',
-      image: 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Cullen_Website_4x5_2500px_05_400x400.jpg?v=1741064515',
+      image: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Diamond_Website_4x5_2500px_05_400x400_50c26958-18ca-40f6-a121-ab68e3f8a375.webp?v=1777280283',
       link: '/products/francesca',
     },
     {
       name: 'Imani',
-      image: 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Cullen_Website_4x5_2500px_02_1_400x400.jpg?v=1741064516',
+      image: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Diamond_Website_4x5_2500px_02_1_400x400_2154e8ba-a764-46e0-b07a-22b3bcd0ecf0.webp?v=1777280328',
       link: '/products/imani',
     },
     {
       name: 'Sheridan',
-      image: 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Cullen_Website_4x5_2500px_01_400x400.jpg?v=1741064515',
+      image: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Diamond_Website_4x5_2500px_01_400x400_b7b01eab-02a8-443f-ab4b-cdfcf3d60892.webp?v=1777280371',
       link: '/products/ring-sheridan',
     },
     {
       name: 'Paige',
-      image: 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Cullen_Website_4x5_2500px_01_400x400.jpg?v=1741064515',
+      image: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Diamond_Website_4x5_2500px_011_400x400_aa518dde-787a-464d-96dd-0c990dd2ca06.webp?v=1777280433',
       link: '/products/paige',
     }
   ];
@@ -1008,7 +1008,7 @@ const ServicesshopByStyleItems = [
 const instagramData = {
   title: "Instagram",
   description:
-    "Learn, engage and grow. Connect with Cullen for all things engagement, wedding and fine jewelry.",
+    "Learn, engage and grow. Connect with Diamond Jewellery for all things engagement, wedding and fine jewelry.",
   posts: [
     {
       id: 1,
@@ -1147,7 +1147,7 @@ const PRODUCT_FAQ = [
     question: 'Do you ship worldwide?',
     answer: (
       <p>
-        Yes! At Cullen, we provide free express and insured international
+        Yes! At Diamond, we provide free express and insured international
         shipping on all orders over $500. Plus, we cover duties and taxes for
         most countries. For full details,{' '}
         <Link className="fancy" to="/shipping">visit our shipping page</Link>.
@@ -1226,7 +1226,7 @@ const PRODUCT_FAQ = [
   },
 
   {
-    question: 'How does Cullen Jewellery ensure a seamless purchase experience?',
+    question: 'How does Diamond Jewellery ensure a seamless purchase experience?',
     answer: (
       <>
         <p>
@@ -1249,7 +1249,7 @@ const PRODUCT_FAQ = [
     answer: (
       <>
         <p>
-          Cullen Jewellery offers a Lifetime Manufacturing Warranty on all our
+          Diamond Jewellery offers a Lifetime Manufacturing Warranty on all our
           rings, including engagement, wedding and fashion rings.
         </p>
         <p>

@@ -14,7 +14,7 @@ export default function Warranty() {
         <>
             <div className="warranty-page crafting-timeframes">
                 <h2 className='main-warranty-title'>
-                    <p>Cullen Jewellery Crafting Timeframes</p>
+                    <p>Diamond Jewellery Crafting Timeframes</p>
                     <div className="description">Last updated: February 26, 2025</div>
                 </h2>
                 <div className="description-container-line">

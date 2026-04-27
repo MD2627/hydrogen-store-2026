@@ -16,10 +16,10 @@ import 'swiper/css/navigation';
  */
 export const meta = () => {
   return [
-    { title: 'Careers at Cullen | Diamond Hydrozen' },
+    { title: 'Careers at Diamond | Diamond Hydrozen' },
     {
       name: 'description',
-      content: 'Explore career opportunities at Cullen Jewellery. Join our passionate team dedicated to crafting timeless elegance and exceptional service.'
+      content: 'Explore career opportunities at Diamond Jewellery. Join our passionate team dedicated to crafting timeless elegance and exceptional service.'
     },
   ];
 };
@@ -227,7 +227,7 @@ export default function Careers() {
               className={`sticky-nav-btn ${activeSection === 'life' ? 'active' : ''}`}
               onClick={() => scrollToSection('life')}
             >
-              LIFE AT CULLEN
+              LIFE AT Diamond
             </button>
             <button
               className={`sticky-nav-btn ${activeSection === 'benefits' ? 'active' : ''}`}
@@ -283,7 +283,7 @@ export default function Careers() {
       <section id="life" className="career-section belong-impact alt-bg">
         <div className="page-width">
           <div className='belong-impact-title'>
-            <h2 className="career-section-main-heading f-32 ff-a w-300 black-color">Life at Cullen</h2>
+            <h2 className="career-section-main-heading f-32 ff-a w-300 black-color">Life at Diamond</h2>
           </div>
           <div className="career-section-inner two-col">
             <div className="career-section-image">
@@ -403,7 +403,7 @@ export default function Careers() {
         <div className="careers-team-header">
           <h2 className="careers-team-title title-border f-32 ff-a w-300 black-color">Our Team</h2>
           <p className="careers-team-subtitle black-color f-13 l-h-1-2 ff-c w-300">
-            Hear from our team and their experience with Cullen.
+            Hear from our team and their experience with Diamond.
           </p>
         </div>
 
@@ -714,10 +714,10 @@ const BANNER_DATA = {
 };
 
 const MISSION_DATA = {
-  title: "AT CULLEN, WE'RE DEFINED BY ",
+  title: "AT Diamond, WE'RE DEFINED BY ",
   title_text_change: "YOU.",
   tagline: "OUR TEAM MAKES US WHO WE ARE",
-  description1: "Cullen began with a mission to bring transparency and innovation to the jewellery world by delivering accessible, ethical and premium fine jewellery to people everywhere.",
+  description1: "Diamond began with a mission to bring transparency and innovation to the jewellery world by delivering accessible, ethical and premium fine jewellery to people everywhere.",
   description2: "Today our impact has grown, but the mission is the same. We're building an environment where exceptional people can do their best work, be heard, and help carry this mission even further.",
 };
 
@@ -744,32 +744,32 @@ const TEAM_DATA = [
   {
     name: "Samuel,",
     role: "TRAINING AND DEVELOPMENT MANAGER",
-    description: "I’ve been with Cullen for 14 months, starting in market research before transitioning to the People & Culture team. My day to day generally looks like writing learning material, delivering training sessions and strategising for the future. Through mentorship from colleagues and managers, along with internal and external leadership training, the professional development opportunities have been extensive. Cullen offers exciting growth avenues for those who are enthusiastic, hard-working, and want to be a part of a culture that is purpose-driven."
+    description: "I’ve been with Diamond for 14 months, starting in market research before transitioning to the People & Culture team. My day to day generally looks like writing learning material, delivering training sessions and strategising for the future. Through mentorship from colleagues and managers, along with internal and external leadership training, the professional development opportunities have been extensive. Diamond offers exciting growth avenues for those who are enthusiastic, hard-working, and want to be a part of a culture that is purpose-driven."
   },
   {
     name: "Liana,",
     role: "TECHNOLOGY PROJECT MANAGER",
-    description: "Cullen Jewellery is truly an amazing place to work. The strong, positive culture is led from the top and shines through in everything we do. It’s incredibly inspiring to be part of a team that genuinely lives its values, supports one another, and is united by a shared purpose. I feel proud to be part of such a passionate and values-driven organisation."
+    description: "Diamond Jewellery is truly an amazing place to work. The strong, positive culture is led from the top and shines through in everything we do. It’s incredibly inspiring to be part of a team that genuinely lives its values, supports one another, and is united by a shared purpose. I feel proud to be part of such a passionate and values-driven organisation."
   },
   {
     name: "Tom,",
     role: "HEAD OF NATIONAL RETAIL",
-    description: "Cullen is an incredible place to work! The business is rapidly growing which means everyday is full of excitement, challenge, and opportunity. I have been here for one year and it has been the best year of my career yet - my role has changed from the head office into more of a retail setting which was an opportunity that has aligned with my interests and skills. I get to work alongside other people with the same mindset, which makes coming to work rewarding and fun."
+    description: "Diamond is an incredible place to work! The business is rapidly growing which means everyday is full of excitement, challenge, and opportunity. I have been here for one year and it has been the best year of my career yet - my role has changed from the head office into more of a retail setting which was an opportunity that has aligned with my interests and skills. I get to work alongside other people with the same mindset, which makes coming to work rewarding and fun."
   },
   {
     name: "De Wett,",
     role: "JEWELLER",
-    description: "After working in the UK for 20 years, it was a big leap to move across the world to join Cullen, but the company’s support during that transition made it a lot easier than I ever anticipated. From the very start, I felt welcomed and comfortable in my new surroundings, which was incredibly appreciated."
+    description: "After working in the UK for 20 years, it was a big leap to move across the world to join Diamond, but the company’s support during that transition made it a lot easier than I ever anticipated. From the very start, I felt welcomed and comfortable in my new surroundings, which was incredibly appreciated."
   },
   {
     name: "Kate,",
     role: "ASSISTANT SHOWROOM MANAGER",
-    description: "Taking the leap and moving to a new company was not something I took lightly. I was apprehensive before starting, worrying if I had made the right call. But my mind was put at ease from the get go! On my first day I was welcomed by friendly and inviting people. I feel very lucky that I get to do a job that I truly love and enjoy. No day is the same at Cullen, with change and new ideas always encouraged. I am grateful that I get to work alongside such inspiring people."
+    description: "Taking the leap and moving to a new company was not something I took lightly. I was apprehensive before starting, worrying if I had made the right call. But my mind was put at ease from the get go! On my first day I was welcomed by friendly and inviting people. I feel very lucky that I get to do a job that I truly love and enjoy. No day is the same at Diamond, with change and new ideas always encouraged. I am grateful that I get to work alongside such inspiring people."
   },
   {
     name: "Sherry,",
     role: "CUSTOM DESIGN SPECIALIST",
-    description: "Working at Cullen Jewellery has been a great experience! From being part of an amazing team of people that I genuinely enjoy working (and laughing) with, to advancing in my role within the Company, utilising the skills I have learned to move into a more specialised area that I have a great passion for!"
+    description: "Working at Diamond Jewellery has been a great experience! From being part of an amazing team of people that I genuinely enjoy working (and laughing) with, to advancing in my role within the Company, utilising the skills I have learned to move into a more specialised area that I have a great passion for!"
   }
 ];
 
@@ -851,7 +851,7 @@ const JOBS_DATA = [
 
 const DIFFERENCE_DATA = {
   title: "Our Difference",
-  subtitle: "The Cullen Difference is...",
+  subtitle: "The Diamond Difference is...",
   videoUrl: "https://www.youtube.com/embed/VoMA8JNEOtQ?si=RmpOxMP44-_i16AS"
 };
 

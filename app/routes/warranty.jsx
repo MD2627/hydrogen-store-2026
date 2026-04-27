@@ -23,7 +23,7 @@ export default function Warranty() {
                     <div className="section">
 
                         <p>
-                            At Cullen Jewellery, we pride ourselves on the expert craftsmanship of our fine jewellery.
+                            At Diamond Jewellery, we pride ourselves on the expert craftsmanship of our fine jewellery.
                             Our mission will always be to provide beautiful, responsible jewellery that can be enjoyed
                             for a lifetime. For this reason, every piece of jewellery we craft undergoes rigorous quality
                             control testing.
@@ -95,7 +95,7 @@ export default function Warranty() {
                             <li>Misused the product in any way that caused the problem;</li>
                             <li>Knew of or were made aware of any faults before you bought the product;</li>
                             <li>
-                                Asked for a service to be completed in a certain way against the advice of Cullen Jewellery,
+                                Asked for a service to be completed in a certain way against the advice of Diamond Jewellery,
                                 or were unclear about what you wanted.
                             </li>
                         </ul>
@@ -183,7 +183,7 @@ export default function Warranty() {
                             </li>
                         </ul>
 
-                        <p className="p-is-italic"><i>Repairs or services performed by any jeweller other than Cullen Jewellery will void your Lifetime Manufacturing Warranty.</i></p>
+                        <p className="p-is-italic"><i>Repairs or services performed by any jeweller other than Diamond Jewellery will void your Lifetime Manufacturing Warranty.</i></p>
 
                         <h2>Wear and Tear (not covered by Lifetime Manufacturing Warranty)</h2>
 
