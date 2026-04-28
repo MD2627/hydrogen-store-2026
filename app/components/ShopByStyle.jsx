@@ -7,6 +7,7 @@ import { RichText } from './RichText';
 import 'swiper/css';
 import 'swiper/css/scrollbar';
 
+
 export function ShopByStyle({
   variant = 'default',
   isSplit = true, // Enable the new layout by default for this component

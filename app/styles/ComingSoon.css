@@ -417,11 +417,11 @@ section.city-map-section {
 }
 
 header.shop-by-style-header div {
-    font-size: 13px;
+    /* font-size: 13px;
     font-weight: 300;
     font-family: var(--font_family_c);
     line-height: 15.6px;
-    color: var(--black_color);
+    color: var(--black_color); */
 }
 
 @media screen and (max-width: 991px) and (min-width: 767px) {

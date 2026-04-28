@@ -83,185 +83,123 @@ export default function Faqs() {
 }
 
 
-const PAGE_FAQ_ONE = [
+const PRODUCT_FAQ = [
   {
-    question: 'How long will it take to get my order?',
-    answer: (
+    question: 'How long does it take to receive my order?',
+    answer: `
       <p>
-        Crafting of your ring typically takes 50 business days, with expediting
-        options available if you need it sooner. The exact completion date can be
-        conveniently found on each product page. Please note that shipping is not
-        included within this date and you can find all our{' '}
-        <Link className="fancy" to="/shipping">
-          shipping information here
-        </Link>
-        . For all timeframe information please visit our{' '}
-        <Link className="fancy" to="/crafting-timeframes">
-          crafting timeframes page
-        </Link>
-        .
+        Each piece is carefully crafted and typically completed within <strong>50 business days</strong>.
+        Need it sooner? Expedited options are available.
       </p>
-    ),
-  },
-
-  {
-    question: 'What if I need help placing an order through your website?',
-    answer: (
       <p>
-        If you need help selecting from our range of diamond engagement rings or
-        lab grown engagement rings, please{' '}
-        <Link className="fancy" to="/contact">
-          contact us here
-        </Link>
-        . Our team, experienced in both lab created diamonds and moissanite, will
-        assist you.
+        Delivery time is separate from crafting. For full details, view our
+        <a href="/shipping" class="fancy">Shipping Information</a> or
+        <a href="/crafting-timeframes" class="fancy">Crafting Timeframes</a>.
       </p>
-    ),
+    `,
   },
-
   {
-    question: 'What type of warranty do I receive?',
-    answer: (
+    question: 'Can I get help placing my order?',
+    answer: `
       <p>
-        Diamond Jewellery offers a Lifetime Manufacturing Warranty on all our
-        rings, including engagement, wedding and fashion rings, giving you
-        confidence and peace of mind with every purchase. For all other fine
-        jewellery pieces, such as earrings, chains, pendants, bracelets and more,
-        we provide a 2-Year Manufacturer Warranty. View our full warranty details{' '}
-        <Link className="fancy" to="/warranty" title="Diamond Jewellery Lifetime Warranty">
-          here
-        </Link>
-        .
+        Absolutely. Our experts are here to guide you through selecting the perfect piece.
       </p>
-    ),
-  },
-
-  {
-    question: 'Do you ship worldwide?',
-    answer: (
-      <>
-        <p>
-          Yes! At Diamond Jewellery, we offer free international shipping on all
-          orders, including those for the perfect diamond engagement ring. Shop
-          online and add your chosen piece to your shopping bag with ease.
-        </p>
-
-        <p>
-          <b>Import Duties and Taxes</b>
-        </p>
-
-        <p>
-          Most of our orders are sent as DDP (Delivery Duty Paid – this means
-          import duties &amp; taxes are covered). However, there may be cases
-          where you may have to pay local import taxes and duties, which Diamond
-          Jewellery does not cover, as some countries do not allow us to pay them
-          as the sender. For more details, please check our{' '}
-          <Link className="fancy" to="/shipping">
-            Shipping
-          </Link>{' '}
-          page or contact your local customs agency.
-        </p>
-      </>
-    ),
-  },
-
-  {
-    question: 'Can I just drop in to the showroom?',
-    answer: (
       <p>
-        Our showroom, featuring a range of lab grown diamond rings and moissanite
-        pieces, is open{' '}
-        <Link className="fancy" to="/visit">
-          by appointment only
-        </Link>
-        . Discover our collection of lab grown diamond engagement rings and
-        moissanite in person or online.
+        <a href="/contact" class="fancy">Contact us</a> for personalized assistance anytime.
       </p>
-    ),
+    `,
   },
-
   {
-    question: 'How do I find out my ring size?',
-    answer: (
+    question: 'What warranty do you offer?',
+    answer: `
       <p>
-        At Diamond Jewellery, we offer free ring sizers for our entire range.{' '}
-        <Link className="fancy" to="/ring-size-guidance" title="Free Ring Sizer">
-          Measure your ring size
-        </Link>{' '}
-        comfortably at home for that perfect fit.
+        All rings come with a <strong>Lifetime Manufacturing Warranty</strong> for complete peace of mind.
       </p>
-    ),
+      <p>
+        Other jewellery items include a <strong>2-Year Warranty</strong>.
+        <a href="/warranty" class="fancy">View full warranty details</a>.
+      </p>
+    `,
   },
-
   {
-    question: 'Can you help me keep my purchase a surprise?',
-    answer: (
-      <>
-        <p>
-          Absolutely! We understand that many of our products are purchased as
-          surprise gifts for events such as an engagement. For this reason, we
-          use subtle packaging that will not give away the contents of the
-          package.
-        </p>
-
-        <p>
-          Please let us know if we can help you in any other way to keep your
-          purchase a surprise!
-        </p>
-      </>
-    ),
+    question: 'Do you offer international shipping?',
+    answer: `
+      <p>
+        Yes, we provide <strong>free worldwide shipping</strong> on all orders.
+      </p>
+      <p>
+        Most shipments are sent with duties and taxes included (DDP). In rare cases,
+        local charges may apply. Learn more on our
+        <a href="/shipping" class="fancy">Shipping page</a>.
+      </p>
+    `,
   },
-
+  {
+    question: 'Can I visit your showroom?',
+    answer: `
+      <p>
+        Yes, our showroom visits are available <strong>by appointment only</strong>.
+      </p>
+      <p>
+        <a href="/visit" class="fancy">Book your visit</a> to explore our collection in person.
+      </p>
+    `,
+  },
+  {
+    question: 'How do I find my ring size?',
+    answer: `
+      <p>
+        We offer complimentary ring sizers so you can measure your size at home with ease.
+      </p>
+      <p>
+        <a href="/ring-size-guidance" class="fancy">Find your ring size</a>.
+      </p>
+    `,
+  },
+  {
+    question: 'Can you keep my order a surprise?',
+    answer: `
+      <p>
+        Of course. All orders are shipped in discreet packaging to keep your surprise safe.
+      </p>
+      <p>
+        Let us know if you need any extra assistance.
+      </p>
+    `,
+  },
   {
     question: 'What payment methods do you accept?',
-    answer: (
+    answer: `
       <p>
-        At Diamond Jewellery, we accept payments via direct debit or card.
-        Additionally, depending on your location, you can pay via PayPal and
-        local “buy now, pay later” (BNPL) services such as Humm, Zip, Afterpay, or
-        Klarna. All online and showroom orders require payment to begin
-        production.
+        We accept card payments, direct debit, and cash (Melbourne only).
       </p>
-    ),
-  },
-
-  {
-    question: 'Can I return a product?',
-    answer: (
       <p>
-        At Diamond Jewellery, we value the craftsmanship and dedication involved
-        in making each unique piece of special occasion jewellery. Therefore, we
-        do not offer refunds, returns or exchanges unless the item is faulty or
-        damaged. Please see our{' '}
-        <Link className="fancy" to="/returns">
-          Returns Policy
-        </Link>{' '}
-        for more information.
+        Flexible payment options, including interest-free plans, are also available.
       </p>
-    ),
+    `,
   },
-
   {
-    question: 'The fit of my ring is not quite right, can I resize it?',
-    answer: (
-      <>
-        <p>
-          Absolutely! At Diamond Jewellery, we offer{' '}
-          <b>One Free Resize</b> for engagement and wedding rings to use within
-          the first 12 months of your ring&apos;s completion (subject to eligible
-          design style/metal type).
-        </p>
-
-        <p className="smallprint" style={{ textAlign: 'left' }}>
-          *There are certain resizing restrictions for each ring design. The
-          specific information can be found on the product page of each ring.{' '}
-          <Link className="fancy" to="/free-resizing" title="Free Resizing">
-            Read more about resizing
-          </Link>
-          .
-        </p>
-      </>
-    ),
+    question: 'Can I return or exchange a product?',
+    answer: `
+      <p>
+        As each piece is made to order, returns or exchanges are not offered unless the item is faulty.
+      </p>
+      <p>
+        Please review our <a href="/returns" class="fancy">Returns Policy</a> for details.
+      </p>
+    `,
+  },
+  {
+    question: 'Can my ring be resized?',
+    answer: `
+      <p>
+        Yes, we offer <strong>one complimentary resize</strong> within 12 months of purchase
+        (subject to design and metal type).
+      </p>
+      <p>
+        <a href="/free-resizing" class="fancy">Learn more about resizing</a>.
+      </p>
+    `,
   },
 ];
 

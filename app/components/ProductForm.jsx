@@ -1188,31 +1188,20 @@ export function ProductForm({ productOptions, selectedVariant, productTags = [],
                   </svg>
                 </div>
                 <span className="accordion-title f-10 f-m-10 w-400 ff-n l-h-1-2">
-                  {isExpanded ? (
-                    <svg viewBox="0 0 16.933 16.933" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M2.117 8.467h12.7"
-                        className="stroke"
-                        fill="none"
-                        stroke="var(--black_color)"
-                        strokeWidth={1.05831}
-                        strokeLinecap="round"
-                      />
-                    </svg>
+                  {item.title}{isExpanded ? (
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" transform="matrix(-1,1.2246467991473532e-16,-1.2246467991473532e-16,-1,0,0)"><path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                   ) : (
-                    <svg viewBox="0 0 16.933 16.933" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
-                        d="m2.117 5.292 6.35 6.35 6.35-6.35"
-                        className="stroke"
-                        fill="none"
-                        stroke="var(--black_color)"
-                        strokeWidth={1.05831}
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
+                        d="M7 10L12 15L17 10"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round">
+                      </path>
                     </svg>
                   )}
-                  {item.title}
+
                 </span>
               </button>
               <div

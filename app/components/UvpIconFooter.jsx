@@ -13,7 +13,7 @@ export function UvpIconFooter({ data = [] }) {
                         if (!item.link || !item.svg || !item.label) return null;
 
                         return (
-                            <Link key={index} to={item.link} className="uvp-promo">
+                            <div key={index} className="uvp-promo">
                                 <div
                                     className="uvp-icon"
                                     dangerouslySetInnerHTML={{ __html: item.svg }}
@@ -22,7 +22,17 @@ export function UvpIconFooter({ data = [] }) {
                                     className="uvp-label w-300"
                                     dangerouslySetInnerHTML={{ __html: item.label }}
                                 />
-                            </Link>
+                            </div>
+                            // <Link key={index} to={item.link} className="uvp-promo">
+                            //     <div
+                            //         className="uvp-icon"
+                            //         dangerouslySetInnerHTML={{ __html: item.svg }}
+                            //     />
+                            //     <div
+                            //         className="uvp-label w-300"
+                            //         dangerouslySetInnerHTML={{ __html: item.label }}
+                            //     />
+                            // </Link>
 
                         );
                     })}

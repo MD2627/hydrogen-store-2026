@@ -5,7 +5,9 @@ import { Image } from '@shopify/hydrogen';
 import { RichText } from './RichText';
 
 /**
- * VideoBanner component with scroll-expand animation
+ * VideoBanner component.
+ * Pass enableScrollExpand={true} ONLY on the homepage to activate the
+ * scroll-hijacking expand animation. All other pages get a static banner.
  */
 export function VideoBanner({
   desktopVideo,
@@ -21,6 +23,7 @@ export function VideoBanner({
   buttonLink,
   data,
   video,
+  enableScrollExpand = false,
 }) {
   const finalData = {
     desktopVideo: desktopVideo || video || data?.desktopVideo || data?.video || null,
@@ -62,7 +65,10 @@ export function VideoBanner({
     return () => window.removeEventListener('resize', checkIfMobile);
   }, []);
 
+  // Only attach scroll-hijacking listeners when enableScrollExpand is true
   useEffect(() => {
+    if (!enableScrollExpand) return;
+
     const handleWheel = (e) => {
       if (mediaFullyExpanded && e.deltaY < 0 && window.scrollY <= 5) {
         setMediaFullyExpanded(false);
@@ -135,8 +141,50 @@ export function VideoBanner({
       window.removeEventListener('touchmove', handleTouchMove);
       window.removeEventListener('touchend', handleTouchEnd);
     };
-  }, [scrollProgress, mediaFullyExpanded, touchStartY]);
+  }, [enableScrollExpand, scrollProgress, mediaFullyExpanded, touchStartY]);
 
+  const activeMedia = isMobile ? (mVid || mImg || dVid || dImg) : (dVid || dImg);
+  const bgMedia = isMobile ? (mImg || dImg) : dImg;
+  const isVideo = activeMedia === dVid || activeMedia === mVid;
+
+  // ── STATIC BANNER (non-home pages) ──────────────────────────────────────
+  if (!enableScrollExpand) {
+    return (
+      <div className="vb-section vb-section--static">
+        <div className="vb-static-inner">
+          {/* Background media */}
+          {bgMedia && (
+            <img src={bgMedia} alt={h || 'Banner'} className="vb-bg-image" />
+          )}
+          {isVideo && activeMedia && (
+            <video
+              src={activeMedia}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+              className="vb-bg-image"
+            />
+          )}
+          <div className="vb-bg-overlay" />
+
+          {/* Text overlay */}
+          <div className="vb-static-content page-width">
+            {h && <h2 className="vb-title-word">{h}</h2>}
+            {d && <RichText tag="p" html={d} />}
+            {bT && bU && (
+              <Link to={bU} className="btn">
+                {bT}
+              </Link>
+            )}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // ── SCROLL-EXPAND BANNER (homepage only) ────────────────────────────────
   // Responsive sizing logic
   const minWidth = isMobile ? 80 : 35; // vw
   const maxWidth = isMobile ? 95 : 90; // vw
@@ -145,15 +193,11 @@ export function VideoBanner({
 
   const mediaWidthVal = minWidth + scrollProgress * (maxWidth - minWidth);
   const mediaHeightVal = minHeight + scrollProgress * (maxHeight - minHeight);
-  
+
   const textTranslateX = scrollProgress * (isMobile ? 100 : 80); // vw
 
   const firstWord = h ? h.split(' ')[0] : '';
   const restOfTitle = h ? h.split(' ').slice(1).join(' ') : '';
-
-  const activeMedia = isMobile ? (mVid || mImg || dVid || dImg) : (dVid || dImg);
-  const bgMedia = isMobile ? (mImg || dImg) : dImg;
-  const isVideo = activeMedia === dVid || activeMedia === mVid;
 
   return (
     <div ref={sectionRef} className="vb-section">

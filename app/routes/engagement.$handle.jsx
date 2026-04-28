@@ -290,7 +290,7 @@ export default function Product() {
       <ShopByStyleScroll
         title="Our Services"
         variant="section-services"
-        description="Receive custom engagement ring guidance from our expert team in person and online."
+        description="Get personalized engagement ring support from our specialists, available both in-store and online."
         items={ServicesshopByStyleItems} />
 
       <ProductRingCollections defaultImage="https://cdn.shopify.com/s/files/1/0644/3067/0060/files/initiatives_image_1000x1000.jpg?v=1759807949" data={PRODUCT_RING_COLLECTIONS} />
@@ -328,12 +328,12 @@ const ServicesshopByStyleItems = [
   },
   {
     name: 'Appointments',
-    image: 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Our_Services_-_Appointments_900x900.jpg?v=1741060900',
+    image: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/pexels-shkrabaanthony-7167043.jpg?v=1777032453',
     link: '/collections/ready-to-ship',
   },
   {
     name: 'Custom Rings',
-    image: 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Our_Services_-_Customised_Rings_900x900.jpg?v=1741060896',
+    image: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/4097099a880f3f3165d2c7724dbe5a70.jpg?v=1776071858',
     link: '/collections/ready-to-ship',
   },
   {
@@ -410,174 +410,124 @@ const PRODUCT_UVPS = [
 ];
 
 const PRODUCT_FAQ = [
-
   {
-    question: 'How long will it take to get my order?',
-    answer: (
+    question: 'How long does it take to receive my order?',
+    answer: `
       <p>
-        Crafting of your ring typically takes 50 business days, with expediting
-        options available if you need it sooner. The exact completion date can
-        be conveniently found on each product page. Please note that shipping
-        is not included within this date and you can find all our{' '}
-        <Link to="/shipping" className="fancy">shipping information here</Link>.
-        {' '}For all timeframe information please visit our{' '}
-        <Link to="/crafting-timeframes" className="fancy">
-          crafting timeframes page
-        </Link>.
+        Each piece is carefully crafted and typically completed within <strong>50 business days</strong>.
+        Need it sooner? Expedited options are available.
       </p>
-    ),
-  },
-
-  {
-    question: 'What if I need help placing an order through your website?',
-    answer: (
       <p>
-        If you need help selecting from our range of diamond engagement rings or
-        lab grown engagement rings, please{' '}
-        <Link to="/contact" className="fancy">contact us</Link>.
-        Our team, experienced in both lab created diamonds and moissanite,
-        will assist you.
+        Delivery time is separate from crafting. For full details, view our
+        <a href="/shipping" class="fancy">Shipping Information</a> or
+        <a href="/crafting-timeframes" class="fancy">Crafting Timeframes</a>.
       </p>
-    ),
+    `,
   },
-
   {
-    question: 'What type of warranty do I receive?',
-    answer: (
+    question: 'Can I get help placing my order?',
+    answer: `
       <p>
-        Diamond Jewellery offers a{' '}
-        lifetime Manufacturing Warranty on all our rings,
-        including engagement, wedding and fashion rings, giving you confidence
-        and peace of mind with every purchase. For all other fine jewellery
-        pieces, such as earrings, chains, pendants, bracelets and more, we
-        provide a 2-Year Manufacturer Warranty.{' '}
-        <Link
-          to="/warranty"
-          className="fancy"
-          title="Diamond Jewellery Lifetime Warranty"
-        >
-          View our full warranty details.
-        </Link>
+        Absolutely. Our experts are here to guide you through selecting the perfect piece.
       </p>
-    ),
-  },
-
-  {
-    question: 'Do you ship worldwide?',
-    answer: (
-      <>
-        <p>
-          Yes! At Diamond Jewellery, we offer free international shipping on all
-          orders, including those for the perfect diamond engagement ring.
-          Shop online and add your chosen piece to your shopping bag with ease.
-        </p>
-        <p><strong>Import Duties and Taxes</strong></p>
-        <p>
-          Most of our orders are sent as DDP (Delivery Duty Paid – import duties &
-          taxes are covered). However, there may be cases where you may have to
-          pay local import taxes and duties, which Diamond Jewellery does not
-          cover. For more details, please check our{' '}
-          <Link to="/shipping" className="fancy">Shipping</Link> page or contact
-          your local customs agency.
-        </p>
-      </>
-    ),
-  },
-
-  {
-    question: 'Can I just drop in to the showroom?',
-    answer: (
       <p>
-        Our showroom, featuring a range of lab grown diamond rings and moissanite
-        pieces, is open{' '}
-        <Link to="/visit" className="fancy">by appointment only</Link>.
-        Discover our collection in person or online.
+        <a href="/contact" class="fancy">Contact us</a> for personalized assistance anytime.
       </p>
-    ),
+    `,
   },
-
   {
-    question: 'How do I find out my ring size?',
-    answer: (
+    question: 'What warranty do you offer?',
+    answer: `
       <p>
-        At Diamond Jewellery, we offer free ring sizers for our entire range.{' '}
-        <Link
-          to="/ring-size-guidance"
-          className="fancy"
-          title="Free Ring Sizer"
-        >
-          Measure your ring size
-        </Link>{' '}
-        comfortably at home for that perfect fit.
+        All rings come with a <strong>Lifetime Manufacturing Warranty</strong> for complete peace of mind.
       </p>
-    ),
+      <p>
+        Other jewellery items include a <strong>2-Year Warranty</strong>.
+        <a href="/warranty" class="fancy">View full warranty details</a>.
+      </p>
+    `,
   },
-
   {
-    question: 'Can you help me keep my purchase a surprise?',
-    answer: (
-      <>
-        <p>
-          Absolutely! We understand that many of our products are purchased as
-          surprise gifts for special occasions such as an engagement.
-        </p>
-        <p>
-          For this reason, we use subtle packaging that will not give away the
-          contents of the package. Please let us know if we can help you in any
-          other way to keep your purchase a surprise!
-        </p>
-      </>
-    ),
+    question: 'Do you offer international shipping?',
+    answer: `
+      <p>
+        Yes, we provide <strong>free worldwide shipping</strong> on all orders.
+      </p>
+      <p>
+        Most shipments are sent with duties and taxes included (DDP). In rare cases,
+        local charges may apply. Learn more on our
+        <a href="/shipping" class="fancy">Shipping page</a>.
+      </p>
+    `,
   },
-
+  {
+    question: 'Can I visit your showroom?',
+    answer: `
+      <p>
+        Yes, our showroom visits are available <strong>by appointment only</strong>.
+      </p>
+      <p>
+        <a href="/visit" class="fancy">Book your visit</a> to explore our collection in person.
+      </p>
+    `,
+  },
+  {
+    question: 'How do I find my ring size?',
+    answer: `
+      <p>
+        We offer complimentary ring sizers so you can measure your size at home with ease.
+      </p>
+      <p>
+        <a href="/ring-size-guidance" class="fancy">Find your ring size</a>.
+      </p>
+    `,
+  },
+  {
+    question: 'Can you keep my order a surprise?',
+    answer: `
+      <p>
+        Of course. All orders are shipped in discreet packaging to keep your surprise safe.
+      </p>
+      <p>
+        Let us know if you need any extra assistance.
+      </p>
+    `,
+  },
   {
     question: 'What payment methods do you accept?',
-    answer: (
+    answer: `
       <p>
-        At Diamond Jewellery, we accept payments via direct debit, cash (Melbourne
-        only), or card. If you are looking for an extended payment plan, we also
-        offer interest-free finance via Humm.
+        We accept card payments, direct debit, and cash (Melbourne only).
       </p>
-    ),
-  },
-
-  {
-    question: 'Can I return a product?',
-    answer: (
       <p>
-        At Diamond Jewellery, we value the craftsmanship involved in making each
-        unique piece. Therefore, we do not offer refunds, returns or exchanges
-        unless the item is faulty or damaged. Please see our{' '}
-        <Link to="/returns" className="fancy">Returns Policy</Link> for more
-        information.
+        Flexible payment options, including interest-free plans, are also available.
       </p>
-    ),
+    `,
   },
-
   {
-    question: 'The fit of my ring is not quite right, can I resize it?',
-    answer: (
-      <>
-        <p>
-          Absolutely! We offer <strong>One Free Resize</strong> for engagement and
-          wedding rings within the first 12 months of completion (subject to
-          eligible design style and metal type).
-        </p>
-        <p className="smallprint">
-          *There are certain resizing restrictions for each ring design. The
-          specific information can be found on the product page.{' '}
-          <Link
-            to="/free-resizing"
-            className="fancy"
-            title="Free Resizing"
-          >
-            Read more about resizing
-          </Link>.
-        </p>
-      </>
-    ),
+    question: 'Can I return or exchange a product?',
+    answer: `
+      <p>
+        As each piece is made to order, returns or exchanges are not offered unless the item is faulty.
+      </p>
+      <p>
+        Please review our <a href="/returns" class="fancy">Returns Policy</a> for details.
+      </p>
+    `,
   },
-]
+  {
+    question: 'Can my ring be resized?',
+    answer: `
+      <p>
+        Yes, we offer <strong>one complimentary resize</strong> within 12 months of purchase
+        (subject to design and metal type).
+      </p>
+      <p>
+        <a href="/free-resizing" class="fancy">Learn more about resizing</a>.
+      </p>
+    `,
+  },
+];
 
 
 const shopByStyleItems = [
@@ -591,20 +541,20 @@ const shopByStyleItems = [
   {
     name: '',
     image: '',
-    video: 'https://cdn.shopify.com/videos/c/o/v/ea7967227d8a4705ae27f8538ecdf703.mov',
-    poster: 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/shop_by_stype_-_trilogy_400x400.jpg?v=1741067285',
+    video: 'https://cdn.shopify.com/videos/c/o/v/9c21baf38e4e45759ee90233bbe676e3.mp4',
+    poster: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Gemini_Generated_Image_ff5er4ff5er4ff5e.png?v=1777364392',
     link: '',
   },
   {
     name: '',
-    image: 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/shop_by_stype_-_trilogy_400x400.jpg?v=1741067285',
+    image: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Gemini_Generated_Image_gzezklgzezklgzez.png?v=1777364392',
     video: '',
     poster: '',
     link: '',
   },
   {
     name: '',
-    image: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/2023_11_14_Diamond_Website_1x1_02_400x400_297ae0cf-ccc1-448d-b0f9-18561a3f1d62.webp?v=1777280161',
+    image: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Gemini_Generated_Image_ff5er4ff5er4ff5e.png?v=1777364392',
     video: '',
     poster: '',
     link: '',
@@ -614,15 +564,15 @@ const shopByStyleItems = [
 const STORY_SLIDES = [
   {
     id: 1,
-    title: 'Every Ring Tells A Story',
-    text: `Crafting a piece is only one part of the journey. Before a ring is made, it's imagined. Every design begins as a thought - inspired by a passing trend, a timeless silhouette, or the wish of a client searching for something deeply personal. From there, sketches are drawn, refined, and reimagined until a story begins to take form.`,
+    title: 'Where Every Ring Begins',
+    text: `Every design starts as an idea, inspired by moments, styles, and personal stories. Through careful refinement, each ring becomes a piece with meaning.`,
     bgColor: 'var(--primary_color)',
     textColor: 'var(--white_color)',
     link: '/collections/engagementrings',
     linkText: 'LEARN MORE',
     linkColor: 'var(--black_color)',
     image: {
-      src: 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/shop_by_style_-_toi_et_moi_400x400.jpg?v=1741067284',
+      src: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/565fbceadeeaaa6b7f0b1ffc2a191d38.jpg?v=1775818258',
       alt: 'Crafting ring',
       width: 1600,
       height: 900,
@@ -630,15 +580,15 @@ const STORY_SLIDES = [
   },
   {
     id: 2,
-    title: 'Materials Matter',
-    text: 'Personalise your ring with the diamond and precious metal that feels most like you - from 18k Yellow, Rose or White Gold to Platinum, all nickel-free and hypoallergenic. We work exclusively with lab-grown diamonds, identical in brilliance to mined gems but free from the environmental impact of mining. This allows every piece to balance timeless craftsmanship with innovation, sustainability, and individuality.',
+    title: 'Thoughtfully Chosen Materials',
+    text: 'From rich 18k gold tones to platinum, every metal is selected for comfort and quality. Paired with lab-grown diamonds that match the brilliance of natural stones, each ring is designed with care, sustainability, and personal expression in mind.',
     bgColor: 'var(--bg_light_secondary)',
     textColor: 'var(--black_color)',
     link: '/collections/engagement-rings',
     linkText: 'LEARN MORE',
     linkColor: 'var(--accent_color_gold)',
     image: {
-      src: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/ring.webp?v=1777280107',
+      src: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/10a086ec9cd030c9f59411e31b26c762.jpg?v=1776074028',
       alt: 'Ring detail',
       width: 1600,
       height: 900,
@@ -646,32 +596,16 @@ const STORY_SLIDES = [
   },
   {
     id: 3,
-    title: 'The Highest Quality Control',
-    text: 'Personalise your ring with the diamond and precious metal that feels most like you - from 18k Yellow, Rose or White Gold to Platinum, all nickel-free and hypoallergenic. We work exclusively with lab-grown diamonds, identical in brilliance to mined gems but free from the environmental impact of mining. This allows every piece to balance timeless craftsmanship with innovation, sustainability, and individuality.',
+    title: 'Uncompromising Quality',
+    text: 'Every ring is meticulously inspected at each stage of creation to ensure exceptional craftsmanship. From precise stone setting to flawless finishing, our quality control process guarantees a piece that meets the highest standards of excellence.',
     bgColor: 'var(--primary_color)',
     textColor: 'var(--white_color)',
     link: '/collections/engagement',
     linkText: 'LEARN MORE',
     linkColor: 'var(--accent_color_light_gold)',
     image: {
-      src: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Diamond_Website_4x5_2500px_02_1_400x400_2154e8ba-a764-46e0-b07a-22b3bcd0ecf0.webp?v=1777280328',
+      src: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/pexels-ayseguldelice-30720972.jpg?v=1777030343',
       alt: 'Quality control',
-      width: 1600,
-      height: 900,
-    },
-  },
-  {
-    id: 4,
-    title: 'Perfect Pairing',
-    text: `Every Diamond ring undergoes a meticulous multi-stage process - casting, polishing, cleaning, and 50x microscopic inspections by dedicated quality control specicialists - to ensure flawless crafstmanship and lasting brilliance. Any piece that falls show of our standards is immediately rectified by our in-house jewellers.`,
-    bgColor: 'var(--bg_light_secondary)',
-    textColor: 'var(--black_color)',
-    link: '/collections/rings',
-    linkText: 'LEARN MORE',
-    linkColor: 'var(--accent_color_gold)',
-    image: {
-      src: 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Shop_by_style_-_Bezel_400x400.jpg?v=1741067285',
-      alt: 'Ring pairing',
       width: 1600,
       height: 900,
     },

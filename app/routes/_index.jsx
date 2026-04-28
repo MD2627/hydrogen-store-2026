@@ -638,6 +638,7 @@ export default function Homepage() {
             description={description}
             buttonText={buttonText}
             buttonUrl={buttonUrl}
+            enableScrollExpand={true}
           />
         );
       })()}

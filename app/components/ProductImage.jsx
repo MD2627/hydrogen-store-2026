@@ -57,20 +57,37 @@ function ProductVideo({ sources, poster, isActive, className }) {
 }
 
 export function ProductImage({ image, media = [] }) {
-  const [selectedImage, setSelectedImage] = useState(image);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeImage, setActiveImage] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isZoomed, setIsZoomed] = useState(false);
   const [pan, setPan] = useState({ x: 0, y: 0 });
   const [isDragging, setIsDragging] = useState(false);
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
 
-  const zoomContainerRef = useRef(null);
-  const getImageId = (item) => {
-    if (!item) return null;
-    if (item.image?.id) return item.image.id;
-    if (item.previewImage?.id) return item.previewImage.id;
-    return item.id;
-  };
+  const mobileMainRef = useRef(null);
+  const isScrollingRef = useRef(false);
+
+  const allMedia = media && media.length > 0 ? media : (image ? [image] : []);
+
+  useEffect(() => {
+    if (window.innerWidth <= 900 && mobileMainRef.current) {
+      const width = mobileMainRef.current.offsetWidth;
+      if (width > 0) {
+        const currentScrollIndex = Math.round(mobileMainRef.current.scrollLeft / width);
+        if (activeIndex !== currentScrollIndex) {
+          isScrollingRef.current = true;
+          mobileMainRef.current.scrollTo({
+            left: width * activeIndex,
+            behavior: 'smooth'
+          });
+          // Reset the flag after animation finishes
+          setTimeout(() => { isScrollingRef.current = false; }, 500);
+        }
+      }
+    }
+  }, [activeIndex]);
+
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === 'Escape' && isModalOpen) {
@@ -82,43 +99,8 @@ export function ProductImage({ image, media = [] }) {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isModalOpen]);
 
-  useEffect(() => {
-    if (image) {
-      setSelectedImage(image);
-    }
-  }, [image]);
-
-  useEffect(() => {
-    setIsZoomed(false);
-    setPan({ x: 0, y: 0 });
-  }, [selectedImage]);
-
-  if (!selectedImage && (!media || media.length === 0)) {
-    return <div className="product-image" />;
-  }
-
-  const activeImage =
-    selectedImage || (media && media.length > 0 ? media[0] : null);
-  const isMediaActive = (med) => {
-    return getImageId(med) === getImageId(activeImage);
-  };
-
-  const currentIndex = media.findIndex((m) => isMediaActive(m));
-  const safeIndex = currentIndex === -1 ? 0 : currentIndex;
-
-  const handleNext = (e) => {
-    e?.stopPropagation();
-    if (!media.length) return;
-    setSelectedImage(media[(safeIndex + 1) % media.length]);
-  };
-
-  const handlePrev = (e) => {
-    e?.stopPropagation();
-    if (!media.length) return;
-    setSelectedImage(media[(safeIndex - 1 + media.length) % media.length]);
-  };
-
-  const openModal = () => {
+  const openModal = (med) => {
+    setActiveImage(med);
     setIsModalOpen(true);
     document.body.style.overflow = 'hidden';
     document.body.classList.add('modal-open');
@@ -158,37 +140,24 @@ export function ProductImage({ image, media = [] }) {
 
   const isVideo = (med) => med.mediaContentType === 'VIDEO' || med.mediaContentType === 'EXTERNAL_VIDEO';
 
-  const renderMedia = (med, isThumbnail = false, isModal = false, isActive = false) => {
-    if (isThumbnail) {
-      const previewImage = med.previewImage || med.image;
-      if (!previewImage) return null;
-
-      return (
-        <div className="thumbnail-inner">
-          <Image
-            alt={previewImage.altText || 'Product Thumbnail'}
-            data={previewImage}
-            aspectRatio="1/1"
-            width={100}
-            height={100}
-          />
-          {isVideo(med) && (
-            <div className="thumbnail-play-icon">
-              <svg viewBox="0 0 16.933 16.933" xmlns="http://www.w3.org/2000/svg"><path d="M3.175 2.117v12.7l10.583-6.35z" fill="#fff"></path></svg>
-            </div>
-          )}
-        </div>
-      );
-    }
-
+  const renderMedia = (med, isModal = false, isThumbnail = false) => {
     // Handle video
     if (isVideo(med) && med.sources) {
+      if (isThumbnail) {
+        return (
+          <Image
+            alt={med.previewImage?.altText || 'Product Video Thumbnail'}
+            data={med.previewImage}
+            className="thumbnail-img"
+          />
+        );
+      }
       return (
         <ProductVideo
           sources={med.sources}
           poster={med.previewImage?.url}
-          isActive={isActive}
-          className="main-vid"
+          isActive={true}
+          className={isModal ? "modal-vid" : "main-vid"}
         />
       );
     }
@@ -224,75 +193,88 @@ export function ProductImage({ image, media = [] }) {
       />
     );
   };
-  const thumbnailsWrapperRef = useRef(null);
-  useEffect(() => {
-    if (thumbnailsWrapperRef.current) {
-      const activeThumb = thumbnailsWrapperRef.current.querySelector('.product-thumbnail.active');
-      if (activeThumb) {
-        // scrollIntoView will handle the appropriate axis depending on layout
-        activeThumb.scrollIntoView({
-          behavior: 'smooth',
-          block: 'nearest',
-          inline: 'nearest'
-        });
-      }
+
+  if (allMedia.length === 0) {
+    return <div className="product-image" />;
+  }
+
+  const handleThumbnailClick = (index, med) => {
+    setActiveIndex(index);
+
+    // Explicitly scroll for mobile to ensure immediate response
+    if (window.innerWidth <= 900 && mobileMainRef.current) {
+      isScrollingRef.current = true;
+      const width = mobileMainRef.current.offsetWidth;
+      mobileMainRef.current.scrollTo({
+        left: width * index,
+        behavior: 'smooth'
+      });
+      setTimeout(() => { isScrollingRef.current = false; }, 500);
     }
-  }, [getImageId(activeImage)]);
+
+    if (window.innerWidth > 900) {
+      openModal(med);
+    }
+  };
+
+  const handleMobileMainScroll = (e) => {
+    if (isScrollingRef.current || window.innerWidth > 900) return;
+
+    const scrollLeft = e.target.scrollLeft;
+    const width = e.target.offsetWidth;
+    const newIndex = Math.round(scrollLeft / width);
+
+    if (newIndex !== activeIndex && newIndex >= 0 && newIndex < allMedia.length) {
+      setActiveIndex(newIndex);
+    }
+  };
 
   return (
-    <div className="product-image-gallery">
-      <div className="product-image-thumbnails-wrapper" ref={thumbnailsWrapperRef}>
-        <div className="product-image-thumbnails">
-          {media.map((med, index) => {
-            const isActive = isMediaActive(med) || (index === 0 && !selectedImage && !activeImage);
-            return (
-              <button
-                key={med.id || index}
-                className={`product-thumbnail ${isActive ? 'active' : ''}`}
-                onClick={() => setSelectedImage(med)}
-              >
-                {renderMedia(med, true)}
-              </button>
-            );
-          })}
-        </div>
-      </div>
-
-      <div className="product-image-main">
-        <div className="product-main-image-slider" onClick={openModal}>
-          {media.map((med) => {
-            const isActive = isMediaActive(med);
-            return (
-              <div
-                key={med.id}
-                className={`main-media-item ${isActive ? 'active' : ''}`}
-                style={{ display: isActive ? 'block' : 'none' }}
-              >
-                {renderMedia(med, false, false, isActive)}
-              </div>
-            );
-          })}
-
-          {activeImage && !media.some(m => isMediaActive(m)) && (
-            <div className="main-media-item active" style={{ display: 'block' }}>
-              {renderMedia(activeImage, false, false, true)}
+    <div className="product-image-container">
+      {/* MOBILE: Main Slider + Thumbnails Slider */}
+      <div className="product-mobile-gallery">
+        <div
+          ref={mobileMainRef}
+          className="product-mobile-main"
+          onScroll={handleMobileMainScroll}
+        >
+          {allMedia.map((med, index) => (
+            <div
+              key={`mob-main-${med.id || index}`}
+              className="product-mobile-main-item"
+              onClick={() => openModal(med)}
+            >
+              {renderMedia(med)}
             </div>
-          )}
+          ))}
         </div>
-
-        {media.length > 1 && (
-          <>
-            <button className="slider-arrow prev" onClick={handlePrev} aria-label="Previous">
-              <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
-            </button>
-            <button className="slider-arrow next" onClick={handleNext} aria-label="Next">
-              <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-            </button>
-          </>
-        )}
+        <div className="product-mobile-thumbnails">
+          {allMedia.map((med, index) => (
+            <div
+              key={`mob-${med.id || index}`}
+              className={`product-mobile-thumbnail-item ${index === activeIndex ? 'active' : ''}`}
+              onClick={() => handleThumbnailClick(index, med)}
+            >
+              {renderMedia(med, false, true)}
+            </div>
+          ))}
+        </div>
       </div>
 
-      {isModalOpen && (
+      {/* DESKTOP: 2-Column Grid */}
+      <div className="product-image-gallery desktop-grid">
+        {allMedia.map((med, index) => (
+          <div
+            key={`desk-${med.id || index}`}
+            className="product-image-grid-item"
+            onClick={() => openModal(med)}
+          >
+            {renderMedia(med)}
+          </div>
+        ))}
+      </div>
+
+      {isModalOpen && activeImage && (
         <div
           className="product-modal-overlay"
           onMouseMove={handleMouseMove}
@@ -300,18 +282,12 @@ export function ProductImage({ image, media = [] }) {
           onMouseLeave={handleMouseUp}
         >
           <div className="product-modal-content" onMouseDown={handleMouseDown}>
-            {renderMedia(activeImage, false, true, true)}
+            {renderMedia(activeImage, true)}
           </div>
 
           <div className="product-modal-controls">
-            <button className="modal-btn prev" onClick={handlePrev}>
-              <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
-            </button>
             <button className="modal-btn close" onClick={closeModal}>
               <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-            </button>
-            <button className="modal-btn next" onClick={handleNext}>
-              <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
             </button>
           </div>
         </div>

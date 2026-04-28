@@ -1,3 +1,9 @@
+.sbss-v2-swiper .swiper-scrollbar-drag,
+.shop-by-style .swiper-scrollbar-drag {
+  background: var(--accent_color_gold) !important;
+  cursor: pointer;
+}
+
 .search-form-top input:focus {
   outline: none;
 }
@@ -371,6 +377,82 @@ span.single-star svg {
   background-color: var(--primary_color);
 }
 
+/* Static Variant for Internal Pages */
+.vb-section--static {
+  height: 80vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.vb-static-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vb-static-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 800px;
+}
+
+.vb-static-content h2 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.vb-static-content p {
+  font-size: clamp(1rem, 1.2vw, 1.25rem);
+  opacity: 0.9;
+  max-width: 600px;
+}
+
+.vb-static-content .btn {
+  margin-top: 1rem;
+  padding: 1rem 2.5rem;
+}
+
+.vb-section--static .vb-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+.vb-section--static .vb-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+@media screen and (max-width: 767px) {
+  .vb-section--static {
+    height: 70vh;
+  }
+}
+
 .vb-wrapper {
   position: relative;
   display: flex;
@@ -593,7 +675,8 @@ span.single-star svg {
   color: var(--site_text_color);
 }
 
-.shop-by-style-header p {
+.shop-by-style-header p,
+.rich-text {
   font-size: 15px;
   font-family: var(--font_family_c);
   color: var(--black_color);
@@ -764,7 +847,7 @@ span.single-star svg {
 }
 
 .shop-by-style .swiper-scrollbar-drag {
-  background: var(--accent_color_gold) !important;
+  /* background: var(--accent_color_gold) !important; */
   height: 100% !important;
   cursor: pointer;
 }
@@ -2558,6 +2641,10 @@ section.rc-v2.gemstones {
 /* =================================================
    SHOP BY STYLE SCROLL V2 (sbss-v2)
 ================================================= */
+section.sbss-v2.shop--education {
+  display: none;
+}
+
 .sbss-v2 {
   background-color: var(--white_color);
   overflow: hidden;
@@ -2616,9 +2703,9 @@ section.rc-v2.gemstones {
   width: 100% !important;
 }
 
-.sbss-v2-swiper .swiper-scrollbar-drag {
+/* .sbss-v2-swiper .swiper-scrollbar-drag {
   background: var(--accent_color_gold) !important;
-}
+} */
 
 .sbss-v2-swiper .swiper-slide,
 .sbss-v2-static-grid .sbss-v2-card {

@@ -649,9 +649,9 @@ a.ssw-link:hover svg {
     stroke: var(--uvp_color);
 }
 
-.uvp-label:hover {
+/* .uvp-label:hover {
     text-decoration: underline;
-}
+} */
 
 .uvp-label {
     color: var(--uvp_color);
@@ -734,7 +734,7 @@ a.ssw-link:hover svg {
 }
 
 .shop-by-style.shop--section-gallery {
-    background: #F4EFE9;
+    background: var(--body_color);
 }
 
 @media screen and (max-width: 1200px) {
