@@ -171,10 +171,10 @@ export function VideoBanner({
 
           {/* Text overlay */}
           <div className="vb-static-content page-width">
-            {h && <h2 className="vb-title-word">{h}</h2>}
-            {d && <RichText tag="p" html={d} />}
+            {h && <h2 className="section-title">{h}</h2>}
+            {d && <RichText tag="p" html={d} className="vb-rich-text" />}
             {bT && bU && (
-              <Link to={bU} className="btn">
+              <Link to={bU} className="sb-button">
                 {bT}
               </Link>
             )}

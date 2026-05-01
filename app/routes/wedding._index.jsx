@@ -424,225 +424,227 @@ export default function WeddingCollection() {
                 </div>
             </div>
 
-            <div className="collection-content">
+            <section className="collection-content">
                 <div className='page-width'>
-                    <aside className="collection-filters-sidebar wedding-filters" ref={filtersRef}>
-                        <WeddingCollectionFilters collectionType={activeTab} />
-                    </aside>
-                </div>
 
-                <div className='page-width'>
-                    <main className="collection-products">
-                        {/* Sort Header */}
-                        <div className="collection-sort-header" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'stretch', marginBottom: '20px', rowGap: '3px' }}>
-                            <div style={{ display: 'flex', flexDirection: 'row' }}>
-                                <div style={{ alignSelf: 'center', marginRight: '7px' }} className="f-13 f-m-13 w-400 ff-c l-h-1 black-color">Sort:</div>
-                                <div className="sort-dropdown-container" style={{ position: 'relative', minWidth: '140px' }} ref={sortDropdownRef}>
-                                    <button
-                                        className="sort-trigger f-13 f-m-13 w-400 ff-c l-h-1 black-color"
-                                        onClick={() => setShowSortDropdown(!showSortDropdown)}
-                                        style={{
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                            justifyContent: 'space-between',
-                                            width: '100%',
-                                            background: 'white',
-                                            borderRadius: '4px',
-                                            border: '0px solid transparent',
-                                            cursor: 'pointer',
-                                            gap: '8px'
-                                        }}
-                                    >
-                                        <span>{currentSortLabel}</span>
-                                        <svg width="15" height="15" viewBox="0 0 16.933 16.933" xmlns="http://www.w3.org/2000/svg" style={{ transform: showSortDropdown ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }}>
-                                            <path d="m2.117 5.292 6.35 6.35 6.35-6.35" style={{ fill: 'none', stroke: 'currentColor', strokeWidth: '1.05831', strokeLinecap: 'round', strokeLinejoin: 'round' }} />
-                                        </svg>
-                                    </button>
-                                    {showSortDropdown && (
-                                        <div className="sort-options f-13 f-m-13 w-400 ff-c l-h-1 black-color" style={{
-                                            position: 'absolute',
-                                            top: '100%',
-                                            left: 0,
-                                            background: 'var(--body_color)',
-                                            borderRadius: '4px',
-                                            zIndex: 10,
-                                            minWidth: '200px',
-                                            border: '0px solid transparent',
-                                            marginTop: '4px'
-                                        }}>
-                                            {sortOptions.map(option => (
-                                                <button
-                                                    key={option.value}
-                                                    onClick={() => handleSortChange(option.value)}
-                                                    className="f-13 f-m-13 w-400 ff-c l-h-1 black-color"
-                                                    style={{
-                                                        display: 'block',
-                                                        width: '100%',
-                                                        textAlign: 'left',
-                                                        padding: '10px 15px',
-                                                        background: 'none',
-                                                        border: 'none',
-                                                        cursor: 'pointer',
-                                                        backgroundColor: currentSortLabel === option.label ? '#f5f5f5' : 'white'
-                                                    }}
-                                                    onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#f5f5f5'}
-                                                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = currentSortLabel === option.label ? '#f5f5f5' : 'white'}
-                                                >
-                                                    {option.label}
-                                                </button>
-                                            ))}
-                                        </div>
-                                    )}
-                                </div>
-                            </div>
+                    <div className='collection-side'>
 
-                            {showSortButtons && (
-                                <div className="button-group" style={{ marginLeft: '7px', display: 'flex', border: '1px solid #e0e0e0', borderRadius: '4px', overflow: 'hidden' }}>
-                                    <button
-                                        type="button"
-                                        className={`button-group-icon ${!sortParam.includes('high-low') && !sortParam.includes('z-a') ? 'selected' : ''}`}
-                                        title="Sort Ascending"
-                                        onClick={() => {
-                                            const newParams = new URLSearchParams(searchParams);
-                                            if (sortParam.includes('price')) {
-                                                newParams.set('sort', 'price-low-high');
-                                            } else if (sortParam.includes('name')) {
-                                                newParams.set('sort', 'name-a-z');
-                                            }
-                                            setSearchParams(newParams, { preventScrollReset: true });
-                                        }}
-                                        style={{
-                                            padding: '8px 12px',
-                                            background: (!sortParam.includes('high-low') && !sortParam.includes('z-a')) ? '#253E2B' : 'white',
-                                            border: 'none',
-                                            borderRight: '1px solid #e0e0e0',
-                                            cursor: 'pointer',
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                            justifyContent: 'center'
-                                        }}
-                                    >
-                                        <svg width="18" height="18" viewBox="0 0 16.933 16.933" xmlns="http://www.w3.org/2000/svg">
-                                            <g fill={(!sortParam.includes('high-low') && !sortParam.includes('z-a')) ? '#fff' : '#253E2B'}>
-                                                <path d="M2.117 2.117H6.35v2.117H2.117zM2.117 7.408h8.467v2.117H2.117zM2.117 12.7h12.7v2.117h-12.7z"></path>
-                                            </g>
-                                        </svg>
-                                    </button>
-                                    <button
-                                        type="button"
-                                        className={`button-group-icon ${sortParam.includes('high-low') || sortParam.includes('z-a') ? 'selected' : ''}`}
-                                        title="Sort Descending"
-                                        onClick={() => {
-                                            const newParams = new URLSearchParams(searchParams);
-                                            if (sortParam.includes('price')) {
-                                                newParams.set('sort', 'price-high-low');
-                                            } else if (sortParam.includes('name')) {
-                                                newParams.set('sort', 'name-z-a');
-                                            }
-                                            setSearchParams(newParams, { preventScrollReset: true });
-                                        }}
-                                        style={{
-                                            padding: '8px 12px',
-                                            background: (sortParam.includes('high-low') || sortParam.includes('z-a')) ? '#253E2B' : 'white',
-                                            border: 'none',
-                                            cursor: 'pointer',
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                            justifyContent: 'center'
-                                        }}
-                                    >
-                                        <svg width="18" height="18" viewBox="0 0 16.933 16.933" xmlns="http://www.w3.org/2000/svg">
-                                            <g fill={(sortParam.includes('high-low') || sortParam.includes('z-a')) ? '#fff' : '#253E2B'}>
-                                                <path d="M2.117 2.117h12.7v2.117h-12.7zM2.117 7.408h8.467v2.117H2.117zM2.117 12.7H6.35v2.117H2.117z"></path>
-                                            </g>
-                                        </svg>
-                                    </button>
-                                </div>
-                            )}
-                        </div>
-                        <Pagination connection={collection.products}>
-                            {({ nodes, isLoading, NextLink }) => {
-                                // Apply client-side filtering to the paginated nodes
-                                const filteredProducts = nodes.filter(product => {
-                                    const normalize = (str) => str?.toLowerCase().replace(/[^a-z0-9]/g, '');
-                                    const productTags = product.tags?.map(tag => normalize(tag)) || [];
-                                    const productTitle = normalize(product.title);
-
-                                    if (styleFilter) {
-                                        const normalizedStyle = normalize(styleFilter);
-                                        const hasStyle = productTags.some(tag => tag.includes(normalizedStyle)) ||
-                                            productTitle.includes(normalizedStyle);
-                                        if (!hasStyle) return false;
-                                    }
-
-                                    if (metalFilters.length > 0) {
-                                        const hasAnyMetal = metalFilters.some(metalFilter => {
-                                            const normalizedMetal = normalize(metalFilter);
-                                            return product.variants?.nodes?.some(variant =>
-                                                variant.selectedOptions?.some(option =>
-                                                    option.name.toLowerCase().includes('metal') &&
-                                                    normalize(option.value).includes(normalizedMetal)
-                                                )
-                                            );
-                                        });
-                                        if (!hasAnyMetal) return false;
-                                    }
-
-                                    return true;
-                                });
-
-                                // Sort products
-                                const sortedProducts = [...filteredProducts].sort((a, b) => {
-                                    if (metalFilters.length === 0) return 0;
-                                    const normalize = (str) => str?.toLowerCase().replace(/[^a-z0-9]/g, '');
-                                    const targetMetal = normalize(metalFilters[metalFilters.length - 1]); // Use LAST metal
-
-                                    const aFirstVariantMatches = a.variants?.nodes?.[0]?.selectedOptions?.some(option =>
-                                        option.name.toLowerCase().includes('metal') &&
-                                        normalize(option.value) === targetMetal
-                                    );
-
-                                    const bFirstVariantMatches = b.variants?.nodes?.[0]?.selectedOptions?.some(option =>
-                                        option.name.toLowerCase().includes('metal') &&
-                                        normalize(option.value) === targetMetal
-                                    );
-
-                                    if (aFirstVariantMatches && !bFirstVariantMatches) return -1;
-                                    if (!aFirstVariantMatches && bFirstVariantMatches) return 1;
-                                    return 0;
-                                });
-
-                                return (
-                                    <>
-                                        {sortedProducts.length > 0 ? (
-                                            <div className="products-grid">
-                                                {sortedProducts.map((product, index) => (
-                                                    <ProductItem
-                                                        key={product.id}
-                                                        product={product}
-                                                        loading={index < 24 ? 'eager' : undefined}
-                                                        selectedVariantOptions={selectedVariantOptions}
-                                                        basePath="/wedding"
-                                                    />
+                        <aside className="collection-filters-sidebar wedding-filters" ref={filtersRef}>
+                            <WeddingCollectionFilters collectionType={activeTab} />
+                        </aside>
+                        <main className="collection-products">
+                            {/* Sort Header */}
+                            <div className="collection-sort-header" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'stretch', marginBottom: '20px', rowGap: '3px' }}>
+                                <div style={{ display: 'flex', flexDirection: 'row' }}>
+                                    <div style={{ alignSelf: 'center', marginRight: '7px' }} className="f-13 f-m-13 w-400 ff-c l-h-1 black-color">Sort:</div>
+                                    <div className="sort-dropdown-container" style={{ position: 'relative', minWidth: '140px' }} ref={sortDropdownRef}>
+                                        <button
+                                            className="sort-trigger f-13 f-m-13 w-400 ff-c l-h-1 black-color"
+                                            onClick={() => setShowSortDropdown(!showSortDropdown)}
+                                            style={{
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                justifyContent: 'space-between',
+                                                width: '100%',
+                                                background: 'white',
+                                                borderRadius: '4px',
+                                                border: '0px solid transparent',
+                                                cursor: 'pointer',
+                                                gap: '8px'
+                                            }}
+                                        >
+                                            <span>{currentSortLabel}</span>
+                                            <svg width="15" height="15" viewBox="0 0 16.933 16.933" xmlns="http://www.w3.org/2000/svg" style={{ transform: showSortDropdown ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }}>
+                                                <path d="m2.117 5.292 6.35 6.35 6.35-6.35" style={{ fill: 'none', stroke: 'currentColor', strokeWidth: '1.05831', strokeLinecap: 'round', strokeLinejoin: 'round' }} />
+                                            </svg>
+                                        </button>
+                                        {showSortDropdown && (
+                                            <div className="sort-options f-13 f-m-13 w-400 ff-c l-h-1 black-color" style={{
+                                                position: 'absolute',
+                                                top: '100%',
+                                                left: 0,
+                                                background: 'var(--body_color)',
+                                                borderRadius: '4px',
+                                                zIndex: 10,
+                                                minWidth: '200px',
+                                                border: '0px solid transparent',
+                                                marginTop: '4px'
+                                            }}>
+                                                {sortOptions.map(option => (
+                                                    <button
+                                                        key={option.value}
+                                                        onClick={() => handleSortChange(option.value)}
+                                                        className="f-13 f-m-13 w-400 ff-c l-h-1 black-color"
+                                                        style={{
+                                                            display: 'block',
+                                                            width: '100%',
+                                                            textAlign: 'left',
+                                                            padding: '10px 15px',
+                                                            background: 'none',
+                                                            border: 'none',
+                                                            cursor: 'pointer',
+                                                            backgroundColor: currentSortLabel === option.label ? '#f5f5f5' : 'white'
+                                                        }}
+                                                        onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#f5f5f5'}
+                                                        onMouseLeave={(e) => e.currentTarget.style.backgroundColor = currentSortLabel === option.label ? '#f5f5f5' : 'white'}
+                                                    >
+                                                        {option.label}
+                                                    </button>
                                                 ))}
                                             </div>
-                                        ) : (
-                                            <div className="no-products">
-                                                <p className='f-20 f-m-18 black-color txt-center w-400 ff-n'>No products found matching your filters.</p>
-                                            </div>
                                         )}
-                                        <div className='pagination-wrapper'>
-                                            <NextLink className='common-button'>
-                                                {isLoading ? <span className='f-14 f-m-14 w-400 ff-n l-h-1 white-color'>Loading...</span> : <span className='f-14 f-m-14 w-400 ff-n l-h-1 white-color'>Load more</span>}
-                                            </NextLink>
-                                        </div>
-                                        <CollectionContentSection data={COLLECTION_CONTENT_SECTION} />
-                                    </>
-                                );
-                            }}
-                        </Pagination>
-                    </main>
+                                    </div>
+                                </div>
+
+                                {showSortButtons && (
+                                    <div className="button-group" style={{ marginLeft: '7px', display: 'flex', border: '1px solid #e0e0e0', borderRadius: '4px', overflow: 'hidden' }}>
+                                        <button
+                                            type="button"
+                                            className={`button-group-icon ${!sortParam.includes('high-low') && !sortParam.includes('z-a') ? 'selected' : ''}`}
+                                            title="Sort Ascending"
+                                            onClick={() => {
+                                                const newParams = new URLSearchParams(searchParams);
+                                                if (sortParam.includes('price')) {
+                                                    newParams.set('sort', 'price-low-high');
+                                                } else if (sortParam.includes('name')) {
+                                                    newParams.set('sort', 'name-a-z');
+                                                }
+                                                setSearchParams(newParams, { preventScrollReset: true });
+                                            }}
+                                            style={{
+                                                padding: '8px 12px',
+                                                background: (!sortParam.includes('high-low') && !sortParam.includes('z-a')) ? '#253E2B' : 'white',
+                                                border: 'none',
+                                                borderRight: '1px solid #e0e0e0',
+                                                cursor: 'pointer',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                justifyContent: 'center'
+                                            }}
+                                        >
+                                            <svg width="18" height="18" viewBox="0 0 16.933 16.933" xmlns="http://www.w3.org/2000/svg">
+                                                <g fill={(!sortParam.includes('high-low') && !sortParam.includes('z-a')) ? '#fff' : '#253E2B'}>
+                                                    <path d="M2.117 2.117H6.35v2.117H2.117zM2.117 7.408h8.467v2.117H2.117zM2.117 12.7h12.7v2.117h-12.7z"></path>
+                                                </g>
+                                            </svg>
+                                        </button>
+                                        <button
+                                            type="button"
+                                            className={`button-group-icon ${sortParam.includes('high-low') || sortParam.includes('z-a') ? 'selected' : ''}`}
+                                            title="Sort Descending"
+                                            onClick={() => {
+                                                const newParams = new URLSearchParams(searchParams);
+                                                if (sortParam.includes('price')) {
+                                                    newParams.set('sort', 'price-high-low');
+                                                } else if (sortParam.includes('name')) {
+                                                    newParams.set('sort', 'name-z-a');
+                                                }
+                                                setSearchParams(newParams, { preventScrollReset: true });
+                                            }}
+                                            style={{
+                                                padding: '8px 12px',
+                                                background: (sortParam.includes('high-low') || sortParam.includes('z-a')) ? '#253E2B' : 'white',
+                                                border: 'none',
+                                                cursor: 'pointer',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                justifyContent: 'center'
+                                            }}
+                                        >
+                                            <svg width="18" height="18" viewBox="0 0 16.933 16.933" xmlns="http://www.w3.org/2000/svg">
+                                                <g fill={(sortParam.includes('high-low') || sortParam.includes('z-a')) ? '#fff' : '#253E2B'}>
+                                                    <path d="M2.117 2.117h12.7v2.117h-12.7zM2.117 7.408h8.467v2.117H2.117zM2.117 12.7H6.35v2.117H2.117z"></path>
+                                                </g>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                )}
+                            </div>
+                            <Pagination connection={collection.products}>
+                                {({ nodes, isLoading, NextLink }) => {
+                                    // Apply client-side filtering to the paginated nodes
+                                    const filteredProducts = nodes.filter(product => {
+                                        const normalize = (str) => str?.toLowerCase().replace(/[^a-z0-9]/g, '');
+                                        const productTags = product.tags?.map(tag => normalize(tag)) || [];
+                                        const productTitle = normalize(product.title);
+
+                                        if (styleFilter) {
+                                            const normalizedStyle = normalize(styleFilter);
+                                            const hasStyle = productTags.some(tag => tag.includes(normalizedStyle)) ||
+                                                productTitle.includes(normalizedStyle);
+                                            if (!hasStyle) return false;
+                                        }
+
+                                        if (metalFilters.length > 0) {
+                                            const hasAnyMetal = metalFilters.some(metalFilter => {
+                                                const normalizedMetal = normalize(metalFilter);
+                                                return product.variants?.nodes?.some(variant =>
+                                                    variant.selectedOptions?.some(option =>
+                                                        option.name.toLowerCase().includes('metal') &&
+                                                        normalize(option.value).includes(normalizedMetal)
+                                                    )
+                                                );
+                                            });
+                                            if (!hasAnyMetal) return false;
+                                        }
+
+                                        return true;
+                                    });
+
+                                    // Sort products
+                                    const sortedProducts = [...filteredProducts].sort((a, b) => {
+                                        if (metalFilters.length === 0) return 0;
+                                        const normalize = (str) => str?.toLowerCase().replace(/[^a-z0-9]/g, '');
+                                        const targetMetal = normalize(metalFilters[metalFilters.length - 1]); // Use LAST metal
+
+                                        const aFirstVariantMatches = a.variants?.nodes?.[0]?.selectedOptions?.some(option =>
+                                            option.name.toLowerCase().includes('metal') &&
+                                            normalize(option.value) === targetMetal
+                                        );
+
+                                        const bFirstVariantMatches = b.variants?.nodes?.[0]?.selectedOptions?.some(option =>
+                                            option.name.toLowerCase().includes('metal') &&
+                                            normalize(option.value) === targetMetal
+                                        );
+
+                                        if (aFirstVariantMatches && !bFirstVariantMatches) return -1;
+                                        if (!aFirstVariantMatches && bFirstVariantMatches) return 1;
+                                        return 0;
+                                    });
+
+                                    return (
+                                        <>
+                                            {sortedProducts.length > 0 ? (
+                                                <div className="products-grid">
+                                                    {sortedProducts.map((product, index) => (
+                                                        <ProductItem
+                                                            key={product.id}
+                                                            product={product}
+                                                            loading={index < 24 ? 'eager' : undefined}
+                                                            selectedVariantOptions={selectedVariantOptions}
+                                                            basePath="/wedding"
+                                                        />
+                                                    ))}
+                                                </div>
+                                            ) : (
+                                                <div className="no-products">
+                                                    <p className='f-20 f-m-18 black-color txt-center w-400 ff-n'>No products found matching your filters.</p>
+                                                </div>
+                                            )}
+                                            <div className='pagination-wrapper'>
+                                                <NextLink className='common-button'>
+                                                    {isLoading ? <span className='f-14 f-m-14 w-400 ff-n l-h-1 white-color'>Loading...</span> : <span className='f-14 f-m-14 w-400 ff-n l-h-1 white-color'>Load more</span>}
+                                                </NextLink>
+                                            </div>
+                                            <CollectionContentSection data={COLLECTION_CONTENT_SECTION} />
+                                        </>
+                                    );
+                                }}
+                            </Pagination>
+                        </main>
+                    </div>
                 </div>
+
                 <Analytics.CollectionView
                     data={{
                         collection: {
@@ -651,7 +653,7 @@ export default function WeddingCollection() {
                         },
                     }}
                 />
-            </div>
+            </section>
             <BackToFiltersSticky targetRef={filtersRef} />
             <div className="collection-faq-section">
                 <ProductFAQ data={FAQ_DATA} />

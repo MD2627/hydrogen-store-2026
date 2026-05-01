@@ -12,26 +12,28 @@ export function CollectionContentSection({ data }) {
 
     return (
         <section className="collection-content-section">
-            <div className="collection-content-wrapper">
-                {data.sections.map((section, index) => (
-                    <div className="collection-content-block" key={index}>
-                        {/* HEADING */}
-                        <h2 className="collection-content-heading ff-n f-16 w-400 black-color">
-                            {section.heading}
-                        </h2>
-
-                        {/* TEXT */}
-                        <div className="collection-content-text ff-c f-13 w-300 black-color">
-                            {section.paragraphs.map((text, i) => (
-                                <RichText
-                                    key={i}
-                                    tag="p"
-                                    html={text}
-                                />
-                            ))}
-                        </div>
-                    </div>
-                ))}
+            <div className='page-width'>
+                <div className="collection-content-grid">
+                    {data.sections.map((section, index) => (
+                        <article className="collection-content-card" key={index}>
+                            <div className="content-card-inner">
+                                <h3 className="content-card-title ff-n f-24 f-m-20 w-400 black-color">
+                                    {section.heading}
+                                </h3>
+                                <div className="collection-content-text">
+                                    {section.paragraphs.map((text, i) => (
+                                        <RichText
+                                            key={i}
+                                            tag="p"
+                                            html={text}
+                                            className="sb-description"
+                                        />
+                                    ))}
+                                </div>
+                            </div>
+                        </article>
+                    ))}
+                </div>
             </div>
         </section>
     );

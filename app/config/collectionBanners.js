@@ -65,8 +65,8 @@ export const COLLECTION_BANNERS = {
     },
     'engagement-rings': {
         type: 'video',
-        desktop: 'https://cdn.shopify.com/videos/c/o/v/2f3ddc1e328b4dc1b7fb13837208b3d1.mp4',
-        mobile: 'https://cdn.shopify.com/videos/c/o/v/2f3ddc1e328b4dc1b7fb13837208b3d1.mp4',
+        desktop: 'https://cdn.shopify.com/videos/c/o/v/e816e351d77a4cef8cdda60d9c22945d.mp4',
+        mobile: 'https://cdn.shopify.com/videos/c/o/v/e816e351d77a4cef8cdda60d9c22945d.mp4',
         // desktop: 'https://cdn.shopify.com/s/files/1/0801/7317/0906/files/02_Sasha_and_Holly_Banner_2000x2000_5f4e8ec1-b7b5-4d1e-ac55-136ea9673b8e.jpg?v=1768801658',
         // mobile: 'https://cdn.shopify.com/s/files/1/0801/7317/0906/files/02_Sasha_and_Holly_Banner_Mobile_2000x2000_2cd360ec-70f4-4314-abc2-e038e3ba0dae.jpg?v=1768801890',
         title: 'Ready-to-Ship Engagement Rings',
@@ -81,8 +81,8 @@ export const COLLECTION_BANNERS = {
     },
     'gifting': {
         type: 'video',
-        desktop: 'https://cdn.shopify.com/videos/c/o/v/aea546cde2434e3dab5d9b88c347d368.mp4',
-        mobile: 'https://cdn.shopify.com/videos/c/o/v/aea546cde2434e3dab5d9b88c347d368.mp4',
+        desktop: 'https://cdn.shopify.com/videos/c/o/v/608d2bbde9e84608a5db3ce6855c47b9.mp4',
+        mobile: 'https://cdn.shopify.com/videos/c/o/v/608d2bbde9e84608a5db3ce6855c47b9.mp4',
         // desktop: 'https://cdn.shopify.com/s/files/1/0801/7317/0906/files/02_Sasha_and_Holly_Banner_2000x2000_5f4e8ec1-b7b5-4d1e-ac55-136ea9673b8e.jpg?v=1768801658',
         // mobile: 'https://cdn.shopify.com/s/files/1/0801/7317/0906/files/02_Sasha_and_Holly_Banner_Mobile_2000x2000_2cd360ec-70f4-4314-abc2-e038e3ba0dae.jpg?v=1768801890',
         title: 'Responsible. Meaningful. Made to be gifted.',
@@ -125,10 +125,10 @@ export const COLLECTION_BANNERS = {
     },
     'fine-jewelry': {
         type: 'video',
-        desktop: 'https://cdn.shopify.com/videos/c/o/v/aea546cde2434e3dab5d9b88c347d368.mp4',
-        mobile: 'https://cdn.shopify.com/videos/c/o/v/aea546cde2434e3dab5d9b88c347d368.mp4',
+        desktop: 'https://cdn.shopify.com/videos/c/o/v/608d2bbde9e84608a5db3ce6855c47b9.mp4',
+        mobile: 'https://cdn.shopify.com/videos/c/o/v/608d2bbde9e84608a5db3ce6855c47b9.mp4',
         title: 'Fine Jewelry',
-        description: 'Explore our fine jewelry collection, featuring timeless tennis bracelets, initial necklaces and more.',
+        description: 'Discover our fine jewelry collection, showcasing timeless tennis bracelets, personalized initial necklaces, and more.',
         videoOptions: {
             autoplay: true,
             loop: true,

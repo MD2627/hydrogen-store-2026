@@ -966,8 +966,13 @@ a.ssw-link:hover svg {
     font-size: 19px;
     font-weight: 300;
     color: var(--charcoal_color);
-    margin-bottom: 48px;
+    margin-bottom: 30px;
     line-height: 1.5;
+    opacity: 1;
+}
+
+.collection-content-text .sb-description {
+    text-align: justify;
 }
 
 /* sb-button extends the global .btn system — only overrides what differs */
@@ -1190,13 +1195,14 @@ a.ssw-link:hover svg {
 }
 
 .faq-v3-item.is-active .faq-v3-item-q {
-    color: var(--cyan_color);
+    /* color: var(--cyan_color); */
 }
 
 .faq-v3-item-body {
     display: grid;
     grid-template-rows: 0fr;
     transition: grid-template-rows 0.5s cubic-bezier(0.2, 0, 0.2, 1);
+    padding-top: 10px;
 }
 
 .faq-v3-item.is-active .faq-v3-item-body {

@@ -9,7 +9,7 @@
 }
 
 .engagement-collection-filters .filter-third-width {
-    width: 50%;
+    width: 100%;
 }
 
 /* Ensure they stack correctly if flex/grid behavior needs adjustment */

@@ -286,258 +286,259 @@ export default function EngagementRingCollection() {
     return (
         <div className="collection">
             <CollectionBanner collection={collection} />
-            <div className="collection-content">
+            <section className="collection-content">
                 <div className='page-width'>
-                    <aside className="collection-filters-sidebar engagement-collection-filters">
-                        <CustomCollectionFilters additionalFilters={[STONE_TYPE_FILTER]} />
-                    </aside>
-                </div>
-
-                <div className='page-width'>
-                    <main className="collection-products">
-                        {/* Sort Header */}
-                        <div className="collection-sort-header" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'stretch', marginBottom: '20px', rowGap: '3px' }}>
-                            <div style={{ display: 'flex', flexDirection: 'row' }}>
-                                <div style={{ alignSelf: 'center', marginRight: '7px' }} className="f-13 f-m-13 w-400 ff-c l-h-1 black-color">Sort:</div>
-                                <div className="sort-dropdown-container" style={{ position: 'relative', minWidth: '140px' }} ref={sortDropdownRef}>
-                                    <button
-                                        className="sort-trigger f-13 f-m-13 w-400 ff-c l-h-1 black-color"
-                                        onClick={() => setShowSortDropdown(!showSortDropdown)}
-                                        style={{
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                            justifyContent: 'space-between',
-                                            width: '100%',
-                                            background: 'white',
-                                            borderRadius: '4px',
-                                            cursor: 'pointer',
-                                            border: '0px solid transparent',
-                                            gap: '8px'
-                                        }}
-                                    >
-                                        <span>{currentSortLabel}</span>
-                                        <svg width="15" height="15" viewBox="0 0 16.933 16.933" xmlns="http://www.w3.org/2000/svg" style={{ transform: showSortDropdown ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }}>
-                                            <path d="m2.117 5.292 6.35 6.35 6.35-6.35" style={{ fill: 'none', stroke: 'currentColor', strokeWidth: '1.05831', strokeLinecap: 'round', strokeLinejoin: 'round' }} />
-                                        </svg>
-                                    </button>
-                                    {showSortDropdown && (
-                                        <div className="sort-options f-13 f-m-13 w-400 ff-c l-h-1 black-color" style={{
-                                            position: 'absolute',
-                                            top: '100%',
-                                            left: 0,
-                                            background: 'var(--body_color)',
-                                            borderRadius: '4px',
-                                            border: '0px solid transparent',
-                                            zIndex: 10,
-                                            minWidth: '200px',
-                                            marginTop: '4px'
-                                        }}>
-                                            {sortOptions.map(option => (
-                                                <button
-                                                    key={option.value}
-                                                    onClick={() => handleSortChange(option.value)}
-                                                    className="f-13 f-m-13 w-400 ff-c l-h-1 black-color"
-                                                    style={{
-                                                        display: 'block',
-                                                        width: '100%',
-                                                        textAlign: 'left',
-                                                        padding: '10px 15px',
-                                                        background: 'none',
-                                                        border: 'none',
-                                                        cursor: 'pointer',
-                                                        backgroundColor: currentSortLabel === option.label ? '#f5f5f5' : 'white'
-                                                    }}
-                                                    onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#f5f5f5'}
-                                                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = currentSortLabel === option.label ? '#f5f5f5' : 'white'}
-                                                >
-                                                    {option.label}
-                                                </button>
-                                            ))}
-                                        </div>
-                                    )}
-                                </div>
-                            </div>
-
-                            {showSortButtons && (
-                                <div className="button-group" style={{ marginLeft: '7px', display: 'flex', border: '1px solid #e0e0e0', borderRadius: '4px', overflow: 'hidden' }}>
-                                    <button
-                                        type="button"
-                                        className={`button-group-icon ${!sortParam.includes('high-low') && !sortParam.includes('z-a') ? 'selected' : ''}`}
-                                        title="Sort Ascending"
-                                        onClick={() => {
-                                            const newParams = new URLSearchParams(searchParams);
-                                            if (sortParam.includes('price')) {
-                                                newParams.set('sort', 'price-low-high');
-                                            } else if (sortParam.includes('name')) {
-                                                newParams.set('sort', 'name-a-z');
-                                            }
-                                            setSearchParams(newParams, { preventScrollReset: true });
-                                        }}
-                                        style={{
-                                            padding: '8px 12px',
-                                            background: (!sortParam.includes('high-low') && !sortParam.includes('z-a')) ? '#253E2B' : 'white',
-                                            border: 'none',
-                                            borderRight: '1px solid #e0e0e0',
-                                            cursor: 'pointer',
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                            justifyContent: 'center'
-                                        }}
-                                    >
-                                        <svg width="18" height="18" viewBox="0 0 16.933 16.933" xmlns="http://www.w3.org/2000/svg">
-                                            <g fill={(!sortParam.includes('high-low') && !sortParam.includes('z-a')) ? '#fff' : '#253E2B'}>
-                                                <path d="M2.117 2.117H6.35v2.117H2.117zM2.117 7.408h8.467v2.117H2.117zM2.117 12.7h12.7v2.117h-12.7z"></path>
-                                            </g>
-                                        </svg>
-                                    </button>
-                                    <button
-                                        type="button"
-                                        className={`button-group-icon ${sortParam.includes('high-low') || sortParam.includes('z-a') ? 'selected' : ''}`}
-                                        title="Sort Descending"
-                                        onClick={() => {
-                                            const newParams = new URLSearchParams(searchParams);
-                                            if (sortParam.includes('price')) {
-                                                newParams.set('sort', 'price-high-low');
-                                            } else if (sortParam.includes('name')) {
-                                                newParams.set('sort', 'name-z-a');
-                                            }
-                                            setSearchParams(newParams, { preventScrollReset: true });
-                                        }}
-                                        style={{
-                                            padding: '8px 12px',
-                                            background: (sortParam.includes('high-low') || sortParam.includes('z-a')) ? '#253E2B' : 'white',
-                                            border: 'none',
-                                            cursor: 'pointer',
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                            justifyContent: 'center'
-                                        }}
-                                    >
-                                        <svg width="18" height="18" viewBox="0 0 16.933 16.933" xmlns="http://www.w3.org/2000/svg">
-                                            <g fill={(sortParam.includes('high-low') || sortParam.includes('z-a')) ? '#fff' : '#253E2B'}>
-                                                <path d="M2.117 2.117h12.7v2.117h-12.7zM2.117 7.408h8.467v2.117H2.117zM2.117 12.7H6.35v2.117H2.117z"></path>
-                                            </g>
-                                        </svg>
-                                    </button>
-                                </div>
-                            )}
-                        </div>
-                        <Pagination connection={collection.products}>
-                            {({ nodes, isLoading, NextLink }) => {
-                                // Apply client-side filtering to the paginated nodes
-                                const filteredProducts = nodes.filter(product => {
-                                    const normalize = (str) => str?.toLowerCase().replace(/[^a-z0-9]/g, '');
-                                    const productTags = product.tags?.map(tag => normalize(tag)) || [];
-                                    const productTitle = normalize(product.title);
-
-                                    if (shapeFilter) {
-                                        const normalizedShape = normalize(shapeFilter);
-                                        const hasShape = productTags.some(tag => tag.includes(normalizedShape)) ||
-                                            productTitle.includes(normalizedShape);
-                                        if (!hasShape) return false;
-                                    }
-
-                                    if (metalFilter) {
-                                        const normalizedMetal = normalize(metalFilter);
-                                        const hasMetalInVariants = product.variants?.nodes?.some(variant =>
-                                            variant.selectedOptions?.some(option =>
-                                                normalize(option.value).includes(normalizedMetal)
-                                            )
-                                        );
-
-                                        // Also check tags as fallback (common for products)
-                                        const hasMetalInTags = productTags.some(tag => tag.includes(normalizedMetal));
-
-                                        if (!hasMetalInVariants && !hasMetalInTags) return false;
-                                    }
-
-                                    if (styleFilter) {
-                                        const normalizedStyle = normalize(styleFilter);
-                                        const hasStyle = productTags.some(tag => tag.includes(normalizedStyle)) ||
-                                            productTitle.includes(normalizedStyle);
-                                        if (!hasStyle) return false;
-                                    }
-
-                                    if (bandFilter) {
-                                        const normalizedBand = normalize(bandFilter);
-                                        const hasBand = productTags.some(tag => tag.includes(normalizedBand)) ||
-                                            productTitle.includes(normalizedBand) ||
-                                            product.variants?.nodes?.some(variant =>
-                                                variant.selectedOptions?.some(option =>
-                                                    option.name.toLowerCase().includes('band') &&
-                                                    normalize(option.value).includes(normalizedBand)
-                                                )
-                                            );
-                                        if (!hasBand) return false;
-                                    }
-
-                                    if (profileFilter) {
-                                        const normalizedProfile = normalize(profileFilter);
-                                        const hasProfileInVariants = product.variants?.nodes?.some(variant =>
-                                            variant.selectedOptions?.some(option =>
-                                                normalize(option.value).includes(normalizedProfile)
-                                            )
-                                        );
-                                        if (!hasProfileInVariants) return false;
-                                    }
-
-                                    // Stone Type filter (single-select - product must have variant with selected stone type)
-                                    if (stoneFilter && stoneFilter !== 'any') {
-                                        const normalizedStone = normalize(stoneFilter);
-                                        const hasStoneType = product.variants?.nodes?.some(variant => {
-                                            const hasStoneOption = variant.selectedOptions?.some(option =>
-                                                option.name.toLowerCase().includes('stone') &&
-                                                normalize(option.value).includes(normalizedStone)
-                                            );
-
-                                            // Check if any option value contains the stone type (e.g., "Lab Grown Diamond" in variant title)
-                                            const hasStoneInValue = variant.selectedOptions?.some(option =>
-                                                normalize(option.value).includes(normalizedStone)
-                                            );
-
-                                            return hasStoneOption || hasStoneInValue;
-                                        }) || productTags.some(tag => tag.includes(normalizedStone));
-
-                                        if (!hasStoneType) return false;
-                                    }
-
-                                    return true;
-                                });
-
-                                return (
-                                    <>
-                                        {filteredProducts.length > 0 ? (
-                                            <div className="products-grid">
-                                                {filteredProducts.map((product, index) => {
-                                                    const cleanTitle = product.title.split(/\s*[-–—]\s*/)[0];
-                                                    return (
-                                                        <ProductItem
-                                                            key={product.id}
-                                                            product={{ ...product, title: cleanTitle }}
-                                                            loading={index < 24 ? 'eager' : undefined}
-                                                            selectedVariantOptions={selectedVariantOptions}
-                                                            basePath="/engagement-rings"
-                                                            showGemstoneOptions={showGemstoneOptions}
-                                                        />
-                                                    );
-                                                })}
-                                            </div>
-                                        ) : (
-                                            <div className="no-products">
-                                                <p className='f-20 f-m-18 black-color txt-center w-400 ff-n'>No products found matching your filters.</p>
+                    <div className='collection-side'>
+                        <aside className="collection-filters-sidebar engagement-collection-filters">
+                            <CustomCollectionFilters additionalFilters={[STONE_TYPE_FILTER]} />
+                        </aside>
+                        <main className="collection-products">
+                            {/* Sort Header */}
+                            <div className="collection-sort-header" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'flex-end', alignItems: 'center', alignSelf: 'stretch', marginBottom: '20px', rowGap: '3px' }}>
+                                <div style={{ display: 'flex', flexDirection: 'row' }}>
+                                    <div style={{ alignSelf: 'center', marginRight: '7px' }} className="f-13 f-m-13 w-400 ff-c l-h-1 black-color">Sort:</div>
+                                    <div className="sort-dropdown-container" style={{ position: 'relative', minWidth: '140px' }} ref={sortDropdownRef}>
+                                        <button
+                                            className="sort-trigger f-13 f-m-13 w-400 ff-c l-h-1 black-color"
+                                            onClick={() => setShowSortDropdown(!showSortDropdown)}
+                                            style={{
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                justifyContent: 'space-between',
+                                                width: '100%',
+                                                background: 'white',
+                                                borderRadius: '4px',
+                                                cursor: 'pointer',
+                                                border: '0px solid transparent',
+                                                gap: '8px'
+                                            }}
+                                        >
+                                            <span>{currentSortLabel}</span>
+                                            <svg width="15" height="15" viewBox="0 0 16.933 16.933" xmlns="http://www.w3.org/2000/svg" style={{ transform: showSortDropdown ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }}>
+                                                <path d="m2.117 5.292 6.35 6.35 6.35-6.35" style={{ fill: 'none', stroke: 'currentColor', strokeWidth: '1.05831', strokeLinecap: 'round', strokeLinejoin: 'round' }} />
+                                            </svg>
+                                        </button>
+                                        {showSortDropdown && (
+                                            <div className="sort-options f-13 f-m-13 w-400 ff-c l-h-1 black-color" style={{
+                                                position: 'absolute',
+                                                top: '100%',
+                                                left: 0,
+                                                background: 'var(--body_color)',
+                                                borderRadius: '4px',
+                                                border: '0px solid transparent',
+                                                zIndex: 10,
+                                                minWidth: '200px',
+                                                marginTop: '4px'
+                                            }}>
+                                                {sortOptions.map(option => (
+                                                    <button
+                                                        key={option.value}
+                                                        onClick={() => handleSortChange(option.value)}
+                                                        className="f-13 f-m-13 w-400 ff-c l-h-1 black-color"
+                                                        style={{
+                                                            display: 'block',
+                                                            width: '100%',
+                                                            textAlign: 'left',
+                                                            padding: '10px 15px',
+                                                            background: 'none',
+                                                            border: 'none',
+                                                            cursor: 'pointer',
+                                                            backgroundColor: currentSortLabel === option.label ? '#f5f5f5' : 'white'
+                                                        }}
+                                                        onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#f5f5f5'}
+                                                        onMouseLeave={(e) => e.currentTarget.style.backgroundColor = currentSortLabel === option.label ? '#f5f5f5' : 'white'}
+                                                    >
+                                                        {option.label}
+                                                    </button>
+                                                ))}
                                             </div>
                                         )}
-                                        <div className='pagination-wrapper'>
-                                            <NextLink className='common-button'>
-                                                {isLoading ? <span className='f-14 f-m-14 w-400 ff-n l-h-1 white-color'>Loading...</span> : <span className='f-14 f-m-14 w-400 ff-n l-h-1 white-color'>Load more</span>}
-                                            </NextLink>
-                                        </div>
-                                    </>
-                                );
-                            }}
-                        </Pagination>
-                    </main>
+                                    </div>
+                                </div>
+
+                                {showSortButtons && (
+                                    <div className="button-group" style={{ marginLeft: '7px', display: 'flex', border: '1px solid #e0e0e0', borderRadius: '4px', overflow: 'hidden' }}>
+                                        <button
+                                            type="button"
+                                            className={`button-group-icon ${!sortParam.includes('high-low') && !sortParam.includes('z-a') ? 'selected' : ''}`}
+                                            title="Sort Ascending"
+                                            onClick={() => {
+                                                const newParams = new URLSearchParams(searchParams);
+                                                if (sortParam.includes('price')) {
+                                                    newParams.set('sort', 'price-low-high');
+                                                } else if (sortParam.includes('name')) {
+                                                    newParams.set('sort', 'name-a-z');
+                                                }
+                                                setSearchParams(newParams, { preventScrollReset: true });
+                                            }}
+                                            style={{
+                                                padding: '8px 12px',
+                                                background: (!sortParam.includes('high-low') && !sortParam.includes('z-a')) ? '#253E2B' : 'white',
+                                                border: 'none',
+                                                borderRight: '1px solid #e0e0e0',
+                                                cursor: 'pointer',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                justifyContent: 'center'
+                                            }}
+                                        >
+                                            <svg width="18" height="18" viewBox="0 0 16.933 16.933" xmlns="http://www.w3.org/2000/svg">
+                                                <g fill={(!sortParam.includes('high-low') && !sortParam.includes('z-a')) ? '#fff' : '#253E2B'}>
+                                                    <path d="M2.117 2.117H6.35v2.117H2.117zM2.117 7.408h8.467v2.117H2.117zM2.117 12.7h12.7v2.117h-12.7z"></path>
+                                                </g>
+                                            </svg>
+                                        </button>
+                                        <button
+                                            type="button"
+                                            className={`button-group-icon ${sortParam.includes('high-low') || sortParam.includes('z-a') ? 'selected' : ''}`}
+                                            title="Sort Descending"
+                                            onClick={() => {
+                                                const newParams = new URLSearchParams(searchParams);
+                                                if (sortParam.includes('price')) {
+                                                    newParams.set('sort', 'price-high-low');
+                                                } else if (sortParam.includes('name')) {
+                                                    newParams.set('sort', 'name-z-a');
+                                                }
+                                                setSearchParams(newParams, { preventScrollReset: true });
+                                            }}
+                                            style={{
+                                                padding: '8px 12px',
+                                                background: (sortParam.includes('high-low') || sortParam.includes('z-a')) ? '#253E2B' : 'white',
+                                                border: 'none',
+                                                cursor: 'pointer',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                justifyContent: 'center'
+                                            }}
+                                        >
+                                            <svg width="18" height="18" viewBox="0 0 16.933 16.933" xmlns="http://www.w3.org/2000/svg">
+                                                <g fill={(sortParam.includes('high-low') || sortParam.includes('z-a')) ? '#fff' : '#253E2B'}>
+                                                    <path d="M2.117 2.117h12.7v2.117h-12.7zM2.117 7.408h8.467v2.117H2.117zM2.117 12.7H6.35v2.117H2.117z"></path>
+                                                </g>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                )}
+                            </div>
+                            <Pagination connection={collection.products}>
+                                {({ nodes, isLoading, NextLink }) => {
+                                    // Apply client-side filtering to the paginated nodes
+                                    const filteredProducts = nodes.filter(product => {
+                                        const normalize = (str) => str?.toLowerCase().replace(/[^a-z0-9]/g, '');
+                                        const productTags = product.tags?.map(tag => normalize(tag)) || [];
+                                        const productTitle = normalize(product.title);
+
+                                        if (shapeFilter) {
+                                            const normalizedShape = normalize(shapeFilter);
+                                            const hasShape = productTags.some(tag => tag.includes(normalizedShape)) ||
+                                                productTitle.includes(normalizedShape);
+                                            if (!hasShape) return false;
+                                        }
+
+                                        if (metalFilter) {
+                                            const normalizedMetal = normalize(metalFilter);
+                                            const hasMetalInVariants = product.variants?.nodes?.some(variant =>
+                                                variant.selectedOptions?.some(option =>
+                                                    normalize(option.value).includes(normalizedMetal)
+                                                )
+                                            );
+
+                                            // Also check tags as fallback (common for products)
+                                            const hasMetalInTags = productTags.some(tag => tag.includes(normalizedMetal));
+
+                                            if (!hasMetalInVariants && !hasMetalInTags) return false;
+                                        }
+
+                                        if (styleFilter) {
+                                            const normalizedStyle = normalize(styleFilter);
+                                            const hasStyle = productTags.some(tag => tag.includes(normalizedStyle)) ||
+                                                productTitle.includes(normalizedStyle);
+                                            if (!hasStyle) return false;
+                                        }
+
+                                        if (bandFilter) {
+                                            const normalizedBand = normalize(bandFilter);
+                                            const hasBand = productTags.some(tag => tag.includes(normalizedBand)) ||
+                                                productTitle.includes(normalizedBand) ||
+                                                product.variants?.nodes?.some(variant =>
+                                                    variant.selectedOptions?.some(option =>
+                                                        option.name.toLowerCase().includes('band') &&
+                                                        normalize(option.value).includes(normalizedBand)
+                                                    )
+                                                );
+                                            if (!hasBand) return false;
+                                        }
+
+                                        if (profileFilter) {
+                                            const normalizedProfile = normalize(profileFilter);
+                                            const hasProfileInVariants = product.variants?.nodes?.some(variant =>
+                                                variant.selectedOptions?.some(option =>
+                                                    normalize(option.value).includes(normalizedProfile)
+                                                )
+                                            );
+                                            if (!hasProfileInVariants) return false;
+                                        }
+
+                                        // Stone Type filter (single-select - product must have variant with selected stone type)
+                                        if (stoneFilter && stoneFilter !== 'any') {
+                                            const normalizedStone = normalize(stoneFilter);
+                                            const hasStoneType = product.variants?.nodes?.some(variant => {
+                                                const hasStoneOption = variant.selectedOptions?.some(option =>
+                                                    option.name.toLowerCase().includes('stone') &&
+                                                    normalize(option.value).includes(normalizedStone)
+                                                );
+
+                                                // Check if any option value contains the stone type (e.g., "Lab Grown Diamond" in variant title)
+                                                const hasStoneInValue = variant.selectedOptions?.some(option =>
+                                                    normalize(option.value).includes(normalizedStone)
+                                                );
+
+                                                return hasStoneOption || hasStoneInValue;
+                                            }) || productTags.some(tag => tag.includes(normalizedStone));
+
+                                            if (!hasStoneType) return false;
+                                        }
+
+                                        return true;
+                                    });
+
+                                    return (
+                                        <>
+                                            {filteredProducts.length > 0 ? (
+                                                <div className="products-grid">
+                                                    {filteredProducts.map((product, index) => {
+                                                        const cleanTitle = product.title.split(/\s*[-–—]\s*/)[0];
+                                                        return (
+                                                            <ProductItem
+                                                                key={product.id}
+                                                                product={{ ...product, title: cleanTitle }}
+                                                                loading={index < 24 ? 'eager' : undefined}
+                                                                selectedVariantOptions={selectedVariantOptions}
+                                                                basePath="/engagement-rings"
+                                                                showGemstoneOptions={showGemstoneOptions}
+                                                            />
+                                                        );
+                                                    })}
+                                                </div>
+                                            ) : (
+                                                <div className="no-products">
+                                                    <p className='f-20 f-m-18 black-color txt-center w-400 ff-n'>No products found matching your filters.</p>
+                                                </div>
+                                            )}
+                                            <div className='pagination-wrapper'>
+                                                <NextLink className='common-button'>
+                                                    {isLoading ? <span className='f-14 f-m-14 w-400 ff-n l-h-1 white-color'>Loading...</span> : <span className='f-14 f-m-14 w-400 ff-n l-h-1 white-color'>Load more</span>}
+                                                </NextLink>
+                                            </div>
+                                        </>
+                                    );
+                                }}
+                            </Pagination>
+                        </main>
+                    </div>
                 </div>
+
+
 
                 <Analytics.CollectionView
                     data={{
@@ -547,10 +548,10 @@ export default function EngagementRingCollection() {
                         },
                     }}
                 />
-            </div>
+            </section>
             <SplitBanner
                 left={{
-                    image: "https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Holiday_Campaign_Beach_9_Test_5_2000x2000.jpg?v=1758263068",
+                    image: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/a7413240007701cddc3906f9bad49bca.jpg?v=1777617975",
                     title: "Not in a hurry to find a ring?",
                     description: "Take your time with a custom-made engagement piece, designed with you at every step.",
                     linkText: "BEGIN THE PROCESS",
@@ -558,21 +559,21 @@ export default function EngagementRingCollection() {
                 }}
                 right={{
                     image: "https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Copy_of_Holiday_Campaign_P2_Banner_Option_1_1000x1000.jpg?v=1762307138",
-                    title: "Made to be gifted.",
-                    description: "Discover our ready-to-ship tennis bracelets, initial bezel necklaces, and more.",
-                    linkText: "SHOP NOW",
+                    title: "Perfect for gifting.",
+                    description: "Explore our ready-to-ship jewellery, including tennis bracelets, initial necklaces, and more.",
+                    linkText: "SHOP GIFTS",
                     linkTo: "/collections/gifting"
                 }}
             />
-            <div className='page-width'>
-                <CollectionContentSection data={COLLECTION_CONTENT_SECTION} />
-                <CollectionLinksSection data={COLLECTION_LINKS} />
-            </div>
+            {/* <div className='page-width'> */}
+            <CollectionContentSection data={COLLECTION_CONTENT_SECTION} />
+            <CollectionLinksSection data={COLLECTION_LINKS} />
+            {/* </div> */}
             <VideoBanner
                 desktopImage="https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Thanasi_Home_Page_Select_Final-1_1600x1600.jpg?v=1767837146"
-                desktopVideo="https://cdn.shopify.com/videos/c/o/v/bc9828414ce64185b90c71128e7fbf02.mp4"
-                heading="Discover Our Collection"
-                description="Explore our handcrafted engagement rings"
+                desktopVideo="https://cdn.shopify.com/videos/c/o/v/7bdbff09baf64a3696bdc2af0c951747.mp4"
+                heading="Find Your Perfect Ring"
+                description="Explore handcrafted engagement rings that tell your story"
             />
             <div className="collection-faq-section">
                 <ProductFAQ data={FAQ_DATA} />
@@ -728,34 +729,34 @@ const COLLECTION_LINKS = [
 const COLLECTION_CONTENT_SECTION = {
     sections: [
         {
-            heading: "Ready to Ship Engagement Rings — Forever Starts Now",
+            heading: "Ready-to-Ship Engagement Rings — Start Your Forever Today",
             paragraphs: [
-                `Short on time or simply can’t wait to propose? Why wait? Enjoy your moment of love now with our wide collection of ready-to-ship engagement rings. Available in a curated selection of timeless designs, including solitaires, halos and vintage-inspired styles, our ready-to-ship range allows you to find a piece that is both beautiful and meaningful — without the wait.`,
-                `Using premium materials and lab grown gemstones, every Diamond ready-to-ship engagement ring is designed and handcrafted by our expert jewelers. Crafted to perfection, each piece is brought to life with the same care and intention as each made-to-order ring.`,
-                `Explore our ready-to-ship collection in the US online or begin your journey in one of our showrooms with a <a href="/visit" class="fancy">personalized design consultation</a> — <strong>whatever the process, we're here to help you start your forever with the ring of your dreams.</strong>`
+                `Short on time or ready to propose sooner? Discover our collection of ready-to-ship engagement rings, designed for life’s most meaningful moments. Featuring a curated range of timeless styles — from classic solitaires to vintage-inspired halos — each piece is crafted to be both beautiful and instantly yours.`,
+                `Made using premium materials and lab-grown gemstones, every Diamond ready-to-ship ring is thoughtfully handcrafted by our expert jewellers. Each design reflects the same level of care and craftsmanship as our made-to-order pieces.`,
+                `Shop online across the US or visit one of our showrooms for a <a href="/visit" class="fancy">personalized design consultation</a>. <strong>However you choose, we’re here to help you begin your forever with the perfect ring.</strong>`
             ],
         },
         {
-            heading: "Your Perfect Engagement Ring is Ready-to-Ship",
+            heading: "Find the Ring That’s Ready for You",
             paragraphs: [
-                `Diamond specializes in handcrafted engagement rings, made to mark one of life’s most meaningful moments in a style unique to your love.`,
-                `Our extensive collection of ready-to-ship engagement rings means you can explore, purchase, and receive a beautiful and meaningful ring within a matter of days. Skip the queue and focus on the proposal now that you have the engagement ring of your dreams, ready and waiting to be worn by the love of your life.`,
-                `Whether you’re after a sleek <a href="/engagement?style=solitaire&metal=18k-yellow-gold" class="fancy">solitaire</a> or a vintage-inspired <a href="/engagement?style=halo&metal=18k-yellow-gold" class="fancy">halo</a> of diamonds, our experienced and warm, knowledgeable client service team can help guide you through every step of the journey — from your first consultation to the final polish.`,
-                `Every ready-to-ship engagement ring is crafted using conflict-free and <a href="/carbon-neutral" class="fancy">carbon neutral</a> lab grown diamonds, moissanite, or sapphires, so you can feel confident that your ring is as responsible as it is exquisite to look at.`,
-                `Need a little guidance? Don’t hesitate to <a href="/contact" class="fancy">contact us</a> or book an in-person appointment with one of our friendly engagement ring specialists to begin the journey to finding your dream piece in the US.`
+                `At Diamond, we create handcrafted engagement rings designed to celebrate your unique love story.`,
+                `Our ready-to-ship collection allows you to explore, select, and receive a stunning engagement ring within days. Skip the wait and focus on what matters most — your proposal.`,
+                `Whether you prefer a refined <a href="/engagement?style=solitaire&metal=18k-yellow-gold" class="fancy">solitaire</a> or a detailed <a href="/engagement?style=halo&metal=18k-yellow-gold" class="fancy">halo</a> design, our experienced team is here to guide you from your first step to the final detail.`,
+                `Each ring is crafted using conflict-free and <a href="/carbon-neutral" class="fancy">carbon neutral</a> lab-grown diamonds, moissanite, or sapphires — combining beauty with responsibility.`,
+                `Need assistance? <a href="/contact" class="fancy">Contact us</a> or book an in-store consultation with our specialists to find your perfect ring.`
             ],
         },
         {
-            heading: "Why Diamond",
+            heading: "Why Choose Diamond",
             paragraphs: [
-                `<strong>Worldwide Express Shipping</strong> No matter where you are in the world, your dream ring will go the distance. We proudly ship our ready to ship engagement rings across the <a href="/shipping" class="fancy">US and internationally</a>, ensuring your handcrafted piece arrives safely and swiftly.`,
-                `<strong>Free Resizing</strong> We offer <a href="/free-resizing" class="fancy">free resizing</a> on all engagement rings to ensure the perfect fit, whether you've chosen one of our ready-to-ship diamond engagement rings or something uniquely your own.`,
-                `<strong>Lifetime Warranty</strong> Our beautiful ready to ship engagement rings are built to last a lifetime. Each piece is backed by our lifetime manufacturing <a href="/warranty" class="fancy">warranty</a>, giving you complete peace of mind.`,
-                `<strong>Tailored Ring Customization</strong> If ready to ship isn’t what you are looking for, we also offer an extensive <a href="/custom-rings" class="fancy">customization</a> service so you can craft a ring that’s truly one of a kind.`,
-                `<strong>Thoughtfully Designed in Melbourne, Australia</strong> Every ring — including our ready to ship engagement rings, is crafted by our expert jewellers with exceptional attention to detail.`,
-                `<strong>Conflict-Free, Consciously Crafted</strong> We offer a variety of unique options, from moissanite radiant cut engagement rings to colored <a href="/engagement-rings/sapphire" class="fancy">sapphire</a> engagement rings, all ready to ship and thoughtfully curated for your forever ring.`,
-                `<strong>Carbon Neutral Gemstones & Trees For The Future</strong> We offset the carbon footprint of all of our gemstones and plant a <a href="/diamond-initiatives" class="fancy">tree</a> for each ring sold, supporting global reforestation.`,
-                `<strong>Custom Design Specialists</strong> Whether you're dreaming of <a href="/engagement-rings/ring-thea" class="fancy">solitaire radiant cut diamond engagement rings</a> or an elaborate halo of diamonds, our team specializes in creating jewelry that reflects your personal style.`
+                `<strong>Worldwide Express Shipping</strong> Wherever you are, we ensure your ring পৌঁches you quickly and securely with global shipping across the <a href="/shipping" class="fancy">US and internationally</a>.`,
+                `<strong>Free Resizing</strong> Enjoy <a href="/free-resizing" class="fancy">complimentary resizing</a> on all engagement rings for the perfect fit.`,
+                `<strong>Lifetime Warranty</strong> Every ring is backed by our lifetime <a href="/warranty" class="fancy">manufacturing warranty</a> for complete peace of mind.`,
+                `<strong>Custom Design Options</strong> Looking for something unique? Explore our <a href="/custom-rings" class="fancy">custom design service</a> to create a one-of-a-kind piece.`,
+                `<strong>Expertly Crafted</strong> Designed in Melbourne and handcrafted with precision by skilled jewellers.`,
+                `<strong>Ethically Sourced</strong> Choose from moissanite, sapphires, and lab-grown diamonds, including <a href="/engagement-rings/sapphire" class="fancy">sapphire engagement rings</a>, all responsibly sourced.`,
+                `<strong>Sustainable Impact</strong> We offset gemstone carbon footprints and plant a <a href="/diamond-initiatives" class="fancy">tree</a> for every ring sold.`,
+                `<strong>Personalized Experience</strong> From classic <a href="/engagement-rings/ring-thea" class="fancy">solitaire designs</a> to intricate styles, our specialists help bring your vision to life.`
             ],
         },
     ],

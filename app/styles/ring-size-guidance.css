@@ -250,8 +250,8 @@
 }
 
 .converter-tab.active {
-    color: var(--accent_color);
-    font-weight: 500;
+    color: var(--black_color);
+    font-weight: 700;
 }
 
 .converter-tab:not(:last-child) {

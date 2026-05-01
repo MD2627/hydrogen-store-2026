@@ -115,9 +115,9 @@ export function RingSizeConverter() {
                     {activeTab === 'convert' ? (
                         <>
                             <div className="converter-header">
-                                <h2 className='ff-a f-32 w-300 black-color'>Convert Ring Size</h2>
+                                <h2 className='section-title'>Convert Ring Size</h2>
                                 <div className="border-line"></div>
-                                <p className='ff-c f-13 w-300 black-color'>Convert your<br /> international ring size.</p>
+                                <p className='sb-description'>Convert your<br /> international ring size.</p>
                             </div>
 
                             <div className="converter-grid-layout">
@@ -174,9 +174,9 @@ export function RingSizeConverter() {
                     ) : (
                         <div className="request-sizer-content">
                             <div className="converter-header">
-                                <h2 className='ff-a f-32 w-300 black-color'>Request Free Ring Sizing Kit</h2>
+                                <h2 className='section-title'>Request Free Ring Sizing Kit</h2>
                                 <div className="border-line"></div>
-                                <p className='ff-c f-13 w-300 black-color'>Don’t know your ring size? Not a problem at all. Fill out this form and we’ll send you a<br /> FREE sizing kit so you can measure from home.</p>
+                                <p className='sb-description'>Don’t know your ring size? Not a problem at all. Fill out this form and we’ll send you a<br /> FREE sizing kit so you can measure from home.</p>
                             </div>
 
                             <div className="request-sizer-form">

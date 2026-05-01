@@ -244,7 +244,7 @@ span.single-star svg {
 }
 
 .engagement-rings .products-grid {
-  padding: 0 0 80px;
+  /* padding: 0 0 4rem; */
 }
 
 .engagement-split-banner .split-banner-content p {
@@ -397,26 +397,48 @@ span.single-star svg {
 }
 
 .vb-static-content {
-  position: relative;
   z-index: 10;
   text-align: center;
   color: #fff;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
-  max-width: 800px;
+  gap: 1.5rem; */
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10%;
 }
 
 .vb-static-content h2 {
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  /* font-size: clamp(2.5rem, 5vw, 4.5rem);
   line-height: 1.1;
   text-transform: uppercase;
   margin: 0;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.02em; */
+  text-shadow: 0 2px 4px rgba(var(--pure_black_rgb), .3);
+  color: var(--white_color);
 }
 
-.vb-static-content p {
+.vb-static-content p.vb-rich-text {
+  color: var(--white_color);
+  text-decoration: none;
+  font-size: var(--min_font_size);
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font_family_n);
+  gap: 10px;
+  transition: opacity 0.3s;
+  max-width: none;
+  opacity: 1;
+  display: block;
+  margin-bottom: 24px;
+}
+
+.vb-static-content p:not(.vb-rich-text) {
   font-size: clamp(1rem, 1.2vw, 1.25rem);
   opacity: 0.9;
   max-width: 600px;

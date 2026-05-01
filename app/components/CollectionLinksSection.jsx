@@ -11,34 +11,25 @@ export function CollectionLinksSection({ data }) {
 
     return (
         <section className="collection-links-section">
-            <div className="page-width collection-links-wrapper">
-                <h3 className="collection-links-heading ff-c f-13 w-300 black-color">
-                    Looking for a specific style? Choose from our collections below:
-                </h3>
-                <div className="collection-links-grid">
-                    {data.map((link, index) => (
-                        <Link key={index} to={link.url} className="collection-link-pill ff-c f-12 w-300 black-color">
-                            {link.label}
-                            <span className="arrow-icon">
-                                <svg
-                                    viewBox="0 0 16.933 16.933"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    style={{ width: '14px', height: '14px', display: 'block' }}
-                                >
-                                    <path
-                                        d="m5.292 14.816 6.35-6.35-6.35-6.35"
-                                        className="stroke"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        strokeWidth="1.05831"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeOpacity="1"
-                                    />
-                                </svg>
-                            </span>
-                        </Link>
-                    ))}
+            <div className="page-width">
+                <div className="collection-links-container">
+                    <div className="collection-links-header">
+                        <h3 className="section-title">
+                            Shop by Style
+                        </h3>
+                    </div>
+                    <nav className="collection-links-grid" aria-label="Collection directory">
+                        {data.map((link, index) => (
+                            <Link key={index} to={link.url} className="collection-link-item ff-c f-13 f-m-12 w-400 black-color">
+                                <span className="link-label">{link.label}</span>
+                                <span className="link-arrow">
+                                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </span>
+                            </Link>
+                        ))}
+                    </nav>
                 </div>
             </div>
         </section>

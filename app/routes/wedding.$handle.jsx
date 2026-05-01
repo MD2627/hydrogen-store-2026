@@ -293,7 +293,7 @@ export default function Product() {
       <ShopByStyleScroll
         title="Our Services"
         variant="section-services"
-        description="Receive custom engagement ring guidance from our expert team in person and online."
+        description="Get personalized engagement ring support from our specialists, available both in-store and online."
         items={ServicesshopByStyleItems} />
 
       <ProductRingCollections defaultImage="https://cdn.shopify.com/s/files/1/0644/3067/0060/files/initiatives_image_1000x1000.jpg?v=1759807949" data={PRODUCT_RING_COLLECTIONS} />
@@ -529,7 +529,7 @@ const PRODUCT_FAQ = [
 const ServicesshopByStyleItems = [
   {
     name: 'Showrooms',
-    image: 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/our_services_-_showrooms_23899665-c6e7-4523-9ff3-0a13892b4566_900x900.jpg?v=1741236795',
+    image: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Diamond_Jewellery_London_153_1a_retouched_high_res_2000x2000_3c58c06f-db50-4e7e-93eb-c819d1c42f12.webp?v=1777438793',
     link: '/collections/ready-to-ship',
   },
   {
@@ -544,7 +544,7 @@ const ServicesshopByStyleItems = [
   },
   {
     name: 'Get in touch',
-    image: 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Our_Services_-_Get_In_Touch_900x900.jpg?v=1741060901',
+    image: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/b2473d66f964180e38ee574b8e6c7ad6.jpg?v=1777438991',
     link: '/collections/ready-to-ship',
   }
 ];

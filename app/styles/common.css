@@ -332,11 +332,11 @@ body:not(body:has(.our-story)):not(body:has(.faqs)) {
 }
 
 body .page-width.header-layout {
-    max-width: 1530px;
+    /* max-width: 1530px; */
 }
 
 .collection-content .page-width:last-child {
-    max-width: 1630px;
+    /* max-width: 1630px; */
 }
 
 body .page-width {
@@ -417,7 +417,7 @@ body .btn {
     text-align: center;
     padding: var(--btn_padding);
     font-family: var(--btn_font);
-    font-size: var(--btn_font_size);
+    font-size: var(--min_font_size);
     font-weight: var(--btn_font_weight);
     letter-spacing: var(--btn_letter_spacing);
     transition: var(--btn_transition);

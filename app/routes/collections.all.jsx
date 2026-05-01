@@ -156,107 +156,111 @@ export default function Collection() {
         </div>
       </div>
 
-      <div className="collection-content">
+      <section className="collection-content">
         <div className='page-width'>
-          <aside className="collection-filters-sidebar" ref={filtersRef}>
-            <CustomCollectionFilters />
-          </aside>
-        </div>
 
+          <div className='collection-side'>
+
+            <aside className="collection-filters-sidebar" ref={filtersRef}>
+              <CustomCollectionFilters />
+            </aside>
+            <main className="collection-products">
+              <Pagination connection={products}>
+                {({ nodes, isLoading, NextLink }) => {
+                  // Apply client-side filtering to the paginated nodes
+                  const filteredProducts = nodes.filter(product => {
+                    const normalize = (str) => str?.toLowerCase().replace(/[^a-z0-9]/g, '');
+                    const productTags = product.tags?.map(tag => normalize(tag)) || [];
+                    const productTitle = normalize(product.title);
+
+                    if (shapeFilter) {
+                      const normalizedShape = normalize(shapeFilter);
+                      const hasShape = productTags.includes(normalizedShape) || productTitle.includes(normalizedShape);
+                      if (!hasShape) return false;
+                    }
+
+                    if (metalFilter) {
+                      const normalizedMetal = normalize(metalFilter);
+                      const hasMetalInVariants = product.variants?.nodes?.some(variant =>
+                        variant.selectedOptions?.some(option =>
+                          option.name.toLowerCase().includes('metal') &&
+                          normalize(option.value).includes(normalizedMetal)
+                        )
+                      );
+                      if (!hasMetalInVariants) return false;
+                    }
+
+                    if (styleFilter) {
+                      const normalizedStyle = normalize(styleFilter);
+                      const hasStyle = productTags.includes(normalizedStyle) || productTitle.includes(normalizedStyle);
+                      if (!hasStyle) return false;
+                    }
+
+                    if (bandFilter) {
+                      const normalizedBand = normalize(bandFilter);
+                      const hasBand = productTags.includes(normalizedBand) || productTitle.includes(normalizedBand);
+                      if (!hasBand) return false;
+                    }
+
+                    if (profileFilter) {
+                      const normalizedProfile = normalize(profileFilter);
+                      const hasProfileInVariants = product.variants?.nodes?.some(variant =>
+                        variant.selectedOptions?.some(option =>
+                          normalize(option.value).includes(normalizedProfile)
+                        )
+                      );
+                      if (!hasProfileInVariants) return false;
+                    }
+
+                    return true;
+                  });
+
+                  // Build selectedVariantOptions directly from active URL filter values.
+                  // Each ProductItem uses these criteria to find its own matching variant per-product.
+                  let selectedVariantOptions = null;
+                  if (metalFilter || styleFilter || profileFilter || bandFilter) {
+                    const opts = [];
+                    if (metalFilter) opts.push({ name: 'Metal Type', value: metalFilter.replace(/-/g, ' ') });
+                    if (styleFilter) opts.push({ name: 'Setting Style', value: styleFilter.replace(/-/g, ' ') });
+                    if (profileFilter) opts.push({ name: 'Profile', value: profileFilter.replace(/-/g, ' ') });
+                    if (bandFilter) opts.push({ name: 'Band Type', value: bandFilter.replace(/-/g, ' ') });
+                    if (opts.length > 0) selectedVariantOptions = opts;
+                  }
+
+                  return (
+                    <>
+                      {filteredProducts.length > 0 ? (
+                        <div className="products-grid">
+                          {filteredProducts.map((product, index) => (
+                            <ProductItem
+                              key={product.id}
+                              product={product}
+                              loading={index < 24 ? 'eager' : undefined}
+                              selectedVariantOptions={selectedVariantOptions}
+                            />
+                          ))}
+                        </div>
+                      ) : (
+                        <div className="no-products">
+                          <p className='f-20 f-m-18 black-color txt-center w-400 ff-n'>No products found matching your filters.</p>
+                        </div>
+                      )}
+                      <div className='pagination-wrapper'>
+                        <NextLink className='common-button'>
+                          {isLoading ? <span className='f-14 f-m-14 w-400 ff-n l-h-1 white-color'>Loading...</span> : <span className='f-14 f-m-14 w-400 ff-n l-h-1 white-color'>Load more</span>}
+                        </NextLink>
+                      </div>
+                    </>
+                  );
+                }}
+              </Pagination>
+            </main>
+          </div>
+        </div>
         <div className='page-width'>
-          <main className="collection-products">
-            <Pagination connection={products}>
-              {({ nodes, isLoading, NextLink }) => {
-                // Apply client-side filtering to the paginated nodes
-                const filteredProducts = nodes.filter(product => {
-                  const normalize = (str) => str?.toLowerCase().replace(/[^a-z0-9]/g, '');
-                  const productTags = product.tags?.map(tag => normalize(tag)) || [];
-                  const productTitle = normalize(product.title);
 
-                  if (shapeFilter) {
-                    const normalizedShape = normalize(shapeFilter);
-                    const hasShape = productTags.includes(normalizedShape) || productTitle.includes(normalizedShape);
-                    if (!hasShape) return false;
-                  }
-
-                  if (metalFilter) {
-                    const normalizedMetal = normalize(metalFilter);
-                    const hasMetalInVariants = product.variants?.nodes?.some(variant =>
-                      variant.selectedOptions?.some(option =>
-                        option.name.toLowerCase().includes('metal') &&
-                        normalize(option.value).includes(normalizedMetal)
-                      )
-                    );
-                    if (!hasMetalInVariants) return false;
-                  }
-
-                  if (styleFilter) {
-                    const normalizedStyle = normalize(styleFilter);
-                    const hasStyle = productTags.includes(normalizedStyle) || productTitle.includes(normalizedStyle);
-                    if (!hasStyle) return false;
-                  }
-
-                  if (bandFilter) {
-                    const normalizedBand = normalize(bandFilter);
-                    const hasBand = productTags.includes(normalizedBand) || productTitle.includes(normalizedBand);
-                    if (!hasBand) return false;
-                  }
-
-                  if (profileFilter) {
-                    const normalizedProfile = normalize(profileFilter);
-                    const hasProfileInVariants = product.variants?.nodes?.some(variant =>
-                      variant.selectedOptions?.some(option =>
-                        normalize(option.value).includes(normalizedProfile)
-                      )
-                    );
-                    if (!hasProfileInVariants) return false;
-                  }
-
-                  return true;
-                });
-
-                // Build selectedVariantOptions directly from active URL filter values.
-                // Each ProductItem uses these criteria to find its own matching variant per-product.
-                let selectedVariantOptions = null;
-                if (metalFilter || styleFilter || profileFilter || bandFilter) {
-                  const opts = [];
-                  if (metalFilter) opts.push({ name: 'Metal Type', value: metalFilter.replace(/-/g, ' ') });
-                  if (styleFilter) opts.push({ name: 'Setting Style', value: styleFilter.replace(/-/g, ' ') });
-                  if (profileFilter) opts.push({ name: 'Profile', value: profileFilter.replace(/-/g, ' ') });
-                  if (bandFilter) opts.push({ name: 'Band Type', value: bandFilter.replace(/-/g, ' ') });
-                  if (opts.length > 0) selectedVariantOptions = opts;
-                }
-
-                return (
-                  <>
-                    {filteredProducts.length > 0 ? (
-                      <div className="products-grid">
-                        {filteredProducts.map((product, index) => (
-                          <ProductItem
-                            key={product.id}
-                            product={product}
-                            loading={index < 24 ? 'eager' : undefined}
-                            selectedVariantOptions={selectedVariantOptions}
-                          />
-                        ))}
-                      </div>
-                    ) : (
-                      <div className="no-products">
-                        <p className='f-20 f-m-18 black-color txt-center w-400 ff-n'>No products found matching your filters.</p>
-                      </div>
-                    )}
-                    <div className='pagination-wrapper'>
-                      <NextLink className='common-button'>
-                        {isLoading ? <span className='f-14 f-m-14 w-400 ff-n l-h-1 white-color'>Loading...</span> : <span className='f-14 f-m-14 w-400 ff-n l-h-1 white-color'>Load more</span>}
-                      </NextLink>
-                    </div>
-                  </>
-                );
-              }}
-            </Pagination>
-          </main>
         </div>
-      </div>
+      </section>
 
       <BackToFiltersSticky targetRef={filtersRef} />
     </div>

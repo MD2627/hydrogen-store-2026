@@ -24,14 +24,14 @@ export default function RingSizeGuidance() {
             <section className="guidance-hero-section">
                 <SplitBanner
                     left={{
-                        image: "https://cdn.shopify.com/s/files/1/0801/7317/0906/files/ring-size-guide-banner_1200x1200_6db0cd84-3a6d-4bfd-a67e-b7f9962d2da0.webp?v=1769764152",
+                        image: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/pexels-ayseguldelice-30720972.jpg?v=1777030343",
                         title: "",
                         description: "",
                     }}
                     right={{
-                        title: "Find the Perfect Size",
+                        title: "Complimentary Ring Resizing",
                         afterTitle: <div className="border-line"></div>,
-                        description: "Here at Diamond, we endeavour to ensure your ring is a perfect fit.",
+                        description: "At Diamond, every detail matters—especially the perfect fit.",
                     }}
                 />
             </section>
@@ -41,10 +41,10 @@ export default function RingSizeGuidance() {
                     left={{
                         title: "Free Ring Resizing",
                         afterTitle: <div className="border-line"></div>,
-                        description: "At Diamond, we offer One Free Resize for engagement and wedding rings to use within the first 12 months of your ring’s completion (subject to eligibility based on design style and metal type).",
+                        description: "Enjoy one free resize within 12 months of your ring’s completion, ensuring the perfect fit (eligibility depends on design and metal type).",
                     }}
                     right={{
-                        image: "https://cdn.shopify.com/s/files/1/0801/7317/0906/files/ring-size-guide-resizing_2400x2400_fa3ad846-f0a0-44bf-980e-06fef29a9266.webp?v=1769767867",
+                        image: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/pexels-shkrabaanthony-7167043.jpg?v=1777032453",
                         title: "",
                         description: "",
                     }}
