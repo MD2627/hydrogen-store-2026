@@ -36,7 +36,7 @@ export default function RingSizeGuidance() {
                 />
             </section>
             <RingSizeConverter />
-            <section className="guidance-resizing-section">
+            <div className="guidance-resizing-section">
                 <SplitBanner
                     left={{
                         title: "Free Ring Resizing",
@@ -49,7 +49,7 @@ export default function RingSizeGuidance() {
                         description: "",
                     }}
                 />
-            </section>
+            </div>
             <RingBanner
                 image={GUIDANCE_BANNER_DATA.image}
                 mobileImage={GUIDANCE_BANNER_DATA.mobileImage}
@@ -69,10 +69,10 @@ export default function RingSizeGuidance() {
 }
 
 const GUIDANCE_BANNER_DATA = {
-    title: 'Need help finding the perfect ring?',
-    subtitle: 'Book a time to visit our showroom to get assisted or book a virtual appointment no matter where you are!',
-    image: 'https://cdn.shopify.com/s/files/1/0801/7317/0906/files/IMG_0378-2_jpg_2000x2000_331c0df2-17e7-4119-9975-3a252a19c8f7.png?v=1769249858',
-    mobileImage: 'https://cdn.shopify.com/s/files/1/0801/7317/0906/files/IMG_0378-2_jpg_2000x2000_331c0df2-17e7-4119-9975-3a252a19c8f7.png?v=1769249858',
+    title: 'Looking for the perfect ring?',
+    subtitle: 'Visit our showroom for personalized assistance or book a virtual appointment from the comfort of your home.',
+    image: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Gemini_Generated_Image_n7n7zbn7n7zbn7n7-clean.png?v=1777641165',
+    mobileImage: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Gemini_Generated_Image_n7n7zbn7n7zbn7n7-clean.png?v=1777641165',
     buttonLink: '/visit',
     buttonText: 'BOOK APPOINTMENT',
 };
@@ -81,40 +81,40 @@ const EXPERT_GUIDANCE_ARTICLES = [
     {
         title: "Decoding Ring Size Charts",
         link: "/education/engagement-ring-guidance/how-much-does-it-cost-to-make-a-custom-engagement-ring",
-        image: "https://cdn.shopify.com/s/files/1/0801/7317/0906/files/ring-size-guide-decoding_ring_size_900x900_0ef37213-1c1a-4e59-a618-bea10c74e0c1.webp?v=1769774856"
+        image: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Gemini_Generated_Image_3c1z0b3c1z0b3c1z.png?v=1777870635"
     },
     {
         title: "How to Find Out Your Ring Size at Home",
         link: "/education/wedding-band-guidance/men-s-wedding-band-customisation",
-        image: "https://cdn.shopify.com/s/files/1/0801/7317/0906/files/ring-size-guide-find_your_ring_size_home_900x900_b7e2544d-0bcb-4a4b-80ab-e72e454e42b5.webp?v=1769774856"
+        image: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/5d7c5206a7907d6fa7b22ec0ca83d0a8.jpg?v=1777870936"
     },
     {
         title: "How to Find Your Ring Size",
         link: "/education/engagement-ring-guidance/custom-engagement-ring-process",
-        image: "https://cdn.shopify.com/s/files/1/0801/7317/0906/files/ring-size-guide-how_to_find_your_ring_size_900x900_3e17e5b8-385b-48ac-85b0-3c93b7950a9c.webp?v=1769774855"
+        image: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/3c973afef6e4c2611322622fcd3a3555.jpg?v=1777870175"
     }
 ];
 
 const FAQ_DATA = [
     {
-        question: "What if my ring doesn’t fit when it arrives?",
-        answer: "If your ring doesn’t fit we offer <strong>One Free Resize</strong> for engagement and wedding rings to use within the first 12 months of your ring's completion (subject to eligible design style and metal type). For full resizing details please <a href='/free-resizing'>visit our detailed page here</a>.",
+        question: "Do you offer free ring resizing?",
+        answer: "Yes, we provide <strong>one complimentary resize</strong> for all engagement and wedding rings within 12 months of completion (subject to design and metal type eligibility). Visit our <a href='/free-resizing'>resizing page</a> for full details.",
     },
     {
-        question: "Can I get my ring size checked in your showroom?",
-        answer: "Of course! Our helpful team can accurately measure your ring size without the guesswork. Book an appointment to <a href='/visit'>visit one of our showrooms</a>.",
+        question: "How long does resizing take?",
+        answer: "Ring resizing typically takes a few business days, depending on the design and required adjustment. Our team ensures every piece is carefully resized, polished, and returned in perfect condition.",
     },
     {
-        question: "How can I secretly know my partner's ring size?",
-        answer: "This is a hard one! But we have a <a href='/education/engagement-ring-guidance/find-your-ring-size'>few tips and tricks for you over on this page</a>.",
+        question: "Can I visit your showroom for assistance?",
+        answer: "Absolutely. Our experts are happy to assist with sizing, styling, and design guidance. Book an appointment to <a href='/visit'>visit our showroom</a> for a personalized experience.",
     },
     {
-        question: "Does resizing weaken the ring?",
-        answer: "The ring resizing process involves adding or removing small pieces of precious metal to the original ring to attain the new size. The ring can become weaker if the ring is resized up or down too much, which is why we have a maximum amount of sizes our rings can be sized up or down. You can <a href='/free-resizing'>see our resizing threshold here</a>.<br/><br/>At Diamond Jewellery, our in-house jewellers adhere to strict quality control standards to reduce the risk of breakage and ensure resized rings fit perfectly, as well as using laser welders for a seamless finish. After resizing, we always clean and polish the ring before returning it to you.",
+        question: "Are your diamonds and gemstones ethically sourced?",
+        answer: "Yes, all our diamonds and gemstones are responsibly sourced. We also offer lab-grown options that are both ethical and environmentally conscious.",
     },
     {
-        question: "What is the most common engagement ring size?",
-        answer: "The most common ring size is between K and P. If you measure your size and fall outside of this range we recommend double checking your ring size with another method to ensure it is correct as most rings can only be resized by a limited amount.<br/><br/>Please refer to the distribution graph below showing the most common ring sizes.<br/><br/><img src='https://cdn.shopify.com/s/files/1/0644/3067/0060/files/large-SizingBellCurve.png?v=1678918523' alt='Size distribution graph' />",
+        question: "Can I customize or design my own ring?",
+        answer: "Yes, we specialize in custom designs. Whether you have a specific vision or need guidance, our team will work with you to create a one-of-a-kind piece. Learn more about our <a href='/custom-rings'>custom design service</a>.",
     }
 ];
 

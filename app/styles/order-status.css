@@ -13,7 +13,7 @@
 
 .order-status .our-jewellers-subtitle {
     font-family: var(--font_family_c);
-    font-size: 13px;
+    font-size: var(--min_font_size);
     line-height: 15px;
     font-weight: 300;
     color: var(--black_color);

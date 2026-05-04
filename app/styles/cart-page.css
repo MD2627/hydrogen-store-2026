@@ -20,7 +20,7 @@ main.cart {
 
 .continue-shopping-link {
     font-family: var(--font_family_n);
-    font-size: 13px;
+    font-size: var(--min_font_size);
     text-transform: uppercase;
     letter-spacing: 1px;
     color: var(--black_color);
@@ -224,7 +224,7 @@ main.cart {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 13px;
+    font-size: var(--min_font_size);
     font-family: var(--font_family_c);
 }
 
@@ -332,7 +332,7 @@ main.cart {
     padding: 10px;
     border: 1px solid var(--gray_medium_color);
     font-family: var(--font_family_c);
-    font-size: 13px;
+    font-size: var(--min_font_size);
     background: var(--white_color);
 }
 

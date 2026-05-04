@@ -9,8 +9,8 @@ export function RingBanner({ image, mobileImage, title, subtitle, buttonText, bu
             </div>
             <div className="ring-banner-inner">
                 <div className="banner-content">
-                    <h2>{title}</h2>
-                    <p>{subtitle}</p>
+                    <h2 className='section-title'>{title}</h2>
+                    <p className='sb-description'>{subtitle}</p>
                     <Link to={buttonLink} className="btn btn">
                         {buttonText}
                     </Link>

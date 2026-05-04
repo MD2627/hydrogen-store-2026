@@ -128,77 +128,83 @@ export default function SiteMap() {
 
     return (
         <div className="site-map">
-            <h2 className="page-heading-wrapper">Site Map</h2>
+            <h1 className="page-banner-title">Site Map</h1>
 
             {/* COLLECTIONS + PRODUCTS */}
             <div className="site-map-section">
-                {collections
-                    .filter((c) => c.products.nodes.length > 0)
-                    .map((collection) => (
-                        <div key={collection.handle} className="site-map-group">
-                            <h3 className="main-heading-parent">
-                                {collection.title}
-                            </h3>
+                <div className='page-width'>
+                    {collections
+                        .filter((c) => c.products.nodes.length > 0)
+                        .map((collection) => (
+                            <div key={collection.handle} className="site-map-group">
+                                <h3 className="main-heading-parent">
+                                    {collection.title}
+                                </h3>
 
-                            <ul>
-                                {collection.products.nodes.map((product) => (
-                                    <li key={product.handle}>
-                                        <Link
-                                            className="fancy f-13 ff-c w-300"
-                                            to={`/products/${product.handle}`}
-                                        >
-                                            {product.title}
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    ))}
+                                <ul>
+                                    {collection.products.nodes.map((product) => (
+                                        <li key={product.handle}>
+                                            <Link
+                                                className="fancy f-13 ff-c w-300"
+                                                to={`/products/${product.handle}`}
+                                            >
+                                                {product.title}
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        ))}
+                </div>
             </div>
 
             {/* BLOGS + ARTICLES */}
             <div className="site-map-section">
-                {blogs
-                    .filter((b) => b.articles.nodes.length > 0)
-                    .map((blog) => (
-                        <div key={blog.handle} className="site-map-group">
-                            <h3 className="main-heading-parent">
-                                {blog.title}
-                            </h3>
+                <div className='page-width'>
+                    {blogs
+                        .filter((b) => b.articles.nodes.length > 0)
+                        .map((blog) => (
+                            <div key={blog.handle} className="site-map-group">
+                                <h3 className="main-heading-parent">
+                                    {blog.title}
+                                </h3>
 
-                            <ul>
-                                {blog.articles.nodes.map((article) => (
-                                    <li key={article.handle}>
-                                        <Link
-                                            className="fancy f-13 ff-c w-300"
-                                            to={`/blogs/${blog.handle}/${article.handle}`}
-                                        >
-                                            {article.title}
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    ))}
+                                <ul>
+                                    {blog.articles.nodes.map((article) => (
+                                        <li key={article.handle}>
+                                            <Link
+                                                className="fancy f-13 ff-c w-300"
+                                                to={`/blogs/${blog.handle}/${article.handle}`}
+                                            >
+                                                {article.title}
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        ))}
+                </div>
             </div>
 
             {/* PAGES */}
             <div className="site-map-section">
-                <div className="site-map-group">
-                    <h3 className="main-heading-parent">Pages</h3>
+                <div className='page-width'>
+                    <div className="site-map-group">
+                        <h3 className="main-heading-parent">Pages</h3>
 
-                    <ul>
-                        {cleanPages.map((page) => (
-                            <li key={page.handle}>
-                                <Link
-                                    className="fancy f-13 ff-c w-300"
-                                    to={page.handle}
-                                >
-                                    {page.title}
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
+                        <ul>
+                            {cleanPages.map((page) => (
+                                <li key={page.handle}>
+                                    <Link
+                                        className="fancy f-13 ff-c w-300"
+                                        to={page.handle}
+                                    >
+                                        {page.title}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

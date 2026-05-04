@@ -32,7 +32,7 @@
     line-height: 17.94px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .affiliate-banner.story-craft-banner .story-craft-content h2 {
         font-size: 38.75px;
         line-height: 42px;
@@ -111,7 +111,7 @@
     color: var(--black_color);
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .affiliate-intro p {
         font-size: 26.35px;
         line-height: 29px;
@@ -158,7 +158,7 @@
     margin: 0;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .affiliate-page .faq-question {
         font-size: 11px;
     }

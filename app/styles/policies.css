@@ -106,7 +106,7 @@
 .policy p,
 .policy li {
     font-family: var(--font_family_c);
-    font-size: 13px;
+    font-size: var(--min_font_size);
     line-height: 15.6px;
     font-weight: 300;
 }
@@ -143,7 +143,7 @@
     color: var(--black_color);
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .policy h2 {
         font-size: 26.35px;
         line-height: 29px;

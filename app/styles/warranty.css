@@ -14,7 +14,7 @@
 }
 
 .warranty-content-inner p {
-    font-size: 13px;
+    font-size: var(--min_font_size);
     margin: 0 0 13px;
     color: var(--black_color);
     font-family: var(--font_family_c);
@@ -54,7 +54,7 @@ p.p-is-bold {
 
 .warranty-content-inner .section li {
     list-style: disc;
-    font-size: 13px;
+    font-size: var(--min_font_size);
     font-family: 'Diamond Ginto Normal';
     font-weight: 300;
     color: var(--black_color);
@@ -104,7 +104,7 @@ h2.main-warranty-title {
 }
 
 .crafting-timeframes .main-warranty-title .description {
-    font-size: 13px;
+    font-size: var(--min_font_size);
     color: var(--black_color);
     text-align: center;
     font-family: 'Diamond Ginto Normal';
@@ -129,7 +129,7 @@ h2.main-warranty-title {
     padding-left: 18px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .warranty-content-inner h2 {
         font-size: 26px;
         line-height: 29px;

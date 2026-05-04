@@ -70,7 +70,7 @@
   color: var(--white_color);
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .sticky-nav-btn {
     font-size: 12.8px;
     letter-spacing: 0;
@@ -219,7 +219,7 @@ main.careers .collection-header-content:after {
   display: none;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .career-mission {
     padding: 64px 20px 92px;
   }
@@ -340,7 +340,7 @@ main.careers .collection-header-content:after {
   text-align: center;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .career-section.progress-impact {
     padding: 64px 0;
   }
@@ -543,7 +543,7 @@ main.careers .collection-header-content:after {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .careers-values-card {
     padding: 60px 40px;
     min-height: 240px;
@@ -696,7 +696,7 @@ main.careers .collection-header-content:after {
   margin-top: 10px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .careers-team-section {
     padding-top: 60px;
   }
@@ -790,7 +790,7 @@ main.careers .collection-header-content:after {
   right: 1px;
 } */
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .team-carousel-arrow {
     width: 32px;
     height: 32px;
@@ -935,7 +935,7 @@ main.careers .collection-header-content:after {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .careers-benefits-section {
     padding: 60px 5px;
   }
@@ -1168,7 +1168,7 @@ main.careers .collection-header-content:after {
   right: 10px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 
   /* .filter-group {
     width: 100%;
@@ -1240,7 +1240,7 @@ main.careers .collection-header-content:after {
 
 .careers-difference-subtitle {
   font-family: var(--font_family_c);
-  font-size: 13px;
+  font-size: var(--min_font_size);
   line-height: 15.6px;
   color: var(--black_color);
   font-weight: 300;
@@ -1267,7 +1267,7 @@ main.careers .collection-header-content:after {
   height: 100%;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .careers-difference-section {
     padding: 60px 5px 30px;
   }
@@ -1342,7 +1342,7 @@ main.careers .collection-header-content:after {
   text-shadow: 0 2px 4px rgba(var(--pure_black_rgb), 0.3);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .careers-explore-grid {
     grid-template-columns: 1fr;
     gap: 16px;

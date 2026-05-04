@@ -1,3 +1,8 @@
+.site-map .page-banner-title {
+    color: var(--black_color);
+    margin: 3rem 0;
+}
+
 h3.main-heading-parent {
     font-size: 32px;
     font-family: var(--font_family_a);
@@ -7,9 +12,9 @@ h3.main-heading-parent {
 }
 
 .site-map-section {
-    max-width: 1260px;
+    /* max-width: 1260px;
     margin: auto;
-    padding: 0 20px;
+    padding: 0 20px; */
 }
 
 .site-map-group ul li {
@@ -28,7 +33,7 @@ h3.main-heading-parent {
     grid-template-columns: repeat(2, 1fr);
 }
 
-h2.page-heading-wrapper {
+/* h2.page-heading-wrapper {
     font-size: 45px;
     line-height: 50.05px;
     color: var(--black_color);
@@ -36,9 +41,9 @@ h2.page-heading-wrapper {
     font-family: 'ABC Arizona Mix';
     text-align: center;
     margin: 65px 0 55px;
-}
+} */
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .site-map-group ul {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -52,8 +57,8 @@ h2.page-heading-wrapper {
         text-align: center;
     }
 
-    h2.page-heading-wrapper {
+    /* h2.page-heading-wrapper {
         font-size: 39px;
         line-height: 45px;
-    }
+    } */
 }

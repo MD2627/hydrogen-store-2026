@@ -25,7 +25,7 @@ export default function CarbonNeutral() {
                 <div className="discovery-banner-bg">
                     <picture>
                         <source
-                            media="(max-width: 767px)"
+                            media="(max-width: 768px)"
                             srcSet="https://cdn.shopify.com/s/files/1/0644/3067/0060/files/ExploreOurRange_CTA_mob_900x900.png?v=1742426856"
                         />
                         <img

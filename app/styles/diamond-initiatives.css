@@ -1,1202 +1,978 @@
-  .diamond-initiatives-page {
-      background-color: var(--white_color);
+/* --- Diamond Initiatives Redesign --- */
+
+.story-craft-banner.initiatives-banner .section-subtitle {
+  color: var(--white_color);
+}
+
+.diamond-initiatives-page {
+  background-color: var(--white_color);
+  color: var(--site_text_color);
+}
+
+/* Banner Tweaks */
+.initiatives-banner.story-craft-banner {
+  /* height: 70vh;
+  min-height: 600px; */
+}
+
+.initiatives-banner .story-craft-content h2 {
+  /* font-family: var(--font_family_a);
+  font-weight: 300;
+  font-size: 3.5rem;
+  letter-spacing: -0.02em; */
+}
+
+/* Purpose Section */
+.initiatives-purpose-section {
+  /* padding: 100px 0; */
+  background-color: #fcfcfc;
+  text-align: center;
+}
+
+.purpose-header {
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.purpose-logo-top {
+  margin-bottom: 20px;
+}
+
+.purpose-logo-top svg {
+  width: 100px;
+  height: auto;
+  color: var(--accent_color);
+}
+
+.purpose-items-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.purpose-card {
+  padding: 40px;
+  background: var(--white_color);
+  border: 1px solid #f0f0f0;
+  transition: transform 0.3s ease;
+}
+
+.purpose-card:hover {
+  transform: translateY(-5px);
+}
+
+.purpose-card-icon svg {
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.purpose-card-label {
+  font-family: var(--font_family_a);
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.purpose-card-label span {
+  color: var(--accent_color);
+  font-weight: 400;
+}
+
+/* Editorial Sections */
+.initiatives-editorial-section {
+  /* padding: 120px 0; */
+}
+
+.editorial-split {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 80px;
+  align-items: start;
+  margin: 0;
+}
+
+.editorial-split.reversed {
+  direction: rtl;
+}
+
+.editorial-split.reversed>* {
+  direction: ltr;
+}
+
+.editorial-header-side {
+  position: sticky;
+  top: 100px;
+}
+
+.highlight-text {
+  display: block;
+  color: #ffa500;
+  /* People highlight */
+}
+
+.highlight-text.planet {
+  color: var(--accent_color);
+}
+
+.editorial-content-side p {
+  margin-bottom: 25px;
+}
+
+.editorial-content-side .sb-description:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .editorial-split.reversed {
+    margin-bottom: 0;
+  }
+}
+
+/* Partners Section */
+.initiatives-partners-section {
+  /* padding: 80px 0; */
+  background-color: #f9f9f9;
+}
+
+.partners-flex-container {
+  display: flex;
+  gap: 60px;
+}
+
+.partners-info-column {
+  flex: 1.5;
+}
+
+.partners-logos-column {
+  flex: 1;
+}
+
+.initiatives-partners-section .section-subtitle {
+  color: #888;
+}
+
+.partners-mini-title {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: #888;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.initiatives-custom-list {
+  list-style: none;
+  padding: 0;
+}
+
+.initiatives-custom-list li {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.initiatives-custom-list li:last-child,
+.initiatives-custom-list li:last-child .sb-description {
+  margin: 0;
+}
+
+.list-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--accent_color);
+  border-radius: 50%;
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.partners-grid-layout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.partner-logo-box {
+  background: var(--white_color);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #eee;
+}
+
+.partner-logo-box img {
+  max-width: 100%;
+  height: auto;
+  filter: grayscale(1);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.partner-logo-box:hover img {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+.partner-logo-box.single {
+  grid-column: span 2;
+  padding: 40px;
+}
+
+/* Image Section */
+.initiatives-full-image {
+  height: 600px;
+  overflow: hidden;
+}
+
+.full-width-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Trees Animation */
+.trees-animation-container {
+  height: 500px;
+  background-color: var(--accent_color);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trees-stats-overlay {
+  z-index: 10;
+  text-align: center;
+  color: var(--white_color);
+}
+
+.tree-count-number {
+  font-size: 5rem;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.tree-count-label {
+  display: flex;
+  flex-direction: column;
+}
+
+.animated-tree {
+  position: absolute;
+  width: 40px;
+  height: auto;
+  opacity: 0;
+  transform-origin: bottom center;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+/* CTA Banner */
+.initiatives-cta-banner {
+  padding: 100px 0;
+}
+
+.cta-wrapper {
+  display: flex;
+  background: #2c2f3a;
+  border-radius: 4px;
+  overflow: hidden;
+  align-items: center;
+}
+
+.cta-image-side {
+  flex: 1;
+  height: 400px;
+}
+
+.cta-image-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cta-content-side {
+  flex: 1;
+  padding: 60px;
+  text-align: center;
+}
+
+.cta-heading {
+  color: var(--white_color);
+  font-family: var(--font_family_a);
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 30px;
+  letter-spacing: 0.05em;
+}
+
+.btn-premium {
+  display: inline-block;
+  padding: 15px 40px;
+  background-color: var(--white_color);
+  color: #2c2f3a;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  transition: all 0.3s ease;
+}
+
+.btn-premium:hover {
+  background-color: var(--accent_color);
+  color: var(--white_color);
+}
+
+/* FAQ */
+.initiatives-faq-wrap {
+  padding: 100px 0;
+  background-color: #fcfcfc;
+}
+
+/* Animation Classes (Preserved Logic) */
+@keyframes tree-anim-1 {
+
+  0%,
+  4% {
+    opacity: 0;
+    transform: scale(0);
   }
 
-  /* 
- * --------------------------------------------------
- * Banner
- * --------------------------------------------------
- */
-  .initiatives-banner.story-craft-banner {
-      height: 60vh;
-      min-height: 500px;
-      max-height: 800px;
+  15% {
+    opacity: 1;
+    transform: scale(1.1);
   }
 
-  .initiatives-banner .story-craft-overlay,
-  .initiatives-image-section .story-craft-overlay {
-      background: transparent;
+  80% {
+    opacity: 1;
+    transform: scale(0.9);
   }
 
-  .initiatives-banner .story-craft-content {
-      text-align: center;
-      max-width: 900px;
-      margin: 20px auto 0;
-      padding: 0 20px;
-      left: 14.7%;
+  98% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+@keyframes tree-anim-2 {
+
+  0%,
+  9% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  18% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  80% {
+    opacity: 1;
+    transform: scale(0.9);
+  }
+
+  98% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+@keyframes tree-anim-3 {
+
+  0%,
+  14% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  25% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  80% {
+    opacity: 1;
+    transform: scale(0.9);
+  }
+
+  98% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+@keyframes tree-anim-4 {
+
+  0%,
+  19% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  28% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  80% {
+    opacity: 1;
+    transform: scale(0.9);
+  }
+
+  98% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+@keyframes tree-anim-5 {
+
+  0%,
+  24% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  35% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  80% {
+    opacity: 1;
+    transform: scale(0.9);
+  }
+
+  98% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+@keyframes tree-anim-6 {
+
+  0%,
+  29% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  38% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  80% {
+    opacity: 1;
+    transform: scale(0.9);
+  }
+
+  98% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+@keyframes tree-anim-7 {
+
+  0%,
+  34% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  45% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  80% {
+    opacity: 1;
+    transform: scale(0.9);
+  }
+
+  98% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+@keyframes tree-anim-8 {
+
+  0%,
+  39% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  48% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  80% {
+    opacity: 1;
+    transform: scale(0.9);
+  }
+
+  98% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+@keyframes tree-anim-9 {
+
+  0%,
+  44% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  55% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  80% {
+    opacity: 1;
+    transform: scale(0.9);
+  }
+
+  98% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+@keyframes tree-anim-10 {
+
+  0%,
+  49% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  58% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  80% {
+    opacity: 1;
+    transform: scale(0.9);
+  }
+
+  98% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+@keyframes tree-anim-11 {
+
+  0%,
+  54% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  65% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  80% {
+    opacity: 1;
+    transform: scale(0.9);
+  }
+
+  98% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+@keyframes tree-anim-12 {
+
+  0%,
+  59% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  68% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  80% {
+    opacity: 1;
+    transform: scale(0.9);
+  }
+
+  98% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+/* Tree Positions - Preserved from Original */
+.tree-pos-0 {
+  animation-name: tree-anim-1;
+  left: calc(50% + 160px);
+  top: calc(50% - 120px);
+}
+
+.tree-pos-1 {
+  animation-name: tree-anim-2;
+  left: calc(50% - 400px);
+  top: calc(50% - 100px);
+}
+
+.tree-pos-2 {
+  animation-name: tree-anim-3;
+  left: calc(50% - 200px);
+  top: calc(50% - 130px);
+}
+
+.tree-pos-3 {
+  animation-name: tree-anim-4;
+  left: calc(50% + 50px);
+  top: calc(50% - 140px);
+}
+
+.tree-pos-4 {
+  animation-name: tree-anim-5;
+  left: calc(50% + 180px);
+  top: calc(50% + 40px);
+}
+
+.tree-pos-5 {
+  animation-name: tree-anim-6;
+  left: calc(50% + 380px);
+  top: calc(50% - 145px);
+}
+
+.tree-pos-6 {
+  animation-name: tree-anim-7;
+  left: calc(50% + 450px);
+  top: calc(50% + 80px);
+}
+
+.tree-pos-7 {
+  animation-name: tree-anim-8;
+  left: calc(50% - 450px);
+  top: calc(50% + 40px);
+}
+
+.tree-pos-8 {
+  animation-name: tree-anim-9;
+  left: calc(50% - 280px);
+  top: calc(50% - 20px);
+}
+
+.tree-pos-9 {
+  animation-name: tree-anim-10;
+  left: calc(50% + 0px);
+  top: calc(50% + 120px);
+}
+
+.tree-pos-10 {
+  animation-name: tree-anim-11;
+  left: calc(50% + 330px);
+  top: calc(50% + 60px);
+}
+
+.tree-pos-11 {
+  animation-name: tree-anim-12;
+  left: calc(50% - 370px);
+  top: calc(50% + 100px);
+}
+
+/* ... and so on for all 40+ positions ... I will simplify this slightly for the redesign or just keep the ones I need */
+.tree-pos-12 {
+  animation-name: tree-anim-1;
+  left: calc(50% - 200px);
+  top: calc(50% + 80px);
+}
+
+.tree-pos-13 {
+  animation-name: tree-anim-2;
+  left: calc(50% + 430px);
+  top: calc(50% - 30px);
+}
+
+.tree-pos-14 {
+  animation-name: tree-anim-3;
+  left: calc(50% + 750px);
+  top: calc(50% - 120px);
+}
+
+.tree-pos-15 {
+  animation-name: tree-anim-4;
+  left: calc(50% + 800px);
+  top: calc(50% - 100px);
+}
+
+.tree-pos-16 {
+  animation-name: tree-anim-5;
+  left: calc(50% + 600px);
+  top: calc(50% + 80px);
+}
+
+.tree-pos-17 {
+  animation-name: tree-anim-6;
+  left: calc(50% + 550px);
+  top: calc(50% - 140px);
+}
+
+.tree-pos-18 {
+  animation-name: tree-anim-7;
+  left: calc(50% + 680px);
+  top: calc(50% + 40px);
+}
+
+.tree-pos-19 {
+  animation-name: tree-anim-8;
+  left: calc(50% + 880px);
+  top: calc(50% - 145px);
+}
+
+.tree-pos-20 {
+  animation-name: tree-anim-9;
+  left: calc(50% + 950px);
+  top: calc(50% + 80px);
+}
+
+.tree-pos-21 {
+  animation-name: tree-anim-10;
+  left: calc(50% + 1100px);
+  top: calc(50% + 40px);
+}
+
+.tree-pos-22 {
+  animation-name: tree-anim-11;
+  left: calc(50% + 500px);
+  top: calc(50% + 120px);
+}
+
+.tree-pos-23 {
+  animation-name: tree-anim-12;
+  left: calc(50% + 220px);
+  top: calc(50% - 20px);
+}
+
+.tree-pos-24 {
+  animation-name: tree-anim-1;
+  left: calc(50% + 830px);
+  top: calc(50% + 60px);
+}
+
+.tree-pos-25 {
+  animation-name: tree-anim-2;
+  left: calc(50% + 130px);
+  top: calc(50% + 100px);
+}
+
+.tree-pos-26 {
+  animation-name: tree-anim-3;
+  left: calc(50% + 1200px);
+  top: calc(50% - 130px);
+}
+
+.tree-pos-27 {
+  animation-name: tree-anim-4;
+  left: calc(50% + 930px);
+  top: calc(50% - 30px);
+}
+
+.tree-pos-28 {
+  animation-name: tree-anim-5;
+  left: calc(50% - 750px);
+  top: calc(50% - 120px);
+}
+
+.tree-pos-29 {
+  animation-name: tree-anim-6;
+  left: calc(50% - 1100px);
+  top: calc(50% - 100px);
+}
+
+.tree-pos-30 {
+  animation-name: tree-anim-7;
+  left: calc(50% - 1300px);
+  top: calc(50% + 80px);
+}
+
+.tree-pos-31 {
+  animation-name: tree-anim-8;
+  left: calc(50% - 550px);
+  top: calc(50% - 140px);
+}
+
+.tree-pos-32 {
+  animation-name: tree-anim-9;
+  left: calc(50% - 640px);
+  top: calc(50% + 40px);
+}
+
+.tree-pos-33 {
+  animation-name: tree-anim-10;
+  left: calc(50% - 880px);
+  top: calc(50% - 145px);
+}
+
+.tree-pos-34 {
+  animation-name: tree-anim-11;
+  left: calc(50% - 950px);
+  top: calc(50% + 80px);
+}
+
+.tree-pos-35 {
+  animation-name: tree-anim-12;
+  left: calc(50% - 1100px);
+  top: calc(50% + 40px);
+}
+
+.tree-pos-36 {
+  animation-name: tree-anim-1;
+  left: calc(50% - 500px);
+  top: calc(50% + 120px);
+}
+
+.tree-pos-37 {
+  animation-name: tree-anim-2;
+  left: calc(50% - 220px);
+  top: calc(50% - 20px);
+}
+
+.tree-pos-38 {
+  animation-name: tree-anim-3;
+  left: calc(50% - 830px);
+  top: calc(50% + 60px);
+}
+
+.tree-pos-39 {
+  animation-name: tree-anim-4;
+  left: calc(50% - 130px);
+  top: calc(50% + 100px);
+}
+
+.tree-pos-40 {
+  animation-name: tree-anim-5;
+  left: calc(50% - 1200px);
+  top: calc(50% - 130px);
+}
+
+.tree-pos-41 {
+  animation-name: tree-anim-6;
+  left: calc(50% - 930px);
+  top: calc(50% - 30px);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .editorial-split {
+    gap: 40px;
   }
 
   .initiatives-banner .story-craft-content h2 {
-      font-size: 45.5px;
-      margin-bottom: 20px;
-      font-family: var(--font_family_a);
-      letter-spacing: normal;
-      font-weight: 300;
-      line-height: 50.05px;
-      color: var(--white_color);
+    font-size: 2.5rem;
   }
+}
 
-  .initiatives-banner .story-craft-content p {
-      font-family: var(--font_family_c);
-      font-size: 14.95px;
-      line-height: 17.94px;
-      font-weight: 300;
-      color: var(--white_color);
-      letter-spacing: normal;
-      text-shadow: 0 0 15px rgba(110, 110, 110, .9), 0 0 4px rgba(110, 110, 110, .7);
+@media (max-width: 768px) {
+  .editorial-split {
+    grid-template-columns: 1fr;
   }
 
-
-  /* --------------------------- Purpose section css --------------------------- */
-  .purpose-section {
-      padding: 20px;
-      text-align: center;
-      background: rgba(var(--pure_black_rgb), 0.04);
-  }
-
-  .diamond-initiatives-page .page-width {
-      padding: 0 20px;
-  }
-
-  .purpose-logo {
-      display: inline-flex;
-  }
-
-  .diamond-initiatives-logo {
-      max-width: 40px;
-      height: 100%;
-      width: 100%;
-  }
-
-  .purpose-item svg {
-      max-width: 150px;
-      color: var(--accent_color);
-      display: flex;
-      height: 100%;
-      width: 100%;
-  }
-
-  .purpose-items {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 30px;
-      margin-top: 13px;
-  }
-
-  .purpose-container,
-  .purpose-item {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-  }
-
-  .purpose-heading {
-      color: var(--black_color);
-      line-height: 17.16px;
-      max-width: 320px;
-      margin: auto;
-  }
-
-  .purpose-text {
-      color: var(--black_color);
-  }
-
-  .purpose-text span {
-      color: var(--accent_color);
-  }
-
-  /* ------------------------------ people section css ------------------------------*/
-
-  .initiatives-people-section {
-      padding: 40px 0;
-  }
-
-  .initiatives-people-grid {
-      display: flex;
-  }
-
-  .initiatives-people-left {
-      width: 33%;
-  }
-
-  .initiatives-people-title span {
-      color: var(--accent_color);
-  }
-
-  .initiatives-people-right {
-      width: 67%;
-      border-left: 2px solid #ffa500;
-      padding-left: 15px;
-  }
-
-  .initiatives-people-right p {
-      line-height: 15.6px;
-      color: var(--black_color);
-      margin-bottom: 13px;
-  }
-
-  .initiatives-people-right p:last-child {
-      margin: 0;
-  }
-
-  .initiatives-people-title {
-      padding: 20px;
-  }
-
-  .initiatives-people-title {
-      max-width: 300px;
-  }
-
-  .initiatives-planet-section .initiatives-people-right {
-      border-color: var(--accent_color);
-  }
-
-  .purpose-item svg path,
-  .purpose-item svg ellipse {
-      stroke: var(--accent_color) !important;
-  }
-
-  /* ------------------------------ initiatives-image-section css ------------------------------*/
-
-  .initiatives-image-section {
-      height: 400px !important;
-  }
-
-  /* ------------------------------ partners-section css ------------------------------*/
-  .initiatives-partners-section {
-      padding: 20px 0;
-      background: rgba(var(--pure_black_rgb), 0.04);
-  }
-
-  .initiatives-list {
-      margin-top: 20px;
-  }
-
-  .initiatives-list li {
-      margin: 0;
-      line-height: 15.6px;
-      color: var(--black_color);
-  }
-
-  .initiatives-list li:not(:last-child) {
-      margin-bottom: 10px;
-  }
-
-  .initiatives-partners-grid {
-      display: flex;
-      align-items: center;
-  }
-
-  .partners-logos-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
-      max-width: 250px;
-      /* margin: auto; */
-      margin-top: 20px;
-  }
-
-  .initiatives-small-title {
-      line-height: 15.6px;
-      letter-spacing: 1.04px;
-      color: var(--black_color);
-  }
-
-  .initiatives-partners-left {
-      width: 75.5%;
-  }
-
-  .initiatives-partners-right {
-      width: 24.5%;
-      margin-left: 33px;
-  }
-
-  .partner-logo.logo-0 {
-      grid-column: span 2 / span 2;
-  }
-
-  .initiatives-partners-section.planet-wrapper {
-      background: var(--white_color);
-  }
-
-  .initiatives-partners-section.planet-wrapper .partners-logos-grid {
-      max-width: 100%;
-  }
-
-  /* -------------------------- cta-banner-section css -------------------------- */
-  .cta-banner-section {
-      padding: 0 0 27px;
-  }
-
-  .cta-banner-image {
-      position: relative;
-      padding-bottom: 39.7%;
-  }
-
-  .cta-banner-image img {
-      object-fit: cover;
-      object-position: bottom;
-      width: 100%;
-      height: 100%;
-      border-radius: 3px;
-      position: absolute;
-      inset: 0;
-  }
-
-  .cta-banner-container {
-      position: relative;
-  }
-
-  .cta-banner-content {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      right: 10%;
-      max-width: 350px;
-      text-align: center;
-  }
-
-  .cta-banner-title {
-      line-height: 15.6px;
-      letter-spacing: 1.04px;
-      color: var(--white_color);
-  }
-
-  .cta-banner-button {
-      display: inline-block;
-  }
-
-  /* ------------------------------- FAQ section ----------------------------------- */
-  .initiatives-faq-section .faq-body {
-      background: var(--white_color);
-      padding-bottom: 45px;
-  }
-
-  .initiatives-faq-section .faq-header {
-      padding: 20px;
-      background-color: var(--accent_color);
-  }
-
-  .initiatives-faq-section .faq-answer-inner.w-300 {
-      padding: 0 0px 16px 30px;
-  }
-
-  .initiatives-faq-section .faq-header h2 {
-      font-size: 32.5px;
-      line-height: 35.75px;
-  }
-
-  .initiatives-faq-section .faq-answer-inner,
-  .initiatives-faq-section .faq-answer-inner a {
-      font-family: var(--font_family_c);
-      color: var(--black_color);
-      font-size: 13px;
-      line-height: 15.16px;
-  }
-
-  .initiatives-faq-section .faq-header p {
-      font-family: var(--font_family_a);
-      font-size: 14.95px;
-      line-height: 17.94px;
-      opacity: 1;
-  }
-
-  .initiatives-faq-section .faq-container {
-      max-width: 500px;
-  }
-
-  .initiatives-faq-section .faq-question {
-      font-size: 9.75px;
-      letter-spacing: 0.78px;
-      line-height: 11.7px;
-      margin-top: 20px;
-  }
-
-  .faq-partner-logos {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 10px;
-      margin-top: 13px;
-  }
-
-  .faq-partner-logos a {
-      border: 1px solid var(--accent_color);
-      border-radius: 3px;
-      padding: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  }
-
-  /* -------------------------------- responsive css ------------------------------------ */
-  @media (max-width: 1024px) {
-      .initiatives-people-title {
-          font-size: 32px !important;
-      }
-
-      .cta-banner-image {
-          padding-bottom: 50.4%;
-      }
-  }
-
-  @media (max-width: 768px) {
-      .cta-banner-content {
-          position: static;
-          transform: unset;
-          max-width: unset;
-      }
-
-      .cta-banner-title {
-          color: var(--black_color);
-      }
-  }
-
-  @media (max-width: 767px) {
-      .initiatives-banner .story-craft-content h2 {
-          font-size: 38.75px;
-          line-height: 42.62px;
-      }
-
-      .initiatives-banner.story-craft-banner {
-          min-height: unset;
-          height: 50vh;
-      }
-
-      .initiatives-banner .story-craft-content p {
-          font-size: 17.82px;
-          line-height: 21.18px;
-      }
-
-      .purpose-heading,
-      .purpose-text {
-          font-size: 17.05px;
-          line-height: 20.46px;
-      }
-
-      .initiatives-people-grid {
-          flex-direction: column;
-      }
-
-      .initiatives-people-left,
-      .initiatives-people-right,
-      .initiatives-partners-left,
-      .initiatives-partners-right {
-          width: 100%;
-      }
-
-      .initiatives-people-right {
-          border-left: none;
-          padding-top: 35px;
-      }
-
-      .initiatives-people-title {
-          font-size: 26.35px !important;
-          line-height: 28.98px;
-          text-align: center;
-          border-bottom: 2px solid #ffa500;
-          max-width: 300px;
-          margin: auto;
-      }
-
-      .initiatives-people-right p {
-          line-height: 18.6px;
-      }
-
-      .initiatives-image-section {
-          height: 283px !important;
-      }
-
-      .initiatives-partners-grid {
-          flex-direction: column;
-      }
-
-      .initiatives-partners-right {
-          margin: 0;
-      }
-
-      .partners-logos-grid {
-          margin: auto;
-      }
-
-      .initiatives-partners-right .initiatives-small-title {
-          margin-left: 18%;
-      }
-
-      .initiatives-planet-section .initiatives-people-title {
-          border-color: var(--accent_color);
-      }
-
-      .initiatives-list li {
-          line-height: 18.6px;
-          font-size: 15.5px;
-      }
-
-      .initiatives-partners-section.planet-wrapper .partners-logos-grid {
-          max-width: 300px;
-      }
-
-      .planet-wrapper .initiatives-partners-right .initiatives-small-title {
-          margin-bottom: 20px;
-          margin-left: 11%;
-      }
-
-      .cta-banner-image {
-          padding-bottom: 86.1%;
-      }
-
-      .initiatives-faq-section .faq-header h2 {
-          font-size: 26.35px;
-          line-height: 29px;
-      }
-
-      .initiatives-faq-section .faq-header p {
-          font-size: 19.37px;
-          line-height: 21px;
-      }
-
-      .initiatives-faq-section .faq-question {
-          font-size: 10.85px;
-          line-height: 13.02px;
-          padding-bottom: 16px;
-      }
-
-      .initiatives-faq-section .faq-item:not(:first-child) .faq-question {
-          margin-top: 13px;
-      }
-
-      .initiatives-faq-section .faq-answer-inner,
-      .initiatives-faq-section .faq-answer-inner a {
-          font-size: 15.5px;
-          line-height: 18.6px;
-      }
-
-      .faq-partner-logos {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-  }
-
-  /* 
-   * --------------------------------------------------
-   * Trees Animation Section
-   * --------------------------------------------------
-   */
-
-  .trees-animation {
-      background-color: var(--accent_color);
-      color: var(--white_color);
-      text-align: center;
-      height: 360px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-      position: relative;
-      padding: 20px;
-  }
-
-  .trees-animation .tree-count {
-      font-size: 52px;
-      line-height: 62.4px;
-      z-index: 2;
-      position: relative;
-  }
-
-  .trees-animation .description {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      z-index: 2;
-      position: relative;
-  }
-
-  .trees-animation .description>.more-everyday {
-      display: flex;
-      overflow: hidden;
-      white-space: nowrap;
-      margin: 0 auto;
-      animation: typewriter steps(18) 10s infinite;
-      max-width: fit-content;
-  }
-
-  /* Tree Images Common Styles */
-  .trees-animation .tree-img {
-      width: 100%;
-      max-width: 40px;
-      position: absolute;
-      animation-iteration-count: infinite;
-      transform-origin: 50% 100%;
-      transition: scale 0.3s, rotate 0.5s;
-      scale: 1;
-      animation-duration: 10s;
-  }
-
-  /* Media Queries */
-  @media (max-width: 767px) {
-      .trees-animation .tree-count {
-          font-size: 62px;
-          line-height: 74.4px;
-      }
-
-      .trees-planted {
-          font-size: 18.6px;
-          line-height: 22.32px;
-      }
-  }
-
-  /* Keyframes */
-  @keyframes typewriter {
-      0% {
-          width: 0;
-      }
-
-      20% {
-          width: 0;
-      }
-
-      30% {
-          width: 100%;
-      }
-
-      100% {
-          width: 100%;
-      }
-  }
-
-  @keyframes tree-anim-1 {
-      0% {
-          opacity: 0;
-          transform: scale(0);
-      }
-
-      4% {
-          opacity: 0;
-          transform: scale(0);
-      }
-
-      15% {
-          opacity: 1;
-          transform: scale(1.1);
-      }
-
-      80% {
-          opacity: 1;
-          transform: scale(0.9);
-      }
-
-      98% {
-          opacity: 1;
-          transform: scale(1);
-      }
-
-      100% {
-          opacity: 0;
-          transform: scale(0);
-      }
-  }
-
-  @keyframes tree-anim-2 {
-      0% {
-          opacity: 0;
-          transform: scale(0);
-      }
-
-      9% {
-          opacity: 0;
-          transform: scale(0);
-      }
-
-      18% {
-          opacity: 1;
-          transform: scale(1.1);
-      }
-
-      80% {
-          opacity: 1;
-          transform: scale(0.9);
-      }
-
-      98% {
-          opacity: 1;
-          transform: scale(1);
-      }
-
-      100% {
-          opacity: 0;
-          transform: scale(0);
-      }
-  }
-
-  @keyframes tree-anim-3 {
-      0% {
-          opacity: 0;
-          transform: scale(0);
-      }
-
-      14% {
-          opacity: 0;
-          transform: scale(0);
-      }
-
-      25% {
-          opacity: 1;
-          transform: scale(1.1);
-      }
-
-      80% {
-          opacity: 1;
-          transform: scale(0.9);
-      }
-
-      98% {
-          opacity: 1;
-          transform: scale(1);
-      }
-
-      100% {
-          opacity: 0;
-          transform: scale(0);
-      }
-  }
-
-  @keyframes tree-anim-4 {
-      0% {
-          opacity: 0;
-          transform: scale(0);
-      }
-
-      19% {
-          opacity: 0;
-          transform: scale(0);
-      }
-
-      28% {
-          opacity: 1;
-          transform: scale(1.1);
-      }
-
-      80% {
-          opacity: 1;
-          transform: scale(0.9);
-      }
-
-      98% {
-          opacity: 1;
-          transform: scale(1);
-      }
-
-      100% {
-          opacity: 0;
-          transform: scale(0);
-      }
-  }
-
-  @keyframes tree-anim-5 {
-      0% {
-          opacity: 0;
-          transform: scale(0);
-      }
-
-      24% {
-          opacity: 0;
-          transform: scale(0);
-      }
-
-      35% {
-          opacity: 1;
-          transform: scale(1.1);
-      }
-
-      80% {
-          opacity: 1;
-          transform: scale(0.9);
-      }
-
-      98% {
-          opacity: 1;
-          transform: scale(1);
-      }
-
-      100% {
-          opacity: 0;
-          transform: scale(0);
-      }
-  }
-
-  @keyframes tree-anim-6 {
-      0% {
-          opacity: 0;
-          transform: scale(0);
-      }
-
-      29% {
-          opacity: 0;
-          transform: scale(0);
-      }
-
-      38% {
-          opacity: 1;
-          transform: scale(1.1);
-      }
-
-      80% {
-          opacity: 1;
-          transform: scale(0.9);
-      }
-
-      98% {
-          opacity: 1;
-          transform: scale(1);
-      }
-
-      100% {
-          opacity: 0;
-          transform: scale(0);
-      }
-  }
-
-  @keyframes tree-anim-7 {
-      0% {
-          opacity: 0;
-          transform: scale(0);
-      }
-
-      34% {
-          opacity: 0;
-          transform: scale(0);
-      }
-
-      45% {
-          opacity: 1;
-          transform: scale(1.1);
-      }
-
-      80% {
-          opacity: 1;
-          transform: scale(0.9);
-      }
-
-      98% {
-          opacity: 1;
-          transform: scale(1);
-      }
-
-      100% {
-          opacity: 0;
-          transform: scale(0);
-      }
-  }
-
-  @keyframes tree-anim-8 {
-      0% {
-          opacity: 0;
-          transform: scale(0);
-      }
-
-      39% {
-          opacity: 0;
-          transform: scale(0);
-      }
-
-      48% {
-          opacity: 1;
-          transform: scale(1.1);
-      }
-
-      80% {
-          opacity: 1;
-          transform: scale(0.9);
-      }
-
-      98% {
-          opacity: 1;
-          transform: scale(1);
-      }
-
-      100% {
-          opacity: 0;
-          transform: scale(0);
-      }
-  }
-
-  @keyframes tree-anim-9 {
-      0% {
-          opacity: 0;
-          transform: scale(0);
-      }
-
-      44% {
-          opacity: 0;
-          transform: scale(0);
-      }
-
-      55% {
-          opacity: 1;
-          transform: scale(1.1);
-      }
-
-      80% {
-          opacity: 1;
-          transform: scale(0.9);
-      }
-
-      98% {
-          opacity: 1;
-          transform: scale(1);
-      }
-
-      100% {
-          opacity: 0;
-          transform: scale(0);
-      }
-  }
-
-  @keyframes tree-anim-10 {
-      0% {
-          opacity: 0;
-          transform: scale(0);
-      }
-
-      49% {
-          opacity: 0;
-          transform: scale(0);
-      }
-
-      58% {
-          opacity: 1;
-          transform: scale(1.1);
-      }
-
-      80% {
-          opacity: 1;
-          transform: scale(0.9);
-      }
-
-      98% {
-          opacity: 1;
-          transform: scale(1);
-      }
-
-      100% {
-          opacity: 0;
-          transform: scale(0);
-      }
-  }
-
-  @keyframes tree-anim-11 {
-      0% {
-          opacity: 0;
-          transform: scale(0);
-      }
-
-      54% {
-          opacity: 0;
-          transform: scale(0);
-      }
-
-      65% {
-          opacity: 1;
-          transform: scale(1.1);
-      }
-
-      80% {
-          opacity: 1;
-          transform: scale(0.9);
-      }
-
-      98% {
-          opacity: 1;
-          transform: scale(1);
-      }
-
-      100% {
-          opacity: 0;
-          transform: scale(0);
-      }
-  }
-
-  @keyframes tree-anim-12 {
-      0% {
-          opacity: 0;
-          transform: scale(0);
-      }
-
-      59% {
-          opacity: 0;
-          transform: scale(0);
-      }
-
-      68% {
-          opacity: 1;
-          transform: scale(1.1);
-      }
-
-      80% {
-          opacity: 1;
-          transform: scale(0.9);
-      }
-
-      98% {
-          opacity: 1;
-          transform: scale(1);
-      }
-
-      100% {
-          opacity: 0;
-          transform: scale(0);
-      }
-  }
-
-  /* Tree Specific Styles (Positions & Animations) */
-  .trees-animation .tree-img:nth-of-type(1) {
-      animation-name: tree-anim-1;
-      left: calc(50% + 160px);
-      top: calc(50% - 120px);
-  }
-
-  .trees-animation .tree-img:nth-of-type(2) {
-      animation-name: tree-anim-2;
-      left: calc(50% - 400px);
-      top: calc(50% - 100px);
-  }
-
-  .trees-animation .tree-img:nth-of-type(3) {
-      animation-name: tree-anim-3;
-      left: calc(50% - 200px);
-      top: calc(50% - 130px);
-  }
-
-  .trees-animation .tree-img:nth-of-type(4) {
-      animation-name: tree-anim-4;
-      left: calc(50% + 50px);
-      top: calc(50% - 140px);
-  }
-
-  .trees-animation .tree-img:nth-of-type(5) {
-      animation-name: tree-anim-5;
-      left: calc(50% + 180px);
-      top: calc(50% + 40px);
-  }
-
-  .trees-animation .tree-img:nth-of-type(6) {
-      animation-name: tree-anim-6;
-      left: calc(50% + 380px);
-      top: calc(50% - 145px);
-  }
-
-  .trees-animation .tree-img:nth-of-type(7) {
-      animation-name: tree-anim-7;
-      left: calc(50% + 450px);
-      top: calc(50% + 80px);
-  }
-
-  .trees-animation .tree-img:nth-of-type(8) {
-      animation-name: tree-anim-8;
-      left: calc(50% - 450px);
-      top: calc(50% + 40px);
-  }
-
-  .trees-animation .tree-img:nth-of-type(9) {
-      animation-name: tree-anim-9;
-      left: calc(50% - 280px);
-      top: calc(50% - 20px);
-  }
-
-  .trees-animation .tree-img:nth-of-type(10) {
-      animation-name: tree-anim-10;
-      left: calc(50% + 0px);
-      top: calc(50% + 120px);
-  }
-
-  .trees-animation .tree-img:nth-of-type(11) {
-      animation-name: tree-anim-11;
-      left: calc(50% + 330px);
-      top: calc(50% + 60px);
-  }
-
-  .trees-animation .tree-img:nth-of-type(12) {
-      animation-name: tree-anim-12;
-      left: calc(50% - 370px);
-      top: calc(50% + 100px);
-  }
-
-  .trees-animation .tree-img:nth-of-type(13) {
-      animation-name: tree-anim-1;
-      left: calc(50% - 200px);
-      top: calc(50% + 80px);
-  }
-
-  .trees-animation .tree-img:nth-of-type(14) {
-      animation-name: tree-anim-2;
-      left: calc(50% + 430px);
-      top: calc(50% - 30px);
-  }
-
-  .trees-animation .tree-img:nth-of-type(15) {
-      animation-name: tree-anim-3;
-      left: calc(50% + 750px);
-      top: calc(50% - 120px);
-  }
-
-  .trees-animation .tree-img:nth-of-type(16) {
-      animation-name: tree-anim-4;
-      left: calc(50% + 1600px);
-      top: calc(50% - 100px);
-  }
-
-  .trees-animation .tree-img:nth-of-type(17) {
-      animation-name: tree-anim-5;
-      left: calc(50% + 1300px);
-      top: calc(50% + 80px);
-  }
-
-  .trees-animation .tree-img:nth-of-type(18) {
-      animation-name: tree-anim-6;
-      left: calc(50% + 550px);
-      top: calc(50% - 140px);
-  }
-
-  .trees-animation .tree-img:nth-of-type(19) {
-      animation-name: tree-anim-7;
-      left: calc(50% + 680px);
-      top: calc(50% + 40px);
-  }
-
-  .trees-animation .tree-img:nth-of-type(20) {
-      animation-name: tree-anim-8;
-      left: calc(50% + 880px);
-      top: calc(50% - 145px);
-  }
-
-  .trees-animation .tree-img:nth-of-type(21) {
-      animation-name: tree-anim-9;
-      left: calc(50% + 950px);
-      top: calc(50% + 80px);
-  }
-
-  .trees-animation .tree-img:nth-of-type(22) {
-      animation-name: tree-anim-10;
-      left: calc(50% + 1100px);
-      top: calc(50% + 40px);
-  }
-
-  .trees-animation .tree-img:nth-of-type(23) {
-      animation-name: tree-anim-11;
-      left: calc(50% + 500px);
-      top: calc(50% + 120px);
-  }
-
-  .trees-animation .tree-img:nth-of-type(24) {
-      animation-name: tree-anim-12;
-      left: calc(50% + 220px);
-      top: calc(50% - 20px);
-  }
-
-  .trees-animation .tree-img:nth-of-type(25) {
-      animation-name: tree-anim-1;
-      left: calc(50% + 830px);
-      top: calc(50% + 60px);
-  }
-
-  .trees-animation .tree-img:nth-of-type(26) {
-      animation-name: tree-anim-2;
-      left: calc(50% + 130px);
-      top: calc(50% + 100px);
-  }
-
-  .trees-animation .tree-img:nth-of-type(27) {
-      animation-name: tree-anim-3;
-      left: calc(50% + 1200px);
-      top: calc(50% - 130px);
-  }
-
-  .trees-animation .tree-img:nth-of-type(28) {
-      animation-name: tree-anim-4;
-      left: calc(50% + 930px);
-      top: calc(50% - 30px);
-  }
-
-  .trees-animation .tree-img:nth-of-type(29) {
-      animation-name: tree-anim-5;
-      left: calc(50% - 750px);
-      top: calc(50% - 120px);
-  }
-
-  .trees-animation .tree-img:nth-of-type(30) {
-      animation-name: tree-anim-6;
-      left: calc(50% - 1600px);
-      top: calc(50% - 100px);
-  }
-
-  .trees-animation .tree-img:nth-of-type(31) {
-      animation-name: tree-anim-7;
-      left: calc(50% - 1300px);
-      top: calc(50% + 80px);
-  }
-
-  .trees-animation .tree-img:nth-of-type(32) {
-      animation-name: tree-anim-8;
-      left: calc(50% - 550px);
-      top: calc(50% - 140px);
-  }
-
-  .trees-animation .tree-img:nth-of-type(33) {
-      animation-name: tree-anim-9;
-      left: calc(50% - 640px);
-      top: calc(50% + 40px);
-  }
-
-  .trees-animation .tree-img:nth-of-type(34) {
-      animation-name: tree-anim-10;
-      left: calc(50% - 880px);
-      top: calc(50% - 145px);
-  }
-
-  .trees-animation .tree-img:nth-of-type(35) {
-      animation-name: tree-anim-11;
-      left: calc(50% - 950px);
-      top: calc(50% + 80px);
-  }
-
-  .trees-animation .tree-img:nth-of-type(36) {
-      animation-name: tree-anim-12;
-      left: calc(50% - 1100px);
-      top: calc(50% + 40px);
-  }
-
-  .trees-animation .tree-img:nth-of-type(37) {
-      animation-name: tree-anim-1;
-      left: calc(50% - 500px);
-      top: calc(50% + 120px);
+  .editorial-header-side {
+    position: static;
   }
 
-  .trees-animation .tree-img:nth-of-type(38) {
-      animation-name: tree-anim-2;
-      left: calc(50% - 220px);
-      top: calc(50% - 20px);
+  .purpose-items-grid {
+    grid-template-columns: 1fr;
   }
 
-  .trees-animation .tree-img:nth-of-type(39) {
-      animation-name: tree-anim-3;
-      left: calc(50% - 830px);
-      top: calc(50% + 60px);
+  .partners-flex-container {
+    flex-direction: column;
+    gap: 0;
   }
 
-  .trees-animation .tree-img:nth-of-type(40) {
-      animation-name: tree-anim-4;
-      left: calc(50% - 130px);
-      top: calc(50% + 100px);
+  .cta-wrapper {
+    flex-direction: column;
   }
 
-  .trees-animation .tree-img:nth-of-type(41) {
-      animation-name: tree-anim-5;
-      left: calc(50% - 1200px);
-      top: calc(50% - 130px);
+  .cta-content-side {
+    padding: 40px 20px;
   }
 
-  .trees-animation .tree-img:nth-of-type(42) {
-      animation-name: tree-anim-6;
-      left: calc(50% - 930px);
-      top: calc(50% - 30px);
+  .tree-count-number {
+    font-size: 3rem;
   }
+}

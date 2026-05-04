@@ -88,7 +88,7 @@ a.top-image-with-text__button {
     padding: 0 33px 0 0;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .top-image-with-text {
         flex-direction: column !important;
     }

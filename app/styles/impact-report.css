@@ -59,7 +59,7 @@
 .impact-report-pillar-body p {
     margin: 0 0 13px 0;
     font-family: var(--font_family_c);
-    font-size: 13px;
+    font-size: var(--min_font_size);
     line-height: 15px;
     font-weight: 300;
     color: var(--black_color);
@@ -93,7 +93,7 @@
 .impact-report-download-block p {
     margin: 0 auto 20px;
     font-family: var(--font_family_c);
-    font-size: 13px;
+    font-size: var(--min_font_size);
     line-height: 15px;
     font-weight: 300;
     color: var(--black_color);
@@ -116,7 +116,7 @@
 }
 
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .impact-report-summary-section {
         padding: 75px 20px 70px;
     }
@@ -216,7 +216,7 @@
 .impact-report-faq-section .faq-answer-inner a {
     font-family: var(--font_family_c);
     color: var(--black_color);
-    font-size: 13px;
+    font-size: var(--min_font_size);
     line-height: 15.16px;
 }
 
@@ -225,7 +225,7 @@
     margin-bottom: 13px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
 
     .impact-report-faq-section .faq-answer-inner,
     .impact-report-faq-section .faq-answer-inner a {

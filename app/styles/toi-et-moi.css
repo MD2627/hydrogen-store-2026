@@ -22,7 +22,7 @@
     text-shadow: none;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .toi-et-moi-banner.story-craft-banner {
         height: 50vh;
     }
@@ -113,7 +113,7 @@
     margin-top: 8px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
 
     .toi-et-moi-intro p,
     .steps-intro p {
@@ -331,7 +331,7 @@
     font-size: 11.2px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .previous-designs-section .thumbs-container {
         display: none;
     }

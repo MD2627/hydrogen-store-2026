@@ -150,7 +150,7 @@
 }
 
 .feature-category {
-    font-size: 13px;
+    font-size: var(--min_font_size);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -254,7 +254,7 @@
 }
 
 .form-label {
-    font-size: 13px;
+    font-size: var(--min_font_size);
     font-weight: 600;
     font-family: var(--font_family_n);
     color: var(--black_color);

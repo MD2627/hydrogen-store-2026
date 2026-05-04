@@ -222,7 +222,7 @@ code {
     /* Button Tokens — edit these to re-style ALL buttons at once */
     --btn_padding: 11px 20px;
     --btn_radius: 0px;
-    --btn_font_size: 13px;
+    --btn_font_size: var(--min_font_size);
     --btn_font_weight: 500;
     --btn_letter_spacing: 0.12em;
     --btn_transition: all 0.4s cubic-bezier(0.2, 0, 0.2, 1);
@@ -264,7 +264,7 @@ code {
     /* Base header height */
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     :root {
         --announcement-height: 44px;
         --header-height: 80px;
@@ -286,7 +286,7 @@ code {
 /* Section Typography */
 .section-title {
     font-family: var(--font_family_a);
-    font-size: 48px;
+    font-size: 38px;
     font-weight: 300;
     text-transform: uppercase;
     line-height: 1.1;
@@ -311,11 +311,11 @@ code {
 
 @media screen and (max-width: 1024px) {
     .section-title {
-        font-size: 40px;
+        font-size: 34px;
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .section-title {
         font-size: 32px;
         margin-bottom: 16px;
@@ -758,7 +758,7 @@ body .w-700 {
     }
 }
 
-@media screen and (max-width:767px) {
+@media screen and (max-width: 768px) {
     body .f-m-48 {
         font-size: 48px;
     }

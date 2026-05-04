@@ -38,7 +38,7 @@
 }
 
 .free-resizing-content-inner p {
-    font-size: 13px;
+    font-size: var(--min_font_size);
     margin: 0 0 13px;
     color: var(--black_color);
     font-family: var(--font_family_c);
@@ -64,7 +64,7 @@
 
 .free-resizing-content-inner .section li {
     list-style: disc;
-    font-size: 13px;
+    font-size: var(--min_font_size);
     font-family: 'Diamond Ginto Normal';
     font-weight: 300;
     color: var(--black_color);
@@ -88,7 +88,7 @@
     padding-left: 40px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .free-resizing-content-inner h2 {
         font-size: 26px;
         line-height: 29px;

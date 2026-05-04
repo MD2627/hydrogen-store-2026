@@ -77,7 +77,7 @@
     font-family: "Diamond Ginto Normal";
     text-transform: none;
     letter-spacing: 0;
-    font-size: 13px;
+    font-size: var(--min_font_size);
 }
 
 .finance-logo {
@@ -121,7 +121,7 @@ a.finance-link {
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .finance-options-details .main-heading {
         font-size: 38.5px;
     }

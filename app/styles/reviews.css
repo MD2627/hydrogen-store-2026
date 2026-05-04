@@ -94,7 +94,7 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 13px;
+  font-size: var(--min_font_size);
   font-weight: 600;
   color: var(--near_black);
 }
@@ -371,7 +371,7 @@
 }
 
 /* Responsive */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .google-reviews-header {
     flex-direction: column;
     align-items: flex-start;
@@ -466,7 +466,7 @@
   background: none;
   padding: 0;
   color: var(--warning_yellow);
-  font-size: 13px;
+  font-size: var(--min_font_size);
   display: block;
   white-space: pre;
 }
@@ -524,7 +524,7 @@
 
 
 /* Responsive Adjustments */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .google-reviews-header {
     padding: 30px 20px;
   }

@@ -86,7 +86,7 @@ h3.blog-title {
     text-align: center;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .blog-grid.blog-grid-container {
         padding-bottom: 40px;
         flex-direction: column;
@@ -303,7 +303,7 @@ p.blog-content--inner-p {
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 
     .blog-images.blog-images--double {
         grid-template-columns: repeat(1, 1fr);
@@ -396,7 +396,7 @@ a.you-may-also-like__card:hover img {
 h3.you-may-also-like__card-title {
     color: var(--black_color);
     margin: 13px 0 0;
-    font-size: 13px;
+    font-size: var(--min_font_size);
     font-family: var(--font_family_n);
     display: flex;
     align-items: center;
@@ -506,7 +506,7 @@ body:has(.article-wrapper) .scroll-progress {
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .you-may-also-like__card-title {
         font-size: 15px;
     }

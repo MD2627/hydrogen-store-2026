@@ -335,13 +335,13 @@ main.contact .contact-radio-group.centre-stone-type {
   align-items: center;
   overflow: hidden;
   font-weight: 700;
-  font-size: 13px;
+  font-size: var(--min_font_size);
   gap: 10px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   width: 100%;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 768px) {
     font-size: 11px;
   }
 }
@@ -1259,7 +1259,7 @@ main.blogs-moissanite-guidance-engagement-ring-care-guide article.blog-article:a
   display: none;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 
   main.blogs-moissanite-guidance-engagement-ring-care-guide article.blog-article.limit-width {
     padding: 0 0 10px 0;
@@ -1298,7 +1298,7 @@ main.blogs-moissanite-guidance-engagement-ring-care-guide article.blog-article:a
   background: var(--body_color);
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .reviews-section-meta--home.reviews-section-meta--home .swiper-horizontal {
     padding: 0;
   }

@@ -34,7 +34,7 @@
 }
 
 .terms-and-conditions-details p {
-    font-size: 13px;
+    font-size: var(--min_font_size);
     line-height: 1.2;
 }
 
@@ -52,7 +52,7 @@
     margin-bottom: 0;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .terms-and-conditions .main-heading {
         font-size: 31px;
     }

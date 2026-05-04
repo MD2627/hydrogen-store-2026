@@ -30,7 +30,7 @@
     line-height: 17.94px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .story-craft-banner.shipping-banner {
         height: 50vh;
     }
@@ -80,7 +80,7 @@
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .toc-section h2 {
         font-size: 26.35px;
         line-height: 29px;
@@ -145,7 +145,7 @@
     line-height: 18px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .shipping-info-grid {
         flex-direction: column;
     }
@@ -317,7 +317,7 @@
     margin-bottom: 0;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .showroom-pickup-section h2 {
         font-size: 26.35px;
         line-height: 29px;
@@ -372,7 +372,7 @@
     max-width: 150px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .secure-discreet-section {
         padding: 50px 20px;
     }
@@ -442,7 +442,7 @@
 
 
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
 
     .safe-hands-section h2,
     .safe-hands-card h3 {
@@ -552,7 +552,7 @@
     pointer-events: none;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .import-duties-content {
         flex-direction: column;
         padding-bottom: 40px;

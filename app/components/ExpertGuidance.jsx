@@ -18,28 +18,29 @@ export function ExpertGuidance({ articles }) {
         }
     }, []);
 
-    const scroll = (direction) => {
-        if (scrollRef.current) {
-            const container = scrollRef.current;
-            const scrollAmount = container.clientWidth * 0.8;
-            if (direction === 'left') {
-                container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-            } else {
-                container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-            }
-        }
-    };
+    // const scroll = (direction) => {
+    //     if (scrollRef.current) {
+    //         const container = scrollRef.current;
+    //         const scrollAmount = container.clientWidth * 0.8;
+    //         if (direction === 'left') {
+    //             container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    //         } else {
+    //             container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    //         }
+    //     }
+    // };
 
     if (!articles || articles.length === 0) return null;
 
     return (
         <section className="expert-guidance-section">
-            <div className="container">
+            <div className="page-width">
                 <div className="expert-header">
-                    <h2>Expert Guidance</h2>
-                    <div className="border-line"></div>
-                    <p>Empowering you with insights for selecting and acquiring the ideal ring.</p>
+                    <h2 className='section-title'>Expert Advice</h2>
+                    {/* <div className="border-line"></div> */}
+                    <p className='sb-description'>Helping you choose and purchase the perfect ring with confidence.</p>
                 </div>
+
 
                 {!isTablet ? (
                     <div className="expert-grid">
@@ -49,17 +50,17 @@ export function ExpertGuidance({ articles }) {
                                     <img src={article.image} alt={article.title} />
                                 </div>
                                 <div className="card-content">
-                                    <h3>{article.title}</h3>
-                                    <div className="arrow-icon">
+                                    <h3 className='f-12 f-m-16 ff-c w-300 l-h-1 black-color'>{article.title}</h3>
+                                    <span className="arrow">
                                         <svg viewBox="0 0 16.933 16.933" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path style={{ fill: 'none', stroke: '#000', strokeWidth: '1.05831', strokeLinecap: 'round', strokeLinejoin: 'round', strokeMiterlimit: '4', strokeDasharray: 'none', strokeOpacity: '1' }} d="M15.875 8.466H1.058M5.292 4.233 1.058 8.466 5.292 12.7" className="stroke" transform="rotate(180 8.466 8.466)"></path></svg>
-                                    </div>
+                                    </span>
                                 </div>
                             </Link>
                         ))}
                     </div>
                 ) : (
                     <div className="expert-slider" style={{ position: 'relative' }}>
-                        <button
+                        {/* <button
                             className="custom-prev-arrow"
                             onClick={() => scroll('left')}
                             aria-label="Previous slide"
@@ -72,9 +73,9 @@ export function ExpertGuidance({ articles }) {
                             aria-label="Next slide"
                         >
                             <svg viewBox="0 0 16.933 16.933" width="16" height="16"><path d="m5.292 14.816 6.35-6.35-6.35-6.35" fill="none" stroke="currentColor" strokeWidth="1.05831" strokeLinecap="round" strokeLinejoin="round" /></svg>
-                        </button>
+                        </button> */}
 
-                        <div className="expert-scroll-container" ref={scrollRef}>
+                        <div className="expert-scroll-container">
                             {articles.map((article, index) => (
                                 <div key={index} className="expert-slide-item">
                                     <Link to={article.link} className="expert-card">
@@ -82,7 +83,7 @@ export function ExpertGuidance({ articles }) {
                                             <img src={article.image} alt={article.title} />
                                         </div>
                                         <div className="card-content">
-                                            <h3>{article.title}</h3>
+                                            <h3 className='f-12 f-m-16 ff-c w-300 l-h-1 black-color'>{article.title}</h3>
                                             <div className="arrow-icon">
                                                 <svg viewBox="0 0 16.933 16.933" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path style={{ fill: 'none', stroke: '#000', strokeWidth: '1.05831', strokeLinecap: 'round', strokeLinejoin: 'round', strokeMiterlimit: '4', strokeDasharray: 'none', strokeOpacity: '1' }} d="M15.875 8.466H1.058M5.292 4.233 1.058 8.466 5.292 12.7" className="stroke" transform="rotate(180 8.466 8.466)"></path></svg>
                                             </div>

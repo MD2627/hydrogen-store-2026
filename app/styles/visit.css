@@ -117,7 +117,7 @@ h2.our-locations-section-title {
     display: inline-block;
     border-bottom: 1px solid currentColor;
     margin-top: 5px;
-    font-size: 13px;
+    font-size: var(--min_font_size);
     font-weight: 500;
 }
 
@@ -235,7 +235,7 @@ h2.our-locations-section-title {
 }
 
 .our-locations-section .mobile-hours p {
-    font-size: 13px;
+    font-size: var(--min_font_size);
     margin: 6px 0;
     font-weight: 300;
 }
@@ -654,7 +654,7 @@ h2.our-locations-section-title {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 13px;
+    font-size: var(--min_font_size);
     transition: all 0.2s;
     white-space: nowrap;
 }

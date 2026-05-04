@@ -66,10 +66,10 @@ export function CollectionBanner({ collection }) {
     if (!bannerImage && !bannerVideo) {
         return (
             <div className='page-width'>
-            <div className="collection-header-simple">
-                <h1 className='f-16 f-m-28 ff-c w-400 l-h-300'>{title}</h1>
-                {description && <p className="collection-description ff-c f-16 f-m-12 w-400 l-h-300">{description}</p>}
-            </div>
+                <div className="collection-header-simple">
+                    <h1 className='f-16 f-m-28 ff-c w-400 l-h-300'>{title}</h1>
+                    {description && <p className="collection-description ff-c f-16 f-m-12 w-400 l-h-300">{description}</p>}
+                </div>
             </div>
         );
     }
@@ -106,10 +106,10 @@ export function CollectionBanner({ collection }) {
                 )}
             </div>
             <div className="collection-header-content">
-                <h1 className='f-40 f-m-28 ff-c w-400 l-h-300 f-m-38'>{title}</h1>
+                <h1 className='page-banner-title'>{title}</h1>
                 {
                     description && (
-                        <p className="collection-description ff-c f-16 f-m-12 w-400 l-h-300">{description}</p>
+                        <p className="sb-description">{description}</p>
                     )
                 }
             </div>

@@ -36,7 +36,7 @@
 }
 
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .story-craft-banner.diamond-curated-banner {
         height: 50vh;
     }
@@ -83,7 +83,7 @@
     font-family: var(--font_family_a);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .diamond-curated-title-rich-text {
         font-size: 26.35px;
         line-height: 28px;
@@ -158,7 +158,7 @@ p.curation-process-card-text {
     font-family: var(--font_family_c);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .curation-process-row {
         flex-direction: column;
     }
@@ -230,7 +230,7 @@ img.our-gemstones-image.mobile-image {
 }
 
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     img.our-gemstones-image.mobile-image {
         display: block;
     }
@@ -274,7 +274,7 @@ img.our-gemstones-image.mobile-image {
 
 
 .diamond-curated-page .free-resizing-content-inner .section h3 {
-    font-size: 13px;
+    font-size: var(--min_font_size);
     color: var(--black_color);
     font-family: var(--font_family_n);
     margin-top: 0;
@@ -354,7 +354,7 @@ img.our-gemstones-image.mobile-image {
     border: .5px solid gray;
     border-collapse: collapse;
     padding: 10px 10px 10px 20px;
-    font-size: 13px;
+    font-size: var(--min_font_size);
     font-family: 'Diamond Ginto Normal';
     font-weight: 300;
     color: var(--black_color);
@@ -394,7 +394,7 @@ img.our-gemstones-image.mobile-image {
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .moissanite-growing-process {
         flex-direction: column;
         gap: 13px;
@@ -567,7 +567,7 @@ h3.certification-brand {
 
 span.certification-label {
     margin: 0;
-    font-size: 13px;
+    font-size: var(--min_font_size);
     font-weight: 300;
     display: block;
     font-family: var(--font_family_c);
@@ -646,7 +646,7 @@ h2.certification-title {
     border: .5px solid white;
     width: 300px;
     padding: 20px;
-    font-size: 13px;
+    font-size: var(--min_font_size);
     font-weight: 300;
     color: var(--white_color);
     margin: 25px auto 0;

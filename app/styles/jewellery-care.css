@@ -41,7 +41,7 @@
     line-height: 17.94px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .jewellery-care-page .jewellery-care-banner {
         height: 50vh;
     }
@@ -98,7 +98,7 @@
 
 .jewellery-promise-intro.jewellery-care-content p {
     font-family: var(--font_family_c);
-    font-size: 13px;
+    font-size: var(--min_font_size);
     line-height: 15.6px;
 }
 
@@ -111,7 +111,7 @@
     margin-bottom: 14px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .jewellery-care-content h2 {
         font-size: 26px;
     }
@@ -212,7 +212,7 @@
 }
 
 .ring-care-faqs .faq-header p {
-    font-size: 13px;
+    font-size: var(--min_font_size);
     line-height: 16px;
     opacity: 1;
     max-width: 500px;
@@ -259,7 +259,7 @@
     transform: scaleX(1);
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .ring-care-faqs .faq-header h2 {
         font-size: 26.35px;
         line-height: 29px;
@@ -304,7 +304,7 @@
     border: none;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .our-jewellers-section {
         padding: 60px 0;
     }
@@ -425,7 +425,7 @@
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .when-to-remove-section .section-header h2 {
         font-size: 26.35px;
         line-height: 29px;
@@ -492,7 +492,7 @@
 }
 
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .shop-by-style.shop--jewellery-care {
         padding: 80px 0;
     }
@@ -525,7 +525,7 @@
     padding-top: 40px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .jewellery-care-faq-section .faq-answer-inner {
         line-height: 22px;
     }

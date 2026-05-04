@@ -61,7 +61,7 @@ const SIZE_DATA = [
 export function RingSizeConverter() {
     const [activeTab, setActiveTab] = useState('convert');
     const [fromRegion, setFromRegion] = useState('AUS');
-    const [toRegion, setToRegion] = useState('AUS');
+    const [toRegion, setToRegion] = useState('US');
     const [selectedSizeIndex, setSelectedSizeIndex] = useState(null);
 
     const getKey = (region) => {
@@ -77,55 +77,69 @@ export function RingSizeConverter() {
 
     const fromKey = getKey(fromRegion);
     const toKey = getKey(toRegion);
-
     const convertedSize = selectedSizeIndex !== null ? SIZE_DATA[selectedSizeIndex][toKey] : '';
 
     return (
         <section className="ring-size-converter-section">
             <div className="page-width">
-                <div className="converter-tabs-container ff-c f-13 w-400 black-color">
+
+                {/* ── Tab Switcher ── */}
+                <div className="rsc-tab-switcher">
                     <button
-                        className={`converter-tab ${activeTab === 'convert' ? 'active' : ''}`}
+                        id="rsc-tab-convert"
+                        className={`rsc-tab-btn ${activeTab === 'convert' ? 'active' : ''}`}
                         onClick={() => setActiveTab('convert')}
                     >
-                        CONVERT RING SIZE
+                        <span className="rsc-tab-icon">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><path d="M8 12h8M12 8l4 4-4 4" /></svg>
+                        </span>
+                        Convert Ring Size
                     </button>
                     <button
-                        className={`converter-tab ${activeTab === 'request' ? 'active' : ''}`}
+                        id="rsc-tab-request"
+                        className={`rsc-tab-btn ${activeTab === 'request' ? 'active' : ''}`}
                         onClick={() => setActiveTab('request')}
                     >
-                        REQUEST FREE RING SIZER
+                        <span className="rsc-tab-icon">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M3 9h18M9 21V9" /></svg>
+                        </span>
+                        Free Ring Sizer
                     </button>
                 </div>
 
-                <div className="mobile-tabs-container">
+                {/* ── Mobile Select ── */}
+                <div className="rsc-mobile-select">
                     <div className="select-wrapper">
                         <select
                             className="ff-c f-13 w-400 accent-color"
                             value={activeTab}
                             onChange={(e) => setActiveTab(e.target.value)}
                         >
-                            <option value="convert">CONVERT RING SIZE</option>
-                            <option value="request">REQUEST FREE RING SIZER</option>
+                            <option value="convert">Convert Ring Size</option>
+                            <option value="request">Free Ring Sizer</option>
                         </select>
                     </div>
                 </div>
 
-                <div className="converter-content">
+                {/* ── Content ── */}
+                <div className="rsc-content">
                     {activeTab === 'convert' ? (
-                        <>
-                            <div className="converter-header">
-                                <h2 className='section-title'>Convert Ring Size</h2>
-                                <div className="border-line"></div>
-                                <p className='sb-description'>Convert your<br /> international ring size.</p>
-                            </div>
 
-                            <div className="converter-grid-layout">
-                                <div className="from-column">
-                                    <label className="region-label ff-c f-13 w-300 black-color">YOUR SIZE</label>
+                        <div className="rsc-convert-layout">
+
+                            {/* Left: heading + from selector + size grid */}
+                            <div className="rsc-left-panel">
+                                <div className="rsc-panel-header">
+                                    <h2 className="section-title">Convert Ring Size</h2>
+                                    <div className="border-line"></div>
+                                    <p className="sb-description">Select your size below to instantly see your international equivalent.</p>
+                                </div>
+
+                                <div className="rsc-region-row">
+                                    <label className="rsc-region-label ff-c f-11 w-600">YOUR REGION</label>
                                     <div className="select-wrapper">
                                         <select
-                                            className='ff-c f-13 w-400 accent-color'
+                                            className="ff-c f-13 w-400 accent-color"
                                             value={fromRegion}
                                             onChange={(e) => setFromRegion(e.target.value)}
                                         >
@@ -134,24 +148,29 @@ export function RingSizeConverter() {
                                             ))}
                                         </select>
                                     </div>
-
-                                    <div className="size-buttons-grid ff-c f-13 w-400">
-                                        {SIZE_DATA.map((item, index) => (
-                                            <button
-                                                key={index}
-                                                className={`size-btn ${selectedSizeIndex === index ? 'active' : ''}`}
-                                                onClick={() => setSelectedSizeIndex(index)}
-                                            >
-                                                {item[fromKey]}
-                                            </button>
-                                        ))}
-                                    </div>
                                 </div>
 
-                                <div className="to-column">
-                                    <label className="region-label ff-c f-13 w-300 black-color">CONVERT SIZE TO</label>
-                                    <div className="select-wrapper">
-                                        <select className='ff-c f-13 w-400 accent-color'
+                                <div className="rsc-size-grid ff-c f-13 w-400">
+                                    {SIZE_DATA.map((item, index) => (
+                                        <button
+                                            key={index}
+                                            id={`rsc-size-${index}`}
+                                            className={`rsc-size-btn ${selectedSizeIndex === index ? 'active' : ''}`}
+                                            onClick={() => setSelectedSizeIndex(index)}
+                                        >
+                                            {item[fromKey]}
+                                        </button>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {/* Right: convert-to selector + result */}
+                            <div className="rsc-right-panel">
+                                <div className="rsc-sticky-result">
+                                    <p className="rsc-result-eyebrow ff-c f-11 w-600">CONVERT TO</p>
+                                    <div className="select-wrapper rsc-to-select">
+                                        <select
+                                            className="ff-c f-13 w-400 accent-color"
                                             value={toRegion}
                                             onChange={(e) => setToRegion(e.target.value)}
                                         >
@@ -161,31 +180,91 @@ export function RingSizeConverter() {
                                         </select>
                                     </div>
 
-                                    <div className="result-display">
-                                        <div className="result-ring-circle">
-                                            {convertedSize && (
-                                                <span className="result-text ff-c f-16 w-700 black-color">{convertedSize}</span>
-                                            )}
+                                    <div className="rsc-result-card">
+                                        <div className="rsc-ring-visual">
+                                            <div className="rsc-ring-outer">
+                                                <div className="rsc-ring-inner">
+                                                    {convertedSize ? (
+                                                        <span className="rsc-result-value ff-c w-700">{convertedSize}</span>
+                                                    ) : (
+                                                        <span className="rsc-result-placeholder">—</span>
+                                                    )}
+                                                </div>
+                                            </div>
                                         </div>
+                                        <p className="rsc-result-label ff-c f-11 w-500">
+                                            {convertedSize
+                                                ? `Your size in ${REGIONS.find(r => r.value === toRegion)?.label}`
+                                                : 'Select a size on the left'}
+                                        </p>
                                     </div>
-                                </div>
-                            </div>
-                        </>
-                    ) : (
-                        <div className="request-sizer-content">
-                            <div className="converter-header">
-                                <h2 className='section-title'>Request Free Ring Sizing Kit</h2>
-                                <div className="border-line"></div>
-                                <p className='sb-description'>Don’t know your ring size? Not a problem at all. Fill out this form and we’ll send you a<br /> FREE sizing kit so you can measure from home.</p>
-                            </div>
 
-                            <div className="request-sizer-form">
-                                <NewContactBig />
+                                    {/* <div className="rsc-hint-box">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" /></svg>
+                                        <p className="ff-c f-11 w-400">Sizes are approximate. We recommend trying a physical ring sizer for best accuracy.</p>
+                                    </div> */}
+                                </div>
                             </div>
 
                         </div>
+
+                    ) : (
+
+                        <div className="rsc-sizer-layout">
+
+                            {/* Left: Info panel */}
+                            <div className="rsc-sizer-info">
+                                <div className="rsc-sizer-icon-wrap">
+                                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                    </svg>
+                                </div>
+                                <h2 className="rsc-sizer-title section-title">Free Ring<br/>Sizing Kit</h2>
+                                <div className="border-line rsc-sizer-line"></div>
+                                <p className="rsc-sizer-desc sb-description">
+                                    Don't know your ring size? No problem. Fill out the form and we'll post you a free sizing kit so you can measure comfortably at home.
+                                </p>
+                                <ul className="rsc-sizer-benefits">
+                                    <li>
+                                        <span className="rsc-benefit-icon">
+                                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                        </span>
+                                        Completely free — no strings attached
+                                    </li>
+                                    <li>
+                                        <span className="rsc-benefit-icon">
+                                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                        </span>
+                                        Ships to Australia, US, UK & NZ
+                                    </li>
+                                    <li>
+                                        <span className="rsc-benefit-icon">
+                                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                        </span>
+                                        Measure from the comfort of home
+                                    </li>
+                                    <li>
+                                        <span className="rsc-benefit-icon">
+                                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                        </span>
+                                        Expert support included
+                                    </li>
+                                </ul>
+                            </div>
+
+                            {/* Right: Form card */}
+                            <div className="rsc-sizer-form-wrap">
+                                <div className="rsc-sizer-form-card">
+                                    <p className="rsc-sizer-form-eyebrow ff-c f-11 w-600">YOUR DETAILS</p>
+                                    <NewContactBig />
+                                </div>
+                            </div>
+
+                        </div>
+
                     )}
                 </div>
+
             </div>
         </section>
     );

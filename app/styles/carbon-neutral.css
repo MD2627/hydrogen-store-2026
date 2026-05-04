@@ -8,7 +8,7 @@ body:has(main.carbon-neutral) {
 }
 
 .story-craft-banner.carbon-neutral-banner .story-craft-content p {
-    font-size: 13px;
+    font-size: var(--min_font_size);
     margin: 12px 0 7px;
     text-align: center;
     font-family: var(--font_family_n);
@@ -32,7 +32,7 @@ body:has(main.carbon-neutral) {
     text-align: center;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .story-craft-banner.carbon-neutral-banner {
         height: 80vh;
     }
@@ -108,7 +108,7 @@ body:has(main.carbon-neutral) {
 
 .discovery-banner-content p {
     font-family: var(--font_family_c);
-    font-size: 13px;
+    font-size: var(--min_font_size);
     margin: 0 0 19.5px;
     color: var(--black_color);
 }
@@ -117,7 +117,7 @@ body:has(main.carbon-neutral) {
     display: inline-block;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .carbon-neutral-content-inner-banner {
         height: 50vh;
         padding-bottom: 40px;
@@ -225,7 +225,7 @@ body:has(main.carbon-neutral) {
 }
 
 .vertical-story .slide-content p {
-    font-size: 13px;
+    font-size: var(--min_font_size);
     margin: 0 0 13px 0;
     font-family: 'Diamond Ginto Normal';
     font-weight: 300;
@@ -382,7 +382,7 @@ body:has(main.carbon-neutral) {
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .vertical-story .slide[data-index="3"] .slide-content {
         flex-direction: column;
         max-width: 345px;

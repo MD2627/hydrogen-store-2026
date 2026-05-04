@@ -81,7 +81,7 @@
   gap: 10px;
   margin-top: 15px;
   border-radius: 4px;
-  font-size: 13px;
+  font-size: var(--min_font_size);
   line-height: 1.4;
   text-align: left;
 }
@@ -120,7 +120,7 @@
   cursor: not-allowed;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .newsletter-form {
     flex-direction: column;
   }

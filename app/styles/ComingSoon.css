@@ -24,7 +24,7 @@
     opacity: 0.9;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .story-craft-banner.coming-soon-banner {
         height: 60vh;
     }
@@ -124,7 +124,7 @@
 }
 
 .coming-soon-form-section span.country-code {
-    font-size: 13px;
+    font-size: var(--min_font_size);
     font-weight: 300;
     font-family: var(--font_family_c);
 }
@@ -201,7 +201,7 @@ p.recaptcha-text-coming {
     gap: 5px;
     padding: 8px 5px;
     overflow-y: auto;
-    font-size: 13px;
+    font-size: var(--min_font_size);
     font-weight: 300;
     font-family: var(--font_family_n);
 }
@@ -215,7 +215,7 @@ p.recaptcha-text-coming {
     padding: 0 25px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .coming-soon-form-header.text-center {
         padding: 0 25px;
     }
@@ -304,7 +304,7 @@ p.recaptcha-text-coming {
     justify-content: center;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .perks-grid {
         grid-template-columns: 1fr;
         gap: 30px;
@@ -359,7 +359,7 @@ section.city-map-section {
     min-height: 560px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     section.city-map-section {
         padding: 60px 20px;
     }
@@ -417,7 +417,7 @@ section.city-map-section {
 }
 
 header.shop-by-style-header div {
-    /* font-size: 13px;
+    /* font-size: var(--min_font_size);
     font-weight: 300;
     font-family: var(--font_family_c);
     line-height: 15.6px;
@@ -458,7 +458,7 @@ header.shop-by-style-header div {
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
 
 
     .coming-soon-city .style-card:not(.shop--shop-by-category):not(.shop--section-gallery) {
@@ -495,7 +495,7 @@ header.shop-by-style-header div {
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 13px;
+    font-size: var(--min_font_size);
     font-weight: 300;
     line-height: 1.4;
     padding: 10px 16px;
@@ -635,7 +635,7 @@ button.popup-close {
     display: none;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .image-banner-popup {
         padding: 0 20px;
     }

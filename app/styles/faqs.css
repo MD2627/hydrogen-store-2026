@@ -59,7 +59,7 @@ p.main-sub-heading {
 }
 
 .faq-section .faq-answer-inner {
-    font-size: 13px;
+    font-size: var(--min_font_size);
     padding: 0 13px 16px 25px;
 }
 
@@ -122,7 +122,7 @@ p.main-sub-heading {
     transform: scaleX(1);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .faq-page.page-width .shop-by-style-header {
         max-width: 100%;
     }

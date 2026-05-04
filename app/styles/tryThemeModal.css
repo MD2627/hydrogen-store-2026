@@ -37,11 +37,11 @@
 .form-group {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 5px;
 }
 
 .form-label {
-    font-size: 13px;
+    font-size: var(--min_font_size);
     font-weight: 600;
     font-family: var(--font_family_n);
     color: var(--black_color);

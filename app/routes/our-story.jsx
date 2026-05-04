@@ -24,31 +24,30 @@ const OUR_STORY_PAGE_DATA = {
   },
 
   story: {
-    title: 'The Diamond Jewellery Story',
+    title: 'Our Diamond Jewellery Story',
     introQuote:
-      `"In 2018, as I hunted for the perfect engagement ring, I could not have imagined where that search would lead. Seven years on, I have the privilege of running a rare kind of thriving business – one with a purpose beyond increasing profits. Diamond Jewellery is committed to creating a better world – by delivering exceptional experiences, empowering people, and protecting the planet. I am proud that we can be part of our clients' joyous moments, while also being a force for positive change." - Jordan Diamond, Founder.`,
+      `"In 2018, while searching for the perfect engagement ring, I never imagined where that journey would lead. Today, I have the privilege of building a business driven by purpose—one that goes beyond profit. At Diamond Jewellery, we are dedicated to delivering exceptional experiences, empowering people, and making a positive impact on the world. Being part of our clients’ most meaningful moments while creating change is something I’m truly proud of." – Jordan Diamond, Founder.`,
 
     topParagraphs: [
-      "Diamond Jewellery grew from a real-life love story. Searching for an engagement ring for his now-wife, Jordan Diamond was surprised to discover the exorbitant prices and questionable origins of mined diamonds.",
-      "After failing to find a suitable alternative in Melbourne's jewellery stores, he turned to the internet. Stumbling across moissanite and laboratory-grown diamonds, Jordan purchased his first moissanite gemstone from an overseas retailer and, together with a local jeweller, set the gemstone into a custom-designed setting.",
-      "Equipped with his first custom ring and a very happy fiancee, he soon realised that many other couples would benefit from this same process…and so, Diamond Jewellery was born.",
+      "Diamond Jewellery was born from a personal love story. While searching for an engagement ring for his now-wife, Jordan Diamond was struck by the high prices and unclear origins of traditionally mined diamonds.",
+      "Unable to find the right option in local jewellery stores, he explored alternatives online. Discovering moissanite and lab-grown diamonds, he purchased his first stone and worked with a local jeweller to create a custom-designed ring.",
+      "With a beautifully crafted ring and a delighted fiancée, Jordan realised that many other couples could benefit from a more transparent and thoughtful approach to buying jewellery—this idea became the foundation of Diamond Jewellery.",
     ],
 
     founder: {
       image: {
-        src:
-          'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Jordan_Money_Magazine0356-Enhanced-NR_900x900.png?v=1751008208',
+        src: 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Jordan_Money_Magazine0356-Enhanced-NR_900x900.png?v=1751008208',
         alt: 'Jordan Diamond',
       },
       quote:
-        `"Diamond Jewellery was founded with the goal of bringing accessible and transparent information to the jewellery industry, allowing people to better understand all the options available when purchasing engagement rings and wedding bands."`,
-      name: '– Jordan Diamond',
+        `"Diamond Jewellery was created to bring clarity and transparency to the jewellery industry, helping people understand their options and make confident decisions when choosing engagement rings and wedding bands."`,
+      name: '– ABCD',
     },
 
     bottomParagraphs: [
-      "Today, Diamond Jewellery is one of the world's leading engagement ring retailers specialising in lab grown diamonds, lab grown sapphires, and moissanite set in designs made for a lifetime.",
-      "Over 10,000 couples from all over the world have trusted Diamond Jewellery with the creation of their engagement rings, wedding bands, and fine jewellery - all expertly and responsibly crafted.",
-      "With showrooms in major cities and personalised virtual appointments available anywhere with an internet connection, Diamond Jewellery is where love grows.",
+      "Today, Diamond Jewellery is a leading name in engagement rings, specialising in lab-grown diamonds, lab-grown sapphires, and moissanite—crafted into designs made to last a lifetime.",
+      "More than 10,000 couples around the world have trusted Diamond Jewellery to create their engagement rings, wedding bands, and fine jewellery—each piece crafted with care and responsibility.",
+      "With showrooms in major cities and personalised virtual appointments available worldwide, Diamond Jewellery continues to make meaningful moments even more special.",
     ],
   },
 
@@ -139,35 +138,48 @@ export default function OurStory() {
       {/* Banner Section */}
       <StoryCraftBanner {...banner} />
 
-      {/* The div Jewellery Story Section */}
-      <section className="story-section">
+      {/* The Diamond Jewellery Story Section */}
+      <section className="story-section-minimal">
         <div className="page-width">
-          <header className="shop-by-style-header">
-            <h2>{story.title}</h2>
+          <header className="story-minimal-header">
+            <h2 className="section-title">{story.title}</h2>
           </header>
 
-          <div className="section-content-top">
-            <p className="top-content-high-light">{story.introQuote}</p>
-            {story.topParagraphs.map((p, i) => (
-              <p key={i}>{p}</p>
-            ))}
-          </div>
+          <div className="story-narrative-split">
+            <div className="story-media-column">
+              <img
+                src={story.founder.image.src}
+                alt={story.founder.image.alt}
+                className="minimal-founder-image"
+              />
+            </div>
 
-          <div className="left-image-person">
-            <img
-              src={story.founder.image.src}
-              alt={story.founder.image.alt}
-              className="story-image"
-            />
-            <div className="my-detail">
-              <p>{story.founder.quote}</p>
-              <p className="my-name-is">{story.founder.name}</p>
+            <div className="story-text-column">
+              <p className="minimal-intro-text">{story.introQuote}</p>
+              <div className="minimal-paragraphs">
+                {story.topParagraphs.map((p, i) => (
+                  <p key={i} className="sb-description">{p}</p>
+                ))}
+              </div>
+              <div className="minimal-founder-quote-section">
+                <div className="quote-container">
+                  <p className="main-quote-text">{story.founder.quote}</p>
+                  <p className="quote-author">{story.founder.name}</p>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div className="bottom-description">
+          {/* <div className="minimal-founder-quote-section">
+            <div className="quote-container">
+              <p className="main-quote-text">{story.founder.quote}</p>
+              <p className="quote-author">{story.founder.name}</p>
+            </div>
+          </div> */}
+
+          <div className="minimal-bottom-content">
             {story.bottomParagraphs.map((p, i) => (
-              <p key={i}>{p}</p>
+              <p key={i} className="sb-description">{p}</p>
             ))}
           </div>
         </div>
@@ -179,18 +191,18 @@ export default function OurStory() {
           <div className="purpose-mission-content">
 
             <div className="purpose">
-              <header className="shop-by-style-header">
-                <h2>{purposeMission.purpose.title}</h2>
-                <p>{purposeMission.purpose.text}</p>
+              <header className="purpose-mission-header">
+                <h2 className='section-title'>{purposeMission.purpose.title}</h2>
+                <p className='sb-description'>{purposeMission.purpose.text}</p>
               </header>
             </div>
 
             <div className="mission">
-              <header className="shop-by-style-header">
+              <header className="mission-header">
                 <h2>{purposeMission.mission.title}</h2>
                 <div className="header-flex-content">
                   {purposeMission.mission.paragraphs.map((p, i) => (
-                    <p key={i}>{p}</p>
+                    <p className='sb-description' key={i}>{p}</p>
                   ))}
                 </div>
               </header>
@@ -254,21 +266,21 @@ export default function OurStory() {
                 centeredSlidesBounds
 
                 /* MOBILE FIRST */
-                spaceBetween={39}
+                spaceBetween={20}
                 slidesPerView={1.25}
-                centeredSlides
+                centeredSlides={true}
 
                 breakpoints={{
                   768: {
                     slidesPerView: 2.5,
                     spaceBetween: 24,
-                    centeredSlides: false,
+                    centeredSlides: true,
                     loop: false,
                   },
                   1024: {
                     slidesPerView: 4.2,
                     spaceBetween: 46,
-                    centeredSlides: false,
+                    centeredSlides: true,
                     loop: false,
                   },
                 }}
@@ -280,7 +292,7 @@ export default function OurStory() {
                   <SwiperSlide key={i}>
                     <div className="item image-text-item">
                       <img src={item.image} alt={item.title} />
-                      <h2 className="f-18 ff-a w-300">{item.title}</h2>
+                      <h3 className="f-18 ff-a w-300">{item.title}</h3>
                       <p className="f-13 ff-c w-300">{item.text}</p>
                     </div>
                   </SwiperSlide>
@@ -314,9 +326,9 @@ export default function OurStory() {
         </div>
 
         <div className="need-help-content">
-          <div className="shop-by-style-header">
-            <h2>{NEED_HELP_BANNER_DATA.content.title}</h2>
-            <p>{NEED_HELP_BANNER_DATA.content.text}</p>
+          <div className="need-help-banner-header">
+            <h2 className='section-title'>{NEED_HELP_BANNER_DATA.content.title}</h2>
+            <p className='sb-description'>{NEED_HELP_BANNER_DATA.content.text}</p>
           </div>
 
 
@@ -330,15 +342,23 @@ export default function OurStory() {
         </div>
       </section>
 
-      <div className="newsletter-touch">
-        <div className="two-parts-form">
-          <div className="shop-by-style-header">
-            <h2>Stay in Touch</h2>
-            <p>The latest on rings, diamonds, and more straight to your inbox.</p>
+      <section className="newsletter-touch">
+        <div className="newsletter-container page-width">
+          <div className="newsletter-inner">
+            <div className="newsletter-content">
+              <span className="section-subtitle">Newsletter</span>
+              <h2 className="section-title">Stay in Touch</h2>
+              <p className="sb-description">
+                The latest on rings, diamonds, and more straight to your inbox.
+                Be the first to hear about new collections and exclusive offers.
+              </p>
+            </div>
+            <div className="newsletter-form-wrapper">
+              <NewsletterForm />
+            </div>
           </div>
-          <NewsletterForm />
         </div>
-      </div>
+      </section>
 
 
       {/* Footer UVPs */}

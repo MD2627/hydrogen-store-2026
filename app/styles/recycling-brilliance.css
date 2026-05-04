@@ -30,7 +30,7 @@
     background: linear-gradient(var(--transparent), rgba(var(--pure_black_rgb), 0.36) 33%, rgba(var(--pure_black_rgb), 0.45), rgba(var(--pure_black_rgb), 0.36) 67%, var(--transparent));
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .story-craft-banner.recycling-brilliance {
         height: 50vh;
     }
@@ -64,7 +64,7 @@
     font-family: var(--font_family_c);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .rich-text-section {
         padding: 50px 20px 40px;
     }
@@ -104,7 +104,7 @@
     transform: translate(-50%, -50%);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .story-craft-banner--recycling-brilliance .story-craft-content h2 {
         font-size: 45px;
         line-height: 49.445px;
@@ -158,7 +158,7 @@
     inset: 0;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .circular-economy-section h2 {
         font-size: 26.35px;
         line-height: 29px;
@@ -222,10 +222,10 @@
 }
 
 .recycling-page .faq-answer-inner p {
-    font-size: 13px;
+    font-size: var(--min_font_size);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .recycling-page .faq-answer-inner p {
         font-size: 15px;
     }
@@ -331,7 +331,7 @@
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .recycling-process-header h2 {
         font-size: 26.35px;
         line-height: 29px;

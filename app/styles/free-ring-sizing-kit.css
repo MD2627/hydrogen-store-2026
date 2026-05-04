@@ -71,7 +71,7 @@
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .inner-contact-big-image {
         gap: 30px;
         flex-direction: column;
@@ -307,7 +307,7 @@
     font-weight: 900;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .inner-contact-big-image .form-group.checkbox-group-wrapper {
         gap: 25px;
         flex-direction: column;

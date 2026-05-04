@@ -1,77 +1,69 @@
 import { useState } from 'react';
 import { Link } from 'react-router';
 
-function ReviewCard({ review }) {
+function ReviewCard({ review, index }) {
     const [isExpanded, setIsExpanded] = useState(false);
-
-    // Some reviews can be very long.
-    const isLongText = review.text.length > 50;
+    const isLongText = review.text.length > 150;
 
     return (
-        <div className="review-card-list-item">
-            <div className="rml-review-header">
-                <div
-                    className="rml-review-avatar f-18 ff-c w-300 white-color"
+        <div className={`rev-v2-card rev-v2-item rev-v2-item-list`}>
+            <div className="rev-v2-item-header">
+                <div 
+                    className="rev-v2-avatar" 
                     style={{ backgroundColor: getAvatarColor(review.initial) }}
                 >
                     {review.initial}
                 </div>
-                <div className="author-info">
-                    <div className="rml-author-name-wrapper">
-                        <span className="author-name ff-c f-14 w-600 black-color f-m-14">{review.author}</span>
-                    </div>
-                    <div className="rml-review-stars-row">
-                        <div className="rml-stars">
-                            {[...Array(review.rating)].map((_, i) => (
-                                <span key={i} className="star">★</span>
-                            ))}
-                        </div>
-                        <span className="rml-review-time f-11 ff-n w-400 f-m-12">{review.time}</span>
-                    </div>
+                <div className="rev-v2-author-meta">
+                    <span className="rev-v2-author-name">{review.author}</span>
+                    <span className="rev-v2-item-time">{review.time || 'Verified Purchase'}</span>
+                </div>
+                <div className="rev-v2-item-stars">
+                    {"★".repeat(review.rating)}
                 </div>
             </div>
-
-            <div className="rml-review-body">
-                <div
-                    className="comment ff-c f-13 w-400 black-color"
-                    style={{
-                        maxHeight: isExpanded ? '1000px' : (isLongText ? '57px' : 'auto')
-                    }}
+            
+            <div className="rev-v2-item-content">
+                <p 
+                    className={!isExpanded && isLongText ? 'line-clamp-3' : ''}
+                    onClick={() => isLongText && setIsExpanded(!isExpanded)}
+                    style={{ cursor: isLongText ? 'pointer' : 'default' }}
                 >
-                    <p className="review-text">
-                        {review.text}
-                    </p>
-                </div>
+                    "{review.text}"
+                </p>
                 {isLongText && (
-                    <button
-                        className="rml-read-more-link f-12 ff-c w-400"
+                    <button 
+                        className="rev-v2-read-more"
                         onClick={() => setIsExpanded(!isExpanded)}
+                        style={{ 
+                            background: 'none', 
+                            border: 'none', 
+                            padding: 0, 
+                            marginTop: '8px',
+                            fontSize: '12px',
+                            color: 'var(--cyan_color)',
+                            cursor: 'pointer',
+                            textDecoration: 'underline'
+                        }}
                     >
-                        {isExpanded ? 'Hide' : 'Read more'}
+                        {isExpanded ? 'Show Less' : 'Read More'}
                     </button>
                 )}
             </div>
 
-            <div className="rml-review-footer">
-                {review.sourceLogo ? (
-                    <img src={review.sourceLogo} alt={review.source} className="rml-google-source-logo" />
-                ) : (
-                    review.source === 'Google' ? (
-                        <img src="https://cdn.shopify.com/s/files/1/0644/3067/0060/files/google_x100.png?v=1663569230" alt="Google" className="rml-google-source-logo-fixed" />
-                    ) : (
-                        <div className="rml-trustpilot-fallback">
-                            <span className="star">★</span>
-                            <span className="ff-c f-12 w-600 black-color">Trustpilot</span>
-                        </div>
-                    )
-                )}
+            <div className="rev-v2-item-footer">
+                <img
+                    src="https://cdn.shopify.com/s/files/1/0644/3067/0060/files/google_x100.png?v=1663569230"
+                    alt="Google"
+                    className="rev-v2-source-icon"
+                />
             </div>
         </div>
     );
 }
 
 function getAvatarColor(initial) {
-    const colors = ['#1a4d2e', '#2c3e50', '#a29bfe', '#fab1a0', '#00cec9', '#d63031', '#1e90ff', '#ff9f43'];
+    const colors = ['#003B4D', '#00D1FF', '#2C2F3A', '#7f8c8d'];
     const index = initial ? initial.charCodeAt(0) % colors.length : 0;
     return colors[index];
 }
@@ -83,61 +75,60 @@ export default function ReviewMetaList({ reviews = [] }) {
         setShowWriteReviewPopup(!showWriteReviewPopup);
     };
 
-    const googleReviewLink = "https://hydrogen-store-2026.pages.dev/";
+    const googleReviewLink = "https://www.google.com/search?q=diamond+Jewellery";
 
-    // Only render if reviews exist
+    // Summary data matching the home page
+    const summary = {
+        rating: "5.0",
+        count: "17,816",
+        stars: 5,
+        source: "Google Reviews"
+    };
+
     if (!reviews || reviews.length === 0) return null;
 
     return (
-        <div className="review-meta-list-section">
+        <section className="rev-v2 review-meta-list-section">
             <div className="page-width">
-                {/* Summary Header matching the image */}
-                <div className="rml-summary-card-no-slider">
-                    <div className="rml-summary-left">
-                        <div className="rml-summary-logo">
-                            <img src="https://cdn.shopify.com/s/files/1/0644/3067/0060/files/google_x100.png?v=1663569230" alt="Google" />
-                        </div>
-                        <div className="rml-summary-stats">
-                            <span className="rating-number ff-c w-700 black-color">5.0</span>
-                            <div className="rml-summary-stars">
-                                {[...Array(5)].map((_, i) => (
-                                    <span key={i} className="star">★</span>
-                                ))}
+                <div className="rev-v2-grid">
+                    {/* Summary Header matching the Bento Style */}
+                    <div className="rev-v2-card rev-v2-summary">
+                        <div className="rev-v2-summary-inner">
+                            <span className="section-subtitle">Our Reputation</span>
+                            <h2 className="section-title">Verified Reviews</h2>
+                            <div className="rev-v2-rating-big">
+                                <span className="rev-v2-number">{summary.rating}</span>
+                                <div className="rev-v2-stars">
+                                    {[...Array(5)].map((_, i) => (
+                                        <span key={i} className="rev-v2-star">★</span>
+                                    ))}
+                                </div>
                             </div>
-                            <span className="reviews-count ff-n f-12 w-500">17,816 reviews</span>
-                        </div>
-                    </div>
-                    <div className="summary-right">
-                        <button
-                            className="rml-write-review-btn ff-n f-13 w-600 white-color"
-                            onClick={toggleWriteReviewPopup}
-                        >
-                            WRITE A REVIEW
-                        </button>
-                        {showWriteReviewPopup && (
-                            <div className="write-review-popup">
-                                <a
+                            <p className="rev-v2-count">Trusted by over {summary.count} customers for our quality and service.</p>
+                            
+                            <div className="rev-v2-actions">
+                                <a 
                                     href={googleReviewLink}
                                     target="_blank"
                                     rel="noreferrer"
-                                    className="popup-option google-option"
+                                    className="rev-v2-btn-primary sb-button"
                                 >
-                                    <img src="https://cdn.shopify.com/s/files/1/0644/3067/0060/files/google_x100.png?v=1663569230" alt="Google" />
+                                    WRITE A REVIEW
                                 </a>
+                                <span className="rev-v2-source-text ff-c f-12" style={{ marginTop: '10px', opacity: 0.6 }}>
+                                    on Google Reviews
+                                </span>
                             </div>
-                        )}
-                    </div>
-                </div>
-
-                {/* List of Reviews matching the image layout */}
-                <div className="rml-reviews-list-container">
-                    {reviews.map((review) => (
-                        <div key={review.id} className="rml-review-item-container">
-                            <ReviewCard review={review} />
                         </div>
+                    </div>
+
+                    {/* List of Reviews matching the home page grid layout */}
+                    {reviews.map((review, index) => (
+                        <ReviewCard key={review.id} review={review} index={index} />
                     ))}
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
+

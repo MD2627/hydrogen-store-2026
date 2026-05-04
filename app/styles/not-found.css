@@ -55,7 +55,7 @@
     color: var(--white_color, var(--white_color));
     padding: 18px 25px;
     font-family: var(--font_family_c, sans-serif);
-    font-size: 13px;
+    font-size: var(--min_font_size);
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;

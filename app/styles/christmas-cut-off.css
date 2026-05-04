@@ -47,7 +47,7 @@ li {
     text-transform: none;
     letter-spacing: 0;
     margin-bottom: 13px;
-    font-size: 13px;
+    font-size: var(--min_font_size);
 }
 
 .christmas-cut-off .christmas-cut-off p:last-child {
@@ -56,7 +56,7 @@ li {
 
 @media screen and (max-width: 1024px) {}
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .christmas-cut-off .main-heading {
         font-size: 38.5px;
     }
