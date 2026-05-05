@@ -217,41 +217,43 @@ export function ContactForm({ mode = 'contact' }) {
                         Moissanite
                     </label> */}
 
-                    <label htmlFor="centre-lab">
-                        <input
-                            id="centre-lab"
-                            type="radio"
-                            name="centreStoneType"
-                            value="Lab grown diamond"
-                            checked={form.centreStoneType === 'Lab grown diamond'}
-                            onChange={handleChange}
-                        />
-                        Lab grown diamond
-                    </label>
+                    <div className="centre-stone-options">
+                        <label htmlFor="centre-lab">
+                            <input
+                                id="centre-lab"
+                                type="radio"
+                                name="centreStoneType"
+                                value="Lab grown diamond"
+                                checked={form.centreStoneType === 'Lab grown diamond'}
+                                onChange={handleChange}
+                            />
+                            Lab grown diamond
+                        </label>
 
-                    <label htmlFor="centre-later">
-                        <input
-                            id="centre-later"
-                            type="radio"
-                            name="centreStoneType"
-                            value="Choose later"
-                            checked={form.centreStoneType === 'Choose later'}
-                            onChange={handleChange}
-                        />
-                        Choose later
-                    </label>
+                        <label htmlFor="centre-later">
+                            <input
+                                id="centre-later"
+                                type="radio"
+                                name="centreStoneType"
+                                value="Choose later"
+                                checked={form.centreStoneType === 'Choose later'}
+                                onChange={handleChange}
+                            />
+                            Choose later
+                        </label>
 
-                    <label htmlFor="centre-other">
-                        <input
-                            id="centre-other"
-                            type="radio"
-                            name="centreStoneType"
-                            value="Other"
-                            checked={form.centreStoneType === 'Other'}
-                            onChange={handleChange}
-                        />
-                        Other
-                    </label>
+                        <label htmlFor="centre-other">
+                            <input
+                                id="centre-other"
+                                type="radio"
+                                name="centreStoneType"
+                                value="Other"
+                                checked={form.centreStoneType === 'Other'}
+                                onChange={handleChange}
+                            />
+                            Other
+                        </label>
+                    </div>
 
                     {form.centreStoneType === 'Other' && (
                         <input
@@ -352,7 +354,7 @@ export function ContactForm({ mode = 'contact' }) {
 
                 <button
                     type="submit"
-                    className="contact-submit btn"
+                    className="btn"
                     disabled={status === 'loading'}
                 >
                     {status === 'loading' ? 'SENDING...' : 'SUBMIT'}

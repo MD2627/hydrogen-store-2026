@@ -144,16 +144,29 @@ export default function VisitShowroom() {
     ];
 
     const SHOWROOM_IMAGES = {
-        'melbourne': 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/melbourne_showroom_400x400.jpg?v=1710000002',
-        'sydney': 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/sydney_showroom_400x400.jpg?v=1710000002',
-        'brisbane': 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/brisbane_showroom_400x400.jpg?v=1710000002',
-        'perth': 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/perth_showroom_400x400.jpg?v=1710000002',
-        'adelaide': 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/adelaide_showroom_400x400.jpg?v=1710000002',
-        'auckland': 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/auckland_showroom_400x400.jpg?v=1710000002',
-        'london': 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/london_showroom_400x400.jpg?v=1710000002',
-        'san-francisco': 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/san-francisco_showroom_400x400.jpg?v=1710000002',
-        'toronto': 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/toronto_showroom_400x400.jpg?v=1710000002',
-        'houston': 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/houston_showroom_400x400.jpg?v=1710000002'
+        'melbourne': 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/f25a49c91df039493ed6e1491224e864.jpg?v=1777963280',
+        'sydney': 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/07f79a4d805e075c3d3b57305d30e0f5.jpg?v=1777963281',
+        'brisbane': 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/39cca993c3f7aa9065d91172ef1e947e.jpg?v=1777963280',
+        'perth': 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/6db1937cd1f8f81fb2415b8670bceaad.jpg?v=1777963280',
+        'adelaide': 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/07f79a4d805e075c3d3b57305d30e0f5.jpg?v=1777963281',
+        'auckland': 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Diamond_Jewellery_London_153_1a_retouched_high_res_2000x2000_955a3419-44fe-4982-a8b6-5ca4c5c7dd18.webp?v=1777283263',
+        'london': 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/f25a49c91df039493ed6e1491224e864.jpg?v=1777963280',
+        'san-francisco': 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Diamond_Jewellery_London_153_1a_retouched_high_res_2000x2000_955a3419-44fe-4982-a8b6-5ca4c5c7dd18.webp?v=1777283263',
+        'toronto': 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/6db1937cd1f8f81fb2415b8670bceaad.jpg?v=1777963280',
+        'houston': 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/6db1937cd1f8f81fb2415b8670bceaad.jpg?v=1777963280'
+    };
+
+    const SHOWROOM_DESCRIPTIONS = {
+        'melbourne': 'Explore our flagship Melbourne showroom, where luxury meets ethical elegance in a private setting.',
+        'sydney': 'Our Sydney showroom offers an exclusive view of our finest collections with expert guidance.',
+        'brisbane': 'Discover your dream ring in our beautiful Brisbane space, dedicated to personalised service.',
+        'perth': 'Visit our Perth location for expert diamond consultations and a stunning range of handcrafted designs.',
+        'adelaide': 'Experience the beauty of our ethical diamonds in the heart of Adelaide with our specialists.',
+        'auckland': 'Our Auckland showroom brings premium ethical luxury to New Zealand for your special moments.',
+        'london': 'Discover the London showroom, offering a curated experience for those seeking ethical brilliance.',
+        'san-francisco': 'West Coast sophistication. Join our experts in San Francisco for a private jewellery viewing.',
+        'toronto': 'Handcrafted excellence meets Canadian hospitality in our welcoming Toronto showroom.',
+        'houston': 'Southern elegance and modern luxury await you at our Houston showroom location.'
     };
 
     const LOCATION_OPTIONS = [
@@ -163,7 +176,7 @@ export default function VisitShowroom() {
             title: 'Virtual Consultation',
             description: 'Experience a personalised and in-depth online consultation with one of our specialists anywhere in the world.',
             duration: '45 MINUTES',
-            image: 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Virtual_Consultation_400x400.jpg?v=1710000000'
+            image: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Diamond_Jewellery_London_153_1a_retouched_high_res_2000x2000_955a3419-44fe-4982-a8b6-5ca4c5c7dd18.webp?v=1777283263'
         },
         {
             id: 'quick-chat',
@@ -171,11 +184,12 @@ export default function VisitShowroom() {
             title: 'Quick Chat',
             description: 'Connect with our friendly experts for quick answers or preparation for your visit.',
             duration: '15 MINUTES',
-            image: 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Quick_Chat_400x400.jpg?v=1710000001'
+            image: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/39cca993c3f7aa9065d91172ef1e947e.jpg?v=1777963280'
         },
         ...SHOWROOMS.map(s => ({
             ...s,
-            title: s.city,
+            title: `${s.city} Showroom`,
+            description: SHOWROOM_DESCRIPTIONS[s.id] || 'Experience personalised service and expert guidance at our beautiful showroom.',
             image: s.image?.url || SHOWROOM_IMAGES[s.id] || 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/melbourne_showroom_400x400.jpg?v=1710000002'
         }))
     ];
@@ -192,160 +206,171 @@ export default function VisitShowroom() {
 
 
             {/* BOOKING WIZARD SECTION */}
-            <div className="booking-wizard-section">
+            <section className="booking-wizard-section">
                 <div className="page-width">
                     <div className="booking-header">
-                        <h1 className="ff-a f-32 w-400">Book An Appointment</h1>
-                        <p className="ff-c f-14">Choose a location and service to see availability. We look forward to meeting you!</p>
+                        <span className="section-subtitle">Experience Our Craft</span>
+                        <h2 className="section-title">Book An Appointment</h2>
+                        <p className="sb-description">
+                            Whether you prefer a private showroom viewing or a virtual consultation,
+                            our specialists are here to guide you through your journey.
+                            Select a location and service to begin.
+                        </p>
                     </div>
 
-                    <div className="booking-progress-bar">
-                        {steps.map((step) => (
-                            <div
-                                key={step.id}
-                                className={`progress-step ${bookingStep === step.id ? 'active' : ''} ${bookingStep > step.id ? 'completed' : ''}`}
-                                onClick={() => step.id < bookingStep && setBookingStep(step.id)}
-                            >
-                                <span className="step-title ff-a">{step.title}</span>
-                                {step.subtitle && <span className="step-subtitle ff-c">{step.subtitle}</span>}
-                            </div>
-                        ))}
-                    </div>
-
-                    <div className="wizard-content">
-                        {/* STEP 1: LOCATION */}
-                        {bookingStep === 1 && (
-                            <div className="location-grid">
-                                {LOCATION_OPTIONS.map((loc) => (
-                                    <div key={loc.id} className="location-item-card">
-                                        <div className="card-image">
-                                            <img src={loc.image} alt={loc.title} />
-                                        </div>
-                                        <div className="card-info">
-                                            <h3 className="ff-a">{loc.title || loc.city}</h3>
-                                            <p className="description-text ff-c">{loc.description}</p>
-                                            <span className="duration ff-a">{loc.duration}</span>
-                                            <button className="btn ff-a" onClick={() => { setBookingData({ ...bookingData, location: loc }); nextStep(); }}>SELECT</button>
-                                        </div>
+                    <div className="booking-wizard-container">
+                        <div className="booking-progress-minimal">
+                            {steps.map((step) => (
+                                <div
+                                    key={step.id}
+                                    className={`minimal-step ${bookingStep === step.id ? 'active' : ''} ${bookingStep > step.id ? 'completed' : ''}`}
+                                    onClick={() => step.id < bookingStep && setBookingStep(step.id)}
+                                >
+                                    <span className="step-number">0{step.id}</span>
+                                    <div className="step-label-group">
+                                        <span className="step-label">{step.title}</span>
+                                        {step.subtitle && <span className="step-value">{step.subtitle}</span>}
                                     </div>
-                                ))}
-                            </div>
-                        )}
+                                    <div className="step-line"></div>
+                                </div>
+                            ))}
+                        </div>
 
-                        {/* STEP 2: SERVICE */}
-                        {bookingStep === 2 && (
-                            <div className="service-selection">
-                                <button className="btn btn--text back-btn ff-a" onClick={prevStep}>← BACK</button>
-                                <h2 className="step-subtitle ff-a f-24 w-600">Select Service</h2>
-                                <div className="service-grid">
-                                    {SERVICE_OPTIONS.map((service) => (
-                                        <div key={service.id} className="service-item-card" onClick={() => { setBookingData({ ...bookingData, service }); nextStep(); }}>
-                                            <div className="service-info">
-                                                <h3 className="ff-a f-20 w-600">{service.title}</h3>
-                                                <p className="ff-c">{service.description}</p>
-                                                <span className="card-duration ff-a f-11 w-600">{service.duration}</span>
+                        <div className="wizard-content-area">
+                            {/* STEP 1: LOCATION */}
+                            {bookingStep === 1 && (
+                                <div className="location-grid">
+                                    {LOCATION_OPTIONS.map((loc) => (
+                                        <div key={loc.id} className="location-item-card">
+                                            <div className="card-image">
+                                                <img src={loc.image} alt={loc.title} />
                                             </div>
-                                            <div className="arrow">→</div>
+                                            <div className="card-info">
+                                                <h3 className="ff-a">{loc.title || loc.city}</h3>
+                                                <p className="description-text ff-c">{loc.description}</p>
+                                                <span className="duration ff-a">{loc.duration}</span>
+                                                <button className="btn" onClick={() => { setBookingData({ ...bookingData, location: loc }); nextStep(); }}>SELECT</button>
+                                            </div>
                                         </div>
                                     ))}
                                 </div>
-                            </div>
-                        )}
+                            )}
 
-                        {/* STEP 3: DATE & TIME */}
-                        {bookingStep === 3 && (
-                            <div className="datetime-selection">
-                                <button className="btn btn--text back-btn ff-a" onClick={prevStep}>← BACK</button>
-                                <h2 className="step-subtitle ff-a f-24 w-600">Choose Date & Time</h2>
-
-                                <div className="calendar-container">
-                                    <p className="ff-c f-14 appointments-hint">Select a day:</p>
-                                    <div className="calendar-grid">
-                                        {['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'].map(day => (
-                                            <div key={day} className="calendar-day-label ff-a f-11">{day}</div>
-                                        ))}
-                                        {[...Array(14)].map((_, i) => {
-                                            const date = new Date();
-                                            date.setDate(date.getDate() + i);
-                                            const label = date.toLocaleDateString('en-US', { day: 'numeric' });
-                                            const fullLabel = date.toLocaleDateString('en-US', { weekday: 'short', day: 'numeric', month: 'short' });
-                                            return (
-                                                <div
-                                                    key={i}
-                                                    className={`calendar-day ff-c f-14 ${bookingDate === fullLabel ? 'selected' : ''}`}
-                                                    onClick={() => { setBookingDate(fullLabel); setBookingTime(''); }}
-                                                >
-                                                    {label}
+                            {/* STEP 2: SERVICE */}
+                            {bookingStep === 2 && (
+                                <div className="service-selection">
+                                    <button className="btn back-btn" onClick={prevStep}>← BACK</button>
+                                    <h2 className="step-subtitle ff-a f-24 w-600">Select Service</h2>
+                                    <div className="service-grid">
+                                        {SERVICE_OPTIONS.map((service) => (
+                                            <div key={service.id} className="service-item-card" onClick={() => { setBookingData({ ...bookingData, service }); nextStep(); }}>
+                                                <div className="service-info">
+                                                    <h3 className="ff-a f-20 w-600">{service.title}</h3>
+                                                    <p className="ff-c">{service.description}</p>
+                                                    <span className="card-duration ff-a f-11">{service.duration}</span>
                                                 </div>
-                                            );
-                                        })}
+                                                <div className="arrow">→</div>
+                                            </div>
+                                        ))}
                                     </div>
                                 </div>
+                            )}
 
-                                {bookingDate && (
-                                    <div className="time-slots-section">
-                                        <p className="timezone-disclaimer ff-c f-12 text-center">Available times in the <strong>Indian/Christmas</strong> time zone</p>
-                                        <div className="time-slots-grid">
-                                            {generateTimeSlots(parseInt(bookingDate.split(' ')[1])).map(time => (
-                                                <button
-                                                    key={time}
-                                                    className={`time-slot-btn ff-a f-13 ${bookingTime === time ? 'active' : ''}`}
-                                                    onClick={() => { setBookingTime(time); setBookingData({ ...bookingData, dateTime: `${bookingDate} at ${time}` }); nextStep(); }}
-                                                >
-                                                    {time}
-                                                </button>
+                            {/* STEP 3: DATE & TIME */}
+                            {bookingStep === 3 && (
+                                <div className="datetime-selection">
+                                    <button className="btn back-btn" onClick={prevStep}>← BACK</button>
+                                    <h2 className="step-subtitle ff-a f-24 w-600">Choose Date & Time</h2>
+
+                                    <div className="calendar-container">
+                                        <p className="ff-c f-14 appointments-hint">Select a day:</p>
+                                        <div className="calendar-grid">
+                                            {['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'].map(day => (
+                                                <div key={day} className="calendar-day-label ff-a f-11">{day}</div>
                                             ))}
+                                            {[...Array(14)].map((_, i) => {
+                                                const date = new Date();
+                                                date.setDate(date.getDate() + i);
+                                                const label = date.toLocaleDateString('en-US', { day: 'numeric' });
+                                                const fullLabel = date.toLocaleDateString('en-US', { weekday: 'short', day: 'numeric', month: 'short' });
+                                                return (
+                                                    <div
+                                                        key={i}
+                                                        className={`calendar-day ff-c f-14 ${bookingDate === fullLabel ? 'selected' : ''}`}
+                                                        onClick={() => { setBookingDate(fullLabel); setBookingTime(''); }}
+                                                    >
+                                                        {label}
+                                                    </div>
+                                                );
+                                            })}
                                         </div>
                                     </div>
-                                )}
-                            </div>
-                        )}
 
-                        {/* STEP 4: YOUR DETAILS */}
-                        {bookingStep === 4 && (
-                            <div className="details-form-view">
-                                <button className="btn btn--text back-btn ff-a" onClick={prevStep}>← BACK</button>
-                                <h2 className="step-subtitle ff-a f-24 w-600">Your Details</h2>
-                                <div className="booking-summary ff-c f-14">
-                                    <p>Booking: <strong>{bookingData.service?.title}</strong></p>
-                                    <p>Location: <strong>{bookingData.location?.title || bookingData.location?.city}</strong></p>
-                                    <p>Time: <strong>{bookingData.dateTime}</strong></p>
+                                    {bookingDate && (
+                                        <div className="time-slots-section">
+                                            <p className="timezone-disclaimer ff-c f-12 text-center">Available times in the <strong>Indian/Christmas</strong> time zone</p>
+                                            <div className="time-slots-grid">
+                                                {generateTimeSlots(parseInt(bookingDate.split(' ')[1])).map(time => (
+                                                    <button
+                                                        key={time}
+                                                        className={`time-slot-btn ff-a f-13 ${bookingTime === time ? 'active' : ''}`}
+                                                        onClick={() => { setBookingTime(time); setBookingData({ ...bookingData, dateTime: `${bookingDate} at ${time}` }); nextStep(); }}
+                                                    >
+                                                        {time}
+                                                    </button>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    )}
                                 </div>
-                                <form className="booking-form" onSubmit={handleFormSubmit}>
-                                    <div className="form-row">
-                                        <div className="form-group">
-                                            <label className="ff-c f-11 w-600 uppercase">First Name *</label>
-                                            <input type="text" required value={bookingData.userDetails.firstName} onChange={(e) => updateUserDetails('firstName', e.target.value)} />
-                                        </div>
-                                        <div className="form-group">
-                                            <label className="ff-c f-11 w-600 uppercase">Last Name *</label>
-                                            <input type="text" required value={bookingData.userDetails.lastName} onChange={(e) => updateUserDetails('lastName', e.target.value)} />
-                                        </div>
+                            )}
+
+                            {/* STEP 4: YOUR DETAILS */}
+                            {bookingStep === 4 && (
+                                <div className="details-form-view">
+                                    <button className="btn back-btn" onClick={prevStep}>← BACK</button>
+                                    <h2 className="step-subtitle ff-a f-24 w-600">Your Details</h2>
+                                    <div className="booking-summary ff-c f-14">
+                                        <p>Booking: <strong>{bookingData.service?.title}</strong></p>
+                                        <p>Location: <strong>{bookingData.location?.title || bookingData.location?.city}</strong></p>
+                                        <p>Time: <strong>{bookingData.dateTime}</strong></p>
                                     </div>
-                                    <div className="form-row">
-                                        <div className="form-group">
-                                            <label className="ff-c f-11 w-600 uppercase">Email Address *</label>
-                                            <input type="email" required value={bookingData.userDetails.email} onChange={(e) => updateUserDetails('email', e.target.value)} />
+                                    <form className="booking-form" onSubmit={handleFormSubmit}>
+                                        <div className="form-row">
+                                            <div className="form-group">
+                                                <label className="ff-c f-11 w-600 uppercase">First Name *</label>
+                                                <input type="text" required value={bookingData.userDetails.firstName} onChange={(e) => updateUserDetails('firstName', e.target.value)} />
+                                            </div>
+                                            <div className="form-group">
+                                                <label className="ff-c f-11 w-600 uppercase">Last Name *</label>
+                                                <input type="text" required value={bookingData.userDetails.lastName} onChange={(e) => updateUserDetails('lastName', e.target.value)} />
+                                            </div>
+                                        </div>
+                                        <div className="form-row">
+                                            <div className="form-group">
+                                                <label className="ff-c f-11 w-600 uppercase">Email Address *</label>
+                                                <input type="email" required value={bookingData.userDetails.email} onChange={(e) => updateUserDetails('email', e.target.value)} />
+                                            </div>
+                                            <div className="form-group">
+                                                <label className="ff-c f-11 w-600 uppercase">Phone Number *</label>
+                                                <input type="tel" required value={bookingData.userDetails.phone} onChange={(e) => updateUserDetails('phone', e.target.value)} />
+                                            </div>
                                         </div>
                                         <div className="form-group">
-                                            <label className="ff-c f-11 w-600 uppercase">Phone Number *</label>
-                                            <input type="tel" required value={bookingData.userDetails.phone} onChange={(e) => updateUserDetails('phone', e.target.value)} />
+                                            <label className="ff-c f-11 w-600 uppercase">Additional Notes</label>
+                                            <textarea rows="4" value={bookingData.userDetails.message} onChange={(e) => updateUserDetails('message', e.target.value)} placeholder="Anything else you'd like us to know?"></textarea>
                                         </div>
-                                    </div>
-                                    <div className="form-group">
-                                        <label className="ff-c f-11 w-600 uppercase">Additional Notes</label>
-                                        <textarea rows="4" value={bookingData.userDetails.message} onChange={(e) => updateUserDetails('message', e.target.value)} placeholder="Anything else you'd like us to know?"></textarea>
-                                    </div>
-                                    <button type="submit" className="btn ff-a f-16 w-600 uppercase">Confirm Appointment</button>
-                                </form>
-                            </div>
-                        )}
+                                        <button type="submit" className="btn uppercase">Confirm Appointment</button>
+                                    </form>
+                                </div>
+                            )}
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
             {/* HERO BANNER SECTION */}
-            <div className="limit-width-banner">
+            <section className="limit-width-banner">
                 {BANNER ? (
                     <Image
                         data={{
@@ -360,82 +385,113 @@ export default function VisitShowroom() {
                     />
                 ) : (
                     <img
-                        src="https://cdn.shopify.com/s/files/1/0610/2194/5934/files/edit-387d08.webp?v=1776071466"
+                        src="https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Diamond_Jewellery_London_153_1a_retouched_high_res_2000x2000_955a3419-44fe-4982-a8b6-5ca4c5c7dd18.webp?v=1777283263"
                         alt="Visit Our Showrooms"
                         className="limit-width-banner-image"
                     />
                 )}
-            </div>
+            </section>
 
             {/* OUR LOCATIONS SECTION */}
-            <div className="our-locations-section">
-                <h2 className="our-locations-section-title ff-a f-16 w-300">Want to see our sparkling engagement rings in person before you buy? Come visit one of our showrooms - we'd love to see you!</h2>
-                <div className="locations-container">
-                    <div className="locations-sidebar">
-                        <h2 className="sidebar-title ff-a f-24 w-600">Our Locations</h2>
-                        <div className="sidebar-list">
+            <section className="our-locations-section">
+                <div className="page-width">
+                    <div className="locations-header">
+                        <span className="section-subtitle">Global Presence</span>
+                        <h2 className="section-title">Visit Our Showrooms</h2>
+                        <p className="sb-description">
+                            Experience the brilliance of our ethically sourced diamonds in person. 
+                            Our boutiques offer private consultations in a luxurious and intimate setting.
+                        </p>
+                    </div>
+
+                    <div className="locations-explorer">
+                        <div className="locations-list-panel">
                             {SHOWROOMS.map((showroom) => (
-                                <div key={showroom.id} className="location-item-wrapper">
-                                    <div
-                                        className={`location-card ${activeCity.id === showroom.id ? 'active' : ''}`}
-                                        onClick={() => setActiveCity(showroom)}
-                                    >
-                                        <h3 className="location-city ff-a f-18 w-600">
-                                            <span className="mobile-only icon-marker">
-                                                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" /></svg>
-                                            </span>
-                                            {showroom.city}
-                                        </h3>
-                                        <div className="location-details ff-c f-13 w-300">
-                                            <p className='w-600'>{showroom.address}</p>
-                                            <a href={`tel:${showroom.phone}`}>{showroom.phone}</a>
-                                            <a href={`mailto:${showroom.email}`}>{showroom.email}</a>
-                                            <Link to="/contact" className="contact-link">Contact us</Link>
+                                <div 
+                                    key={showroom.id} 
+                                    className={`location-item ${activeCity.id === showroom.id ? 'is-active' : ''}`}
+                                    onClick={() => setActiveCity(showroom)}
+                                >
+                                    <div className="location-item-header">
+                                        <h3 className="location-name">{showroom.city}</h3>
+                                        <div className="location-status">
+                                            <span className="status-dot"></span>
+                                            <span className="status-text">Available for bookings</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div className="location-item-content">
+                                        <div className="location-info-row">
+                                            <span className="info-label">Address</span>
+                                            <p className="info-value">{showroom.address}</p>
+                                        </div>
+                                        <div className="location-info-row">
+                                            <span className="info-label">Contact</span>
+                                            <div className="info-value">
+                                                <a href={`tel:${showroom.phone}`} className="contact-link">{showroom.phone}</a>
+                                                <a href={`mailto:${showroom.email}`} className="contact-link">{showroom.email}</a>
+                                            </div>
+                                        </div>
+                                        
+                                        <div className="location-actions">
+                                            <Link to="/contact" className="btn btn--outline btn--small">Contact Boutique</Link>
+                                            <button className="btn btn--primary btn--small" onClick={() => { setActiveCity(showroom); setBookingStep(1); window.scrollTo({top: 0, behavior: 'smooth'}); }}>Book Appointment</button>
                                         </div>
                                     </div>
 
-                                    {/* Mobile Accordion Expansion */}
+                                    {/* Mobile Expandable View */}
                                     {activeCity.id === showroom.id && (
-                                        <div className="location-mobile-expand mobile-only">
-                                            <div className="mobile-hours ff-c">
-                                                <h4 className="w-600">OPENING HOURS</h4>
-                                                {showroom.openingHours.map((h, i) => (
-                                                    <p key={i}>{h}</p>
-                                                ))}
-                                            </div>
-                                            <div className="mobile-map">
+                                        <div className="location-mobile-details mobile-only">
+                                            <div className="mobile-map-container">
                                                 <iframe title={`Map of ${showroom.city}`} src={showroom.mapEmbedUrl} width="100%" height="100%" style={{ border: 0 }} allowFullScreen="" loading="lazy"></iframe>
+                                            </div>
+                                            <div className="mobile-hours-list">
+                                                <h4 className="hours-title">Opening Hours</h4>
+                                                {showroom.openingHours.map((h, i) => (
+                                                    <div key={i} className="hour-row">
+                                                        <span className="hour-text">{h}</span>
+                                                    </div>
+                                                ))}
                                             </div>
                                         </div>
                                     )}
                                 </div>
                             ))}
                         </div>
-                    </div>
 
-                    {/* Desktop Content Display */}
-                    <div className="locations-map-area desktop-only">
-                        <div className="opening-hours-card ff-c">
-                            <h4 className="w-600">OPENING HOURS</h4>
-                            {activeCity.openingHours.map((hour, idx) => (
-                                <p key={idx}>{hour}</p>
-                            ))}
+                        <div className="locations-display-panel desktop-only">
+                            <div className="display-map-wrapper">
+                                <iframe
+                                    title={`Map of ${activeCity.city}`}
+                                    src={activeCity.mapEmbedUrl}
+                                    width="100%"
+                                    height="100%"
+                                    style={{ border: 0 }}
+                                    allowFullScreen=""
+                                    loading="lazy"
+                                ></iframe>
+                                
+                                <div className="opening-hours-overlay">
+                                    <div className="overlay-header">
+                                        <h4 className="overlay-title">Showroom Hours</h4>
+                                        <span className="city-badge">{activeCity.city}</span>
+                                    </div>
+                                    <div className="hours-container">
+                                        {activeCity.openingHours.map((hour, idx) => (
+                                            <div key={idx} className="hour-item">
+                                                <span className="hour-text">{hour}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <iframe
-                            title={`Map of ${activeCity.city}`}
-                            src={activeCity.mapEmbedUrl}
-                            width="100%"
-                            height="100%"
-                            style={{ border: 0 }}
-                            allowFullScreen=""
-                            loading="lazy"
-                        ></iframe>
                     </div>
                 </div>
-            </div>
+            </section>
 
             {/* VIDEO SECTION */}
-            <div className="locations-video-section">
+            {/* <div className="locations-video-section">
                 <div className="page-width">
                     <div className="locations-video-wrapper">
                         <iframe
@@ -447,7 +503,7 @@ export default function VisitShowroom() {
                         />
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             {/* REVIEW SECTION */}
             <div className="reviews-section-meta">

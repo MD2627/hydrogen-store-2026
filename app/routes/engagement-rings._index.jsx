@@ -729,9 +729,9 @@ const COLLECTION_LINKS = [
 const COLLECTION_CONTENT_SECTION = {
     sections: [
         {
-            heading: "Ready-to-Ship Engagement Rings — Start Your Forever Today",
+            heading: "Ready-to-Ship Engagement Rings Start Your Forever Today",
             paragraphs: [
-                `Short on time or ready to propose sooner? Discover our collection of ready-to-ship engagement rings, designed for life’s most meaningful moments. Featuring a curated range of timeless styles — from classic solitaires to vintage-inspired halos — each piece is crafted to be both beautiful and instantly yours.`,
+                `Short on time or ready to propose sooner? Discover our collection of ready-to-ship engagement rings, designed for life’s most meaningful moments. Featuring a curated range of timeless styles from classic solitaires to vintage-inspired halos, each piece is crafted to be both beautiful and instantly yours.`,
                 `Made using premium materials and lab-grown gemstones, every Diamond ready-to-ship ring is thoughtfully handcrafted by our expert jewellers. Each design reflects the same level of care and craftsmanship as our made-to-order pieces.`,
                 `Shop online across the US or visit one of our showrooms for a <a href="/visit" class="fancy">personalized design consultation</a>. <strong>However you choose, we’re here to help you begin your forever with the perfect ring.</strong>`
             ],
@@ -740,23 +740,23 @@ const COLLECTION_CONTENT_SECTION = {
             heading: "Find the Ring That’s Ready for You",
             paragraphs: [
                 `At Diamond, we create handcrafted engagement rings designed to celebrate your unique love story.`,
-                `Our ready-to-ship collection allows you to explore, select, and receive a stunning engagement ring within days. Skip the wait and focus on what matters most — your proposal.`,
-                `Whether you prefer a refined <a href="/engagement?style=solitaire&metal=18k-yellow-gold" class="fancy">solitaire</a> or a detailed <a href="/engagement?style=halo&metal=18k-yellow-gold" class="fancy">halo</a> design, our experienced team is here to guide you from your first step to the final detail.`,
-                `Each ring is crafted using conflict-free and <a href="/carbon-neutral" class="fancy">carbon neutral</a> lab-grown diamonds, moissanite, or sapphires — combining beauty with responsibility.`,
+                `Our ready-to-ship collection allows you to explore, select, and receive a stunning engagement ring within days. Skip the wait and focus on what matters most your proposal.`,
+                `Whether you prefer a refined <a href="/engagement-rings?style=solitaire&metal=18k-yellow-gold" class="fancy">solitaire</a> or a detailed <a href="/engagement-rings?style=halo&metal=18k-yellow-gold" class="fancy">halo</a> design, our experienced team is here to guide you from your first step to the final detail.`,
+                `Each ring is crafted using conflict-free and <a href="/carbon-neutral" class="fancy">carbon neutral</a> lab-grown diamonds, moissanite, or sapphires, combining beauty with responsibility.`,
                 `Need assistance? <a href="/contact" class="fancy">Contact us</a> or book an in-store consultation with our specialists to find your perfect ring.`
             ],
         },
         {
             heading: "Why Choose Diamond",
             paragraphs: [
-                `<strong>Worldwide Express Shipping</strong> Wherever you are, we ensure your ring পৌঁches you quickly and securely with global shipping across the <a href="/shipping" class="fancy">US and internationally</a>.`,
+                `<strong>Worldwide Express Shipping</strong> Wherever you are, we ensure your ring arrives quickly and securely with global shipping across the <a href="/shipping" class="fancy">US and internationally</a>.`,
                 `<strong>Free Resizing</strong> Enjoy <a href="/free-resizing" class="fancy">complimentary resizing</a> on all engagement rings for the perfect fit.`,
                 `<strong>Lifetime Warranty</strong> Every ring is backed by our lifetime <a href="/warranty" class="fancy">manufacturing warranty</a> for complete peace of mind.`,
                 `<strong>Custom Design Options</strong> Looking for something unique? Explore our <a href="/custom-rings" class="fancy">custom design service</a> to create a one-of-a-kind piece.`,
                 `<strong>Expertly Crafted</strong> Designed in Melbourne and handcrafted with precision by skilled jewellers.`,
-                `<strong>Ethically Sourced</strong> Choose from moissanite, sapphires, and lab-grown diamonds, including <a href="/engagement-rings/sapphire" class="fancy">sapphire engagement rings</a>, all responsibly sourced.`,
+                `<strong>Ethically Sourced</strong> Choose from moissanite, sapphires, and lab-grown diamonds, including <a href="/engagement-rings" class="fancy">sapphire engagement rings</a>, all responsibly sourced.`,
                 `<strong>Sustainable Impact</strong> We offset gemstone carbon footprints and plant a <a href="/diamond-initiatives" class="fancy">tree</a> for every ring sold.`,
-                `<strong>Personalized Experience</strong> From classic <a href="/engagement-rings/ring-thea" class="fancy">solitaire designs</a> to intricate styles, our specialists help bring your vision to life.`
+                `<strong>Personalized Experience</strong> From classic <a href="/engagement-rings?style=solitaire" class="fancy">solitaire designs</a> to intricate styles, our specialists help bring your vision to life.`
             ],
         },
     ],

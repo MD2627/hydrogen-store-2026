@@ -5,6 +5,7 @@ import ReviewMetaList from '~/components/ReviewMetaList';
 import { CollectionBanner } from '~/components/CollectionBanner';
 import { UvpIconFooter } from '~/components/UvpIconFooter';
 import '~/styles/reviews.css';
+import ReviewMeta from '~/components/reviewMeta';
 
 /**
  * Loader function to fetch Google reviews server-side
@@ -176,7 +177,10 @@ GOOGLE_PLACE_ID=your_place_id_here`}
 
 
       {/* Review meta section without slider  */}
-      <ReviewMetaList reviews={metaReviews} />
+      {/* <ReviewMetaList reviews={metaReviews} /> */}
+
+      {/* Review Section (Bento Redesign) */}
+      <ReviewMeta reviews={metaReviews} all={true} />
 
       {/* Footer UVPs */}
       <UvpIconFooter data={REVIEWS_UVPS} />

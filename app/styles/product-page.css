@@ -972,10 +972,6 @@ a.ssw-link:hover svg {
     opacity: 1;
 }
 
-.collection-content-text .sb-description {
-    text-align: justify;
-}
-
 /* sb-button extends the global .btn system — only overrides what differs */
 .sb-button {
     --btn_padding: 18px 40px;
@@ -1161,7 +1157,7 @@ a.ssw-link:hover svg {
 
 .faq-v3-item-header {
     display: flex;
-    align-items: flex-start;
+    align-items: end;
     gap: 32px;
 }
 
@@ -1203,11 +1199,12 @@ a.ssw-link:hover svg {
     display: grid;
     grid-template-rows: 0fr;
     transition: grid-template-rows 0.5s cubic-bezier(0.2, 0, 0.2, 1);
-    padding-top: 10px;
+    padding-top: 0;
 }
 
 .faq-v3-item.is-active .faq-v3-item-body {
     grid-template-rows: 1fr;
+    padding-top: 10px;
 }
 
 .faq-v3-item-ans {

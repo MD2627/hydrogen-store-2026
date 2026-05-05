@@ -1465,8 +1465,6 @@ main.contact .subscribe-check {
   margin: 0;
   border-radius: 3px;
   border: 2px solid var(--dark_accent_color);
-  appearance: none;
-  -webkit-appearance: none;
   cursor: pointer;
   transition: 0.3s ease;
 }
@@ -1525,7 +1523,6 @@ main.contact .subscribe-check {
   display: flex;
   flex-direction: column;
   gap: 13px;
-  margin-top: 20px;
   align-items: center;
 }
 
@@ -1783,13 +1780,13 @@ button.filter-pill-btn:last-child {
 /* RING BANNER SECTION CSS START */
 .ring-banner-section {
   position: relative;
-  min-height: 60vh;
+  min-height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--white_color);
   width: 100%;
-  margin-bottom: 80px;
+  margin: 0;
   overflow: hidden;
 }
 
@@ -1818,7 +1815,7 @@ button.filter-pill-btn:last-child {
   width: 100%;
   max-width: 1400px;
   padding: 0 40px;
-  z-index: 1;
+  z-index: 10;
   display: flex;
   justify-content: flex-end;
 }
@@ -1879,6 +1876,10 @@ button.filter-pill-btn:last-child {
     /* font-size: 15.5px;
     line-height: 18.6px; */
   }
+
+  .ring-banner-section .ring-banner-inner .banner-content {
+    max-width: 100%;
+  }
 }
 
 /* RING BANNER SECTION CSS END */
@@ -1887,6 +1888,10 @@ button.filter-pill-btn:last-child {
 .expert-guidance-section {
   /* padding: 80px 0; */
   text-align: center;
+}
+
+.custom-rings-page .expert-guidance-section {
+  padding: 0;
 }
 
 .expert-guidance-section .container {
@@ -2037,6 +2042,10 @@ button.filter-pill-btn:last-child {
     /* font-size: 15.5px;
     line-height: 18.6px;
     letter-spacing: normal; */
+  }
+
+  .expert-header {
+    padding: 0 15px;
   }
 }
 
@@ -2447,7 +2456,6 @@ section.rc-v2.gemstones {
 }
 
 .rev-v2-card:hover {
-  transform: translateY(-8px);
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.05);
   border-color: var(--cyan_color);
 }

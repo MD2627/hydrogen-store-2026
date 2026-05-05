@@ -33,7 +33,7 @@ export function VideoBanner({
     heading: heading || title || data?.heading || data?.title || '',
     description: description || subtext || data?.description || data?.subtext || '',
     buttonText: buttonText || data?.buttonText || "BOOK AN APPOINTMENT",
-    buttonUrl: buttonUrl || buttonLink || data?.buttonUrl || data?.buttonLink || "/pages/visit"
+    buttonUrl: (buttonUrl || buttonLink || data?.buttonUrl || data?.buttonLink || "/visit").replace('https://hydrogen-store-2026.pages.dev', '')
   };
 
   const {
@@ -174,7 +174,7 @@ export function VideoBanner({
             {h && <h2 className="section-title">{h}</h2>}
             {d && <RichText tag="p" html={d} className="vb-rich-text" />}
             {bT && bU && (
-              <Link to={bU} className="sb-button">
+              <Link to={bU} className="btn">
                 {bT}
               </Link>
             )}

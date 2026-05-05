@@ -71,7 +71,7 @@ export function SplitBanner({
               <div className="sb-actions">
                 <Link
                   to={content.linkTo || content.link || '/collections/all'}
-                  className={`sb-button ${isHovered ? 'hovered' : ''}`}
+                  className={`btn ${isHovered ? 'hovered' : ''}`}
                   onMouseEnter={() => setIsHovered(true)}
                   onMouseLeave={() => setIsHovered(false)}
                 >

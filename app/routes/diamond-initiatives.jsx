@@ -189,12 +189,13 @@ export default function DiamondInitiatives() {
       <section className="initiatives-cta-banner">
         <div className="page-width">
           <div className="cta-wrapper">
+            <div className='story-craft-overlay'></div>
             <div className="cta-image-side">
               <img src={CTA_BANNER_DATA.image} alt="Sustainability" loading="lazy" />
             </div>
             <div className="cta-content-side">
-              <h2 className="cta-heading">{CTA_BANNER_DATA.title}</h2>
-              <a href={CTA_BANNER_DATA.button.link} className="btn-premium">
+              <h2 className="section-title">{CTA_BANNER_DATA.title}</h2>
+              <a href={CTA_BANNER_DATA.button.link} className="btn">
                 {CTA_BANNER_DATA.button.label}
               </a>
             </div>
@@ -205,7 +206,10 @@ export default function DiamondInitiatives() {
       {/* ================= FAQ SECTION ================= */}
       <section className="initiatives-faq-wrap">
         <div className="page-width">
-          <ProductFAQ data={FAQ_DATA} title="Initiatives FAQ" />
+          <ProductFAQ
+            data={FAQ_DATA}
+            title="Diamond Initiatives FAQ"
+            subtitle="Learn more about our approach to ethical sourcing, sustainability, and positive global impact." />
         </div>
       </section>
 
@@ -337,26 +341,26 @@ const PEOPLE_SECTION_DATA = {
 };
 
 const PLANET_PARTNERS_SECTION_DATA = {
-  title: "OUR INITIATIVES FOR THE PLANET:",
+  title: "OUR COMMITMENT TO THE PLANET:",
   points: [
     {
-      title: "Carbon neutral lab grown gemstones",
+      title: "Carbon-neutral lab-grown gemstones",
       description:
-        "Through our carbon offsetting methodology we offset more carbon than what is produced when our lab grown gemstones are made. Learn more about our carbon neutral gemstones",
+        "We go beyond reducing our impact—our process offsets more carbon than is produced during the creation of our lab-grown gemstones. Discover how we’re making a positive environmental difference",
       linkText: "here",
       linkUrl: "/carbon-neutral",
     },
     {
-      title: "One tree planted for every order",
+      title: "One tree planted with every order",
       description:
-        "Trees absorb carbon from the air and turn it into oxygen we can breathe. By planting more of them, we want to reverse the effects of climate change, reforest the Earth, and rescue ecosystems. Through our partnership with",
+        "Trees play a vital role in absorbing carbon and restoring balance to our environment. With every order, we contribute to global reforestation efforts and help rebuild natural ecosystems through our partnership with",
       linkText: "Trees For The Future",
       linkUrl: "https://trees.org/",
       afterLinkText:
-        ", we plant one tree for every order, in Africa, a continent that for generations has been effected by the environmental destruction associated with diamond mining. It's one actionable way we can undo the damage of the mining industry.",
+        ". Together, we plant one tree per order in regions that have been impacted by environmental damage, helping create a more sustainable future for communities and the planet.",
     },
   ],
-  partnersTitle: "PARTNERING WITH:",
+  partnersTitle: "OUR PARTNERS:",
   partners: [
     {
       image:
@@ -368,7 +372,7 @@ const PLANET_PARTNERS_SECTION_DATA = {
 
 const CTA_BANNER_DATA = {
   image:
-    "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/d2ac1da4243ac4f42d18691c8e65b2ba.jpg?v=1776157935",
+    "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Gemini_Generated_Image_fhayrsfhayrsfhay.png?v=1777961254",
   title: "ENGAGEMENT RINGS YOU CAN FEEL GOOD ABOUT.",
   button: {
     label: "BUILD YOUR ENGAGEMENT RING",
@@ -378,9 +382,9 @@ const CTA_BANNER_DATA = {
 
 const FAQ_DATA = [
   {
-    question: "Can I make individual donations to the companies you support?",
+    question: "Can I donate directly to your partner organisations?",
     answer: `
-      <p>This can be done through our partners websites below:</p>
+      <p>Yes, you can support our partner organisations directly through their official websites:</p>
 
       <div class="faq-partner-logos">
         <a href="https://baptistworldaid.org.au/" rel="noopener">
@@ -410,26 +414,24 @@ const FAQ_DATA = [
     `,
   },
   {
-    question: "I'm a not-for-profit organisation, I'd like to work with you.",
+    question: "How can my non-profit organisation partner with you?",
     answer: `
-      Awesome! Please send an email to 
-      <a 
-        href="mailto:contact@hopiant.com" 
-      >
+      We’re always open to meaningful collaborations. Please email us at 
+      <a href="mailto:contact@hopiant.com">
         contact@hopiant.com
-      </a>; 
-      we’d love to chat.
+      </a> 
+      and our team will be happy to connect with you.
     `,
   },
   {
-    question: "Why are mined diamonds harmful to communities?",
+    question: "What impact does traditional diamond mining have?",
     answer:
-      "Diamond mining has many detrimental impacts on communities and the environment. This ranges from deforestation to infrastructure destruction. The mined diamond supply chain also results in conflict and blood diamonds. Beyond that, human rights abuses, violence, and corruption are synonymous with the exploitative mining process.",
+      "Traditional diamond mining can lead to environmental damage such as deforestation and ecosystem disruption. It has also been associated with ethical concerns, including conflict diamonds, unsafe working conditions, and human rights issues. Choosing alternative gemstones helps reduce these impacts.",
   },
   {
-    question: "Where do you plant your trees?",
+    question: "Where are your trees planted?",
     answer:
-      "We plant our trees in Africa. A continent that for generations has been affected by the environmental destruction associated with diamond mining. It's one actionable way we can undo the damage of the mining industry. Learn more about where we plant our trees <a href='/trees'>here</a>.",
+      "Our tree-planting efforts are focused in regions across Africa that have been affected by environmental challenges. This helps restore natural habitats, support local communities, and contribute to a healthier planet. Learn more about our initiative <a href='/trees'>here</a>.",
   },
 ];
 

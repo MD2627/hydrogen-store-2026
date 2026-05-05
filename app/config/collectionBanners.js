@@ -111,10 +111,10 @@ export const COLLECTION_BANNERS = {
     },
     'custom-rings': {
         type: 'image',
-        desktop: 'https://cdn.shopify.com/s/files/1/0801/7317/0906/files/ImageBanner_web_2000x2000_9d45b8a2-bf67-4dbd-9036-dccfed486dfc.png?v=1769086528',
-        mobile: 'https://cdn.shopify.com/s/files/1/0801/7317/0906/files/ImageBanner_mob_2000x2000_3e71f659-7c78-4f63-98f2-e8cf60454b91.png?v=1769086526',
+        desktop: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/pexels-tima-miroshnichenko-6263112.jpg?v=1777971148',
+        mobile: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/pexels-tima-miroshnichenko-6263112.jpg?v=1777971148',
         title: 'Custom Engagement Rings',
-        description: 'Brought to life by our jewellers.'
+        description: 'Expertly crafted and brought to life by our master jewellers.'
     },
     'careers': {
         type: 'image',

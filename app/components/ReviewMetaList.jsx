@@ -8,8 +8,8 @@ function ReviewCard({ review, index }) {
     return (
         <div className={`rev-v2-card rev-v2-item rev-v2-item-list`}>
             <div className="rev-v2-item-header">
-                <div 
-                    className="rev-v2-avatar" 
+                <div
+                    className="rev-v2-avatar"
                     style={{ backgroundColor: getAvatarColor(review.initial) }}
                 >
                     {review.initial}
@@ -22,9 +22,9 @@ function ReviewCard({ review, index }) {
                     {"★".repeat(review.rating)}
                 </div>
             </div>
-            
+
             <div className="rev-v2-item-content">
-                <p 
+                <p
                     className={!isExpanded && isLongText ? 'line-clamp-3' : ''}
                     onClick={() => isLongText && setIsExpanded(!isExpanded)}
                     style={{ cursor: isLongText ? 'pointer' : 'default' }}
@@ -32,13 +32,13 @@ function ReviewCard({ review, index }) {
                     "{review.text}"
                 </p>
                 {isLongText && (
-                    <button 
+                    <button
                         className="rev-v2-read-more"
                         onClick={() => setIsExpanded(!isExpanded)}
-                        style={{ 
-                            background: 'none', 
-                            border: 'none', 
-                            padding: 0, 
+                        style={{
+                            background: 'none',
+                            border: 'none',
+                            padding: 0,
                             marginTop: '8px',
                             fontSize: '12px',
                             color: 'var(--cyan_color)',
@@ -105,13 +105,13 @@ export default function ReviewMetaList({ reviews = [] }) {
                                 </div>
                             </div>
                             <p className="rev-v2-count">Trusted by over {summary.count} customers for our quality and service.</p>
-                            
+
                             <div className="rev-v2-actions">
-                                <a 
+                                <a
                                     href={googleReviewLink}
                                     target="_blank"
                                     rel="noreferrer"
-                                    className="rev-v2-btn-primary sb-button"
+                                    className="rev-v2-btn-primary btn"
                                 >
                                     WRITE A REVIEW
                                 </a>

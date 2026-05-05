@@ -619,7 +619,7 @@ export default function Homepage() {
         const heading = getField('banner_heading')?.value || 'Heirloom in the Making';
         const description = getField('banner_description')?.value || 'A handcrafted piece whose story begins with you.';
         const buttonText = getField('banner_button')?.value || 'Explore Bezels';
-        const buttonUrl = getField('banner_button_url')?.value || '/pages/visit';
+        const buttonUrl = getField('banner_button_url')?.value || '/visit';
 
         // console.log('Video URL Conversion:', {
         //   desktopVideoLong,

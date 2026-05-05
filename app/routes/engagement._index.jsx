@@ -794,7 +794,7 @@ const COLLECTION_CONTENT_SECTION = {
         {
             heading: "THE Diamond DIFFERENCE",
             paragraphs: [
-                `<strong>Worldwide Express Shipping</strong> No matter where you are in the world, your dream ring will go the distance. We proudly ship our wedding and engagement rings across the United States and internationally, ensuring your ready-to-ship engagement ring arrives safely and swiftly.`,
+                `<strong>Worldwide Express Shipping</strong> Wherever you are, we ensure your ring arrives quickly and securely with global shipping across the <a href="/shipping" class="fancy">US and internationally</a>.`,
                 `<strong>Free Resizing</strong> We offer <a href="/free-resizing" class="fancy">free resizing</a> on all engagement rings to ensure the perfect fit, whether you've chosen one of our ready-to-ship engagement rings or something uniquely your own.`,
                 `<strong>Lifetime Warranty</strong> Our engagement rings are built to last a lifetime. Each piece is backed by our lifetime manufacturing <a href="/warranty" class="fancy">warranty</a>, giving you complete peace of mind.`,
                 `<strong>Free Ring Customization</strong> From unique engagement ring designs to personalized band details, we offer complimentary customization so you can craft a ring that's truly one of a kind.`,

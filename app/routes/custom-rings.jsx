@@ -53,18 +53,21 @@ export default function DiamondInitiatives() {
 
             {/* Our Approach Sezction */}
             <section className="our-approach-section">
-                <div className="container">
-                    <h2>Our Approach</h2>
-                    <p>An engagement ring is a personal promise of love and commitment. Your design is an expression and symbol of your story.</p>
-                    <p>With this in mind, we believe the design process should be a personal one — a collaboration between you and our design team from start to finish. </p>
-                    <p>Consultations are complimentary, and there are no customization fees. Our engagement ring specialists work with you to blend responsibly sourced lab-grown stones with timeless design to bring your piece to life.</p>
+                <div className="page-width">
+                    <div className='our-approach'>
+                        <h2 className='section-title'>Our Approach</h2>
+                        <p className='sb-description'>An engagement ring is a deeply personal symbol of love and commitment an expression of your unique story.</p>
+                        <p className='sb-description'>That’s why we believe the design journey should be just as meaningful. From concept to creation, we work closely with you to craft a piece that reflects your vision.</p>
+                        <p className='sb-description'>All consultations are complimentary, with no additional customisation fees. Our specialists combine responsibly sourced lab-grown stones with timeless design to bring your ring to life.</p>
+                    </div>
                 </div>
             </section>
 
             <section className="custom-design-journey">
-                <div className="container">
-                    <h2 className="section-title">The Custom Design Journey</h2>
-                    {isMobile ? (
+                {/* <div className="page-width"> */}
+                {isMobile ? (
+                    <>
+                        <h2 className="section-title mobile-title">The Custom Design Process</h2>
                         <div className="journey-slider-wrapper">
                             <button className="custom-prev-arrow" ref={prevRef}>
                                 <svg viewBox="0 0 16.933 16.933" width="16" height="16"><path d="m11.641 2.117-6.35 6.35 6.35 6.35" fill="none" stroke="currentColor" strokeWidth="1.05831" strokeLinecap="round" strokeLinejoin="round" /></svg>
@@ -105,41 +108,43 @@ export default function DiamondInitiatives() {
                                 </Swiper>
                             </div>
                         </div>
-                    ) : (
-                        <>
-                            <div className="journey-tabs">
-                                {DESIGN_TABS.map((tab) => (
-                                    <div className="journey-tab-wrapper" key={tab.id}>
-                                        <button
-                                            className={`journey-tab ${activeTab.id === tab.id ? 'active' : ''}`}
-                                            onClick={() => setActiveTab(tab)}
-                                        >
-                                            <img src={tab.image} alt={tab.label} />
-                                            <span>{tab.label}</span>
-                                        </button>
-                                        <div className="icon">
-                                            <svg viewBox="0 0 16.933 16.933" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path d="M15.875 8.466H1.058M5.292 4.233 1.058 8.466 5.292 12.7" className="stroke" transform="rotate(180 8.466 8.466)" style={{ fill: 'none', stroke: 'rgb(0, 0, 0)', 'strokeWidth': '1.05831', 'strokeLinecap': 'round', 'strokeLinejoin': 'round', 'strokeMiterlimit': '4', 'strokeDasharray': 'none', 'strokeOpacity': '1' }}></path></svg>
-                                        </div>
+                    </>
+                ) : (
+                    <div className="page-width">
+                        <h2 className="section-title">The Custom Design Process</h2>
+                        <div className="journey-tabs">
+                            {DESIGN_TABS.map((tab) => (
+                                <div className="journey-tab-wrapper" key={tab.id}>
+                                    <button
+                                        className={`journey-tab ${activeTab.id === tab.id ? 'active' : ''}`}
+                                        onClick={() => setActiveTab(tab)}
+                                    >
+                                        <img src={tab.image} alt={tab.label} />
+                                        <span>{tab.label}</span>
+                                    </button>
+                                    <div className="icon">
+                                        <svg viewBox="0 0 16.933 16.933" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path d="M15.875 8.466H1.058M5.292 4.233 1.058 8.466 5.292 12.7" className="stroke" transform="rotate(180 8.466 8.466)" style={{ fill: 'none', stroke: 'rgb(0, 0, 0)', 'strokeWidth': '1.05831', 'strokeLinecap': 'round', 'strokeLinejoin': 'round', 'strokeMiterlimit': '4', 'strokeDasharray': 'none', 'strokeOpacity': '1' }}></path></svg>
                                     </div>
-                                ))}
+                                </div>
+                            ))}
+                        </div>
+
+                        <div className="journey-content">
+                            <div className="journey-image">
+                                <img src={activeTab.image} alt={activeTab.label} />
                             </div>
 
-                            <div className="journey-content">
-                                <div className="journey-image">
-                                    <img src={activeTab.image} alt={activeTab.label} />
-                                </div>
-
-                                <div className="journey-text">
-                                    <h3>{activeTab.title}</h3>
-                                    <p>{activeTab.description}</p>
-                                </div>
+                            <div className="journey-text">
+                                <h3>{activeTab.title}</h3>
+                                <p>{activeTab.description}</p>
                             </div>
-                        </>
-                    )}
-                </div>
+                        </div>
+                    </div>
+                )}
+                {/* </div> */}
             </section>
 
-            <section className="our-jewellers-section">
+            {/* <section className="our-jewellers-section">
                 <div className="our-jewellers-inner">
                     <h2 className="our-jewellers-title">{data.jewellersData.title}</h2>
                     <div className='border-line'></div>
@@ -156,7 +161,7 @@ export default function DiamondInitiatives() {
                         />
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             <RingBanner
                 image={customRingsBannerData.image}
@@ -167,12 +172,15 @@ export default function DiamondInitiatives() {
                 buttonLink={customRingsBannerData.buttonLink}
             />
 
-            <div className="contact-form-title--ring">
-                <h2 class="our-jewellers-title">Our Approach</h2>
-                <div class="border-line"></div>
-                <p class="our-jewellers-subtitle">Fill out the form below and one of our custom ring experts will be in touch with you.</p>
-            </div>
-            <ContactForm />
+            <section className='contact-form-section'>
+                <div className='page-width'>
+                    <div className="contact-form-title--ring">
+                        <h2 class="section-title">Our Approach</h2>
+                        <p class="sb-description">Fill out the form below and one of our custom ring experts will be in touch with you.</p>
+                    </div>
+                    <ContactForm />
+                </div>
+            </section>
 
             <ExpertGuidance articles={EXPERT_GUIDANCE_ARTICLES} />
 
@@ -197,49 +205,49 @@ const BANNER_DATA = {
 const DESIGN_TABS = [
     {
         id: 1,
-        label: 'INITIAL CONSULTATION',
-        title: '01. Initial Consultation',
+        label: 'DISCOVERY CONSULTATION',
+        title: '01. Discovery Consultation',
         description:
-            'Bring your inspiration and imagination, and collaborate with our expert client advisors. Start with an existing design, or create something completely new, whatever truly represents you. Our custom design experts then send a quote based on your design ideas, precious metal type and other gemstones you may wish to incorporate.',
-        image: 'https://cdn.shopify.com/s/files/1/0801/7317/0906/files/01._Initial_Consultation_700x700_854897de-7667-41e7-ada1-3871fd94ef87.jpg?v=1769163447',
+            'Share your ideas, inspirations, and vision with our expert advisors. Whether you start from an existing design or create something entirely unique, we’ll guide you through every possibility. Based on your preferences, materials, and selected gemstones, we’ll provide a personalised quote tailored to your design.',
+        image: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Diamond_Jewellery_London_153_1a_retouched_high_res_2000x2000_955a3419-44fe-4982-a8b6-5ca4c5c7dd18.webp?v=1777283263',
     },
     {
         id: 2,
-        label: 'SELECTING A STONE',
-        title: '02. Selecting a Stone',
+        label: 'CHOOSE YOUR STONE',
+        title: '02. Choose Your Stone',
         description:
-            'Our team will guide you through the world of gemstones to pick out the perfect stone that matches your style and budget. Whether you choose a carbon-neutral lab-grown diamond, sapphire or moissanite, we have you covered with all shapes, sizes and colours.',
-        image: 'https://cdn.shopify.com/s/files/1/0801/7317/0906/files/02._Selecting_A_Stone_700x700_a76cdd1d-3a57-4def-97fb-811df7990e2d.jpg?v=1769163447',
+            'Explore a curated selection of gemstones with guidance from our specialists. From carbon-neutral lab-grown diamonds to sapphires and moissanite, we help you find the perfect stone to match your style, values, and budget available in a range of shapes, sizes, and colours.',
+        image: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/6207b1bc531d5ace3d3bced2a7bd5e51.jpg?v=1777972497',
     },
     {
         id: 3,
-        label: 'DESIGNING YOUR RING',
-        title: '03. Designing Your Ring',
+        label: 'DESIGN & VISUALISE',
+        title: '03. Design & Visualise',
         description:
-            'After finalising your design and placing an order, we will visualise your custom ring with a Computer-Aided Design to ensure every detail is perfect, down to the millimetre. This uses the exact ring and gemstone measurements for a seamless fit. Work with our custom design experts to make any desired changes and approve the design before we move on to crafting.',
-        image: 'https://cdn.shopify.com/s/files/1/0801/7317/0906/files/03._Designing_Your_Ring_700x700_43bcd582-d2a7-472f-a990-c5ae39200d9a.jpg?v=1769163446',
+            'Once your concept is finalised, we create a detailed Computer-Aided Design (CAD) of your ring. This allows you to review every detail with precision and make any adjustments before production. Your approval ensures the final piece is exactly as you envisioned.',
+        image: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/b2473d66f964180e38ee574b8e6c7ad6.jpg?v=1777438991',
     },
     {
         id: 4,
-        label: 'CRAFTING YOUR RING',
-        title: '04. Crafting Your Ring',
+        label: 'CRAFT & DELIVERY',
+        title: '04. Craft & Delivery',
         description:
-            'Once you have approved the design and every aspect is to your preference, our in-house jewelers will begin crafting your ring. From the initial casting all the way up to final quality control checks at 50x magnification, your ring will be completed in 8-10 weeks. Once finished, you can pick up your ring in one of our showrooms, or we can deliver it directly to your door in discreet packaging worldwide.',
-        image: 'https://cdn.shopify.com/s/files/1/0801/7317/0906/files/04._Crafting_Your_Ring_700x700_b3604c0c-69fd-42e7-bfb2-ba6dd142e4ec.jpg?v=1769163446',
+            'After approval, our skilled jewellers begin crafting your ring with exceptional attention to detail. From casting to final quality checks under magnification, every step is carefully managed. Your finished ring will be ready within 8–10 weeks, available for showroom collection or secure worldwide delivery.',
+        image: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/d208a96e7ac3ef9c3d2ea2137fa76487.jpg?v=1777972591',
     },
 ];
 
 const JEWELLERS_DATA = {
     title: 'Our Jewellers',
     subtitle: 'Your story, our craft.',
-    videoUrl: "https://www.youtube.com/embed/r7P08zf1h4w?si=ly1LGjizw5GkxJ_6"
+    videoUrl: ""
 };
 
 const customRingsBannerData = {
-    title: 'Need help finding the perfect ring?',
-    subtitle: 'Book a time to visit our showroom to get assisted or book a virtual appointment no matter where you are!',
-    image: 'https://cdn.shopify.com/s/files/1/0801/7317/0906/files/IMG_0378-2_jpg_2000x2000_331c0df2-17e7-4119-9975-3a252a19c8f7.png?v=1769249858',
-    mobileImage: 'https://cdn.shopify.com/s/files/1/0801/7317/0906/files/IMG_0378-2_jpg_2000x2000_331c0df2-17e7-4119-9975-3a252a19c8f7.png?v=1769249858',
+    title: 'Find Your Perfect Ring with Expert Guidance',
+    subtitle: 'Visit our showroom or book a virtual consultation—wherever you are, our specialists are here to help you every step of the way.',
+    image: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Gemini_Generated_Image_n7n7zbn7n7zbn7n7-clean.png?v=1777641165',
+    mobileImage: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Gemini_Generated_Image_n7n7zbn7n7zbn7n7-clean.png?v=1777641165',
     buttonLink: '/visit',
     buttonText: 'BOOK APPOINTMENT',
 };
@@ -321,17 +329,17 @@ const OUR_STORY_UVPS = [
 const EXPERT_GUIDANCE_ARTICLES = [
     {
         title: "HOW MUCH DOES IT COST TO MAKE A CUSTOM ENGAGEMENT RING",
-        link: "/education/engagement-ring-guidance/how-much-does-it-cost-to-make-a-custom-engagement-ring",
-        image: "https://cdn.shopify.com/s/files/1/0801/7317/0906/files/How_Much_Does_It_Cost_700x700_3a28a5db-be18-474b-910c-58228edfb0fe.jpg?v=1769259509"
+        link: "/",
+        image: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Diamond_Website_4x5_2500px_011_400x400_aa518dde-787a-464d-96dd-0c990dd2ca06.webp?v=1777280433"
     },
     {
         title: "OUR FAVOURITE WAYS TO CUSTOMISE MEN'S WEDDING BANDS",
-        link: "/education/wedding-band-guidance/men-s-wedding-band-customisation",
-        image: "https://cdn.shopify.com/s/files/1/0801/7317/0906/files/Our_Favourite_Ways_to_700x700_320272be-acdc-4c8e-9646-e3cd6cd417fd.jpg?v=1769259507"
+        link: "/",
+        image: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Diamond_Peter_4x5_02_600x600_9bfad6f1-6164-4592-9ee3-31c50144112a.webp?v=1777282936"
     },
     {
         title: "THE CUSTOM ENGAGEMENT RING DESIGN PROCESS",
-        link: "/education/engagement-ring-guidance/custom-engagement-ring-process",
-        image: "https://cdn.shopify.com/s/files/1/0801/7317/0906/files/The_Custom_Engagement_RIng_700x700_226eb053-5f5e-40db-9828-9802d58c0dfa.jpg?v=1769259509"
+        link: "/",
+        image: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/d208a96e7ac3ef9c3d2ea2137fa76487.jpg?v=1777972591"
     }
 ];

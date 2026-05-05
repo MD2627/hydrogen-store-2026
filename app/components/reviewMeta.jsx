@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router';
 
-export default function ReviewMeta({ reviews = [] }) {
+export default function ReviewMeta({ reviews = [], all = false }) {
 
     // Summary data
     const summary = {
@@ -13,8 +13,12 @@ export default function ReviewMeta({ reviews = [] }) {
 
     if (!reviews || reviews.length === 0) return null;
 
-    // Take top 6 reviews for a complete bento grid
-    const displayReviews = reviews.slice(0, 6);
+    let displayReviews;
+    if (!all) {
+        displayReviews = reviews.slice(0, 6);
+    } else {
+        displayReviews = reviews;
+    }
 
     return (
         <section className="rev-v2">
@@ -35,7 +39,7 @@ export default function ReviewMeta({ reviews = [] }) {
                             </div>
                             <p className="rev-v2-count">Trusted by over {summary.count} couples worldwide.</p>
                             <div className="rev-v2-actions">
-                                <Link to="/reviews" className="rev-v2-btn-primary sb-button">View All Stories</Link>
+                                <Link to="/reviews" className="rev-v2-btn-primary btn">View All Stories</Link>
                                 <a
                                     href="https://www.google.com/search?q=diamond+Jewellery"
                                     target="_blank"

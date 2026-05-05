@@ -34,15 +34,19 @@ export function ExpertGuidance({ articles }) {
 
     return (
         <section className="expert-guidance-section">
-            <div className="page-width">
-                <div className="expert-header">
+            {/* <div className="page-width"> */}
+            {/* <div className="expert-header">
                     <h2 className='section-title'>Expert Advice</h2>
-                    {/* <div className="border-line"></div> */}
                     <p className='sb-description'>Helping you choose and purchase the perfect ring with confidence.</p>
-                </div>
+                </div> */}
 
 
-                {!isTablet ? (
+            {!isTablet ? (
+                <div className="page-width">
+                    <div className="expert-header">
+                        <h2 className='section-title'>Expert Advice</h2>
+                        <p className='sb-description'>Helping you choose and purchase the perfect ring with confidence.</p>
+                    </div>
                     <div className="expert-grid">
                         {articles.map((article, index) => (
                             <Link to={article.link} key={index} className="expert-card">
@@ -58,7 +62,13 @@ export function ExpertGuidance({ articles }) {
                             </Link>
                         ))}
                     </div>
-                ) : (
+                </div>
+            ) : (
+                <>
+                    <div className="expert-header">
+                        <h2 className='section-title'>Expert Advice</h2>
+                        <p className='sb-description'>Helping you choose and purchase the perfect ring with confidence.</p>
+                    </div>
                     <div className="expert-slider" style={{ position: 'relative' }}>
                         {/* <button
                             className="custom-prev-arrow"
@@ -93,8 +103,9 @@ export function ExpertGuidance({ articles }) {
                             ))}
                         </div>
                     </div>
-                )}
-            </div>
+                </>
+            )}
+            {/* </div> */}
         </section>
     );
 }
