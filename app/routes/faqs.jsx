@@ -27,63 +27,60 @@ export default function Faqs() {
       behavior: 'smooth',
     });
   };
+
   return (
-    <>
-      <div className="faq-page page-width">
-        <section className="txt-center shop-by-style-header">
-          <h2>
-            Faqs
-          </h2>
-          <p className="main-sub-heading">
-            If you have any questions at all that we do not cover below please
-            get in touch via our{' '}
-            <Link className="fancy" to="/contact">
-              Contact
-            </Link>{' '}
-            page.
-          </p>
+    <div className="faq-page-v3">
+      <StoryCraftBanner
+        imageSrc="https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Thanasi_Home_Page_Select_Final-1_1600x1600.jpg?v=1767837146"
+        title="Frequently Asked Questions"
+        subtitle="Your journey to the perfect piece, guided by expert care."
+        h1={true}
+      />
 
-          <div className="banner-faq-content">
-            <button
-              className="btn"
-              onClick={() => scrollToSection('faq-two')}
-            >
-              Lab Grown Diamond FAQs
-            </button>
-
-            <button
-              className="btn"
-              onClick={() => scrollToSection('faq-three')}
-            >
-              Moissanite FAQs
-            </button>
-
-          </div>
-        </section>
-        <div id="faq-one" className="faq-section">
-          <ProductFAQ data={PAGE_FAQ_ONE} title="Client Care" />
+      <section className="faq-sticky-nav-bar">
+        <div className="faq-navigation-pills page-width">
+          <button onClick={() => scrollToSection('faq-one')} className="pill-btn">Client Care</button>
+          <button onClick={() => scrollToSection('faq-two')} className="pill-btn">Lab Diamonds</button>
+          <button onClick={() => scrollToSection('faq-three')} className="pill-btn">Moissanite</button>
+          <button onClick={() => scrollToSection('faq-four')} className="pill-btn">Sapphires</button>
         </div>
+      </section>
 
-        <div id="faq-two" className="faq-section">
-          <ProductFAQ data={PAGE_FAQ_TWO} title="Lab Diamonds" />
-        </div>
+      <ProductFAQ
+        id="faq-one"
+        data={PAGE_FAQ_ONE}
+        title="Client Care"
+        subtitle="Support for your purchase and delivery."
+      />
 
-        <div id="faq-three" className="faq-section">
-          <ProductFAQ data={PAGE_FAQ_THREE} title="Moissanite" />
-        </div>
+      <ProductFAQ
+        id="faq-two"
+        data={PAGE_FAQ_TWO}
+        title="Lab Diamonds"
+        subtitle="Everything you need to know about eco-friendly brilliance."
+      />
 
-        <div id="faq-four" className="faq-section">
-          <ProductFAQ data={PAGE_FAQ_FOUR} title="Sapphires" />
-        </div>
+      <ProductFAQ
+        id="faq-three"
+        data={PAGE_FAQ_THREE}
+        title="Moissanite"
+        subtitle="Dazzling alternatives with unmatched fire."
+      />
 
-      </div>
+      <ProductFAQ
+        id="faq-four"
+        data={PAGE_FAQ_FOUR}
+        title="Sapphires"
+        subtitle="Timeless elegance in every vibrant hue."
+      />
+
       <UvpIconFooter data={OUR_STORY_UVPS} />
-    </>
+    </div>
   );
 }
 
 
-const PRODUCT_FAQ = [
+const PAGE_FAQ_ONE = [
   {
     question: 'How long does it take to receive my order?',
     answer: `

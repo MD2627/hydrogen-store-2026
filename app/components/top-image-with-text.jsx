@@ -24,7 +24,7 @@ export function TopImageWithText({ data }) {
                                     {item.AddSteps}.
                                 </span> {item.title}
                             </h2>
-                            {item.subtitle && <h3 className="top-image-with-text__subtitle ff-c f-13 f-m-15 w-300">{item.subtitle}</h3>}
+                            {item.subtitle && <h3 className="section-subtitle">{item.subtitle}</h3>}
                             {item.description && <p className="top-image-with-text__description ff-c f-13 f-m-15 w-300">{item.description}</p>}
                             {item.buttonText && item.buttonUrl && (
                                 <Link to={item.buttonUrl} className="btn top-image-with-text__button">

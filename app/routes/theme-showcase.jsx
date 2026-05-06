@@ -60,7 +60,7 @@ const PRESETS = [
     },
     {
         label: "Visit Us",
-        img: "https://cdn.shopify.com/s/files/1/0644/3067/0060/files/initiatives_image_1000x1000.jpg?v=1759807949",
+        img: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Diamond_Jewellery_London_153_1a_retouched_high_res_2000x2000_955a3419-44fe-4982-a8b6-5ca4c5c7dd18.webp?v=1777283263",
         url: "/visit"
     },
     {
@@ -76,9 +76,9 @@ const TABS = ["Overview", "What's Included", "Reviews", "Page Varieties"];
 
 function Stars({ count = 5, filled = 5 }) {
     return (
-        <span style={{ color: "#ffb800", fontSize: 13, letterSpacing: 1 }}>
+        <span className="stars-wrap">
             {Array.from({ length: count }, (_, i) => (
-                <span key={i} style={{ opacity: i < filled ? 1 : 0.25 }}>★</span>
+                <span key={i} className={`star-icon ${i < filled ? 'filled' : 'empty'}`}>★</span>
             ))}
         </span>
     );
@@ -103,9 +103,9 @@ function StickyNav({ activeTab, setActiveTab, onTryTheme, stuck }) {
     };
 
     return (
-        <div className="sticky-nav-wrap" style={{ transform: stuck ? "translateY(0)" : "translateY(100%)" }}>
+        <div className={`sticky-nav-wrap ${stuck ? 'stuck' : 'hidden'}`}>
             <div className="sticky-nav-inner">
-                <div style={{ display: "flex", gap: 4, alignItems: "center" }}>
+                <div className="sticky-nav-tabs">
                     {TABS.map((t) => (
                         <button
                             key={t}
@@ -116,11 +116,7 @@ function StickyNav({ activeTab, setActiveTab, onTryTheme, stuck }) {
                         </button>
                     ))}
                 </div>
-                {/* <div style={{ display: "flex", gap: 12 }}>
-                    <a href="/" className="btn btn--outline">View demo</a>
-                    <button onClick={onTryTheme} className="btn">Try theme</button>
-                </div> */}
-                <div style={{ display: "flex", gap: 12 }}>
+                <div className="sticky-nav-cta">
                     <a href="/" className="btn btn--outline sticky-nav-view-demo">View demo</a>
                     <button onClick={onTryTheme} className="btn">Try theme</button>
                 </div>
@@ -147,19 +143,15 @@ export default function ThemeShowcase() {
         <div className="theme-showcase-page">
             {/* ── HERO ── */}
             <section id="overview" className="hero-section">
-                <div style={{ width: "100%", maxWidth: 1240, margin: "0 auto", textAlign: 'left' }}>
-                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 60 }}>
+                <div className="page-width">
+                    <div className="hero-header-top">
                         <div>
-                            <h1 className="hero-title">Hydrogen</h1>
-                            <p className="hero-sub">
+                            <h1 className="page-banner-title">Hydrogen</h1>
+                            <p className="sb-description">
                                 Unlock the power of image-focused design and super flexible layouts
                             </p>
                         </div>
-                        {/* <div style={{ display: "flex", gap: 12, marginTop: 4 }}>
-                            <button onClick={() => setShowTryTheme(true)} className="btn">Try theme</button>
-                            <a href="/" className="btn btn--outline">View demo</a>
-                        </div> */}
-                        <div style={{ display: "flex", gap: 12, marginTop: 4 }} className="hero-cta-row">
+                        <div className="hero-cta-row">
                             <button onClick={() => setShowTryTheme(true)} className="btn">Try theme</button>
                             <a href="/" className="btn btn--outline">View demo</a>
                         </div>
@@ -167,11 +159,11 @@ export default function ThemeShowcase() {
                     <div className="feature-grid">
                         {FEATURES_HIGHLIGHTS.map((f, i) => (
                             <div key={i} className="feature-column" onClick={() => setPopupImg(f.img)}>
-                                <div className="card-img-wrap" style={{ marginBottom: 16 }}>
+                                <div className="card-img-wrap feature-img-mb">
                                     <img src={f.img} alt={f.title} />
                                 </div>
-                                <h3 style={{ fontSize: 18, fontWeight: 700, marginBottom: 8, fontFamily: 'var(--font_family_n)' }}>{f.title}</h3>
-                                <p style={{ fontSize: 14, color: "#666", lineHeight: 1.5 }}>{f.desc}</p>
+                                <h3 className="feature-highlight-title">{f.title}</h3>
+                                <p className="sb-description">{f.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -195,12 +187,12 @@ export default function ThemeShowcase() {
 
             {/* ── WHAT'S INCLUDED ── */}
             <section id="what's-included" className="showcase-section">
-                <div className="section-container">
-                    <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 40 }}>
-                        <span style={{ fontSize: 28 }}>✦</span>
-                        <h2 className="section-title" style={{ marginBottom: 0 }}>What's included</h2>
+                <div className="page-width">
+                    <div className="section-header-row">
+                        <span className="section-icon">✦</span>
+                        <h2 className="section-title no-margin">What's included</h2>
                     </div>
-                    <div className="feature-grid" style={{ gridTemplateColumns: "repeat(5, 1fr)" }}>
+                    <div className="feature-grid five-cols">
                         {Object.entries(FEATURES_LIST).map(([cat, items]) => (
                             <div key={cat} className="feature-column">
                                 <h4 className="feature-category">{cat}</h4>
@@ -217,41 +209,40 @@ export default function ThemeShowcase() {
 
             {/* ── REVIEWS ── */}
             <section id="reviews" className="showcase-section">
-                <div className="section-container">
-                    <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 40 }}>
+                <div className="page-width">
+                    <div className="section-header-row">
                         <Stars count={5} filled={5} />
-                        <h2 className="section-title" style={{ marginBottom: 0 }}>Verified Performance</h2>
+                        <h2 className="section-title no-margin">Verified Performance</h2>
                     </div>
                     <div className="feature-grid">
                         <div className="feature-column">
-                            <p style={{ fontSize: 42, fontWeight: 700, fontFamily: 'var(--font_family_n)', color: 'var(--primary_color)' }}>99/100</p>
-                            <p style={{ color: "#666", fontWeight: 600 }}>Lighthouse Speed Score</p>
+                            <p className="performance-stat">99/100</p>
+                            <p className="performance-label">Lighthouse Speed Score</p>
                         </div>
                         <div className="feature-column">
-                            <p style={{ fontSize: 42, fontWeight: 700, fontFamily: 'var(--font_family_n)', color: 'var(--primary_color)' }}>0.2s</p>
-                            <p style={{ color: "#666", fontWeight: 600 }}>Largest Contentful Paint</p>
+                            <p className="performance-stat">0.2s</p>
+                            <p className="performance-label">Largest Contentful Paint</p>
                         </div>
                         <div className="feature-column">
-                            <p style={{ fontSize: 42, fontWeight: 700, fontFamily: 'var(--font_family_n)', color: 'var(--primary_color)' }}>100%</p>
-                            <p style={{ color: "#666", fontWeight: 600 }}>Core Web Vitals Pass</p>
+                            <p className="performance-stat">100%</p>
+                            <p className="performance-label">Core Web Vitals Pass</p>
                         </div>
                     </div>
                 </div>
             </section>
 
             {/* ── PAGE VARIETIES ── */}
-            <section id="page-varieties" className="showcase-section" style={{ background: "var(--gray_color)" }}>
-                <div className="section-container">
-                    <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 40 }}>
-                        <span style={{ fontSize: 28, color: 'var(--primary_color)' }}>◎</span>
+            <section id="page-varieties" className="showcase-section bg-gray">
+                <div className="page-width">
+                    <div className="section-header-row">
                         <div>
-                            <h2 className="section-title" style={{ marginBottom: 4 }}>Page Varieties</h2>
-                            <p style={{ fontSize: 14, color: "#666", margin: 0 }}>Explore specialized templates for every customer journey</p>
+                            <h2 className="section-title showcase-mb-4">Page Varieties</h2>
+                            <p className="sb-description">Explore specialized templates for every customer journey</p>
                         </div>
                     </div>
                     <div className="presets-row">
                         {PRESETS.map((p) => (
-                            <a key={p.label} href={p.url} className="feature-column" style={{ textDecoration: 'none' }}>
+                            <a key={p.label} href={p.url} className="feature-column no-underline">
                                 <div className="card-img-wrap">
                                     <img src={p.img} alt={p.label} />
                                 </div>

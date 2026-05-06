@@ -32,19 +32,17 @@ export default function OrderStatus() {
             <StoryCraftBanner
                 imageSrc="https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Viewing_Ring_In_Appointment_2000x2000.jpg?v=1740090200"
                 title="Order Status"
-                subtitle="Request an update on your recent order."
+                subtitle="Get an update on your recent order."
                 extraClass="story-craft-banner--order-status"
             />
 
-            <section className="order-status-content-section" style={{ padding: '60px 0' }}>
+            <section className="order-status-content-section">
                 <div className="page-width">
                     <div className="contact-form-title--ring">
-                        <h2 className="our-jewellers-title">
-                            Request Your Order Status
+                        <h2 className="section-title">
+                            Check Your Order Status
                         </h2>
-                        <p className="our-jewellers-subtitle">
-                            Please enter your details below to receive the latest update on your Diamond Jewellery order. You will receive an email within 24 hours updating you on the progress of your order.
-                        </p>
+                        <p className="sb-description">Fill in your details below and we’ll send you an update on your order within 24 hours.</p>
                     </div>
                     <ContactForm mode="order-status" />
                 </div>

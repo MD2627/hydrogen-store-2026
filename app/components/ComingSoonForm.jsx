@@ -83,9 +83,9 @@ export function ComingSoonForm({ cityName }) {
                     </p>
                 </div>
 
-                <form className="contact-form new-contact-form" onSubmit={handleSubmit}>
-                    <div className="form-row contact-grid-wrapper">
-                        <div className="form-group contact-grid contact-grid-number">
+                <form className="contact-form coming-soon-form" onSubmit={handleSubmit}>
+                    <div className="contact-grid-wrapper">
+                        <div className="contact-grid">
                             <label htmlFor="firstName">YOUR FIRST NAME *</label>
                             <input
                                 id="firstName"
@@ -97,7 +97,7 @@ export function ComingSoonForm({ cityName }) {
                                 onChange={handleChange}
                             />
                         </div>
-                        <div className="form-group contact-grid contact-grid-number">
+                        <div className="contact-grid">
                             <label htmlFor="lastName">YOUR LAST NAME *</label>
                             <input
                                 id="lastName"
@@ -111,89 +111,82 @@ export function ComingSoonForm({ cityName }) {
                         </div>
                     </div>
 
-                    <div className="form-row">
-                        <div className="form-group full-width">
-                            <label htmlFor="email">YOUR EMAIL *</label>
+                    <div className="contact-full">
+                        <label htmlFor="email">YOUR EMAIL *</label>
+                        <input
+                            id="email"
+                            type="email"
+                            name="email"
+                            value={form.email}
+                            placeholder="Your Email"
+                            required
+                            onChange={handleChange}
+                        />
+                    </div>
+
+                    <div className="contact-full">
+                        <label htmlFor="phone">YOUR PHONE NUMBER *</label>
+                        <div className="phone-input-wrapper">
+                            <div
+                                className="country-flag-select"
+                                onClick={() => setShowCountryDropdown(!showCountryDropdown)}
+                            >
+                                <img
+                                    src={selectedCountry.image}
+                                    alt={selectedCountry.code}
+                                    className="country-flag-icon"
+                                />
+                                <span className="country-code">{selectedCountry.code}</span>
+
+                                {showCountryDropdown && (
+                                    <div className="country-dropdown-list">
+                                        {countryCodes.map((country) => (
+                                            <div
+                                                key={country.code}
+                                                className="country-dropdown-item"
+                                                onClick={(e) => {
+                                                    e.stopPropagation();
+                                                    handleCountrySelect(country);
+                                                }}
+                                            >
+                                                <img
+                                                    src={country.image}
+                                                    alt={country.code}
+                                                    className="country-flag-icon"
+                                                />
+                                                {country.code} ({country.dial_code})
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
+                            </div>
+                            <span className="phone-prefix">{selectedCountry.dial_code}</span>
                             <input
-                                id="email"
-                                type="email"
-                                name="email"
-                                value={form.email}
-                                placeholder="Your Email"
+                                id="phone"
+                                type="tel"
+                                name="phone"
+                                value={form.phone}
+                                placeholder="(201) 555-0123"
                                 required
                                 onChange={handleChange}
                             />
                         </div>
                     </div>
 
-                    <div className="form-row">
-                        <div className="form-group full-width">
-                            <div className="phone-input-wrapper">
-                                <div
-                                    className="country-flag-select"
-                                    onClick={() => setShowCountryDropdown(!showCountryDropdown)}
-                                >
-                                    <img
-                                        src={selectedCountry.image}
-                                        alt={selectedCountry.code}
-                                        className="country-flag-icon"
-                                    />
-                                    <span className="country-code">{selectedCountry.code}</span>
-
-                                    {showCountryDropdown && (
-                                        <div className="country-dropdown-list">
-                                            {countryCodes.map((country) => (
-                                                <div
-                                                    key={country.code}
-                                                    className="country-dropdown-item"
-                                                    onClick={(e) => {
-                                                        e.stopPropagation();
-                                                        handleCountrySelect(country);
-                                                    }}
-                                                >
-                                                    <img
-                                                        src={country.image}
-                                                        alt={country.code}
-                                                        className="country-flag-icon"
-                                                    />
-                                                    {country.code} ({country.dial_code})
-                                                </div>
-                                            ))}
-                                        </div>
-                                    )}
-                                </div>
-                                <span className="phone-prefix">{selectedCountry.dial_code}</span>
-                                <input
-                                    id="phone"
-                                    type="tel"
-                                    name="phone"
-                                    value={form.phone}
-                                    placeholder="(201) 555-0123"
-                                    required
-                                    onChange={handleChange}
-                                />
-                            </div>
-                        </div>
+                    <div className="contact-checkbox-group">
+                        <label className="subscribe-check checkbox-label">
+                            <input
+                                className="subscribe-check"
+                                type="checkbox"
+                                name="subscribe"
+                                checked={form.subscribe}
+                                onChange={handleChange}
+                            />
+                            Send me Diamond Jewellery updates and emails.
+                        </label>
                     </div>
 
-                    <div className="form-footer-coming-soon">
-                        <div className="footer-top-row">
-                            <label className="subscribe-check checkbox-label marketing-checkbox">
-                                <input
-                                    type="checkbox"
-                                    name="subscribe"
-                                    checked={form.subscribe}
-                                    onChange={handleChange}
-                                />
-                                <span className="custom-checkbox"></span>
-                                <span className="label-text">Send me Diamond Jewellery updates and emails.</span>
-                            </label>
-
-                            <p className="recaptcha-text-coming">
-                                This site is protected by reCAPTCHA. The Google <Link to="/privacy-policy" className="fancy">Privacy Policy</Link> and <Link to="/terms-and-conditions" className="fancy">Terms of Service</Link> apply.
-                            </p>
-                        </div>
-
+                    <div className="contact-submit-container">
                         {status === 'success' && (
                             <div className="status-message success ff-c f-14 w-500 accent-color text-center">
                                 Thank you! We&apos;ll notify you when we open.
@@ -205,15 +198,17 @@ export function ComingSoonForm({ cityName }) {
                             </div>
                         )}
 
-                        <div className="submit-btn-wrapper">
-                            <button
-                                type="submit"
-                                className="submit-button contact-submit btn"
-                                disabled={status === 'loading'}
-                            >
-                                {status === 'loading' ? 'SENDING...' : 'SEND'}
-                            </button>
-                        </div>
+                        <button
+                            type="submit"
+                            className="submit-button contact-submit btn"
+                            disabled={status === 'loading'}
+                        >
+                            {status === 'loading' ? 'SENDING...' : 'SEND'}
+                        </button>
+
+                        <p className="contact-recaptcha ff-c">
+                            This site is protected by reCAPTCHA. The Google <Link to="/privacy-policy" className="fancy">Privacy Policy</Link> and <Link to="/terms-and-conditions" className="fancy">Terms of Service</Link> apply.
+                        </p>
                     </div>
                 </form>
             </div>

@@ -105,11 +105,11 @@ export function NewContactBig() {
         <div className="new-contact-big-section">
 
             <div className="new-contact-container">
-                <form className="new-contact-form" onSubmit={handleSubmit}>
+                <form className="contact-form new-contact-form" onSubmit={handleSubmit}>
 
                     {/* First Name & Last Name */}
-                    <div className="form-row">
-                        <div className="form-group">
+                    <div className="contact-grid-wrapper">
+                        <div className="contact-grid">
                             <label htmlFor="firstName">FIRST NAME *</label>
                             <input
                                 id="firstName"
@@ -121,7 +121,7 @@ export function NewContactBig() {
                                 onChange={handleChange}
                             />
                         </div>
-                        <div className="form-group">
+                        <div className="contact-grid">
                             <label htmlFor="lastName">LAST NAME *</label>
                             <input
                                 id="lastName"
@@ -133,11 +133,9 @@ export function NewContactBig() {
                                 onChange={handleChange}
                             />
                         </div>
-                    </div>
 
-                    {/* Email & Phone */}
-                    <div className="form-row">
-                        <div className="form-group">
+                        {/* Email & Phone */}
+                        <div className="contact-grid">
                             <label htmlFor="email">EMAIL ADDRESS *</label>
                             <input
                                 id="email"
@@ -149,7 +147,7 @@ export function NewContactBig() {
                                 onChange={handleChange}
                             />
                         </div>
-                        <div className="form-group">
+                        <div className="contact-grid">
                             <label htmlFor="phone">YOUR PHONE NUMBER *</label>
                             <div className="phone-input-wrapper">
 
@@ -197,28 +195,27 @@ export function NewContactBig() {
                     </div>
 
                     {/* Address */}
-                    <div className="form-row">
-                        <div className="form-group full-width">
-                            <label htmlFor="address">ADDRESS *</label>
-                            <input
-                                id="address"
-                                type="text"
-                                name="address"
-                                value={form.address}
-                                placeholder="Enter your address"
-                                required
-                                onChange={handleChange}
-                            />
-                        </div>
+                    <div className="contact-full">
+                        <label htmlFor="address">ADDRESS *</label>
+                        <input
+                            id="address"
+                            type="text"
+                            name="address"
+                            value={form.address}
+                            placeholder="Enter your address"
+                            required
+                            onChange={handleChange}
+                        />
                     </div>
 
                     {/* Country, Province, Postcode, City */}
-                    <div className="form-row four-col">
-                        <div className="form-group">
+                    <div className="contact-grid-wrapper four-col">
+                        <div className="contact-grid">
                             <label htmlFor="country">COUNTRY *</label>
                             <select
                                 id="country"
                                 name="country"
+                                className="contact-select"
                                 value={form.country}
                                 required
                                 onChange={handleChange}
@@ -229,7 +226,7 @@ export function NewContactBig() {
                                 <option value="United Kingdom">United Kingdom</option>
                             </select>
                         </div>
-                        <div className="form-group">
+                        <div className="contact-grid">
                             <label htmlFor="province">PROVINCE *</label>
                             <input
                                 id="province"
@@ -241,7 +238,7 @@ export function NewContactBig() {
                                 onChange={handleChange}
                             />
                         </div>
-                        <div className="form-group">
+                        <div className="contact-grid">
                             <label htmlFor="postcode">POSTCODE *</label>
                             <input
                                 id="postcode"
@@ -253,7 +250,7 @@ export function NewContactBig() {
                                 onChange={handleChange}
                             />
                         </div>
-                        <div className="form-group">
+                        <div className="contact-grid">
                             <label htmlFor="city">CITY *</label>
                             <input
                                 id="city"
@@ -268,8 +265,8 @@ export function NewContactBig() {
                     </div>
 
                     {/* Stone Type Checkboxes */}
-                    <div className="form-group checkbox-group-wrapper">
-                        <label className="checkbox-group-label">WHAT STONE TYPE ARE YOU INTERESTED IN?</label>
+                    <div className="contact-checkbox-group-wrapper">
+                        <p className="contact-radio-title">WHAT STONE TYPE ARE YOU INTERESTED IN?</p>
                         <div className="checkbox-options">
                             <label className="checkbox-label">
                                 <input
@@ -279,20 +276,8 @@ export function NewContactBig() {
                                     checked={form.stones.includes('Lab Grown Diamonds')}
                                     onChange={handleChange}
                                 />
-                                <span className="custom-checkbox"></span>
                                 Lab Grown Diamonds
                             </label>
-                            {/* <label className="checkbox-label">
-                                <input
-                                    type="checkbox"
-                                    name="stones"
-                                    value="Moissanite"
-                                    checked={form.stones.includes('Moissanite')}
-                                    onChange={handleChange}
-                                />
-                                <span className="custom-checkbox"></span>
-                                Moissanite
-                            </label> */}
                             <label className="checkbox-label">
                                 <input
                                     type="checkbox"
@@ -301,14 +286,13 @@ export function NewContactBig() {
                                     checked={form.stones.includes('Sapphires')}
                                     onChange={handleChange}
                                 />
-                                <span className="custom-checkbox"></span>
                                 Sapphires
                             </label>
                         </div>
                     </div>
 
                     {/* Disclaimer & Submit */}
-                    <div className="form-footer">
+                    <div className="contact-submit-container">
                         <p className="disclaimer-text-big">
                             By entering your details and submitting this form, you consent to receive marketing email and text messages (such as promotion codes and cart reminders) from Diamond Jewellery to the email and phone number provided. Consent is not a condition of any purchase. Message and data rates may apply. Message frequency varies. You can unsubscribe at any time.
                         </p>
@@ -336,7 +320,7 @@ export function NewContactBig() {
                             {status === 'loading' ? 'SUBMITTING...' : 'SUBMIT'}
                         </button>
 
-                        <p className="recaptcha-text">
+                        <p className="contact-recaptcha ff-c">
                             This site is protected by reCAPTCHA. The Google <Link to="/privacy-policy" className="fancy">Privacy Policy</Link>
                             and <Link to="/terms-and-conditions" className="fancy">Terms of Service</Link> apply.
                         </p>

@@ -293,9 +293,10 @@ export function ContactForm({ mode = 'contact' }) {
             {/* Subscribe */}
             {allowSubscribe && (
                 <>
-                    <label className="subscribe-check" htmlFor="subscribe">
+                    <label className="subscribe-check checkbox-label" htmlFor="subscribe">
                         <input
                             id="subscribe"
+                            className="subscribe-check"
                             type="checkbox"
                             name="subscribe"
                             checked={form.subscribe}
@@ -308,7 +309,7 @@ export function ContactForm({ mode = 'contact' }) {
                         <div className="contact-stone">
                             <p>What stone type are you interested in?</p>
                             <div className="contact-stone-wrapper">
-                                <label htmlFor="stone-lab">
+                                <label className="checkbox-label" htmlFor="stone-lab">
                                     <input
                                         id="stone-lab"
                                         type="checkbox"

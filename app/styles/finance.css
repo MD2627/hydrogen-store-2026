@@ -1,0 +1,149 @@
+/* ------------------- FINANCE OPTIONS ------------------- */
+.finance-options-page {
+    background-color: var(--white_color);
+}
+
+/* ------------------- TABS ------------------- */
+.finance-options .section-subtitle {
+    color: var(--white_color);
+}
+
+.finance-tabs-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+.finance-tab-pill {
+    padding: 10px 25px;
+    border: 1px solid #e0e0e0;
+    background: transparent;
+    border-radius: 30px;
+    font-family: var(--font_family_c);
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--black_color);
+}
+
+.finance-tab-pill:hover {
+    border-color: var(--black_color);
+}
+
+.finance-tab-pill.active {
+    background-color: var(--black_color);
+    border-color: var(--black_color);
+    color: var(--white_color);
+}
+
+/* ------------------- FINANCE GRID ------------------- */
+.finance-options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.finance-option-card {
+    border: 1px solid #f0f0f0;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fcfcfc;
+}
+
+.finance-option-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.finance-card-top {
+    margin-bottom: 30px;
+}
+
+.finance-card-logo {
+    height: 35px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.finance-card-logo img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+.finance-card-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.finance-card-features li {
+    font-family: var(--font_family_c);
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--black_color);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.finance-card-features li::before {
+    content: "—";
+    margin-right: 10px;
+    color: #999;
+}
+
+.finance-card-bottom {
+    margin-top: 20px;
+}
+
+.finance-card-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font_family_c);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--black_color);
+    transition: opacity 0.3s ease;
+}
+
+.finance-card-link:hover {
+    opacity: 0.7;
+}
+
+.finance-card-link svg {
+    width: 14px;
+    height: 14px;
+    transition: transform 0.3s ease;
+}
+
+.finance-card-link:hover svg {
+    transform: translateX(5px);
+}
+
+/* ------------------- FAQ OVERRIDES ------------------- */
+.finance-faq-wrap {
+    padding-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .finance-options-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .finance-option-card {
+        padding: 30px;
+    }
+}

@@ -240,6 +240,7 @@ export function Footer({ footer: footerPromise, header, publicStoreDomain }) {
                             if (!item.url) return null;
                             const url =
                               item.url.includes('myshopify.com') ||
+                                item.url.includes('hydrogen-store-2026.pages.dev') ||
                                 item.url.includes(publicStoreDomain) ||
                                 item.url.includes(header.shop.primaryDomain.url)
                                 ? new URL(item.url).pathname
@@ -454,6 +455,7 @@ function FooterMenu({ menu, primaryDomainUrl, publicStoreDomain }) {
         // Handle Shopify domain URLs - extract pathname
         if (
           url && (url.includes('myshopify.com') ||
+            url.includes('hydrogen-store-2026.pages.dev') ||
             url.includes(publicStoreDomain) ||
             url.includes(primaryDomainUrl))
         ) {

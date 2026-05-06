@@ -11,6 +11,7 @@ import NewsletterForm from '~/components/Footer';
  * @param {Route.LoaderArgs} args
  */
 export async function loader() {
+    throw new Response("Not Found", { status: 404 });
     return {};
 }
 

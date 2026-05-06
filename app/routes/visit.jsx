@@ -335,32 +335,33 @@ export default function VisitShowroom() {
                                         <p>Location: <strong>{bookingData.location?.title || bookingData.location?.city}</strong></p>
                                         <p>Time: <strong>{bookingData.dateTime}</strong></p>
                                     </div>
-                                    <form className="booking-form" onSubmit={handleFormSubmit}>
-                                        <div className="form-row">
-                                            <div className="form-group">
-                                                <label className="ff-c f-11 w-600 uppercase">First Name *</label>
+                                    <form className="contact-form booking-form" onSubmit={handleFormSubmit}>
+                                        <div className="contact-grid-wrapper">
+                                            <div className="contact-grid">
+                                                <label>First Name *</label>
                                                 <input type="text" required value={bookingData.userDetails.firstName} onChange={(e) => updateUserDetails('firstName', e.target.value)} />
                                             </div>
-                                            <div className="form-group">
-                                                <label className="ff-c f-11 w-600 uppercase">Last Name *</label>
+                                            <div className="contact-grid">
+                                                <label>Last Name *</label>
                                                 <input type="text" required value={bookingData.userDetails.lastName} onChange={(e) => updateUserDetails('lastName', e.target.value)} />
                                             </div>
-                                        </div>
-                                        <div className="form-row">
-                                            <div className="form-group">
-                                                <label className="ff-c f-11 w-600 uppercase">Email Address *</label>
+
+                                            <div className="contact-grid">
+                                                <label>Email Address *</label>
                                                 <input type="email" required value={bookingData.userDetails.email} onChange={(e) => updateUserDetails('email', e.target.value)} />
                                             </div>
-                                            <div className="form-group">
-                                                <label className="ff-c f-11 w-600 uppercase">Phone Number *</label>
+                                            <div className="contact-grid">
+                                                <label>Phone Number *</label>
                                                 <input type="tel" required value={bookingData.userDetails.phone} onChange={(e) => updateUserDetails('phone', e.target.value)} />
                                             </div>
                                         </div>
-                                        <div className="form-group">
-                                            <label className="ff-c f-11 w-600 uppercase">Additional Notes</label>
+                                        <div className="contact-full">
+                                            <label>Additional Notes</label>
                                             <textarea rows="4" value={bookingData.userDetails.message} onChange={(e) => updateUserDetails('message', e.target.value)} placeholder="Anything else you'd like us to know?"></textarea>
                                         </div>
-                                        <button type="submit" className="btn uppercase">Confirm Appointment</button>
+                                        <div className="contact-submit-container">
+                                            <button type="submit" className="btn uppercase">Confirm Appointment</button>
+                                        </div>
                                     </form>
                                 </div>
                             )}

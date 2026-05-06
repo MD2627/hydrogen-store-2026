@@ -68,11 +68,11 @@ export function FeedBackForm() {
                 in our jewellery and service. We'd be grateful if you'd share your thoughts with us.
                 Your feedback will help us shine brighter!
             </p>
-            <form className="feedback-form" onSubmit={handleSubmit}>
+            <form className="contact-form feedback-form" onSubmit={handleSubmit}>
 
                 {/* Name & Email */}
-                <div className="form-row contact-grid-wrapper">
-                    <div className="form-group contact-grid contact-grid-lnm">
+                <div className="contact-grid-wrapper">
+                    <div className="contact-grid">
                         <label htmlFor="name">NAME (OPTIONAL)</label>
                         <input
                             id="name"
@@ -84,7 +84,7 @@ export function FeedBackForm() {
                         />
                     </div>
 
-                    <div className="form-group contact-grid contact-grid-lnm">
+                    <div className="contact-grid">
                         <label htmlFor="email">EMAIL (OPTIONAL)</label>
                         <input
                             id="email"
@@ -98,11 +98,12 @@ export function FeedBackForm() {
                 </div>
 
                 {/* Interaction Type */}
-                <div className="form-group contact-grid contact-grid-lnm">
+                <div className="contact-grid">
                     <label htmlFor="interactionType">TYPE OF INTERACTION</label>
                     <select
                         id="interactionType"
                         name="interactionType"
+                        className="contact-select"
                         value={form.interactionType}
                         onChange={handleChange}
                     >
@@ -115,7 +116,7 @@ export function FeedBackForm() {
                 </div>
 
                 {/* Feedback */}
-                <div className="form-group contact-grid contact-grid-lnm">
+                <div className="contact-full">
                     <label htmlFor="feedback">FEEDBACK *</label>
                     <textarea
                         id="feedback"
@@ -129,7 +130,7 @@ export function FeedBackForm() {
                 </div>
 
                 {/* Checkbox */}
-                <div className="form-group contact-grid contact-grid-lnm checkbox-group">
+                <div className="contact-checkbox-group">
                     <label className="checkbox-label">
                         <input
                             type="checkbox"
@@ -155,20 +156,22 @@ export function FeedBackForm() {
                 )}
 
                 {/* Submit */}
-                <button
-                    type="submit"
-                    className="submit-button btn"
-                    disabled={status === 'loading'}
-                >
-                    {status === 'loading' ? 'SUBMITTING...' : 'SUBMIT'}
-                </button>
+                <div className="contact-submit-container">
+                    <button
+                        type="submit"
+                        className="submit-button btn"
+                        disabled={status === 'loading'}
+                    >
+                        {status === 'loading' ? 'SUBMITTING...' : 'SUBMIT'}
+                    </button>
 
-                {/* reCAPTCHA text */}
-                <p className="recaptcha-text contact-recaptcha ff-c">
-                    This site is protected by reCAPTCHA. The Google{' '}
-                    <Link to="/privacy-policy">Privacy Policy</Link> and{' '}
-                    <Link to="/terms-and-conditions">Terms of Service</Link> apply.
-                </p>
+                    {/* reCAPTCHA text */}
+                    <p className="contact-recaptcha ff-c">
+                        This site is protected by reCAPTCHA. The Google{' '}
+                        <Link to="/privacy-policy">Privacy Policy</Link> and{' '}
+                        <Link to="/terms-and-conditions">Terms of Service</Link> apply.
+                    </p>
+                </div>
             </form>
         </div>
     );

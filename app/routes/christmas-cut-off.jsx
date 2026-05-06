@@ -13,6 +13,7 @@ import { Link } from "react-router";
  * @param {Route.LoaderArgs} args
  */
 export async function loader(args) {
+    throw new Response("Not Found", { status: 404 });
   return {
     importantDates: IMPORTANT_DATES
   };

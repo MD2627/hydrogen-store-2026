@@ -4,7 +4,7 @@ import { ProductFAQ } from '~/components/ProductFAQ';
 import { UvpIconFooter } from '~/components/UvpIconFooter';
 
 export const meta = () => {
-    return [{ title: 'Join The Diamond Affiliate Program' }];
+    return [{ title: 'Join Our Diamond Affiliate Program' }];
 };
 
 export async function loader() {
@@ -59,9 +59,7 @@ export default function AffiliatePage() {
                 </div>
             </section>
 
-            <div className="affiliate-faq-section">
-                <ProductFAQ data={FAQ_DATA} title="FAQ" subtitle="Your questions, answered." />
-            </div>
+            <ProductFAQ data={FAQ_DATA} title="FAQ" subtitle="Your questions, answered." />
             <UvpIconFooter data={AFFILIATE_UVPS} />
         </div >
     );
@@ -69,7 +67,7 @@ export default function AffiliatePage() {
 
 const BANNER_DATA = {
     imageSrc: "https://cdn.shopify.com/s/files/1/0801/7317/0906/files/Bella_Side_1_2000x2000_4c03ff88-bfeb-4388-97d8-8a90228590b2.webp?v=1769843716",
-    title: "Join The Diamond Affiliate Program",
+    title: "Join Our Diamond Affiliate Program",
     subtitle: "We believe in great partnerships.",
     extraClass: 'affiliate-banner',
 };
@@ -80,11 +78,11 @@ const CONTENT_DATA = {
         {
             title: "What’s in it for you?",
             list: [
-                "Competitive commission on net sales, excluding shipping, taxes and returns.",
-                "Eligibility for commission on sales originating from your unique link within 30 days.",
-                "Affiliate banners and assets around capsule and product launches.",
-                "Real-time reporting and sales tracking.",
-                "Additional collaborative opportunities around giveaways, events and offline activity."
+                "Competitive 6% commission on all net sales (excluding shipping, taxes, and returns).",
+                "A 30-day cookie window for comprehensive sales tracking.",
+                "Instant access to premium creative assets and brand collateral.",
+                "Real-time reporting and performance insights via our partner dashboard.",
+                "Priority notifications for upcoming capsule collections and product launches."
             ]
         },
         {
@@ -100,29 +98,29 @@ const CONTENT_DATA = {
     ctaLink: "/",
     contactTitle: "Have questions about the program?",
     contactText: "Send an email to:",
-    email: "contact@hopiant.com"
+    email: "affiliates@hopiant.com"
 };
 
 const FAQ_DATA = [
     {
         question: "What is the Diamond Affiliate Program?",
-        answer: "The Diamond Affiliate Program is designed for premium lifestyle, fashion publishers, and creators who want to earn commission by promoting Diamond Jewellery. Affiliates earn a competitive commission on net sales generated through their unique links, and can access exclusive banners, assets, and collaborative opportunities."
+        answer: "The Diamond Affiliate Program is created for lifestyle, fashion, and premium content creators who want to earn commission by promoting fine jewellery. As an affiliate, you’ll earn commission on sales generated through your unique links and gain access to exclusive creatives, campaigns, and collaboration opportunities."
     },
     {
-        question: "How much commission can I earn as a Diamond affiliate?",
-        answer: "Affiliates receive a competitive commission of 6% on net sales (excluding shipping, taxes, and returns). Commissions are eligible on sales made within 30 days of a visitor clicking your unique link."
+        question: "How much commission can I earn?",
+        answer: "Affiliates earn a competitive commission of 6% on net sales (excluding shipping, taxes, and returns). Commissions are tracked for up to 30 days from the moment a customer clicks your unique link."
     },
     {
-        question: "What promotional materials and support will I get as an affiliate?",
-        answer: "As a Diamond affiliate, you’ll receive:<br/><ul><li>Ready-to-use banners and assets for capsule and product launches.</li><li>Access to real-time sales tracking and reporting.</li><li>Opportunities for additional collaborations, including giveaways, events, and offline activities.</li></ul>"
+        question: "What support and resources will I receive?",
+        answer: "As a Diamond affiliate, you’ll get:<br/><ul><li>Professionally designed banners and campaign assets.</li><li>Access to real-time performance tracking and reporting.</li><li>Opportunities for collaborations such as giveaways, events, and special campaigns.</li></ul>"
     },
     {
-        question: "How do I join the Diamond Affiliate Program?",
-        answer: "Joining is easy:<br/><ul><li>Click APPLY NOW and fill out the application.</li><li>We will review your application to see if it’s the right fit for both of us.</li><li>We’ll email you to let you know the outcome.</li></ul>"
+        question: "How do I apply?",
+        answer: "Getting started is simple:<br/><ul><li>Click on APPLY NOW and submit your application.</li><li>Our team will review your details.</li><li>You’ll receive an email with the outcome of your application.</li></ul>"
     },
     {
-        question: "Who can I contact if I have questions about the affiliate program?",
-        answer: "If you have any questions or need assistance regarding the Diamond Affiliate Program, you can reach out via email at <a href='mailto:contact@hopiant.com'>contact@hopiant.com</a>"
+        question: "Who can I contact for support?",
+        answer: "For any questions or assistance, feel free to contact us at <a href='mailto:contact@hopiant.com'>contact@hopiant.com</a> and our team will be happy to help."
     }
 ];
 

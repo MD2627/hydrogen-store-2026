@@ -16,13 +16,13 @@ export default function Contact() {
     <>
       {/* Banner Section */}
       <StoryCraftBanner
-        imageSrc="https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Viewing_Ring_In_Appointment_2000x2000.jpg?v=1740090200"
-        title="Need assistance?"
-        subtitle="Send us your questions and we will get straight back to you."
+        imageSrc="https://cdn.shopify.com/s/files/1/0610/2194/5934/files/pexels-shkrabaanthony-7167043.jpg?v=1778041592"
+        title="How can we help?"
+        subtitle="Share your query and our team will get back to you promptly."
         extraClass="story-craft-banner--contact"
       />
 
-      <section className="contact-form-section" style={{ padding: '50px 0px' }}>
+      <section className="contact-form-section">
         <ContactForm />
       </section>
 

@@ -1,7 +1,16 @@
 import { useState } from 'react';
 import { UvpIconFooter } from '~/components/UvpIconFooter';
 import { ProductFAQ } from '~/components/ProductFAQ';
-import '../styles/christmas-cut-off.css';
+import { StoryCraftBanner } from '~/components/StoryCraftBanner';
+import styles from '~/styles/finance.css?url';
+
+export const meta = () => {
+  return [{ title: 'Finance Options | Diamond Jewellery' }];
+};
+
+export function links() {
+  return [{ rel: 'stylesheet', href: styles }];
+}
 
 /**
  * @param {Route.LoaderArgs} args
@@ -11,218 +20,201 @@ export async function loader() {
 }
 
 export default function FinanceOptions() {
-
   const [activeTab, setActiveTab] = useState('AU');
-
   const currentData = FINANCE_DATA[activeTab] || [];
 
   return (
-    <div className="finance-options-details">
-      <h1 className="main-heading w-300 l-h-1-1 black-color">
-        {MAIN_HEADING.heading}
-      </h1>
-      <p className="finance-subtext ff-a l-h-1-1 w-300 black-color l-0 txt-center">
-        {MAIN_HEADING.description}
-      </p>
-      <div className="finance-options-information">
-        <div className="finance-tabs">
+    <div className="finance-options-page">
+      <StoryCraftBanner
+        imageSrc="https://cdn.shopify.com/s/files/1/0801/7317/0906/files/IMG_6792_2000x2000_25e4319d-689d-48c9-8351-02a83f97c520.webp?v=1771218574"
+        title="Finance Options"
+        subtitle="Flexible ways to make your dream piece a reality."
+        h1={true}
+      />
+
+      <div className="page-width">
+        <div className="finance-tabs-container">
           {Object.keys(FINANCE_DATA).map((country) => (
             <button
               key={country}
-              className={`finance-tab-btn black-color ${activeTab === country ? 'active' : ''}`}
+              className={`finance-tab-pill ${activeTab === country ? 'active' : ''}`}
               onClick={() => setActiveTab(country)}
             >
               {country}
             </button>
           ))}
         </div>
-        <div className="finance-card-wrapper">
+
+        <div className="finance-options-grid">
           {currentData.map((item, index) => (
-            <div className="finance-card" key={index}>
-              <div className="finance-logo">
-                <img src={item.logo} alt="logo" />
+            <div className="finance-option-card" key={index}>
+              <div className="finance-card-top">
+                <div className="finance-card-logo">
+                  <img src={item.logo} alt={item.name || 'Finance Provider'} />
+                </div>
+                <div className="finance-card-features">
+                  <ul>
+                    {item.features.map((feature, fIndex) => (
+                      <li key={fIndex}>{feature}</li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-              <div
-                className="finance-content"
-                dangerouslySetInnerHTML={{ __html: item.content }}
-              />
-              <div className='finance-button'>
-                <a href={item.link} className="finance-link ff-c">
+              <div className="finance-card-bottom">
+                <a href={item.link} target="_blank" rel="noopener noreferrer" className="finance-card-link">
                   READ FULL DETAILS
+                  <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
                 </a>
-                <div className='icon' dangerouslySetInnerHTML={{ __html: FINANCE_BUTTON.content }} />
               </div>
             </div>
           ))}
         </div>
       </div>
-      <div className="custom-rings-faq-section">
-        <ProductFAQ data={FAQ_DATA} title="FAQs" />
-      </div>
-      {/* Footer UVPs */}
+
+      <ProductFAQ
+        data={FAQ_DATA}
+        title="Financing FAQ"
+        subtitle="Everything you need to know about our payment plans."
+      />
+
       <UvpIconFooter data={OUR_STORY_UVPS} />
     </div>
   );
 }
+
 /* ================================
    DATA
 ================================ */
-const MAIN_HEADING = {
-  heading: 'Finance Options',
-  description: `At Diamond, we offer a range of flexible finance options to make owning your dream fine jewellery piece stress-free and straightforward. You can choose from our trusted “buy now, pay later” partners below to make your dream piece a reality. These services allow you to spread your payments over time, and we can start crafting your order once your payment or finance approval is confirmed.`
-};
+
 const FINANCE_DATA = {
   AU: [
     {
+      name: 'Humm',
       logo: 'https://cdn.shopify.com/s/files/1/0691/6191/0512/files/download.svg?v=1771324038',
       link: 'https://www.hummloan.com/how-it-works/',
-      content: `
-        <ul>
-          <li>$2,000-$18,000AUD credit limit.</li>
-          <li>6% interest rate</li>
-          <li>One-off establishment fee of $30-$110AUD.</li>
-          <li>Ongoing $8AUD monthly payment fee.</li>
-          <li>2k to 5k = 13, 26, 39, 52 months (0% deposit).</li>
-          <li>5k to 12k = 52 months (0% deposit).</li>
-          <li>12k to 18k = 78 months (0% deposit).</li>
-          <li>This payment method can be used at checkout.</li>
-        </ul>
-      `
+      features: [
+        '$2,000 – $18,000 AUD credit limit',
+        'Competitive 6% interest rate',
+        'One-off establishment fee ($30–$110 AUD)',
+        'Ongoing $8 AUD monthly payment fee',
+        'Terms from 13 to 78 months (0% deposit)',
+        'Available directly at checkout'
+      ]
     },
     {
+      name: 'Zip Pay',
       logo: 'https://cdn.shopify.com/s/files/1/0691/6191/0512/files/download_1.svg?v=1771324135',
       link: 'https://zip.co/au/zip-pay',
-      content: `
-        <ul>
-          <li>$350-$1,000AUD credit limit.</li>
-          <li>Interest free.</li>
-          <li>Late payments will incur a fee of $7.50AUD.</li>
-          <li>$0AUD establishment fee.</li>
-          <li>$9.95AUD monthly payment fee.</li>
-          <li>This payment method can be used at checkout.</li>
-        </ul>
-      `
+      features: [
+        '$350 – $1,000 AUD credit limit',
+        'Completely interest-free',
+        'No establishment fees',
+        '$9.95 AUD monthly payment fee',
+        'Flexible weekly or fortnightly payments',
+        'Available directly at checkout'
+      ]
     },
     {
+      name: 'Zip Money',
       logo: 'https://cdn.shopify.com/s/files/1/0691/6191/0512/files/download_2.svg?v=1771324193',
       link: 'https://zip.co/au/zip-money',
-      content: `
-        <ul>
-          <li>$1,000-$5,000AUD credit limit.</li>
-          <li>Up to 12 months interest-free available</li>
-          <li>$9.95AUD monthly account fee.</li>
-          <li>Late payments will incur a fee of $15.00AUD.</li>
-          <li>One-off establishment fee up to $99AUD may apply</li>
-          <li>Flexible fortnightly or monthly payments</li>
-          <li>This payment method can be used at checkout.</li>
-        </ul>
-      `
+      features: [
+        '$1,000 – $5,000 AUD credit limit',
+        'Up to 12 months interest-free available',
+        '$9.95 AUD monthly account fee',
+        'Establishment fee up to $99 AUD may apply',
+        'Flexible fortnightly or monthly payments',
+        'Available directly at checkout'
+      ]
     }
   ],
-
   NZ: [
     {
+      name: 'Afterpay',
       logo: 'https://cdn.shopify.com/s/files/1/0691/6191/0512/files/Afterpay_logo.xF_AGNBq.svg?v=1771329951',
       link: 'https://www.afterpay.com/en-NZ/how-it-works',
-      content: `
-      <ul>
-        <li>Allows transactions of up to $2000 NZD.</li>
-        <li>The maximum credit limit at any one time is $4000 NZD.</li>
-        <li>Interest-free.</li>
-        <li>Split your order into 4 fortnightly payments.</li>
-        <li>Late payments will incur a fee of $10.00 NZD.</li>
-        <li>Our team can only process this payment method manually and cannot be used through the website.</li>
-      </ul>
-      `
+      features: [
+        'Transactions up to $2,000 NZD',
+        'Total credit limit up to $4,000 NZD',
+        '100% interest-free',
+        'Split into 4 fortnightly payments',
+        'Simple, transparent fee structure',
+        'Manual processing via our team'
+      ]
     }
   ],
-
   US: [
     {
+      name: 'Klarna',
       logo: 'https://cdn.shopify.com/s/files/1/0691/6191/0512/files/klarna.Bd0gJPtS.svg?v=1771329779',
       link: 'https://www.klarna.com/us/',
-      content: `
-        <ul>
-          <li>The maximum credit limit is $6000 USD.</li>
-          <li>Pay in 30 Days – Must pay the full amount within 30 days, no interest, soft credit check.</li>
-          <li>Pay in 30 Days – Must pay the full amount within 30 days, no interest, soft credit check.</li>
-          <li>Pay in 4 Instalments – Split into 4 equal payments every 30 days, no interest, soft credit check.</li>
-          <li>Financing (12 Months) – Spread payments over 12 months.</li>
-          <li>Our team can only process this payment method manually and cannot be used through the website.</li>
-        </ul>
-      `
+      features: [
+        'Maximum credit limit of $6,000 USD',
+        'Pay in 30 Days – No interest, soft credit check',
+        'Pay in 4 Instalments – 4 equal payments, no interest',
+        'Financing (12 Months) – Spread payments over a year',
+        'Safe and secure checkout experience',
+        'Manual processing via our team'
+      ]
     }
   ],
-
   CA: [
     {
+      name: 'Humm',
       logo: 'https://cdn.shopify.com/s/files/1/0691/6191/0512/files/download.svg?v=1771324038',
       link: 'https://www.shophumm.com/en-ca/',
-      content: `
-        <ul>
-          <li>Up to $30,000 CAD credit limit.</li>
-          <li>9.99% interest rate.</li>
-          <li>One-off establishment fee (no ongoing monthly fees).</li>
-          <li>Repayment terms up to 60 months.</li>
-          <li>This payment method can be used at checkout.</li>
-        </ul>
-      `
+      features: [
+        'Up to $30,000 CAD credit limit',
+        'Fixed 9.99% interest rate',
+        'One-off establishment fee (no monthly fees)',
+        'Repayment terms up to 60 months',
+        'Available directly at checkout'
+      ]
     }
   ],
-
   UK: [
     {
+      name: 'Klarna',
       logo: 'https://cdn.shopify.com/s/files/1/0691/6191/0512/files/klarna.Bd0gJPtS.svg?v=1771329779',
       link: 'https://www.klarna.com/uk/',
-      content: `
-        <ul>
-          <li>The maximum credit limit is £5000.</li>
-          <li>Pay in 30 Days – Must pay the full amount within 30 days, no interest, soft credit check.</li>
-          <li>Pay in 3 Instalments – Split into 3 equal payments every 30 days, no interest, soft credit check.</li>
-          <li>Financing (6–36 Months) – Spread payments over 6–36 months, variable interest (27.9% representative APR), full credit check, FCA regulated.</li>
-          <li>Our team can only process this payment method manually and cannot be used through the website.</li>
-        </ul>
-      `
+      features: [
+        'Maximum credit limit of £5,000',
+        'Pay in 30 Days – Full amount, no interest',
+        'Pay in 3 Instalments – 3 equal payments, no interest',
+        'Financing (6–36 Months) – Variable interest rates',
+        'FCA regulated and secure',
+        'Manual processing via our team'
+      ]
     }
   ]
-
-};
-const FINANCE_BUTTON = {
-  content: `
-    <svg viewBox="0 0 16.933 16.933" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
-      <path 
-        d="M15.875 8.466H1.058M5.292 4.233 1.058 8.466 5.292 12.7"
-        transform="rotate(180 8.466 8.466)"
-        style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 1.05831; stroke-linecap: round; stroke-linejoin: round;"
-      ></path>
-    </svg>
-  `
 };
 
 const FAQ_DATA = [
   {
-    question: "What payment methods can I use for my order?",
-    answer: "Depending on your location, you can pay using various methods, including debit/credit card, bank transfer, PayPal, and local “buy now, pay later” (BNPL) services such as Humm, Zip, Afterpay, or Klarna. All online and showroom orders require payment to begin production.",
+    question: "What payment methods are available?",
+    answer: "We offer a range of payment options depending on your location, including debit/credit cards, bank transfers, PayPal, and buy now, pay later (BNPL) services such as Humm, Zip, Afterpay, and Klarna. Full payment or approved financing is required before production begins, whether your order is placed online or in-store.",
   },
   {
-    question: "Can I pay only a portion of my order with finance?",
-    answer: "At this time, if you’d like to use financing for an online order, you must finance the full amount of your order. Payments processed through our showrooms can be made in part through finance and another payment method.",
+    question: "Can I partially pay using finance?",
+    answer: "For online orders, financing must be applied to the full order amount. In our showrooms, you may have the option to split your payment between financing and another payment method.",
   },
   {
-    question: "Are there any additional fees for financing?",
-    answer: "Yes, depending on the finance provider and your location, there may be establishment fees, monthly account fees, or interest charges. Fees vary by provider and loan amount. Be sure to review the terms and conditions of the service you choose before committing.",
+    question: "Are there any fees associated with financing?",
+    answer: "Financing providers may charge additional fees such as setup fees, monthly account charges, or interest, depending on your location and selected plan. We recommend reviewing the provider’s terms carefully before proceeding.",
   },
   {
-    question: "When will my order go into production if I pay with finance?",
-    answer: "When paying with finance, production begins once your application is approved and the contract is activated.",
+    question: "When does production begin for financed orders?",
+    answer: "Production starts once your financing application is approved and your agreement has been fully activated.",
   },
   {
-    question: "What happens if my financing application is declined?",
-    answer: "If your application is declined, don’t worry, it’s often a simple matter of confirming additional identification or financial details. We’ll guide you through the next steps and can help you reapply once the requirements are met.",
+    question: "What if my financing application is declined?",
+    answer: "If your application is not approved, it may be due to missing or incomplete information. Our team can assist you with the next steps and guide you through reapplying if needed.",
   },
   {
-    question: "When do my repayments start?",
-    answer: "Your repayments will begin once your order has been activated, which happens when the creation of your ring has commenced.",
+    question: "When do repayments start?",
+    answer: "Repayments typically begin once your order is confirmed and production of your ring has started.",
   }
 ];
 

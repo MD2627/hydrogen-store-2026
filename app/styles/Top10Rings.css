@@ -1,3 +1,7 @@
+.top-10-rings .ssw-section {
+    padding: 4rem 0;
+}
+
 .top-page-rich-text p {
     line-height: 17.875px;
 }
@@ -5,7 +9,7 @@
 .top-page-rich-text {
     max-width: 800px;
     margin: 0 auto;
-    padding: 50px 20px 40px;
+    padding: 40px 15px 0 15px;
     font-family: var(--font_family_a);
     font-size: 16.25px;
     font-weight: 300;
@@ -80,6 +84,14 @@ a.top-image-with-text__button {
     padding: 20px 0;
 }
 
+.top-image-with-text-section:nth-child(1) .top-image-with-text-container {
+    padding-top: 0;
+}
+
+.top-image-with-text-section:last-child .top-image-with-text-container {
+    padding-bottom: 0;
+}
+
 .top-image-with-text.top-image-with-text--second {
     flex-direction: row-reverse;
 }
@@ -89,6 +101,10 @@ a.top-image-with-text__button {
 }
 
 @media screen and (max-width: 768px) {
+    .top-10-rings .ssw-section {
+        padding: 3rem 0;
+    }
+
     .top-image-with-text {
         flex-direction: column !important;
     }

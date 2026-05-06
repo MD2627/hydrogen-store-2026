@@ -17,6 +17,7 @@ export function links() {
  * @param {Route.LoaderArgs} args
  */
 export async function loader() {
+    throw new Response("Not Found", { status: 404 });
     return {};
 }
 

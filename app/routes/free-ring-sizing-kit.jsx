@@ -14,27 +14,26 @@ export default function FreeRingSizingKit() {
     return (
         <div className="free-ring-sizing-kit">
 
-            <div className="contact-big-form-with-image">
-                <div className="page-with-ring-free">
+            <section className="contact-big-form-with-image">
+                <div className="page-width">
                     <div className="inner-contact-big-image">
                         <div className="free-ring-size-image">
                             <img
-                                src="https://cdn.shopify.com/s/files/1/0644/3067/0060/files/88621FF9-728C-44C4-B0E6-861028E20F10.jpg?v=1753243337"
+                                src="https://cdn.shopify.com/s/files/1/0610/2194/5934/files/3c973afef6e4c2611322622fcd3a3555.jpg?v=1777870175"
                                 alt="" />
                         </div>
                         <div className="free-ring-form">
                             <div className="free-ring-form-header">
                                 <div className="converter-header">
-                                    <h2 className="ff-a f-32 w-300 black-color">Request Free Ring Sizing Kit</h2>
-                                    <div className="border-line"></div>
-                                    <p className="ff-c f-13 w-300 black-color">Don’t know your ring size? Not a problem at all. Fill out this form and we’ll send you a FREE sizing kit so you can measure from home.</p>
+                                    <h2 className="section-title">Get Your Free Ring Sizing Kit</h2>
+                                    <p className="sb-description">Unsure about your size? No problem—complete the form and we’ll send you a free kit to measure at home.</p>
                                 </div>
                                 <NewContactBig />
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
 
 
             <ProductFAQ data={FAQ_DATA} title="Sizing Kit" subtitle="Everything you need to know about our sizing service." />
@@ -45,47 +44,41 @@ export default function FreeRingSizingKit() {
 
 const FAQ_DATA = [
     {
-        question: "What's included in the ring sizing kit?",
+        question: "What’s included in the ring sizing kit?",
         answer: (
             <p>
-                Inside the kit, you’ll find a trifold brochure with easy-to-follow
-                instructions for determining your ring size using two methods: one
-                using an existing ring you already own, and the other with the
-                included physical ring sizer.
+                The kit includes an easy-to-follow guide and a ring sizer, allowing you to measure your size using either an existing ring or the provided tool.
             </p>
         ),
     },
 
     {
-        question: "Do I have to pay shipping for the ring sizing kit?",
+        question: "Is the ring sizing kit really free?",
         answer: (
             <p>
-                No, there’s no shipping fee — our kits are delivered free of charge.
+                Yes, the kit is completely free, including shipping.
             </p>
         ),
     },
 
     {
-        question: "What countries do you ship the ring sizing kit to?",
+        question: "Where do you ship the sizing kit?",
         answer: (
             <p>
-                We currently offer free shipping of our ring sizing kit to Australia
-                and New Zealand.
+                We currently ship our ring sizing kit free of charge within Australia and New Zealand.
             </p>
         ),
     },
 
     {
-        question: "How long will it take for my ring sizing kit to arrive?",
+        question: "How long will delivery take?",
         answer: (
             <p>
-                Your ring sizing kit is sent via standard letter post and typically
-                arrives within 7–10 business days.
+                Delivery typically takes 7–10 business days via standard post.
             </p>
         ),
     }
 ];
-
 const FreeRingSizingKitUvps = [
     {
         link: '/shipping',

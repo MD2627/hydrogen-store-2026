@@ -245,7 +245,7 @@ const ServicesshopByStyleItems = [
   },
   {
     name: 'Appointments',
-    image: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/pexels-shkrabaanthony-7167043.jpg?v=1777032453',
+    image: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/pexels-shkrabaanthony-7167043.jpg?v=1778041592',
     link: '/collections/ready-to-ship',
   },
   {

@@ -522,11 +522,6 @@
 }
 
 /* 4. Details Form View */
-.details-form-view {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
 .booking-summary {
     background: var(--soft_blue_bg);
     padding: 40px;
@@ -546,43 +541,6 @@
     font-family: var(--font_family_n);
     text-transform: uppercase;
     letter-spacing: 0.05em;
-}
-
-.booking-form .form-row {
-    display: flex;
-    gap: 20px;
-}
-
-.booking-form .form-group {
-    flex: 1;
-    margin-bottom: 25px;
-    display: flex;
-    flex-direction: column;
-}
-
-.booking-form label {
-    font-family: var(--font_family_n);
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-bottom: 10px;
-    color: var(--accent_color);
-}
-
-.booking-form input,
-.booking-form textarea {
-    padding: 15px;
-    border: 1px solid #eee;
-    font-family: var(--font_family_c);
-    font-size: 14px;
-    background: #fff;
-    transition: border-color 0.3s ease;
-}
-
-.booking-form input:focus,
-.booking-form textarea:focus {
-    outline: none;
-    border-color: var(--black_color);
 }
 
 /* 5. Reviews & Footer UVPs */

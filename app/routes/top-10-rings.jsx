@@ -1,7 +1,6 @@
 import { StoryCraftBanner } from '~/components/StoryCraftBanner';
 import { UvpIconFooter } from '~/components/UvpIconFooter';
-import { TopImageWithText } from '~/components/top-image-with-text';
-
+import { ProductRingCollections } from '~/components/ProductRingCollections';
 const banner = {
     imageSrc:
         'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/01_Amanda-18k-Yellow-Gold-Round-8mm-scaled_2000x2000.webp?v=1655858691',
@@ -9,142 +8,87 @@ const banner = {
     extraClass: 'story-craft-banner--our-story',
 }
 
-const TOP_10_RINGS_DATA1 = [
+const TOP_10_RINGS_COLLECTION = [
     {
         image: 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/01_Ava-18k-Yellow-Gold-Moissanite-Elongated-Cushion-9x7mm-2_600x.webp?v=1655858691',
         title: 'Ava',
-        subtitle: 'Elongated Cushion Solitaire',
-        description: "Ava is an exquisite Cushion Solitaire engagement ring that boasts a delicate beauty. Featuring a divine 9x7mm (2.5ct) Elongated Cushion cut moissanite, Ava's 4 claw setting is partnered with a dainty 1.8mm band and sparkling Hidden Halo.",
-        buttonText: 'MEET AVA',
-        buttonUrl: '/engagement-rings/ring-ava',
-        AddClass: 'top-image-with-text--first',
-        AddSteps: '01',
+        description: '<p><strong>Elongated Cushion Solitaire</strong></p><p>Ava is an elegant Cushion Solitaire featuring a 9x7mm (2.5ct) elongated cushion-cut moissanite. Set in a refined 4-claw setting with a delicate 1.8mm band and a hidden halo, it offers a soft yet radiant finish.</p>',
+        linkText: 'MEET AVA',
+        link: '/engagement-rings/ring-ava',
+        bgColor: '#fcfcfc'
     },
-];
-
-const TOP_10_RINGS_DATA2 = [
     {
         image: 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/01_Emma-18k-Yellow-Gold-Moissanite-Oval-10x7mm-1-scaled_600x.webp?v=1655858691',
         title: 'Emma',
-        subtitle: 'Oval Solitaire with Hidden Halo',
-        description: "Sophisticated and stunning, Emma is a four-claw low set Solitaire featuring a hidden halo for extra sparkle. Emma features a gorgeous 10x7mm (2.5ct) Oval cut moissanite on a delicate 1.8mm band.",
-        buttonText: 'MEET EMMA',
-        buttonUrl: '/engagement-rings/ring-emma',
-        AddClass: 'top-image-with-text--second',
-        AddSteps: '02',
+        description: '<p><strong>Oval Solitaire with Hidden Halo</strong></p><p>Emma is a timeless oval solitaire featuring a 10x7mm (2.5ct) moissanite in a low-set 4-claw design. A hidden halo adds subtle brilliance, complemented by a fine 1.8mm band.</p>',
+        linkText: 'MEET EMMA',
+        link: '/engagement-rings/ring-emma',
+        bgColor: '#fff'
     },
-];
-
-const TOP_10_RINGS_DATA3 = [
     {
         image: 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/01_Alyssa-Platinum-Moissanite-Oval-9x6.5mm-1-scaled_600x.webp?v=1655858691',
         title: 'Alyssa',
-        subtitle: 'Oval Solitaire with Accent Stones',
-        description:
-            "Alyssa is a graceful 8x6mm (1.5ct) Oval Solitaire engagement ring seated in a charming high set 4 claw setting. The Alyssa ring is sure to turn heads with her glittering 1.8mm band, featuring two pairs of beautiful Round and Marquise cut moissanite side stones.",
-        buttonText: 'MEET ALYSSA',
-        buttonUrl: '/engagement-rings/ring-alyssa',
-        AddClass: 'top-image-with-text--first',
-        AddSteps: '03',
+        description: '<p><strong>Oval Solitaire with Accent Stones</strong></p><p>Alyssa features an 8x6mm (1.5ct) oval moissanite in a high-set 4-claw design. The 1.8mm band is enhanced with round and marquise side stones, creating a refined and eye-catching silhouette.</p>',
+        linkText: 'MEET ALYSSA',
+        link: '/engagement-rings/ring-alyssa',
+        bgColor: '#fcfcfc'
     },
-];
-
-const TOP_10_RINGS_DATA4 = [
     {
         image: 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/01_Alexandria-Platinum-Moissanite-Round-8mm-1-scaled_600x.webp?v=1655858691',
         title: 'Alexandria',
-        subtitle: '6 Claw Pavé Round Solitaire',
-        description:
-            'Classically beautiful, Alexandria is our signature 6 claw Pavé Solitaire. A supremely popular choice, this exquisite design has claws that are set above the band, making a statement on the finger and allowing the wedding band to fit flush against the engagement ring when that time comes.',
-        buttonText: 'MEET ALEXANDRIA',
-        buttonUrl: '/engagement-rings/ring-alexandria',
-        AddClass: 'top-image-with-text--second',
-        AddSteps: '04',
+        description: '<p><strong>6 Claw Pavé Round Solitaire</strong></p><p>Alexandria is a classic 6-claw pavé solitaire designed for timeless appeal. The elevated setting enhances presence while allowing a wedding band to sit perfectly flush.</p>',
+        linkText: 'MEET ALEXANDRIA',
+        link: '/engagement-rings/ring-alexandria',
+        bgColor: '#fff'
     },
-];
-
-const TOP_10_RINGS_DATA5 = [
     {
         image: 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Louise_LS_011_2022_600x.webp?v=1655858691',
         title: 'Louise',
-        subtitle: '6 Claw Solitaire',
-        description:
-            'Louise is a classically beautiful 6 claw Solitaire featuring a stunning 8.5mm (2.25ct) Round cut moissanite with elegant eagle tipped claws, on a 1.8mm band.',
-        buttonText: 'MEET LOUISE',
-        buttonUrl: '/engagement-rings/ring-louise',
-        AddClass: 'top-image-with-text--first',
-        AddSteps: '05',
+        description: '<p><strong>6 Claw Solitaire</strong></p><p>Louise is a timeless 6-claw solitaire featuring an 8.5mm (2.25ct) round moissanite. Finished with elegant eagle-tipped claws and a delicate 1.8mm band.</p>',
+        linkText: 'MEET LOUISE',
+        link: '/engagement-rings/ring-louise',
+        bgColor: '#fcfcfc'
     },
-];
-
-const TOP_10_RINGS_DATA6 = [
     {
         image: 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Julia_DT_LS_002-e1641206996151_600x.webp?v=1655858691',
         title: 'Julia',
-        subtitle: 'Oval Solitaire with Hidden Halo and Pavé',
-        description:
-            'Julia is is a modern 4 claw Solitaire featuring a Pavé band as well as a Hidden Halo for extra sparkle. The Pavé Solitaire is a very popular choice as an engagement ring and this particular design is a classic. The claws are set above the band to both make a statement on the hand and also to allow for a wedding band to fit flush against the engagement ring when that time comes.',
-        buttonText: 'MEET JULIA',
-        buttonUrl: '/engagement-rings/ring-julia',
-        AddClass: 'top-image-with-text--second',
-        AddSteps: '06',
+        description: '<p><strong>Oval Pavé Solitaire with Hidden Halo</strong></p><p>Julia blends modern elegance with classic detail. Featuring an oval moissanite, pavé band, and hidden halo, its elevated setting allows a wedding band to sit flush.</p>',
+        linkText: 'MEET JULIA',
+        link: '/engagement-rings/ring-julia',
+        bgColor: '#fff'
     },
-];
-
-const TOP_10_RINGS_DATA7 = [
     {
         image: 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/01_Sheridan-High-Setting-Platinum-Moissanite-Oval-10x7mm-scaled_600x.webp?v=1655858691',
         title: 'Sheridan',
-        subtitle: 'Oval Trilogy',
-        description:
-            'Emma is our simple yet sophisticated Oval Solitaire. Featuring a gorgeous 10x7mm (2.5ct) Oval cut moissanite in a graceful 4 claw setting with a sparkling Hidden Halo, finished by a delicate 1.8mm band.',
-        buttonText: 'MEET SHERIDAN',
-        buttonUrl: '/engagement-rings/ring-sheridan',
-        AddClass: 'top-image-with-text--first',
-        AddSteps: '07',
+        description: '<p><strong>Oval Trilogy</strong></p><p>Sheridan is a refined oval trilogy design featuring a central moissanite complemented by side stones for added brilliance and balance.</p>',
+        linkText: 'MEET SHERIDAN',
+        link: '/engagement-rings/ring-sheridan',
+        bgColor: '#fcfcfc'
     },
-];
-
-const TOP_10_RINGS_DATA8 = [
     {
         image: 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Theresa_LS_004_2022_600x.webp?v=1655858691',
-        title: 'Emma',
-        subtitle: 'Oval Solitaire with Hidden Halo',
-        description:
-            'Emma is our simple yet sophisticated Oval Solitaire. Featuring a gorgeous 10x7mm (2.5ct) Oval cut moissanite in a graceful 4 claw setting with a sparkling Hidden Halo, finished by a delicate 1.8mm band.',
-        buttonText: 'MEET EMMA',
-        buttonUrl: '/engagement-rings/ring-emma',
-        AddClass: 'top-image-with-text--second',
-        AddSteps: '08',
+        title: 'Theresa',
+        description: '<p><strong>Oval Solitaire with Hidden Halo</strong></p><p>Theresa is a graceful oval solitaire featuring a hidden halo for added sparkle. A clean, minimal design finished with a slim, elegant band.</p>',
+        linkText: 'MEET THERESA',
+        link: '/engagement-rings/ring-theresa',
+        bgColor: '#fff'
     },
-];
-
-const TOP_10_RINGS_DATA9 = [
     {
         image: 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/01_Paige-18k-White-Gold-Oval-10x7mm-scaled_600x.webp?v=1655858691',
         title: 'Paige',
-        subtitle: 'Oval Solitaire with Hidden Halo and Pavé',
-        description:
-            'A simply stunning Oval Solitaire, Paige is certainly a piece to be admired. Featuring a gorgeous 9×6.5mm (2ct) Oval cut moissanite, held gracefully in a 4 claw setting with a Hidden Halo, completed by a stylish 1.8mm band with 2/3 Pavé.',
-        buttonText: 'MEET PAIGE',
-        buttonUrl: '/engagement-rings/ring-paige',
-        AddClass: 'top-image-with-text--first',
-        AddSteps: '09',
+        description: '<p><strong>Oval Pavé Solitaire with Hidden Halo</strong></p><p>Paige features a 9×6.5mm (2ct) oval moissanite in a 4-claw setting with a hidden halo. The pavé band enhances brilliance while maintaining a refined look.</p>',
+        linkText: 'MEET PAIGE',
+        link: '/engagement-rings/ring-paige',
+        bgColor: '#fcfcfc'
     },
-];
-
-const TOP_10_RINGS_DATA10 = [
     {
         image: 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/01_Amanda-18k-Yellow-Gold-Round-8mm-scaled_600x.webp?v=1655858691',
         title: 'Amanda',
-        subtitle: '6 Claw Pavé Round Solitaire with Hidden Halo',
-        description:
-            'Lovingly crafted and handset here in Australia, our beautiful Amanda engagement ring is a truly sophisticated solitaire. With breathtaking elegance, Amanda features a stunning 10mm (3.65ct) Round cut moissanite in a 6 claw setting with a gorgeous wrap around Hidden Halo, finished beautifully by a 2mm Pavé band.',
-        buttonText: 'MEET AMANDA',
-        buttonUrl: '/engagement-rings/ring-amanda',
-        AddClass: 'top-image-with-text--second',
-        AddSteps: '10',
-    },
+        description: '<p><strong>6 Claw Pavé Round Solitaire with Hidden Halo</strong></p><p>Amanda is a statement solitaire featuring a 10mm (3.65ct) round moissanite. Designed with a 6-claw setting, wrap-around hidden halo, and pavé band for maximum brilliance.</p>',
+        linkText: 'MEET AMANDA',
+        link: '/engagement-rings/ring-amanda',
+        bgColor: '#fff'
+    }
 ];
 
 const TOP_10_RINGS_UVPS = [
@@ -184,38 +128,18 @@ export default function Top10Rings() {
             <StoryCraftBanner {...banner} />
 
             <div className="top-page-rich-text">
-                <p className='top-page-rich-text__para'>While wedding traditions have changed throughout history,
-                    what hasn’t is the desire for the very best engagement
-                    ring! Whether you shop together or you leave it to your
-                    soon-to-be spouse, an engagement ring should last a lifetime
-                    and keep heads turning.
+                <p className='top-page-rich-text__para'>
+                    While trends evolve over time, the desire for a truly exceptional engagement ring remains unchanged. Whether you choose together or plan a surprise, your ring should be timeless, meaningful, and designed to be admired for a lifetime.
                 </p>
-                <p>Our list of the 10 Most Popular Engagement Rings is sure to help
-                    inspire you. Even if your choice of ring is not from the list below,
-                    it can act as a guide to help you understand the different styles and
-                    influence your likes and dislikes.
+                <p>
+                    Our selection of the 10 most popular engagement rings is designed to inspire your journey. Even if your perfect ring isn’t featured below, this guide will help you explore different styles and discover what truly speaks to you.
                 </p>
             </div>
 
-            <TopImageWithText data={TOP_10_RINGS_DATA1} />
-
-            <TopImageWithText data={TOP_10_RINGS_DATA2} />
-
-            <TopImageWithText data={TOP_10_RINGS_DATA3} />
-
-            <TopImageWithText data={TOP_10_RINGS_DATA4} />
-
-            <TopImageWithText data={TOP_10_RINGS_DATA5} />
-
-            <TopImageWithText data={TOP_10_RINGS_DATA6} />
-
-            <TopImageWithText data={TOP_10_RINGS_DATA7} />
-
-            <TopImageWithText data={TOP_10_RINGS_DATA8} />
-
-            <TopImageWithText data={TOP_10_RINGS_DATA9} />
-
-            <TopImageWithText data={TOP_10_RINGS_DATA10} />
+            <ProductRingCollections
+                title="Our Top 10 Rings"
+                data={TOP_10_RINGS_COLLECTION}
+            />
 
             <UvpIconFooter data={TOP_10_RINGS_UVPS} />
         </>

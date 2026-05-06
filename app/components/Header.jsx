@@ -262,8 +262,9 @@ export function HeaderMenu({
   function renderMobileUserMenu(item, level = 0) {
     const hasDropdown = item.items && item.items.length > 0;
     const isEducation = item.title === 'Education';
-    const urlObj = new URL(item.url);
-    const url = urlObj.pathname + urlObj.search + urlObj.hash;
+    const url = item.url?.startsWith('http') 
+      ? (() => { try { const u = new URL(item.url); return u.pathname + u.search + u.hash; } catch(e) { return item.url; } })() 
+      : item.url;
 
     const metalColor = getMetalColor(item.title);
 
@@ -460,11 +461,12 @@ export function HeaderMenu({
       {(menu || FALLBACK_HEADER_MENU).items.map((item, index) => {
         if (!item.url) return null;
 
-        const url = item.url &&
+        const url = item.url && item.url.startsWith('http') &&
           (item.url.includes('myshopify.com') ||
+            item.url.includes('hydrogen-store-2026.pages.dev') ||
             item.url.includes(publicStoreDomain) ||
             item.url.includes(primaryDomainUrl))
-          ? (() => { const u = new URL(item.url); return u.pathname + u.search + u.hash; })()
+          ? (() => { try { const u = new URL(item.url); return u.pathname + u.search + u.hash; } catch(e) { return item.url; } })()
           : item.url;
 
         const hasDropdown = item.items && item.items.length > 0;
@@ -511,7 +513,7 @@ export function HeaderMenu({
                             <div className="mega-menu-column" key={column.id}>
                               {column?.title && column?.url && (
                                 (() => {
-                                  const colUrl = column.url && (column.url.includes('myshopify.com') || column.url.includes(publicStoreDomain) || column.url.includes(primaryDomainUrl)) ? (() => { const u = new URL(column.url); return u.pathname + u.search + u.hash; })() : column.url;
+                                  const colUrl = column.url && column.url.startsWith('http') && (column.url.includes('myshopify.com') || column.url.includes('hydrogen-store-2026.pages.dev') || column.url.includes(publicStoreDomain) || column.url.includes(primaryDomainUrl)) ? (() => { try { const u = new URL(column.url); return u.pathname + u.search + u.hash; } catch(e) { return column.url; } })() : column.url;
                                   return (
                                     <NavLink
                                       className="ff-c mega-menu-column-title text-uppercase ff-n site-text-color w-400 f-m-13 f-13 l-h-1"
@@ -527,7 +529,7 @@ export function HeaderMenu({
                               )}
                               <div className="mega-menu-list">
                                 {column.items.map((grandchild, index) => {
-                                  const gcUrl = grandchild.url && (grandchild.url.includes('myshopify.com') || grandchild.url.includes(publicStoreDomain) || grandchild.url.includes(primaryDomainUrl)) ? (() => { const u = new URL(grandchild.url); return u.pathname + u.search + u.hash; })() : grandchild.url;
+                                  const gcUrl = grandchild.url && grandchild.url.startsWith('http') && (grandchild.url.includes('myshopify.com') || grandchild.url.includes('hydrogen-store-2026.pages.dev') || grandchild.url.includes(publicStoreDomain) || grandchild.url.includes(primaryDomainUrl)) ? (() => { try { const u = new URL(grandchild.url); return u.pathname + u.search + u.hash; } catch(e) { return grandchild.url; } })() : grandchild.url;
                                   const metalColor = getMetalColor(grandchild.title);
 
                                   // Check CUSTOM_MENU_IMAGES, then FILTER_ICONS, then fallback to resource images
@@ -611,7 +613,7 @@ export function HeaderMenu({
                       if (!cardImg && column.resource?.image) cardImg = column.resource.image.url;
                       else if (!cardImg && column.resource?.featuredImage) cardImg = column.resource.featuredImage.url;
                       if (cardImg) {
-                        const colUrl = column.url && (column.url.includes('myshopify.com') || column.url.includes(publicStoreDomain) || column.url.includes(primaryDomainUrl)) ? (() => { const u = new URL(column.url); return u.pathname + u.search + u.hash; })() : column.url;
+                        const colUrl = column.url && column.url.startsWith('http') && (column.url.includes('myshopify.com') || column.url.includes('hydrogen-store-2026.pages.dev') || column.url.includes(publicStoreDomain) || column.url.includes(primaryDomainUrl)) ? (() => { try { const u = new URL(column.url); return u.pathname + u.search + u.hash; } catch(e) { return column.url; } })() : column.url;
                         return (
                           <React.Fragment key={column.id}>
                             <div className="mega-menu-column" key={column.id}>
@@ -627,7 +629,7 @@ export function HeaderMenu({
                         )
                       }
 
-                      const colUrl = column.url && (column.url.includes('myshopify.com') || column.url.includes(publicStoreDomain) || column.url.includes(primaryDomainUrl)) ? (() => { const u = new URL(column.url); return u.pathname + u.search + u.hash; })() : column.url;
+                      const colUrl = column.url && column.url.startsWith('http') && (column.url.includes('myshopify.com') || column.url.includes('hydrogen-store-2026.pages.dev') || column.url.includes(publicStoreDomain) || column.url.includes(primaryDomainUrl)) ? (() => { try { const u = new URL(column.url); return u.pathname + u.search + u.hash; } catch(e) { return column.url; } })() : column.url;
                       return (
                         <React.Fragment key={column.id}>
                           <div className="mega-menu-column" key={column.id}>

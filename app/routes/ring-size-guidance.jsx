@@ -44,7 +44,7 @@ export default function RingSizeGuidance() {
                         description: "Enjoy one free resize within 12 months of your ring’s completion, ensuring the perfect fit (eligibility depends on design and metal type).",
                     }}
                     right={{
-                        image: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/pexels-shkrabaanthony-7167043.jpg?v=1777032453",
+                        image: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/pexels-shkrabaanthony-7167043.jpg?v=1778041592",
                         title: "",
                         description: "",
                     }}

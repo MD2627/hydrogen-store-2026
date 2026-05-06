@@ -20,6 +20,7 @@ export const meta = () => {
  * @param {Route.LoaderArgs} args
  */
 export async function loader(args) {
+    throw new Response("Not Found", { status: 404 });
     return Response.json({});
 }
 

@@ -190,8 +190,7 @@ p.recaptcha-text-coming {
 }
 
 .coming-soon-form-section label.checkbox-label.marketing-checkbox input {
-    width: 18px;
-    margin: 0;
+    /* Handled by common.css */
 }
 
 .coming-soon-form-section .country-dropdown-item {
@@ -211,9 +210,9 @@ p.recaptcha-text-coming {
 }
 
 
-.contact-form {
+/* .contact-form {
     padding: 0 25px;
-}
+} */
 
 @media screen and (max-width: 768px) {
     .coming-soon-form-header.text-center {

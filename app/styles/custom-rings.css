@@ -659,26 +659,7 @@
     text-align: center;
 }
 
-.custom-rings-page .contact-form {
-    max-width: 1200px;
-    padding: 60px 40px;
-    background: #f4f4f4;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 35px;
-}
-
-.custom-rings-page .contact-form .contact-grid-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    row-gap: 35px;
-    column-gap: 30px;
-}
-
 .custom-rings-page .contact-radio-group.centre-stone-type {
-    display: grid;
-    gap: 15px;
     grid-template-columns: 12% 35%;
 }
 
@@ -686,56 +667,9 @@
     grid-column: span 2 / span 2;
 }
 
-.custom-rings-page .centre-stone-options {
-    display: flex;
-    gap: 20px;
-}
-
-.custom-rings-page .contact-form .contact-grid label {
-    font-size: 11.7px !important;
-    color: var(--deep_gray_color);
-}
-
-.custom-rings-page .contact-form .contact-grid input {
-    font-size: 11.7px;
-    color: var(--black_color);
-    min-height: 50px;
-}
-
-/* .custom-rings-page .contact-form .contact-radio-group.centre-stone-type * {
-    font-family: var(--font_family_n);
-    font-size: 11.7px;
-} */
-
-.custom-rings-page .contact-form .contact-radio-group.centre-stone-type label {
-    display: flex;
-    align-items: baseline;
-    justify-content: start;
-    gap: 5px;
-    flex-direction: row;
-    margin-bottom: 12px;
-    cursor: pointer;
-    width: fit-content;
-}
-
-.custom-rings-page .contact-form .contact-radio-group.centre-stone-type input {
-    width: auto;
-}
-
-.custom-rings-page .contact-form .contact-stone p {
+.custom-rings-page .contact-stone p {
     margin-bottom: 17px;
     font-weight: 600;
-
-}
-
-.custom-rings-page .contact-full {
-    margin-top: 0;
-}
-
-.custom-rings-page .contact-form .contact-radio-title {
-    margin-bottom: 18px;
-    color: var(--black_color);
-    font-weight: 300;
 }
 
 .custom-rings-page .our-jewellers-subtitle {
@@ -744,61 +678,7 @@
     margin-bottom: 20px;
 }
 
-input.contact-other-input {
-    width: 100% !important;
-}
-
-.contact-radio-group.centre-stone-type input[type="radio"] {
-    appearance: none;
-    -webkit-appearance: none;
-    width: 18px !important;
-    height: 18px;
-    padding: 0;
-    border: 1.5px solid var(--silver_gray_color);
-    border-radius: 50%;
-    display: inline-grid;
-    place-content: center;
-    transition: border-color 0.25s ease;
-}
-
-.contact-radio-group.centre-stone-type input[type="radio"]::before {
-    content: "";
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: var(--deep_navy);
-    transform: scale(0);
-    transition: transform 0.25s ease;
-}
-
-.contact-radio-group.centre-stone-type input[type="radio"]:checked {
-    border-color: var(--deep_navy)
-}
-
-.contact-radio-group.centre-stone-type input[type="radio"]:checked::before {
-    transform: scale(1);
-}
-
-.contact-radio-group.centre-stone-type input[type="radio"]:focus-visible {
-    outline: 2px solid var(--deep_navy);
-    outline-offset: 2px;
-}
-
-
 @media screen and (max-width: 768px) {
-    .custom-rings-page .contact-form .contact-grid-wrapper {
-        grid-template-columns: 1fr;
-        row-gap: 35px;
-    }
-
-    .custom-rings-page .contact-form .contact-grid label {
-        font-size: 13.95px !important;
-    }
-
-    .custom-rings-page .contact-form {
-        /* margin: 0 20px; */
-    }
-
     .custom-rings-page .contact-stone-wrapper {
         gap: 10px;
         flex-direction: column;
@@ -808,12 +688,7 @@ input.contact-other-input {
         padding: 0 20px;
     }
 
-    .custom-rings-page .centre-stone-options {
-        flex-direction: column;
-        gap: 0
-    }
-
     .custom-rings-page .contact-radio-group.centre-stone-type {
         display: block;
     }
-}
+}

@@ -7,6 +7,7 @@ import { BLOGS_QUERY } from '~/routes/blogs.$blogHandle._index';
 
 /* ---------------- LOADER ---------------- */
 export async function loader({ context }) {
+  throw new Response("Not Found", { status: 404 });
     const { storefront } = context;
 
     try {

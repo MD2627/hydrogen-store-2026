@@ -21,6 +21,10 @@ export function links() {
     return [{ rel: 'stylesheet', href: styles }];
 };
 
+export async function loader() {
+    throw new Response("Not Found", { status: 404 });
+}
+
 export default function ToiEtMoiPage() {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
     const [mounted, setMounted] = useState(false);

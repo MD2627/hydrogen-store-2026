@@ -28,6 +28,7 @@ export const meta = () => {
  * @param {Route.LoaderArgs} args
  */
 export async function loader(args) {
+    throw new Response("Not Found", { status: 404 });
   return {
     bannerData: BANNER_DATA,
     missionData: MISSION_DATA,

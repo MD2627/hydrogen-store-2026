@@ -863,3 +863,225 @@ video {
     vertical-align: bottom;
     height: auto;
 }
+
+/* ==============================================
+   GLOBAL FORM SYSTEM (Boutique Aesthetic)
+   ============================================== */
+
+.contact-form,
+.boutique-form {
+    max-width: 1200px;
+    padding: 2rem;
+    background: #f4f4f4;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.contact-grid-wrapper,
+.form-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 35px;
+    column-gap: 30px;
+}
+
+.contact-grid,
+.contact-full,
+.form-group-boutique {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label,
+.boutique-form label,
+.contact-radio-title,
+.contact-grid label {
+    font-size: var(--min_font_size);
+    color: var(--deep_gray_color);
+    font-family: var(--font_family_n);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.contact-form input:not([type="checkbox"]):not([type="radio"]),
+.contact-form textarea,
+.contact-form select,
+.boutique-form input:not([type="checkbox"]):not([type="radio"]),
+.boutique-form textarea,
+.boutique-form select,
+.contact-grid input,
+.contact-full textarea,
+.contact-select {
+    font-size: 11.7px;
+    color: var(--black_color);
+    min-height: 50px;
+    padding: 15px;
+    border: 1px solid #eee;
+    background: #fff;
+    font-family: var(--font_family_c);
+    border-radius: 0px;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus,
+.boutique-form input:focus,
+.boutique-form textarea:focus,
+.boutique-form select:focus {
+    outline: none;
+    border-color: var(--black_color);
+}
+
+.contact-radio-group,
+.contact-checkbox-group {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: auto 1fr;
+}
+
+.contact-form .contact-radio-group label,
+.boutique-form .contact-radio-group label,
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    flex-direction: row;
+    margin-bottom: 0;
+    cursor: pointer;
+    width: fit-content;
+    font-family: var(--font_family_c);
+    font-size: 14px;
+    color: var(--black_color);
+    text-transform: none !important;
+    letter-spacing: normal !important;
+}
+
+.contact-form input[type="radio"],
+.boutique-form input[type="radio"],
+.contact-form input[type="checkbox"],
+.boutique-form input[type="checkbox"],
+input[type="radio"].boutique-input,
+input[type="checkbox"].boutique-input,
+.subscribe-check input[type="checkbox"],
+.contact-stone input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 18px !important;
+    height: 18px;
+    padding: 0;
+    margin: 0;
+    border: 1.5px solid var(--silver_gray_color);
+    display: inline-grid;
+    place-content: center;
+    transition: all 0.25s ease;
+    background: #fff;
+    cursor: pointer;
+    flex-shrink: 0;
+    outline: none;
+    position: relative;
+    vertical-align: middle;
+}
+
+/* Defaulting all checkboxes and radios in boutique forms */
+.contact-form input[type="checkbox"],
+.boutique-form input[type="checkbox"],
+.subscribe-check input[type="checkbox"],
+.contact-stone input[type="checkbox"] {
+    border-radius: 2px;
+}
+
+.contact-form input[type="radio"],
+.boutique-form input[type="radio"] {
+    border-radius: 50%;
+}
+
+.contact-form input[type="radio"]::before,
+.boutique-form input[type="radio"]::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--black_color);
+    transform: scale(0);
+    transition: transform 0.25s ease;
+}
+
+.contact-form input[type="checkbox"]::before,
+.boutique-form input[type="checkbox"]::before,
+.subscribe-check input[type="checkbox"]::before,
+.contact-stone input[type="checkbox"]::before {
+    content: "✓";
+    font-size: 12px;
+    color: var(--black_color);
+    transform: scale(0);
+    transition: transform 0.25s ease;
+    line-height: 1;
+    display: block;
+}
+
+.contact-form input[type="radio"]:checked,
+.boutique-form input[type="radio"]:checked,
+.contact-form input[type="checkbox"]:checked,
+.boutique-form input[type="checkbox"]:checked,
+.subscribe-check input[type="checkbox"]:checked,
+.contact-stone input[type="checkbox"]:checked {
+    border-color: var(--black_color);
+}
+
+.contact-form input[type="radio"]:checked::before,
+.boutique-form input[type="radio"]:checked::before,
+.contact-form input[type="checkbox"]:checked::before,
+.boutique-form input[type="checkbox"]:checked::before,
+.subscribe-check input[type="checkbox"]:checked::before,
+.contact-stone input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+.contact-submit-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    /* margin-top: 20px; */
+    width: 100%;
+}
+
+.contact-form .btn,
+.boutique-form .btn {
+    min-width: 280px;
+}
+
+.contact-recaptcha {
+    font-size: 11px;
+    color: var(--medium_gray_color);
+    text-align: center;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .contact-form,
+    .boutique-form {
+        gap: 25px;
+    }
+
+    .contact-grid-wrapper,
+    .form-grid-2 {
+        grid-template-columns: 1fr;
+        row-gap: 25px;
+    }
+
+    .contact-form label,
+    .boutique-form label,
+    .contact-grid label {
+        font-size: 13px !important;
+    }
+}

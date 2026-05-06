@@ -204,14 +204,14 @@ export default function DiamondInitiatives() {
       </section>
 
       {/* ================= FAQ SECTION ================= */}
-      <section className="initiatives-faq-wrap">
-        <div className="page-width">
-          <ProductFAQ
-            data={FAQ_DATA}
-            title="Diamond Initiatives FAQ"
-            subtitle="Learn more about our approach to ethical sourcing, sustainability, and positive global impact." />
-        </div>
-      </section>
+      {/* <section className="initiatives-faq-wrap">
+        <div className="page-width"> */}
+      <ProductFAQ
+        data={FAQ_DATA}
+        title="Diamond Initiatives FAQ"
+        subtitle="Learn more about our approach to ethical sourcing, sustainability, and positive global impact." />
+      {/* </div>
+      </section> */}
 
       <UvpIconFooter data={OUR_STORY_UVPS} />
     </div>

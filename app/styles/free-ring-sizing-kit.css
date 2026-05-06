@@ -1,3 +1,7 @@
+.free-ring-sizing-kit .faq-v3 {
+    padding-top: 0;
+}
+
 .inner-contact-big-image {
     flex-direction: row;
     align-items: center;
@@ -39,10 +43,6 @@
     margin-right: auto;
 }
 
-.contact-big-form-with-image {
-    padding: 60px 0 48px;
-}
-
 @media screen and (max-width: 1024px) {
     .inner-contact-big-image .form-row.four-col {
         grid-template-columns: repeat(2, 1fr) !important;
@@ -52,10 +52,10 @@
         gap: 15px;
     }
 
-    .inner-contact-big-image form.new-contact-form {
+    /* .inner-contact-big-image form.new-contact-form {
         gap: 20px !important;
         padding: 0 10px !important;
-    }
+    } */
 
     .inner-contact-big-image .form-group:last-child {
         margin-left: 10px !important;
@@ -97,10 +97,6 @@
         width: 100%;
         aspect-ratio: 4/5;
         height: auto;
-    }
-
-    .contact-big-form-with-image {
-        padding: 32px 0 48px;
     }
 }
 
@@ -148,16 +144,16 @@
     margin: 0;
 }
 
-.inner-contact-big-image form.new-contact-form {
+/* .inner-contact-big-image form.new-contact-form {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     padding: 0 20px 20px;
-}
+} */
 
 .inner-contact-big-image .new-contact-container {
     background-color: var(--light_gray_color);
-    padding: 40px 10px 20px;
+    /* padding: 40px 10px 20px; */
     width: 100%;
 }
 
@@ -277,7 +273,7 @@
 .inner-contact-big-image p.disclaimer-text-big,
 .inner-contact-big-image .recaptcha-text,
 .inner-contact-big-image .disclaimer-links {
-    font-size: 10.4px;
+    font-size: var(--min_font_size);
     text-align: center;
     line-height: 12.48px;
     margin-bottom: 13px;
@@ -316,7 +312,6 @@
     .inner-contact-big-image p.disclaimer-text-big,
     .inner-contact-big-image .recaptcha-text,
     .inner-contact-big-image .disclaimer-links {
-        font-size: 12px;
         line-height: 15px;
     }
 
@@ -338,9 +333,9 @@
         margin-left: 0;
     }
 
-    .inner-contact-big-image form.new-contact-form {
+    /* .inner-contact-big-image form.new-contact-form {
         padding: 0 10px 10px;
-    }
+    } */
 
     .inner-contact-big-image .checkbox-options {
         flex-direction: column;
@@ -351,11 +346,6 @@
 
     .form-group:has(label[for="lastName"]) {
         padding-left: 10px;
-    }
-
-    .inner-contact-big-image .checkbox-options input[type="checkbox"] {
-        max-width: max-content;
-        margin-right: 10px;
     }
 
     .inner-contact-big-image .form-group label {

@@ -1093,6 +1093,10 @@ a.ssw-link:hover svg {
     background-color: var(--white_color);
 }
 
+.faqs .faq-v3 {
+    padding-top: 0;
+}
+
 .faq-v3 .flex-container {
     display: flex;
     gap: 100px;

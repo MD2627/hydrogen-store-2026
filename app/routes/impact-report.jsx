@@ -10,6 +10,7 @@ export const meta = () => {
 };
 
 export async function loader(args) {
+    throw new Response("Not Found", { status: 404 });
     return {
         bannerData: BANNER_DATA
     };

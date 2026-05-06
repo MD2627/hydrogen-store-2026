@@ -595,6 +595,7 @@ query BlogPosts($blogHandle: String!, $language: LanguageCode, $country: Country
 `;
 
 export async function loader({ context }) {
+  throw new Response("Not Found", { status: 404 });
     const { storefront } = context;
     const { blog } = await storefront.query(BLOG_QUERY, {
         variables: { blogHandle: 'moissanite-guidance' },

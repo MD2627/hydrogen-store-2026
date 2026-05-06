@@ -348,10 +348,6 @@ button.swiper-button-next.custom-arrow svg {
   margin-bottom: 12px;
 }
 
-.item.image-text-item p {
-  text-align: justify;
-}
-
 /* Responsive */
 @media (max-width: 1024px) {
   .editorial-split {
@@ -459,10 +455,12 @@ section.need-help-banner {
 
 .small-hide {
   scale: 1.2;
+  width: 100%;
 }
 
 .need-help-banner .background {
   overflow: hidden;
+  height: 65vh;
 }
 
 .need-help-banner .background:after {

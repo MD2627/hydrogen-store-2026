@@ -142,25 +142,23 @@ Necklaces:
     );
 
     return (
-        <form className="graduation-contact-form" onSubmit={handleSubmit}>
-            <div className="form-row">
-                <div className="form-group">
-                    <label htmlFor="firstName" className="ff-n f-12 w-300 black-color">YOUR FIRST NAME *</label>
-                    <input type="text" id="firstName" className="ff-n f-12 w-400 black-color" name="firstName" placeholder="Your first name" value={form.firstName} onChange={handleChange} required />
+        <form className="contact-form graduation-contact-form" onSubmit={handleSubmit}>
+            <div className="contact-grid-wrapper">
+                <div className="contact-grid">
+                    <label htmlFor="firstName">YOUR FIRST NAME *</label>
+                    <input type="text" id="firstName" name="firstName" placeholder="Your first name" value={form.firstName} onChange={handleChange} required />
                 </div>
-                <div className="form-group">
-                    <label htmlFor="lastName" className="ff-n f-12 w-300 black-color">YOUR LAST NAME *</label>
-                    <input type="text" id="lastName" className="ff-n f-12 w-400 black-color" name="lastName" placeholder="Your last name" value={form.lastName} onChange={handleChange} required />
+                <div className="contact-grid">
+                    <label htmlFor="lastName">YOUR LAST NAME *</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="Your last name" value={form.lastName} onChange={handleChange} required />
                 </div>
-            </div>
 
-            <div className="form-row">
-                <div className="form-group">
-                    <label htmlFor="email" className="ff-n f-12 w-300 black-color">YOUR EMAIL *</label>
-                    <input type="email" id="email" className="ff-n f-12 w-400 black-color" name="email" placeholder="Enter your email" value={form.email} onChange={handleChange} required />
+                <div className="contact-grid">
+                    <label htmlFor="email">YOUR EMAIL *</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" value={form.email} onChange={handleChange} required />
                 </div>
-                <div className="form-group">
-                    <label htmlFor="phone" className="ff-n f-12 w-300 black-color">YOUR PHONE NUMBER (OPTIONAL)</label>
+                <div className="contact-grid">
+                    <label htmlFor="phone">YOUR PHONE NUMBER (OPTIONAL)</label>
 
                     <div className="phone-input-wrapper">
                         <div
@@ -195,7 +193,6 @@ Necklaces:
                         <span className="phone-prefix">{selectedCountry.dial_code}</span>
                         <input
                             id="phone"
-                            className="ff-n f-12 w-400 black-color"
                             type="tel"
                             name="phone"
                             value={form.phone}
@@ -206,9 +203,9 @@ Necklaces:
                 </div>
             </div>
 
-            <div className="form-group full-width">
-                <label htmlFor="institutionName" className="ff-n f-12 w-300 black-color">INSTITUTION NAME *</label>
-                <input type="text" id="institutionName" className="ff-n f-12 w-400 black-color" name="institutionName" placeholder="eg. The Australian National University" value={form.institutionName} onChange={handleChange} required />
+            <div className="contact-full">
+                <label htmlFor="institutionName">INSTITUTION NAME *</label>
+                <input type="text" id="institutionName" name="institutionName" placeholder="eg. The Australian National University" value={form.institutionName} onChange={handleChange} required />
             </div>
 
             <div className="product-quantities-grid">
@@ -232,12 +229,12 @@ Necklaces:
                 </div>
             </div>
 
-            <div className="form-group full-width">
-                <label htmlFor="message" className="ff-n f-12 w-300 black-color">MESSAGE (OPTIONAL)</label>
-                <textarea id="message" className="ff-n f-12 w-400 black-color" name="message" rows="4" value={form.message} onChange={handleChange}></textarea>
+            <div className="contact-full">
+                <label htmlFor="message">MESSAGE (OPTIONAL)</label>
+                <textarea id="message" name="message" rows="4" value={form.message} onChange={handleChange}></textarea>
             </div>
 
-            <div className="form-submit-container txt-center">
+            <div className="contact-submit-container">
                 {status === 'success' && (
                     <div className="status-message success ff-c f-14 w-500 accent-color" style={{ marginBottom: '10px' }}>
                         Thank you! Your message has been sent successfully.
@@ -249,10 +246,10 @@ Necklaces:
                     </div>
                 )}
 
-                <button type="submit" className="submit-btn btn f-11 w-400 white-color" disabled={status === 'loading'}>
+                <button type="submit" className="submit-btn btn" disabled={status === 'loading'}>
                     {status === 'loading' ? 'SUBMITTING...' : 'SUBMIT'}
                 </button>
-                <p className="recaptcha-text ff-c w-300 f-11 black-color">
+                <p className="contact-recaptcha ff-c">
                     This site is protected by reCAPTCHA. The Google <Link to="/privacy-policy">Privacy Policy</Link> and <Link to="/terms-and-conditions">Terms of Service</Link> apply.
                 </p>
             </div>
