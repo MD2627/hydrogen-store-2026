@@ -15,11 +15,11 @@ export function ShopByStyle({
   description = (
     <>
       Discover our signature setting styles, including{' '}
-      <Link to="/engagement?style=solitaire">solitaire</Link>,{' '}
-      <Link to="/engagement?style=trilogy">trilogy</Link>,{' '}
-      <Link to="/engagement?style=halo">halo</Link>,{' '}
-      <Link to="/engagement?style=toi-et-moi">toi et moi</Link> and{' '}
-      <Link to="/engagement?style=bezel">bezel</Link>.
+      <Link to="/engagement-rings?style=solitaire">solitaire</Link>,{' '}
+      <Link to="/engagement-rings?style=trilogy">trilogy</Link>,{' '}
+      <Link to="/engagement-rings?style=halo">halo</Link>,{' '}
+      <Link to="/engagement-rings?style=toi-et-moi">toi et moi</Link> and{' '}
+      <Link to="/engagement-rings?style=bezel">bezel</Link>.
     </>
   ),
   items = [],

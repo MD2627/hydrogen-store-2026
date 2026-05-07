@@ -180,9 +180,8 @@
     color: var(--black_color);
 }
 
-.delivery-notes-premium p {
-    color: #555;
-    line-height: 1.8;
+.delivery-notes-premium .sb-description {
+    margin: 0;
 }
 
 /* ------------------- SECURE SECTION (EDITORIAL) ------------------- */
@@ -255,37 +254,6 @@
     max-width: 400px;
 }
 
-.safe-hands-logos {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    gap: 40px;
-}
-
-.partner-logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-    width: 200px;
-    padding: 20px;
-    background: #fcfcfc;
-    border: 1px solid #eaeaea;
-}
-
-.partner-logo img {
-    max-height: 100%;
-    max-width: 100%;
-    object-fit: contain;
-    filter: grayscale(100%);
-    opacity: 0.7;
-    transition: all 0.3s ease;
-}
-
-.partner-logo:hover img {
-    filter: grayscale(0%);
-    opacity: 1;
-}
 
 /* ------------------- IMPORT DUTIES (EDITORIAL) ------------------- */
 .import-duties-section {
@@ -349,10 +317,6 @@
         gap: 40px;
     }
 
-    .safe-hands-logos {
-        width: 100%;
-        justify-content: flex-start;
-    }
 
     .delivery-list-container {
         grid-template-columns: 1fr;
@@ -374,11 +338,4 @@
         align-items: flex-start;
     }
 
-    .safe-hands-logos {
-        flex-direction: column;
-    }
-
-    .partner-logo {
-        width: 100%;
-    }
 }

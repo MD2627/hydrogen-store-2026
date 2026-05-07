@@ -45,7 +45,7 @@ export const COLLECTION_BANNERS = {
     'wedding': {
         type: 'image',
         desktop: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Gemini_Generated_Image_pyqvwbpyqvwbpyqv.png?v=1776057909',
-        mobile: 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/wedding_banner_mobile.jpg',
+        mobile: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Gemini_Generated_Image_pyqvwbpyqvwbpyqv.png?v=1776057909',
         title: 'Wedding Rings',
         description: 'Timeless symbols of your eternal love.'
     },

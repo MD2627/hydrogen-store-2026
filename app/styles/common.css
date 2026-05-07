@@ -349,6 +349,14 @@ body .text-uppercase {
     text-transform: uppercase;
 }
 
+body .bento-cta-text {
+    font-family: var(--font_family_n);
+}
+
+body .letter-spacing-2 {
+    letter-spacing: 0.2em;
+}
+
 body .white-color {
     color: var(--white_color) !important;
 }

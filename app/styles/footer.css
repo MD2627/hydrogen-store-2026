@@ -38,7 +38,7 @@
 
 @media (max-width: 1024px) {
   .footer-top-content {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
   }
 }
@@ -121,7 +121,7 @@
   }
 
   .accordion-icon {
-    display: none;
+    display: block;
   }
 
   .footer-heading {
@@ -448,4 +448,5 @@
   z-index: 100;
   box-shadow: 0px 0px 5px 0px var(--pure_black_color);
   cursor: pointer;
+  padding: 0;
 }

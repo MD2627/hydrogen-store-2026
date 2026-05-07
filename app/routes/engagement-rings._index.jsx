@@ -555,7 +555,7 @@ export default function EngagementRingCollection() {
                     title: "Not in a hurry to find a ring?",
                     description: "Take your time with a custom-made engagement piece, designed with you at every step.",
                     linkText: "BEGIN THE PROCESS",
-                    linkTo: "/engagement?metal=platinum"
+                    linkTo: "/engagement-rings?metal=platinum"
                 }}
                 right={{
                     image: "https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Copy_of_Holiday_Campaign_P2_Banner_Option_1_1000x1000.jpg?v=1762307138",

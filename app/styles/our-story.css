@@ -460,7 +460,6 @@ section.need-help-banner {
 
 .need-help-banner .background {
   overflow: hidden;
-  height: 65vh;
 }
 
 .need-help-banner .background:after {

@@ -178,7 +178,7 @@
 }
 
 span.label-text {
-    font-size: 9px;
+    font-size: var(--min_font_size);
     font-family: var(--font_family_c);
     color: var(--deep_gray_color);
     font-weight: 400;

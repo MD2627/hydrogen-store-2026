@@ -273,6 +273,10 @@
 
 /* CTA Banner */
 
+.initiatives-cta-banner {
+  padding: 0;
+}
+
 .cta-wrapper {
   display: flex;
   background: #2c2f3a;

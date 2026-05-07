@@ -39,8 +39,6 @@
 
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
 body {
@@ -235,10 +233,13 @@ body {
 }
 
 /* ── Accordion section ── */
-.hcg-accordion-section {
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 52px 64px 80px;
+
+section.hcg-accordion-section {
+    padding-bottom: 0;
+}
+
+section.hcg-accordion-section:last-child {
+    padding-bottom: 4rem;
 }
 
 .hcg-accordion-label {
@@ -544,15 +545,18 @@ body {
 
     .hcg-hero-inner {
         grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .hcg-accordion-section {
-        padding: 36px 24px 60px;
+        gap: 0px;
     }
 
     .hcg-card-body-inner {
         grid-template-columns: 1fr;
         gap: 24px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    section.hcg-accordion-section:last-child {
+        padding-bottom: 3rem;
     }
 }

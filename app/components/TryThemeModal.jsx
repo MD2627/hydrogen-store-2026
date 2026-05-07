@@ -4,7 +4,7 @@ import { useFetcher } from "react-router";
 export function TryThemeModal({ isOpen, onClose, formId = "theme-showcase" }) {
   const fetcher = useFetcher();
   const [submitted, setSubmitted] = useState(false);
-  
+
   const isSubmitting = fetcher.state === "submitting";
   const error = fetcher.data?.error;
   const success = fetcher.data?.success;
@@ -52,32 +52,32 @@ export function TryThemeModal({ isOpen, onClose, formId = "theme-showcase" }) {
 
               <fetcher.Form method="post" action="/api/try-theme" className="modal-form">
                 <input type="hidden" name="form_id" value={formId} />
-                
+
                 <div className="form-group">
                   <label className="form-label">First Name</label>
-                  <input 
-                    name="first_name" 
-                    placeholder="Jane" 
-                    required 
+                  <input
+                    name="first_name"
+                    placeholder="Jane"
+                    required
                     className="form-input"
                   />
                 </div>
 
                 <div className="form-group">
                   <label className="form-label">Email Address</label>
-                  <input 
-                    name="email" 
-                    type="email" 
-                    placeholder="jane@example.com" 
-                    required 
+                  <input
+                    name="email"
+                    type="email"
+                    placeholder="jane@example.com"
+                    required
                     className="form-input"
                   />
                 </div>
 
-                <button 
-                  type="submit" 
+                <button
+                  type="submit"
                   disabled={isSubmitting}
-                  className="form-submit"
+                  className="btn"
                 >
                   {isSubmitting ? "Submitting..." : "Send Request"}
                 </button>

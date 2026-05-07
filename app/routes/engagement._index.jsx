@@ -22,10 +22,9 @@ export const meta = ({ data }) => {
  * @param {Route.LoaderArgs} args
  */
 export async function loader(args) {
-    const deferredData = loadDeferredData(args);
-    const criticalData = await loadCriticalData(args);
-
-    return { ...deferredData, ...criticalData };
+    const url = new URL(args.request.url);
+    const search = url.search;
+    return redirect(`/engagement-rings${search}`, 301);
 }
 
 /**

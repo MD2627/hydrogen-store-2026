@@ -293,44 +293,166 @@ export default function Documentation() {
             <div className="hcg-section-divider" />
 
             {/* Accordion */}
-            <div className="hcg-accordion-section">
-                <div className="hcg-accordion-label">Sections You Can Customize</div>
+            <section className="hcg-accordion-section">
+                <div className="page-width">
+                    <div className="hcg-accordion-label">Sections You Can Customize</div>
 
-                {sections.map((s, idx) => {
-                    const isOpen = !!openCards[s.id];
-                    return (
-                        <div className="hcg-section-card" key={s.id}>
-                            <div
-                                className={`hcg-card-header ${isOpen ? "open" : ""}`}
-                                onClick={() => toggle(s.id)}
-                            >
-                                <div className="hcg-card-title-row">
-                                    <span className="hcg-card-index">{String(idx + 1).padStart(2, "0")}</span>
-                                    <span className="hcg-card-name">{s.name}</span>
-                                    {!s.simple && <span className="hcg-linked-chip">Linked</span>}
-                                </div>
-                                <span className={`hcg-card-chevron ${isOpen ? "open" : ""}`}>▾</span>
-                            </div>
-
-                            <div className={`hcg-card-body ${isOpen ? "open" : ""}`}>
-
-                                {/* Preview */}
-                                {s.previewUrl && (
-                                    <div className="hcg-preview-link">
-                                        <h4>Applies to section:</h4>
-                                        <img
-                                            src={s.previewUrl}
-                                            alt={`Preview for ${s.name}`}
-                                            className="hcg-section-image"
-                                        />
+                    {sections.map((s, idx) => {
+                        const isOpen = !!openCards[s.id];
+                        return (
+                            <div className="hcg-section-card" key={s.id}>
+                                <div
+                                    className={`hcg-card-header ${isOpen ? "open" : ""}`}
+                                    onClick={() => toggle(s.id)}
+                                >
+                                    <div className="hcg-card-title-row">
+                                        <span className="hcg-card-index">{String(idx + 1).padStart(2, "0")}</span>
+                                        <span className="hcg-card-name">{s.name}</span>
+                                        {!s.simple && <span className="hcg-linked-chip">Linked</span>}
                                     </div>
-                                )}
+                                    <span className={`hcg-card-chevron ${isOpen ? "open" : ""}`}>▾</span>
+                                </div>
 
-                                {s.description && (
-                                    <div className="hcg-section-description">{s.description}</div>
-                                )}
+                                <div className={`hcg-card-body ${isOpen ? "open" : ""}`}>
 
-                                <div>
+                                    {/* Preview */}
+                                    {s.previewUrl && (
+                                        <div className="hcg-preview-link">
+                                            <h4>Applies to section:</h4>
+                                            <img
+                                                src={s.previewUrl}
+                                                alt={`Preview for ${s.name}`}
+                                                className="hcg-section-image"
+                                            />
+                                        </div>
+                                    )}
+
+                                    {s.description && (
+                                        <div className="hcg-section-description">{s.description}</div>
+                                    )}
+
+                                    <div>
+
+                                        <div className={s.simple ? "hcg-card-body-single" : "hcg-card-body-inner"}>
+
+                                            {/* Left col: notice + how it works (complex only) */}
+                                            {!s.simple && (
+                                                <div>
+                                                    {s.connected && (
+                                                        <div className="hcg-notice">
+                                                            <div className="hcg-notice-title">Important — Connected Metaobjects</div>
+                                                            <div className="hcg-notice-intro">
+                                                                This section works using two connected metaobjects:
+                                                            </div>
+                                                            <div className="hcg-connected-chips">
+                                                                {s.connected.map((c, i) => (
+                                                                    <div className="hcg-connected-chip" key={i}>
+                                                                        <span className="hcg-chip-label">{i === 0 ? "Main" : "Items"}</span>
+                                                                        {c}
+                                                                    </div>
+                                                                ))}
+                                                            </div>
+                                                        </div>
+                                                    )}
+                                                    {s.how && (
+                                                        <>
+                                                            <div className="hcg-sub-label">How It Works</div>
+                                                            <p className="hcg-how-text">{s.how}</p>
+                                                        </>
+                                                    )}
+                                                </div>
+                                            )}
+
+                                            {/* Right col (or only col): steps + screenshots */}
+                                            <div>
+                                                <div className="hcg-sub-label">Steps</div>
+                                                <div className="hcg-steps">
+                                                    {s.steps.map((step, i) => (
+                                                        <div className="hcg-step" key={i}>
+                                                            <span className="hcg-step-num">{String(i + 1).padStart(2, "0")}</span>
+                                                            <span className="hcg-step-text">{step}</span>
+                                                        </div>
+                                                    ))}
+                                                </div>
+
+                                                {s.screenshots && s.simple && (
+                                                    <div className="hcg-screenshot-links">
+                                                        {s.screenshots.map((sc, i) => (
+                                                            <div key={i} className="hcg-screenshot-item">
+                                                                <h4 className="hcg-screenshot-label">{sc.label}</h4>
+                                                                <img
+                                                                    src={sc.url}
+                                                                    alt={sc.label}
+                                                                    className="hcg-screenshot-image"
+                                                                />
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                )}
+                                            </div>
+
+                                        </div>
+
+                                        {s.screenshots && !s.simple && (
+                                            <div className="hcg-screenshot-links">
+                                                {s.screenshots.map((sc, i) => (
+                                                    <div key={i} className="hcg-screenshot-item">
+                                                        <h4 className="hcg-screenshot-label">{sc.label}</h4>
+                                                        <img
+                                                            src={sc.url}
+                                                            alt={sc.label}
+                                                            className="hcg-screenshot-image"
+                                                        />
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        )}
+
+                                    </div>
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
+            </section>
+
+            <section className="hcg-accordion-section">
+                <div className="page-width">
+                    <div className="hcg-accordion-label">Product You Can Customize</div>
+
+                    {product.map((s, idx) => {
+                        const isOpen = !!openCards[s.id];
+                        return (
+                            <div className="hcg-section-card" key={s.id}>
+                                <div
+                                    className={`hcg-card-header ${isOpen ? "open" : ""}`}
+                                    onClick={() => toggle(s.id)}
+                                >
+                                    <div className="hcg-card-title-row">
+                                        <span className="hcg-card-index">{String(idx + 1).padStart(2, "0")}</span>
+                                        <span className="hcg-card-name">{s.name}</span>
+                                        {!s.simple && <span className="hcg-linked-chip">Linked</span>}
+                                    </div>
+                                    <span className={`hcg-card-chevron ${isOpen ? "open" : ""}`}>▾</span>
+                                </div>
+
+                                <div className={`hcg-card-body ${isOpen ? "open" : ""}`}>
+
+                                    {/* Preview */}
+                                    {s.previewUrl && (
+                                        <div className="hcg-preview-link">
+                                            <h4>Applies to section:</h4>
+                                            <img
+                                                src={s.previewUrl}
+                                                alt={`Preview for ${s.name}`}
+                                                className="hcg-section-image"
+                                            />
+                                        </div>
+                                    )}
+
+                                    {s.description && (
+                                        <div className="hcg-section-description">{s.description}</div>
+                                    )}
 
                                     <div className={s.simple ? "hcg-card-body-single" : "hcg-card-body-inner"}>
 
@@ -374,7 +496,7 @@ export default function Documentation() {
                                                 ))}
                                             </div>
 
-                                            {s.screenshots && s.simple && (
+                                            {s.screenshots && (
                                                 <div className="hcg-screenshot-links">
                                                     {s.screenshots.map((sc, i) => (
                                                         <div key={i} className="hcg-screenshot-item">
@@ -391,130 +513,12 @@ export default function Documentation() {
                                         </div>
 
                                     </div>
-
-                                    {s.screenshots && !s.simple && (
-                                        <div className="hcg-screenshot-links">
-                                            {s.screenshots.map((sc, i) => (
-                                                <div key={i} className="hcg-screenshot-item">
-                                                    <h4 className="hcg-screenshot-label">{sc.label}</h4>
-                                                    <img
-                                                        src={sc.url}
-                                                        alt={sc.label}
-                                                        className="hcg-screenshot-image"
-                                                    />
-                                                </div>
-                                            ))}
-                                        </div>
-                                    )}
-
                                 </div>
                             </div>
-                        </div>
-                    );
-                })}
-            </div>
-
-            <div className="hcg-accordion-section">
-                <div className="hcg-accordion-label">Product You Can Customize</div>
-
-                {product.map((s, idx) => {
-                    const isOpen = !!openCards[s.id];
-                    return (
-                        <div className="hcg-section-card" key={s.id}>
-                            <div
-                                className={`hcg-card-header ${isOpen ? "open" : ""}`}
-                                onClick={() => toggle(s.id)}
-                            >
-                                <div className="hcg-card-title-row">
-                                    <span className="hcg-card-index">{String(idx + 1).padStart(2, "0")}</span>
-                                    <span className="hcg-card-name">{s.name}</span>
-                                    {!s.simple && <span className="hcg-linked-chip">Linked</span>}
-                                </div>
-                                <span className={`hcg-card-chevron ${isOpen ? "open" : ""}`}>▾</span>
-                            </div>
-
-                            <div className={`hcg-card-body ${isOpen ? "open" : ""}`}>
-
-                                {/* Preview */}
-                                {s.previewUrl && (
-                                    <div className="hcg-preview-link">
-                                        <h4>Applies to section:</h4>
-                                        <img
-                                            src={s.previewUrl}
-                                            alt={`Preview for ${s.name}`}
-                                            className="hcg-section-image"
-                                        />
-                                    </div>
-                                )}
-
-                                {s.description && (
-                                    <div className="hcg-section-description">{s.description}</div>
-                                )}
-
-                                <div className={s.simple ? "hcg-card-body-single" : "hcg-card-body-inner"}>
-
-                                    {/* Left col: notice + how it works (complex only) */}
-                                    {!s.simple && (
-                                        <div>
-                                            {s.connected && (
-                                                <div className="hcg-notice">
-                                                    <div className="hcg-notice-title">Important — Connected Metaobjects</div>
-                                                    <div className="hcg-notice-intro">
-                                                        This section works using two connected metaobjects:
-                                                    </div>
-                                                    <div className="hcg-connected-chips">
-                                                        {s.connected.map((c, i) => (
-                                                            <div className="hcg-connected-chip" key={i}>
-                                                                <span className="hcg-chip-label">{i === 0 ? "Main" : "Items"}</span>
-                                                                {c}
-                                                            </div>
-                                                        ))}
-                                                    </div>
-                                                </div>
-                                            )}
-                                            {s.how && (
-                                                <>
-                                                    <div className="hcg-sub-label">How It Works</div>
-                                                    <p className="hcg-how-text">{s.how}</p>
-                                                </>
-                                            )}
-                                        </div>
-                                    )}
-
-                                    {/* Right col (or only col): steps + screenshots */}
-                                    <div>
-                                        <div className="hcg-sub-label">Steps</div>
-                                        <div className="hcg-steps">
-                                            {s.steps.map((step, i) => (
-                                                <div className="hcg-step" key={i}>
-                                                    <span className="hcg-step-num">{String(i + 1).padStart(2, "0")}</span>
-                                                    <span className="hcg-step-text">{step}</span>
-                                                </div>
-                                            ))}
-                                        </div>
-
-                                        {s.screenshots && (
-                                            <div className="hcg-screenshot-links">
-                                                {s.screenshots.map((sc, i) => (
-                                                    <div key={i} className="hcg-screenshot-item">
-                                                        <h4 className="hcg-screenshot-label">{sc.label}</h4>
-                                                        <img
-                                                            src={sc.url}
-                                                            alt={sc.label}
-                                                            className="hcg-screenshot-image"
-                                                        />
-                                                    </div>
-                                                ))}
-                                            </div>
-                                        )}
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    );
-                })}
-            </div>
+                        );
+                    })}
+                </div>
+            </section>
         </div>
     );
 

@@ -93,9 +93,9 @@ export default function DiamondInitiatives() {
         </div>
       </section>
 
-      <div className="initiatives-full-image">
+      {/* <div className="initiatives-full-image">
         <img src={INITIATIVES_IMAGE.image} alt="Initiatives context" className="full-width-image" />
-      </div>
+      </div> */}
 
       {/* ================= PLANET SECTION ================= */}
       <section className="initiatives-editorial-section planet-section">
@@ -202,7 +202,7 @@ export default function DiamondInitiatives() {
 
 const INITIATIVES_HERO = {
   image:
-    'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Trees_for_the_future_holding_tree_2000x2000.jpg?v=1764045470',
+    'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/pexels-lauripoldre-30197098.jpg?v=1778155115',
   title: 'Our Initiatives',
   subtitle: 'Undoing the damage of the mined diamond industry.',
 };

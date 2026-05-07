@@ -1,4 +1,4 @@
-import { useLoaderData, useNavigate } from 'react-router';
+import { redirect, useLoaderData, useNavigate } from 'react-router';
 import {
   getSelectedProductOptions,
   Analytics,
@@ -37,9 +37,10 @@ export const meta = ({ data }) => {
  * @param {Route.LoaderArgs} args
  */
 export async function loader(args) {
-  const deferredData = loadDeferredData(args);
-  const criticalData = await loadCriticalData(args);
-  return { ...deferredData, ...criticalData };
+  const { params, request } = args;
+  const url = new URL(request.url);
+  const search = url.search;
+  return redirect(`/engagement-rings/${params.handle}${search}`, 301);
 }
 
 async function loadCriticalData({ context, params, request }) {

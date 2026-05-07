@@ -69,6 +69,8 @@ section.affiliate-content-section {
 .affiliate-page ul {
     padding: 0 0 0 15px;
     list-style-type: disc;
+    display: grid;
+    gap: 10px;
 }
 
 .affiliate-detail-block ul li {

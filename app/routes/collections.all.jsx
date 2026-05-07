@@ -148,17 +148,17 @@ export default function Collection() {
 
   return (
     <div className="collection">
-      <div className='page-width'>
-        <div className="collection-header">
-          <div>
-            <h1>All Products</h1>
-          </div>
-        </div>
-      </div>
+
 
       <section className="collection-content">
         <div className='page-width'>
-
+          <div className='title'>
+            <div className="collection-header">
+              <div>
+                <h1 className='section-title'>All Products</h1>
+              </div>
+            </div>
+          </div>
           <div className='collection-side'>
 
             <aside className="collection-filters-sidebar" ref={filtersRef}>

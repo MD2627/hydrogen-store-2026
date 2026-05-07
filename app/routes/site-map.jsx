@@ -136,6 +136,7 @@ export default function SiteMap() {
         "Recycling Brilliance",
         "Toi Et Moi",
         "Wedding",
+        "Engagement",
     ];
 
     const cleanPages = Array.from(pageMap.values())

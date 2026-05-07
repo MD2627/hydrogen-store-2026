@@ -1,6 +1,7 @@
 import React from 'react';
 import { CartForm, Money, Image } from '@shopify/hydrogen';
 import { Link, useFetchers } from 'react-router';
+import { section } from 'framer-motion/client';
 
 // Spinner for the loaders
 function Spinner({ width = 20, height = 20 }) {
@@ -41,6 +42,8 @@ export function CustomCartPage({ initialCart }) {
     const cart = initialCart;
     const allLines = cart?.lines?.nodes || cart?.lines || [];
     const fetchers = useFetchers();
+
+    console.log('initialCart', cart);
 
     // Detect if ANY fetcher is working on the cart
     const isUpdating = fetchers.some((fetcher) => {
@@ -95,78 +98,80 @@ export function CustomCartPage({ initialCart }) {
     }
 
     return (
-        <div className="page-width">
-            <div className="cart-page-header f-32 f-m-20 w-400 ff-n black-color">
-                <h1>Your Cart ({itemCount})</h1>
-                <Link to="/engagement-rings" className="continue-shopping-link">
-                    Continue Shopping
-                </Link>
-            </div>
-
-            <div className="cart-page-grid">
-                {/* Left Column: Items */}
-                <div className="cart-page-items">
-
-                    {lines.map((line) => (
-                        <CartPageLineItem
-                            key={line.id}
-                            line={line}
-                            optimisticQty={optimisticLines[line.id] ?? line.quantity}
-                            onUpdateQty={updateQuantity}
-                        />
-                    ))}
+        <section>
+            <div className="page-width">
+                <div className="cart-page-header f-32 f-m-20 w-400 ff-n black-color">
+                    <h1 className='section-title'>Your Cart ({itemCount})</h1>
+                    <Link to="/engagement-rings" className="continue-shopping-link">
+                        Continue Shopping
+                    </Link>
                 </div>
 
-                {/* Right Column: Summary */}
-                <div className="cart-page-sidebar">
-                    <div className="cart-summary-card" style={{ position: 'relative', overflow: 'hidden' }}>
-                        {isUpdating && (
-                            <div
-                                style={{
-                                    position: 'absolute',
-                                    inset: 0,
-                                    backgroundColor: 'rgba(255, 255, 255, 0.6)',
-                                    zIndex: 10,
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                }}
-                            >
-                                <Spinner width={40} height={40} />
+                <div className="cart-page-grid">
+                    {/* Left Column: Items */}
+                    <div className="cart-page-items">
+
+                        {lines.map((line) => (
+                            <CartPageLineItem
+                                key={line.id}
+                                line={line}
+                                optimisticQty={optimisticLines[line.id] ?? line.quantity}
+                                onUpdateQty={updateQuantity}
+                            />
+                        ))}
+                    </div>
+
+                    {/* Right Column: Summary */}
+                    <div className="cart-page-sidebar">
+                        <div className="cart-summary-card" style={{ position: 'relative', overflow: 'hidden' }}>
+                            {isUpdating && (
+                                <div
+                                    style={{
+                                        position: 'absolute',
+                                        inset: 0,
+                                        backgroundColor: 'rgba(255, 255, 255, 0.6)',
+                                        zIndex: 10,
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                    }}
+                                >
+                                    <Spinner width={40} height={40} />
+                                </div>
+                            )}
+                            <h3>Order Summary</h3>
+
+                            <div className="summary-row subtotal">
+                                <span>Subtotal</span>
+                                {cart?.cost?.subtotalAmount && <Money data={cart.cost.subtotalAmount} />}
                             </div>
-                        )}
-                        <h3>Order Summary</h3>
 
-                        <div className="summary-row subtotal">
-                            <span>Subtotal</span>
-                            {cart?.cost?.subtotalAmount && <Money data={cart.cost.subtotalAmount} />}
+                            {/* Discount Section */}
+                            <div className="summary-section">
+                                <CartDiscounts discountCodes={cart?.discountCodes || []} />
+                            </div>
+
+                            {/* Note Section */}
+                            <div className="summary-section">
+                                <CartNote note={cart?.note || ''} />
+                            </div>
+
+                            <div className="summary-row total">
+                                <span>Estimated Total</span>
+                                {cart?.cost?.totalAmount && <Money data={cart.cost.totalAmount} />}
+                            </div>
+                            <p className="shipping-note">Shipping & taxes calculated at checkout</p>
+
+                            {cart?.checkoutUrl && (
+                                <a href={cart.checkoutUrl} className="btn btn">
+                                    Proceed to Checkout
+                                </a>
+                            )}
                         </div>
-
-                        {/* Discount Section */}
-                        <div className="summary-section">
-                            <CartDiscounts discountCodes={cart?.discountCodes || []} />
-                        </div>
-
-                        {/* Note Section */}
-                        <div className="summary-section">
-                            <CartNote note={cart?.note || ''} />
-                        </div>
-
-                        <div className="summary-row total">
-                            <span>Estimated Total</span>
-                            {cart?.cost?.totalAmount && <Money data={cart.cost.totalAmount} />}
-                        </div>
-                        <p className="shipping-note">Shipping & taxes calculated at checkout</p>
-
-                        {cart?.checkoutUrl && (
-                            <a href={cart.checkoutUrl} className="btn btn">
-                                Proceed to Checkout
-                            </a>
-                        )}
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 
@@ -202,7 +207,7 @@ function CartPageLineItem({ line, optimisticQty, onUpdateQty }) {
         (selectedOptions || []).forEach(opt => {
             params.append(opt.name, opt.value);
         });
-        return `/engagement/${product.handle}?${params.toString()}`;
+        return `/engagement-rings/${product.handle}?${params.toString()}`;
     };
 
     // Calculate line total based on optimistic quantity

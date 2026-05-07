@@ -135,14 +135,6 @@ export default function Shipping() {
                             <h2 className="section-title">In Safe Hands</h2>
                             <p className="sb-description">We partner with the world's most trusted couriers to ensure your precious cargo arrives flawlessly and securely.</p>
                         </div>
-                        <div className="safe-hands-logos">
-                            <div className="partner-logo">
-                                <img src="https://cdn.shopify.com/s/files/1/0801/7317/0906/files/id_qwRxim4_1764716389404.avif?v=1769688338" alt="StarTrack" />
-                            </div>
-                            <div className="partner-logo">
-                                <img src="https://cdn.shopify.com/s/files/1/0801/7317/0906/files/dhl_logo.avif?v=1769688338" alt="DHL" />
-                            </div>
-                        </div>
                     </div>
                 </div>
             </section>

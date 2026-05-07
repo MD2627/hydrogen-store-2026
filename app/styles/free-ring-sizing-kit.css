@@ -223,13 +223,14 @@
 .inner-contact-big-image select#country {
     padding: 15px;
     border: none;
-    font-size: 11.7px;
+    font-size: var(--min_font_size);
     box-shadow: 4px 4px 5px var(--gray_300);
     background-color: var(--white_color);
     color: gray;
     width: 100%;
     border-radius: 4px;
     font-family: var(--font_family_n);
+    font-weight: 700;
 }
 
 .inner-contact-big-image .country-dropdown-item {

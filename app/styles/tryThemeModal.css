@@ -62,7 +62,7 @@
 }
 
 .form-submit {
-    padding: 14px;
+    /* padding: 14px;
     background: var(--primary_color);
     color: var(--white_color);
     border: none;
@@ -73,11 +73,11 @@
     transition: all 0.2s ease;
     font-family: var(--font_family_n);
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.05em; */
 }
 
 .form-submit:hover {
-    opacity: 0.9;
+    /* opacity: 0.9; */
 }
 
 .form-submit:disabled {
