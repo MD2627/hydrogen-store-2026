@@ -3,26 +3,32 @@
     color: var(--black_color);
 }
 
-/* ── Banner Overrides ───────────────────────────────────────── */
-.warranty-page .story-craft-banner {
-    margin-bottom: 80px;
+.warranty-page .story-craft-content .section-subtitle {
+    color: var(--white_color);
 }
 
-.sb-description {
-    font-family: var(--font_family_c);
-    font-size: 16px;
-    line-height: 1.6;
-    color: var(--black_color);
-    margin-bottom: 24px;
-}
+
+/* ── Banner Overrides ───────────────────────────────────────── */
 
 /* ── Content Sections ────────────────────────────────────────── */
-.warranty-editorial-section {
-    padding: 80px 0;
+.warranty-page .section-title {
+    font-family: var(--font_family_a);
+}
+
+.warranty-page .sb-description {
+    font-family: var(--font_family_c);
+}
+
+.warranty-editorial-section .warranty-editorial .sb-description {
+    margin: 0;
 }
 
 .warranty-editorial-section.bg-light {
     background: #fcfcfc;
+}
+
+.warranty-editorial-section .section-title {
+    text-align: center;
 }
 
 .warranty-editorial-grid {
@@ -41,7 +47,6 @@
 
 .warranty-card:hover {
     box-shadow: 0 10px 30px rgba(var(--pure_black_rgb), 0.05);
-    transform: translateY(-5px);
 }
 
 .warranty-card-title {
@@ -65,13 +70,20 @@
     color: var(--black_color);
     position: relative;
     padding-left: 20px;
+    font-family: var(--font_family_c);
 }
 
 .warranty-card-list li::before {
-    content: "•";
+    content: "";
     position: absolute;
     left: 0;
-    color: var(--primary_color);
+    /* color: var(--primary_color); */
+    width: 5px;
+    height: 5px;
+    background: black;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
 }
 
 /* ── Claim Process ─────────────────────────────────────────── */
@@ -94,7 +106,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 20px;
     font-family: var(--font_family_n);
     font-weight: 700;
 }
@@ -105,9 +116,15 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-bottom: 10px;
+    font-family: var(--font_family_n);
 }
 
-/* ── Wear and Tear Split ───────────────────────────────────── */
+/* ── Wear and Tear ───────────────────────────────────── */
+.wear-tear-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 .wear-tear-split {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -141,12 +158,14 @@
     font-size: 14px;
     margin-bottom: 8px;
     display: block;
+    font-family: var(--font_family_a);
 }
 
 .wear-tear-desc {
     font-size: 14px;
     color: #666;
     line-height: 1.6;
+    font-family: var(--font_family_c);
 }
 
 /* ── Mobile ────────────────────────────────────────────────── */
@@ -154,6 +173,11 @@
     .warranty-editorial-grid {
         grid-template-columns: 1fr;
         gap: 20px;
+        margin-top: 30px;
+    }
+
+    .warranty-card {
+        padding: 20px;
     }
 
     .process-steps-grid {
@@ -174,5 +198,6 @@
 
     .process-steps-grid {
         grid-template-columns: 1fr;
+        gap: 10px;
     }
 }

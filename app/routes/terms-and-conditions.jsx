@@ -34,63 +34,70 @@ export default function TermsAndConditions() {
   return (
     <div className="terms-and-conditions">
       <StoryCraftBanner
-        imageSrc="https://cdn.shopify.com/s/files/1/0610/2194/5934/files/edit-387d08.webp?v=1776071466"
-        title="Terms and Conditions"
+        imageSrc="https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Diamond_Jewellery_London_153_1a_retouched_high_res_2000x2000_955a3419-44fe-4982-a8b6-5ca4c5c7dd18.webp?v=1777283263"
+        title="Terms & Conditions"
         subtitle="Please read our terms and conditions carefully."
         extraClass="story-craft-banner--terms"
       />
 
-      <div className='terms-and-conditions-details'>
-        <div className="about-the-website">
-          <h3 className='w-300 l-h-1-1 black-color ff-a'>{ABOUT_THE_WEBSITE.heading}</h3>
-          <div className='w-300 l-h-1-2 black-color ff-c' dangerouslySetInnerHTML={{ __html: ABOUT_THE_WEBSITE.content }} />
-        </div>
+      <section className="terms-editorial-section">
+        <div className="terms-editorial-container">
+          <div className="terms-intro">
+            <h2 className="section-title">Legal Information</h2>
+            <p className="sb-description">The fine print you need to know about your Diamond Jewellery experience.</p>
+          </div>
 
-        <div className="legal-rights">
-          <h3 className='w-300 l-h-1-1 black-color ff-a'>{LEGAL_RIGHTS.heading}</h3>
-          <div className='w-300 l-h-1-2 black-color ff-c' dangerouslySetInnerHTML={{ __html: LEGAL_RIGHTS.content }} />
-        </div>
+          <div className="terms-section">
+            <h3 className='terms-heading'>{ABOUT_THE_WEBSITE.heading}</h3>
+            <div className='terms-content' dangerouslySetInnerHTML={{ __html: ABOUT_THE_WEBSITE.content }} />
+          </div>
 
-        <div className="information-and-pricing">
-          <h3 className='w-300 l-h-1-1 black-color ff-a'>{INFORMATION_AND_PRICING.heading}</h3>
-          <div className='w-300 l-h-1-2 black-color ff-c' dangerouslySetInnerHTML={{ __html: INFORMATION_AND_PRICING.content }} />
-        </div>
+          <div className="terms-section">
+            <h3 className='terms-heading'>{LEGAL_RIGHTS.heading}</h3>
+            <div className='terms-content' dangerouslySetInnerHTML={{ __html: LEGAL_RIGHTS.content }} />
+          </div>
 
-        <div className="payment-information">
-          <h3 className='w-300 l-h-1-1 black-color ff-a'>{PAYMENT_INFORMATION.heading}</h3>
-          <div className='w-300 l-h-1-2 black-color ff-c' dangerouslySetInnerHTML={{ __html: PAYMENT_INFORMATION.content }} />
-        </div>
+          <div className="terms-section">
+            <h3 className='terms-heading'>{INFORMATION_AND_PRICING.heading}</h3>
+            <div className='terms-content' dangerouslySetInnerHTML={{ __html: INFORMATION_AND_PRICING.content }} />
+          </div>
 
-        <div className="information-on-site">
-          <h3 className='w-300 l-h-1-1 black-color ff-a'>{INFORMATION_ON_SITE.heading}</h3>
-          <div className='w-300 l-h-1-2 black-color ff-c' dangerouslySetInnerHTML={{ __html: INFORMATION_ON_SITE.content }} />
-        </div>
+          <div className="terms-section">
+            <h3 className='terms-heading'>{PAYMENT_INFORMATION.heading}</h3>
+            <div className='terms-content' dangerouslySetInnerHTML={{ __html: PAYMENT_INFORMATION.content }} />
+          </div>
 
-        <div className="privacy-policy">
-          <h3 className='w-300 l-h-1-1 black-color ff-a'>{PRIVACY_POLICY.heading}</h3>
-          <div className='w-300 l-h-1-2 black-color ff-c' dangerouslySetInnerHTML={{ __html: PRIVACY_POLICY.content }} />
-        </div>
+          <div className="terms-section">
+            <h3 className='terms-heading'>{INFORMATION_ON_SITE.heading}</h3>
+            <div className='terms-content' dangerouslySetInnerHTML={{ __html: INFORMATION_ON_SITE.content }} />
+          </div>
 
-        <div className="copyright">
-          <h3 className='w-300 l-h-1-1 black-color ff-a'>{COPYRIGHT.heading}</h3>
-          <div className='w-300 l-h-1-2 black-color ff-c' dangerouslySetInnerHTML={{ __html: COPYRIGHT.content }} />
-        </div>
+          <div className="terms-section">
+            <h3 className='terms-heading'>{PRIVACY_POLICY.heading}</h3>
+            <div className='terms-content' dangerouslySetInnerHTML={{ __html: PRIVACY_POLICY.content }} />
+          </div>
 
-        <div className="indemnification">
-          <h3 className='w-300 l-h-1-1 black-color ff-a'>{INDEMNIFICATION.heading}</h3>
-          <div className='w-300 l-h-1-2 black-color ff-c' dangerouslySetInnerHTML={{ __html: INDEMNIFICATION.content }} />
-        </div>
+          <div className="terms-section">
+            <h3 className='terms-heading'>{COPYRIGHT.heading}</h3>
+            <div className='terms-content' dangerouslySetInnerHTML={{ __html: COPYRIGHT.content }} />
+          </div>
 
-        <div className="submissions">
-          <h3 className='w-300 l-h-1-1 black-color ff-a'>{SUBMISSIONS.heading}</h3>
-          <div className='w-300 l-h-1-2 black-color ff-c' dangerouslySetInnerHTML={{ __html: SUBMISSIONS.content }} />
-        </div>
+          <div className="terms-section">
+            <h3 className='terms-heading'>{INDEMNIFICATION.heading}</h3>
+            <div className='terms-content' dangerouslySetInnerHTML={{ __html: INDEMNIFICATION.content }} />
+          </div>
 
-        <div className="custom-jewellery">
-          <h3 className='w-300 l-h-1-1 black-color ff-a'>{CUSTOM_JEWELLERY.heading}</h3>
-          <div className='w-300 l-h-1-2 black-color ff-c' dangerouslySetInnerHTML={{ __html: CUSTOM_JEWELLERY.content }} />
+          <div className="terms-section">
+            <h3 className='terms-heading'>{SUBMISSIONS.heading}</h3>
+            <div className='terms-content' dangerouslySetInnerHTML={{ __html: SUBMISSIONS.content }} />
+          </div>
+
+          <div className="terms-section">
+            <h3 className='terms-heading'>{CUSTOM_JEWELLERY.heading}</h3>
+            <div className='terms-content' dangerouslySetInnerHTML={{ __html: CUSTOM_JEWELLERY.content }} />
+          </div>
         </div>
-      </div>
+      </section>
 
       <UvpIconFooter data={TERMS_UVPS} />
     </div>

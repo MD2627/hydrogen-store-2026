@@ -1,83 +1,34 @@
-import { useLoaderData, Link } from 'react-router';
+import { Link } from 'react-router';
 import styles from '~/styles/policies.css?url';
 
 export const links = () => {
   return [{ rel: 'stylesheet', href: styles }];
 };
 
-
-/**
- * @param {Route.LoaderArgs}
- */
-export async function loader({ context }) {
-  const data = await context.storefront.query(POLICIES_QUERY);
-
-  const shopPolicies = data.shop;
-  console.log(shopPolicies, "shopPoliciesshopPoliciesshopPoliciesshopPoliciesshopPolicies")
-  const policies = [
-    shopPolicies?.privacyPolicy,
-    shopPolicies?.shippingPolicy,
-    shopPolicies?.termsOfService,
-    shopPolicies?.refundPolicy,
-    shopPolicies?.subscriptionPolicy,
-  ].filter((policy) => policy != null);
-
-  if (!policies.length) {
-    throw new Response('No policies found', { status: 404 });
-  }
-
-  return { policies };
-}
-
 export default function Policies() {
-  /** @type {LoaderReturnData} */
-  const { policies } = useLoaderData();
+  const websitePolicies = [
+    { title: 'Lifetime Ring Warranty', handle: '/warranty' },
+    { title: 'Free Resizing', handle: '/free-resizing' },
+    { title: 'Shipping Information', handle: '/shipping' },
+    { title: 'Finance Options', handle: '/finance-options' },
+    { title: 'Privacy Policy', handle: '/policies/privacy-policy' },
+    { title: 'Terms of Service', handle: '/policies/terms-of-service' },
+    { title: 'Refund Policy', handle: '/policies/refund-policy' }
+  ];
 
   return (
-    <div className="policies">
-      <h1>Policies</h1>
+    <div className="policies page-width">
+      <h1 className="section-title">Our Policies</h1>
+      <p className="sb-description policies-intro-text">
+        We believe in transparency and providing you with the best possible experience. Below you can find all our website-related policies and service terms.
+      </p>
       <div>
-        {policies.map((policy) => (
-          <fieldset key={policy.id}>
-            <Link to={`/policies/${policy.handle}`}>{policy.title}</Link>
+        {websitePolicies.map((policy, index) => (
+          <fieldset key={index}>
+            <Link to={policy.handle}>{policy.title}</Link>
           </fieldset>
         ))}
       </div>
     </div>
   );
 }
-
-const POLICIES_QUERY = `#graphql
-  fragment PolicyItem on ShopPolicy {
-    id
-    title
-    handle
-  }
-  query Policies ($country: CountryCode, $language: LanguageCode)
-    @inContext(country: $country, language: $language) {
-    shop {
-      privacyPolicy {
-        ...PolicyItem
-      }
-      shippingPolicy {
-        ...PolicyItem
-      }
-      termsOfService {
-        ...PolicyItem
-      }
-      refundPolicy {
-        ...PolicyItem
-      }
-      subscriptionPolicy {
-        id
-        title
-        handle
-      }
-    }
-  }
-`;
-
-/** @typedef {import('./+types/policies._index').Route} Route */
-/** @typedef {import('storefrontapi.generated').PoliciesQuery} PoliciesQuery */
-/** @typedef {import('storefrontapi.generated').PolicyItemFragment} PolicyItemFragment */
-/** @typedef {import('@shopify/remix-oxygen').SerializeFrom<typeof loader>} LoaderReturnData */

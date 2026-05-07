@@ -1,6 +1,6 @@
 /* ------------------- AFFILIATE PAGE ------------------- */
-.affiliate-page {
-    margin: 0 auto;
+.affiliate-page .section-subtitle {
+    color: var(--white_color);
 }
 
 /* ------------------- AFFILIATE BANNER ------------------- */

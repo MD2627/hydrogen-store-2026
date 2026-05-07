@@ -122,9 +122,25 @@ export default function SiteMap() {
         }
     });
 
-    const cleanPages = Array.from(pageMap.values()).sort((a, b) =>
-        a.title.localeCompare(b.title)
-    );
+    const removePages = [
+        "Carbon Neutral",
+        "Christmas Cut Off",
+        "Crafting Timeframes",
+        "Data Sharing Opt Out",
+        "Jewellery Care",
+        "Careers",
+        "Diamond Curated",
+        "Graduation Jewellery",
+        "Impact Report",
+        "Moissanite Guidance",
+        "Recycling Brilliance",
+        "Toi Et Moi",
+        "Wedding",
+    ];
+
+    const cleanPages = Array.from(pageMap.values())
+        .filter((page) => !removePages.includes(page.title))
+        .sort((a, b) => a.title.localeCompare(b.title));
 
     return (
         <div className="site-map">

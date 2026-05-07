@@ -1,4 +1,4 @@
-.feedback-form-wrapper .feedback-form input,
+/* .feedback-form-wrapper .feedback-form input,
 .feedback-form-wrapper .feedback-form textarea {
     width: 100%;
     padding: 12px;
@@ -49,33 +49,33 @@
 .feedback-form-wrapper .feedback-form input[type="checkbox"]:checked {
     background-color: var(--primary_color);
     border-color: var(--primary_color);
-}
-
+} */
+/* 
 .feedback-form-wrapper {
     max-width: 800px;
     margin: auto;
     padding: 20px;
-}
+} */
 
-.feedback-form-wrapper p.feedback-intro {
+/* .feedback-form-wrapper p.feedback-intro {
     font-family: 'ABC Arizona Mix';
     font-size: 16.25px;
     line-height: 17.875px;
     color: var(--black_color);
     text-align: center;
     margin: 0 0 26px;
-}
+} */
 
-.feedback-form-wrapper .feedback-form .status-message.success {
+/* .feedback-form-wrapper .feedback-form .status-message.success {
     margin: auto;
 }
 
 .feedback-form-wrapper .feedback-form .submit-button.common-button {
     max-width: max-content;
     margin: auto;
-}
+} */
 
-.feedback-form-wrapper h2 {
+/* .feedback-form-wrapper h2 {
     font-size: 45.5px;
     line-height: 50.05px;
     font-family: var(--font_family_a);
@@ -83,9 +83,9 @@
     margin: 0 0 13px;
     font-weight: 300;
     color: var(--black_color);
-}
+} */
 
-.feedback-form-wrapper .feedback-form .recaptcha-text.contact-recaptcha {
+/* .feedback-form-wrapper .feedback-form .recaptcha-text.contact-recaptcha {
     text-align: center;
 }
 
@@ -117,17 +117,17 @@
     line-height: 14px;
     font-weight: 600;
     color: var(--deep_gray_color);
-}
+} */
 
-form.feedback-form {
+/* form.feedback-form {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     padding: 0 20px 20px;
-}
+} */
 
-.feedback-form-wrapper .feedback-form select#interactionType {
+/* .feedback-form-wrapper .feedback-form select#interactionType {
     display: block;
     font-family: var(--font_family_n);
     font-size: 10px;
@@ -142,4 +142,4 @@ form.feedback-form {
 
 .feedback-form-wrapper .feedback-form select#interactionType:focus {
     outline: none;
-}
+} */

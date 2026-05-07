@@ -39,11 +39,12 @@ export const meta = () => {
 };
 
 export default function Warranty() {
+    const wearAndTearImage = null; // Set to image path if available, e.g., "/images/warranty-quality.png"
+
     return (
         <div className="warranty-page">
             {/* ── BANNER ── */}
             <StoryCraftBanner
-                imageSrc="/images/warranty-banner.png"
                 title="Lifetime Manufacturing Warranty"
                 subtitle="Expert craftsmanship, guaranteed for a lifetime."
                 h1={true}
@@ -52,7 +53,7 @@ export default function Warranty() {
             {/* ── INTRO SECTION ── */}
             <section className="warranty-editorial-section">
                 <div className="page-width">
-                    <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
+                    <div className='warranty-editorial'>
                         <p className="sb-description">
                             At Diamond Jewellery, we pride ourselves on the expert craftsmanship of our fine jewellery.
                             Our mission will always be to provide beautiful, responsible jewellery that can be enjoyed
@@ -66,7 +67,7 @@ export default function Warranty() {
             {/* ── CONSUMER LAW SECTION ── */}
             <section className="warranty-editorial-section bg-light">
                 <div className="page-width">
-                    <h2 className="section-title" style={{ textAlign: 'center', marginBottom: '40px' }}>Australian Consumer Law</h2>
+                    <h2 className="section-title">Australian Consumer Law</h2>
                     <div className="warranty-editorial-grid">
                         <div className="warranty-card">
                             <h3 className="warranty-card-title">Minor Problems</h3>
@@ -101,7 +102,7 @@ export default function Warranty() {
             {/* ── COVERAGE SECTION ── */}
             <section className="warranty-editorial-section">
                 <div className="page-width">
-                    <h2 className="section-title" style={{ textAlign: 'center', marginBottom: '40px' }}>Warranty Coverage</h2>
+                    <h2 className="section-title">Warranty Coverage</h2>
                     <div className="warranty-editorial-grid">
                         <div className="warranty-card">
                             <h3 className="warranty-card-title">Rings</h3>
@@ -144,27 +145,27 @@ export default function Warranty() {
             {/* ── CLAIM PROCESS ── */}
             <section className="warranty-editorial-section bg-light">
                 <div className="page-width">
-                    <h2 className="section-title" style={{ textAlign: 'center', marginBottom: '40px' }}>How to Claim</h2>
+                    <h2 className="section-title">How to Claim</h2>
                     <div className="process-steps-grid">
                         <div className="process-step">
                             <div className="step-number">01</div>
                             <h4 className="step-title">Contact Us</h4>
-                            <p className="sb-description" style={{ fontSize: '12px', textAlign: 'center' }}>Complete our contact form to start your claim.</p>
+                            <p className="sb-description">Complete our contact form to start your claim.</p>
                         </div>
                         <div className="process-step">
                             <div className="step-number">02</div>
                             <h4 className="step-title">Assessment</h4>
-                            <p className="sb-description" style={{ fontSize: '12px', textAlign: 'center' }}>Drop off your item or mail it with original certificates.</p>
+                            <p className="sb-description">Drop off your item or mail it with original certificates.</p>
                         </div>
                         <div className="process-step">
                             <div className="step-number">03</div>
                             <h4 className="step-title">Inspection</h4>
-                            <p className="sb-description" style={{ fontSize: '12px', textAlign: 'center' }}>Our experts conduct a free structural assessment.</p>
+                            <p className="sb-description">Our experts conduct a free structural assessment.</p>
                         </div>
                         <div className="process-step">
                             <div className="step-number">04</div>
                             <h4 className="step-title">Resolution</h4>
-                            <p className="sb-description" style={{ fontSize: '12px', textAlign: 'center' }}>If covered, we repair or replace at no charge.</p>
+                            <p className="sb-description">If covered, we repair or replace at no charge.</p>
                         </div>
                     </div>
                 </div>
@@ -173,15 +174,17 @@ export default function Warranty() {
             {/* ── WEAR AND TEAR SPLIT ── */}
             <section className="warranty-editorial-section">
                 <div className="page-width">
-                    <div className="wear-tear-split">
-                        <img
-                            src="/images/warranty-quality.png"
-                            alt="Quality Control"
-                            className="wear-tear-image"
-                        />
+                    <div className={wearAndTearImage ? "wear-tear-split" : "wear-tear-content"}>
+                        {wearAndTearImage && (
+                            <img
+                                src={wearAndTearImage}
+                                alt="Quality Control"
+                                className="wear-tear-image"
+                            />
+                        )}
                         <div>
-                            <h2 className="section-title" style={{ marginBottom: '20px' }}>Wear and Tear</h2>
-                            <p className="sb-description" style={{ textAlign: 'left' }}>
+                            <h2 className="section-title">Wear and Tear</h2>
+                            <p className="sb-description">
                                 Fine jewellery is meant to be worn, but everyday activities can affect its longevity.
                                 Our warranty does not cover general wear and tear or accidental damage.
                             </p>
@@ -198,9 +201,9 @@ export default function Warranty() {
                                     <span className="wear-tear-label">Chemical Exposure</span>
                                     <p className="wear-tear-desc">Discoloration from chlorine, bleach, or heavy cleaning products.</p>
                                 </div>
-                                <div className="wear-tear-item" style={{ borderBottom: 'none' }}>
+                                <div className="wear-tear-item">
                                     <span className="wear-tear-label">Jeweller Void</span>
-                                    <p className="wear-tear-desc" style={{ color: 'var(--primary_color)', fontWeight: '600' }}>
+                                    <p className="wear-tear-desc">
                                         Repairs performed by any other jeweller will void your warranty.
                                     </p>
                                 </div>

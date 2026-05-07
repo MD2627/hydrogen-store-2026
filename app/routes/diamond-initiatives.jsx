@@ -88,16 +88,7 @@ export default function DiamondInitiatives() {
                 ))}
               </ul>
             </div>
-            <div className="partners-logos-column">
-              <h4 className="section-subtitle">{PEOPLE_PARTNERS_SECTION_DATA.partnersTitle}</h4>
-              <div className="partners-grid-layout">
-                {PEOPLE_PARTNERS_SECTION_DATA.partners.map((partner, index) => (
-                  <div className="partner-logo-box" key={index}>
-                    <img src={partner.image} alt={partner.alt} loading="lazy" />
-                  </div>
-                ))}
-              </div>
-            </div>
+
           </div>
         </div>
       </section>
@@ -171,16 +162,7 @@ export default function DiamondInitiatives() {
                 ))}
               </ul>
             </div>
-            <div className="partners-logos-column">
-              <h4 className="section-subtitle">{PLANET_PARTNERS_SECTION_DATA.partnersTitle}</h4>
-              <div className="partners-grid-layout singleton">
-                {PLANET_PARTNERS_SECTION_DATA.partners.map((partner, index) => (
-                  <div className="partner-logo-box single" key={index}>
-                    <img src={partner.image} alt={partner.alt} loading="lazy" />
-                  </div>
-                ))}
-              </div>
-            </div>
+
           </div>
         </div>
       </section>
@@ -384,34 +366,7 @@ const FAQ_DATA = [
   {
     question: "Can I donate directly to your partner organisations?",
     answer: `
-      <p>Yes, you can support our partner organisations directly through their official websites:</p>
-
-      <div class="faq-partner-logos">
-        <a href="https://baptistworldaid.org.au/" rel="noopener">
-          <img src="https://cdn.shopify.com/s/files/1/0644/3067/0060/files/BWAA-Logo-Horizontal-CMYK.jpg?v=1721173256" alt="Baptist World Aid" />
-        </a>
-
-        <a href="https://trees.org/" rel="noopener">
-          <img src="https://cdn.shopify.com/s/files/1/0644/3067/0060/files/06034022d9480001f7756471c7db546cf4a24ccb.webp?v=1763950923" alt="Trees For The Future" />
-        </a>
-
-        <a href="https://otisfoundation.org.au/" rel="noopener">
-          <img src="https://cdn.shopify.com/s/files/1/0644/3067/0060/files/logo-r1346975297-1737542052_x200.jpg?v=1659942807" alt="Otis Foundation" />
-        </a>
-
-        <a href="https://www.redcross.org.au/" rel="noopener">
-          <img src="https://cdn.shopify.com/s/files/1/0644/3067/0060/files/AusRedCross_2021_x200.png?v=1659942807" alt="Australian Red Cross" />
-        </a>
-
-        <a href="https://www.cancercouncil.com.au/" rel="noopener">
-          <img src="https://cdn.shopify.com/s/files/1/0644/3067/0060/files/logo_3_x200.png?v=1659942807" alt="Peter Mac" />
-        </a>
-
-        <a href="https://www.cancercouncil.com.au/" rel="noopener">
-          <img src="https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Cancer_Council_200x.png?v=1701064305" alt="Cancer Council" />
-        </a>
-      </div>
-    `,
+      <p>Yes, you can support our partner organisations directly through their official websites:</p>`,
   },
   {
     question: "How can my non-profit organisation partner with you?",

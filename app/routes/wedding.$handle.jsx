@@ -253,7 +253,7 @@ export default function Product() {
                 productOptions={productOptions}
                 selectedVariant={selectedVariant}
                 productTags={product.tags}
-                detailInfoMetafield={product.metafield}
+                detailInfoMetafield={product.detail_info}
               />
             </div>
             <Analytics.ProductView
@@ -726,7 +726,7 @@ const PRODUCT_FRAGMENT = `#graphql
       description
       title
     }
-    metafield(namespace: "custom", key: "detail_info") {
+    detail_info: metafield(namespace: "custom", key: "detail_info") {
       value
     }
     media(first: 20) {

@@ -257,21 +257,13 @@
 }
 
 .process-step {
-    display: flex;
-    align-items: center;
-    gap: 33px;
     padding: 0 20px;
-    opacity: 0;
     transition: opacity 0.8s ease-out;
 }
 
 .process-step.reveal.is-visible {
     opacity: 1;
     padding: 0;
-}
-
-.process-step+.process-step {
-    margin-top: -100px;
 }
 
 .process-image-container {
@@ -325,12 +317,6 @@
     color: var(--black_color);
 }
 
-@media (max-width: 1024px) {
-    .process-step+.process-step {
-        margin-top: -90px;
-    }
-}
-
 @media (max-width: 768px) {
     .recycling-process-header h2 {
         font-size: 26.35px;
@@ -347,14 +333,13 @@
 
     .process-step {
         flex-direction: column;
-        gap: 18px;
         text-align: center;
-        opacity: 0;
-        transform: translateY(40px);
+        display: flex;
+        align-items: center;
     }
 
-    .process-step+.process-step {
-        margin-top: 40px;
+    .step-number {
+        margin-bottom: 10px;
     }
 
     .process-image-container {

@@ -22,50 +22,69 @@ export function StoryCraftBanner({
 
   return (
     <section className={`story-craft-banner ${extraClass}`}>
-      <div className='scb'>
-        {/* VIDEO OR IMAGE */}
-        {videoSrc ? (
-          <video
-            ref={videoRef}
-            src={videoSrc}
-            className="story-craft-video"
-            loop
-            muted
-            playsInline
-            autoPlay
-          />
-        ) : (
-          <picture>
-            {/* ✅ Mobile image (only if provided) */}
-            {mobileImageSrc && (
-              <source
-                media="(max-width: 768px)"
-                srcSet={mobileImageSrc}
+      {(videoSrc || imageSrc || mobileImageSrc) ? (
+        <>
+
+          <div className='scb'>
+            {/* VIDEO OR IMAGE */}
+            {videoSrc ? (
+              <video
+                ref={videoRef}
+                src={videoSrc}
+                className="story-craft-video"
+                loop
+                muted
+                playsInline
+                autoPlay
               />
+            ) : (
+              <picture>
+                {/* ✅ Mobile image (only if provided) */}
+                {mobileImageSrc && (
+                  <source
+                    media="(max-width: 768px)"
+                    srcSet={mobileImageSrc}
+                  />
+                )}
+
+                {/* ✅ Desktop image (fallback for mobile if mobileImageSrc not provided) */}
+                <img
+                  src={imageSrc}
+                  alt={title || 'Banner image'}
+                  className="story-craft-image"
+                />
+              </picture>
             )}
 
-            {/* ✅ Desktop image (fallback for mobile if mobileImageSrc not provided) */}
-            <img
-              src={imageSrc}
-              alt={title || 'Banner image'}
-              className="story-craft-image"
-            />
-          </picture>
-        )}
+            <div className="story-craft-overlay"></div>
 
-        <div className="story-craft-overlay"></div>
+            <div className="story-craft-content">
+              {title && (h1 ? <h1 className="page-banner-title">{title}</h1> : <h2 className="page-banner-title">{title}</h2>)}
+              {subtitle && <p className="section-subtitle">{subtitle}</p>}
 
-        <div className="story-craft-content">
-          {title && (h1 ? <h1 className="page-banner-title">{title}</h1> : <h2 className="page-banner-title">{title}</h2>)}
-          {subtitle && <p className="section-subtitle">{subtitle}</p>}
+              {ctaText && ctaLink && (
+                <Link to={ctaLink} className="story-craft-link">
+                  {ctaText} <span>→</span>
+                </Link>
+              )}
+            </div>
+          </div>
+        </>
+      ) : (
 
-          {ctaText && ctaLink && (
-            <Link to={ctaLink} className="story-craft-link">
-              {ctaText} <span>→</span>
-            </Link>
-          )}
+        <div className='page-width'>
+          <div className="story-craft-content-no-media">
+            {title && (h1 ? <h1 className="page-banner-title">{title}</h1> : <h2 className="page-banner-title">{title}</h2>)}
+            {subtitle && <p className="section-subtitle">{subtitle}</p>}
+
+            {ctaText && ctaLink && (
+              <Link to={ctaLink} className="story-craft-link">
+                {ctaText} <span>→</span>
+              </Link>
+            )}
+          </div>
         </div>
-      </div>
+      )}
     </section>
   );
 }

@@ -73,6 +73,12 @@
     align-items: center;
 }
 
+.shipping-editorial-full {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
 .shipping-editorial-content {
     max-width: 500px;
 }

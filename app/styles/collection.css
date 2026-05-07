@@ -1068,6 +1068,10 @@ label.filter-option.metal-types .filter-icon-container img {
 }
 
 /* ---------------------- collection faq section ---------------------- */
+.custom-rings-page .faq-v3 {
+  padding-top: 0;
+}
+
 .collection-faq-section .faq-header h2 {
   font-size: 48.75px;
   line-height: 53.62px;

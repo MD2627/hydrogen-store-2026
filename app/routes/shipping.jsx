@@ -59,24 +59,19 @@ export default function Shipping() {
 
             <section id="express-shipping" className="shipping-info-section">
                 <div className="page-width">
-                    <div className="shipping-editorial-split">
-                        <div className="shipping-editorial-content">
-                            <span className="section-subtitle">Speed & Reliability</span>
-                            <h2 className="section-title">Express Shipping</h2>
-                            <div className="shipping-editorial-block">
-                                <h3 className="ff-a f-24 w-300">Australia</h3>
-                                <p className="sb-description">We provide complimentary express shipping on all Australian orders, regardless of value, via StarTrack Express. Showroom pickup is also available in Melbourne, Sydney, Brisbane, and Perth.</p>
-                            </div>
-                            <div className="shipping-editorial-block">
-                                <h3 className="ff-a f-24 w-300">International</h3>
-                                <p className="sb-description">Enjoy free express shipping on all international orders exceeding $400 USD via DHL Express, providing real-time tracking and world-class security.</p>
-                                <p className="sb-description" >Please note: We require a physical residential or business address; our couriers cannot deliver to PO Box or military addresses.</p>
-                            </div>
-                            <p className="shipping-info-footer">Every Diamond Jewellery order is shipped in secure, discreet packaging and is fully insured until it reaches your hands.</p>
+                    <div className="shipping-editorial-full">
+                        <span className="section-subtitle">Speed & Reliability</span>
+                        <h2 className="section-title">Express Shipping</h2>
+                        <div className="shipping-editorial-block">
+                            <h3 className="ff-a f-24 w-300">Australia</h3>
+                            <p className="sb-description">We provide complimentary express shipping on all Australian orders, regardless of value, via StarTrack Express. Showroom pickup is also available in Melbourne, Sydney, Brisbane, and Perth.</p>
                         </div>
-                        <div className="shipping-editorial-media">
-                            <img src="https://cdn.shopify.com/s/files/1/0801/7317/0906/files/Packaging_3_2000x2000_1_dbfdb42c-2374-4b47-ab8e-88fcbd14e412.webp?v=1777283300" alt="Premium Packaging" />
+                        <div className="shipping-editorial-block">
+                            <h3 className="ff-a f-24 w-300">International</h3>
+                            <p className="sb-description">Enjoy free express shipping on all international orders exceeding $400 USD via DHL Express, providing real-time tracking and world-class security.</p>
+                            <p className="sb-description">Please note: We require a physical residential or business address; our couriers cannot deliver to PO Box or military addresses.</p>
                         </div>
+                        <p className="shipping-info-footer">Every Diamond Jewellery order is shipped in secure, discreet packaging and is fully insured until it reaches your hands.</p>
                     </div>
                 </div>
             </section>

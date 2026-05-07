@@ -1,3 +1,7 @@
+.top-page-rich-text .sb-description:last-child {
+    margin-bottom: 0;
+}
+
 .top-10-rings .ssw-section {
     padding: 4rem 0;
 }

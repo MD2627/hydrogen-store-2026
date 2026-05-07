@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { Link } from 'react-router';
-import { CollectionBanner } from '~/components/CollectionBanner';
+import { StoryCraftBanner } from '~/components/StoryCraftBanner';
 import { UvpIconFooter } from '~/components/UvpIconFooter';
 
 /**
@@ -12,213 +12,156 @@ export async function loader() {
 
 export default function FreeResizing() {
     return (
-        <>
-            <div className="free-resizing-page">
-                <CollectionBanner collection={collectionContext} />
+        <div className="free-resizing-page">
+            <StoryCraftBanner
+                title="Free Resizing"
+                description="We want your ring to fit perfectly. Discover our complimentary resizing service for your peace of mind."
+                imageSrc="https://cdn.shopify.com/s/files/1/0644/3067/0060/files/image_73c42a1a-9c6e-4389-92fa-72ed0fe226b1_2000x2000.jpg?v=1701732663"
+            />
 
-                <div class="description-container-line">
-                </div>
-                <div class="free-resizing-content-wrapper">
-                    <div class="free-resizing-content-inner">
+            {/* Intro & Highlights Grid */}
+            <section className="fr-editorial-section bg-light">
+                <div className="page-width">
+                    <div className="fr-intro-text">
+                        <h2 className="section-title">The Perfect Fit</h2>
+                        <p className="sb-description">
+                            At Diamond Jewellery, we understand that getting the ring size exactly right can sometimes be tricky. That's why we offer a complimentary resizing service to ensure your piece feels as perfect as it looks.
+                        </p>
+                    </div>
 
-                        <div class="section">
-                            <h2>Engagement and Wedding</h2>
-                            <p>
-                                At Diamond Jewellery, we offer One Free Resize for engagement and wedding rings
-                                to use within the first 12 months of your ring's completion (subject to eligible
-                                design style/metal type). You can find the resize range for each ring on its specific
-                                product page.
-                            </p>
-                            <p>
-                                <b>
-                                    Please be aware that resizing your ring beyond 12 months from the order’s
-                                    completion date, or after the complimentary resize has been utilised, will
-                                    incur a fee.
-                                </b>
-                            </p>
-                        </div>
-
-                        <div class="section">
-                            <h2>Ready-To-Ship</h2>
-                            <p>
-                                For Ready-To-Ship rings, we offer <b>One Free Resize</b> to use within 12 months
-                                of your ring's completion date. If your ring has already been resized from the
-                                stock size (typically M 1/2), and you wish to resize it again, it will need to be
-                                submitted for assessment to determine the possible resizing range. It’s important
-                                to know that once a ring has been resized for the first time, it often can have
-                                reduced resize range.
-                            </p>
-                            <p>
-                                <b>
-                                    When purchasing a ready-to-ship ring we recommend having your ring size checked
-                                    in one of our showrooms prior to to the intial resize.
-                                </b>
-                            </p>
-                        </div>
-                        {/* Section Start */}
-                        <div class="section">
-                            <h2>Men's Wedding Bands</h2>
-                            <ul>
-                                <li>Men's wedding bands come with one free-size replacement (exc. custom designs).</li>
-                                <li>
-                                    The original engraving placed during the order purchase will be included in the
-                                    one-time free replacement of the ring size.
-                                </li>
-                                <li>Our workshop will need to assess all custom-made rings for resizing availability.</li>
-                                <li>Carbon fibre and tantalum metal rings cannot be resized.</li>
-                                <li>
-                                    Once the one-time free replacement has been used, if you still wish to change the
-                                    ring size, we will need to look into resize availability options, depending on the
-                                    design and metal type.
-                                </li>
-                                <li>
-                                    In order to fulfil the resize replacement, the original ring must be returned.
-                                </li>
+                    <div className="fr-editorial-grid">
+                        <div className="fr-card">
+                            <h3 className="fr-card-title">Engagement & Wedding</h3>
+                            <ul className="fr-card-list">
+                                <li><strong>One Free Resize</strong> valid within 12 months of your ring's completion date.</li>
+                                <li>Subject to eligible design style and metal type.</li>
+                                <li>Check the specific product page for the exact resize range available for your ring.</li>
                             </ul>
                         </div>
 
-                        <div class="section">
-                            <h2>Resizing Rings with Engraving</h2>
-                            <p>
-                                In most cases, we place your engraving on the side of the ring to avoid removing it
-                                when resizing your ring. However, please note that there can be cases where your
-                                engraving cannot be avoided and we will need to redo it. This will be done at no cost
-                                to you.
-                            </p>
-                        </div>
-
-                        <div class="section">
-                            <h2>How to Request a Resize</h2>
-                            <ul>
-                                <li>
-                                    <b>(Recommended)</b> Make an appointment at one of our showrooms and have your ring
-                                    size accurately measured. Please note that resizing your ring may take 2-3 business
-                                    weeks from the time we receive it. You can
-                                    <Link class="fancy bold" to="/visit"> book an appointment here</Link>.
-                                </li>
-                                <li>
-                                    Alternatively, you can contact our team to arrange for your ring to be posted back
-                                    to us. In this case, you will need to be accurate with the new ring size you request.
-                                    Only one complimentary resizing is granted per purchase. Please
-                                    <Link class="fancy bold" to="/contact"> contact us here</Link>
-                                    to arrange this.
-                                </li>
+                        <div className="fr-card">
+                            <h3 className="fr-card-title">Ready-To-Ship</h3>
+                            <ul className="fr-card-list">
+                                <li><strong>One Free Resize</strong> within 12 months.</li>
+                                <li>If already resized from stock size (typically M 1/2), further resizing requires assessment.</li>
+                                <li className="bold-text">We recommend checking your size in-store before the initial resize.</li>
                             </ul>
                         </div>
 
-                        <div class="section">
-                            <h2>Free Resizing Terms and Conditions</h2>
-                            <ul>
-                                <li>
-                                    Diamond Jewellery offers one-time complimentary postage, both ways, for your
-                                    one-time free resize within 12 months from your ring's completion date.
-                                </li>
-                                <li>
-                                    Once the one-time shipping label is provided, we require the ring to be returned
-                                    to us within 30 business days.
-                                </li>
-                                <li>
-                                    If the ring resize request is outside the resizing availability guidelines, your
-                                    ring setting may need to be remade, which incurs a setting remake fee and takes
-                                    40 business days to complete, excluding shipping. Payment will be required upfront
-                                    to begin the process.
-                                </li>
-                                <li>Resizing your ring at an unauthorised jeweller will void your warranty.</li>
-                                <li>
-                                    Some rings cannot be resized due to the design. This will be clearly specified in
-                                    the product description of any such ring or you will be advised by our team during
-                                    the custom design process.
-                                </li>
-                                <li>
-                                    Our 12 month free-resize period policy applies to all ring orders completed from
-                                    June 30 2024.
-                                </li>
-                                <li>
-                                    Resizing your ring beyond 12 months from the order’s completion date, or after the
-                                    complimentary resize has been utilised, will incur a fee.
-                                </li>
+                        <div className="fr-card">
+                            <h3 className="fr-card-title">Men's Wedding Bands</h3>
+                            <ul className="fr-card-list">
+                                <li>One free-size replacement (excluding custom designs).</li>
+                                <li>Original engraving is included in the one-time replacement.</li>
+                                <li>Original ring must be returned to fulfill the replacement.</li>
                             </ul>
                         </div>
-
-                        <div class="section">
-                            <p><i>The following rings <b>cannot</b> be resized:</i></p>
-                            <ul>
-                                <li>Full pavé bands</li>
-                                <li>Open Bands</li>
-                                <li>Pt600</li>
-                                <li>Carbon Fibre</li>
-                                <li>Tantalum</li>
-                            </ul>
-                        </div>
-
-                        <div class="section">
-                            <p>
-                                <i>
-                                    Platinum, White Gold, Yellow Gold and Rose Gold rings <b>can</b> be resized by the
-                                    following amount:
-                                </i>
-                            </p>
-                            <ul>
-                                <li><b>Pavé band</b> – (⅔ pavé and less) 2.5 sizes up or 2 sizes down.</li>
-                                <li><b>Triple pavé band</b> – 1 size up or 1/2 down only.</li>
-                                <li><b>Plain band</b> – 4 sizes up or down.</li>
-                                <li>Subject to customs design style.</li>
-                                <li>Please note: The above size ranges are in AU sizing.</li>
-                            </ul>
-                        </div>
-
-                        <div class="section">
-                            <p><i>Exceptions to the above resizing rules:</i></p>
-                            <ul>
-                                <li>
-                                    <b>Basket Settings</b> – Due to the nature of the basket, it is unable to be bent
-                                    around like a normal band and, therefore cannot be resized by much without the band
-                                    looking more like an oval.<br />
-                                    A basket setting can be resized ½ size less than the above “can be resized” sizes
-                                    depending on if your ring is a plain, pavé or triple pavé band. For example, a basket
-                                    setting with a pavé band can only be resized 2 sizes up and 1.5 sizes down.
-                                </li>
-                                <li>
-                                    <b>Cathedral Settings</b> – Due to the cathedral design, the jewellers ability to
-                                    maintain a round shape is limited because only the bottom half of the band can be
-                                    rounded which means the ring can look oval when a large resize is done. A Cathedral
-                                    Setting can be resized ½ size less than the above “can be resized” sizes depending
-                                    on if your ring is a plain, pavé or triple pavé band.
-                                </li>
-                                <li>
-                                    <b>Certain Custom Rings</b> – We will need to assess certain custom rings before
-                                    determining if a resize is possible to ensure the structural integrity of the ring
-                                    is maintained.
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="section">
-                            <p>
-                                <i>
-                                    If you have a question regarding resizing please
-                                    <a class="fancy" href="/contact"> contact us here</a>.
-                                </i>
-                            </p>
-                        </div>
-
                     </div>
                 </div>
+            </section>
 
+            {/* Split Section: Details & Rules */}
+            <section className="fr-editorial-section">
+                <div className="page-width">
+                    <div className="fr-split-section">
+                        <div className="fr-split-image-container">
+                            <img src="https://cdn.shopify.com/s/files/1/0610/2194/5934/files/507e9024c74bdddeaca1633e5768549b.jpg?v=1778130449" alt="Jewelry Resizing Workshop" className="fr-split-image" />
+                        </div>
 
-                <UvpIconFooter data={OUR_STORY_UVPS} />
-            </div>
-        </>
+                        <div className="fr-split-content">
+                            <div className="fr-list-section">
+                                <h3 className="fr-list-title">What Can Be Resized</h3>
+                                <p className="sb-description">Platinum, White Gold, Yellow Gold, and Rose Gold rings can be resized by the following amounts (AU Sizing):</p>
+                                <ul className="fr-card-list">
+                                    <li><strong>Plain band:</strong> 4 sizes up or down.</li>
+                                    <li><strong>Pavé band:</strong> (⅔ pavé or less) 2.5 sizes up or 2 sizes down.</li>
+                                    <li><strong>Triple pavé band:</strong> 1 size up or 1/2 down only.</li>
+                                </ul>
+                            </div>
+
+                            <div className="fr-list-section">
+                                <h3 className="fr-list-title">What Cannot Be Resized</h3>
+                                <ul className="fr-card-list">
+                                    <li>Full pavé bands</li>
+                                    <li>Open Bands</li>
+                                    <li>Pt600</li>
+                                    <li>Carbon Fibre & Tantalum</li>
+                                </ul>
+                            </div>
+
+                            <div className="fr-list-section">
+                                <h3 className="fr-list-title">Exceptions</h3>
+                                <ul className="fr-card-list">
+                                    <li><strong>Basket Settings:</strong> Can be resized ½ size less than standard allowances to maintain shape.</li>
+                                    <li><strong>Cathedral Settings:</strong> Can be resized ½ size less than standard allowances.</li>
+                                    <li><strong>Custom Rings:</strong> Require workshop assessment to ensure structural integrity.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* How to Request */}
+            <section className="fr-editorial-section bg-light">
+                <div className="page-width">
+                    <h2 className="section-title text-center">How To Request A Resize</h2>
+                    <p className="sb-description fr-centered-desc">
+                        Follow these simple steps to ensure your ring fits flawlessly. Please note that resizing generally takes 2-3 business weeks from the time we receive your piece.
+                    </p>
+
+                    <div className="fr-steps-grid">
+                        <div className="fr-step">
+                            <div className="fr-step-number">01</div>
+                            <h3 className="fr-step-title">In-Store Assessment</h3>
+                            <p className="sb-description">
+                                Make an appointment at one of our showrooms to have your ring size accurately measured by our specialists.
+                            </p>
+                            <div className="fr-step-action">
+                                <Link to="/visit" className="btn">
+                                    Book Appointment
+                                </Link>
+                            </div>
+                        </div>
+
+                        <div className="fr-step">
+                            <div className="fr-step-number">02</div>
+                            <h3 className="fr-step-title">Remote Resizing</h3>
+                            <p className="sb-description">
+                                Contact our team to arrange secure postage back to our workshop. Please ensure your new size request is completely accurate.
+                            </p>
+                            <div className="fr-step-action">
+                                <Link to="/contact" className="btn">
+                                    Contact Us
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Terms and Conditions */}
+            <section className="fr-editorial-section">
+                <div className="page-width">
+                    <h2 className="section-title text-center">Terms & Conditions</h2>
+                    <div className="fr-terms-container">
+                        <ul className="fr-card-list">
+                            <li>Complimentary postage (both ways) is provided for your one-time free resize within 12 months.</li>
+                            <li>The ring must be returned to us within 30 business days of receiving your shipping label.</li>
+                            <li>Requests outside resizing availability guidelines may require a setting remake fee (40 business days).</li>
+                            <li>Resizing your ring at an unauthorized jeweler will void your lifetime warranty.</li>
+                            <li>Resizing beyond 12 months, or subsequent resizes, will incur a standard service fee.</li>
+                            <li>Engravings affected by resizing will be redone at no additional cost.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <UvpIconFooter data={OUR_STORY_UVPS} />
+        </div>
     );
 }
-const collectionContext = {
-    handle: 'Free Resizing',
-    title: 'Free Resizing',
-    description: '',
-    image: {
-        url: 'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/image_73c42a1a-9c6e-4389-92fa-72ed0fe226b1_2000x2000.jpg?v=1701732663'
-    }
-};
+
 const OUR_STORY_UVPS = [
     {
         link: '/shipping',

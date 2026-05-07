@@ -587,7 +587,7 @@ p.disclaimer-text {
     font-family: var(--font_family_c);
     font-weight: 300;
     color: #808080;
-    font-size: 5px;
+        font-size: var(--min_font_size);
 }
 
 p.disclaimer-title {

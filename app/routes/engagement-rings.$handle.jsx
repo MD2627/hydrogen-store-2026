@@ -267,7 +267,7 @@ export default function EngagementRingProduct() {
                 selectedVariant={selectedVariant}
                 productTags={product.tags}
                 showGemstoneOptions={showGemstoneOptions}
-                detailInfoMetafield={product.metafield}
+                detailInfoMetafield={product.detail_info}
               />
             </div>
           </div>
@@ -756,6 +756,9 @@ const PRODUCT_FRAGMENT = `#graphql
     seo {
       description
       title
+    }
+    detail_info: metafield(namespace: "custom", key: "detail_info") {
+      value
     }
   }
   ${PRODUCT_VARIANT_FRAGMENT}

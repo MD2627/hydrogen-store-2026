@@ -186,9 +186,9 @@ export default function DiamondInitiatives() {
 
             <CollectionLinksSection data={COLLECTION_LINKS} />
 
-            <div className="custom-rings-faq-section">
-                <ProductFAQ data={FAQ_DATA} title="FAQs" />
-            </div>
+            {/* <div className="custom-rings-faq-section"> */}
+            <ProductFAQ data={FAQ_DATA} title="FAQs" />
+            {/* </div> */}
 
             <UvpIconFooter data={OUR_STORY_UVPS} />
         </div>

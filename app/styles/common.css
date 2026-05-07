@@ -481,9 +481,9 @@ body .btn--outline {
 }
 
 body .btn--outline:hover {
-    background-color: var(--btn_outline_hover_bg);
-    color: var(--btn_outline_hover_color);
-    border-color: var(--btn_outline_hover_bg);
+    background-color: var(--btn_primary_bg);
+    color: var(--btn_primary_color);
+    border-color: var(--btn_primary_bg);
 }
 
 /* Promo gradient */
@@ -892,6 +892,11 @@ video {
 .form-group-boutique {
     display: flex;
     flex-direction: column;
+}
+
+.centre-stone-options {
+    display: grid;
+    gap: 10;
 }
 
 .contact-form label,

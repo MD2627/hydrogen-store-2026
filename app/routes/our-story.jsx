@@ -146,13 +146,13 @@ export default function OurStory() {
           </header>
 
           <div className="story-narrative-split">
-            <div className="story-media-column">
+            {/* <div className="story-media-column">
               <img
                 src={story.founder.image.src}
                 alt={story.founder.image.alt}
                 className="minimal-founder-image"
               />
-            </div>
+            </div> */}
 
             <div className="story-text-column">
               <p className="minimal-intro-text">{story.introQuote}</p>

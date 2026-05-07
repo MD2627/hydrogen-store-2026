@@ -962,8 +962,12 @@ span.single-star svg {
 }
 
 /* Story Craft Banner Styles */
-.story-craft-banner {
+.story-craft-banner:not(:has(.story-craft-content-no-media)) {
   padding: 0;
+}
+
+.story-craft-banner:has(.story-craft-content-no-media) {
+  background-color: #fcfcfc;
 }
 
 .story-craft-banner .scb {
@@ -1014,20 +1018,21 @@ span.single-star svg {
   text-align: center;
 }
 
+
 .story-craft-banner--contact .story-craft-content {
   margin-top: 20px;
 }
 
-.story-craft-content h2 {
+.story-craft-content .page-banner-title {
   text-shadow: 0 2px 4px rgba(var(--pure_black_rgb), 0.3);
   color: var(--white_color);
 }
 
-.story-craft-banner--contact .story-craft-content h2 {
+.story-craft-banner--contact .story-craft-content .page-banner-title {
   text-shadow: 0 0 17px rgba(113, 113, 113, .8);
 }
 
-.story-craft-banner--contact .story-craft-content p {
+.story-craft-banner--contact .story-craft-content .section-subtitle {
   color: var(--white_color);
 }
 
@@ -1068,6 +1073,15 @@ span.single-star svg {
   transform: translateX(5px);
 }
 
+.story-craft-content-no-media {
+  text-align: center;
+}
+
+.story-craft-content-no-media .page-banner-title,
+.story-craft-content-no-media .section-subtitle {
+  color: var(--black_color);
+}
+
 @media (max-width: 768px) {
   .story-craft-link {
     font-size: 15px;
@@ -1093,7 +1107,7 @@ span.single-star svg {
   }
 
   /* Full height on mobile so overlay sections don't get clipped */
-  .story-craft-banner {
+  .story-craft-banner:not(:has(.story-craft-content-no-media)) {
     min-height: 56vh;
     height: auto;
   }
@@ -1442,11 +1456,10 @@ span.single-star svg {
 }
 
 .subscribe-check input:checked::before {
-  opacity: 0;
+  opacity: 1;
 }
 
 .subscribe-check input:checked {
-  background-color: var(--black_color);
   border-color: var(--black_color);
 }
 
@@ -1499,8 +1512,8 @@ span.single-star svg {
   border-bottom: 1.5px solid var(--soft_blue_bg);
 }
 
-.contact-info-section {
-  padding: 0 0 20px;
+.contact .contact-info-section {
+  padding-top: 0;
 }
 
 .contact-info-section .page-width {

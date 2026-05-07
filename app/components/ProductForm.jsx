@@ -408,6 +408,8 @@ export function ProductForm({ productOptions, selectedVariant, productTags = [],
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [showSizeModal, setShowSizeModal] = useState(false);
 
+
+
   // Set this to false to hide the entire "Your Gemstone" section (Ring Size and Stone Type)
   // When false, these properties will also NOT be added to the cart
   const SHOW_GEMSTONE_SECTION = true;

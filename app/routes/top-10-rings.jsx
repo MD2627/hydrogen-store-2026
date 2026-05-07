@@ -128,10 +128,10 @@ export default function Top10Rings() {
             <StoryCraftBanner {...banner} />
 
             <div className="top-page-rich-text">
-                <p className='top-page-rich-text__para'>
+                <p className='sb-description'>
                     While trends evolve over time, the desire for a truly exceptional engagement ring remains unchanged. Whether you choose together or plan a surprise, your ring should be timeless, meaningful, and designed to be admired for a lifetime.
                 </p>
-                <p>
+                <p className='sb-description'>
                     Our selection of the 10 most popular engagement rings is designed to inspire your journey. Even if your perfect ring isn’t featured below, this guide will help you explore different styles and discover what truly speaks to you.
                 </p>
             </div>

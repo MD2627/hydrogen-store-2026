@@ -6,7 +6,7 @@ const sections = [
         id: "home-banner",
         name: "Home Banner",
         simple: true,
-        previewUrl: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_37.jpg?v=1775557113",
+        previewUrl: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_1_45a77cd8-8e96-44cb-8907-848f5fe83b8b.jpg?v=1778138578",
         screenshots: [{ label: "View Screenshot", url: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/image.png?v=1775556306" }],
         steps: ["Click on the Home Banner metaobject", "Open the desired entry", "Update the required fields", "Click Save"],
     },
@@ -14,15 +14,15 @@ const sections = [
         id: "review",
         name: "Review",
         simple: true,
-        previewUrl: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_1.jpg?v=1775556307",
-        screenshots: [{ label: "View Screenshot", url: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_27.jpg?v=1775556306" }],
+        previewUrl: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_2_bc9e7f16-f96f-4b0e-8311-d693713ccfcf.jpg?v=1778138807",
+        screenshots: [{ label: "View Screenshot", url: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_3_6205f26e-3581-4b00-98f9-2fc995413ace.jpg?v=1778138936" }],
         steps: ["Click on the Review metaobject", "Open the entry", "Update the required fields", "Click Save"],
     },
     {
         id: "location",
         name: "Location",
         simple: true,
-        previewUrl: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/location.jpg?v=1775556306",
+        previewUrl: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_4_cbd4d579-446a-4f33-9691-52249745eb16.jpg?v=1778142295",
         screenshots: [{ label: "View Screenshot", url: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_4.jpg?v=1775556306" }],
         steps: ["Click on Location metaobject", "Open the entry", "Update the required fields", "Click Save"],
     },
@@ -30,7 +30,7 @@ const sections = [
         id: "instagram",
         name: "Instagram",
         simple: false,
-        previewUrl: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_29.jpg?v=1775556306",
+        previewUrl: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_5_1ba3a565-0c1b-487b-9f85-54316684e137.jpg?v=1778142798",
         connected: ["Instagram", "Instagram Slider"],
         how: "Inside the Instagram metaobject, there is a Content field. This field contains multiple Instagram Slider entries (shown as small items in the list).",
         steps: [
@@ -50,7 +50,7 @@ const sections = [
         id: "story-craft",
         name: "Story Craft",
         simple: false,
-        previewUrl: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_7.jpg?v=1775556306",
+        previewUrl: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_6_ffbdd4b5-8913-47e2-a44c-d7b89ed2f2db.jpg?v=1778143155",
         connected: ["Story Craft Parent", "Story Craft Item"],
         how: "Inside the Story Craft Parent metaobject, there is a field Story Craft Item. This field contains Story Craft Item entries. Each item represents one story block.",
         steps: [
@@ -70,7 +70,7 @@ const sections = [
         id: "split-banner",
         name: "Split Banner Splited",
         simple: false,
-        previewUrl: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_10.jpg?v=1775556307",
+        previewUrl: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_7_d2617e96-d73e-4718-ac7b-517b930fb7b7.jpg?v=1778143276",
         connected: ["Split Banner Splited", "Split Banner List"],
         how: "Inside the Split Banner Splited metaobject, there is a field Split Banner List. This field contains multiple Split Banner List entries.",
         steps: [
@@ -90,7 +90,7 @@ const sections = [
         id: "initiatives",
         name: "Initiatives Splited",
         simple: false,
-        previewUrl: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_13.jpg?v=1775556307",
+        previewUrl: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_8_bbbcbad4-eb6b-4a03-8bf1-e84e1dfa058e.jpg?v=1778143393",
         connected: ["Initiatives Splited", "Initiatives Splited List"],
         how: "Inside the Initiatives Splited metaobject, there is a field Initiatives Splited List. This field contains multiple Initiatives Splited List entries.",
         steps: [
@@ -107,18 +107,10 @@ const sections = [
         ],
     },
     {
-        id: "gemstone",
-        name: "Gemstone Guidance Splited",
-        simple: true,
-        previewUrl: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_16.jpg?v=1775556306",
-        steps: ["Click on Gemstone Guidance Splited metaobject", "Open the entry", "Update the required fields", "Click Save"],
-        screenshots: [{ label: "View Screenshot", url: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_17.jpg?v=1775556306" }],
-    },
-    {
         id: "ring-collections",
         name: "Ring Collections Splited",
         simple: true,
-        previewUrl: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_18.jpg?v=1775556306",
+        previewUrl: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_9_1c775874-28fe-4923-bfba-717e7719ea9e.jpg?v=1778143705",
         steps: ["Click on Ring Collections Splited metaobject", "Open the entry", "Update the required fields", "Click Save"],
         screenshots: [{ label: "View Screenshot", url: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_19.jpg?v=1775556306" }],
     },
@@ -126,7 +118,7 @@ const sections = [
         id: "collection-heading",
         name: "Collection or Product Heading",
         simple: false,
-        previewUrl: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_28.jpg?v=1775556306",
+        previewUrl: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_10_beb18eb2-0278-43ae-a55c-a7668255bd23.jpg?v=1778143938",
         connected: ["Collection or Product Heading", "Collection or Product Slider"],
         how: "Inside the Collection or Product Heading metaobject, there is a field Collection or Product Slider. This field contains multiple Collection or Product Slider entries.",
         steps: [
@@ -146,29 +138,9 @@ const sections = [
         id: "faq",
         name: "FAQ",
         simple: true,
-        previewUrl: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_22.jpg?v=1775556306",
+        previewUrl: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_11_c346d687-76f8-4fb2-affb-04ad6bfc5256.jpg?v=1778144053",
         steps: ["Click on FAQ metaobject", "Open the entry", "Update the required fields", "Click Save"],
         screenshots: [{ label: "View Screenshot", url: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_23.jpg?v=1775556306" }],
-    },
-    {
-        id: "diamond-collection",
-        name: "Diamond Collection",
-        simple: false,
-        previewUrl: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_24.jpg?v=1775556306",
-        connected: ["Diamond Collection", "Collection List"],
-        how: "Inside the Diamond Collection metaobject, there is a field Collection List. This field contains multiple Collection List entries.",
-        steps: [
-            "Click on the Diamond Collection metaobject",
-            "Open the entry",
-            "Find the linked Collection List",
-            "Click on any item from the list",
-            "Make the required changes",
-            "Click Save",
-        ],
-        screenshots: [
-            { label: "Diamond Collection", url: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_25.jpg?v=1775556306" },
-            { label: "Collection List", url: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_26.jpg?v=1775556306" },
-        ],
     },
 ];
 
@@ -178,7 +150,7 @@ const product = [
         id: "variant-media",
         name: "Variant Media",
         simple: true,
-        previewUrl: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_31.jpg?v=1775556306",
+        previewUrl: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_12_3fe4265f-5fd0-433e-b942-d23c0808bef4.jpg?v=1778144556",
         description: "Add variant-specific gallery media so selected variants can show extra images or videos in the product media carousel.",
         steps: [
             "Open the product in Shopify Admin.",
@@ -187,13 +159,13 @@ const product = [
             "Attach one or more media references (images or videos).",
             "Save the variant and refresh the product page.",
         ],
-         screenshots: [{ label: "View Screenshot", url: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_33.jpg?v=1775556306" }],
+        screenshots: [{ label: "View Screenshot", url: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_33.jpg?v=1775556306" }],
     },
     {
         id: "engraving-preview",
         name: "Engraving Preview",
         simple: true,
-        previewUrl: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_34.jpg?v=1775556306",
+        previewUrl: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_13_594a2193-e0ce-484d-83c8-62fb9fda88ce.jpg?v=1778144647",
         description: "Use this metafield to set the engraving preview image for a variant on products tagged ENGAGEMENT RINGS.",
         steps: [
             "Open the product in Shopify Admin.",
@@ -203,13 +175,13 @@ const product = [
             "Upload or select an engraving preview image reference.",
             "Save the variant, refresh the product page, and enter engraving text.",
         ],
-         screenshots: [{ label: "View Screenshot", url: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_32.jpg?v=1775556306" }],
+        screenshots: [{ label: "View Screenshot", url: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_32.jpg?v=1775556306" }],
     },
     {
         id: "detail-info",
         name: "Detail Info",
         simple: true,
-        previewUrl: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_35.jpg?v=1775556306",
+        previewUrl: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_13_63a1f234-dce4-4a4f-9c09-3c7545a33ea1.jpg?v=1778145287",
         description: "Use this metafield to set the product detail information that appears in the Details tab on the product page.",
         steps: [
             "Open the product in Shopify Admin.",
@@ -217,7 +189,7 @@ const product = [
             "add Detail information in the text field.",
             "Save the product",
         ],
-         screenshots: [{ label: "View Screenshot", url: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_36.jpg?v=1775556306" }],
+        screenshots: [{ label: "View Screenshot", url: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_36.jpg?v=1775556306" }],
     },
 ];
 
@@ -285,14 +257,14 @@ export default function Documentation() {
 
                     {/* Left: title + description */}
                     <div className="hcg-hero-left">
-                        <div className="hcg-breadcrumb">
+                        <div className="section-subtitle">
                             Shopify Admin <span>/</span> Content <span>/</span> Metaobjects
                         </div>
-                        <h1 className="hcg-title">
+                        <h1 className="page-banner-title">
                             Hydrogen <em>Customization</em> Guide
                         </h1>
                         <div className="hcg-gold-rule" />
-                        <p className="hcg-subtitle">
+                        <p className="sb-description">
                             A complete reference for managing your storefront sections through
                             Shopify Metaobjects. Expand any section below to view step-by-step
                             instructions and screenshots.
@@ -345,7 +317,7 @@ export default function Documentation() {
                                 {/* Preview */}
                                 {s.previewUrl && (
                                     <div className="hcg-preview-link">
-                                        <div>Applies to section:</div>
+                                        <h4>Applies to section:</h4>
                                         <img
                                             src={s.previewUrl}
                                             alt={`Preview for ${s.name}`}
@@ -360,80 +332,80 @@ export default function Documentation() {
 
                                 <div>
 
-                                <div className={s.simple ? "hcg-card-body-single" : "hcg-card-body-inner"}>
+                                    <div className={s.simple ? "hcg-card-body-single" : "hcg-card-body-inner"}>
 
-                                    {/* Left col: notice + how it works (complex only) */}
-                                    {!s.simple && (
+                                        {/* Left col: notice + how it works (complex only) */}
+                                        {!s.simple && (
+                                            <div>
+                                                {s.connected && (
+                                                    <div className="hcg-notice">
+                                                        <div className="hcg-notice-title">Important — Connected Metaobjects</div>
+                                                        <div className="hcg-notice-intro">
+                                                            This section works using two connected metaobjects:
+                                                        </div>
+                                                        <div className="hcg-connected-chips">
+                                                            {s.connected.map((c, i) => (
+                                                                <div className="hcg-connected-chip" key={i}>
+                                                                    <span className="hcg-chip-label">{i === 0 ? "Main" : "Items"}</span>
+                                                                    {c}
+                                                                </div>
+                                                            ))}
+                                                        </div>
+                                                    </div>
+                                                )}
+                                                {s.how && (
+                                                    <>
+                                                        <div className="hcg-sub-label">How It Works</div>
+                                                        <p className="hcg-how-text">{s.how}</p>
+                                                    </>
+                                                )}
+                                            </div>
+                                        )}
+
+                                        {/* Right col (or only col): steps + screenshots */}
                                         <div>
-                                            {s.connected && (
-                                                <div className="hcg-notice">
-                                                    <div className="hcg-notice-title">Important — Connected Metaobjects</div>
-                                                    <div className="hcg-notice-intro">
-                                                        This section works using two connected metaobjects:
+                                            <div className="hcg-sub-label">Steps</div>
+                                            <div className="hcg-steps">
+                                                {s.steps.map((step, i) => (
+                                                    <div className="hcg-step" key={i}>
+                                                        <span className="hcg-step-num">{String(i + 1).padStart(2, "0")}</span>
+                                                        <span className="hcg-step-text">{step}</span>
                                                     </div>
-                                                    <div className="hcg-connected-chips">
-                                                        {s.connected.map((c, i) => (
-                                                            <div className="hcg-connected-chip" key={i}>
-                                                                <span className="hcg-chip-label">{i === 0 ? "Main" : "Items"}</span>
-                                                                {c}
-                                                            </div>
-                                                        ))}
-                                                    </div>
+                                                ))}
+                                            </div>
+
+                                            {s.screenshots && s.simple && (
+                                                <div className="hcg-screenshot-links">
+                                                    {s.screenshots.map((sc, i) => (
+                                                        <div key={i} className="hcg-screenshot-item">
+                                                            <h4 className="hcg-screenshot-label">{sc.label}</h4>
+                                                            <img
+                                                                src={sc.url}
+                                                                alt={sc.label}
+                                                                className="hcg-screenshot-image"
+                                                            />
+                                                        </div>
+                                                    ))}
                                                 </div>
                                             )}
-                                            {s.how && (
-                                                <>
-                                                    <div className="hcg-sub-label">How It Works</div>
-                                                    <p className="hcg-how-text">{s.how}</p>
-                                                </>
-                                            )}
                                         </div>
-                                    )}
 
-                                    {/* Right col (or only col): steps + screenshots */}
-                                    <div>
-                                        <div className="hcg-sub-label">Steps</div>
-                                        <div className="hcg-steps">
-                                            {s.steps.map((step, i) => (
-                                                <div className="hcg-step" key={i}>
-                                                    <span className="hcg-step-num">{String(i + 1).padStart(2, "0")}</span>
-                                                    <span className="hcg-step-text">{step}</span>
+                                    </div>
+
+                                    {s.screenshots && !s.simple && (
+                                        <div className="hcg-screenshot-links">
+                                            {s.screenshots.map((sc, i) => (
+                                                <div key={i} className="hcg-screenshot-item">
+                                                    <h4 className="hcg-screenshot-label">{sc.label}</h4>
+                                                    <img
+                                                        src={sc.url}
+                                                        alt={sc.label}
+                                                        className="hcg-screenshot-image"
+                                                    />
                                                 </div>
                                             ))}
                                         </div>
-
-                                        {s.screenshots && s.simple && (
-                                            <div className="hcg-screenshot-links">
-                                                {s.screenshots.map((sc, i) => (
-                                                    <div key={i} className="hcg-screenshot-item">
-                                                        <div className="hcg-screenshot-label">{sc.label}</div>
-                                                        <img
-                                                            src={sc.url}
-                                                            alt={sc.label}
-                                                            className="hcg-screenshot-image"
-                                                        />
-                                                    </div>
-                                                ))}
-                                            </div>
-                                        )}
-                                    </div>
-
-                                </div>
-
-                                        {s.screenshots && !s.simple && (
-                                            <div className="hcg-screenshot-links">
-                                                {s.screenshots.map((sc, i) => (
-                                                    <div key={i} className="hcg-screenshot-item">
-                                                        <div className="hcg-screenshot-label">{sc.label}</div>
-                                                        <img
-                                                            src={sc.url}
-                                                            alt={sc.label}
-                                                            className="hcg-screenshot-image"
-                                                        />
-                                                    </div>
-                                                ))}
-                                            </div>
-                                        )}
+                                    )}
 
                                 </div>
                             </div>
@@ -466,7 +438,7 @@ export default function Documentation() {
                                 {/* Preview */}
                                 {s.previewUrl && (
                                     <div className="hcg-preview-link">
-                                        <div>Applies to section:</div>
+                                        <h4>Applies to section:</h4>
                                         <img
                                             src={s.previewUrl}
                                             alt={`Preview for ${s.name}`}
@@ -525,7 +497,7 @@ export default function Documentation() {
                                             <div className="hcg-screenshot-links">
                                                 {s.screenshots.map((sc, i) => (
                                                     <div key={i} className="hcg-screenshot-item">
-                                                        <div className="hcg-screenshot-label">{sc.label}</div>
+                                                        <h4 className="hcg-screenshot-label">{sc.label}</h4>
                                                         <img
                                                             src={sc.url}
                                                             alt={sc.label}
