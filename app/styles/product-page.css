@@ -1159,6 +1159,10 @@ a.ssw-link:hover svg {
     transition: all 0.4s ease;
 }
 
+.faq-v3-item:nth-child(1) {
+    padding-top: 0;
+}
+
 .faq-v3-item-header {
     display: flex;
     align-items: end;

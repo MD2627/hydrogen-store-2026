@@ -1,5 +1,5 @@
 export async function action({ request, context }) {
-  const { storefront, env, session } = context;
+  const { storefront, env } = context;
 
   if (request.method !== 'POST') {
     return Response.json({ error: 'Method not allowed' }, { status: 405 });
@@ -16,30 +16,39 @@ export async function action({ request, context }) {
     }
 
     const submissionId = `TRY-${Math.random().toString(36).substring(2, 9).toUpperCase()}`;
-    const submittedAt = new Date().toISOString();
 
-    // Try to get customer ID if logged in
-    let customerId = null;
-    if (session) {
-      const customerAccessToken = await session.get('customerAccessToken');
-      if (customerAccessToken) {
-        // In a real scenario, fetch the customer GID here.
-        // For now, we'll keep it null.
-      }
-    }
+    // Shopify date metafields require "YYYY-MM-DD" — NOT a full ISO timestamp
+    const now = new Date();
+    const submittedAt = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
+
+    console.log('=== TRY THEME SUBMISSION ===');
+    console.log('firstName:', firstName);
+    console.log('email:', email);
+    console.log('formId:', formId);
+    console.log('submissionId:', submissionId);
+    console.log('submittedAt:', submittedAt);
 
     // 1. ATTEMPT TO USE ADMIN API FOR METAOBJECT
-    const adminApiToken = env?.SHOPIFY_ADMIN_API_TOKEN;
+    const adminApiToken = env?.SHOPIFY_ADMIN_API_TOKEN || env?.PRIVATE_STOREFRONT_API_TOKEN;
+    const shopDomain = env?.PUBLIC_STORE_DOMAIN?.replace(/\/$/, '');
 
-    if (adminApiToken && env?.PUBLIC_STORE_DOMAIN) {
-      const shopDomain = env.PUBLIC_STORE_DOMAIN;
+    console.log('adminApiToken present:', !!adminApiToken);
+    console.log('shopDomain:', shopDomain);
+
+    if (adminApiToken && shopDomain) {
       const adminApiUrl = `https://${shopDomain}/admin/api/2024-01/graphql.json`;
 
       const metaobjectMutation = `
-        mutation CreateMetaobject($metaobject: MetaobjectCreateInput!) {
-          metaobjectCreate(metaobject: $metaobject) {
-            metaobject { id handle }
-            userErrors { field message }
+        mutation UpsertMetaobject($handle: MetaobjectHandleInput!, $metaobject: MetaobjectUpsertInput!) {
+          metaobjectUpsert(handle: $handle, metaobject: $metaobject) {
+            metaobject {
+              id
+              handle
+            }
+            userErrors {
+              field
+              message
+            }
           }
         }
       `;
@@ -52,10 +61,7 @@ export async function action({ request, context }) {
         { key: 'submission_id', value: submissionId },
       ];
 
-      // Only add submitted_by if we have a valid customer GID
-      if (customerId) {
-        metaobjectFields.push({ key: 'submitted_by', value: customerId });
-      }
+      console.log('metaobjectFields:', JSON.stringify(metaobjectFields, null, 2));
 
       try {
         const adminResponse = await fetch(adminApiUrl, {
@@ -67,39 +73,65 @@ export async function action({ request, context }) {
           body: JSON.stringify({
             query: metaobjectMutation,
             variables: {
-              metaobject: {
+              handle: {
                 type: 'try_theme',
+                handle: submissionId.toLowerCase()
+              },
+              metaobject: {
                 fields: metaobjectFields,
               },
             },
           }),
         });
 
-        const adminResult = await adminResponse.json();
-        const userErrors = adminResult.data?.metaobjectCreate?.userErrors;
+        console.log('Admin API HTTP status:', adminResponse.status);
 
-        if (!adminResult.errors && (!userErrors || userErrors.length === 0)) {
+        const rawText = await adminResponse.text();
+        console.log('Admin API raw response:', rawText);
+
+        let adminResult;
+        try {
+          adminResult = JSON.parse(rawText);
+        } catch (parseErr) {
+          console.error('Failed to parse Admin API response as JSON');
+          throw new Error('Admin API returned non-JSON response');
+        }
+
+        const userErrors = adminResult.data?.metaobjectUpsert?.userErrors;
+        const createdMetaobject = adminResult.data?.metaobjectUpsert?.metaobject;
+
+        console.log('userErrors:', JSON.stringify(userErrors, null, 2));
+        console.log('createdMetaobject:', JSON.stringify(createdMetaobject, null, 2));
+        console.log('top-level errors:', JSON.stringify(adminResult.errors, null, 2));
+
+        if (
+          !adminResult.errors &&
+          (!userErrors || userErrors.length === 0) &&
+          createdMetaobject?.id
+        ) {
+          console.log('✅ Metaobject upserted successfully:', createdMetaobject.id);
           return Response.json({ success: true, submissionId });
         }
 
         console.error(
-          'Admin API Metaobject Error:',
+          '❌ Admin API Metaobject Error:',
           JSON.stringify(adminResult.errors || userErrors, null, 2),
         );
       } catch (adminErr) {
-        console.error('Admin API Fetch Error:', adminErr);
+        console.error('❌ Admin API Fetch Error:', adminErr.message);
         // Continue to fallback
       }
+    } else {
+      console.warn('⚠️ Skipping Admin API: SHOPIFY_ADMIN_API_TOKEN/PRIVATE_STOREFRONT_API_TOKEN or PUBLIC_STORE_DOMAIN is missing');
     }
 
     // 2. FALLBACK: USE STOREFRONT API (Customer Create)
-    // Pack all info into the lastName field as a reliable fallback
+    console.log('Falling back to Storefront API customer creation...');
     let formattedLastName = `Try Theme | ID:${submissionId} | Form:${formId} | ${submittedAt}`;
     if (formattedLastName.length > 255) {
       formattedLastName = formattedLastName.slice(0, 255);
     }
 
-    // NOTE: Do NOT use #graphql tag here — storefront.mutate handles it differently
     const mutation = `
       mutation customerCreate($input: CustomerCreateInput!) {
         customerCreate(input: $input) {
@@ -120,14 +152,14 @@ export async function action({ request, context }) {
     };
 
     const result = await storefront.mutate(mutation, { variables });
+    console.log('Storefront mutate result:', JSON.stringify(result, null, 2));
 
-    // Check user errors — in storefront.mutate result, the data is unwrapped one level
     const customerErrors = result.customerCreate?.customerUserErrors;
 
     if (customerErrors && customerErrors.length > 0) {
       const firstError = customerErrors[0];
 
-      // Email already taken = user already exists → treat as success
+      // Email already taken = treat as success
       if (
         firstError.code === 'TAKEN' ||
         firstError.message.toLowerCase().includes('taken') ||
@@ -143,7 +175,7 @@ export async function action({ request, context }) {
     return Response.json({ success: true, submissionId });
 
   } catch (error) {
-    console.error('Try Theme Form API Error:', error);
+    console.error('Try Theme Form API Error:', error.message);
     return Response.json({ error: 'Server error. Please try again.' }, { status: 500 });
   }
 }
