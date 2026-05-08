@@ -147,7 +147,7 @@ export default function EngagementRingProduct() {
   }));
 
   return (
-    <main className="product-page">
+    <main className="product-page" key={product.id}>
       <div className="product">
         <div className="page-width">
           <div className="back-navigation-wrapper">
@@ -295,9 +295,9 @@ export default function EngagementRingProduct() {
         description="Discover timeless designs crafted to capture elegance and brilliance in every detail"
         items={shopByStyleItems} />
 
-      <StickySwiper
+      {/* <StickySwiper
         data={STORY_SLIDES}
-      />
+      /> */}
 
       <VideoBanner
         data={VIDEO_BANNER_DATA}

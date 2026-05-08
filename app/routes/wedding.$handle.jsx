@@ -146,7 +146,7 @@ export default function Product() {
   const { title, descriptionHtml } = product;
 
   return (
-    <main className="product-page">
+    <main className="product-page" key={product.id}>
 
       {/* PRODUCT SECTION */}
       <div className="main-product">
@@ -282,9 +282,9 @@ export default function Product() {
         description=""
         items={shopByStyleItems} />
 
-      <StickySwiper
+      {/* <StickySwiper
         data={STORY_SLIDES}
-      />
+      /> */}
 
       <VideoBanner
         data={VIDEO_BANNER_DATA}

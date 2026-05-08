@@ -49,7 +49,7 @@
 }
 
 .add-to-cart-wrapper button[disabled] {
-    background-color: #D1EDF6;
+    background-color: var(--btn_primary_bg);
     color: var(--gray_700);
     pointer-events: none;
 }
@@ -124,12 +124,14 @@
 .product-form-custom {
     scroll-margin-top: 160px;
     position: relative;
-    background-color: #f4efe9;
-    padding: 1.5rem;
     margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--btn_primary_bg);
 }
 
-
+.product-form-custom.timeline-section {
+    border: none;
+}
 
 .product-description {
     margin: 0 0 20px;
@@ -190,7 +192,7 @@
     width: 100vw;
     height: 100vh;
     background: var(--body_color);
-    z-index: 1000;
+    z-index: 100000;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -354,6 +356,7 @@
     .product-main {
         position: sticky;
         top: 120px;
+        z-index: 2;
         /* Adjust based on header height */
         display: flex;
         flex-direction: column;
@@ -395,8 +398,8 @@
     text-align: center;
     position: relative;
     padding: 18px 20px;
-    background-color: var(--button_color_1);
-    color: var(--white_color);
+    background-color: var(--btn_primary_bg);
+    color: var(--black_color);
     overflow: hidden;
     cursor: pointer;
     text-decoration: none;
@@ -412,7 +415,10 @@
 }
 
 .add-to-cart-wrapper button:hover {
-    background-color: var(--dark_accent_color);
+    background-color: var(--btn_primary_hover_bg);
+    color: var(--btn_primary_hover_color);
+    border-color: var(--btn_primary_hover_bg);
+    box-shadow: 0 4px 15px rgba(var(--black_rgb), 0.15);
 }
 
 .option-row:last-child {
@@ -435,6 +441,22 @@
 
 .option-trigger:hover {
     background-color: rgba(var(--pure_black_rgb), 0.01);
+}
+
+.option-row.gemstone-row.stone-type-row .option-trigger {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+    padding-bottom: 0;
+}
+
+.stone-type-row select.option-value-display {
+    border: 1px solid;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+    text-align: left;
+    padding: 4px;
 }
 
 .option-label {
@@ -520,9 +542,9 @@
 }
 
 .option-dropdown {
-    position: absolute;
+    /* position: absolute;
     top: 100%;
-    right: 0;
+    right: 0; */
     background: var(--body_color);
     z-index: 100;
     box-shadow: 0 4px 25px rgba(var(--pure_black_rgb), 0.15);
@@ -533,7 +555,6 @@
     pointer-events: auto;
     overflow-y: auto;
     width: 100%;
-    max-width: 400px;
 }
 
 /* Scroller styles for dropdown */
@@ -544,6 +565,83 @@
 .option-dropdown::-webkit-scrollbar-thumb {
     background-color: var(--gray_medium_color);
     border-radius: 3px;
+}
+
+.option-dropdown.choose-your-ring {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 6px;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    background: var(--white_color);
+}
+
+.option-dropdown.choose-your-ring .ring-size-item {
+    margin: 0;
+    border: 1px solid;
+}
+
+.option-dropdown.choose-your-ring .ring-size-item.selected {
+    background: var(--btn_primary_bg);
+}
+
+.option-dropdown.choose-your-ring span.option-name {
+    justify-content: center;
+}
+
+.option-dropdown.variant {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    background: var(--white_color);
+    box-shadow: unset;
+    border: none;
+    border-radius: unset;
+    padding: 0;
+    max-height: unset;
+    pointer-events: unset;
+    overflow: unset;
+}
+
+.option-dropdown.variant .option-item-swatch {
+    padding: 0px 0 5px;
+    margin: 0;
+    display: block;
+    border-radius: unset;
+    position: relative;
+}
+
+.option-dropdown.variant .option-item-swatch .option-swatch-image {
+    position: relative;
+}
+
+.option-dropdown.variant .option-item-swatch img {
+    width: 100%;
+    height: auto;
+}
+
+.option-dropdown.variant .option-swatch-info {
+    display: block;
+    padding: 0 10px;
+}
+
+.option-dropdown.variant span.option-name {
+    padding-top: 10px;
+}
+
+.option-dropdown.variant .option-price-diff {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: var(--btn_primary_bg);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.option-dropdown.variant .option-item-swatch.selected {
+    box-shadow: 0 0 4px 1px #00000063;
+    background-color: var(--btn_primary_bg);
 }
 
 /* Option Item (Swatch/Image) */
@@ -559,10 +657,10 @@
 }
 
 .option-item-swatch:hover {
-    color: #1e4e2a;
+    /* color: #1e4e2a;
     background: color-mix(in srgb, var(--button_color_1) 14%, transparent);
     transform: translateY(-1px);
-    box-shadow: 0 6px 12px #0000000a;
+    box-shadow: 0 6px 12px #0000000a; */
 }
 
 .option-item-swatch.selected {
@@ -664,7 +762,7 @@ span.option-name {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 9999;
+    z-index: 100000;
     padding: 20px;
 }
 
@@ -718,7 +816,7 @@ span.option-name {
 .ring-size-warning {
     padding: 0 16px 18px;
     text-align: center;
-    color: var(--black_color);
+    color: red;
 }
 
 /* =====================================================
@@ -729,8 +827,14 @@ span.option-name {
     margin-top: 20px;
 }
 
+.product-form-custom.engraving-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
 .engraving-row {
-    margin-top: 16px;
+    display: grid;
 }
 
 .engraving-label-row {
@@ -760,6 +864,7 @@ span.option-name {
     background: transparent;
     text-align: center;
     transition: all 0.2s ease;
+    margin: 16px 0 0 0;
 }
 
 .engraving-input:focus {
@@ -809,7 +914,6 @@ span.option-name {
     background-color: var(--white_color);
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
     justify-content: center;
     border: 1px solid rgba(var(--pure_black_rgb), 0.05);
 }
@@ -932,7 +1036,7 @@ span.option-name {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1000;
+    z-index: 100000;
     padding: 20px;
 }
 
@@ -1872,8 +1976,45 @@ span.arrow-icon {
     display: none;
 }
 
-@media (max-width: 768px) {
-    .product {
-        /* padding-bottom: 3rem; */
+@media (max-width: 767px) {
+    .option-dropdown.choose-your-ring {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .option-dropdown.choose-your-ring .ring-size-item {
+        padding: 8px 10px;
+    }
+
+    .option-dropdown.variant {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 10px;
+        scroll-snap-type: x mandatory;
+    }
+
+    .option-dropdown.variant::-webkit-scrollbar {
+        height: 4px;
+    }
+
+    .option-dropdown.variant::-webkit-scrollbar-thumb {
+        background: var(--gray_medium_color);
+        border-radius: 4px;
+    }
+
+    .option-dropdown.variant .option-item-swatch {
+        flex: 0 0 40%;
+        scroll-snap-align: start;
+    }
+
+    .product-form-custom.engraving-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .option-dropdown.choose-your-ring .ring-size-item {
+        padding: 8px 5px;
     }
 }

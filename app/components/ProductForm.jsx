@@ -679,7 +679,7 @@ export function ProductForm({ productOptions, selectedVariant, productTags = [],
           ))}
           {/* Stone Type - Hover Dropdown */}
           {SHOW_STONE_TYPE_OPTION && (
-            <div className="option-row gemstone-row">
+            <div className="option-row gemstone-row stone-type-row">
               <div className="option-header">
                 <div className="option-trigger">
                   <span className="option-label f-10 f-m-10 w-300 black-color l-h-1-2 ff-n clickable-label"
@@ -695,30 +695,19 @@ export function ProductForm({ productOptions, selectedVariant, productTags = [],
                       {GEMSTONE_CONFIG.stoneType.tooltip}
                     </div>
                   </span>
-                  <span className="option-value-display f-11 f-m-11 w-400 ff-c l-h-1-2 black-color clickable-label"
-                    onClick={() => setActiveDropdown(activeDropdown === 'stone-type' ? null : 'stone-type')}
+                  <select
+                    className="option-value-display f-11 f-m-11 w-400 ff-c l-h-1-2 black-color"
+                    value={selectedStoneType}
+                    onChange={(e) => setSelectedStoneType(e.target.value)}
                   >
-                    {getStoneTypeLabel()}
-                    <ChevronDown rotated={activeDropdown === 'stone-type'} />
-                  </span>
+                    {GEMSTONE_CONFIG.stoneType.options.map((option) => (
+                      <option key={option.value} value={option.value}>
+                        {option.label}
+                      </option>
+                    ))}
+                  </select>
                 </div>
               </div>
-              {activeDropdown === 'stone-type' && (
-                <div className="option-dropdown">
-                  {GEMSTONE_CONFIG.stoneType.options.map((option) => (
-                    <div
-                      key={option.value}
-                      className={`ring-size-item option-item-swatch f-13 f-m-13 w-400 black-color l-h-1-2 ff-c ${selectedStoneType === option.value ? 'selected' : ''}`}
-                      onClick={() => {
-                        setSelectedStoneType(option.value);
-                        setActiveDropdown(null);
-                      }}
-                    >
-                      <span className="option-name">{option.label}</span>
-                    </div>
-                  ))}
-                </div>
-              )}
             </div>
           )}
         </div>
@@ -758,38 +747,39 @@ export function ProductForm({ productOptions, selectedVariant, productTags = [],
                         </span>
                       </span>
                     </span>
-                    <span className={`option-value-display f-11 f-m-11 w-400 ff-c l-h-1-2 black-color ${!selectedRingSize && !helpMeLater ? 'ring-size-trigger-text unselected' : ''}`}>
+                    {/* <span className={`option-value-display f-11 f-m-11 w-400 ff-c l-h-1-2 black-color ${!selectedRingSize && !helpMeLater ? 'ring-size-trigger-text unselected' : ''}`}>
                       {getRingSizeDisplayValue()}
                       <ChevronDown rotated={activeDropdown === 'ring-size'} />
-                    </span>
-                  </button>
-                </div>
-
-                {activeDropdown === 'ring-size' && (
-                  <div className="option-dropdown">
+                    </span> */}
                     <div
                       className={`ring-size-item help-me-later ${helpMeLater ? 'selected' : ''}`}
                       onClick={() => setShowSizeModal(true)}
                     >
                       <span className="help-me-later-text f-13 f-m-13 w-400 light-accent-color l-h-1-2 ff-c">Help me to select later</span>
+                      <span className="size-format">&nbsp;({RING_SIZES_CONFIG[0].format})</span>
                     </div>
+                  </button>
+                </div>
 
-                    {RING_SIZES_CONFIG.map((size) => (
-                      <div
-                        key={size.value}
-                        className={`ring-size-item f-13 f-m-13 w-400 black-color l-h-1-2 ff-c ${selectedRingSize === size.value && !helpMeLater ? 'selected' : ''}`}
-                        onClick={() => handleRingSizeSelect(size.value)}
-                      >
-                        <div className="option-swatch-info">
-                          <span className="option-name f-13 f-m-13 w-400 black-color l-h-1-2 ff-c">
-                            {size.label}
-                            <span className="size-format">&nbsp;({size.format})</span>
-                          </span>
-                        </div>
+                {/* {activeDropdown === 'ring-size' && ( */}
+                <div className="option-dropdown choose-your-ring">
+
+                  {RING_SIZES_CONFIG.map((size) => (
+                    <div
+                      key={size.value}
+                      className={`ring-size-item f-13 f-m-13 w-400 black-color l-h-1-2 ff-c ${selectedRingSize === size.value && !helpMeLater ? 'selected' : ''}`}
+                      onClick={() => handleRingSizeSelect(size.value)}
+                    >
+                      <div className="option-swatch-info">
+                        <span className="option-name f-13 f-m-13 w-400 black-color l-h-1-2 ff-c">
+                          {size.label}
+                          {/* <span className="size-format">&nbsp;({size.format})</span> */}
+                        </span>
                       </div>
-                    ))}
-                  </div>
-                )}
+                    </div>
+                  ))}
+                </div>
+                {/* )} */}
                 <div className="section-header-desc f-13 f-m-13 l-h-1-2 black-color w-400 ff-c">
                   Don't know your ring size?{' '}
                   <a href="/pages/size-guide" className="tips-link">Here Are Some Guide you</a>
@@ -816,31 +806,31 @@ export function ProductForm({ productOptions, selectedVariant, productTags = [],
                           </span>
                         </span>
                       </span>
-                      <span
+                      {/* <span
                         className="option-value-display f-11 f-m-11 w-400 ff-c l-h-1-2 black-color"
                         onClick={() => setActiveDropdown(activeDropdown === 'clarity' ? null : 'clarity')}
                       >
                         {getClarityLabel()}
                         <ChevronDown rotated={activeDropdown === 'clarity'} />
-                      </span>
+                      </span> */}
                     </div>
                   </div>
-                  {activeDropdown === 'clarity' && (
-                    <div className="option-dropdown">
-                      {GEMSTONE_CONFIG.clarity.options.map((option) => (
-                        <div
-                          key={option.value}
-                          className={`ring-size-item option-item-swatch f-13 f-m-13 w-400 black-color l-h-1-2 ff-c ${selectedClarity === option.value ? 'selected' : ''}`}
-                          onClick={() => {
-                            setSelectedClarity(option.value);
-                            setActiveDropdown(null);
-                          }}
-                        >
-                          <span className="option-name">{option.label}</span>
-                        </div>
-                      ))}
-                    </div>
-                  )}
+                  {/* {activeDropdown === 'clarity' && ( */}
+                  <div className="option-dropdown">
+                    {GEMSTONE_CONFIG.clarity.options.map((option) => (
+                      <div
+                        key={option.value}
+                        className={`ring-size-item option-item-swatch f-13 f-m-13 w-400 black-color l-h-1-2 ff-c ${selectedClarity === option.value ? 'selected' : ''}`}
+                        onClick={() => {
+                          setSelectedClarity(option.value);
+                          setActiveDropdown(null);
+                        }}
+                      >
+                        <span className="option-name">{option.label}</span>
+                      </div>
+                    ))}
+                  </div>
+                  {/* )} */}
                 </div>
 
                 {/* Carat - Title opens modal, Value opens dropdown */}
@@ -858,31 +848,31 @@ export function ProductForm({ productOptions, selectedVariant, productTags = [],
                           </span>
                         </span>
                       </span>
-                      <span
+                      {/* <span
                         className="option-value-display f-11 f-m-11 w-400 ff-c l-h-1-2 black-color"
                         onClick={() => setActiveDropdown(activeDropdown === 'carat' ? null : 'carat')}
                       >
                         {getCaratLabel()}
                         <ChevronDown rotated={activeDropdown === 'carat'} />
-                      </span>
+                      </span> */}
                     </div>
                   </div>
-                  {activeDropdown === 'carat' && (
-                    <div className="option-dropdown">
-                      {GEMSTONE_CONFIG.carat.options.map((option) => (
-                        <div
-                          key={option.value}
-                          className={`ring-size-item option-item-swatch f-13 f-m-13 w-400 black-color l-h-1-2 ff-c ${selectedCarat === option.value ? 'selected' : ''}`}
-                          onClick={() => {
-                            setSelectedCarat(option.value);
-                            setActiveDropdown(null);
-                          }}
-                        >
-                          <span className="option-name">{option.label}</span>
-                        </div>
-                      ))}
-                    </div>
-                  )}
+                  {/* {activeDropdown === 'carat' && ( */}
+                  <div className="option-dropdown">
+                    {GEMSTONE_CONFIG.carat.options.map((option) => (
+                      <div
+                        key={option.value}
+                        className={`ring-size-item option-item-swatch f-13 f-m-13 w-400 black-color l-h-1-2 ff-c ${selectedCarat === option.value ? 'selected' : ''}`}
+                        onClick={() => {
+                          setSelectedCarat(option.value);
+                          setActiveDropdown(null);
+                        }}
+                      >
+                        <span className="option-name">{option.label}</span>
+                      </div>
+                    ))}
+                  </div>
+                  {/* )} */}
                 </div>
 
                 {/* Colour - Title opens modal, Value opens dropdown */}
@@ -900,31 +890,31 @@ export function ProductForm({ productOptions, selectedVariant, productTags = [],
                           </span>
                         </span>
                       </span>
-                      <span
+                      {/* <span
                         className="option-value-display f-11 f-m-11 w-400 ff-c l-h-1-2 black-color"
                         onClick={() => setActiveDropdown(activeDropdown === 'colour' ? null : 'colour')}
                       >
                         {getColourLabel()}
                         <ChevronDown rotated={activeDropdown === 'colour'} />
-                      </span>
+                      </span> */}
                     </div>
                   </div>
-                  {activeDropdown === 'colour' && (
-                    <div className="option-dropdown">
-                      {GEMSTONE_CONFIG.colour.options.map((option) => (
-                        <div
-                          key={option.value}
-                          className={`ring-size-item option-item-swatch f-13 f-m-13 w-400 black-color l-h-1-2 ff-c ${selectedColour === option.value ? 'selected' : ''}`}
-                          onClick={() => {
-                            setSelectedColour(option.value);
-                            setActiveDropdown(null);
-                          }}
-                        >
-                          <span className="option-name">{option.label}</span>
-                        </div>
-                      ))}
-                    </div>
-                  )}
+                  {/* {activeDropdown === 'colour' && ( */}
+                  <div className="option-dropdown">
+                    {GEMSTONE_CONFIG.colour.options.map((option) => (
+                      <div
+                        key={option.value}
+                        className={`ring-size-item option-item-swatch f-13 f-m-13 w-400 black-color l-h-1-2 ff-c ${selectedColour === option.value ? 'selected' : ''}`}
+                        onClick={() => {
+                          setSelectedColour(option.value);
+                          setActiveDropdown(null);
+                        }}
+                      >
+                        <span className="option-name">{option.label}</span>
+                      </div>
+                    ))}
+                  </div>
+                  {/* )} */}
                 </div>
               </>
             )}
@@ -936,12 +926,23 @@ export function ProductForm({ productOptions, selectedVariant, productTags = [],
       {
         isRingProduct && (
           <div className="product-form-custom engraving-section">
-            <div className="product-form-custom-header">
-              <h2 className="f-22 f-m-22 w-300 black-color l-h-1-2">Engraving</h2>
-            </div>
-            <div className="section-header-desc f-13 f-m-13 l-h-1-2 black-color w-400 ff-c">
-              Add a personal touch to your piece with free engraving. Enter your desired message to customize your jewellery with names, dates, or meaningful words, engraved forever.
-              {/* Add an optional personal touch — type your message and choose a font to engrave names, dates or notes. */}
+            <div>
+              <div className="product-form-custom-header">
+                <h2 className="f-22 f-m-22 w-300 black-color l-h-1-2">Engraving</h2>
+              </div>
+              <div className="section-header-desc f-13 f-m-13 l-h-1-2 black-color w-400 ff-c">
+                Add a personal touch to your piece with free engraving. Enter your desired message to customize your jewellery with names, dates, or meaningful words, engraved forever.
+                {/* Add an optional personal touch — type your message and choose a font to engrave names, dates or notes. */}
+              </div>
+              <input
+                type="text"
+                className="engraving-input f-20 f-m-18 w-400 black-color l-h-1-2 ff-c"
+                placeholder="Type here"
+                value={engravingText}
+                onChange={handleEngravingTextChange}
+                maxLength={ENGRAVING_CONFIG.maxCharacters}
+                style={{ fontFamily: ENGRAVING_CONFIG.fonts.find(f => f.value === selectedFont)?.fontFamily }}
+              />
             </div>
 
             <div className="engraving-row">
@@ -964,53 +965,45 @@ export function ProductForm({ productOptions, selectedVariant, productTags = [],
                 </span>
               </div>
 
-              {engravingText.trim().length > 0 && (
-                <div className="engraving-preview-container">
-                  <img
-                    src={selectedVariant?.engraving_preview?.reference?.image?.url || 'https://cdn.shopify.com/s/files/1/0801/7317/0906/files/ring_band_engraving_yellow_gold.CZj2e0HK.jpg?v=1772520454'}
-                    alt="Engraving Preview"
-                    className="engraving-preview-image"
-                  />
-                  <svg
-                    className="engraving-preview-svg"
-                    viewBox="0 0 100 50"
-                    xmlns="http://www.w3.org/2000/svg"
+              {/* {engravingText.trim().length > 0 && ( */}
+              <div className="engraving-preview-container">
+                <img
+                  src={selectedVariant?.engraving_preview?.reference?.image?.url || 'https://cdn.shopify.com/s/files/1/0801/7317/0906/files/ring_band_engraving_yellow_gold.CZj2e0HK.jpg?v=1772520454'}
+                  alt="Engraving Preview"
+                  className="engraving-preview-image"
+                />
+                <svg
+                  className="engraving-preview-svg"
+                  viewBox="0 0 100 50"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <defs>
+                    <path
+                      id="EngravingPath"
+                      fill="none"
+                      d="M 17,20 C 30,11.5 70,11.5 83,20"
+                    />
+                  </defs>
+                  <text
+                    style={{
+                      fontFamily: ENGRAVING_CONFIG.fonts.find(f => f.value === selectedFont)?.fontFamily || 'serif',
+                      fontSize: '6.5px',
+                      fill: 'rgb(115, 86, 86)',
+                      opacity: 0.8
+                    }}
                   >
-                    <defs>
-                      <path
-                        id="EngravingPath"
-                        fill="none"
-                        d="M 17,20 C 30,11.5 70,11.5 83,20"
-                      />
-                    </defs>
-                    <text
-                      style={{
-                        fontFamily: ENGRAVING_CONFIG.fonts.find(f => f.value === selectedFont)?.fontFamily || 'serif',
-                        fontSize: '6.5px',
-                        fill: 'rgb(115, 86, 86)',
-                        opacity: 0.8
-                      }}
+                    <textPath
+                      href="#EngravingPath"
+                      startOffset="50%"
+                      textAnchor="middle"
                     >
-                      <textPath
-                        href="#EngravingPath"
-                        startOffset="50%"
-                        textAnchor="middle"
-                      >
-                        {engravingText}
-                      </textPath>
-                    </text>
-                  </svg>
-                </div>
-              )}
-              <input
-                type="text"
-                className="engraving-input f-20 f-m-18 w-400 black-color l-h-1-2 ff-c"
-                placeholder="Type here"
-                value={engravingText}
-                onChange={handleEngravingTextChange}
-                maxLength={ENGRAVING_CONFIG.maxCharacters}
-                style={{ fontFamily: ENGRAVING_CONFIG.fonts.find(f => f.value === selectedFont)?.fontFamily }}
-              />
+                      {engravingText}
+                    </textPath>
+                  </text>
+                </svg>
+              </div>
+              {/* )} */}
+
 
               {/* {engravingText.length > 0 && (
                 <div className="font-selector">
@@ -1181,14 +1174,14 @@ export function ProductForm({ productOptions, selectedVariant, productTags = [],
                 className="accordion-trigger"
                 onClick={() => toggleAccordion(item.id)}
               >
-                <div className="accordion-icon">
+                {/* <div className="accordion-icon">
                   <svg viewBox="0 0 16.933 16.933" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="m2.117 5.292 6.35 6.35 6.35-6.35"
                       className="accordion-chevron"
                     />
                   </svg>
-                </div>
+                </div> */}
                 <span className="accordion-title f-10 f-m-10 w-400 ff-n l-h-1-2">
                   {item.title}
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1312,62 +1305,69 @@ function OptionRow({ option, isOpen, onToggle, navigate, selectedVariant }) {
               </span>
             )}
           </span>
-          <span className="option-value-display f-11 f-m-11 w-400 ff-c l-h-1-2 black-color">
+          {/* <span className="option-value-display f-11 f-m-11 w-400 ff-c l-h-1-2 black-color">
             {selectedValue ? selectedValue.name : 'Select'}
             <ChevronDown rotated={isOpen} />
-          </span>
+          </span> */}
         </button>
       </div>
 
-      {isOpen && (
-        <div className="option-dropdown">
-          {option.optionValues.map((value) => {
-            const isSelected = value.selected;
-            const ItemTag = value.isDifferentProduct ? Link : 'div';
-            const itemProps = value.isDifferentProduct ? {
-              to: `/products/${value.handle}?${value.variantUriQuery}`,
-              prefetch: "intent",
-              replace: true,
-              className: "no-style-link"
-            } : {};
+      {/* {isOpen && ( */}
+      <div className=" option-dropdown variant">
+        {option.optionValues.map((value) => {
+          const isSelected = value.selected;
+          const ItemTag = value.isDifferentProduct ? Link : 'div';
+          const itemProps = value.isDifferentProduct ? {
+            to: `/products/${value.handle}?${value.variantUriQuery}`,
+            prefetch: "intent",
+            replace: true,
+            className: "no-style-link"
+          } : {};
 
-            // Calculate price difference
-            const variantPrice = value.variant?.price?.amount ? parseFloat(value.variant.price.amount) : 0;
-            const priceDiff = variantPrice - currentPrice;
-            const showPriceDiff = priceDiff !== 0 && variantPrice > 0;
+          // Calculate price difference
+          const variantPrice = value.variant?.price?.amount ? parseFloat(value.variant.price.amount) : 0;
+          const priceDiff = variantPrice - currentPrice;
+          const showPriceDiff = priceDiff !== 0 && variantPrice > 0;
 
-            // Get variant image
-            const variantImage = value.variant?.image?.url || value.swatch?.image?.previewImage?.url;
+          // Get variant image
+          const variantImage = value.variant?.image?.url || value.swatch?.image?.previewImage?.url;
 
-            return (
-              <ItemTag
-                key={value.name}
-                {...itemProps}
-                className={`option-item-swatch ${isSelected ? 'selected' : ''}`}
-                onClick={(e) => handleOptionClick(value, e)}
-                style={{ opacity: value.available ? 1 : 0.5, cursor: value.available ? 'pointer' : 'not-allowed' }}
-              >
-                {variantImage ? (
+          return (
+            <ItemTag
+              key={value.name}
+              {...itemProps}
+              className={`option-item-swatch ${isSelected ? 'selected' : ''}`}
+              onClick={(e) => handleOptionClick(value, e)}
+              style={{ opacity: value.available ? 1 : 0.5, cursor: value.available ? 'pointer' : 'not-allowed' }}
+            >
+              {variantImage ? (
+                <div className='option-swatch-image'>
                   <img src={variantImage} alt={value.name} />
-                ) : (
-                  value.swatch?.color && <span className="swatch-color" style={{ background: value.swatch.color }}></span>
-                )}
-
-                <div className="option-swatch-info">
-                  <span className="option-name f-13 f-m-13 w-400 black-color l-h-1-2 ff-c">
-                    {value.name}
-                  </span>
                   {showPriceDiff && (
-                    <span className={`option-price-diff f-13 f-m-13 w-400 black-color l-h-1-2 ff-c ${priceDiff > 0 ? 'price-plus' : 'price-minus'}`}>
+                    <span className={`option-price-diff f-13 f-m-13 black-color l-h-1-2 ff-c ${priceDiff > 0 ? 'price-plus' : 'price-minus'}`}>
                       {priceDiff > 0 ? '+' : ''}{new Intl.NumberFormat('en-IN', { style: 'currency', currency: currencyCode, minimumFractionDigits: 0, maximumFractionDigits: 0 }).format(priceDiff)}
                     </span>
                   )}
                 </div>
-              </ItemTag>
-            );
-          })}
-        </div>
-      )}
+              ) : (
+                value.swatch?.color && <span className="swatch-color" style={{ background: value.swatch.color }}></span>
+              )}
+
+              <div className="option-swatch-info">
+                <span className="option-name f-13 f-m-13 w-400 black-color l-h-1-2 ff-c">
+                  {value.name}
+                </span>
+                {showPriceDiff && !variantImage && (
+                  <span className={`option-price-diff f-13 f-m-13 w-400 black-color l-h-1-2 ff-c ${priceDiff > 0 ? 'price-plus' : 'price-minus'}`}>
+                    {priceDiff > 0 ? '+' : ''}{new Intl.NumberFormat('en-IN', { style: 'currency', currency: currencyCode, minimumFractionDigits: 0, maximumFractionDigits: 0 }).format(priceDiff)}
+                  </span>
+                )}
+              </div>
+            </ItemTag>
+          );
+        })}
+      </div>
+      {/* )} */}
     </div>
   );
 }

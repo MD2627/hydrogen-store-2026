@@ -17,61 +17,61 @@ import { useLocation } from 'react-router';
  */
 
 function NavigationProgress() {
-  const navigation = useNavigation();
-  const [progress, setProgress] = useState(0);
-  const [visible, setVisible] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
+  // const navigation = useNavigation();
+  // const [progress, setProgress] = useState(0);
+  // const [visible, setVisible] = useState(false);
+  // const [isMounted, setIsMounted] = useState(false);
 
-  // Only run on client-side
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
+  // // Only run on client-side
+  // useEffect(() => {
+  //   setIsMounted(true);
+  // }, []);
 
-  const isNavigating = navigation.state !== 'idle';
+  // const isNavigating = navigation.state !== 'idle';
 
-  useEffect(() => {
-    if (!isMounted) return;
+  // useEffect(() => {
+  //   if (!isMounted) return;
 
-    if (isNavigating) {
-      setVisible(true);
-      setProgress(0);
+  //   if (isNavigating) {
+  //     setVisible(true);
+  //     setProgress(0);
 
-      // Simulate progress animation
-      const timer1 = setTimeout(() => setProgress(30), 100);
-      const timer2 = setTimeout(() => setProgress(60), 300);
-      const timer3 = setTimeout(() => setProgress(80), 600);
+  //     // Simulate progress animation
+  //     const timer1 = setTimeout(() => setProgress(30), 100);
+  //     const timer2 = setTimeout(() => setProgress(60), 300);
+  //     const timer3 = setTimeout(() => setProgress(80), 600);
 
-      return () => {
-        clearTimeout(timer1);
-        clearTimeout(timer2);
-        clearTimeout(timer3);
-      };
-    } else {
-      // Complete the progress bar
-      setProgress(100);
-      const hideTimer = setTimeout(() => {
-        setVisible(false);
-        setProgress(0);
-      }, 300);
+  //     return () => {
+  //       clearTimeout(timer1);
+  //       clearTimeout(timer2);
+  //       clearTimeout(timer3);
+  //     };
+  //   } else {
+  //     // Complete the progress bar
+  //     setProgress(100);
+  //     const hideTimer = setTimeout(() => {
+  //       setVisible(false);
+  //       setProgress(0);
+  //     }, 300);
 
-      return () => clearTimeout(hideTimer);
-    }
-  }, [isNavigating, isMounted]);
+  //     return () => clearTimeout(hideTimer);
+  //   }
+  // }, [isNavigating, isMounted]);
 
-  // Don't render on server or if not visible
-  if (!isMounted || (!visible && progress === 0)) return null;
+  // // Don't render on server or if not visible
+  // if (!isMounted || (!visible && progress === 0)) return null;
 
-  return (
-    <div className="navigation-progress-container">
-      <div
-        className="navigation-progress-bar"
-        style={{
-          width: `${progress}%`,
-          opacity: visible ? 1 : 0
-        }}
-      />
-    </div>
-  );
+  // return (
+  //   <div className="navigation-progress-container">
+  //     <div
+  //       className="navigation-progress-bar"
+  //       style={{
+  //         width: `${progress}%`,
+  //         opacity: visible ? 1 : 0
+  //       }}
+  //     />
+  //   </div>
+  // );
 }
 
 /**

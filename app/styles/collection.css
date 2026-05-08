@@ -106,7 +106,7 @@
 .inline-banner-button {
   display: inline-block;
   padding: 10px 20px;
-  background: var(--deep_navy);
+  background: var(--btn_primary_bg);
   color: var(--white_color);
   text-decoration: none;
   border-radius: 4px;
@@ -352,7 +352,7 @@
   left: 0;
   z-index: 999;
   padding: 12px 16px;
-  background-color: var(--deep_navy);
+  background-color: var(--btn_primary_bg);
   color: var(--white_color);
   border: none;
   border-radius: 2px;
@@ -834,7 +834,7 @@ label.filter-option.metal-types .filter-icon-container img {
   display: flex;
   gap: 0;
   margin: 2rem auto 1.5rem;
-  border: 1px solid var(--deep_navy);
+  border: 1px solid var(--btn_primary_bg);
   max-width: 530px;
 }
 
@@ -858,9 +858,8 @@ label.filter-option.metal-types .filter-icon-container img {
 }
 
 .tab-btn.active {
-  color: var(--deep_navy);
-  background: var(--deep_navy);
-  color: var(--white_color);
+  background: var(--btn_primary_bg);
+  color: var(--btn_primary_color);
 }
 
 .tab-btn.active::after {
@@ -870,7 +869,7 @@ label.filter-option.metal-types .filter-icon-container img {
   left: 0;
   right: 0;
   height: 2px;
-  background: var(--deep_navy);
+  background: var(--btn_primary_bg);
 }
 
 /* Select All Button */
@@ -879,7 +878,7 @@ label.filter-option.metal-types .filter-icon-container img {
   border: none;
   font-size: 0.75rem;
   cursor: pointer;
-  color: var(--deep_navy);
+  color: var(--btn_primary_bg);
   padding: 0;
   text-decoration: underline;
   transition: opacity 0.2s;
@@ -961,7 +960,7 @@ label.filter-option.metal-types .filter-icon-container img {
 }
 
 .collection-content-text a:hover {
-  border-bottom-color: var(--deep_navy);
+  border-bottom-color: var(--btn_primary_bg);
 }
 
 @media (max-width: 768px) {

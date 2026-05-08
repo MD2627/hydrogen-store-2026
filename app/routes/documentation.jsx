@@ -150,7 +150,7 @@ const product = [
         id: "variant-media",
         name: "Variant Media",
         simple: true,
-        previewUrl: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_12_3fe4265f-5fd0-433e-b942-d23c0808bef4.jpg?v=1778144556",
+        previewUrl: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_14_6139bd2f-d1a7-4ff2-bf7a-6fbe04bf5a2c.jpg?v=1778242643",
         description: "Add variant-specific gallery media so selected variants can show extra images or videos in the product media carousel.",
         steps: [
             "Open the product in Shopify Admin.",
@@ -165,7 +165,7 @@ const product = [
         id: "engraving-preview",
         name: "Engraving Preview",
         simple: true,
-        previewUrl: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_13_594a2193-e0ce-484d-83c8-62fb9fda88ce.jpg?v=1778144647",
+        previewUrl: "",
         description: "Use this metafield to set the engraving preview image for a variant on products tagged ENGAGEMENT RINGS.",
         steps: [
             "Open the product in Shopify Admin.",
@@ -181,7 +181,7 @@ const product = [
         id: "detail-info",
         name: "Detail Info",
         simple: true,
-        previewUrl: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_13_63a1f234-dce4-4a4f-9c09-3c7545a33ea1.jpg?v=1778145287",
+        previewUrl: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_16_51c0aa38-ab9e-4eda-8590-9565f06a163c.jpg?v=1778242953",
         description: "Use this metafield to set the product detail information that appears in the Details tab on the product page.",
         steps: [
             "Open the product in Shopify Admin.",
@@ -189,7 +189,7 @@ const product = [
             "add Detail information in the text field.",
             "Save the product",
         ],
-        screenshots: [{ label: "View Screenshot", url: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_36.jpg?v=1775556306" }],
+        screenshots: [{ label: "View Screenshot", url: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Screenshot_17_8cc9278e-eb57-42ec-9c93-6004488a10c8.jpg?v=1778243055" }],
     },
 ];
 

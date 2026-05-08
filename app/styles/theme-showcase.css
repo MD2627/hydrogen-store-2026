@@ -149,9 +149,9 @@
 }
 
 .tab-btn.active {
-    color: var(--white_color);
+    color: var(--btn_primary_color);
     font-weight: 700;
-    background: var(--deep_navy);
+    background: var(--btn_primary_bg);
     letter-spacing: 0.08em;
 }
 
