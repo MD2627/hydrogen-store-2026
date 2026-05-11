@@ -1738,9 +1738,9 @@ button.close-button-text:hover {
     text-transform: uppercase;
 }
 
-.trust-badge-label:hover {
+/* .trust-badge-label:hover {
     text-decoration: underline;
-}
+} */
 
 /* Responsive: Stack on very small screens */
 @media (max-width: 400px) {

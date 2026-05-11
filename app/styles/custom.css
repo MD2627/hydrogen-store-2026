@@ -2837,7 +2837,7 @@ section.sbss-v2.shop--education {
 
 .sbss-v2-swiper .swiper-slide,
 .sbss-v2-static-grid .sbss-v2-card {
-  width: 420px;
+  width: 400px;
 }
 
 .sbss-v2-static-grid {
@@ -2857,18 +2857,23 @@ section.sbss-v2.shop--education {
   display: none;
 }
 
+
+
 @media (max-width: 1200px) {
+
+  .sbss-v2-static-grid {
+    justify-content: center;
+  }
 
   .sbss-v2-swiper .swiper-slide,
   .sbss-v2-static-grid .sbss-v2-card {
-    width: 340px;
+    width: 300px;
   }
 }
 
 @media (max-width: 991px) {
   .sbss-v2-static-grid {
     gap: 24px;
-    justify-content: center;
   }
 }
 

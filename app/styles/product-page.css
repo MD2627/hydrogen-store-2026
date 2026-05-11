@@ -710,7 +710,7 @@ a.ssw-link:hover svg {
 }
 
 .shop--section-services .style-card:hover {
-    transform: translateY(-5px);
+    /* transform: translateY(-5px); */
 }
 
 .shop--section-services .style-card {

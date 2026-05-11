@@ -1,5 +1,7 @@
 import { useSearchParams, useNavigate } from 'react-router';
 import { useState, useRef, useEffect } from 'react';
+import { useDraggableScroll } from '~/lib/hooks/useDraggableScroll';
+
 
 /**
  * Custom collection filters component for Engagement Rings
@@ -101,6 +103,10 @@ function FilterSection({ filter, searchParams, metalTypeMode, setMetalTypeMode, 
     const scrollRef = useRef(null);
     const [canScrollLeft, setCanScrollLeft] = useState(false);
     const [canScrollRight, setCanScrollRight] = useState(false);
+
+    // Enable mouse drag scrolling
+    useDraggableScroll(scrollRef);
+
 
     const checkScroll = () => {
         if (scrollRef.current) {

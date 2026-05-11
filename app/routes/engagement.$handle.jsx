@@ -280,10 +280,6 @@ export default function Product() {
         description=""
         items={shopByStyleItems} />
 
-      <StickySwiper
-        data={STORY_SLIDES}
-      />
-
       <VideoBanner
         data={VIDEO_BANNER_DATA}
       />

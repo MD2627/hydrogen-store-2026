@@ -361,7 +361,6 @@
 .rsc-size-btn:hover {
     border-color: var(--accent_color);
     background: #EAF6FB;
-    transform: translateY(-1px);
 }
 
 .rsc-size-btn.active {

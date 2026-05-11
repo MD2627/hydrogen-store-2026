@@ -782,7 +782,7 @@ export function ProductForm({ productOptions, selectedVariant, productTags = [],
                 {/* )} */}
                 <div className="section-header-desc f-13 f-m-13 l-h-1-2 black-color w-400 ff-c">
                   Don't know your ring size?{' '}
-                  <a href="/pages/size-guide" className="tips-link">Here Are Some Guide you</a>
+                  <a href="/ring-size-guidance" className="tips-link">Here Are Some Guide you</a>
                 </div>
               </div>
             )}
@@ -1150,7 +1150,7 @@ export function ProductForm({ productOptions, selectedVariant, productTags = [],
       {/* Trust Badges Section */}
       <div className="trust-badges-grid">
         {TRUST_BADGES_CONFIG.map((badge, index) => (
-          <a key={index} href={badge.url} className="trust-badge-item">
+          <div className='trust-badge-item'>
             <span className="trust-badge-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
                 <path d={badge.icon} fill="currentColor" />
@@ -1159,7 +1159,7 @@ export function ProductForm({ productOptions, selectedVariant, productTags = [],
             <span className="trust-badge-label f-10 f-m-10 w-400 black-color l-h-1-2 ff-n">
               {badge.label.toUpperCase()}
             </span>
-          </a>
+          </div>
         ))}
       </div>
 

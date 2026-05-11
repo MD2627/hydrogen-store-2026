@@ -1,5 +1,7 @@
 import { useSearchParams, useNavigate } from 'react-router';
 import { useState, useRef, useEffect } from 'react';
+import { useDraggableScroll } from '~/lib/hooks/useDraggableScroll';
+
 
 /**
  * Wedding collection filters component with Setting Style and Metal Types only
@@ -95,6 +97,10 @@ function FilterSection({ filter, searchParams, handleFilterChange, handleClearSe
     const scrollRef = useRef(null);
     const [canScrollLeft, setCanScrollLeft] = useState(false);
     const [canScrollRight, setCanScrollRight] = useState(false);
+
+    // Enable mouse drag scrolling
+    useDraggableScroll(scrollRef);
+
 
     const checkScroll = () => {
         if (scrollRef.current) {
