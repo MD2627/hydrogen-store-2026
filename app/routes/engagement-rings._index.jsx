@@ -570,7 +570,7 @@ export default function EngagementRingCollection() {
             <CollectionLinksSection data={COLLECTION_LINKS} />
             {/* </div> */}
             <VideoBanner
-                desktopImage="https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Thanasi_Home_Page_Select_Final-1_1600x1600.jpg?v=1767837146"
+                desktopImage="https://cdn.shopify.com/s/files/1/0610/2194/5934/files/new.jpg?v=1778041776"
                 desktopVideo="https://cdn.shopify.com/videos/c/o/v/7bdbff09baf64a3696bdc2af0c951747.mp4"
                 heading="Find Your Perfect Ring"
                 description="Explore handcrafted engagement rings that tell your story"
@@ -729,117 +729,117 @@ const COLLECTION_LINKS = [
 const COLLECTION_CONTENT_SECTION = {
     sections: [
         {
-            heading: "Ready-to-Ship Engagement Rings Start Your Forever Today",
+            heading: "Lab-Grown Diamond Rings Crafted for Modern Love",
             paragraphs: [
-                `Short on time or ready to propose sooner? Discover our collection of ready-to-ship engagement rings, designed for life’s most meaningful moments. Featuring a curated range of timeless styles from classic solitaires to vintage-inspired halos, each piece is crafted to be both beautiful and instantly yours.`,
-                `Made using premium materials and lab-grown gemstones, every Diamond ready-to-ship ring is thoughtfully handcrafted by our expert jewellers. Each design reflects the same level of care and craftsmanship as our made-to-order pieces.`,
-                `Shop online across the US or visit one of our showrooms for a <a href="/visit" class="fancy">personalized design consultation</a>. <strong>However you choose, we’re here to help you begin your forever with the perfect ring.</strong>`
+                `Discover our stunning collection of lab-grown diamond rings designed to celebrate life’s most meaningful moments. From timeless solitaires to elegant hidden halo and vintage-inspired designs, each ring is thoughtfully created to combine beauty, brilliance, and everyday luxury.`,
+                `Every Diamond ring is handcrafted using premium materials and ethically sourced lab-grown diamonds. Our expert jewellers focus on exceptional craftsmanship, ensuring every piece reflects lasting quality and refined detail.`,
+                `Shop online or visit our showroom for a <a href="/visit" class="fancy">personalized consultation</a>. <strong>Whether you're planning a proposal or searching for your forever ring, we’re here to help you find the perfect design.</strong>`
             ],
         },
         {
-            heading: "Find the Ring That’s Ready for You",
+            heading: "Find the Perfect Ring for Your Love Story",
             paragraphs: [
-                `At Diamond, we create handcrafted engagement rings designed to celebrate your unique love story.`,
-                `Our ready-to-ship collection allows you to explore, select, and receive a stunning engagement ring within days. Skip the wait and focus on what matters most your proposal.`,
-                `Whether you prefer a refined <a href="/engagement-rings?style=solitaire&metal=18k-yellow-gold" class="fancy">solitaire</a> or a detailed <a href="/engagement-rings?style=halo&metal=18k-yellow-gold" class="fancy">halo</a> design, our experienced team is here to guide you from your first step to the final detail.`,
-                `Each ring is crafted using conflict-free and <a href="/carbon-neutral" class="fancy">carbon neutral</a> lab-grown diamonds, moissanite, or sapphires, combining beauty with responsibility.`,
-                `Need assistance? <a href="/contact" class="fancy">Contact us</a> or book an in-store consultation with our specialists to find your perfect ring.`
+                `At Diamond, we create handcrafted engagement rings designed to reflect your unique style and story.`,
+                `Explore a wide range of elegant ring styles featuring premium lab-grown diamonds in various shapes, settings, and precious metals. Whether you prefer classic simplicity or modern brilliance, our collection offers something truly special.`,
+                `From timeless <a href="/engagement-rings?style=solitaire&metal=18k-yellow-gold" class="fancy">solitaire engagement rings</a> to detailed <a href="/engagement-rings?style=halo&metal=18k-yellow-gold" class="fancy">halo designs</a>, our team is here to guide you through every step of your journey.`,
+                `Each ring is crafted using ethically sourced and <a href="/carbon-neutral" class="fancy">carbon neutral</a> lab-grown diamonds, combining exceptional beauty with sustainability and responsible craftsmanship.`,
+                `Need help choosing your perfect ring? <a href="/contact" class="fancy">Contact our team</a> or book an in-store consultation for expert guidance and personalized support.`
             ],
         },
         {
             heading: "Why Choose Diamond",
             paragraphs: [
-                `<strong>Worldwide Express Shipping</strong> Wherever you are, we ensure your ring arrives quickly and securely with global shipping across the <a href="/shipping" class="fancy">US and internationally</a>.`,
-                `<strong>Free Resizing</strong> Enjoy <a href="/free-resizing" class="fancy">complimentary resizing</a> on all engagement rings for the perfect fit.`,
-                `<strong>Lifetime Warranty</strong> Every ring is backed by our lifetime <a href="/warranty" class="fancy">manufacturing warranty</a> for complete peace of mind.`,
-                `<strong>Custom Design Options</strong> Looking for something unique? Explore our <a href="/custom-rings" class="fancy">custom design service</a> to create a one-of-a-kind piece.`,
-                `<strong>Expertly Crafted</strong> Designed in Melbourne and handcrafted with precision by skilled jewellers.`,
-                `<strong>Ethically Sourced</strong> Choose from moissanite, sapphires, and lab-grown diamonds, including <a href="/engagement-rings" class="fancy">sapphire engagement rings</a>, all responsibly sourced.`,
-                `<strong>Sustainable Impact</strong> We offset gemstone carbon footprints and plant a <a href="/diamond-initiatives" class="fancy">tree</a> for every ring sold.`,
-                `<strong>Personalized Experience</strong> From classic <a href="/engagement-rings?style=solitaire" class="fancy">solitaire designs</a> to intricate styles, our specialists help bring your vision to life.`
+                `<strong>Premium Craftsmanship</strong> Every ring is handcrafted with precision using high-quality materials and expert attention to detail.`,
+                `<strong>Ethically Created Diamonds</strong> Our lab-grown diamonds offer a sustainable and conflict-free alternative without compromising brilliance or quality.`,
+                `<strong>Free Resizing</strong> Enjoy <a href="/free-resizing" class="fancy">complimentary resizing</a> on all eligible engagement rings for the perfect fit.`,
+                `<strong>Lifetime Warranty</strong> Every piece is backed by our lifetime <a href="/warranty" class="fancy">manufacturing warranty</a> for added peace of mind.`,
+                `<strong>Custom Ring Design</strong> Create something truly personal with our <a href="/custom-rings" class="fancy">custom design service</a> tailored to your vision.`,
+                `<strong>Worldwide Shipping</strong> We offer secure and reliable <a href="/shipping" class="fancy">international shipping</a> so your ring arrives safely wherever you are.`,
+                `<strong>Sustainable Luxury</strong> We focus on responsible sourcing and environmentally conscious practices across our jewelry collections.`,
+                `<strong>Personalized Experience</strong> From selecting the perfect diamond shape to choosing your ideal setting, our specialists are here to guide you every step of the way.`
             ],
         },
     ],
 };
 const PRODUCT_UVPS = [
-    {
-        link: '/shipping',
-        label: 'Global Insured<br>Delivery',
-        svg: `
+  {
+    link: '/shipping',
+    label: 'Global Insured<br>Delivery',
+    svg: `
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
         <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
         <path d="m3.3 7 8.7 5 8.7-5" />
         <path d="M12 22V12" />
       </svg>
     `,
-    },
-    {
-        link: '/free-resizing',
-        label: 'Perfect Fit<br>Guarantee',
-        svg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="12" r="6" /><circle cx="15" cy="12" r="5" /></svg>`,
-    },
-    {
-        link: '/warranty',
-        label: 'Lifetime<br>Craftsmanship',
-        svg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l9 4.5v9l-9 4.5-9-4.5v-9z" /><path d="M12 9l.3 1.2 1.2.3-1.2.3-.3 1.2-.3-1.2-1.2-.3 1.2-.3z" fill="currentColor" stroke="none"/></svg>`,
-    },
-    {
-        link: '/engagement-rings?metal=yellow_gold',
-        label: 'Bespoke Design<br>Service',
-        svg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="7" /><path d="M21 21l-6-6" /><circle cx="10" cy="10" r="2" stroke-width="1"/></svg>`,
-    },
+  },
+  {
+    link: '/free-resizing',
+    label: 'Perfect Fit<br>Guarantee',
+    svg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="12" r="6" /><circle cx="15" cy="12" r="5" /></svg>`,
+  },
+  {
+    link: '/warranty',
+    label: 'Lifetime<br>Craftsmanship',
+    svg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l9 4.5v9l-9 4.5-9-4.5v-9z" /><path d="M12 9l.3 1.2 1.2.3-1.2.3-.3 1.2-.3-1.2-1.2-.3 1.2-.3z" fill="currentColor" stroke="none"/></svg>`,
+  },
+  {
+    link: '/engagement-rings?metal=yellow_gold',
+    label: 'Bespoke Design<br>Service',
+    svg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="7" /><path d="M21 21l-6-6" /><circle cx="10" cy="10" r="2" stroke-width="1"/></svg>`,
+  },
 ];
 const FAQ_DATA = [
     {
-        question: "ARE ENGAGEMENT RINGS CUSTOMIZABLE AT Diamond?",
-        answer: `Absolutely. Diamond specializes in custom-designed engagement rings. Choose from a range of center stones, side stones, and precious metals, as well as various settings from three-stone, to halo, and more. Our experienced engagement ring specialists will guide you through the design process to create the perfect engagement ring that reflects your unique personal style.`
+        question: "ARE LAB-GROWN DIAMOND RINGS CUSTOMIZABLE AT Diamond?",
+        answer: `Absolutely. Diamond specializes in custom-designed lab-grown diamond rings. Choose from a variety of diamond shapes, carat sizes, precious metals, and setting styles including solitaire, halo, hidden halo, pavé, and three-stone designs. Our expert jewelry specialists will guide you through every step to create a ring that perfectly reflects your personal style and story.`
     },
     {
-        question: "DO MEN WEAR ENGAGEMENT RINGS?",
-        answer: `Yes, men can and do wear engagement rings. Though traditionally worn by women, the decision to wear an engagement ring is entirely up to the individual. Regardless of gender, an engagement ring symbolises the love and commitment one has for another.`
+        question: "WHAT ARE LAB-GROWN DIAMONDS?",
+        answer: `Lab-grown diamonds are real diamonds created in advanced laboratory environments using cutting-edge technology. They have the same physical, chemical, and optical properties as mined diamonds while offering a more sustainable and ethical alternative.`
     },
     {
-        question: "ARE ENGAGEMENT RINGS AND WEDDING RINGS THE SAME?",
-        answer: `An engagement ring typically features a prominent stone and is presented during a marriage proposal, while a wedding ring has a simpler design and is exchanged during a wedding ceremony. Traditionally, an engagement ring is worn by one partner as a symbol of the promise to marry, while wedding rings are worn by both spouses as a sign of their union. For more information, explore our <a href="/education/wedding-ring-guidance">wedding ring guide</a>.`
+        question: "ARE LAB-GROWN DIAMONDS REAL DIAMONDS?",
+        answer: `Yes, lab-grown diamonds are 100% real diamonds. They are identical to natural diamonds in brilliance, hardness, and composition. The only difference is their origin — lab-grown diamonds are created above ground rather than mined from the earth.`
     },
     {
-        question: "HOW DO I WEAR MY ENGAGEMENT AND WEDDING RINGS TOGETHER?",
-        answer: `The way you wear your engagement and wedding rings together depends on the design of each ring. When selecting your wedding ring, it is important to consider the design of your engagement ring to ensure your wedding ring will both complement and sit comfortably alongside your engagement ring. If you'd like some guidance, feel free to <a href="/visit">book a consultation</a> with our friendly client service team or learn more from our guide on how to find the perfect wedding band pairing.`
+        question: "HOW DO I CHOOSE THE PERFECT LAB-GROWN DIAMOND RING?",
+        answer: `Choosing the perfect ring depends on your preferred diamond shape, carat size, metal type, and setting style. Consider your lifestyle, design preferences, and budget when selecting your ring. Our team is always available to help you find or create the ideal piece for your special moment.`
     },
     {
-        question: "WHAT GEMSTONES DO YOU OFFER IN ENGAGEMENT RINGS FOR WOMEN?",
-        answer: `We offer a selection of ethically sourced gemstones in our engagement rings for women and in our men's engagement rings, including: • <a href="/engagement-rings/lab-grown-diamond">Lab-grown diamonds</a> • <a href="/engagement-rings/moissanite">Moissanite</a> • <a href="/engagement-rings/sapphire">Lab-grown sapphires</a> Each gemstone is chosen for its quality and sustainability, ensuring your ring is both beautiful and responsibly made. Whether you're after a <a href="/engagement-rings/sapphire">scarlet red lab-grown sapphire</a> that mimics the look of a ruby engagement ring or a <a href="/engagement-rings/moissanite">clover green lab-grown moissanite</a> that resembles an emerald, begin your journey today by exploring our wide range of engagement rings. For more information and guidance on which gemstone is best for you, dive into our <a href="/education/gemstone-guidance">gemstone guide</a>.`
+        question: "WHAT DIAMOND SHAPES DO YOU OFFER?",
+        answer: `We offer a wide range of popular diamond shapes including round, oval, pear, emerald, radiant, cushion, princess, marquise, asscher, and heart-shaped diamonds. Each shape offers its own unique brilliance and personality to suit different styles.`
     },
     {
-        question: "HOW MUCH DO ENGAGEMENT RINGS COST?",
-        answer: `The price of engagement rings at Diamond varies based on factors such as the chosen gemstone, carat weight, and setting design. We offer a range of designs to suit different budgets, and our team can help you find or create a ring that meets your preferences and price point.`
+        question: "HOW MUCH DO LAB-GROWN DIAMOND RINGS COST?",
+        answer: `The price of lab-grown diamond rings depends on factors such as carat weight, diamond quality, setting style, and metal type. Lab-grown diamonds are generally more affordable than mined diamonds, allowing you to choose larger or higher-quality stones within your budget.`
     },
     {
-        question: "HOW DO I CARE FOR MY DIAMOND ENGAGEMENT RING?",
-        answer: `To maintain the brilliance of your diamond engagement ring: • Clean it regularly with mild soapy water and a soft brush. • Avoid exposing it to harsh chemicals or abrasive materials. • Store it separately to prevent scratches. • Schedule periodic professional cleanings and inspections. Proper care will keep your ring looking its best for years to come. For more information, check out our ring care and ring cleaning guides.`
+        question: "HOW DO I CARE FOR MY LAB-GROWN DIAMOND RING?",
+        answer: `To keep your ring sparkling beautifully: • Clean it regularly using mild soapy water and a soft brush. • Avoid harsh chemicals and abrasive surfaces. • Store your jewelry separately to prevent scratches. • Schedule occasional professional cleaning and inspections for long-term maintenance and shine.`
     },
     {
-        question: "HOW DO I DESIGN A CUSTOM ENGAGEMENT RING?",
-        answer: `Our warm, helpful client service team is available to assist you on your journey to creating your own unique engagement ring. Whether you have a custom design already in mind or would simply like to make a few adjustments to an existing design, we are ready to assist you through the process of designing your own custom engagement ring.`
+        question: "CAN I CREATE A CUSTOM ENGAGEMENT RING?",
+        answer: `Yes. Our custom design service allows you to create a completely unique engagement ring tailored to your vision. Whether you want to modify an existing design or start from scratch, our team will help bring your dream ring to life.`
     },
     {
-        question: "WHAT METAL OPTIONS ARE AVAILABLE FOR MY WEDDING AND ENGAGEMENT RINGS?",
-        answer: `Diamond offers a variety of precious metal options for your wedding and engagement rings, including yellow gold, white gold, and platinum. Our team can help you choose the best metal to complement your chosen center stone and desired design.`
+        question: "WHAT METAL OPTIONS ARE AVAILABLE?",
+        answer: `We offer premium metal options including 14k and 18k yellow gold, white gold, rose gold, and platinum. Each metal offers a unique appearance and durability, helping you create the perfect ring combination for your style.`
     },
     {
-        question: "WHAT IS THE LEAD TIME FOR A CUSTOM DIAMOND ENGAGEMENT RING?",
-        answer: `The lead time for a custom diamond engagement ring varies depending on the complexity of the design. Our team will provide you with an estimated completion date once your design is finalized. The crafting stage takes 8-10 weeks, and for all general timeframe information, please visit our crafting timeframes page.`
+        question: "HOW LONG DOES IT TAKE TO MAKE A CUSTOM RING?",
+        answer: `Custom ring production times vary depending on the design complexity and stone selection. Typically, our handcrafted custom rings take approximately 2–6 weeks to complete after final design approval.`
     },
     {
-        question: "Can I see your engagement ring collection in person?",
-        answer: `Yes, we invite you to visit our showrooms to view our complete range of gold engagement rings and other fine jewelry. We have a wide variety of engagement ring styles in-store, including some of our most popular diamond engagement rings, rose gold engagement rings and sapphire engagement rings. You can also browse our online ring builder page to explore our collection and start designing your perfect diamond ring.`
+        question: "CAN I VIEW YOUR RINGS IN PERSON?",
+        answer: `Yes, you can visit our showroom to explore our engagement ring collection in person. Our collection includes a variety of lab-grown diamond rings, wedding bands, and fine jewelry styles to help you find the perfect piece.`
     },
     {
-        question: "IS RESIZING FREE?",
-        answer: `Yes, we offer <a href="/free-resizing">complimentary resizing</a> for all our engagement rings. If your ring doesn't fit perfectly, simply contact us, and we'll adjust it to ensure a comfortable fit.`
+        question: "DO YOU OFFER RING RESIZING?",
+        answer: `Yes, we offer complimentary resizing on eligible engagement rings to ensure the perfect fit. If adjustments are needed after purchase, simply contact our support team for assistance.`
     },
     {
-        question: "DO ENGAGEMENT RINGS COME WITH A WARRANTY?",
-        answer: `All gold and platinum jewelry from Diamond comes with a <a href="/warranty">lifetime manufacturing warranty</a>. This warranty covers any defects in materials or workmanship, giving you peace of mind that your ring is crafted to the highest standards.`
+        question: "DO YOUR RINGS COME WITH A WARRANTY?",
+        answer: `Yes, all our fine jewelry pieces are backed by a lifetime manufacturing warranty covering craftsmanship defects. This ensures your ring is made to the highest quality standards and provides peace of mind with your purchase.`
     }
 ];

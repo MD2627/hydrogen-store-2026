@@ -207,7 +207,8 @@ export function ComingSoonForm({ cityName }) {
                         </button>
 
                         <p className="contact-recaptcha ff-c">
-                            This site is protected by reCAPTCHA. The Google <Link to="/privacy-policy" className="fancy">Privacy Policy</Link> and <Link to="/terms-and-conditions" className="fancy">Terms of Service</Link> apply.
+                            This site is protected by reCAPTCHA. The Google <Link to="/policies" className="fancy">Privacy Policy</Link>
+                            and <Link to="/terms-and-conditions" className="fancy">Terms of Service</Link> apply.
                         </p>
                     </div>
                 </form>

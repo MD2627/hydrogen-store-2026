@@ -250,7 +250,8 @@ Necklaces:
                     {status === 'loading' ? 'SUBMITTING...' : 'SUBMIT'}
                 </button>
                 <p className="contact-recaptcha ff-c">
-                    This site is protected by reCAPTCHA. The Google <Link to="/privacy-policy">Privacy Policy</Link> and <Link to="/terms-and-conditions">Terms of Service</Link> apply.
+                    This site is protected by reCAPTCHA. The Google <Link to="/policies" className="fancy">Privacy Policy</Link>
+                    and <Link to="/terms-and-conditions" className="fancy">Terms of Service</Link> apply.
                 </p>
             </div>
         </form>

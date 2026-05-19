@@ -683,7 +683,7 @@ export default function Homepage() {
           return (
             <SplitBanner
               left={{
-                image: "https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Thanasi_Home_Page_Select_Final-1_1600x1600.jpg?v=1767837146",
+                image: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/new.jpg?v=1778041776",
                 title: "Serving Brilliance",
                 description: "Consciously crafted for the long game",
                 linkText: "Explore the range",

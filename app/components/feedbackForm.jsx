@@ -66,9 +66,8 @@ export function FeedBackForm() {
                 <div className="feedback-form-wrapper">
                     <h2 className='page-banner-title black-color'>Feedback</h2>
                     <p className="sb-description">
-                        At Diamond Jewellery, we're passionate about offering an unparalleled experience
-                        in our jewellery and service. We'd be grateful if you'd share your thoughts with us.
-                        Your feedback will help us shine brighter!
+                        At Diamond, we’re committed to delivering exceptional craftsmanship, quality, and customer care.
+                        Your feedback means the world to us and helps us continue creating beautiful jewelry experiences for every customer.
                     </p>
                     <form className="contact-form feedback-form" onSubmit={handleSubmit}>
 
@@ -169,9 +168,8 @@ export function FeedBackForm() {
 
                             {/* reCAPTCHA text */}
                             <p className="contact-recaptcha ff-c">
-                                This site is protected by reCAPTCHA. The Google{' '}
-                                <Link to="/privacy-policy">Privacy Policy</Link> and{' '}
-                                <Link to="/terms-and-conditions">Terms of Service</Link> apply.
+                                This site is protected by reCAPTCHA. The Google <Link to="/policies" className="fancy">Privacy Policy</Link>
+                                and <Link to="/terms-and-conditions" className="fancy">Terms of Service</Link> apply.
                             </p>
                         </div>
                     </form>

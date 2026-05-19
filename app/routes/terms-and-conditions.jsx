@@ -43,8 +43,8 @@ export default function TermsAndConditions() {
       <section className="terms-editorial-section">
         <div className="terms-editorial-container">
           <div className="terms-intro">
-            <h2 className="section-title">Legal Information</h2>
-            <p className="sb-description">The fine print you need to know about your Diamond Jewellery experience.</p>
+            <h2 className="section-title">Important Information</h2>
+            <p className="sb-description">Everything you need to know about our policies, services, and customer experience.</p>
           </div>
 
           <div className="terms-section">
@@ -105,136 +105,134 @@ export default function TermsAndConditions() {
 }
 
 const ABOUT_THE_WEBSITE = {
-  heading: 'About the Website',
+  heading: 'Website Terms & Use',
   content: `
      <p>
-      These Terms and Conditions apply to the Diamond Jewellery website located at https://hydrogen-store-2026.pages.dev/, and all associated websites linked to https://hydrogen-store-2026.pages.dev/ by Diamond Investment Group Pty Ltd ('the Site'). 
-      Please read these Terms and Conditions (the 'Terms and Conditions') carefully.
+      These Terms and Conditions apply to the Diamond Jewellery website located at https://hydrogen-store-2026.pages.dev/ and all related services, pages, and content operated by Diamond Investment Group Pty Ltd ('Diamond Jewellery', 'we', 'our', or 'us').
     </p>
     <ul>
-      <li>By using the Site, you agree to be bound by these Terms and Conditions.</li>
-      <li>These Terms and Conditions govern your use of, and any purchase from, the Site, and constitute an agreement between you and Diamond Jewellery.</li>
-      <li>Diamond Jewellery reserves the right to change any of these Terms and Conditions or any policy of the Site at any time. Any change will be effective immediately from their date of publication.</li>
-      <li>You accept these Terms and Conditions by remaining on the Site.</li>
-      <li>If you do not agree to these Terms and Conditions, you must stop using the Site.</li>
+      <li>By accessing or using this Site, you agree to comply with these Terms and Conditions.</li>
+      <li>These Terms govern your use of the Site, including browsing, purchasing products, and interacting with our services.</li>
+      <li>Diamond Jewellery may update or modify these Terms at any time without prior notice.</li>
+      <li>Changes become effective immediately upon publication on the Site.</li>
+      <li>If you do not agree with these Terms, please discontinue use of the Site.</li>
     </ul>
   `
 };
 
 const LEGAL_RIGHTS = {
-  heading: 'Legal Rights',
+  heading: 'Consumer Rights',
   content: `
      <p>
-      The purchase of our products and services come with guarantees subject to the Australian Consumer Law. Under these laws all products must be of acceptable quality, 
-      reasonably fit for purpose and must correspond to the relevant description.
+      Our products and services are provided in accordance with applicable consumer protection laws, including the Australian Consumer Law where applicable.
     </p>
     <ul>
-      <li>If you experience a major failure with our goods or services you are entitled to a replacement or refund and compensation for any other reasonably foreseeable loss or 
-        damage resulting from our product or service</li>
-      <li>If the goods fail to be of acceptable quality but the problem does not amount to a major failure, you are entitled to have the goods repaired or replaced.</li>
+      <li>If a product experiences a major fault, you may be entitled to a repair, replacement, or refund.</li>
+      <li>If an issue does not constitute a major failure, we may repair or replace the product within a reasonable timeframe.</li>
+      <li>Your statutory rights remain unaffected by these Terms and Conditions.</li>
     </ul>
   `
 };
 
 const INFORMATION_AND_PRICING = {
-  heading: 'Information and Pricing',
+  heading: 'Product Information & Pricing',
   content: `
      <p>
-      Information and prices of our jewellery and loose stones are subject to change without notice. Information we communicate is not a binding contract and should not be treated as such. 
-      If a client acts on incorrect information they can request a cancellation of any order placed upon the basis of this incorrect information. We apologise for any inconvenience that this may cause. 
-      If you have any questions, please do not hesitate to contact one of our diamond and jewellery experts via our contact form.
+      We aim to ensure all information, imagery, and pricing displayed on our Site are accurate and current. However, occasional errors or inaccuracies may occur.
     </p>
     <ul>
-      <li>We endeavour to provide updated and accurate information on our website, emails, SMS, social media and private messages in terms of information and pricing but it is possible errors can occur. 
-        Data, including prices, may be inaccurately displayed on our Site due to system or typographical errors. While we make every attempt to avoid these errors, they may occur.</li>
-      <li>We reserve the right to correct any and all errors when they do occur, and we do not honour inaccurate or erroneous prices. If a product's listed price is lower than its actual price, we will, 
-        at our discretion, either contact you for instructions before crafting the product or cancel the order and notify you of such cancellation.</li>
-      <li>We do not negotiate prices on our products and all our prices are final.</li>
+      <li>Product prices, specifications, and availability may change without notice.</li>
+      <li>If an incorrect price or product detail is displayed, we reserve the right to correct the error and cancel or amend affected orders.</li>
+      <li>In the event of an order cancellation caused by pricing inaccuracies, clients will be notified promptly.</li>
+      <li>All listed prices are final and non-negotiable unless otherwise stated.</li>
     </ul>
   `
 };
 
 const PAYMENT_INFORMATION = {
-  heading: 'Payment Information',
+  heading: 'Payment Terms',
   content: `
      <p>
-      After you have selected your jewellery and provided shipping information, you will see a prompt for your payment details, such as your credit card information and any promotional 
-      codes or gift cards you may have. By entering your payment information and submitting your order, you authorise us and our third party payment processors to charge the amount of the 
-      order to your selected payment method.
+      By submitting payment information during checkout, you authorise Diamond Jewellery and our payment providers to process payment using your selected payment method.
+    </p>
+    <p>
+      Orders will only proceed once payment has been successfully authorised and confirmed.
     </p>
   `
 };
 
 const INFORMATION_ON_SITE = {
-  heading: 'Information On Our Site',
+  heading: 'Website Content & Imagery',
   content: `
     <p>
-      At Diamond Jewellery, we make every attempt to ensure that our online catalogue is as accurate and complete as possible. In order to give you the opportunity to view our products in great detail, some products may appear larger or smaller than their actual size in our photographs, and since every computer monitor is set differently, colour and size may vary slightly.
+      We strive to present our jewellery as accurately as possible through photography, descriptions, and digital renders. Due to varying screen settings and image scaling, slight differences in colour, size, or appearance may occur.
     </p>
     <ul>
-      <li>Moissanite stones are sold and described in millimetres (mm). All carat weights are quoted as approximate diamond equivalent carat weights.</li>
+      <li>Some product images may appear enlarged to showcase fine details and craftsmanship.</li>
+      <li>Gemstone measurements and dimensions are approximate and may vary slightly between pieces.</li>
     </ul>
   `
 };
 
 const PRIVACY_POLICY = {
-  heading: 'Privacy Policy',
+  heading: 'Terms of Service',
   content: `
     <p>
-      Please refer to our Privacy Policy for information on how Diamond Jewellery collects, uses, and discloses personally identifiable information from its clients.
+      By using our Site and services, you agree to comply with our Terms of Service, policies, and conditions relating to purchases, payments, and website usage.
     </p>
   `
 };
 
 const COPYRIGHT = {
-  heading: 'Copyright and Intellectual Property',
+  heading: 'Copyright & Intellectual Property',
   content: `
     <p>
-      The Site and all content, including, but not limited to, the Diamond Jewellery logo, and all designs, text, graphics, logos, button icons, videos, sound files and software pictures, (the 'Content') used on or incorporated into the Site and in-store, and the selection, arrangement and/or integration of all such Content are either registered trademarks, trade names, service marks, copyrights or otherwise protected property of Diamond Jewellery, or used under license and all rights thereto are specifically reserved.
+      All content featured on the Site, including logos, product designs, images, graphics, videos, text, and branding, is the property of Diamond Jewellery or used under licence and is protected by copyright and intellectual property laws.
     </p>
     <ul>
-      <li>The Diamond Jewellery Site, purchase services, jewellery designs and all Diamond Jewellery related products are subject to copyright. The Site’s material is protected by Australian copyright laws and international treaties.</li>
-      <li>Unless otherwise indicated, all Site content is owned and controlled by Diamond Jewellery and may not be copied, imitated or used, in whole or in part, without the prior written permission of Diamond Jewellery or the applicable trademark holder.</li>
-      <li>You may not copy, use, download, modify, frame, publish, transmit, transfer or sell, license, reproduce, create derivative works from, distribute or display the Content or third party content for any purpose without the prior written permission of Diamond Jewellery.</li>
-      <li>All other trademarks, registered trademarks, product names and Diamond Jewellery names or logos mentioned in our Site are the property of their respective owners.</li>
+      <li>No content from the Site may be copied, reproduced, modified, or distributed without prior written consent.</li>
+      <li>All jewellery designs, product imagery, and creative assets remain the intellectual property of Diamond Jewellery.</li>
+      <li>Unauthorised commercial use of our content or branding is strictly prohibited.</li>
+      <li>Third-party trademarks and brand names remain the property of their respective owners.</li>
     </ul>
   `
 };
 
 const INDEMNIFICATION = {
-  heading: 'Indemnification',
+  heading: 'Liability & Indemnity',
   content: `
     <p>
-      You agree to indemnify Diamond Jewellery, its affiliates, employees, independent contractors, service providers and consultants, from and against:
+      By using this Site, you agree to indemnify and hold harmless Diamond Jewellery and its affiliates, employees, and service providers against claims, damages, liabilities, or expenses arising from:
     </p>
     <ul>
-      <li>any claims, damages, costs, liabilities, and expenses (including, but not limited to, reasonable attorneys' fees) arising out of or related to any Content you post, store or otherwise transmit on or through our Site or your use of or inability to use our Site;</li>
-      <li>any direct or indirect consequences of your access, use or transactions on the Site; and/or</li>
-      <li>any breach of the Terms.</li>
+      <li>Your misuse of the Site or breach of these Terms.</li>
+      <li>Your violation of any applicable laws or third-party rights.</li>
+      <li>Any content or material submitted through the Site by you.</li>
     </ul>
   `
 };
 
 const SUBMISSIONS = {
-  heading: 'Submissions',
+  heading: 'User Submissions',
   content: `
     <p>
-      You acknowledge and agree that any materials, including but not limited to questions, comments, suggestions, ideas, plans, notes, drawings, original or creative materials or other information, regarding this site, Diamond Jewellery, or our products or services that are provided by you to Diamond Jewellery are non-confidential and shall become the sole property of Diamond Jewellery.
+      Any suggestions, reviews, feedback, ideas, or other materials submitted to Diamond Jewellery may be used by us without restriction or compensation.
     </p>
     <ul>
-      <li>Diamond Jewellery will own exclusive rights, including all intellectual property rights, and will be entitled to the unrestricted use and dissemination of these materials for any purpose, commercial or otherwise, without acknowledgement or compensation to you.</li>
-      <li>You grant Diamond Jewellery and its affiliates and sublicensees the right to use the name that you submit in connection with such content, if they choose.</li>
-      <li>You represent and warrant that: (a) you own and control all of the rights to the content that you submit, or that you otherwise have the right to submit such content to this site; (b) the content is accurate and not misleading; and (c) use and posting of the content you supply will not violate any rights or cause injury to any person or entity.</li>
+      <li>By submitting content, you grant Diamond Jewellery permission to use, reproduce, and publish that content for promotional or commercial purposes.</li>
+      <li>You confirm that any submitted content does not infringe on the rights of third parties.</li>
+      <li>Diamond Jewellery reserves the right to remove or refuse submitted content at its discretion.</li>
     </ul>
   `
 };
 
 const CUSTOM_JEWELLERY = {
-  heading: 'Custom-Made Jewellery',
+  heading: 'Custom Jewellery Orders',
   content: `
     <ul>
-      <li>Please choose carefully when purchasing a custom designed piece of fine jewellery. Since all custom jewellery is made to order, they cannot be returned or refunded.</li>
-      <li>All custom-made jewellery designs, images and videos created by Diamond Jewellery are the intellectual property of Diamond Jewellery and may be reproduced at our discretion.</li>
+      <li>Custom-made jewellery pieces are specially crafted to order and are therefore non-refundable and non-returnable.</li>
+      <li>Production timelines for custom pieces may vary depending on design complexity and stone availability.</li>
+      <li>All custom designs, renders, and related creative materials remain the intellectual property of Diamond Jewellery.</li>
     </ul>
   `
 };
@@ -242,27 +240,29 @@ const CUSTOM_JEWELLERY = {
 const TERMS_UVPS = [
   {
     link: '/shipping',
-    label: 'Worldwide<br>Express Shipping',
+    label: 'Global Insured<br>Delivery',
     svg: `
-      <svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 16.75H2v-1.5h10v1.5Zm13.074 8.417c-.332.37-.807.583-1.304.583H8.196a1.752 1.752 0 0 1-1.74-1.942l.448-4.058H4v-1.5h4.578l-.63 5.723a.248.248 0 0 0 .248.277H23.77a.247.247 0 0 0 .186-.083.247.247 0 0 0 .062-.194l-1.47-13.223H9.454l-.312 2.827-1.492-.165.46-4.162h3.641v-.92c0-2.344 1.907-4.25 4.25-4.25s4.25 1.906 4.25 4.25v.92h3.642l1.617 14.557Z" fill="#6b6b6b"/>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
+        <path d="m3.3 7 8.7 5 8.7-5" />
+        <path d="M12 22V12" />
       </svg>
     `,
   },
   {
     link: '/free-resizing',
-    label: 'Free<br>Resizing',
-    svg: `<svg data-name="Icons Expanded" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path d="M24.289 18.18c0 5.122-4.167 9.289-9.289 9.289s-9.289-4.167-9.289-9.29a9.286 9.286 0 0 1 5.615-8.533l.593 1.376a7.788 7.788 0 0 0-4.708 7.158c0 4.295 3.495 7.789 7.789 7.789s7.789-3.494 7.789-7.79c0-4.294-3.495-7.788-7.789-7.788-.259 0-.518.018-.768.044l-.367.037-4.585-4.84 2.495-3.382h6.45l2.492 3.377-2.55 2.733-1.097-1.024 1.7-1.82-1.302-1.766h-4.936l-1.3 1.761 3.22 3.4c.181-.013.364-.02.548-.02 5.122 0 9.289 4.167 9.289 9.289ZM11.75 18h-1.5v4.75H15v-1.5h-2.19l5.44-5.44V18h1.5v-4.75H15v1.5h2.19l-5.44 5.44V18Z" fill="#fff"></path></svg>`,
+    label: 'Perfect Fit<br>Guarantee',
+    svg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="12" r="6" /><circle cx="15" cy="12" r="5" /></svg>`,
   },
   {
     link: '/warranty',
-    label: 'Lifetime Ring<br>Warranty',
-    svg: `<svg data-name="Icons Expanded" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path d="M15 2.587 4.25 8.793v7.362a8.774 8.774 0 0 0 4.375 7.577L15 27.413l6.375-3.68a8.774 8.774 0 0 0 4.375-7.578V8.793L15 2.587Zm9.25 13.568a7.271 7.271 0 0 1-3.625 6.279L15 25.68l-5.625-3.247a7.271 7.271 0 0 1-3.625-6.28V9.66L15 4.32l9.25 5.34v6.495Zm-11.733.268 3.906-3.906a3.516 3.516 0 0 1 4.967 0 3.516 3.516 0 0 1 0 4.966c-.685.685-1.584 1.027-2.484 1.027s-1.799-.342-2.483-1.027l-.572-.571 1.06-1.06.572.57a2.015 2.015 0 0 0 2.846 0 2.014 2.014 0 0 0 0-2.845 2.015 2.015 0 0 0-2.846 0l-3.906 3.906a3.516 3.516 0 0 1-4.967 0 3.516 3.516 0 0 1 0-4.966 3.516 3.516 0 0 1 4.967 0l.589.588-1.061 1.06-.588-.588a2.015 2.015 0 0 0-2.846 0 2.014 2.014 0 0 0 0 2.846 2.015 2.015 0 0 0 2.846 0Z" fill="#fff"></path></svg>`,
+    label: 'Lifetime<br>Craftsmanship',
+    svg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l9 4.5v9l-9 4.5-9-4.5v-9z" /><path d="M12 9l.3 1.2 1.2.3-1.2.3-.3 1.2-.3-1.2-1.2-.3 1.2-.3z" fill="currentColor" stroke="none"/></svg>`,
   },
   {
     link: '/engagement-rings?metal=yellow_gold',
-    label: 'Free Ring<br>Customisation',
-    svg: `<svg data-name="Icons Expanded" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path d="m28.42 9.978-4.77 4.769a4.152 4.152 0 0 1-2.331 1.166l-4.204.6-3.11 3.11-1.06-1.061 3.11-3.11.6-4.203a4.15 4.15 0 0 1 1.166-2.332l4.77-4.77 1.06 1.061-4.77 4.77a2.642 2.642 0 0 0-.741 1.483l-.494 3.46 3.46-.494a2.638 2.638 0 0 0 1.484-.741l4.769-4.769 1.06 1.06ZM8.07 21.118c-2.905 0-5.097-2.256-5.097-5.28 0-3.01 2.213-5.28 5.147-5.28 1.144 0 2.063.238 2.894.749.371.228.734.513 1.14.896l1.028-1.092A8.466 8.466 0 0 0 11.8 10.03c-1.077-.662-2.247-.97-3.68-.97-3.727 0-6.647 2.977-6.647 6.813 0 3.782 2.898 6.746 6.597 6.746 2.586 0 4.076-1.136 5.193-2.247l-1.057-1.063c-1.093 1.086-2.214 1.81-4.136 1.81Zm7.936-.38h4v-1.5h-4v1.5Zm-1.408 1.9 2.828 2.83 1.06-1.061-2.828-2.829-1.06 1.06Z" fill="#fff"></path></svg>`,
+    label: 'Bespoke Design<br>Service',
+    svg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="7" /><path d="M21 21l-6-6" /><circle cx="10" cy="10" r="2" stroke-width="1"/></svg>`,
   },
 ];
 /** @typedef {import('./+types/careers').Route} Route */

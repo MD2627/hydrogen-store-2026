@@ -362,15 +362,8 @@ export function ContactForm({ mode = 'contact' }) {
                 </button>
 
                 <p className="contact-recaptcha ff-c">
-                    This site is protected by reCAPTCHA. The Google{' '}
-                    <Link to="/policies/privacy-policy" target="_blank" rel="noopener noreferrer">
-                        Privacy Policy
-                    </Link>{' '}
-                    and{' '}
-                    <Link to="/policies/terms-of-service" target="_blank" rel="noopener noreferrer">
-                        Terms of Service
-                    </Link>{' '}
-                    apply.
+                    This site is protected by reCAPTCHA. The Google <Link to="/policies" className="fancy">Privacy Policy</Link>
+                    and <Link to="/terms-and-conditions" className="fancy">Terms of Service</Link> apply.
                 </p>
             </div>
         </form>

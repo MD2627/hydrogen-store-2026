@@ -4,7 +4,7 @@ import { ProductFAQ } from '~/components/ProductFAQ';
 import { UvpIconFooter } from '~/components/UvpIconFooter';
 
 export const meta = () => {
-    return [{ title: 'Join Our Diamond Affiliate Program' }];
+    return [{ title: 'Partner With Diamond' }];
 };
 
 export async function loader() {
@@ -66,87 +66,102 @@ export default function AffiliatePage() {
 }
 
 const BANNER_DATA = {
-    imageSrc: "https://cdn.shopify.com/s/files/1/0801/7317/0906/files/Bella_Side_1_2000x2000_4c03ff88-bfeb-4388-97d8-8a90228590b2.webp?v=1769843716",
-    title: "Join Our Diamond Affiliate Program",
-    subtitle: "We believe in great partnerships.",
+    imageSrc: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/d84ed46d-5763-4b3a-aac5-1dbf65f89e7e.jpg?v=1777117759",
+    title: "Partner With Diamond",
+    subtitle: "Earn commissions by sharing timeless lab-grown diamond jewelry.",
     extraClass: 'affiliate-banner',
 };
 
 const CONTENT_DATA = {
-    intro: "At Diamond, collaboration is part of everything we do. Now, we’re inviting you to be part of it. If you’re a premium lifestyle, fashion publisher or creator, our affiliate program offers a simple way to earn commission when your audience purchases from Diamond.",
+    intro: "Partner with Diamond and grow with a modern fine jewelry brand focused on craftsmanship, sustainability, and timeless design. Our affiliate program is built for creators, publishers, influencers, and media partners who want to share premium lab-grown diamond jewelry with their audience while earning competitive commissions.",
+
     sections: [
         {
-            title: "What’s in it for you?",
+            title: "Why Join the Diamond Affiliate Program?",
             list: [
-                "Competitive 6% commission on all net sales (excluding shipping, taxes, and returns).",
-                "A 30-day cookie window for comprehensive sales tracking.",
-                "Instant access to premium creative assets and brand collateral.",
-                "Real-time reporting and performance insights via our partner dashboard.",
-                "Priority notifications for upcoming capsule collections and product launches."
+                "Earn competitive commission on every successful referral sale.",
+                "Benefit from a generous tracking cookie window for accurate attribution.",
+                "Access premium banners, product imagery, and marketing creatives.",
+                "Track clicks, sales, and performance with real-time reporting tools.",
+                "Receive early access to new collections, campaigns, and exclusive launches."
             ]
         },
         {
-            title: "How do you get started as a Diamond affiliate?",
-            text: "All you have to do is help us out by placing our ads, banners, and links on your site and social media accounts and promoting us in accordance with our Terms and Conditions."
+            title: "How the Program Works",
+            text: "Joining is simple. Promote Diamond through your website, blog, email campaigns, or social media platforms using our affiliate links and creative assets. When your audience makes a purchase through your referral, you earn commission on eligible sales."
         },
         {
-            title: "How do you apply?",
-            text: "Simply click the APPLY NOW button below. We’ll review your application to ensure it’s a good fit for both parties and then we’ll notify you of the outcome, regardless of the result."
+            title: "Apply to Become a Partner",
+            text: "Click the APPLY NOW button below to submit your application. Our team carefully reviews each submission to ensure the right partnership fit. Once reviewed, we’ll contact you with the next steps and onboarding details."
         }
     ],
-    ctaText: "APPLY NOW",
+
+    ctaText: "JOIN THE PROGRAM",
     ctaLink: "/",
-    contactTitle: "Have questions about the program?",
-    contactText: "Send an email to:",
-    email: "affiliates@hopiant.com"
+
+    contactTitle: "Questions About Our Affiliate Program?",
+    contactText: "Our partnership team is here to help. Contact us anytime at:",
 };
 
 const FAQ_DATA = [
     {
-        question: "What is the Diamond Affiliate Program?",
-        answer: "The Diamond Affiliate Program is created for lifestyle, fashion, and premium content creators who want to earn commission by promoting fine jewellery. As an affiliate, you’ll earn commission on sales generated through your unique links and gain access to exclusive creatives, campaigns, and collaboration opportunities."
+        question: "What is the Diamond Partner Program?",
+        answer: "The Diamond Partner Program is designed for creators, publishers, influencers, and media partners who want to collaborate with a modern fine jewelry brand. Partners can earn commission by sharing Diamond products through their websites, blogs, social platforms, or digital content."
     },
     {
-        question: "How much commission can I earn?",
-        answer: "Affiliates earn a competitive commission of 6% on net sales (excluding shipping, taxes, and returns). Commissions are tracked for up to 30 days from the moment a customer clicks your unique link."
+        question: "How do commissions work?",
+        answer: "Partners earn commission on eligible sales generated through their unique referral links. Our tracking system records purchases made within the cookie window, helping ensure accurate attribution and transparent performance reporting."
     },
     {
-        question: "What support and resources will I receive?",
-        answer: "As a Diamond affiliate, you’ll get:<br/><ul><li>Professionally designed banners and campaign assets.</li><li>Access to real-time performance tracking and reporting.</li><li>Opportunities for collaborations such as giveaways, events, and special campaigns.</li></ul>"
+        question: "What benefits do affiliates receive?",
+        answer: "As a Diamond partner, you’ll receive:<br/><ul><li>Access to premium marketing creatives and banners.</li><li>Real-time analytics and performance reporting.</li><li>Early access to new launches and campaigns.</li><li>Opportunities for exclusive collaborations and promotions.</li></ul>"
     },
     {
-        question: "How do I apply?",
-        answer: "Getting started is simple:<br/><ul><li>Click on APPLY NOW and submit your application.</li><li>Our team will review your details.</li><li>You’ll receive an email with the outcome of your application.</li></ul>"
+        question: "How can I join the program?",
+        answer: "Applying is quick and simple:<br/><ul><li>Click the APPLY NOW button.</li><li>Submit your partnership application.</li><li>Our team will review your details and contact you with the next steps.</li></ul>"
+    },
+    {
+        question: "Who is eligible to apply?",
+        answer: "We welcome applications from content creators, bloggers, publishers, influencers, and websites that align with our brand values and audience. We look for partners who share a passion for luxury jewelry, fashion, lifestyle, and modern design."
+    },
+    {
+        question: "Is there a cost to join?",
+        answer: "No, joining the Diamond Partner Program is completely free. There are no setup fees or ongoing costs to become an affiliate partner."
+    },
+    {
+        question: "How do I track my performance?",
+        answer: "Once approved, you’ll gain access to a dedicated affiliate dashboard where you can monitor clicks, conversions, commissions, and overall campaign performance in real time."
     },
     {
         question: "Who can I contact for support?",
-        answer: "For any questions or assistance, feel free to contact us at <a href='mailto:contact@hopiant.com'>contact@hopiant.com</a> and our team will be happy to help."
+        answer: "If you have any questions about the program or need assistance, feel free to contact our team anytime at <a href='mailto:contact@hopiant.com'>contact@hopiant.com</a>."
     }
 ];
-
 const AFFILIATE_UVPS = [
-    {
-        link: '/shipping',
-        label: 'Worldwide<br>Express Shipping',
-        svg: `
-      <svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 16.75H2v-1.5h10v1.5Zm13.074 8.417c-.332.37-.807.583-1.304.583H8.196a1.752 1.752 0 0 1-1.74-1.942l.448-4.058H4v-1.5h4.578l-.63 5.723a.248.248 0 0 0 .248.277H23.77a.247.247 0 0 0 .186-.083.247.247 0 0 0 .062-.194l-1.47-13.223H9.454l-.312 2.827-1.492-.165.46-4.162h3.641v-.92c0-2.344 1.907-4.25 4.25-4.25s4.25 1.906 4.25 4.25v.92h3.642l1.617 14.557Z" fill="#6b6b6b"/>
+  {
+    link: '/shipping',
+    label: 'Global Insured<br>Delivery',
+    svg: `
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
+        <path d="m3.3 7 8.7 5 8.7-5" />
+        <path d="M12 22V12" />
       </svg>
     `,
-    },
-    {
-        link: '/free-resizing',
-        label: 'Free<br>Resizing',
-        svg: `<svg data-name="Icons Expanded" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path d="M24.289 18.18c0 5.122-4.167 9.289-9.289 9.289s-9.289-4.167-9.289-9.29a9.286 9.286 0 0 1 5.615-8.533l.593 1.376a7.788 7.788 0 0 0-4.708 7.158c0 4.295 3.495 7.789 7.789 7.789s7.789-3.494 7.789-7.79c0-4.294-3.495-7.788-7.789-7.788-.259 0-.518.018-.768.044l-.367.037-4.585-4.84 2.495-3.382h6.45l2.492 3.377-2.55 2.733-1.097-1.024 1.7-1.82-1.302-1.766h-4.936l-1.3 1.761 3.22 3.4c.181-.013.364-.02.548-.02 5.122 0 9.289 4.167 9.289 9.289ZM11.75 18h-1.5v4.75H15v-1.5h-2.19l5.44-5.44V18h1.5v-4.75H15v1.5h2.19l-5.44 5.44V18Z" fill="#fff"></path></svg>`,
-    },
-    {
-        link: '/warranty',
-        label: 'Lifetime Ring<br>Warranty',
-        svg: `<svg data-name="Icons Expanded" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path d="M15 2.587 4.25 8.793v7.362a8.774 8.774 0 0 0 4.375 7.577L15 27.413l6.375-3.68a8.774 8.774 0 0 0 4.375-7.578V8.793L15 2.587Zm9.25 13.568a7.271 7.271 0 0 1-3.625 6.279L15 25.68l-5.625-3.247a7.271 7.271 0 0 1-3.625-6.28V9.66L15 4.32l9.25 5.34v6.495Zm-11.733.268 3.906-3.906a3.516 3.516 0 0 1 4.967 0 3.516 3.516 0 0 1 0 4.966c-.685.685-1.584 1.027-2.484 1.027s-1.799-.342-2.483-1.027l-.572-.571 1.06-1.06.572.57a2.015 2.015 0 0 0 2.846 0 2.014 2.014 0 0 0 0-2.845 2.015 2.015 0 0 0-2.846 0l-3.906 3.906a3.516 3.516 0 0 1-4.967 0 3.516 3.516 0 0 1 0-4.966 3.516 3.516 0 0 1 4.967 0l.589.588-1.061 1.06-.588-.588a2.015 2.015 0 0 0-2.846 0 2.014 2.014 0 0 0 0 2.846 2.015 2.015 0 0 0 2.846 0Z" fill="#fff"></path></svg>`,
-    },
-    {
-        link: '/engagement-rings?metal=yellow_gold',
-        label: 'Free Ring<br>Customisation',
-        svg: `<svg data-name="Icons Expanded" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path d="m28.42 9.978-4.77 4.769a4.152 4.152 0 0 1-2.331 1.166l-4.204.6-3.11 3.11-1.06-1.061 3.11-3.11.6-4.203a4.15 4.15 0 0 1 1.166-2.332l4.77-4.77 1.06 1.061-4.77 4.77a2.642 2.642 0 0 0-.741 1.483l-.494 3.46 3.46-.494a2.638 2.638 0 0 0 1.484-.741l4.769-4.769 1.06 1.06ZM8.07 21.118c-2.905 0-5.097-2.256-5.097-5.28 0-3.01 2.213-5.28 5.147-5.28 1.144 0 2.063.238 2.894.749.371.228.734.513 1.14.896l1.028-1.092A8.466 8.466 0 0 0 11.8 10.03c-1.077-.662-2.247-.97-3.68-.97-3.727 0-6.647 2.977-6.647 6.813 0 3.782 2.898 6.746 6.597 6.746 2.586 0 4.076-1.136 5.193-2.247l-1.057-1.063c-1.093 1.086-2.214 1.81-4.136 1.81Zm7.936-.38h4v-1.5h-4v1.5Zm-1.408 1.9 2.828 2.83 1.06-1.061-2.828-2.829-1.06 1.06Z" fill="#fff"></path></svg>`,
-    },
+  },
+  {
+    link: '/free-resizing',
+    label: 'Perfect Fit<br>Guarantee',
+    svg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="12" r="6" /><circle cx="15" cy="12" r="5" /></svg>`,
+  },
+  {
+    link: '/warranty',
+    label: 'Lifetime<br>Craftsmanship',
+    svg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l9 4.5v9l-9 4.5-9-4.5v-9z" /><path d="M12 9l.3 1.2 1.2.3-1.2.3-.3 1.2-.3-1.2-1.2-.3 1.2-.3z" fill="currentColor" stroke="none"/></svg>`,
+  },
+  {
+    link: '/engagement-rings?metal=yellow_gold',
+    label: 'Bespoke Design<br>Service',
+    svg: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="7" /><path d="M21 21l-6-6" /><circle cx="10" cy="10" r="2" stroke-width="1"/></svg>`,
+  },
 ];

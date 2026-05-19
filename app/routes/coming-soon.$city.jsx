@@ -18,9 +18,9 @@ import 'swiper/css/pagination';
 const NEED_HELP_BANNER_DATA = {
     images: {
         desktop:
-            'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/BookAppointment_Banner_web_1500x1500.jpg?v=1703115428',
+            'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/new.jpg?v=1778041776',
         mobile:
-            'https://cdn.shopify.com/s/files/1/0644/3067/0060/files/BookAppointment_Banner_mob_900x900.png?v=1703115428',
+            'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/new.jpg?v=1778041776',
         alt: 'Need a hand?',
     },
     content: {

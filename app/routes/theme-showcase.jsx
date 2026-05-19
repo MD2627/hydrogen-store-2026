@@ -55,12 +55,12 @@ const PRESETS = [
     },
     {
         label: "About Us",
-        img: "https://cdn.shopify.com/s/files/1/0644/3067/0060/files/Thanasi_Home_Page_Select_Final-1_1600x1600.jpg?v=1767837146",
+        img: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/new.jpg?v=1778041776",
         url: "/our-story"
     },
     {
         label: "Visit Us",
-        img: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/Diamond_Jewellery_London_153_1a_retouched_high_res_2000x2000_955a3419-44fe-4982-a8b6-5ca4c5c7dd18.webp?v=1777283263",
+        img: "https://cdn.shopify.com/s/files/1/0610/2194/5934/files/39cca993c3f7aa9065d91172ef1e947e.jpg?v=1777963280",
         url: "/visit"
     },
     {

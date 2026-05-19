@@ -194,7 +194,7 @@ export function Footer({ footer: footerPromise, header, publicStoreDomain }) {
                       <ul className="footer-contact">
                         <li className="contact-item">
                           <span className="contact-icon"><svg style={{ width: '16px' }} viewBox="0 0 16.933 16.933" xmlns="http://www.w3.org/2000/svg"><path d="M11.66 1.063c3.855-.964 5.096 2.25 4.4 5.038-.643 2.57-5.145 8.426-9.117 9.731-3.333 1.095-6.38-.534-6.04-3.725l3.758-1.661c1.308.163 2.114 1.933 2.114 1.933 2.416-1.43 4.252-3.173 5.118-5.478-.938-.415-1.874-1.028-2.162-1.982Z" style={{ width: '16px', fillOpacity: 1, stroke: 'none', strokeWidth: '0.321282px', strokeLinecap: 'butt', strokeLinejoin: 'miter', strokeOpacity: 1 }}></path></svg></span>
-                          <Link className="ff-c site-text-color f-11 f-m-11" to="tel:+611300977619">+91 948 483 6844</Link>
+                          <Link className="ff-c site-text-color f-11 f-m-11" to="tel:+919484836844">+91 948 483 6844</Link>
                         </li>
                         <li className="contact-item">
                           <span className="contact-icon"><svg style={{ width: '20px' }} viewBox="0 0 16.933 16.933" xmlns="http://www.w3.org/2000/svg"><path style={{ width: '20px' }} d="M4.83 4.366 8.465 8l3.636-3.634Zm8.55.075L8.467 9.544 3.553 4.63v7.938h9.827z"></path></svg></span>
@@ -263,15 +263,11 @@ export function Footer({ footer: footerPromise, header, publicStoreDomain }) {
                       ) : (
                         <ul className="legal-links">
                           <li>
-                            <NavLink to="/policies/terms-of-service" className='f-10 f-m-10 ff-n site-text-color'>Terms and Conditions</NavLink>
+                            <NavLink to="/policies" className='f-10 f-m-10 ff-n site-text-color'>Privacy</NavLink>
                             <span className="separator">|</span>
                           </li>
                           <li>
                             <NavLink to="#" className='f-10 f-m-10 ff-n site-text-color'>Terms of Sale</NavLink>
-                            <span className="separator">|</span>
-                          </li>
-                          <li>
-                            <NavLink to="/policies/privacy-policy" className='f-10 f-m-10 ff-n site-text-color'>Privacy</NavLink>
                             <span className="separator">|</span>
                           </li>
                           <li>
@@ -614,7 +610,7 @@ const FALLBACK_FOOTER_MENU = {
       tags: [],
       title: 'Privacy Policy',
       type: 'SHOP_POLICY',
-      url: '/policies/privacy-policy',
+      url: '/policies',
       items: [],
     },
     {
@@ -641,7 +637,7 @@ const FALLBACK_FOOTER_MENU = {
       tags: [],
       title: 'Terms of Service',
       type: 'SHOP_POLICY',
-      url: '/policies/terms-of-service',
+      url: '/policies',
       items: [],
     },
   ],

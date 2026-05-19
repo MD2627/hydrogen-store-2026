@@ -294,10 +294,10 @@ export function NewContactBig() {
                     {/* Disclaimer & Submit */}
                     <div className="contact-submit-container">
                         <p className="disclaimer-text-big">
-                            By entering your details and submitting this form, you consent to receive marketing email and text messages (such as promotion codes and cart reminders) from Diamond Jewellery to the email and phone number provided. Consent is not a condition of any purchase. Message and data rates may apply. Message frequency varies. You can unsubscribe at any time.
+                            By submitting this form, you agree to receive occasional marketing emails and SMS updates from Diamond Jewellery, including exclusive offers, product launches, and appointment reminders. Message frequency may vary. You can unsubscribe or opt out at any time.
                         </p>
                         <p className="disclaimer-links">
-                            View our <Link to="/privacy-policy" className="fancy">Privacy Policy</Link>
+                            View our <Link to="/policies" className="fancy">Privacy Policy</Link>
                             and <Link to="/terms-and-conditions" className="fancy">Terms and Conditions</Link>.
                         </p>
 
@@ -321,7 +321,7 @@ export function NewContactBig() {
                         </button>
 
                         <p className="contact-recaptcha ff-c">
-                            This site is protected by reCAPTCHA. The Google <Link to="/privacy-policy" className="fancy">Privacy Policy</Link>
+                            This site is protected by reCAPTCHA. The Google <Link to="/policies" className="fancy">Privacy Policy</Link>
                             and <Link to="/terms-and-conditions" className="fancy">Terms of Service</Link> apply.
                         </p>
                     </div>

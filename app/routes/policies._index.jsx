@@ -11,8 +11,7 @@ export default function Policies() {
     { title: 'Free Resizing', handle: '/free-resizing' },
     { title: 'Shipping Information', handle: '/shipping' },
     { title: 'Finance Options', handle: '/finance-options' },
-    { title: 'Privacy Policy', handle: '/policies/privacy-policy' },
-    { title: 'Terms of Service', handle: '/policies/terms-of-service' },
+    { title: 'Terms of Service', handle: '/policies' },
     { title: 'Refund Policy', handle: '/policies/refund-policy' }
   ];
 

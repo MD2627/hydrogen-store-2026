@@ -44,37 +44,37 @@ export default function FreeRingSizingKit() {
 
 const FAQ_DATA = [
     {
-        question: "What’s included in the ring sizing kit?",
+        question: "What Comes Inside the Ring Sizing Kit?",
         answer: (
             <p>
-                The kit includes an easy-to-follow guide and a ring sizer, allowing you to measure your size using either an existing ring or the provided tool.
+                Our ring sizing kit includes a practical sizing tool and simple instructions to help you accurately determine your ring size from the comfort of home.
             </p>
         ),
     },
 
     {
-        question: "Is the ring sizing kit really free?",
+        question: "Is the Ring Sizing Kit Complimentary?",
         answer: (
             <p>
-                Yes, the kit is completely free, including shipping.
+                Yes, the ring sizing kit is offered free of charge, including standard delivery.
             </p>
         ),
     },
 
     {
-        question: "Where do you ship the sizing kit?",
+        question: "Where Is the Ring Sizing Kit Available?",
         answer: (
             <p>
-                We currently ship our ring sizing kit free of charge within Australia and New Zealand.
+                We currently offer complimentary shipping for ring sizing kits to selected regions and locations.
             </p>
         ),
     },
 
     {
-        question: "How long will delivery take?",
+        question: "How Long Does Shipping Usually Take?",
         answer: (
             <p>
-                Delivery typically takes 7–10 business days via standard post.
+                Delivery times may vary depending on your location, but most sizing kits arrive within several business days.
             </p>
         ),
     }

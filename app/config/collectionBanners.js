@@ -113,7 +113,7 @@ export const COLLECTION_BANNERS = {
         type: 'image',
         desktop: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/pexels-tima-miroshnichenko-6263112.jpg?v=1777971148',
         mobile: 'https://cdn.shopify.com/s/files/1/0610/2194/5934/files/pexels-tima-miroshnichenko-6263112.jpg?v=1777971148',
-        title: 'Custom Engagement Rings',
+        title: 'Custom Rings',
         description: 'Expertly crafted and brought to life by our master jewellers.'
     },
     'careers': {

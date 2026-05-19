@@ -12,6 +12,10 @@
   overflow: hidden;
 }
 
+.our-story .story-craft-banner .section-subtitle {
+  color: var(--white_color);
+}
+
 .story-craft-banner--our-story .story-craft-content h2 {
   /* font-family: var(--font_family_a);
   font-size: 45px;
@@ -411,8 +415,9 @@ body {
 section.need-help-banner {
   position: relative;
   padding: 0;
-  /* min-height: 400px;
-  display: flex;
+  max-height: 60vh;
+  overflow: hidden;
+  /* display: flex;
   flex-direction: column;
   text-align: center;
   color: var(--white_color);

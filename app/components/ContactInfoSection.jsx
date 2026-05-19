@@ -20,15 +20,15 @@ export function ContactInfoSection() {
 
           <div className="contact-info-item">
             <PhoneIcon className="contact-info-svg" />
-            <a href="tel:6186815688" className="contact-info-link w-300">
-              (618) 681-5688
+            <a href="tel:+919484836844" className="contact-info-link w-300">
+              +91 948 483 6844
             </a>
           </div>
           <div className="contact-info-item">
             <ClockIcon className="contact-info-svg" />
             <div className="contact-info-text">
               <strong>CLIENT CARE HOURS:</strong>
-              <span className='w-300'>WEEKDAYS 9AM – 5PM SATURDAY 8AM – 4PM</span>
+              <span className='w-300'>MON-FRI:10:00 AM - 7:00 PM</span>
             </div>
           </div>
 
@@ -39,7 +39,7 @@ export function ContactInfoSection() {
           <div className="contact-info-item">
             <InfoIcon className="contact-info-svg" />
             <a href="/faqs" className="contact-info-link w-300">
-              VIEW FREQUENTLY ASKED QUESTIONS
+              FREQUENTLY ASKED QUESTIONS
             </a>
           </div>
 
